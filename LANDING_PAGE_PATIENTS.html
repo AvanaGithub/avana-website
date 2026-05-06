@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avana Surgical - Doctor-Recommended Pain Relief & Bracing Solutions</title>
+    <meta name="description" content="Struggling with knee or back pain? Discover doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 40,000+ patients helped across India.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* Avana Color Palette */
+            --color-primary: #243447;         /* Dark blue-gray - nav, dark sections, headings */
+            --color-bg: #F4F4F2;              /* Cream background - main brochure pages */
+            --color-accent: #B18C57;          /* Mustard gold - primary accent for headers, dividers, callouts */
+            --color-accent-hover: #9d7a47;    /* Darker mustard on hover */
+            --color-text: #1F1F1F;            /* Dark charcoal - body text and titles */
+            --color-muted: #6C6C6C;           /* Medium gray - secondary text, captions, footers */
+            --color-white: #ffffff;
+            --color-accent-emphasis: #C0392B; /* Deep red - only for emphasis, alerts (use sparingly) */
+            --color-border: #D9D9D9;
+            --color-light-bg: #EDEDED;
+            --color-soft-cream: #FAFAF8;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1.25;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 12px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar__left { display: flex; gap: 24px; }
+        .top-bar__item, .top-bar__social {
+            color: var(--color-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+        .top-bar__item:hover, .top-bar__social:hover { opacity: 0.8; }
+        .top-bar__right { display: flex; gap: 16px; }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background-color: var(--color-white);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.3s;
+        }
+        .site-header.scrolled { box-shadow: 0 4px 12px rgba(36, 52, 71, 0.1); }
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-logo {
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+        .main-nav__list {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        .main-nav__link {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .main-nav__link:hover { color: var(--color-accent); }
+
+        .header-cta {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        .header-cta:hover { background-color: var(--color-accent-hover); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #F4F4F2 0%, #EDEDED 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(177, 140, 87, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(36, 52, 71, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero__inner {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(177, 140, 87, 0.1);
+            color: var(--color-accent);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero__title {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .hero__title span {
+            color: var(--color-accent);
+            font-style: italic;
+        }
+
+        .hero__byline {
+            font-size: 1.25rem;
+            color: var(--color-muted);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        .hero__ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            line-height: 1.4;
+        }
+
+        .btn--primary {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        .btn--primary:hover {
+            background-color: var(--color-accent-hover);
+            border-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(177, 140, 87, 0.25);
+        }
+
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        .btn--secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .hero__image {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background: linear-gradient(135deg, #243447 0%, #2d3f52 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            box-shadow: 0 20px 60px rgba(36, 52, 71, 0.2);
+            overflow: hidden;
+        }
+
+        .hero__image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05'%3E%3Cpath d='M30 0 L30 60 M0 30 L60 30'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero__trust {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        .hero__trust-icon {
+            color: #10b981;
+            font-size: 1.5rem;
+        }
+
+        /* ===== BROWSE BY PAIN ===== */
+        .browse-pain {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .browse-pain__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .browse-pain__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+
+        .browse-pain__grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+
+        .pain-card {
+            background-color: var(--color-soft-cream);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 32px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .pain-card:hover {
+            border-color: var(--color-accent);
+            background-color: var(--color-white);
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .pain-card__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 16px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            transition: all 0.3s;
+        }
+
+        .pain-card:hover .pain-card__icon {
+            background-color: var(--color-accent);
+            transform: scale(1.1);
+        }
+
+        .pain-card__name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        /* ===== WHY AVANA (Stats) ===== */
+        .why-avana {
+            padding: 80px 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-avana::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23ffffff' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .why-avana__title {
+            text-align: center;
+            color: var(--color-white);
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .why-avana__subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+            position: relative;
+        }
+
+        .why-avana__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .why-avana__stat {
+            padding: 24px;
+        }
+
+        .why-avana__number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 12px;
+            color: var(--color-accent);
+        }
+
+        .why-avana__label {
+            font-size: 1.0625rem;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        /* ===== AUDIENCE SELECTOR ===== */
+        .audience-selector {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+        }
+
+        .audience-selector__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .audience-selector__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+
+        .audience-selector__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .audience-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 48px 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--color-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .audience-card:hover {
+            box-shadow: 0 12px 40px rgba(36, 52, 71, 0.12);
+            transform: translateY(-6px);
+        }
+
+        .audience-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .audience-card__icon {
+            width: 88px;
+            height: 88px;
+            margin: 0 auto 24px;
+            background-color: var(--color-light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+        }
+
+        .audience-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--color-primary);
+        }
+
+        .audience-card__desc {
+            color: var(--color-muted);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .audience-card__arrow {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 1.25rem;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .audience-card:hover .audience-card__arrow {
+            transform: translateX(8px);
+        }
+
+        /* ===== HOW CAN WE HELP ===== */
+        .help-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .section__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 2.25rem;
+            color: var(--color-primary);
+        }
+
+        .section__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            max-width: 640px;
+            margin: 0 auto 56px;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .help-card {
+            background-color: var(--color-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .help-card:hover {
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .help-card__image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #EDEDED 0%, #E0DFDC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-size: 14px;
+        }
+
+        .help-card__content {
+            padding: 24px;
+        }
+
+        .help-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .help-card__desc {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .help-card__link {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ===== OUR BRANDS ===== */
+        .our-brands {
+            padding: 80px 0;
+            background-color: var(--color-light-bg);
+            text-align: center;
+        }
+
+        .our-brands__title {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .our-brands__subtitle {
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 48px;
+        }
+
+        .our-brands__logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .brand-logo {
+            width: 180px;
+            height: 90px;
+            background-color: var(--color-white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-size: 13px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .brand-logo:hover {
+            box-shadow: 0 8px 20px rgba(36, 52, 71, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .our-brands__tagline {
+            color: var(--color-text);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog-section {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background-color: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(36, 52, 71, 0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .blog-card__image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #EDEDED 0%, #E0DFDC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+        }
+
+        .blog-card__content { padding: 28px; }
+
+        .blog-card__date {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .blog-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            margin: 12px 0;
+            color: var(--color-primary);
+            line-height: 1.4;
+        }
+
+        .blog-card__excerpt {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .blog-card__link {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .blog-section__cta { text-align: center; }
+
+        /* ===== ENQUIRY SECTION ===== */
+        .enquiry-section {
+            padding: 80px 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .enquiry-section__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .enquiry-section__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.25rem;
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+
+        .enquiry-section__subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+        }
+
+        .enquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .enquiry-form input,
+        .enquiry-form select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .enquiry-form input:focus,
+        .enquiry-form select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .enquiry-form input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+        .enquiry-form select option {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn--full { width: 100%; justify-content: center; }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background-color: #1a2836;
+            color: var(--color-white);
+            padding: 64px 0 24px;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .site-footer__heading {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--color-white);
+            letter-spacing: 0.5px;
+        }
+
+        .site-footer__logo {
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-white);
+        }
+
+        .site-footer__desc {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .site-footer__address {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-style: normal;
+        }
+
+        .site-footer__address p { margin: 0; }
+
+        .site-footer__contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .site-footer__contact-info a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .site-footer__contact-info a:hover { color: var(--color-accent); }
+
+        .site-footer__links {
+            list-style: none;
+            padding: 0;
+        }
+        .site-footer__links li { margin-bottom: 12px; }
+        .site-footer__links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .site-footer__links a:hover { color: var(--color-accent); }
+
+        .site-footer__bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            .hero__title { font-size: 2.5rem; }
+            .hero__inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero__image { height: 350px; }
+            .browse-pain__grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .why-avana__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .audience-selector__grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .help-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .enquiry-section__inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .site-footer__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .main-nav__list { display: none; }
+            .top-bar__left { display: none; }
+        }
+
+        @media (max-width: 640px) {
+            .hero { padding: 48px 0 60px; }
+            .hero__title { font-size: 2rem; }
+            .hero__byline { font-size: 1.0625rem; }
+            .browse-pain__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .why-avana__grid {
+                grid-template-columns: 1fr;
+            }
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+            .site-footer__grid {
+                grid-template-columns: 1fr;
+            }
+            .section__title, .browse-pain__title,
+            .why-avana__title, .audience-selector__title,
+            .our-brands__title { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar__left">
+                <a href="mailto:info@avanasurgical.com" class="top-bar__item">
+                    📧 info@avanasurgical.com
+                </a>
+                <a href="tel:04422331061" class="top-bar__item">
+                    📞 044-2233 1061
+                </a>
+            </div>
+            <div class="top-bar__right">
+                <a href="#" class="top-bar__social">LinkedIn</a>
+                <a href="#" class="top-bar__social">YouTube</a>
+                <a href="#" class="top-bar__social">Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="site-header" id="site-header">
+        <div class="container">
+            <a href="#" class="site-logo">AVANA SURGICAL</a>
+            <nav class="main-nav">
+                <ul class="main-nav__list">
+                    <li><a href="#" class="main-nav__link">Products</a></li>
+                    <li><a href="#" class="main-nav__link">For Doctors</a></li>
+                    <li><a href="#" class="main-nav__link">Careers</a></li>
+                    <li><a href="#" class="main-nav__link">Blog</a></li>
+                    <li><a href="#" class="main-nav__link">About</a></li>
+                </ul>
+            </nav>
+            <a href="#enquiry" class="header-cta">Get a Consultation</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__text">
+                    <span class="hero__badge">✨ Trusted by 40,000+ Patients Across India</span>
+                    <h1 class="hero__title">Struggling with <span>Knee or Back Pain</span> Every Day?</h1>
+                    <p class="hero__byline">Simple activities like walking, sitting, or climbing stairs shouldn't be painful. Discover doctor-recommended support solutions that can help you move better and live comfortably.</p>
+                    <div class="hero__ctas">
+                        <a href="#browse-pain" class="btn btn--primary">Find My Solution →</a>
+                        <a href="#enquiry" class="btn btn--secondary">Talk to an Expert</a>
+                    </div>
+                    <div class="hero__trust">
+                        <span class="hero__trust-icon">✓</span>
+                        <span>Doctor-recommended • International brands • Pan-India delivery</span>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    [Hero Image: Patient walking comfortably / wearing brace]
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BROWSE BY PAIN -->
+    <section class="browse-pain" id="browse-pain">
+        <div class="container">
+            <h2 class="browse-pain__title">Browse by Pain Area</h2>
+            <p class="browse-pain__subtitle">Where does it hurt? Click your pain point to find the right solution.</p>
+            <div class="browse-pain__grid">
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">🦵</div>
+                    <span class="pain-card__name">Knee</span>
+                </a>
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">🦶</div>
+                    <span class="pain-card__name">Foot</span>
+                </a>
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">💪</div>
+                    <span class="pain-card__name">Shoulder</span>
+                </a>
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">🤲</div>
+                    <span class="pain-card__name">Elbow</span>
+                </a>
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">🧍</div>
+                    <span class="pain-card__name">Spine</span>
+                </a>
+                <a href="#" class="pain-card">
+                    <div class="pain-card__icon">🦴</div>
+                    <span class="pain-card__name">Hip</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY AVANA -->
+    <section class="why-avana">
+        <div class="container">
+            <h2 class="why-avana__title">Why Avana?</h2>
+            <p class="why-avana__subtitle">Trusted by patients, surgeons, and hospitals across India</p>
+            <div class="why-avana__grid">
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">40,000+</span>
+                    <span class="why-avana__label">Patients Helped</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">500+</span>
+                    <span class="why-avana__label">Surgeons Trained</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">250+</span>
+                    <span class="why-avana__label">Hospital Installations</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">10+</span>
+                    <span class="why-avana__label">Years of Clinical Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE SELECTOR -->
+    <section class="audience-selector">
+        <div class="container">
+            <h2 class="audience-selector__title">Who Are You?</h2>
+            <p class="audience-selector__subtitle">Choose your path and we'll guide you to the right solutions</p>
+            <div class="audience-selector__grid">
+                <a href="#" class="audience-card">
+                    <div class="audience-card__icon">👥</div>
+                    <h3 class="audience-card__title">I have knee/joint pain</h3>
+                    <p class="audience-card__desc">Explore bracing solutions that reduce pain and restore mobility — without surgery.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="#" class="audience-card">
+                    <div class="audience-card__icon">🏥</div>
+                    <h3 class="audience-card__title">I'm recovering from surgery</h3>
+                    <p class="audience-card__desc">Find the right post-operative braces and cold therapy for faster, safer recovery.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="#" class="audience-card">
+                    <div class="audience-card__icon">👨‍⚕️</div>
+                    <h3 class="audience-card__title">I'm a surgeon</h3>
+                    <p class="audience-card__desc">Explore RiwoSpine endoscopic systems, training programs, and partnership opportunities.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW CAN WE HELP YOU -->
+    <section class="help-section">
+        <div class="container">
+            <h2 class="section__title">How Can We Help You?</h2>
+            <p class="section__subtitle">Explore solutions tailored to your condition</p>
+            <div class="help-grid">
+                <a href="#" class="help-card">
+                    <div class="help-card__image">[Osteoarthritis Image]</div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Osteoarthritis</h3>
+                        <p class="help-card__desc">Offloader braces that reduce knee pain and delay surgery.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="help-card">
+                    <div class="help-card__image">[Post-Op Recovery Image]</div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Post-Surgery Recovery</h3>
+                        <p class="help-card__desc">Braces and support for faster healing after knee, shoulder, or spine surgery.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="help-card">
+                    <div class="help-card__image">[Cold Therapy Image]</div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Cold Therapy</h3>
+                        <p class="help-card__desc">Clinical-grade cold and compression therapy for pain relief and reduced swelling.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="help-card">
+                    <div class="help-card__image">[Spine Brace Image]</div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Spine Support</h3>
+                        <p class="help-card__desc">LSO, TLSO, and cervical braces from Aspen Medical Products.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR BRANDS -->
+    <section class="our-brands">
+        <div class="container">
+            <h2 class="our-brands__title">Our Brands</h2>
+            <p class="our-brands__subtitle">World-class brands trusted by leading hospitals</p>
+            <div class="our-brands__logos">
+                <div class="brand-logo">[Breg Logo]</div>
+                <div class="brand-logo">[Aspen Logo]</div>
+                <div class="brand-logo">[RiwoSpine Logo]</div>
+                <div class="brand-logo">[Osteokart Logo]</div>
+            </div>
+            <p class="our-brands__tagline">International brands. Indian expertise. Delivered across India.</p>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section__title">Latest from Our Blog</h2>
+            <p class="section__subtitle">Expert insights on pain relief, recovery, and orthopaedic care</p>
+            <div class="blog-grid">
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">[Blog Image 1]</div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">Coming soon</span>
+                        <h3 class="blog-card__title">Understanding Osteoarthritis: When to Consider a Knee Brace</h3>
+                        <p class="blog-card__excerpt">Learn how offloader braces can help manage OA symptoms and delay the need for surgery...</p>
+                        <span class="blog-card__link">Read more →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">[Blog Image 2]</div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">Coming soon</span>
+                        <h3 class="blog-card__title">Cold Therapy After Surgery: What the Evidence Says</h3>
+                        <p class="blog-card__excerpt">Clinical-grade cold therapy can significantly reduce swelling and pain in the critical first days after surgery...</p>
+                        <span class="blog-card__link">Read more →</span>
+                    </div>
+                </a>
+
+                <a href="#" class="blog-card">
+                    <div class="blog-card__image">[Blog Image 3]</div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__date">Coming soon</span>
+                        <h3 class="blog-card__title">Full Endoscopic Spine Surgery: A New Era in India</h3>
+                        <p class="blog-card__excerpt">How RiwoSpine VERTEBRIS systems are enabling minimally invasive spine procedures across Indian hospitals...</p>
+                        <span class="blog-card__link">Read more →</span>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-section__cta">
+                <a href="#" class="btn btn--secondary">View All Posts →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENQUIRY SECTION -->
+    <section class="enquiry-section" id="enquiry">
+        <div class="container">
+            <div class="enquiry-section__inner">
+                <div class="enquiry-section__text">
+                    <h2 class="enquiry-section__title">Have a Question? We're Here to Help.</h2>
+                    <p class="enquiry-section__subtitle">Whether you're a patient looking for the right brace, or a surgeon interested in our products — reach out to us. Our team will get back to you within 24 hours.</p>
+                </div>
+                <form class="enquiry-form">
+                    <input type="text" placeholder="Your Name *" required>
+                    <input type="tel" placeholder="Phone Number *" required>
+                    <select required>
+                        <option value="" disabled selected>What do you need help with? *</option>
+                        <option value="oa">OA / Knee Bracing</option>
+                        <option value="cold">Cold Therapy</option>
+                        <option value="post-op">Post-Op Recovery</option>
+                        <option value="spine">Spine Bracing</option>
+                        <option value="riwo">RiwoSpine / Endoscopic Spine</option>
+                        <option value="cme">CME / Training Programs</option>
+                        <option value="general">General Enquiry</option>
+                    </select>
+                    <button type="submit" class="btn btn--primary btn--full">Submit Enquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="site-footer__grid">
+                <div class="site-footer__col">
+                    <div class="site-footer__logo">AVANA SURGICAL</div>
+                    <p class="site-footer__desc">Premium orthopaedic bracing & endoscopic spine surgery systems. Trusted by surgeons across India.</p>
+                    <address class="site-footer__address">
+                        <p>Avana Surgical Systems Pvt Ltd</p>
+                        <p>Chennai, Tamil Nadu – 600 032</p>
+                    </address>
+                    <div class="site-footer__contact-info">
+                        <a href="tel:04422331061">044-2233 1061/62/63</a>
+                        <a href="mailto:info@avanasurgical.com">info@avanasurgical.com</a>
+                    </div>
+                </div>
+
+                <div class="site-footer__col">
+                    <h4 class="site-footer__heading">For Patients</h4>
+                    <ul class="site-footer__links">
+                        <li><a href="#">Freestyle OA Brace</a></li>
+                        <li><a href="#">Cold Therapy</a></li>
+                        <li><a href="#">Post-op Care</a></li>
+                        <li><a href="#">Spine Bracing</a></li>
+                        <li><a href="#">Patient Stories</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__col">
+                    <h4 class="site-footer__heading">For Surgeons</h4>
+                    <ul class="site-footer__links">
+                        <li><a href="#">RiwoSpine Products</a></li>
+                        <li><a href="#">Education & CME</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__col">
+                    <h4 class="site-footer__heading">Company</h4>
+                    <ul class="site-footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="site-footer__bottom">
+                <p>&copy; 2026 Avana Surgical Systems Pvt Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sticky header on scroll
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
