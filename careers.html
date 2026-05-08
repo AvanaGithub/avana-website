@@ -43,6 +43,12 @@
             padding: 0 24px;
         }
 
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', Georgia, serif;
             font-weight: 700;
@@ -817,11 +823,19 @@
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 968px) {
-            .careers-hero { padding: 64px 0 80px; }
-            .careers-hero__title { font-size: 2.4rem; }
-            .section { padding: 64px 0; }
-            .section__title { font-size: 1.85rem; }
-            .what-we-do__grid { grid-template-columns: 1fr; }
+            body { font-size: 15px; }
+            .careers-hero { padding: 56px 0 64px; }
+            .careers-hero__badge { font-size: 0.85rem; margin-bottom: 14px; }
+            .careers-hero__title { font-size: 2.2rem; line-height: 1.15; }
+            .careers-hero__subline { font-size: 1.05rem; }
+            .careers-hero__ctas { gap: 12px; }
+            .section { padding: 56px 0; }
+            .section__eyebrow { margin-bottom: 10px; }
+            .section__title { font-size: 1.65rem; }
+            .section__lead { font-size: 1rem; }
+            .what-we-do__grid { grid-template-columns: 1fr; gap: 24px; }
+            .division-card { padding: 24px; }
+            .division-card__title { font-size: 1.15rem; }
             .working__grid { grid-template-columns: 1fr; gap: 0; }
             .working__infographic { grid-template-columns: 1fr; }
             .infographic-stat {
@@ -831,26 +845,126 @@
             }
             .infographic-stat:last-child { border-bottom: none; }
             .invest__grid { grid-template-columns: 1fr; }
+            .invest-stat { padding: 24px 0; }
+            .invest-stat__title { font-size: 1.1rem; }
+            .honor__inner { padding: 40px 24px; }
+            .honor__title { font-size: 1.6rem; }
             .headed__grid { grid-template-columns: 1fr; gap: 32px; }
+            .headed__lead { font-size: 1rem; }
+            .hire__timeline { margin-top: 32px; }
+            .hire-step { padding-left: 60px; padding-bottom: 28px; }
+            .hire-step__num { width: 42px; height: 42px; font-size: 1rem; }
+            .hire-step__title { font-size: 1.05rem; }
             .roles__grid { grid-template-columns: 1fr; }
-            .site-footer__grid { grid-template-columns: repeat(2, 1fr); }
+            .role-card { padding: 24px; }
+            .role-card__title { font-size: 1.1rem; }
+            .roles__speculative { padding: 32px 24px; }
+            .closing { padding: 56px 0 48px; }
+            .closing__divider { margin: 0 auto 32px; }
+            .site-footer { padding: 48px 0 20px; }
+            .site-footer__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
             .main-nav__list { display: none; }
             .top-bar__left { display: none; }
         }
 
         @media (max-width: 640px) {
-            .careers-hero__title { font-size: 1.95rem; }
-            .careers-hero__subline { font-size: 1.02rem; }
-            .careers-hero__ctas { flex-direction: column; align-items: stretch; }
-            .careers-hero__ctas .btn { justify-content: center; }
-            .why-exist__title { font-size: 1.65rem; }
-            .honor__inner { padding: 40px 16px; }
-            .honor__title { font-size: 1.55rem; }
-            .hire__timeline::before { left: 18px; }
-            .hire-step { padding-left: 58px; }
-            .hire-step__num { width: 38px; height: 38px; font-size: 1rem; }
-            .site-footer__grid { grid-template-columns: 1fr; }
+            body { font-size: 14px; }
+            .container { padding: 0 16px; }
+            .top-bar { padding: 10px 0; font-size: 12px; }
+            .top-bar__social { width: 28px; height: 28px; }
+            .top-bar__social svg { width: 12px; height: 12px; }
+            .site-header { padding: 14px 0; }
+            .site-logo img { height: 40px; }
+            .careers-hero { padding: 36px 0 44px; }
+            .careers-hero::before { display: none; }
+            .careers-hero__badge { font-size: 0.7rem; padding: 5px 10px; margin-bottom: 12px; }
+            .careers-hero__title { font-size: 1.6rem; line-height: 1.25; margin-bottom: 12px; }
+            .careers-hero__subline { font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px; }
+            .careers-hero__ctas { flex-direction: column; gap: 10px; }
+            .careers-hero__ctas .btn { width: 100%; justify-content: center; min-height: 44px; padding: 11px 18px; font-size: 0.88rem; }
+            .section { padding: 40px 0; }
+            .section__eyebrow { font-size: 0.7rem; margin-bottom: 8px; }
+            .section__title { font-size: 1.35rem; margin-bottom: 10px; }
+            .section__lead { font-size: 0.92rem; }
+            .what-we-do__intro { margin-bottom: 24px; }
+            .what-we-do__grid { gap: 16px; }
+            .division-card { padding: 18px 16px; border-radius: 10px; }
+            .division-card__eyebrow { font-size: 0.7rem; margin-bottom: 6px; }
+            .division-card__title { font-size: 1rem; margin-bottom: 8px; }
+            .division-card__body { font-size: 0.85rem; }
+            .what-we-do__callout { padding: 16px 16px; font-size: 0.9rem; }
+            .why-exist { padding: 40px 0; }
+            .why-exist__title { font-size: 1.35rem; margin-bottom: 24px; }
+            .why-exist__list li { padding: 12px 0 12px 28px; font-size: 0.9rem; }
+            .why-exist__list li::before { top: 10px; }
+            .working { padding: 40px 0; }
+            .working__title { font-size: 1.35rem; margin-bottom: 24px; }
+            .working__grid { gap: 0; }
+            .working__infographic { gap: 0; }
+            .infographic-stat { padding: 14px 0; border-bottom: 1px solid var(--color-border); }
+            .infographic-stat__num { font-size: 1.5rem; }
+            .infographic-stat__label { font-size: 0.85rem; }
+            .invest { padding: 40px 0; }
+            .invest__title { font-size: 1.35rem; margin-bottom: 24px; }
+            .invest__grid { gap: 16px; }
+            .invest-stat { padding: 16px 0; }
+            .invest-stat__title { font-size: 0.95rem; margin-bottom: 6px; }
+            .invest-stat__body { font-size: 0.85rem; }
+            .honor { padding: 40px 0; }
+            .honor__inner { padding: 24px 16px; border-top: 2px solid var(--color-accent); border-bottom: 2px solid var(--color-accent); }
+            .honor__title { font-size: 1.25rem; margin-bottom: 16px; }
+            .honor__body { font-size: 0.9rem; }
+            .headed { padding: 40px 0; }
+            .headed__title { font-size: 1.35rem; margin-bottom: 24px; }
+            .headed__grid { gap: 20px; }
+            .headed__lead { font-size: 0.92rem; }
+            .headed__list li { padding: 12px 0 12px 28px; font-size: 0.9rem; }
+            .hire { padding: 40px 0; }
+            .hire__title { font-size: 1.35rem; margin-bottom: 20px; }
+            .hire__timeline { margin-top: 20px; }
+            .hire__timeline::before { left: 16px; }
+            .hire-step { padding-left: 52px; padding-bottom: 20px; }
+            .hire-step__num { width: 36px; height: 36px; font-size: 0.85rem; }
+            .hire-step__title { font-size: 0.95rem; margin-bottom: 6px; }
+            .hire-step__body { font-size: 0.85rem; }
+            .roles { padding: 40px 0; }
+            .roles__title { font-size: 1.35rem; margin-bottom: 24px; }
+            .roles__grid { gap: 14px; }
+            .role-card { padding: 16px; border-radius: 8px; }
+            .role-card__division { font-size: 0.7rem; margin-bottom: 6px; }
+            .role-card__title { font-size: 0.95rem; margin-bottom: 6px; }
+            .role-card__meta { font-size: 0.8rem; margin-bottom: 10px; }
+            .role-card__link { font-size: 0.85rem; }
+            .roles__speculative { padding: 20px 16px; border-radius: 10px; }
+            .roles__speculative h3 { font-size: 1.1rem; margin-bottom: 10px; }
+            .roles__speculative p { font-size: 0.85rem; margin-bottom: 16px; }
+            .closing { padding: 36px 0 32px; }
+            .closing__title { font-size: 1.35rem; margin-bottom: 16px; }
+            .closing__divider { width: 60px; margin: 0 auto 24px; }
+            .closing__body { font-size: 0.9rem; margin-bottom: 16px; }
+            .closing__manifesto { font-size: 0.9rem; margin-top: 16px; }
+            .closing__signature { margin-top: 32px; font-size: 0.8rem; }
+            .site-footer { padding: 36px 0 16px; }
+            .site-footer__grid { grid-template-columns: 1fr; gap: 20px; }
+            .site-footer__heading { font-size: 0.85rem; margin-bottom: 12px; }
+            .site-footer__logo img { height: 36px; }
+            .site-footer__desc { font-size: 0.8rem; margin-bottom: 12px; }
+            .site-footer__address { font-size: 0.8rem; margin-bottom: 12px; }
+            .site-footer__contact-info { gap: 6px; }
+            .site-footer__contact-info a { font-size: 0.8rem; }
+            .site-footer__links a { font-size: 0.8rem; margin-bottom: 6px; }
+            .site-footer__socials { gap: 8px; }
+            .site-footer__socials a { width: 30px; height: 30px; }
+            .site-footer__bottom { font-size: 0.7rem; padding-top: 12px; }
+            .back-to-top { width: 40px; height: 40px; bottom: 16px; right: 16px; }
+            .back-to-top svg { width: 18px; height: 18px; }
             .header-cta { display: none; }
+        }
+
+        @media (max-width: 375px) {
+            .careers-hero__title { font-size: 1.4rem; }
+            .what-we-do__grid { gap: 12px; }
+            .roles__grid { gap: 10px; }
         }
     </style>
 </head>

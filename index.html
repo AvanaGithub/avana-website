@@ -44,6 +44,12 @@
             padding: 0 24px;
         }
 
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
         h1, h2, h3, h4 {
             font-family: 'Playfair Display', Georgia, serif;
             font-weight: 700;
@@ -229,16 +235,26 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 16px 32px;
+            padding: 14px 28px;
             border-radius: 8px;
             font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             cursor: pointer;
             border: 2px solid transparent;
             transition: all 0.3s;
-            line-height: 1.4;
+            line-height: 1.5;
+            min-height: 44px;
+            justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                min-height: 48px;
+            }
         }
 
         .btn--primary {
@@ -1134,71 +1150,461 @@
 
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 968px) {
+            body { font-size: 15px; }
+            .hero { padding: 60px 0 80px; }
             .hero__title { font-size: 2.5rem; }
+            .hero__byline { font-size: 1.15rem; }
             .hero__inner {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
             .hero__image { height: 350px; }
+            .hero__ctas {
+                gap: 12px;
+            }
+            .browse-pain {
+                padding: 60px 0;
+            }
+            .browse-pain__title { margin-bottom: 16px; }
             .browse-pain__grid {
                 grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+            .pain-card {
+                padding: 24px 12px;
+            }
+            .pain-card__icon {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 12px;
+            }
+            .pain-card__name {
+                font-size: 1rem;
+            }
+            .why-avana {
+                padding: 60px 0;
             }
             .why-avana__grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .why-avana__number {
+                font-size: 2.5rem;
+            }
+            .why-avana__label {
+                font-size: 0.95rem;
+            }
+            .audience-selector {
+                padding: 60px 0;
             }
             .audience-selector__grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
             }
-            .testimonials__arrow--prev { left: 8px; }
-            .testimonials__arrow--next { right: 8px; }
-            .testimonial-card__inner { padding: 36px 24px; }
-            .testimonial-card__quote { font-size: 1rem; }
+            .audience-card {
+                padding: 32px 24px;
+            }
+            .audience-card__icon {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 16px;
+            }
+            .audience-card__title {
+                font-size: 1.2rem;
+            }
+            .testimonials {
+                padding: 60px 0;
+            }
+            .testimonials__title {
+                font-size: 1.75rem;
+            }
+            .testimonials__arrow--prev { left: 0px; }
+            .testimonials__arrow--next { right: 0px; }
+            .testimonial-card__inner { padding: 32px 20px; }
+            .testimonial-card__quote { font-size: 0.95rem; }
+            .testimonial-card__quote-mark {
+                font-size: 3.5rem;
+            }
+            .help-section {
+                padding: 60px 0;
+            }
             .help-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .blog-section {
+                padding: 60px 0;
+            }
             .blog-grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .blog-card__image {
+                height: 180px;
+            }
+            .enquiry-section {
+                padding: 60px 0;
             }
             .enquiry-section__inner {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
+            .enquiry-section__title {
+                font-size: 1.75rem;
+            }
+            .enquiry-form {
+                padding: 24px;
+            }
+            .enquiry-form input,
+            .enquiry-form select {
+                padding: 12px 14px;
+                min-height: 44px;
+                font-size: 16px;
+            }
+            .our-brands {
+                padding: 60px 0;
+            }
+            .our-brands__logos {
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+            .brand-logo {
+                width: 140px;
+                height: 70px;
+            }
+            .site-footer {
+                padding: 48px 0 20px;
+            }
             .site-footer__grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
             }
             .main-nav__list { display: none; }
             .top-bar__left { display: none; }
         }
 
         @media (max-width: 640px) {
-            .hero { padding: 48px 0 60px; }
-            .hero__title { font-size: 2rem; }
-            .hero__byline { font-size: 1.0625rem; }
+            body { font-size: 14px; }
+            .container {
+                padding: 0 16px;
+            }
+            .hero { padding: 40px 0 50px; }
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
+            .hero__badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+                margin-bottom: 16px;
+            }
+            .hero__title { font-size: 1.75rem; line-height: 1.2; margin-bottom: 16px; }
+            .hero__byline { font-size: 0.95rem; margin-bottom: 24px; }
+            .hero__ctas {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero__ctas .btn {
+                width: 100%;
+            }
+            .hero__image { height: 280px; }
+            .hero__trust {
+                margin-top: 24px;
+                font-size: 0.85rem;
+                gap: 12px;
+            }
+            .browse-pain {
+                padding: 48px 0;
+            }
+            .browse-pain__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .browse-pain__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
             .browse-pain__grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .pain-card {
+                padding: 20px 12px;
+                border-radius: 12px;
+            }
+            .pain-card__icon {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 10px;
+            }
+            .pain-card__name {
+                font-size: 0.9rem;
+            }
+            .why-avana {
+                padding: 48px 0;
+            }
+            .why-avana::before {
+                display: none;
+            }
+            .why-avana__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .why-avana__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
             }
             .why-avana__grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
             }
-            .help-grid {
-                grid-template-columns: 1fr;
+            .why-avana__number {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+            .why-avana__label {
+                font-size: 0.9rem;
+            }
+            .audience-selector {
+                padding: 48px 0;
+            }
+            .audience-selector__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .audience-selector__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
             }
             .audience-selector__grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 16px;
+            }
+            .audience-card {
+                padding: 24px 16px;
+                min-height: 280px;
+                display: flex;
+                flex-direction: column;
+            }
+            .audience-card__icon {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 16px;
+            }
+            .audience-card__title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            .audience-card__desc {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .testimonials {
+                padding: 48px 0;
+            }
+            .testimonials__title {
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+            }
+            .testimonials__subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 32px;
+            }
+            .testimonials__viewport {
+                position: relative;
+                overflow: hidden;
+            }
+            .testimonials__arrow {
+                width: 40px;
+                height: 40px;
+            }
+            .testimonials__arrow--prev { left: -8px; }
+            .testimonials__arrow--next { right: -8px; }
+            .testimonial-card__inner {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+            .testimonial-card__quote-mark {
+                font-size: 2.5rem;
+                margin-bottom: 4px;
+            }
+            .testimonial-card__quote {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 16px;
+                font-style: italic;
+            }
+            .testimonial-card__author {
+                font-size: 0.95rem;
+            }
+            .testimonial-card__role {
+                font-size: 0.85rem;
+            }
+            .help-section {
+                padding: 48px 0;
+            }
+            .section__title {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+            .section__subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 32px;
+            }
+            .help-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .help-card__image {
+                height: 180px;
+            }
+            .help-card__content {
+                padding: 16px;
+            }
+            .help-card__title {
+                font-size: 1.05rem;
+                margin-bottom: 8px;
+            }
+            .help-card__desc {
+                font-size: 0.85rem;
+                margin-bottom: 12px;
+            }
+            .our-brands {
+                padding: 48px 0;
+            }
+            .our-brands__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .our-brands__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
+            .our-brands__logos {
+                gap: 12px;
+                margin-bottom: 16px;
+            }
+            .brand-logo {
+                width: 100px;
+                height: 60px;
+                padding: 12px 16px;
+            }
+            .our-brands__tagline {
+                font-size: 0.95rem;
+            }
+            .blog-section {
+                padding: 48px 0;
+            }
+            .blog-grid {
+                gap: 16px;
+            }
+            .blog-card {
+                border-radius: 12px;
+            }
+            .blog-card__image {
+                height: 160px;
+            }
+            .blog-card__content {
+                padding: 16px;
+            }
+            .blog-card__date {
+                font-size: 0.75rem;
+            }
+            .blog-card__title {
+                font-size: 1rem;
+                margin: 8px 0;
+            }
+            .blog-card__excerpt {
+                font-size: 0.85rem;
+            }
+            .enquiry-section {
+                padding: 40px 0;
+            }
+            .enquiry-section__title {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+            .enquiry-section__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+            .enquiry-form {
+                padding: 16px;
+                gap: 12px;
+            }
+            .enquiry-form input,
+            .enquiry-form select {
+                padding: 10px 12px;
+                min-height: 44px;
+                font-size: 16px;
+            }
+            .btn--full {
+                width: 100%;
+            }
+            .site-footer {
+                padding: 40px 0 16px;
             }
             .site-footer__grid {
                 grid-template-columns: 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
             }
-            .section__title, .browse-pain__title,
-            .why-avana__title, .audience-selector__title,
-            .our-brands__title, .testimonials__title { font-size: 1.75rem; }
+            .site-footer__heading {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__logo img {
+                height: 40px;
+            }
+            .site-footer__desc {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__address {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__contact-info a {
+                font-size: 0.85rem;
+            }
+            .site-footer__links a {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+            .site-footer__socials {
+                gap: 10px;
+                margin-top: 16px;
+            }
+            .site-footer__socials a {
+                width: 32px;
+                height: 32px;
+            }
+            .site-footer__bottom {
+                font-size: 0.75rem;
+                padding-top: 16px;
+            }
             .back-to-top {
-                width: 42px;
-                height: 42px;
+                width: 40px;
+                height: 40px;
                 bottom: 16px;
                 right: 16px;
+            }
+            .back-to-top svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero__title { font-size: 1.5rem; }
+            .hero__image { height: 240px; }
+            .browse-pain__grid {
+                grid-template-columns: 1fr;
+            }
+            .audience-selector__grid {
+                gap: 12px;
+            }
+            .help-grid {
+                gap: 12px;
             }
         }
     </style>
