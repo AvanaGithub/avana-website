@@ -1,0 +1,76 @@
+{
+  "slug": "elbow",
+  "metaTitle": "Elbow Pain Support & Bracing | Avana Surgical Systems",
+  "metaDescription": "Tennis elbow, golfer's elbow, and post-surgical elbow support. Premium bracing solutions fitted across India.",
+
+  "hero": {
+    "eyebrow": "Elbow Pain Support",
+    "title": "Strong, pain-free arms — without giving up what you love.",
+    "description": "Whether it's tennis elbow that's lasted months or recovery from a recent injury, the right brace eases pain and protects healing tissue.",
+    "image": "images/pain/elbow.svg",
+    "imageAlt": "Elbow pain support",
+    "ctas": [
+      { "label": "Explore Solutions", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": { "title": "Common elbow conditions" },
+  "conditions": [
+    { "icon": "🎾", "title": "Tennis Elbow", "description": "Lateral epicondylitis — pain on the outside of the elbow from repetitive strain." },
+    { "icon": "⛳", "title": "Golfer's Elbow", "description": "Medial epicondylitis — pain on the inside of the elbow, often from gripping or lifting." },
+    { "icon": "🏥", "title": "Post-Surgical Recovery", "description": "Controlled motion and protection during rehabilitation after elbow surgery." },
+    { "icon": "💪", "title": "Overuse Strain", "description": "Repetitive-strain injuries from sports, manual work, or computer use." }
+  ],
+
+  "productsHeading": { "title": "Recommended elbow support" },
+  "products": [
+    {
+      "brand": "Breg",
+      "image": "images/pain/elbow.svg",
+      "title": "Tennis Elbow Strap",
+      "description": "Targeted compression strap that relieves pain from lateral epicondylitis by redistributing force away from the inflamed tendon.",
+      "usage": "Tennis elbow, repetitive strain",
+      "ctaLabel": "View on Osteokart",
+      "ctaUrl": "https://osteokart.com/category/elbow?utm_source=avana&utm_medium=pain-page&utm_campaign=elbow"
+    }
+  ],
+
+  "testimonialsHeading": { "title": "What our patients say" },
+  "testimonials": [],
+
+  "seoContent": {
+    "title": "Understanding elbow pain",
+    "intro": "Elbow pain — especially tennis and golfer's elbow — can persist for months without the right approach.",
+    "sections": [
+      { "heading": "Why does my elbow hurt?", "body": "<p>Most elbow pain is from overuse — repetitive gripping, lifting, or wrist movement that strains the tendons attaching to the elbow.</p>" },
+      { "heading": "How does bracing help?", "body": "<p>Counterforce straps redirect strain away from the inflamed area, allowing the tendon to heal while you continue daily activities.</p>" }
+    ],
+    "disclaimer": "This page is educational. Please consult an orthopaedic specialist for persistent elbow pain."
+  },
+
+  "faqHeading": { "title": "Elbow pain FAQs" },
+  "faq": [
+    { "question": "How long does tennis elbow take to heal?", "answer": "Most cases resolve in 6–12 months with rest, bracing, and physiotherapy. Persistent cases may benefit from injection therapy or, rarely, surgery." },
+    { "question": "Can I keep playing sport with a tennis elbow strap?", "answer": "In many cases yes — but only if pain is mild and the strap allows you to play without compensating with poor technique. Discuss with your physiotherapist." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Sports medicine" },
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Bracing leader" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Spine surgery" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Retail partner" }
+  ],
+
+  "cta": {
+    "title": "Get back to grip strength — pain-free.",
+    "description": "Speak with our team for an honest recommendation on whether bracing fits your situation.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Elbow%20pain%20enquiry", "style": "primary" },
+      { "label": "Browse Elbow Products", "href": "https://osteokart.com/category/elbow?utm_source=avana&utm_medium=pain-cta&utm_campaign=elbow", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}

@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avana Surgical - Doctor-Recommended Pain Relief & Bracing Solutions</title>
-    <meta name="description" content="Struggling with knee or back pain? Discover doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 40,000+ patients helped across India.">
+    <meta name="description" content="Struggling with knee or back pain? Discover doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 1 lakh+ patients served across India.">
+    <link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="images/avana-logo/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -64,7 +66,7 @@
         }
 
         .top-bar__left { display: flex; gap: 24px; }
-        .top-bar__item, .top-bar__social {
+        .top-bar__item {
             color: var(--color-white);
             text-decoration: none;
             display: flex;
@@ -72,8 +74,25 @@
             gap: 8px;
             transition: opacity 0.3s;
         }
-        .top-bar__item:hover, .top-bar__social:hover { opacity: 0.8; }
-        .top-bar__right { display: flex; gap: 16px; }
+        .top-bar__item:hover { opacity: 0.8; }
+        .top-bar__right { display: flex; gap: 10px; align-items: center; }
+        .top-bar__social {
+            color: var(--color-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s;
+        }
+        .top-bar__social:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        .top-bar__social svg { width: 14px; height: 14px; fill: currentColor; }
 
         /* ===== HEADER ===== */
         .site-header {
@@ -97,6 +116,13 @@
             text-decoration: none;
             font-size: 24px;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+        .site-logo img {
+            height: 48px;
+            width: auto;
+            display: block;
         }
         .main-nav__list {
             display: flex;
@@ -252,15 +278,12 @@
             overflow: hidden;
         }
 
-        .hero__image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.05'%3E%3Cpath d='M30 0 L30 60 M0 30 L60 30'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
+        .hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 24px;
         }
 
         .hero__trust {
@@ -322,8 +345,8 @@
         }
 
         .pain-card__icon {
-            width: 64px;
-            height: 64px;
+            width: 96px;
+            height: 96px;
             margin: 0 auto 16px;
             background-color: var(--color-white);
             border-radius: 50%;
@@ -332,11 +355,21 @@
             justify-content: center;
             font-size: 32px;
             transition: all 0.3s;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .pain-card__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
         }
 
         .pain-card:hover .pain-card__icon {
-            background-color: var(--color-accent);
-            transform: scale(1.1);
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(177, 140, 87, 0.25);
         }
 
         .pain-card__name {
@@ -429,8 +462,8 @@
 
         .audience-selector__grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 32px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
 
         .audience-card {
@@ -469,8 +502,8 @@
         }
 
         .audience-card__icon {
-            width: 88px;
-            height: 88px;
+            width: 140px;
+            height: 140px;
             margin: 0 auto 24px;
             background-color: var(--color-light-bg);
             border-radius: 50%;
@@ -478,6 +511,16 @@
             align-items: center;
             justify-content: center;
             font-size: 44px;
+            overflow: hidden;
+            border: 3px solid var(--color-white);
+            box-shadow: 0 4px 16px rgba(36, 52, 71, 0.08);
+        }
+
+        .audience-card__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .audience-card__title {
@@ -556,6 +599,15 @@
             justify-content: center;
             color: var(--color-muted);
             font-size: 14px;
+            overflow: hidden;
+            font-style: italic;
+        }
+
+        .help-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .help-card__content {
@@ -622,6 +674,18 @@
             border: 1px solid var(--color-border);
             transition: all 0.3s;
             font-weight: 600;
+            padding: 16px 20px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
         }
 
         .brand-logo:hover {
@@ -671,6 +735,15 @@
             align-items: center;
             justify-content: center;
             color: var(--color-muted);
+            overflow: hidden;
+            font-style: italic;
+        }
+
+        .blog-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .blog-card__content { padding: 28px; }
@@ -797,6 +870,205 @@
             letter-spacing: 1px;
             color: var(--color-white);
         }
+        .site-footer__logo img {
+            height: 56px;
+            width: auto;
+            display: block;
+        }
+        .site-footer__socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .site-footer__socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+            transition: all 0.3s;
+        }
+        .site-footer__socials a:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        .site-footer__socials svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* ===== TESTIMONIALS CAROUSEL ===== */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .testimonials__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+        .testimonials__viewport {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .testimonials__track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .testimonial-card {
+            min-width: 100%;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+        .testimonial-card__inner {
+            background-color: var(--color-white);
+            border-radius: 20px;
+            padding: 48px 40px;
+            box-shadow: 0 8px 30px rgba(36, 52, 71, 0.08);
+            border: 1px solid var(--color-border);
+            text-align: center;
+            position: relative;
+        }
+        .testimonial-card__quote-mark {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: var(--color-accent);
+            opacity: 0.3;
+            margin-bottom: 8px;
+        }
+        .testimonial-card__quote {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+        .testimonial-card__badges {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .testimonial-card__badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .testimonial-card__badge--category {
+            background-color: rgba(177, 140, 87, 0.12);
+            color: var(--color-accent);
+        }
+        .testimonial-card__badge--product {
+            background-color: rgba(36, 52, 71, 0.08);
+            color: var(--color-primary);
+        }
+        .testimonial-card__author {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 4px;
+        }
+        .testimonial-card__role {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+        .testimonials__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 5;
+            box-shadow: 0 4px 12px rgba(36, 52, 71, 0.08);
+        }
+        .testimonials__arrow:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        .testimonials__arrow--prev { left: -24px; }
+        .testimonials__arrow--next { right: -24px; }
+        .testimonials__dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+        .testimonials__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--color-border);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 0;
+        }
+        .testimonials__dot--active {
+            background-color: var(--color-accent);
+            width: 28px;
+            border-radius: 5px;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(177, 140, 87, 0.35);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background-color 0.2s;
+            z-index: 90;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+        }
+        .back-to-top svg { width: 20px; height: 20px; }
 
         .site-footer__desc {
             color: rgba(255, 255, 255, 0.75);
@@ -875,9 +1147,13 @@
                 grid-template-columns: repeat(2, 1fr);
             }
             .audience-selector__grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
+            .testimonials__arrow--prev { left: 8px; }
+            .testimonials__arrow--next { right: 8px; }
+            .testimonial-card__inner { padding: 36px 24px; }
+            .testimonial-card__quote { font-size: 1rem; }
             .help-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -908,12 +1184,22 @@
             .help-grid {
                 grid-template-columns: 1fr;
             }
+            .audience-selector__grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
             .site-footer__grid {
                 grid-template-columns: 1fr;
             }
             .section__title, .browse-pain__title,
             .why-avana__title, .audience-selector__title,
-            .our-brands__title { font-size: 1.75rem; }
+            .our-brands__title, .testimonials__title { font-size: 1.75rem; }
+            .back-to-top {
+                width: 42px;
+                height: 42px;
+                bottom: 16px;
+                right: 16px;
+            }
         }
     </style>
 </head>
@@ -930,9 +1216,18 @@
                 </a>
             </div>
             <div class="top-bar__right">
-                <a href="#" class="top-bar__social">LinkedIn</a>
-                <a href="#" class="top-bar__social">YouTube</a>
-                <a href="#" class="top-bar__social">Instagram</a>
+                <a href="https://www.linkedin.com/company/avana-surgical-systems-pvt-ltd/posts/?feedView=all" class="top-bar__social" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/avana_surgical/" class="top-bar__social" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on Instagram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.7 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.21-.01 3.58-.07 4.85-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/avanamedical" class="top-bar__social" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on Facebook">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.45 18.63.07 12 .07S0 5.45 0 12.07c0 5.99 4.39 10.95 10.13 11.86v-8.39H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.23 2.69.23v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.39C19.61 23.02 24 18.06 24 12.07z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@avanamedical/videos" class="top-bar__social" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on YouTube">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.01 3.01 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+                </a>
             </div>
         </div>
     </div>
@@ -940,12 +1235,14 @@
     <!-- HEADER -->
     <header class="site-header" id="site-header">
         <div class="container">
-            <a href="#" class="site-logo">AVANA SURGICAL</a>
+            <a href="#" class="site-logo" aria-label="Avana Surgical — Home">
+                <img src="images/avana-logo/header-logo.svg" alt="Avana Surgical">
+            </a>
             <nav class="main-nav">
                 <ul class="main-nav__list">
                     <li><a href="#" class="main-nav__link">Products</a></li>
                     <li><a href="#" class="main-nav__link">For Doctors</a></li>
-                    <li><a href="#" class="main-nav__link">Careers</a></li>
+                    <li><a href="careers.html" class="main-nav__link">Careers</a></li>
                     <li><a href="#" class="main-nav__link">Blog</a></li>
                     <li><a href="#" class="main-nav__link">About</a></li>
                 </ul>
@@ -959,7 +1256,7 @@
         <div class="container">
             <div class="hero__inner">
                 <div class="hero__text">
-                    <span class="hero__badge">✨ Trusted by 40,000+ Patients Across India</span>
+                    <span class="hero__badge">✨ Trusted by 1 Lakh+ Patients Across India</span>
                     <h1 class="hero__title">Struggling with <span>Knee or Back Pain</span> Every Day?</h1>
                     <p class="hero__byline">Simple activities like walking, sitting, or climbing stairs shouldn't be painful. Discover doctor-recommended support solutions that can help you move better and live comfortably.</p>
                     <div class="hero__ctas">
@@ -972,7 +1269,7 @@
                     </div>
                 </div>
                 <div class="hero__image">
-                    [Hero Image: Patient walking comfortably / wearing brace]
+                    <img src="images/hero/Hero-kneepain.jpg" alt="Person experiencing knee pain seeking doctor-recommended relief" loading="eager" width="600" height="480">
                 </div>
             </div>
         </div>
@@ -984,28 +1281,40 @@
             <h2 class="browse-pain__title">Browse by Pain Area</h2>
             <p class="browse-pain__subtitle">Where does it hurt? Click your pain point to find the right solution.</p>
             <div class="browse-pain__grid">
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">🦵</div>
+                <a href="pain.html?area=knee" class="pain-card" aria-label="Browse knee pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/Knee.svg" alt="Knee pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Knee</span>
                 </a>
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">🦶</div>
+                <a href="pain.html?area=foot" class="pain-card" aria-label="Browse foot and ankle pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/ankle.svg" alt="Foot and ankle pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Foot</span>
                 </a>
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">💪</div>
+                <a href="pain.html?area=shoulder" class="pain-card" aria-label="Browse shoulder pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/shoulder.svg" alt="Shoulder pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Shoulder</span>
                 </a>
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">🤲</div>
+                <a href="pain.html?area=elbow" class="pain-card" aria-label="Browse elbow pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/elbow.svg" alt="Elbow pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Elbow</span>
                 </a>
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">🧍</div>
+                <a href="pain.html?area=spine" class="pain-card" aria-label="Browse spine and back pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/spine.svg" alt="Spine and back pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Spine</span>
                 </a>
-                <a href="#" class="pain-card">
-                    <div class="pain-card__icon">🦴</div>
+                <a href="pain.html?area=hip" class="pain-card" aria-label="Browse hip pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="images/pain/hip.svg" alt="Hip pain icon" loading="lazy" width="96" height="96">
+                    </div>
                     <span class="pain-card__name">Hip</span>
                 </a>
             </div>
@@ -1019,19 +1328,19 @@
             <p class="why-avana__subtitle">Trusted by patients, surgeons, and hospitals across India</p>
             <div class="why-avana__grid">
                 <div class="why-avana__stat">
-                    <span class="why-avana__number">40,000+</span>
-                    <span class="why-avana__label">Patients Helped</span>
+                    <span class="why-avana__number">1 Lakh+</span>
+                    <span class="why-avana__label">Patients Served Across India</span>
                 </div>
                 <div class="why-avana__stat">
-                    <span class="why-avana__number">500+</span>
-                    <span class="why-avana__label">Surgeons Trained</span>
+                    <span class="why-avana__number">1000+</span>
+                    <span class="why-avana__label">Surgeons</span>
                 </div>
                 <div class="why-avana__stat">
                     <span class="why-avana__number">250+</span>
                     <span class="why-avana__label">Hospital Installations</span>
                 </div>
                 <div class="why-avana__stat">
-                    <span class="why-avana__number">10+</span>
+                    <span class="why-avana__number">20+</span>
                     <span class="why-avana__label">Years of Clinical Experience</span>
                 </div>
             </div>
@@ -1041,25 +1350,39 @@
     <!-- AUDIENCE SELECTOR -->
     <section class="audience-selector">
         <div class="container">
-            <h2 class="audience-selector__title">Who Are You?</h2>
-            <p class="audience-selector__subtitle">Choose your path and we'll guide you to the right solutions</p>
+            <h2 class="audience-selector__title">Choose your path and we'll guide you to the right solutions</h2>
             <div class="audience-selector__grid">
                 <a href="#" class="audience-card">
-                    <div class="audience-card__icon">👥</div>
+                    <div class="audience-card__icon">
+                        <img src="images/audience/Knee%20joint%20pain.jpg" alt="Patient experiencing knee and joint pain seeking non-surgical relief" loading="lazy" width="140" height="140">
+                    </div>
                     <h3 class="audience-card__title">I have knee/joint pain</h3>
                     <p class="audience-card__desc">Explore bracing solutions that reduce pain and restore mobility — without surgery.</p>
                     <span class="audience-card__arrow">→</span>
                 </a>
 
                 <a href="#" class="audience-card">
-                    <div class="audience-card__icon">🏥</div>
+                    <div class="audience-card__icon">
+                        <img src="images/audience/backpain.jpg" alt="Patient managing chronic back pain with spine bracing support" loading="lazy" width="140" height="140">
+                    </div>
+                    <h3 class="audience-card__title">I have back pain</h3>
+                    <p class="audience-card__desc">Discover spine braces and posture support to relieve chronic back pain and restore comfort.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="#" class="audience-card">
+                    <div class="audience-card__icon">
+                        <img src="images/audience/post%20operation.jpg" alt="Patient recovering after surgery with post-operative bracing support" loading="lazy" width="140" height="140">
+                    </div>
                     <h3 class="audience-card__title">I'm recovering from surgery</h3>
                     <p class="audience-card__desc">Find the right post-operative braces and cold therapy for faster, safer recovery.</p>
                     <span class="audience-card__arrow">→</span>
                 </a>
 
                 <a href="#" class="audience-card">
-                    <div class="audience-card__icon">👨‍⚕️</div>
+                    <div class="audience-card__icon">
+                        <img src="images/audience/surgeon.jpg" alt="Orthopaedic surgeon attending advanced endoscopic spine surgery training" loading="lazy" width="140" height="140">
+                    </div>
                     <h3 class="audience-card__title">I'm a surgeon</h3>
                     <p class="audience-card__desc">Explore RiwoSpine endoscopic systems, training programs, and partnership opportunities.</p>
                     <span class="audience-card__arrow">→</span>
@@ -1068,14 +1391,35 @@
         </div>
     </section>
 
-    <!-- HOW CAN WE HELP YOU -->
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section class="testimonials" id="testimonials" aria-label="Patient and surgeon testimonials">
+        <div class="container">
+            <h2 class="testimonials__title">What Our Patients & Surgeons Say</h2>
+            <p class="testimonials__subtitle">Real stories of relief, recovery, and renewed confidence</p>
+            <div class="testimonials__viewport">
+                <button class="testimonials__arrow testimonials__arrow--prev" id="testimonial-prev" aria-label="Previous testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="testimonials__track" id="testimonials-track" aria-live="polite">
+                    <!-- Cards inserted by JS from data/testimonials.json -->
+                </div>
+                <button class="testimonials__arrow testimonials__arrow--next" id="testimonial-next" aria-label="Next testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+                </button>
+            </div>
+            <div class="testimonials__dots" id="testimonials-dots" role="tablist"></div>
+        </div>
+    </section>
+
+    <!-- EXPLORE SOLUTIONS -->
     <section class="help-section">
         <div class="container">
-            <h2 class="section__title">How Can We Help You?</h2>
-            <p class="section__subtitle">Explore solutions tailored to your condition</p>
+            <h2 class="section__title">Explore solutions tailored to your condition</h2>
             <div class="help-grid">
                 <a href="#" class="help-card">
-                    <div class="help-card__image">[Osteoarthritis Image]</div>
+                    <div class="help-card__image">
+                        <img src="images/condition/osteoarthritis.jpg" alt="Knee brace solution for osteoarthritis pain relief" loading="lazy" width="600" height="400">
+                    </div>
                     <div class="help-card__content">
                         <h3 class="help-card__title">Osteoarthritis</h3>
                         <p class="help-card__desc">Offloader braces that reduce knee pain and delay surgery.</p>
@@ -1084,7 +1428,9 @@
                 </a>
 
                 <a href="#" class="help-card">
-                    <div class="help-card__image">[Post-Op Recovery Image]</div>
+                    <div class="help-card__image">
+                        <img src="images/condition/Postsurgery.jpg" alt="Post-surgery recovery brace and rehabilitation support" loading="lazy" width="600" height="400">
+                    </div>
                     <div class="help-card__content">
                         <h3 class="help-card__title">Post-Surgery Recovery</h3>
                         <p class="help-card__desc">Braces and support for faster healing after knee, shoulder, or spine surgery.</p>
@@ -1093,7 +1439,9 @@
                 </a>
 
                 <a href="#" class="help-card">
-                    <div class="help-card__image">[Cold Therapy Image]</div>
+                    <div class="help-card__image">
+                        <img src="images/condition/coldtherapy.jpg" alt="Clinical cold therapy device for swelling and pain relief" loading="lazy" width="600" height="400">
+                    </div>
                     <div class="help-card__content">
                         <h3 class="help-card__title">Cold Therapy</h3>
                         <p class="help-card__desc">Clinical-grade cold and compression therapy for pain relief and reduced swelling.</p>
@@ -1102,7 +1450,9 @@
                 </a>
 
                 <a href="#" class="help-card">
-                    <div class="help-card__image">[Spine Brace Image]</div>
+                    <div class="help-card__image">
+                        <img src="images/condition/spinesupport.jpg" alt="Spine support brace — LSO, TLSO and cervical bracing" loading="lazy" width="600" height="400">
+                    </div>
                     <div class="help-card__content">
                         <h3 class="help-card__title">Spine Support</h3>
                         <p class="help-card__desc">LSO, TLSO, and cervical braces from Aspen Medical Products.</p>
@@ -1119,10 +1469,18 @@
             <h2 class="our-brands__title">Our Brands</h2>
             <p class="our-brands__subtitle">World-class brands trusted by leading hospitals</p>
             <div class="our-brands__logos">
-                <div class="brand-logo">[Breg Logo]</div>
-                <div class="brand-logo">[Aspen Logo]</div>
-                <div class="brand-logo">[RiwoSpine Logo]</div>
-                <div class="brand-logo">[Osteokart Logo]</div>
+                <a href="https://www.breg.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Breg website">
+                    <img src="images/brands/breg-logo.png.png" alt="Breg — orthopaedic bracing brand from USA" loading="lazy">
+                </a>
+                <a href="https://www.aspenmedical.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Aspen Medical Products website">
+                    <img src="images/brands/aspen-logo.png.jpg" alt="Aspen Medical Products — spine bracing solutions" loading="lazy">
+                </a>
+                <a href="https://www.riwospine.com/en/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit RiwoSpine website">
+                    <img src="images/brands/riwospine-logo.png.png" alt="RiwoSpine — endoscopic spine surgery systems" loading="lazy">
+                </a>
+                <a href="https://osteokart.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit OsteoKart store">
+                    <img src="images/brands/osteokart-logo.png.png" alt="OsteoKart — India's orthopaedic bracing online store" loading="lazy">
+                </a>
             </div>
             <p class="our-brands__tagline">International brands. Indian expertise. Delivered across India.</p>
         </div>
@@ -1135,7 +1493,8 @@
             <p class="section__subtitle">Expert insights on pain relief, recovery, and orthopaedic care</p>
             <div class="blog-grid">
                 <a href="#" class="blog-card">
-                    <div class="blog-card__image">[Blog Image 1]</div>
+                    <!-- TODO: Add featured image at images/blogs/oa-knee-brace.jpg -->
+                    <div class="blog-card__image" role="img" aria-label="Article: Understanding Osteoarthritis">Osteoarthritis Guide</div>
                     <div class="blog-card__content">
                         <span class="blog-card__date">Coming soon</span>
                         <h3 class="blog-card__title">Understanding Osteoarthritis: When to Consider a Knee Brace</h3>
@@ -1145,7 +1504,8 @@
                 </a>
 
                 <a href="#" class="blog-card">
-                    <div class="blog-card__image">[Blog Image 2]</div>
+                    <!-- TODO: Add featured image at images/blogs/cold-therapy.jpg -->
+                    <div class="blog-card__image" role="img" aria-label="Article: Cold Therapy After Surgery">Cold Therapy Evidence</div>
                     <div class="blog-card__content">
                         <span class="blog-card__date">Coming soon</span>
                         <h3 class="blog-card__title">Cold Therapy After Surgery: What the Evidence Says</h3>
@@ -1155,7 +1515,8 @@
                 </a>
 
                 <a href="#" class="blog-card">
-                    <div class="blog-card__image">[Blog Image 3]</div>
+                    <!-- TODO: Add featured image at images/blogs/endoscopic-spine.jpg -->
+                    <div class="blog-card__image" role="img" aria-label="Article: Full Endoscopic Spine Surgery in India">Endoscopic Spine Surgery</div>
                     <div class="blog-card__content">
                         <span class="blog-card__date">Coming soon</span>
                         <h3 class="blog-card__title">Full Endoscopic Spine Surgery: A New Era in India</h3>
@@ -1202,7 +1563,9 @@
         <div class="container">
             <div class="site-footer__grid">
                 <div class="site-footer__col">
-                    <div class="site-footer__logo">AVANA SURGICAL</div>
+                    <div class="site-footer__logo">
+                        <img src="images/avana-logo/footer-logo.svg" alt="Avana Surgical">
+                    </div>
                     <p class="site-footer__desc">Premium orthopaedic bracing & endoscopic spine surgery systems. Trusted by surgeons across India.</p>
                     <address class="site-footer__address">
                         <p>Avana Surgical Systems Pvt Ltd</p>
@@ -1211,6 +1574,20 @@
                     <div class="site-footer__contact-info">
                         <a href="tel:04422331061">044-2233 1061/62/63</a>
                         <a href="mailto:info@avanasurgical.com">info@avanasurgical.com</a>
+                    </div>
+                    <div class="site-footer__socials">
+                        <a href="https://www.linkedin.com/company/avana-surgical-systems-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on LinkedIn">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/avana_surgical/" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.7 4.92 4.92.06 1.27.07 1.65.07 4.85 0 3.21-.01 3.58-.07 4.85-.15 3.22-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07-3.2 0-3.58-.01-4.85-.07-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85 0-3.2.01-3.58.07-4.85.15-3.23 1.66-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12c0 3.26.01 3.67.07 4.95.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24c3.26 0 3.67-.01 4.95-.07 4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95 0-3.26-.01-3.67-.07-4.95-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/avanamedical" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.45 18.63.07 12 .07S0 5.45 0 12.07c0 5.99 4.39 10.95 10.13 11.86v-8.39H7.08v-3.47h3.05V9.43c0-3.01 1.79-4.67 4.53-4.67 1.31 0 2.69.23 2.69.23v2.95h-1.51c-1.49 0-1.96.93-1.96 1.87v2.25h3.33l-.53 3.47h-2.8v8.39C19.61 23.02 24 18.06 24 12.07z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@avanamedical/videos" target="_blank" rel="noopener noreferrer" aria-label="Avana Surgical on YouTube">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.01 3.01 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg>
+                        </a>
                     </div>
                 </div>
 
@@ -1238,7 +1615,7 @@
                     <h4 class="site-footer__heading">Company</h4>
                     <ul class="site-footer__links">
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="careers.html">Careers</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>
@@ -1250,15 +1627,32 @@
         </div>
     </footer>
 
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
     <script>
-        // Sticky header on scroll
+        // Sticky header on scroll + back-to-top visibility
         const header = document.getElementById('site-header');
+        const backToTop = document.getElementById('back-to-top');
         window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 100) {
+            const scrolled = window.pageYOffset;
+            if (scrolled > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
+            if (scrolled > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }, { passive: true });
+
+        // Back to top click
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         // Fade-in animation on scroll
@@ -1266,7 +1660,6 @@
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1274,10 +1667,155 @@
                 }
             });
         }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
+        // ===== TESTIMONIALS CAROUSEL =====
+        (function initTestimonials() {
+            const track = document.getElementById('testimonials-track');
+            const dotsContainer = document.getElementById('testimonials-dots');
+            const prevBtn = document.getElementById('testimonial-prev');
+            const nextBtn = document.getElementById('testimonial-next');
+            if (!track) return;
+
+            let currentIndex = 0;
+            let testimonials = [];
+            let autoplayTimer = null;
+
+            function escapeHtml(s) {
+                if (s == null) return '';
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            function buildCard(t) {
+                const quote = t.testimonial || t.quote || '';
+                const badges = [
+                    t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
+                    t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''
+                ].filter(Boolean).join('');
+                return `
+                    <article class="testimonial-card" role="group" aria-roledescription="testimonial">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
+                            <p class="testimonial-card__quote">${escapeHtml(quote)}</p>
+                            ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                            <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
+                            <div class="testimonial-card__role">${escapeHtml(t.location || '')}</div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            function render() {
+                track.innerHTML = testimonials.map(buildCard).join('');
+                dotsContainer.innerHTML = testimonials.map((_, i) =>
+                    `<button class="testimonials__dot${i === 0 ? ' testimonials__dot--active' : ''}" data-index="${i}" role="tab" aria-label="Show testimonial ${i + 1}"></button>`
+                ).join('');
+                dotsContainer.querySelectorAll('.testimonials__dot').forEach(dot => {
+                    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10)));
+                });
+            }
+
+            function update() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dotsContainer.querySelectorAll('.testimonials__dot').forEach((d, i) => {
+                    d.classList.toggle('testimonials__dot--active', i === currentIndex);
+                });
+            }
+
+            function goTo(i) {
+                if (!testimonials.length) return;
+                currentIndex = (i + testimonials.length) % testimonials.length;
+                update();
+                resetAutoplay();
+            }
+
+            function next() { goTo(currentIndex + 1); }
+            function prev() { goTo(currentIndex - 1); }
+
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayTimer = setInterval(next, 6000);
+            }
+            function stopAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+            function resetAutoplay() {
+                if (autoplayTimer) startAutoplay();
+            }
+
+            // Pause on hover
+            const viewport = track.parentElement;
+            viewport.addEventListener('mouseenter', stopAutoplay);
+            viewport.addEventListener('mouseleave', startAutoplay);
+
+            // Touch swipe
+            let touchStartX = 0, touchEndX = 0;
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoplay();
+            }, { passive: true });
+            track.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) (diff > 0 ? next : prev)();
+                startAutoplay();
+            }, { passive: true });
+
+            // Keyboard arrows
+            viewport.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+                if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+            });
+            viewport.setAttribute('tabindex', '0');
+
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            // Fallback testimonials in case fetch fails (e.g. file:// in some browsers)
+            const fallback = [
+                {
+                    name: "Walid Abedin",
+                    location: "Dhaka",
+                    product: "Polar Care Wave",
+                    category: "Post Operative Recovery",
+                    testimonial: "I had ACL reconstruction operation, and the pain was unimaginable. The combination of cold therapy and compression at the same time is game changing. The pain literally reduced after 2 uses of the product."
+                },
+                {
+                    name: "Fawzul Hidhaya's Mother",
+                    location: "Chennai",
+                    product: "Spinamic",
+                    category: "Spine Support",
+                    testimonial: "My daughter was diagnosed with scoliosis at the age of 11. Before the brace it was 35°, and with the brace it reduced to 25°. We are very happy to see these results and have an alternative to surgery."
+                },
+                {
+                    name: "Radhamani",
+                    location: "Chennai",
+                    product: "Freestyle OA",
+                    category: "Knee Pain",
+                    testimonial: "It gave me confidence while walking and good support for my knees. The customer service was very helpful in showing me how to wear the brace properly."
+                }
+            ];
+
+            fetch('testimonials.json', { cache: 'no-store' })
+                .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+                .then(data => {
+                    testimonials = (Array.isArray(data) && data.length) ? data : fallback;
+                })
+                .catch(() => {
+                    testimonials = fallback;
+                })
+                .finally(() => {
+                    render();
+                    update();
+                    startAutoplay();
+                });
+        })();
     </script>
 </body>
 </html>
