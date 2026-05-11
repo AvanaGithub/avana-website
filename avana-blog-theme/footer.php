@@ -23,7 +23,7 @@ $avana_main_site = 'https://www.avanasurgical.com';
                 <!-- Brand column -->
                 <div class="site-footer__column site-footer__brand">
                     <div class="site-footer__logo">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/footer-logo.svg" alt="Avana Surgical" class="footer-logo-image" onerror="this.style.display='none'">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/footer-logo.png" alt="Avana Surgical" class="footer-logo-image" onerror="this.style.display='none'">
                         <span class="footer-logo-text">Orthotics Blog</span>
                     </div>
                     <p class="site-footer__desc">
