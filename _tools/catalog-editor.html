@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Avana Catalogue Editor (local only)</title>
+<style>
+    :root {
+        --primary: #243447;
+        --accent: #B18C57;
+        --accent-soft: rgba(177, 140, 87, 0.12);
+        --bg: #F4F4F2;
+        --muted: #6C6C6C;
+        --text: #1F1F1F;
+        --border: #E1E1DC;
+        --ok: #2D8F4E;
+        --warn: #C2811E;
+        --danger: #C44545;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+        font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* ===== Header bar (sticky) ===== */
+    .topbar {
+        position: sticky; top: 0; z-index: 50;
+        background: var(--primary);
+        color: #fff;
+        padding: 14px 24px;
+        display: flex; align-items: center; gap: 16px;
+        flex-wrap: wrap;
+    }
+    .topbar h1 { margin: 0; font-size: 1.1rem; font-weight: 600; }
+    .topbar h1 small { font-weight: 400; opacity: 0.7; margin-left: 8px; font-size: 0.85rem; }
+    .topbar .spacer { flex: 1; }
+    .badge-unsaved {
+        background: var(--warn); color: #fff;
+        padding: 4px 12px; border-radius: 100px; font-size: 0.78rem; font-weight: 600;
+        display: none;
+    }
+    .badge-unsaved.show { display: inline-block; }
+    .btn {
+        background: var(--accent); color: #fff; border: 0;
+        padding: 9px 16px; border-radius: 6px; cursor: pointer;
+        font: inherit; font-weight: 600; font-size: 0.85rem;
+        transition: filter 0.15s, transform 0.15s;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn:active { transform: translateY(1px); }
+    .btn--ghost { background: transparent; border: 1px solid rgba(255, 255, 255, 0.35); }
+    .btn--ghost:hover { background: rgba(255, 255, 255, 0.08); }
+    .btn--danger { background: var(--danger); }
+
+    /* ===== Coverage strip ===== */
+    .coverage {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 14px 24px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .coverage__group h3 {
+        margin: 0 0 8px;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--muted);
+        font-weight: 700;
+    }
+    .coverage__list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .pill {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: var(--accent-soft); color: var(--primary);
+        padding: 4px 10px; border-radius: 100px;
+        font-size: 0.78rem; font-weight: 600;
+    }
+    .pill__count { color: var(--accent); font-weight: 700; }
+    .pill--thin { background: rgba(196, 69, 69, 0.10); }
+    .pill--thin .pill__count { color: var(--danger); }
+
+    /* ===== Filter bar ===== */
+    .filterbar {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        padding: 10px 24px;
+        display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+    }
+    .filterbar input[type="search"] {
+        flex: 1; min-width: 200px;
+        padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
+        font: inherit;
+    }
+    .filterbar select {
+        padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px;
+        font: inherit; background: #fff;
+    }
+
+    /* ===== Matrix table ===== */
+    .table-wrap {
+        padding: 0 24px 100px;
+        overflow-x: auto;
+    }
+    table.matrix {
+        width: 100%; border-collapse: separate; border-spacing: 0;
+        background: #fff; margin-top: 14px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(36, 52, 71, 0.05);
+    }
+    .matrix thead th {
+        background: #fafaf8;
+        position: sticky; top: 60px; z-index: 5;
+        text-align: left;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: var(--muted);
+        padding: 10px 8px;
+        border-bottom: 1px solid var(--border);
+        white-space: nowrap;
+    }
+    .matrix thead th.group-pa { color: #2557a7; }
+    .matrix thead th.group-au { color: #7b3aa1; }
+    .matrix thead th.group-co { color: #2d8f4e; }
+    .matrix tbody td {
+        padding: 10px 8px;
+        border-bottom: 1px solid #f1f1eb;
+        font-size: 0.85rem;
+        vertical-align: top;
+    }
+    .matrix tbody tr:hover { background: #fafaf6; }
+
+    .product-cell { min-width: 260px; max-width: 320px; }
+    .product-cell__name { font-weight: 600; color: var(--primary); line-height: 1.35; }
+    .product-cell__brand {
+        font-size: 0.72rem; color: var(--accent); font-weight: 700;
+        text-transform: uppercase; letter-spacing: 0.5px;
+        margin-bottom: 2px;
+    }
+    .product-cell__slug { font-family: 'SF Mono', Consolas, monospace; font-size: 0.7rem; color: var(--muted); margin-top: 3px; }
+    .product-cell__desc {
+        color: var(--muted); font-size: 0.78rem;
+        margin-top: 4px; line-height: 1.45;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .product-cell__edit {
+        margin-top: 6px; display: inline-flex; gap: 8px;
+    }
+    .product-cell__edit button {
+        background: none; border: 0; padding: 0;
+        color: var(--accent); font: inherit; font-size: 0.75rem; cursor: pointer;
+        text-decoration: underline; text-underline-offset: 2px;
+    }
+    .product-cell__edit button.delete { color: var(--danger); }
+
+    .check-cell {
+        text-align: center; width: 56px;
+    }
+    .check-cell input[type="checkbox"] {
+        width: 18px; height: 18px; cursor: pointer; accent-color: var(--accent);
+    }
+
+    /* Group separator vertical lines */
+    .matrix th.group-end, .matrix td.group-end { border-right: 1px solid var(--border); }
+
+    /* ===== Empty + Loading ===== */
+    .state {
+        padding: 80px 24px; text-align: center; color: var(--muted);
+    }
+
+    /* ===== Modal ===== */
+    .modal-backdrop {
+        position: fixed; inset: 0; background: rgba(36, 52, 71, 0.5);
+        display: none; align-items: center; justify-content: center; z-index: 100;
+        padding: 24px;
+    }
+    .modal-backdrop.show { display: flex; }
+    .modal {
+        background: #fff; border-radius: 10px;
+        width: 100%; max-width: 560px;
+        padding: 24px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    .modal h2 { margin: 0 0 16px; color: var(--primary); font-size: 1.2rem; }
+    .modal label {
+        display: block; margin-bottom: 12px;
+        font-size: 0.8rem; font-weight: 600; color: var(--muted);
+    }
+    .modal label input, .modal label textarea {
+        display: block; width: 100%; margin-top: 4px;
+        padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px;
+        font: inherit;
+    }
+    .modal label textarea { min-height: 64px; resize: vertical; font-family: inherit; }
+    .modal__actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+    .modal__actions .btn--ghost {
+        background: transparent; color: var(--primary); border: 1px solid var(--border);
+    }
+    .modal__actions .btn--ghost:hover { background: var(--bg); }
+
+    /* ===== Toast ===== */
+    .toast {
+        position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+        background: var(--primary); color: #fff;
+        padding: 10px 18px; border-radius: 6px;
+        font-size: 0.85rem; font-weight: 600;
+        opacity: 0; pointer-events: none;
+        transition: opacity 0.2s, transform 0.2s;
+        z-index: 200;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+
+    .help-note {
+        background: var(--accent-soft); color: var(--text);
+        padding: 12px 16px; border-radius: 6px;
+        margin: 12px 24px 0;
+        font-size: 0.85rem;
+        border-left: 3px solid var(--accent);
+    }
+    .help-note code {
+        background: rgba(36, 52, 71, 0.08); padding: 1px 5px; border-radius: 3px;
+        font-family: 'SF Mono', Consolas, monospace; font-size: 0.85em;
+    }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+    <h1>Avana Catalogue Editor <small>local only · not on public site</small></h1>
+    <span id="dirty-badge" class="badge-unsaved">● Unsaved changes</span>
+    <div class="spacer"></div>
+    <button class="btn btn--ghost" id="btn-add">+ Add product</button>
+    <button class="btn btn--ghost" id="btn-reset">↻ Reset</button>
+    <button class="btn" id="btn-download">↓ Download products.json</button>
+</header>
+
+<div class="help-note">
+    Tick or untick a checkbox to add/remove a product from a category. Click <strong>↓ Download products.json</strong>, then drop the downloaded file into <code>C:\avana_website\data\products.json</code>, then commit &amp; push.
+</div>
+
+<section class="coverage" id="coverage">
+    <div class="coverage__group">
+        <h3>Pain Areas</h3>
+        <div class="coverage__list" data-coverage-group="painAreas"></div>
+    </div>
+    <div class="coverage__group">
+        <h3>Audiences</h3>
+        <div class="coverage__list" data-coverage-group="audiences"></div>
+    </div>
+    <div class="coverage__group">
+        <h3>Conditions</h3>
+        <div class="coverage__list" data-coverage-group="conditions"></div>
+    </div>
+</section>
+
+<section class="filterbar">
+    <input type="search" id="search" placeholder="Search by product name, brand, slug, or description…">
+    <select id="filter-painArea"><option value="">All pain areas</option></select>
+    <select id="filter-audience"><option value="">All audiences</option></select>
+    <select id="filter-condition"><option value="">All conditions</option></select>
+    <span id="row-count" style="color: var(--muted); font-size: 0.82rem;"></span>
+</section>
+
+<div class="table-wrap">
+    <div id="state" class="state">Loading catalogue…</div>
+    <table class="matrix" id="matrix" hidden>
+        <thead><tr id="matrix-head"></tr></thead>
+        <tbody id="matrix-body"></tbody>
+    </table>
+</div>
+
+<!-- Add / Edit product modal -->
+<div class="modal-backdrop" id="modal-backdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title">Add new product</h2>
+        <label>Slug (kebab-case, unique)
+            <input type="text" id="m-slug" placeholder="breg-new-product">
+        </label>
+        <label>Name
+            <input type="text" id="m-name" placeholder="Product display name">
+        </label>
+        <label>Brand
+            <input type="text" id="m-brand" placeholder="Breg / Aspen / ...">
+        </label>
+        <label>Short description
+            <textarea id="m-desc" placeholder="1–2 sentence description shown on the card."></textarea>
+        </label>
+        <label>Image path
+            <input type="text" id="m-image" placeholder="images/products/your-slug.jpg">
+        </label>
+        <label>Osteokart URL
+            <input type="text" id="m-link" placeholder="https://osteokart.com/products/...">
+        </label>
+        <div class="modal__actions">
+            <button class="btn btn--ghost" id="m-cancel">Cancel</button>
+            <button class="btn" id="m-save">Save</button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+'use strict';
+
+// ============================================================
+//  Avana Catalogue Editor — single-file local admin tool.
+//  Reads ../data/products.json, lets the user tick category
+//  checkboxes for every product, downloads the updated JSON.
+// ============================================================
+
+// Canonical taxonomy — must match assets/js/solution-loader.js's TYPES registry.
+// Adding a new category here would require a matching code change in the loader.
+const TAXONOMY = {
+    painAreas:  { label: 'Pain Areas',  key: 'relatedPainAreas',  slugs: ['knee', 'spine', 'shoulder', 'elbow', 'foot', 'hip'] },
+    audiences:  { label: 'Audiences',   key: 'relatedAudiences',  slugs: ['knee-joint-pain', 'back-pain', 'recovering-from-surgery', 'surgeon'] },
+    conditions: { label: 'Conditions',  key: 'relatedConditions', slugs: ['osteoarthritis', 'post-surgery-recovery', 'cold-therapy', 'spine-support'] }
+};
+
+// Coverage is "thin" if a category has fewer than this many products.
+const THIN_THRESHOLD = 3;
+
+// Field order preserved when writing JSON, so diffs stay clean.
+const PRODUCT_FIELD_ORDER = [
+    'slug', 'name', 'brand', 'shortDescription',
+    'usage', 'image', 'link', 'ctaLabel',
+    'relatedPainAreas', 'relatedAudiences', 'relatedConditions'
+];
+
+let originalJson = null;       // raw parsed JSON for reset
+let catalogue = null;          // mutable working copy
+let dirty = false;             // any change since load?
+
+// ===== Load =====
+async function load() {
+    try {
+        const res = await fetch('../data/products.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        originalJson = text;
+        catalogue = JSON.parse(text);
+        if (!Array.isArray(catalogue.products)) throw new Error('Expected catalogue.products array');
+        renderAll();
+    } catch (err) {
+        document.getElementById('state').innerHTML =
+            '<p><strong>Could not load <code>../data/products.json</code>.</strong></p>' +
+            '<p>' + escapeHtml(err.message) + '</p>' +
+            '<p>This editor must be served from a local HTTP server (browsers block fetch on file://).<br>' +
+            'Run <code>start-server.bat</code> in the project root, then open <code>http://localhost:8000/_tools/catalog-editor.html</code>.</p>';
+    }
+}
+
+// ===== Render orchestration =====
+function renderAll() {
+    document.getElementById('state').hidden = true;
+    document.getElementById('matrix').hidden = false;
+    renderTableHead();
+    renderTableBody();
+    renderCoverage();
+    populateFilterSelects();
+    applyFilters();
+    updateDirty();
+}
+
+// ===== Table head =====
+function renderTableHead() {
+    const head = document.getElementById('matrix-head');
+    const cells = ['<th class="product-cell group-end" style="position:sticky;left:0;background:#fafaf8;z-index:6;">Product</th>'];
+    Object.entries(TAXONOMY).forEach(([groupKey, group]) => {
+        group.slugs.forEach((slug, i) => {
+            const isLast = i === group.slugs.length - 1;
+            cells.push(`<th class="check-cell group-${groupKey.slice(0,2)}${isLast ? ' group-end' : ''}" title="${slug}">${slug.replace(/-/g, ' ')}</th>`);
+        });
+    });
+    head.innerHTML = cells.join('');
+}
+
+// ===== Table body =====
+function renderTableBody() {
+    const body = document.getElementById('matrix-body');
+    body.innerHTML = catalogue.products.map((p, idx) => {
+        const productCell = `
+            <td class="product-cell group-end" style="position:sticky;left:0;background:#fff;">
+                ${p.brand ? `<div class="product-cell__brand">${escapeHtml(p.brand)}</div>` : ''}
+                <div class="product-cell__name">${escapeHtml(p.name || '(unnamed)')}</div>
+                <div class="product-cell__slug">${escapeHtml(p.slug || '')}</div>
+                <div class="product-cell__desc">${escapeHtml(p.shortDescription || '')}</div>
+                <div class="product-cell__edit">
+                    <button data-action="edit" data-idx="${idx}">Edit</button>
+                    <button class="delete" data-action="delete" data-idx="${idx}">Delete</button>
+                </div>
+            </td>`;
+        let checks = '';
+        Object.entries(TAXONOMY).forEach(([groupKey, group]) => {
+            group.slugs.forEach((slug, i) => {
+                const isLast = i === group.slugs.length - 1;
+                const checked = Array.isArray(p[group.key]) && p[group.key].includes(slug);
+                checks += `<td class="check-cell${isLast ? ' group-end' : ''}">` +
+                    `<input type="checkbox" data-relation="${group.key}" data-slug="${slug}" data-idx="${idx}" ${checked ? 'checked' : ''}>` +
+                    `</td>`;
+            });
+        });
+        return `<tr data-idx="${idx}" data-name="${escapeAttr(p.name || '')}" data-brand="${escapeAttr(p.brand || '')}" data-slug="${escapeAttr(p.slug || '')}" data-desc="${escapeAttr(p.shortDescription || '')}">${productCell}${checks}</tr>`;
+    }).join('');
+
+    body.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        cb.addEventListener('change', onCheckboxChange);
+    });
+    body.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.addEventListener('click', onProductAction);
+    });
+}
+
+// ===== Coverage strip =====
+function renderCoverage() {
+    Object.entries(TAXONOMY).forEach(([groupKey, group]) => {
+        const wrap = document.querySelector(`[data-coverage-group="${groupKey}"]`);
+        wrap.innerHTML = group.slugs.map(slug => {
+            const count = catalogue.products.filter(p =>
+                Array.isArray(p[group.key]) && p[group.key].includes(slug)
+            ).length;
+            const isThin = count < THIN_THRESHOLD;
+            return `<span class="pill${isThin ? ' pill--thin' : ''}" title="${count} product${count === 1 ? '' : 's'} tagged ${slug}">
+                ${slug.replace(/-/g, ' ')} <span class="pill__count">${count}</span>
+            </span>`;
+        }).join('');
+    });
+}
+
+// ===== Filter populate + apply =====
+function populateFilterSelects() {
+    const fills = {
+        'filter-painArea': TAXONOMY.painAreas.slugs,
+        'filter-audience': TAXONOMY.audiences.slugs,
+        'filter-condition': TAXONOMY.conditions.slugs
+    };
+    Object.entries(fills).forEach(([selId, slugs]) => {
+        const sel = document.getElementById(selId);
+        // keep the placeholder option, append the rest
+        const placeholder = sel.querySelector('option').outerHTML;
+        sel.innerHTML = placeholder + slugs.map(s => `<option value="${s}">${s.replace(/-/g, ' ')}</option>`).join('');
+    });
+}
+
+function applyFilters() {
+    const q = document.getElementById('search').value.trim().toLowerCase();
+    const fp = document.getElementById('filter-painArea').value;
+    const fa = document.getElementById('filter-audience').value;
+    const fc = document.getElementById('filter-condition').value;
+    let visible = 0;
+    document.querySelectorAll('#matrix-body tr').forEach(tr => {
+        const idx = parseInt(tr.dataset.idx, 10);
+        const p = catalogue.products[idx];
+        const text = `${tr.dataset.name} ${tr.dataset.brand} ${tr.dataset.slug} ${tr.dataset.desc}`.toLowerCase();
+        const matchesSearch = !q || text.includes(q);
+        const matchesPA = !fp || (p.relatedPainAreas || []).includes(fp);
+        const matchesAU = !fa || (p.relatedAudiences || []).includes(fa);
+        const matchesCO = !fc || (p.relatedConditions || []).includes(fc);
+        const show = matchesSearch && matchesPA && matchesAU && matchesCO;
+        tr.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('row-count').textContent =
+        `Showing ${visible} of ${catalogue.products.length} products`;
+}
+
+// ===== Checkbox change =====
+function onCheckboxChange(e) {
+    const cb = e.currentTarget;
+    const idx = parseInt(cb.dataset.idx, 10);
+    const relation = cb.dataset.relation;
+    const slug = cb.dataset.slug;
+    const p = catalogue.products[idx];
+    if (!Array.isArray(p[relation])) p[relation] = [];
+    if (cb.checked) {
+        if (!p[relation].includes(slug)) p[relation].push(slug);
+    } else {
+        p[relation] = p[relation].filter(s => s !== slug);
+    }
+    markDirty();
+    renderCoverage();
+}
+
+// ===== Edit / Delete actions =====
+function onProductAction(e) {
+    const btn = e.currentTarget;
+    const idx = parseInt(btn.dataset.idx, 10);
+    if (btn.dataset.action === 'delete') {
+        const p = catalogue.products[idx];
+        if (confirm(`Delete "${p.name}" from the catalogue?\n\nThe image file is not deleted from /images/products/.`)) {
+            catalogue.products.splice(idx, 1);
+            markDirty();
+            renderTableBody();
+            renderCoverage();
+            applyFilters();
+            toast('Product removed (download to save)');
+        }
+    } else if (btn.dataset.action === 'edit') {
+        openModal(idx);
+    }
+}
+
+// ===== Add / Edit modal =====
+let editingIdx = null;
+
+function openModal(idx) {
+    editingIdx = idx;
+    const p = idx == null ? {} : catalogue.products[idx];
+    document.getElementById('modal-title').textContent = idx == null ? 'Add new product' : 'Edit product';
+    document.getElementById('m-slug').value = p.slug || '';
+    document.getElementById('m-name').value = p.name || '';
+    document.getElementById('m-brand').value = p.brand || '';
+    document.getElementById('m-desc').value = p.shortDescription || '';
+    document.getElementById('m-image').value = p.image || '';
+    document.getElementById('m-link').value = p.link || '';
+    document.getElementById('modal-backdrop').classList.add('show');
+    document.getElementById('m-slug').focus();
+}
+
+function closeModal() {
+    document.getElementById('modal-backdrop').classList.remove('show');
+    editingIdx = null;
+}
+
+function saveModal() {
+    const slug = document.getElementById('m-slug').value.trim();
+    const name = document.getElementById('m-name').value.trim();
+    if (!slug || !name) { toast('Slug and name are required', true); return; }
+    if (!/^[a-z0-9-]+$/.test(slug)) { toast('Slug must be lowercase kebab-case', true); return; }
+    // Unique slug check
+    const dupIdx = catalogue.products.findIndex(p => p.slug === slug);
+    if (dupIdx !== -1 && dupIdx !== editingIdx) { toast('A product with this slug already exists', true); return; }
+
+    const data = {
+        slug,
+        name,
+        brand: document.getElementById('m-brand').value.trim(),
+        shortDescription: document.getElementById('m-desc').value.trim(),
+        image: document.getElementById('m-image').value.trim(),
+        link: document.getElementById('m-link').value.trim(),
+        ctaLabel: 'View on Osteokart'
+    };
+
+    if (editingIdx == null) {
+        // New product — initialise empty relation arrays
+        catalogue.products.push({
+            ...data,
+            relatedPainAreas: [],
+            relatedAudiences: [],
+            relatedConditions: []
+        });
+    } else {
+        // Edit — preserve existing relation arrays
+        const existing = catalogue.products[editingIdx];
+        catalogue.products[editingIdx] = {
+            ...existing,
+            ...data
+        };
+    }
+    markDirty();
+    closeModal();
+    renderTableBody();
+    renderCoverage();
+    applyFilters();
+    toast(editingIdx == null ? 'Product added — tick categories to make it visible' : 'Product updated');
+}
+
+// ===== Download / Reset =====
+function downloadJson() {
+    // Re-serialise products in canonical field order so diffs stay tidy.
+    const out = {
+        _schema: catalogue._schema,
+        products: catalogue.products.map(p => {
+            const ordered = {};
+            PRODUCT_FIELD_ORDER.forEach(field => {
+                if (p[field] !== undefined) ordered[field] = p[field];
+            });
+            // Include any unrecognised fields at the end so we never lose data.
+            Object.keys(p).forEach(k => {
+                if (!(k in ordered)) ordered[k] = p[k];
+            });
+            return ordered;
+        })
+    };
+    const text = JSON.stringify(out, null, 2) + '\n';
+    const blob = new Blob([text], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'products.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+
+    originalJson = text;       // post-download = new baseline
+    dirty = false;
+    updateDirty();
+    toast('Downloaded — replace data/products.json then commit & push');
+}
+
+function resetAll() {
+    if (dirty && !confirm('Discard all unsaved changes?')) return;
+    catalogue = JSON.parse(originalJson);
+    dirty = false;
+    renderTableBody();
+    renderCoverage();
+    applyFilters();
+    updateDirty();
+    toast('Reset to last loaded state');
+}
+
+// ===== Dirty + Toast =====
+function markDirty() {
+    dirty = true;
+    updateDirty();
+}
+function updateDirty() {
+    document.getElementById('dirty-badge').classList.toggle('show', dirty);
+}
+
+let toastTimer = null;
+function toast(msg, isError = false) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.style.background = isError ? 'var(--danger)' : 'var(--primary)';
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+}
+
+// ===== Escape helpers =====
+function escapeHtml(s) {
+    return String(s ?? '')
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+function escapeAttr(s) { return escapeHtml(s); }
+
+// ===== Wiring =====
+window.addEventListener('beforeunload', (e) => {
+    if (dirty) {
+        e.preventDefault();
+        e.returnValue = '';
+    }
+});
+
+document.getElementById('btn-download').addEventListener('click', downloadJson);
+document.getElementById('btn-reset').addEventListener('click', resetAll);
+document.getElementById('btn-add').addEventListener('click', () => openModal(null));
+document.getElementById('m-save').addEventListener('click', saveModal);
+document.getElementById('m-cancel').addEventListener('click', closeModal);
+document.getElementById('modal-backdrop').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) closeModal();
+});
+['search', 'filter-painArea', 'filter-audience', 'filter-condition'].forEach(id =>
+    document.getElementById(id).addEventListener('input', applyFilters)
+);
+
+// Keyboard: Esc closes the modal
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.getElementById('modal-backdrop').classList.contains('show')) {
+        closeModal();
+    }
+});
+
+load();
+</script>
+</body>
+</html>

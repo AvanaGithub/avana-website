@@ -208,6 +208,18 @@
       "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
     },
     {
+      "slug": "breg-polar-care-wave",
+      "name": "Polar Care Wave",
+      "brand": "Breg",
+      "shortDescription": "Cold therapy with active compression — controls pain and swelling after surgery or acute injury.",
+      "image": "images/products/breg-polar-care-wave-img-1.png",
+      "link": "https://osteokart.com/products/breg-polar-care-wave",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["knee", "shoulder", "hip"],
+      "relatedAudiences": ["recovering-from-surgery", "surgeon"],
+      "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
+    },
+    {
       "slug": "breg-atlas-universal-shoulder-sling",
       "name": "Atlas Universal Shoulder Sling",
       "brand": "Breg",

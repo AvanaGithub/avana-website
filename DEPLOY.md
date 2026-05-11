@@ -26,9 +26,33 @@ assets/js/header-behavior.js          ← sticky header + mega-menu + mobile nav
 
 ---
 
-## 2. Adding a new product
+## 2. Managing the catalogue with the visual editor (recommended)
 
-You DO NOT need to touch any HTML or JS.
+For non-technical team members and for any "add this product to back-pain" style edit, use the local catalogue editor instead of hand-editing JSON.
+
+1. **Launch a local server** — double-click `start-server.bat` (or run `py -3 -m http.server 8000` from the repo root).
+2. **Open the editor** — http://localhost:8000/_tools/catalog-editor.html
+3. **Edit** — tick or untick category checkboxes for any product. Use the search and filters to find products quickly. The coverage strip at the top shows how many products are tagged in each category (pills go red when a category has fewer than 3 products).
+4. **Add or remove products** — `+ Add product` opens a modal for the basic fields; the × on each row deletes (after confirm).
+5. **Download** — click `↓ Download products.json`. Your browser saves an updated `products.json` (usually to your Downloads folder).
+6. **Replace** — overwrite `C:\avana_website\data\products.json` with the downloaded file.
+7. **Commit & push**:
+   ```bash
+   git add data/products.json
+   git commit -m "Catalogue: <short summary of what changed>"
+   git push origin main
+   ```
+   GitHub Pages rebuilds in ~30–90 seconds and your team will see the change.
+
+The editor lives in `_tools/` — that underscore prefix means GitHub Pages' default Jekyll behaviour **excludes it from the public site**. Browsing to `https://avanagithub.github.io/avana-website/_tools/catalog-editor.html` returns 404. So the editor stays a local-only admin tool while still sitting in the repo for everyone to clone.
+
+> **Tip — adding new images** still requires dropping the image file into `images/products/`. The editor only manages metadata. Image filename should match the slug.
+
+---
+
+## 3. Adding a new product by hand-editing JSON
+
+If you'd rather skip the editor, the same change is just a JSON edit:
 
 1. **Image**: drop the product photo into `images/products/{product-slug}.jpg`
    (use kebab-case; max ~250 KB; ideally 800×600).
@@ -68,7 +92,7 @@ To add a brand-new pain area / audience / condition: also create the matching `d
 
 ---
 
-## 3. Local preview
+## 4. Local preview
 
 The site needs an HTTP server (browsers block `fetch()` on `file://`):
 
@@ -84,12 +108,13 @@ Then open:
 - `http://localhost:8000/solution-template.html?type=painArea&slug=knee` — knee page
 - `http://localhost:8000/solution-template.html?type=audience&slug=back-pain`
 - `http://localhost:8000/solution-template.html?type=condition&slug=osteoarthritis`
+- `http://localhost:8000/_tools/catalog-editor.html` — visual catalogue editor (local only)
 
 Locally the clean URLs (`/solutions/knee`) do NOT work — nginx rewrites only kick in on the server. Use query-string form when previewing.
 
 ---
 
-## 4. Deploying to DigitalOcean
+## 5. Deploying to DigitalOcean
 
 ### One-time droplet setup
 
@@ -126,7 +151,7 @@ The WordPress blog (`avana-blog-theme/`) deploys separately — it goes into you
 
 ---
 
-## 5. URL Map
+## 6. URL Map
 
 | URL | Source | What it shows |
 |---|---|---|
@@ -140,7 +165,7 @@ The WordPress blog (`avana-blog-theme/`) deploys separately — it goes into you
 
 ---
 
-## 6. Testing your change before deploy
+## 7. Testing your change before deploy
 
 A quick end-to-end smoke test:
 
@@ -153,7 +178,7 @@ A quick end-to-end smoke test:
 
 ---
 
-## 7. Files NOT to commit / deploy
+## 8. Files NOT to commit / deploy
 
 - `avana-blog-theme/` — WordPress theme, separate deploy
 - `avana-blog-theme.zip` — build artifact
