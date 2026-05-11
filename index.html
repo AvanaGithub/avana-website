@@ -970,8 +970,38 @@
             font-size: 1.125rem;
             line-height: 1.7;
             color: var(--color-text);
-            margin-bottom: 24px;
+            margin-bottom: 16px;
             font-style: italic;
+            /* Reserve a uniform vertical block (4 lines worth) so short and
+               long testimonials produce equally tall cards. */
+            min-height: calc(1.125rem * 1.7 * 4);
+        }
+        /* JS adds this modifier only when the quote exceeds the threshold;
+           clamps to 4 lines and reveals a Read more button below. */
+        .testimonial-card__quote--clamped {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .testimonial-card__read-more {
+            background: none;
+            border: 0;
+            padding: 0 0 18px;
+            margin-top: -4px;
+            color: var(--color-accent);
+            font: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .testimonial-card__read-more:hover { color: var(--color-primary); }
+        .testimonial-card__read-more:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+            border-radius: 3px;
         }
         .testimonial-card__badges {
             display: flex;
@@ -1981,8 +2011,13 @@
                     .replace(/'/g, '&#39;');
             }
 
+            // Threshold (chars) above which the quote gets a Read more toggle.
+            // Quotes below this fit cleanly into the default 4-line clamp.
+            const QUOTE_READ_MORE_THRESHOLD = 180;
+
             function buildCard(t) {
                 const quote = t.testimonial || t.quote || '';
+                const needsToggle = quote.length > QUOTE_READ_MORE_THRESHOLD;
                 const badges = [
                     t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
                     t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''
@@ -1991,13 +2026,28 @@
                     <article class="testimonial-card" role="group" aria-roledescription="testimonial">
                         <div class="testimonial-card__inner">
                             <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
-                            <p class="testimonial-card__quote">${escapeHtml(quote)}</p>
+                            <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                            ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
                             ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
                             <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
                             <div class="testimonial-card__role">${escapeHtml(t.location || '')}</div>
                         </div>
                     </article>
                 `;
+            }
+
+            // Wire up Read more / Read less toggles after every render.
+            function bindReadMore() {
+                track.querySelectorAll('.testimonial-card__read-more').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const quote = btn.parentElement.querySelector('.testimonial-card__quote');
+                        const stillClamped = quote.classList.toggle('testimonial-card__quote--clamped');
+                        const isExpanded = !stillClamped;
+                        btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                        btn.setAttribute('aria-expanded', String(isExpanded));
+                    });
+                });
             }
 
             function render() {
@@ -2008,6 +2058,7 @@
                 dotsContainer.querySelectorAll('.testimonials__dot').forEach(dot => {
                     dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10)));
                 });
+                bindReadMore();
             }
 
             function update() {

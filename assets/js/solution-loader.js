@@ -266,11 +266,20 @@
                 mount.style.display = 'none';
                 return;
             }
-            track.innerHTML = items.map((t, i) => `
+
+            // Quotes longer than this get a Read more toggle; shorter quotes
+            // fit cleanly within the default clamp + reserved min-height.
+            const QUOTE_READ_MORE_THRESHOLD = 180;
+
+            track.innerHTML = items.map((t, i) => {
+                const quote = t.testimonial || '';
+                const needsToggle = quote.length > QUOTE_READ_MORE_THRESHOLD;
+                return `
                 <div class="testimonial-card" role="tabpanel" aria-hidden="${i === 0 ? 'false' : 'true'}">
                     <div class="testimonial-card__inner">
                         <div class="testimonial-card__mark">"</div>
-                        <p class="testimonial-card__quote">${escapeHtml(t.testimonial)}</p>
+                        <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                        ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
                         <div class="testimonial-card__badges">
                             ${t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''}
                             ${t.location ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''}
@@ -278,7 +287,22 @@
                         <div class="testimonial-card__author">— ${escapeHtml(t.name)}</div>
                     </div>
                 </div>
-            `).join('');
+            `;
+            }).join('');
+
+            // Wire Read more / Read less. Stop propagation so the click
+            // doesn't interfere with carousel touch/swipe handlers.
+            track.querySelectorAll('.testimonial-card__read-more').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const quote = btn.parentElement.querySelector('.testimonial-card__quote');
+                    const stillClamped = quote.classList.toggle('testimonial-card__quote--clamped');
+                    const isExpanded = !stillClamped;
+                    btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                    btn.setAttribute('aria-expanded', String(isExpanded));
+                });
+            });
+
             dotsWrap.innerHTML = items.map((_, i) => `
                 <button class="testimonial-carousel__dot${i === 0 ? ' testimonial-carousel__dot--active' : ''}" data-idx="${i}" role="tab" aria-label="Go to testimonial ${i + 1}"></button>
             `).join('');

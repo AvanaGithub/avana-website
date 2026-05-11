@@ -278,7 +278,37 @@ a { color: inherit; }
 }
 .testimonial-card__quote {
     font-size: 1.08rem; line-height: 1.75; font-style: italic;
-    color: var(--color-text); margin-bottom: 24px;
+    color: var(--color-text); margin-bottom: 16px;
+    /* Reserve 4 lines of vertical space so every testimonial card has
+       the same height regardless of how short or long the quote is. */
+    min-height: calc(1.08rem * 1.75 * 4);
+}
+/* JS adds this modifier only when the quote exceeds the threshold,
+   then renders a Read more button below to expand back to full text. */
+.testimonial-card__quote--clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.testimonial-card__read-more {
+    background: none;
+    border: 0;
+    padding: 0 0 16px;
+    margin-top: -4px;
+    color: var(--color-accent);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.testimonial-card__read-more:hover { color: var(--color-primary); }
+.testimonial-card__read-more:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 3px;
 }
 .testimonial-card__badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 18px; }
 .testimonial-card__badge {
