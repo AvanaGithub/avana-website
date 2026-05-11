@@ -194,28 +194,54 @@
 
         // Products are resolved from the global catalog, not from data.products.
         // Each card CTA goes directly to product.link (osteokart) — no detail page.
+        // Long descriptions are clamped to a fixed line count for uniform card
+        // heights, with a Read more toggle that expands in-place.
         'products': (mount, data, ctx) => {
             const items = ctx.products || [];
             if (!items.length) {
                 mount.innerHTML = `<p class="product-grid__empty">No matching products yet — please check back soon or <a href="mailto:info@avanasurgical.com">talk to a specialist</a>.</p>`;
                 return;
             }
-            mount.innerHTML = items.map(p => `
+
+            // Threshold (chars) above which we offer a Read more toggle.
+            // Anything shorter fits in the default clamp without truncation.
+            const READ_MORE_THRESHOLD = 95;
+
+            mount.innerHTML = items.map(p => {
+                const desc = p.shortDescription || '';
+                const needsToggle = desc.length > READ_MORE_THRESHOLD;
+                return `
                 <article class="product-card">
                     <div class="product-card__image">
                         <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.name)}" loading="lazy">
                     </div>
                     <div class="product-card__body">
                         ${p.brand ? `<div class="product-card__brand">${escapeHtml(p.brand)}</div>` : ''}
-                        <h3 class="product-card__title">${escapeHtml(p.name)}</h3>
-                        <p class="product-card__description">${escapeHtml(p.shortDescription)}</p>
+                        <h3 class="product-card__title" title="${escapeHtml(p.name)}">${escapeHtml(p.name)}</h3>
+                        <p class="product-card__description${needsToggle ? ' product-card__description--clamped' : ''}">${escapeHtml(desc)}</p>
+                        ${needsToggle ? `<button type="button" class="product-card__read-more" aria-expanded="false">Read more</button>` : ''}
                         ${p.usage ? `<div class="product-card__usage"><strong>Recommended for</strong>${escapeHtml(p.usage)}</div>` : ''}
                         <a href="${escapeHtml(p.link)}" class="product-card__cta" target="_blank" rel="noopener" data-product-slug="${escapeHtml(p.slug)}">
                             ${escapeHtml(p.ctaLabel || 'View on Osteokart')}
                         </a>
                     </div>
                 </article>
-            `).join('');
+            `;
+            }).join('');
+
+            // Wire Read more / Read less toggles.
+            mount.querySelectorAll('.product-card__read-more').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const card = btn.closest('.product-card');
+                    const desc = card.querySelector('.product-card__description');
+                    const expanded = desc.classList.toggle('product-card__description--clamped');
+                    // toggle returns true if class is now PRESENT (still clamped),
+                    // so the expanded state is the opposite.
+                    const isExpanded = !expanded;
+                    btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                    btn.setAttribute('aria-expanded', String(isExpanded));
+                });
+            });
 
             // Click tracking — Google Analytics if present
             mount.querySelectorAll('.product-card__cta').forEach(link => {
