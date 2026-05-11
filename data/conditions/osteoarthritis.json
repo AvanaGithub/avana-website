@@ -1,0 +1,86 @@
+{
+  "slug": "osteoarthritis",
+  "type": "condition",
+  "metaTitle": "Osteoarthritis Solutions | Offloader Bracing & Pain Relief | Avana Surgical",
+  "metaDescription": "Doctor-recommended offloader knee bracing and OA support for osteoarthritis pain relief — clinically proven to reduce pain and improve mobility.",
+
+  "hero": {
+    "eyebrow": "Osteoarthritis Support",
+    "title": "Live well with osteoarthritis — without surgery, where possible.",
+    "description": "Modern offloader bracing has changed what's possible for OA patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid joint replacement surgery.",
+    "image": "images/condition/osteoarthritis.jpg",
+    "imageAlt": "OA brace supporting an osteoarthritic knee",
+    "ctas": [
+      { "label": "See OA Solutions", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "About the condition",
+    "title": "What is osteoarthritis, and how does bracing help?",
+    "lead": "OA is wear-and-tear arthritis. The right brace doesn't reverse it — but it can change how you feel every day."
+  },
+
+  "conditions": [
+    { "icon": "🦴", "title": "Cartilage wear", "description": "Cartilage on the ends of bones thins over time, especially in load-bearing joints like the knee and hip." },
+    { "icon": "🎯", "title": "Offloading the painful side", "description": "Most knee OA affects one compartment. An offloader brace shifts load to the healthy side — reducing pain at the worn area." },
+    { "icon": "🚶", "title": "Restore daily activity", "description": "Reduced pain means more walking, more stairs, more life. Activity itself slows OA progression." },
+    { "icon": "🏥", "title": "Surgery as a last resort", "description": "Many patients meaningfully delay or avoid joint replacement with consistent bracing, physiotherapy, and weight management." }
+  ],
+
+  "productsHeading": { "title": "Recommended OA bracing", "lead": "These offloader and OA-specific products are chosen by Avana for their clinical performance and Indian patient fit." },
+
+  "testimonialsHeading": { "title": "OA patients in their own words" },
+
+  "testimonials": [
+    {
+      "name": "Radhamani",
+      "location": "Chennai",
+      "product": "Freestyle OA",
+      "testimonial": "Now it gives me confidence while walking and good support for my knees."
+    },
+    {
+      "name": "Bhuvaneswari T",
+      "location": "Chennai",
+      "product": "Freestyle OA",
+      "testimonial": "Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well."
+    }
+  ],
+
+  "seoContent": {
+    "title": "Understanding osteoarthritis — and what helps",
+    "intro": "OA is the most common joint condition in adults over 50. The good news: there is more you can do than just pain medication.",
+    "sections": [
+      { "heading": "What causes OA?", "body": "<p>Cartilage — the smooth covering on the ends of bones — thins with age, injury, or repeated stress. The exposed bone surfaces then grind, causing pain, stiffness, and reduced movement.</p>" },
+      { "heading": "How offloader braces work", "body": "<p>Most knee OA affects one compartment (usually medial). An offloader brace applies a corrective force that shifts load away from the worn compartment — reducing pressure on the painful area and easing pain during activity.</p>" },
+      { "heading": "The full OA toolkit", "body": "<p>Bracing works best as part of a plan: physiotherapy for muscle support, weight management to reduce joint load, activity modification, and pain control. Surgery is one option — not the inevitable one.</p>" }
+    ],
+    "disclaimer": "Educational content. Please consult an orthopaedic specialist for diagnosis and treatment."
+  },
+
+  "faqHeading": { "title": "Common OA questions" },
+
+  "faq": [
+    { "question": "Will a brace cure my osteoarthritis?", "answer": "No. OA is progressive and no brace reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery." },
+    { "question": "How long should I wear my OA brace each day?", "answer": "Offloader OA braces are typically worn during weight-bearing activities — walking, working, light exercise — and removed when resting. Your specialist will recommend a schedule." },
+    { "question": "Can I exercise while wearing the brace?", "answer": "Yes. Modern OA braces are designed for activity — walking, cycling, gentle resistance training. Avoid high-impact sport unless your specialist clears it." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · OA bracing leader" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+  ],
+
+  "cta": {
+    "title": "Living with OA? Let us help you stay active.",
+    "description": "Speak to our team about your symptoms and we'll guide you to the right bracing — with no pressure to purchase.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry", "style": "primary" },
+      { "label": "Browse OA Products", "href": "https://osteokart.com/category/osteoarthritis?utm_source=avana&utm_medium=condition-cta&utm_campaign=osteoarthritis", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}

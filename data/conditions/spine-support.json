@@ -1,0 +1,81 @@
+{
+  "slug": "spine-support",
+  "type": "condition",
+  "metaTitle": "Spine Support & Bracing | Lumbar, Cervical, Scoliosis | Avana Surgical",
+  "metaDescription": "Doctor-recommended lumbar, cervical, and scoliosis bracing for spine pain, post-op recovery and curvature correction — dispatched in India by Osteokart.",
+
+  "hero": {
+    "eyebrow": "Spine Support & Bracing",
+    "title": "Bracing for every part of the spine.",
+    "description": "From lumbar support for low back pain, to cervical collars for neck recovery, to scoliosis bracing during growth — the right spine support, properly fitted, makes a meaningful difference.",
+    "image": "images/condition/spinesupport.jpg",
+    "imageAlt": "Patient wearing a lumbar brace",
+    "ctas": [
+      { "label": "See Spine Support", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "Where it helps",
+    "title": "When spine bracing makes sense",
+    "lead": "Bracing is one of the most evidence-supported non-surgical tools for spine care."
+  },
+
+  "conditions": [
+    { "icon": "🦴", "title": "Low back pain", "description": "Lumbar bracing offloads stressed structures and supports recovery from mechanical low back pain and disc-related symptoms." },
+    { "icon": "📐", "title": "Scoliosis (during growth)", "description": "Modern scoliosis bracing has strong evidence for slowing or stopping curve progression in adolescents." },
+    { "icon": "🏥", "title": "Post-spine surgery", "description": "After discectomy, fusion, or endoscopic spine surgery, the right brace protects the surgical site while healing happens." },
+    { "icon": "🦒", "title": "Cervical support", "description": "Cervical collars provide support for neck pain, post-trauma recovery, and post-surgical immobilisation." }
+  ],
+
+  "productsHeading": { "title": "Spine bracing solutions", "lead": "Lumbar, cervical, and scoliosis bracing selected for clinical performance and Indian patient fit." },
+
+  "testimonialsHeading": { "title": "Spine recoveries we're proud of" },
+
+  "testimonials": [
+    {
+      "name": "Fawzul Hidhaya's Mother",
+      "location": "Chennai",
+      "product": "Spinamic",
+      "testimonial": "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32°. Surgery was advised — but with Spinamic, before the brace it was 35°, and with the brace it reduced to 25°."
+    }
+  ],
+
+  "seoContent": {
+    "title": "Spine bracing — what works, when",
+    "intro": "The spine is more than a backbone — it's the central support of the body. The right brace, used at the right time, can change recovery and quality of life.",
+    "sections": [
+      { "heading": "Lumbar bracing for low back pain", "body": "<p>Lumbar bracing offloads stressed structures, limits painful motion, and gives the spine the right environment to heal. Most effective when paired with physiotherapy.</p>" },
+      { "heading": "Scoliosis: evidence-based bracing", "body": "<p>Scoliosis bracing during growth has strong clinical evidence for slowing or stopping curve progression. Results depend heavily on age, curve type, and how consistently the brace is worn.</p>" },
+      { "heading": "Cervical support", "body": "<p>Cervical collars range from soft foam support for neck strain to rigid post-trauma immobilisers. Your specialist will recommend the right level of support.</p>" }
+    ],
+    "disclaimer": "Educational content. Always consult a spine specialist before starting any bracing programme."
+  },
+
+  "faqHeading": { "title": "Spine bracing FAQs" },
+
+  "faq": [
+    { "question": "How long do I wear a lumbar brace?", "answer": "Depends on the indication. For acute pain, often 1–4 weeks. For chronic low back pain, intermittent use during high-demand activities. For post-surgery, follow your surgeon's protocol." },
+    { "question": "Will the brace weaken my back muscles?", "answer": "Largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehab strengthens the back." },
+    { "question": "How long does scoliosis bracing take to work?", "answer": "Meaningful curve stabilisation or reduction usually takes 12–24 months of consistent wear during the growth period. Compliance is the single biggest factor." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal bracing leader" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+  ],
+
+  "cta": {
+    "title": "Spine pain is personal — let us help you choose right.",
+    "description": "Speak with our spine specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Spine%20support%20enquiry", "style": "primary" },
+      { "label": "Browse Spine Products", "href": "https://osteokart.com/category/spine?utm_source=avana&utm_medium=condition-cta&utm_campaign=spine-support", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}

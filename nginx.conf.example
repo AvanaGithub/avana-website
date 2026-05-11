@@ -1,0 +1,74 @@
+# =============================================================
+# Avana Surgical — nginx site config for DigitalOcean
+#
+# Drop this in /etc/nginx/sites-available/avanasurgical.com,
+# symlink to /etc/nginx/sites-enabled/, then `sudo nginx -t && sudo systemctl reload nginx`.
+#
+# Assumes the site is served from /var/www/avanasurgical.
+# Adjust paths and server_name to match your droplet.
+# =============================================================
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name www.avanasurgical.com avanasurgical.com;
+
+    root /var/www/avanasurgical;
+    index index.html;
+
+    # --- gzip ---
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/javascript application/javascript application/json image/svg+xml;
+
+    # --- cache static assets aggressively ---
+    location ~* \.(css|js|svg|jpg|jpeg|png|webp|gif|ico|woff2?)$ {
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+    }
+
+    # --- data/partials must NOT be cached aggressively ---
+    location /data/      { add_header Cache-Control "no-cache"; }
+    location /partials/  { add_header Cache-Control "no-cache"; }
+
+    # =============================================================
+    # CLEAN-URL REWRITES — Solutions, Audiences, Conditions
+    # All three families serve the same template: /solution-template.html
+    # solution-loader.js reads window.location.pathname to figure out
+    # which type+slug to render.
+    # =============================================================
+    location ^~ /solutions/   { try_files $uri $uri/ /solution-template.html; }
+    location ^~ /audiences/   { try_files $uri $uri/ /solution-template.html; }
+    location ^~ /conditions/  { try_files $uri $uri/ /solution-template.html; }
+
+    # =============================================================
+    # WordPress blog (sub-path) — see avana-blog-theme/
+    # If you host the blog under /blog/ instead of a subdomain,
+    # uncomment and set $document_root_blog correctly.
+    # =============================================================
+    # location /blog/ {
+    #     alias /var/www/avana-blog/;
+    #     index index.php;
+    #     try_files $uri $uri/ /blog/index.php?$args;
+    #     location ~ \.php$ {
+    #         include snippets/fastcgi-php.conf;
+    #         fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    #     }
+    # }
+
+    # --- default: serve static files, then fall back to 404 ---
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # --- friendly 404 page ---
+    error_page 404 /index.html;
+}
+
+# =============================================================
+# HTTPS (after running certbot --nginx -d avanasurgical.com -d www.avanasurgical.com)
+# Certbot will append a second server { listen 443 ssl; ... } block automatically.
+# =============================================================

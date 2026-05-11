@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta tags populated dynamically by solution-loader.js based on URL path -->
+    <title data-bind="metaTitle">Solutions | Avana Surgical</title>
+    <meta name="description" data-bind="metaDescription" content="Doctor-recommended support, bracing, and recovery solutions from Avana Surgical.">
+    <link rel="canonical" data-bind="canonical" href="">
+    <meta property="og:title" data-bind="metaTitle" content="">
+    <meta property="og:description" data-bind="metaDescription" content="">
+    <meta property="og:type" content="article">
+
+    <link rel="icon" type="image/png" href="/images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="/images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/pain.css">
+    <link rel="stylesheet" href="/assets/css/mega-menu.css">
+</head>
+<body>
+    <!-- Header injected from partials/header.html -->
+    <div data-include="/partials/header.html"></div>
+
+    <!-- Loading state, replaced once JSON renders -->
+    <div id="pain-loading" class="pain-loading">
+        <div class="container"><p>Loading…</p></div>
+    </div>
+
+    <!-- ============ DYNAMIC CONTENT MOUNT POINTS ============ -->
+    <main id="pain-main" hidden>
+
+        <!-- 1. HERO -->
+        <section class="pain-hero">
+            <div class="container">
+                <div class="pain-hero__inner">
+                    <div class="pain-hero__text">
+                        <span class="pain-hero__eyebrow" data-bind="hero.eyebrow"></span>
+                        <h1 class="pain-hero__title" data-bind="hero.title"></h1>
+                        <p class="pain-hero__description" data-bind="hero.description"></p>
+                        <div class="pain-hero__ctas" data-render="hero.ctas"></div>
+                    </div>
+                    <div class="pain-hero__image">
+                        <img data-bind-attr="src:hero.image,alt:hero.imageAlt" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CONDITIONS / "WHAT KIND OF X" -->
+        <section class="pain-section pain-section--white" data-section="conditions">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="conditionsHeading.eyebrow">Common conditions</span>
+                    <h2 class="pain-section__title" data-bind="conditionsHeading.title"></h2>
+                    <p class="pain-section__lead" data-bind="conditionsHeading.lead"></p>
+                </header>
+                <div class="conditions-grid" data-render="conditions"></div>
+            </div>
+        </section>
+
+        <!-- 3. PRODUCTS (derived from products.json by relation) -->
+        <section class="pain-section pain-section--cream" id="products" data-section="products">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow">Recommended support</span>
+                    <h2 class="pain-section__title" data-bind="productsHeading.title">Featured Products</h2>
+                    <p class="pain-section__lead" data-bind="productsHeading.lead"></p>
+                </header>
+                <div class="product-grid" data-render="products"></div>
+                <p class="product-disclaimer">All products are sold and fulfilled by <a href="https://osteokart.com" target="_blank" rel="noopener">Osteokart.com</a> — Avana's authorised retail partner.</p>
+            </div>
+        </section>
+
+        <!-- 4. TESTIMONIALS -->
+        <section class="pain-section pain-section--white" data-section="testimonials">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow">Real stories</span>
+                    <h2 class="pain-section__title" data-bind="testimonialsHeading.title">What our patients say</h2>
+                </header>
+                <div class="testimonial-carousel" data-render="testimonials">
+                    <button class="testimonial-carousel__arrow testimonial-carousel__arrow--prev" aria-label="Previous testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="testimonial-carousel__viewport">
+                        <div class="testimonial-carousel__track"></div>
+                    </div>
+                    <button class="testimonial-carousel__arrow testimonial-carousel__arrow--next" aria-label="Next testimonial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                    </button>
+                    <div class="testimonial-carousel__dots" role="tablist"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. SEO LONG-FORM CONTENT -->
+        <section class="pain-section pain-section--cream" data-section="seoContent">
+            <div class="container">
+                <article class="seo-article" data-render="seoContent"></article>
+            </div>
+        </section>
+
+        <!-- 6. FAQ ACCORDION -->
+        <section class="pain-section pain-section--white" data-section="faq">
+            <div class="container">
+                <header class="pain-section__head pain-section__head--centered">
+                    <span class="pain-section__eyebrow">Questions answered</span>
+                    <h2 class="pain-section__title" data-bind="faqHeading.title">Frequently asked questions</h2>
+                </header>
+                <div class="faq-list" data-render="faq"></div>
+            </div>
+        </section>
+
+        <!-- 7. BLOG RECOMMENDATIONS -->
+        <section class="pain-section pain-section--cream" data-section="blog">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow">Read more</span>
+                    <h2 class="pain-section__title" data-bind="blogHeading.title">From our blog</h2>
+                </header>
+                <div class="blog-grid" data-render="blog"></div>
+            </div>
+        </section>
+
+        <!-- 8. BRAND TRUST -->
+        <section class="pain-section pain-section--white" data-section="brands">
+            <div class="container">
+                <header class="pain-section__head pain-section__head--centered">
+                    <span class="pain-section__eyebrow">Trusted partners</span>
+                    <h2 class="pain-section__title">Built with the world's leading orthopaedic brands</h2>
+                </header>
+                <div class="brand-strip" data-render="brands"></div>
+            </div>
+        </section>
+
+        <!-- 9. CLOSING CTA -->
+        <section class="pain-cta" id="cta" data-section="cta">
+            <div class="container">
+                <div class="pain-cta__inner">
+                    <h2 class="pain-cta__title" data-bind="cta.title"></h2>
+                    <p class="pain-cta__description" data-bind="cta.description"></p>
+                    <div class="pain-cta__buttons" data-render="cta.buttons"></div>
+                    <p class="pain-cta__disclaimer" data-bind="cta.disclaimer"></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer injected from partials/footer.html -->
+    <div data-include="/partials/footer.html"></div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="/assets/js/include-partials.js" defer></script>
+    <script src="/assets/js/header-behavior.js" defer></script>
+    <script src="/assets/js/solution-loader.js" defer></script>
+</body>
+</html>

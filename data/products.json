@@ -1,0 +1,150 @@
+{
+  "_schema": {
+    "description": "Single source of truth for the Avana product catalog. Each product knows which pain areas, audiences, and conditions it belongs to via relation arrays. To add a new product: append an entry below, drop the image into images/products/{slug}.jpg, and list the slug under the relevant relation arrays. No code changes needed.",
+    "fields": {
+      "slug": "unique kebab-case identifier (also used as image filename)",
+      "name": "product display name",
+      "brand": "manufacturer / brand label",
+      "shortDescription": "1-2 sentence description shown on the card",
+      "usage": "short 'recommended for' line (optional)",
+      "image": "path to product image",
+      "link": "destination URL — typically the osteokart.com product page",
+      "ctaLabel": "button label (defaults to 'View on Osteokart')",
+      "relatedPainAreas": "array of pain-area slugs (knee, foot, shoulder, elbow, spine, hip)",
+      "relatedAudiences": "array of audience slugs (knee-joint-pain, back-pain, recovering-from-surgery, surgeon)",
+      "relatedConditions": "array of condition slugs (osteoarthritis, post-surgery-recovery, cold-therapy, spine-support)"
+    }
+  },
+  "products": [
+    {
+      "slug": "freestyle-oa",
+      "name": "Freestyle OA",
+      "brand": "Breg",
+      "shortDescription": "An offloader brace clinically designed to reduce pain from medial or lateral knee osteoarthritis by redistributing pressure across the joint.",
+      "usage": "Mild to moderate knee OA, daily wear",
+      "image": "images/condition/osteoarthritis.jpg",
+      "link": "https://osteokart.com/products/breg-freestyle-oa?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["knee"],
+      "relatedAudiences": ["knee-joint-pain"],
+      "relatedConditions": ["osteoarthritis"]
+    },
+    {
+      "slug": "polar-care-wave",
+      "name": "Polar Care Wave",
+      "brand": "Breg",
+      "shortDescription": "Cold therapy with active compression — used post-operatively to control pain and swelling and speed recovery after ACL or knee replacement surgery.",
+      "usage": "Post-surgical recovery, acute injury",
+      "image": "images/condition/Postsurgery.jpg",
+      "link": "https://osteokart.com/products/polar-care-wave?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["knee", "shoulder"],
+      "relatedAudiences": ["knee-joint-pain", "recovering-from-surgery", "surgeon"],
+      "relatedConditions": ["post-surgery-recovery", "cold-therapy"]
+    },
+    {
+      "slug": "aspen-knee-stabiliser",
+      "name": "Knee Stabiliser",
+      "brand": "Aspen Medical",
+      "shortDescription": "Functional support for ligament instability and return-to-sport. Adjustable hinges control range of motion during rehabilitation.",
+      "usage": "ACL/MCL injury, rehab phase",
+      "image": "images/condition/coldtherapy.jpg",
+      "link": "https://osteokart.com/products/aspen-knee-stabiliser?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["knee"],
+      "relatedAudiences": ["knee-joint-pain", "recovering-from-surgery"],
+      "relatedConditions": ["post-surgery-recovery"]
+    },
+    {
+      "slug": "tennis-elbow-strap",
+      "name": "Tennis Elbow Strap",
+      "brand": "Breg",
+      "shortDescription": "Targeted compression strap that relieves pain from lateral epicondylitis by redistributing force away from the inflamed tendon.",
+      "usage": "Tennis elbow, repetitive strain",
+      "image": "images/pain/elbow.svg",
+      "link": "https://osteokart.com/category/elbow?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["elbow"],
+      "relatedAudiences": [],
+      "relatedConditions": []
+    },
+    {
+      "slug": "ankle-stirrup-brace",
+      "name": "Ankle Stirrup Brace",
+      "brand": "Breg",
+      "shortDescription": "Rigid lateral support for ankle sprain recovery and return-to-sport protection.",
+      "usage": "Ankle sprain, return-to-activity",
+      "image": "images/pain/ankle.svg",
+      "link": "https://osteokart.com/category/foot-ankle?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["foot"],
+      "relatedAudiences": ["recovering-from-surgery"],
+      "relatedConditions": ["post-surgery-recovery"]
+    },
+    {
+      "slug": "hip-abduction-brace",
+      "name": "Hip Abduction Brace",
+      "brand": "Breg",
+      "shortDescription": "Post-surgical hip support designed to limit harmful motion and protect the joint after hip replacement or labral surgery.",
+      "usage": "Post-hip surgery, hip dislocation prevention",
+      "image": "images/pain/hip.svg",
+      "link": "https://osteokart.com/category/hip?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["hip"],
+      "relatedAudiences": ["recovering-from-surgery"],
+      "relatedConditions": ["post-surgery-recovery"]
+    },
+    {
+      "slug": "shoulder-immobiliser",
+      "name": "Shoulder Immobiliser",
+      "brand": "Breg",
+      "shortDescription": "Post-surgical sling and swathe combination for controlled immobilisation after rotator cuff or shoulder surgery.",
+      "usage": "Post-shoulder surgery, dislocation recovery",
+      "image": "images/condition/Postsurgery.jpg",
+      "link": "https://osteokart.com/category/shoulder?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["shoulder"],
+      "relatedAudiences": ["recovering-from-surgery"],
+      "relatedConditions": ["post-surgery-recovery"]
+    },
+    {
+      "slug": "spinamic-scoliosis-brace",
+      "name": "Spinamic Scoliosis Brace",
+      "brand": "Avana / Spinamic",
+      "shortDescription": "A custom-fitted scoliosis brace that has helped patients reduce spinal curvature and avoid surgical intervention.",
+      "usage": "Adolescent idiopathic scoliosis",
+      "image": "images/condition/spinesupport.jpg",
+      "link": "https://osteokart.com/products/spinamic?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["spine"],
+      "relatedAudiences": ["back-pain", "surgeon"],
+      "relatedConditions": ["spine-support"]
+    },
+    {
+      "slug": "aspen-lumbar-lso",
+      "name": "Aspen Lumbar LSO",
+      "brand": "Aspen Medical",
+      "shortDescription": "Lumbar-sacral orthosis providing high-grade stabilisation for low back pain, post-surgical recovery, and disc-related issues.",
+      "usage": "Lower back pain, post-spine surgery",
+      "image": "images/condition/spinesupport.jpg",
+      "link": "https://osteokart.com/products/aspen-lumbar?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["spine"],
+      "relatedAudiences": ["back-pain", "recovering-from-surgery", "surgeon"],
+      "relatedConditions": ["spine-support", "post-surgery-recovery"]
+    },
+    {
+      "slug": "aspen-cervical-collar",
+      "name": "Aspen Cervical Collar",
+      "brand": "Aspen Medical",
+      "shortDescription": "Adjustable cervical support for neck strain, post-trauma recovery, and post-surgical immobilisation.",
+      "usage": "Neck pain, cervical recovery",
+      "image": "images/condition/spinesupport.jpg",
+      "link": "https://osteokart.com/products/aspen-cervical?utm_source=avana&utm_medium=solutions&utm_campaign=catalog",
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": ["spine"],
+      "relatedAudiences": ["back-pain", "recovering-from-surgery"],
+      "relatedConditions": ["spine-support", "post-surgery-recovery"]
+    }
+  ]
+}

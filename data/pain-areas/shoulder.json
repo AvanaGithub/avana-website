@@ -1,0 +1,129 @@
+{
+    "slug":  "shoulder",
+    "metaTitle":  "Shoulder Pain Support \u0026 Bracing | Avana Surgical Systems",
+    "metaDescription":  "Doctor-recommended shoulder support for rotator cuff injury, frozen shoulder, dislocation recovery, and post-surgical rehabilitation. Premium bracing fitted in India.",
+    "hero":  {
+                 "eyebrow":  "Shoulder Pain Support",
+                 "title":  "Move your shoulder freely again.",
+                 "description":  "From rotator cuff strains to post-surgical rehabilitation, the right support speeds recovery and protects against re-injury.",
+                 "image":  "images/pain/shoulder.svg",
+                 "imageAlt":  "Shoulder pain support",
+                 "ctas":  [
+                              {
+                                  "label":  "Explore Solutions",
+                                  "href":  "#products",
+                                  "style":  "primary"
+                              },
+                              {
+                                  "label":  "Talk to a Specialist",
+                                  "href":  "#cta",
+                                  "style":  "outline"
+                              }
+                          ]
+             },
+    "conditionsHeading":  {
+                              "title":  "Common shoulder conditions"
+                          },
+    "conditions":  [
+                       {
+                           "icon":  "ðŸ’ª",
+                           "title":  "Rotator Cuff Injury",
+                           "description":  "Tears or strain of the rotator cuff tendons â€” common in athletes and adults over 40."
+                       },
+                       {
+                           "icon":  "â„ï¸",
+                           "title":  "Frozen Shoulder",
+                           "description":  "Adhesive capsulitis causing stiffness and restricted movement, often resolved with bracing and physiotherapy."
+                       },
+                       {
+                           "icon":  "âš¡",
+                           "title":  "Shoulder Dislocation",
+                           "description":  "Recurring instability after dislocation â€” supported by stabilising braces during rehabilitation."
+                       },
+                       {
+                           "icon":  "ðŸ¥",
+                           "title":  "Post-Surgical Recovery",
+                           "description":  "After rotator cuff repair, labral surgery, or joint replacement â€” controlled immobilisation aids healing."
+                       }
+                   ],
+    "productsHeading":  {
+                            "title":  "Recommended shoulder support"
+                        },
+    "testimonialsHeading":  {
+                                "title":  "What our patients say"
+                            },
+    "testimonials":  [
+
+                     ],
+    "seoContent":  {
+                       "title":  "Understanding shoulder pain",
+                       "intro":  "The shoulder is the most mobile joint in the body â€” and one of the most easily injured. Here\u0027s what helps.",
+                       "sections":  [
+                                        {
+                                            "heading":  "Common causes",
+                                            "body":  "\u003cp\u003eShoulder pain comes from rotator cuff issues, joint instability, frozen shoulder, or arthritis. Identifying the source matters because treatment varies considerably.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "How bracing helps",
+                                            "body":  "\u003cp\u003eShoulder bracing immobilises during early healing, protects against re-injury during return-to-activity, and supports rehabilitation programmes.\u003c/p\u003e"
+                                        }
+                                    ],
+                       "disclaimer":  "This page is educational. Please consult an orthopaedic specialist for diagnosis and treatment recommendations."
+                   },
+    "faqHeading":  {
+                       "title":  "Shoulder pain FAQs"
+                   },
+    "faq":  [
+                {
+                    "question":  "How long do I wear a sling after rotator cuff surgery?",
+                    "answer":  "Typically 4â€“6 weeks, but exact duration depends on your specific surgery and surgeon\u0027s protocol. Always follow your treating doctor\u0027s guidance."
+                },
+                {
+                    "question":  "Can I sleep with a shoulder brace?",
+                    "answer":  "Most post-surgical immobilisers are designed for night-time wear in the early recovery phase. Your surgeon will advise based on your procedure."
+                }
+            ],
+    "blog":  [
+
+             ],
+    "brands":  [
+                   {
+                       "name":  "Breg",
+                       "logo":  "images/brands/breg-logo.png.png",
+                       "caption":  "USA Â· Sports medicine"
+                   },
+                   {
+                       "name":  "Aspen Medical",
+                       "logo":  "images/brands/aspen-logo.png.jpg",
+                       "caption":  "USA Â· Bracing leader"
+                   },
+                   {
+                       "name":  "RiwoSpine",
+                       "logo":  "images/brands/riwospine-logo.png.png",
+                       "caption":  "Germany Â· Spine surgery"
+                   },
+                   {
+                       "name":  "Osteokart",
+                       "logo":  "images/brands/osteokart-logo.png.png",
+                       "caption":  "India Â· Retail partner"
+                   }
+               ],
+    "cta":  {
+                "title":  "Need help choosing the right shoulder support?",
+                "description":  "Our specialists can help you select, size, and fit the right brace for your specific condition.",
+                "buttons":  [
+                                {
+                                    "label":  "Talk to a Specialist",
+                                    "href":  "mailto:info@avanasurgical.com?subject=Shoulder%20pain%20enquiry",
+                                    "style":  "primary"
+                                },
+                                {
+                                    "label":  "Browse Shoulder Products",
+                                    "href":  "https://osteokart.com/category/shoulder?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=shoulder",
+                                    "style":  "secondary",
+                                    "external":  true
+                                }
+                            ],
+                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+            }
+}

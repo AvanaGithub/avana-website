@@ -1,0 +1,153 @@
+{
+    "slug":  "spine",
+    "metaTitle":  "Spine \u0026 Back Pain Support | Avana Surgical Systems",
+    "metaDescription":  "Doctor-recommended bracing for back pain, scoliosis, and post-surgical spine recovery. Aspen Medical and Spinamic solutions, fitted in India.",
+    "hero":  {
+                 "eyebrow":  "Spine \u0026 Back Pain Support",
+                 "title":  "Stand taller, with less pain.",
+                 "description":  "From everyday lower back ache to scoliosis correction and post-surgical recovery â€” clinically proven bracing can help you move with confidence again.",
+                 "image":  "images/condition/spinesupport.jpg",
+                 "imageAlt":  "Patient with spine bracing support",
+                 "ctas":  [
+                              {
+                                  "label":  "Explore Solutions",
+                                  "href":  "#products",
+                                  "style":  "primary"
+                              },
+                              {
+                                  "label":  "Talk to a Specialist",
+                                  "href":  "#cta",
+                                  "style":  "outline"
+                              }
+                          ]
+             },
+    "conditionsHeading":  {
+                              "title":  "Common spine conditions we help with",
+                              "lead":  "Back pain has many causes. Here are the conditions we most commonly support."
+                          },
+    "conditions":  [
+                       {
+                           "icon":  "ðŸ¦´",
+                           "title":  "Lower Back Pain",
+                           "description":  "Mechanical low back pain from poor posture, lifting strain, or muscle fatigue. Lumbar bracing offloads the spine and supports recovery."
+                       },
+                       {
+                           "icon":  "ðŸ“",
+                           "title":  "Scoliosis",
+                           "description":  "Curvature of the spine â€” often diagnosed in adolescence. Spinamic bracing has helped many patients reduce curve progression and avoid surgery."
+                       },
+                       {
+                           "icon":  "ðŸ¥",
+                           "title":  "Post-Surgical Spine Recovery",
+                           "description":  "After discectomy, fusion, or endoscopic spine procedures, controlled support helps the spine heal in the right position."
+                       },
+                       {
+                           "icon":  "ðŸ’¢",
+                           "title":  "Disc Herniation",
+                           "description":  "Pinched nerves and radiating pain from a herniated disc â€” bracing reduces movement that aggravates symptoms during conservative care."
+                       },
+                       {
+                           "icon":  "ðŸ§˜",
+                           "title":  "Postural Issues",
+                           "description":  "Forward head posture, kyphosis, and rounded shoulders â€” postural braces serve as gentle reminders during daily activity."
+                       },
+                       {
+                           "icon":  "ðŸ‘µ",
+                           "title":  "Osteoporotic Compression",
+                           "description":  "Vertebral compression fractures common in osteoporosis. Specialist bracing reduces pain and supports healing."
+                       }
+                   ],
+    "productsHeading":  {
+                            "title":  "Recommended spine support"
+                        },
+    "testimonialsHeading":  {
+                                "title":  "Real spine recoveries"
+                            },
+    "testimonials":  [
+                         {
+                             "name":  "Fawzul Hidhaya\u0027s Mother",
+                             "location":  "Chennai",
+                             "product":  "Spinamic",
+                             "testimonial":  "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32Â°. Surgery was advised â€” but with Spinamic, before the brace it was 35Â°, and with the brace it reduced to 25Â°. We are very happy to have an alternative to surgery."
+                         }
+                     ],
+    "seoContent":  {
+                       "title":  "Understanding back pain â€” and what helps",
+                       "intro":  "Back pain affects most adults at some point. Most cases resolve with conservative care, but knowing when bracing helps â€” and when to see a specialist â€” matters.",
+                       "sections":  [
+                                        {
+                                            "heading":  "Why does my back hurt?",
+                                            "body":  "\u003cp\u003eMost back pain is mechanical â€” from posture, lifting, or muscle strain. Some pain comes from disc issues, scoliosis, or age-related changes. Identifying the cause matters because treatment varies.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "How does spine bracing help?",
+                                            "body":  "\u003cp\u003eBracing offloads stressed structures, limits painful motion, and gives the spine the right environment to heal. For scoliosis specifically, bracing during growth has strong evidence for slowing curve progression.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "When should I see a doctor?",
+                                            "body":  "\u003cp\u003eIf back pain is severe, lasts more than a few weeks, radiates into your legs, or is accompanied by numbness, weakness, or changes in bladder control â€” see a spine specialist immediately.\u003c/p\u003e"
+                                        }
+                                    ],
+                       "disclaimer":  "This page is educational. Spine conditions vary widely. Please consult a qualified spine specialist before starting any bracing programme."
+                   },
+    "faqHeading":  {
+                       "title":  "Spine \u0026 back pain FAQs"
+                   },
+    "faq":  [
+                {
+                    "question":  "How long does scoliosis bracing take to show results?",
+                    "answer":  "Most studies on scoliosis bracing show meaningful curve stabilisation or reduction over 12â€“24 months of consistent wear during the active growth period. Results depend heavily on age, curve type, and brace-wear compliance."
+                },
+                {
+                    "question":  "Can I sit at work with a lumbar brace?",
+                    "answer":  "Yes â€” most lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration based on your specific condition."
+                },
+                {
+                    "question":  "Will wearing a brace weaken my back muscles?",
+                    "answer":  "This is a common concern, but research shows it is largely a myth when bracing is paired with appropriate physiotherapy. Bracing supports recovery; rehabilitation strengthens the back."
+                }
+            ],
+    "blog":  [
+
+             ],
+    "brands":  [
+                   {
+                       "name":  "Aspen Medical",
+                       "logo":  "images/brands/aspen-logo.png.jpg",
+                       "caption":  "USA Â· Spinal bracing leader"
+                   },
+                   {
+                       "name":  "RiwoSpine",
+                       "logo":  "images/brands/riwospine-logo.png.png",
+                       "caption":  "Germany Â· Endoscopic spine"
+                   },
+                   {
+                       "name":  "Breg",
+                       "logo":  "images/brands/breg-logo.png.png",
+                       "caption":  "USA Â· Sports medicine"
+                   },
+                   {
+                       "name":  "Osteokart",
+                       "logo":  "images/brands/osteokart-logo.png.png",
+                       "caption":  "India Â· Retail partner"
+                   }
+               ],
+    "cta":  {
+                "title":  "Spine pain is personal â€” let us help you choose right.",
+                "description":  "Speak with our spine specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
+                "buttons":  [
+                                {
+                                    "label":  "Talk to a Specialist",
+                                    "href":  "mailto:info@avanasurgical.com?subject=Spine%20pain%20support%20enquiry",
+                                    "style":  "primary"
+                                },
+                                {
+                                    "label":  "Browse Spine Products",
+                                    "href":  "https://osteokart.com/category/spine?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=spine",
+                                    "style":  "secondary",
+                                    "external":  true
+                                }
+                            ],
+                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+            }
+}

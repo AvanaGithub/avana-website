@@ -1,0 +1,82 @@
+{
+  "slug": "surgeon",
+  "type": "audience",
+  "metaTitle": "For Orthopaedic Surgeons | Avana Surgical Systems",
+  "metaDescription": "Premium bracing, cold therapy, and surgical systems for Indian orthopaedic surgeons. Trusted brands, fitting support, and patient education resources.",
+
+  "hero": {
+    "eyebrow": "For Orthopaedic Surgeons",
+    "title": "Equipment your patients deserve. Support you can rely on.",
+    "description": "Avana partners with Indian orthopaedic and spine surgeons to provide clinically-proven bracing, cold therapy, and surgical systems — backed by training, fitting support, and pan-India patient logistics.",
+    "image": "images/condition/Postsurgery.jpg",
+    "imageAlt": "Surgical team using Avana systems",
+    "ctas": [
+      { "label": "Partner With Us", "href": "#cta", "style": "primary" },
+      { "label": "View Solutions", "href": "#products", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "How we work with you",
+    "title": "What Avana offers your practice",
+    "lead": "We support Indian surgeons end-to-end — from product training to patient delivery."
+  },
+
+  "conditions": [
+    { "icon": "🎓", "title": "Surgeon training & CME", "description": "Workshops, cadaver labs, and continuing medical education on the latest bracing and minimally invasive systems." },
+    { "icon": "🤝", "title": "Patient fitting support", "description": "Our clinical team handles complex fittings — particularly for scoliosis, post-op rigid bracing, and spinal orthoses." },
+    { "icon": "🚚", "title": "Pan-India patient logistics", "description": "When you prescribe, your patient gets the product. Osteokart dispatches across India in 3–5 business days." },
+    { "icon": "🔬", "title": "Premium global brands", "description": "Exclusive access to Breg, Aspen Medical, RiwoSpine, and Spinamic — the same equipment leading global centres use." }
+  ],
+
+  "productsHeading": { "title": "Featured surgical solutions", "lead": "A selection of the systems most commonly used by our surgeon partners. Full catalogue available on Osteokart." },
+
+  "testimonialsHeading": { "title": "What surgeons say" },
+
+  "testimonials": [
+    {
+      "name": "Dr. (anonymised)",
+      "location": "Chennai",
+      "product": "Spinamic",
+      "testimonial": "Spinamic has given us a meaningful non-surgical option for adolescent scoliosis patients in the Indian context — and the fitting support from the Avana team is excellent."
+    }
+  ],
+
+  "seoContent": {
+    "title": "Why surgeons partner with Avana",
+    "intro": "We focus on three things: premium products, technical support, and reliable patient logistics — so you can focus on patient care.",
+    "sections": [
+      { "heading": "Premium global brands, India-ready", "body": "<p>We bring world-class brands to Indian operating theatres and clinics with India-appropriate pricing, sizing, and after-sales support. No more guesswork on availability or replacements.</p>" },
+      { "heading": "Training that fits your schedule", "body": "<p>From product orientation sessions at your clinic to hands-on workshops and CME events, our medical team works around your practice. Tell us what your team needs.</p>" },
+      { "heading": "Logistics that don't fall on you", "body": "<p>Once you've prescribed, the rest is on us. Osteokart dispatches across India, our specialists handle fittings, and our clinical team supports your patient through their recovery.</p>" }
+    ],
+    "disclaimer": ""
+  },
+
+  "faqHeading": { "title": "Partner FAQs" },
+
+  "faq": [
+    { "question": "How does Avana support fitting in remote cities?", "answer": "Most of our bracing is fittable by our specialists via virtual consultation combined with at-home measurement guidance. For complex cases (scoliosis, rigid post-op braces), our team travels for in-person fittings in tier-2 and tier-3 cities." },
+    { "question": "Do you offer surgeon training events?", "answer": "Yes — we run workshops, cadaver labs, and CME events across India in partnership with our brand principals. Get in touch about upcoming events in your city." },
+    { "question": "How do I refer a patient?", "answer": "Send them to Osteokart.com with your prescription, or contact our clinical team directly via info@avanasurgical.com and we will coordinate the fitting." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal & orthopaedic bracing" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+  ],
+
+  "cta": {
+    "title": "Partner with Avana.",
+    "description": "Tell us about your practice — we'll arrange a product walkthrough and discuss how we can support your patients.",
+    "buttons": [
+      { "label": "Schedule a Walkthrough", "href": "mailto:info@avanasurgical.com?subject=Surgeon%20partnership%20enquiry", "style": "primary" },
+      { "label": "View Full Catalogue", "href": "https://osteokart.com?utm_source=avana&utm_medium=audience-cta&utm_campaign=surgeon", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "Avana works with practising orthopaedic and spine surgeons across India."
+  }
+}

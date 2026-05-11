@@ -1,0 +1,87 @@
+{
+  "slug": "post-surgery-recovery",
+  "type": "condition",
+  "metaTitle": "Post-Surgery Recovery Bracing & Cold Therapy | Avana Surgical",
+  "metaDescription": "Doctor-recommended post-operative bracing, cold therapy and rehab support for knee, shoulder, hip, ankle and spine surgery patients.",
+
+  "hero": {
+    "eyebrow": "Post-Surgery Recovery",
+    "title": "The recovery your surgery deserves.",
+    "description": "What happens in the first 12 weeks after surgery shapes the rest of your recovery. Pain control, motion protection, and the right brace at the right time make a real difference.",
+    "image": "images/condition/Postsurgery.jpg",
+    "imageAlt": "Post-operative recovery support",
+    "ctas": [
+      { "label": "See Recovery Solutions", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "Why it matters",
+    "title": "What good post-op support actually looks like",
+    "lead": "Modern post-op recovery has three pillars — bracing, cold therapy, and progression."
+  },
+
+  "conditions": [
+    { "icon": "❄️", "title": "Cold therapy + compression", "description": "Powered cold therapy with active compression reduces post-op pain and swelling significantly — often cutting opioid use." },
+    { "icon": "🔒", "title": "Controlled immobilisation", "description": "Many surgeries — shoulder, hip, certain knee procedures — need the joint protected from harmful motion while it heals." },
+    { "icon": "📐", "title": "Hinged range-of-motion", "description": "Hinged bracing lets your surgeon precisely control how much your joint moves at each stage of recovery." },
+    { "icon": "🚶", "title": "Safe weight-bearing", "description": "Walkers and functional braces help you weight-bear safely while bone, ligament, or tendon healing completes." }
+  ],
+
+  "productsHeading": { "title": "Trusted post-op solutions", "lead": "Equipment widely used in Indian operating theatres and post-op clinics — likely the same support your surgeon recommends." },
+
+  "testimonialsHeading": { "title": "Recoveries in patients' own words" },
+
+  "testimonials": [
+    {
+      "name": "Walid Abedin",
+      "location": "Dhaka",
+      "product": "Polar Care Wave",
+      "testimonial": "I had ACL reconstruction and the pain was unimaginable. The combination of cold therapy and compression in this product is game changing. Pain reduced after just two uses."
+    },
+    {
+      "name": "Senthil",
+      "location": "Chennai",
+      "product": "Polar Care Wave",
+      "testimonial": "Reduced my pain and inflammation considerably and helped me recover faster after surgery."
+    }
+  ],
+
+  "seoContent": {
+    "title": "What good post-op recovery looks like",
+    "intro": "Surgery is one half of getting better — recovery is the other half. The equipment you use in those first weeks matters more than most patients realise.",
+    "sections": [
+      { "heading": "Pain control is more than pills", "body": "<p>Powered cold therapy with active compression has been shown to reduce post-operative pain medication needs and speed return-to-function. Better pain control means earlier movement, which means better recovery.</p>" },
+      { "heading": "Protect what was repaired", "body": "<p>An ACL graft, a rotator cuff repair, or a new hip joint is fragile in early recovery. Correctly-prescribed bracing keeps the joint within safe limits — preventing the setbacks that lead to re-operation.</p>" },
+      { "heading": "Progression — not just protection", "body": "<p>Modern hinged braces let your surgeon dial in exactly how much motion you should have each week. As healing progresses, the brace lets you do more — until you don't need it any more.</p>" }
+    ],
+    "disclaimer": "Educational content. Always follow your surgeon's specific recovery instructions."
+  },
+
+  "faqHeading": { "title": "Common post-op questions" },
+
+  "faq": [
+    { "question": "Is cold therapy really better than ice packs?", "answer": "For most post-op situations, yes. Powered cold therapy with active compression maintains consistent temperature, provides circulating compression that reduces swelling, and doesn't require constant refreshing." },
+    { "question": "How long do I wear a post-op brace?", "answer": "It depends on the procedure. Most post-op braces are worn continuously for 4–6 weeks then weaned over the next 6–12 weeks. Follow your surgeon's specific protocol." },
+    { "question": "Can I rent rather than buy?", "answer": "For some short-term post-op equipment (e.g. cold therapy units) rental is an option. Speak to our team about what makes sense for your specific recovery." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Post-op leader" },
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+  ],
+
+  "cta": {
+    "title": "Make your recovery smooth from day one.",
+    "description": "Talk to our team about what your surgeon has prescribed — we'll help you get the right product, properly fitted, in time for your recovery.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Post-op%20recovery%20enquiry", "style": "primary" },
+      { "label": "Browse Recovery Products", "href": "https://osteokart.com/category/post-surgery?utm_source=avana&utm_medium=condition-cta&utm_campaign=post-surgery-recovery", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}

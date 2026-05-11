@@ -1,0 +1,222 @@
+{
+    "slug":  "knee",
+    "metaTitle":  "Knee Pain Solutions \u0026 Bracing | Avana Surgical Systems",
+    "metaDescription":  "Doctor-recommended support for knee osteoarthritis, ligament injuries, and post-surgical recovery. Premium bracing from Breg, Aspen, and DonJoy â€” fitted in India.",
+    "hero":  {
+                 "eyebrow":  "Knee Pain Support",
+                 "title":  "Move with confidence â€” without the daily ache.",
+                 "description":  "Whether it\u0027s stiffness on the stairs, swelling after activity, or recovery from a recent surgery â€” the right support, fitted correctly, can make a real difference. Explore clinically proven bracing solutions used by Indian orthopaedic surgeons every day.",
+                 "image":  "images/condition/osteoarthritis.jpg",
+                 "imageAlt":  "Patient walking comfortably with knee bracing support",
+                 "ctas":  [
+                              {
+                                  "label":  "Explore Solutions",
+                                  "href":  "#products",
+                                  "style":  "primary"
+                              },
+                              {
+                                  "label":  "Talk to a Specialist",
+                                  "href":  "#cta",
+                                  "style":  "outline"
+                              }
+                          ]
+             },
+    "conditionsHeading":  {
+                              "eyebrow":  "Common conditions",
+                              "title":  "What\u0027s behind your knee pain?",
+                              "lead":  "Knee pain rarely has one cause. These are the conditions we most commonly help patients manage with the right support."
+                          },
+    "conditions":  [
+                       {
+                           "icon":  "ðŸ¦µ",
+                           "title":  "Osteoarthritis (OA)",
+                           "description":  "Cartilage wear that causes pain, stiffness, and reduced mobility â€” especially common after age 50. Offloader bracing can shift load away from the affected compartment."
+                       },
+                       {
+                           "icon":  "âš¡",
+                           "title":  "ACL / Ligament Injury",
+                           "description":  "Sports and accident-related ligament tears that need stability and protection during rehabilitation and return-to-activity."
+                       },
+                       {
+                           "icon":  "ðŸ¥",
+                           "title":  "Post-Surgical Recovery",
+                           "description":  "After total knee replacement, ACL reconstruction, or arthroscopy â€” controlled motion and cold therapy speed safe recovery."
+                       },
+                       {
+                           "icon":  "ðŸŽ¯",
+                           "title":  "Patellofemoral Pain",
+                           "description":  "Pain around or behind the kneecap, often during activity. Patellar tracking braces can help relieve pressure."
+                       },
+                       {
+                           "icon":  "ðŸ©¹",
+                           "title":  "Meniscus Injury",
+                           "description":  "Cartilage tears causing swelling, locking, or pain. Functional bracing supports the knee while it heals."
+                       },
+                       {
+                           "icon":  "ðŸ’ª",
+                           "title":  "General Instability",
+                           "description":  "If your knee \u0027gives way,\u0027 even on flat ground, you may benefit from a stability brace tailored to your activity level."
+                       }
+                   ],
+    "productsHeading":  {
+                            "title":  "Recommended knee support",
+                            "lead":  "Every product below is selected by Avana from world-leading orthopaedic brands and is sold by our authorised retail partner Osteokart.com."
+                        },
+    "testimonialsHeading":  {
+                                "title":  "Real recoveries, in our patients\u0027 words"
+                            },
+    "testimonials":  [
+                         {
+                             "name":  "Walid Abedin",
+                             "location":  "Dhaka",
+                             "product":  "Polar Care Wave",
+                             "testimonial":  "I had ACL reconstruction and the pain was unimaginable â€” easily a 9 out of 10. The combination of cold therapy and compression in this product is game changing. Pain reduced after just two uses. Even my mother could operate it with ease."
+                         },
+                         {
+                             "name":  "Radhamani",
+                             "location":  "Chennai",
+                             "product":  "Freestyle OA",
+                             "testimonial":  "Initially there was discomfort due to lack of instructions, but the customer service team helped me understand how to wear it properly. Now it gives me confidence while walking and good support for my knees."
+                         },
+                         {
+                             "name":  "Bhuvaneswari T",
+                             "location":  "Chennai",
+                             "product":  "Freestyle OA",
+                             "testimonial":  "Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well."
+                         },
+                         {
+                             "name":  "Senthil",
+                             "location":  "Chennai",
+                             "product":  "Polar Care Wave",
+                             "testimonial":  "Reduced my pain and inflammation considerably and helped me recover faster after surgery. Doctor-recommended and worth every rupee."
+                         }
+                     ],
+    "seoContent":  {
+                       "title":  "Understanding knee pain â€” and what helps",
+                       "intro":  "Knee pain is one of the most common reasons Indian adults visit an orthopaedic specialist. The right support, used at the right time, can meaningfully reduce pain and help you stay active â€” but it isn\u0027t a substitute for medical advice. Here\u0027s what to know.",
+                       "sections":  [
+                                        {
+                                            "heading":  "Why does my knee hurt?",
+                                            "body":  "\u003cp\u003eThe knee is a complex joint that takes load every time you walk, sit, or climb stairs. Pain can come from worn cartilage (osteoarthritis), inflamed soft tissue (tendinitis or bursitis), ligament injury, or wear from repeated activity. The cause matters â€” because the right support depends on it.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "How does bracing actually help?",
+                                            "body":  "\u003cp\u003eModern functional bracing does three things: it offloads the painful part of the joint, controls excess motion that worsens pain or risks re-injury, and provides proprioceptive feedback so your muscles support the joint better. For osteoarthritis specifically, an offloader brace can reduce pain enough to delay or avoid surgery in many patients.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "What about cold therapy and compression?",
+                                            "body":  "\u003cp\u003eFor acute injuries and post-surgical recovery, controlling pain and swelling early is critical. Cold therapy with active compression â€” like the Polar Care Wave system â€” has been shown to reduce post-operative pain medication needs and speed return-to-function compared with ice packs alone.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "When should I see a doctor?",
+                                            "body":  "\u003cp\u003eIf your knee pain lasts more than two weeks, involves significant swelling, your knee gives way under you, or you can\u0027t fully bend or straighten it â€” see an orthopaedic specialist. Bracing supports treatment; it does not replace a diagnosis.\u003c/p\u003e"
+                                        },
+                                        {
+                                            "heading":  "How do I choose the right brace?",
+                                            "body":  "\u003cul\u003e\u003cli\u003eMatch the brace to your condition â€” an OA brace is different from a post-surgical brace.\u003c/li\u003e\u003cli\u003eGet the right size; an ill-fitting brace can do more harm than good.\u003c/li\u003e\u003cli\u003eSpeak to your treating doctor or our trained specialists before purchase.\u003c/li\u003e\u003cli\u003eWear it correctly and consistently â€” bracing only works if it\u0027s used.\u003c/li\u003e\u003c/ul\u003e"
+                                        }
+                                    ],
+                       "disclaimer":  "This page is educational. It is not a substitute for medical advice. Please consult a qualified orthopaedic specialist before starting any bracing or treatment programme."
+                   },
+    "faqHeading":  {
+                       "title":  "Frequently asked questions about knee pain"
+                   },
+    "faq":  [
+                {
+                    "question":  "Will a knee brace cure my osteoarthritis?",
+                    "answer":  "No. Osteoarthritis is a progressive condition and there is no brace, supplement, or device that reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery. Used together with physiotherapy, weight management, and your doctor\u0027s guidance, bracing is one of the most evidence-supported non-surgical options available."
+                },
+                {
+                    "question":  "How long should I wear my knee brace each day?",
+                    "answer":  "It depends on the brace type and your condition. Offloader OA braces are typically worn during weight-bearing activities â€” walking, working, light exercise â€” and removed when you rest. Post-surgical braces follow your surgeon\u0027s protocol and may be worn most of the day in early recovery. Always follow the wearing schedule your treating doctor recommends."
+                },
+                {
+                    "question":  "Can I wear a knee brace under my clothes?",
+                    "answer":  "Yes. Most modern braces are designed with a low profile and can be worn comfortably under loose trousers. Our team can help you choose a brace suited to your daily routine."
+                },
+                {
+                    "question":  "Are these products available across India?",
+                    "answer":  "Yes. All products featured here are sold and shipped pan-India by our authorised retail partner Osteokart.com, with delivery typically within 3â€“5 business days. Avana\u0027s clinical team supports fitting and orientation across major Indian cities."
+                },
+                {
+                    "question":  "Do I need a doctor\u0027s prescription to buy a brace?",
+                    "answer":  "Most knee bracing products do not legally require a prescription, but we strongly recommend you consult an orthopaedic specialist before purchasing. The wrong brace, or the wrong size, can be uncomfortable at best and harmful at worst."
+                },
+                {
+                    "question":  "What if the brace doesn\u0027t fit or doesn\u0027t help?",
+                    "answer":  "Speak to our specialist team. Sizing issues are usually resolved with a refit. If a brace genuinely isn\u0027t right for your condition, we will help you find one that is â€” or refer you back to your treating physician for a different approach."
+                }
+            ],
+    "blogHeading":  {
+                        "title":  "Read more about knee health"
+                    },
+    "blog":  [
+                 {
+                     "title":  "Living with knee osteoarthritis: a practical guide",
+                     "excerpt":  "What works, what doesn\u0027t, and how to plan a long-term approach to staying active with OA.",
+                     "image":  "images/condition/osteoarthritis.jpg",
+                     "category":  "Knee Health",
+                     "readTime":  "6 min read",
+                     "url":  "#",
+                     "external":  false
+                 },
+                 {
+                     "title":  "After ACL surgery: a recovery timeline that works",
+                     "excerpt":  "Week-by-week expectations for return to walking, work, and sport â€” and what to do if recovery stalls.",
+                     "image":  "images/condition/Postsurgery.jpg",
+                     "category":  "Recovery",
+                     "readTime":  "8 min read",
+                     "url":  "#",
+                     "external":  false
+                 },
+                 {
+                     "title":  "Cold therapy after surgery: does it really make a difference?",
+                     "excerpt":  "What the clinical evidence says about post-operative cold and compression â€” and when ice packs aren\u0027t enough.",
+                     "image":  "images/condition/coldtherapy.jpg",
+                     "category":  "Cold Therapy",
+                     "readTime":  "5 min read",
+                     "url":  "#",
+                     "external":  false
+                 }
+             ],
+    "brands":  [
+                   {
+                       "name":  "Breg",
+                       "logo":  "images/brands/breg-logo.png.png",
+                       "caption":  "USA Â· Sports medicine bracing"
+                   },
+                   {
+                       "name":  "Aspen Medical",
+                       "logo":  "images/brands/aspen-logo.png.jpg",
+                       "caption":  "USA Â· Spinal \u0026 orthopaedic bracing"
+                   },
+                   {
+                       "name":  "RiwoSpine",
+                       "logo":  "images/brands/riwospine-logo.png.png",
+                       "caption":  "Germany Â· Endoscopic spine systems"
+                   },
+                   {
+                       "name":  "Osteokart",
+                       "logo":  "images/brands/osteokart-logo.png.png",
+                       "caption":  "India Â· Authorised retail partner"
+                   }
+               ],
+    "cta":  {
+                "title":  "Not sure which solution is right for you?",
+                "description":  "Our clinical team helps patients across India choose, size, and fit the right support for their specific condition. No pressure, no upsell â€” just honest guidance.",
+                "buttons":  [
+                                {
+                                    "label":  "Talk to a Specialist",
+                                    "href":  "mailto:info@avanasurgical.com?subject=Knee%20pain%20support%20enquiry",
+                                    "style":  "primary"
+                                },
+                                {
+                                    "label":  "Browse All Products",
+                                    "href":  "https://osteokart.com/category/knee?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=knee",
+                                    "style":  "secondary",
+                                    "external":  true
+                                }
+                            ],
+                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+            }
+}

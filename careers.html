@@ -967,9 +967,16 @@
             .roles__grid { gap: 10px; }
         }
     </style>
+    <link rel="stylesheet" href="/assets/css/mega-menu.css">
 </head>
 <body>
-    <!-- TOP BAR -->
+    <!-- Shared header injected from /partials/header.html -->
+    <div data-include="/partials/header.html"></div>
+
+    <!-- legacy inline header removed; the old markup below is no longer in the DOM
+         and is replaced by the partial above. -->
+    <div hidden>
+    <!-- LEGACY TOP BAR (kept commented) -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar__left">
@@ -1015,6 +1022,8 @@
             <a href="#open-roles" class="header-cta">See Open Roles</a>
         </div>
     </header>
+    </div>
+    <!-- end legacy inline header -->
 
     <!-- HERO -->
     <section class="careers-hero">
@@ -1281,7 +1290,11 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- Shared footer injected from /partials/footer.html -->
+    <div data-include="/partials/footer.html"></div>
+
+    <!-- LEGACY inline footer hidden; partial replaces it. -->
+    <div hidden>
     <footer class="site-footer">
         <div class="container">
             <div class="site-footer__grid">
@@ -1349,15 +1362,24 @@
             </div>
         </div>
     </footer>
+    </div>
+    <!-- end legacy inline footer -->
 
     <!-- Back to top -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top of page">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
+    <!-- Inject shared header/footer partials and wire navbar behaviour -->
+    <script src="/assets/js/include-partials.js" defer></script>
+    <script src="/assets/js/header-behavior.js" defer></script>
+
     <script>
-        const header = document.getElementById('site-header');
+        // Sticky header + back-to-top are wired by header-behavior.js once partials load.
+        // Below is kept for any careers-specific scroll handlers; guarded for null.
+        const header = document.getElementById('site-header'); // may be null until partial loads
         const backToTop = document.getElementById('back-to-top');
+        if (false) { // legacy block disabled — kept for reference only
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
             if (scrolled > 100) header.classList.add('scrolled');
@@ -1368,6 +1390,7 @@
         backToTop.addEventListener('click', function() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        } // end disabled legacy block
     </script>
 </body>
 </html>

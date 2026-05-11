@@ -1,0 +1,338 @@
+/*
+Theme Name: Avana Surgical Blog
+Theme URI: https://www.avanasurgical.com/blog
+Author: Avana Surgical Systems
+Author URI: https://www.avanasurgical.com
+Description: Lightweight custom WordPress blog theme for Avana Surgical Systems. Clean, minimal design matching Avana brand guidelines.
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.2
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: avana-blog-theme
+Domain Path: /languages
+
+This theme matches the Avana Surgical brand design with professional medical device styling.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Avana Color Palette */
+    --color-primary: #243447;
+    --color-bg: #F4F4F2;
+    --color-accent: #B18C57;
+    --color-accent-hover: #9d7a47;
+    --color-text: #1F1F1F;
+    --color-muted: #6C6C6C;
+    --color-white: #ffffff;
+    --color-border: #D9D9D9;
+    --color-light-bg: #EDEDED;
+    --color-soft-cream: #FAFAF8;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 1.25;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.1rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ===== BUTTONS ===== */
+.btn,
+.post-btn,
+a.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+    line-height: 1.5;
+    min-height: 44px;
+}
+
+.btn--primary,
+a.btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-accent);
+}
+
+.btn--primary:hover,
+a.btn--primary:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(177, 140, 87, 0.25);
+}
+
+.btn--outline,
+a.btn--outline {
+    background-color: transparent;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.btn--outline:hover,
+a.btn--outline:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+/* ===== IMAGES ===== */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wp-caption {
+    margin-bottom: 1.5rem;
+}
+
+.wp-caption img {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.wp-caption-text {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    font-style: italic;
+    padding: 0.5rem;
+}
+
+/* ===== LISTS ===== */
+ul, ol {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.8;
+}
+
+blockquote {
+    border-left: 4px solid var(--color-accent);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-soft-cream);
+    font-style: italic;
+    color: var(--color-text);
+}
+
+code {
+    background-color: var(--color-light-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+pre {
+    background-color: var(--color-light-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* ===== FORMS ===== */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--color-text);
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+    min-height: 44px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(177, 140, 87, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* ===== SKIP LINKS ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 968px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.6rem; }
+    h3 { font-size: 1.3rem; }
+    h4 { font-size: 1.1rem; }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.35rem; }
+    h3 { font-size: 1.1rem; }
+    h4 { font-size: 0.95rem; }
+
+    .btn,
+    .post-btn,
+    a.btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    ul, ol {
+        margin-left: 1rem;
+    }
+}
+
+/* WordPress Core Styles */
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.alignnone {
+    margin: 1.5rem 0;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1.5rem 1.5rem 0;
+    max-width: 50%;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 1.5rem 1.5rem;
+    max-width: 50%;
+}
+
+.aligncenter {
+    margin: 0 auto 1.5rem;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .alignleft,
+    .alignright {
+        float: none;
+        margin: 1.5rem 0;
+        max-width: 100%;
+    }
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

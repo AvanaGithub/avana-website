@@ -1,0 +1,80 @@
+{
+  "slug": "cold-therapy",
+  "type": "condition",
+  "metaTitle": "Cold Therapy & Compression Systems | Avana Surgical",
+  "metaDescription": "Powered cold therapy with active compression for post-surgical recovery and acute injury — clinically proven to reduce pain and speed healing.",
+
+  "hero": {
+    "eyebrow": "Cold Therapy & Compression",
+    "title": "Cold therapy — done right.",
+    "description": "Ice packs were yesterday. Powered cold therapy with active compression maintains consistent cooling, reduces swelling, and dramatically lowers post-op pain.",
+    "image": "images/condition/coldtherapy.jpg",
+    "imageAlt": "Powered cold therapy unit",
+    "ctas": [
+      { "label": "See Cold Therapy", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "Why it works",
+    "title": "What powered cold therapy does that ice packs can't",
+    "lead": "Cold therapy is one of the most evidence-supported recovery tools in modern orthopaedics."
+  },
+
+  "conditions": [
+    { "icon": "🌡️", "title": "Consistent temperature", "description": "A powered unit maintains the target therapeutic temperature for hours — ice packs warm up within 20 minutes." },
+    { "icon": "💨", "title": "Active compression", "description": "Cycling compression pumps swelling out of the surgical area — reducing recovery time." },
+    { "icon": "💊", "title": "Less pain medication", "description": "Clinical studies show patients using powered cold therapy need significantly less post-op opioid medication." },
+    { "icon": "⏱️", "title": "Faster return-to-function", "description": "Better pain and swelling control means earlier mobilisation, which means a quicker return to walking and life." }
+  ],
+
+  "productsHeading": { "title": "Cold therapy systems", "lead": "Powered cold and compression units used in orthopaedic and sports medicine recovery, dispatched in India by Osteokart." },
+
+  "testimonialsHeading": { "title": "Cold therapy users speak" },
+
+  "testimonials": [
+    {
+      "name": "Walid Abedin",
+      "location": "Dhaka",
+      "product": "Polar Care Wave",
+      "testimonial": "Pain was easily 9 out of 10. The combination of cold and compression in this product is game changing. Pain reduced after just two uses. Even my mother could operate it with ease."
+    }
+  ],
+
+  "seoContent": {
+    "title": "Cold therapy after surgery — what the evidence says",
+    "intro": "Cold therapy isn't new — but powered cold therapy with compression is fundamentally different from ice packs. Here's why surgeons increasingly prescribe it.",
+    "sections": [
+      { "heading": "Consistent cold vs intermittent ice", "body": "<p>Therapeutic cooling needs to stay in the right temperature range — too cold causes tissue damage, too warm does nothing. Powered units maintain the right range for hours; ice packs warm within 20 minutes, often well before the user notices.</p>" },
+      { "heading": "Compression matters", "body": "<p>Swelling is a major driver of post-op pain and slow recovery. Active compression — pumped cycling pressure — moves swelling out of the surgical area in a way that static wraps cannot.</p>" },
+      { "heading": "When to use cold therapy", "body": "<p>Most useful in the first 5–14 days after surgery, and in acute soft-tissue injury. Less helpful for chronic conditions like OA. Your surgeon will advise on timing.</p>" }
+    ],
+    "disclaimer": "Educational content. Follow your surgeon's protocol for cold therapy duration and frequency."
+  },
+
+  "faqHeading": { "title": "Cold therapy FAQs" },
+
+  "faq": [
+    { "question": "How long do I use cold therapy each day?", "answer": "Typically 20–30 minute sessions, 3–6 times daily in the first week post-op. Your surgeon will give specific guidance." },
+    { "question": "Can I sleep with the unit on?", "answer": "Some patients do, but most surgeons recommend timed sessions to avoid prolonged cooling. The unit has timers for safety." },
+    { "question": "How long do I need the cold therapy unit for?", "answer": "Most patients use it intensively for 1–2 weeks post-op, with reducing frequency over 4–6 weeks total. Rental can be a sensible option." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Polar Care cold therapy" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+  ],
+
+  "cta": {
+    "title": "Make recovery cooler — literally.",
+    "description": "Talk to our team about whether cold therapy fits your recovery — we'll explain the options and the evidence honestly.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Cold%20therapy%20enquiry", "style": "primary" },
+      { "label": "View Cold Therapy", "href": "https://osteokart.com/category/cold-therapy?utm_source=avana&utm_medium=condition-cta&utm_campaign=cold-therapy", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}

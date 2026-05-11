@@ -1,0 +1,81 @@
+{
+  "slug": "back-pain",
+  "type": "audience",
+  "metaTitle": "Living with Back Pain? Bracing & Recovery Solutions | Avana Surgical",
+  "metaDescription": "Doctor-recommended lumbar and cervical bracing for back pain, scoliosis, and spine recovery — fitted in India, dispatched by Osteokart.",
+
+  "hero": {
+    "eyebrow": "I Have Back Pain",
+    "title": "Stand taller. Move with less pain.",
+    "description": "From persistent lower back ache to disc issues and scoliosis — bracing combined with the right movement plan can change how your back feels every day.",
+    "image": "images/condition/spinesupport.jpg",
+    "imageAlt": "Person with lumbar support",
+    "ctas": [
+      { "label": "Explore Solutions", "href": "#products", "style": "primary" },
+      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "conditionsHeading": {
+    "eyebrow": "How we help",
+    "title": "What's behind your back pain?",
+    "lead": "Back pain has many causes — and the right solution depends on which one is yours."
+  },
+
+  "conditions": [
+    { "icon": "🦴", "title": "Mechanical low back pain", "description": "Pain from posture, lifting, or muscle strain. Lumbar bracing offloads the spine and supports recovery." },
+    { "icon": "💢", "title": "Disc-related pain", "description": "Pain or numbness from a herniated or bulging disc. Bracing limits the movements that aggravate symptoms while you heal." },
+    { "icon": "📐", "title": "Scoliosis", "description": "Spinal curvature, often first noticed in teens. Modern bracing has helped many patients reduce curve progression." },
+    { "icon": "🧘", "title": "Postural ache", "description": "Forward head posture and rounded shoulders cause daily ache. A postural brace serves as a gentle reminder." }
+  ],
+
+  "productsHeading": { "title": "Solutions for back & spine pain", "lead": "Bracing matched to your specific spine condition — selected by Avana from world-leading brands and dispatched by Osteokart." },
+
+  "testimonialsHeading": { "title": "Real recoveries from our patients" },
+
+  "testimonials": [
+    {
+      "name": "Fawzul Hidhaya's Mother",
+      "location": "Chennai",
+      "product": "Spinamic",
+      "testimonial": "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32°. Surgery was advised — but with Spinamic, before the brace it was 35°, and with the brace it reduced to 25°."
+    }
+  ],
+
+  "seoContent": {
+    "title": "Living with back pain — what to know",
+    "intro": "Back pain affects most adults at some point. Most cases resolve with conservative care, but knowing when bracing helps — and when to escalate — makes a real difference.",
+    "sections": [
+      { "heading": "Mechanical vs structural", "body": "<p>Most back pain is mechanical — from strain, posture, or fatigue — and responds well to bracing combined with movement. Structural pain from disc, scoliosis, or fractures needs specialist input.</p>" },
+      { "heading": "Why bracing helps", "body": "<p>A lumbar brace offloads stressed structures, limits painful motion, and lets healing happen. For scoliosis specifically, bracing during growth has strong clinical evidence for slowing curve progression.</p>" },
+      { "heading": "Red flags — see a doctor", "body": "<p>Severe pain, leg numbness or weakness, changes in bladder or bowel control — these are warning signs. Bracing complements specialist care; it doesn't replace it.</p>" }
+    ],
+    "disclaimer": "Educational content. Please consult a spine specialist for diagnosis and treatment."
+  },
+
+  "faqHeading": { "title": "Common back pain questions" },
+
+  "faq": [
+    { "question": "Will wearing a lumbar brace weaken my back muscles?", "answer": "This is a common worry, but research shows it is largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehabilitation strengthens the back." },
+    { "question": "Can I sit at work with a lumbar brace?", "answer": "Yes — most lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration based on your condition." },
+    { "question": "How long does scoliosis bracing take?", "answer": "Most studies show meaningful curve stabilisation over 12–24 months of consistent wear during the growth period. Results depend on age, curve type, and compliance." }
+  ],
+
+  "blog": [],
+
+  "brands": [
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal bracing leader" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine" },
+    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Retail partner" }
+  ],
+
+  "cta": {
+    "title": "Spine pain is personal — let us help you choose right.",
+    "description": "Speak with our specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
+    "buttons": [
+      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Back%20pain%20enquiry", "style": "primary" },
+      { "label": "Browse Spine Products", "href": "https://osteokart.com/category/spine?utm_source=avana&utm_medium=audience-cta&utm_campaign=back-pain", "style": "secondary", "external": true }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
+}
