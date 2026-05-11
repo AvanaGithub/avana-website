@@ -1,0 +1,47 @@
+# =============================================================
+# Netlify config — gives you the same clean-URL rewrites that
+# nginx.conf.example does on DigitalOcean, but instantly via
+# https://app.netlify.com.
+#
+# To deploy:
+#   1. Sign in at https://app.netlify.com with GitHub
+#   2. "Add new site" → "Import an existing project" → pick this repo
+#   3. Leave build settings blank (publish directory = "." )
+#   4. Deploy. You'll get a URL like https://YOUR-NAME.netlify.app
+# =============================================================
+
+[build]
+  publish = "."
+
+# Clean-URL rewrites: serve solution-template.html under /solutions/, /audiences/, /conditions/
+# Status 200 = rewrite (the browser's URL stays as /solutions/knee).
+[[redirects]]
+  from = "/solutions/*"
+  to = "/solution-template.html"
+  status = 200
+
+[[redirects]]
+  from = "/audiences/*"
+  to = "/solution-template.html"
+  status = 200
+
+[[redirects]]
+  from = "/conditions/*"
+  to = "/solution-template.html"
+  status = 200
+
+# Cache static assets aggressively; data/partials short-cache so edits show up fast.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/partials/*"
+  [headers.values]
+    Cache-Control = "no-cache"

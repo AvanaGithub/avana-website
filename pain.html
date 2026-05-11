@@ -12,12 +12,12 @@
             var area = (params.get('area') || 'knee').toLowerCase();
             var valid = ['knee', 'spine', 'shoulder', 'elbow', 'foot', 'hip'];
             if (valid.indexOf(area) === -1) area = 'knee';
-            window.location.replace('/solutions/' + area + window.location.hash);
+            window.location.replace('solution-template.html?type=painArea&slug=' + area + window.location.hash);
         })();
     </script>
-    <meta http-equiv="refresh" content="0; url=/solutions/knee">
+    <meta http-equiv="refresh" content="0; url=solution-template.html?type=painArea&slug=knee">
 </head>
 <body>
-    <p>Redirecting to <a href="/solutions/knee">/solutions/knee</a>…</p>
+    <p>Redirecting to <a href="solution-template.html?type=painArea&amp;slug=knee">the knee solutions page</a>…</p>
 </body>
 </html>

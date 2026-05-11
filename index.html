@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/mega-menu.css">
+    <link rel="stylesheet" href="assets/css/mega-menu.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -1613,7 +1613,7 @@
 <body>
     <!-- Shared header (top-bar + nav + Solutions mega-menu + mobile nav)
          is injected from /partials/header.html by include-partials.js -->
-    <div data-include="/partials/header.html"></div>
+    <div data-include="partials/header.html"></div>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -1645,37 +1645,37 @@
             <h2 class="browse-pain__title">Browse by Pain Area</h2>
             <p class="browse-pain__subtitle">Where does it hurt? Click your pain point to find the right solution.</p>
             <div class="browse-pain__grid">
-                <a href="/solutions/knee" class="pain-card" aria-label="Browse knee pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=knee" class="pain-card" aria-label="Browse knee pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/Knee.svg" alt="Knee pain icon" loading="lazy" width="96" height="96">
                     </div>
                     <span class="pain-card__name">Knee</span>
                 </a>
-                <a href="/solutions/foot" class="pain-card" aria-label="Browse foot and ankle pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=foot" class="pain-card" aria-label="Browse foot and ankle pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/ankle.svg" alt="Foot and ankle pain icon" loading="lazy" width="96" height="96">
                     </div>
                     <span class="pain-card__name">Foot</span>
                 </a>
-                <a href="/solutions/shoulder" class="pain-card" aria-label="Browse shoulder pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=shoulder" class="pain-card" aria-label="Browse shoulder pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/shoulder.svg" alt="Shoulder pain icon" loading="lazy" width="96" height="96">
                     </div>
                     <span class="pain-card__name">Shoulder</span>
                 </a>
-                <a href="/solutions/elbow" class="pain-card" aria-label="Browse elbow pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=elbow" class="pain-card" aria-label="Browse elbow pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/elbow.svg" alt="Elbow pain icon" loading="lazy" width="96" height="96">
                     </div>
                     <span class="pain-card__name">Elbow</span>
                 </a>
-                <a href="/solutions/spine" class="pain-card" aria-label="Browse spine and back pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=spine" class="pain-card" aria-label="Browse spine and back pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/spine.svg" alt="Spine and back pain icon" loading="lazy" width="96" height="96">
                     </div>
                     <span class="pain-card__name">Spine</span>
                 </a>
-                <a href="/solutions/hip" class="pain-card" aria-label="Browse hip pain solutions">
+                <a href="solution-template.html?type=painArea&amp;slug=hip" class="pain-card" aria-label="Browse hip pain solutions">
                     <div class="pain-card__icon">
                         <img src="images/pain/hip.svg" alt="Hip pain icon" loading="lazy" width="96" height="96">
                     </div>
@@ -1923,7 +1923,7 @@
     </section>
 
     <!-- Shared footer is injected from /partials/footer.html -->
-    <div data-include="/partials/footer.html"></div>
+    <div data-include="partials/footer.html"></div>
 
     <!-- Inline footer removed — content lives in /partials/footer.html now.
          To edit footer links/contact info, update that file once and every page picks it up. -->
@@ -1934,8 +1934,8 @@
     </button>
 
     <!-- Inject shared header/footer partials and wire navbar behaviour -->
-    <script src="/assets/js/include-partials.js" defer></script>
-    <script src="/assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/include-partials.js" defer></script>
+    <script src="assets/js/header-behavior.js" defer></script>
 
     <script>
         // Sticky header + back-to-top are now handled by header-behavior.js
