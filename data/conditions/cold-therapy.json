@@ -8,8 +8,8 @@
     "eyebrow": "Cold Therapy & Compression",
     "title": "Cold therapy — done right.",
     "description": "Ice packs were yesterday. Powered cold therapy with active compression maintains consistent cooling, reduces swelling, and dramatically lowers post-op pain.",
-    "image": "images/condition/coldtherapy.jpg",
-    "imageAlt": "Powered cold therapy unit",
+    "image": "images/products/breg-polar-care-wave-img-1.png",
+    "imageAlt": "Breg Polar Care Wave — powered cold therapy and compression unit",
     "ctas": [
       { "label": "See Cold Therapy", "href": "#products", "style": "primary" },
       { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
