@@ -1,0 +1,2294 @@
+﻿
+
+SEO Recommendations
+
+Meta Titles, Descriptions & On-Page Strategy
+
+Avana Surgical Systems Pvt Ltd  |  avanasurgical.com
+
+Prepared for the ASSP website build
+
+May 2026  |  India-focused
+
+
+
+
+1. Executive Summary
+
+This document is the working SEO blueprint for the new Avana Surgical Systems website. It combines the findings from the on-page SEO audit with the India-only keyword research workbook (avana-keyword-analysis.xlsx) and translates them into the exact meta titles, meta descriptions, on-page elements, and technical fixes that should be implemented before launch.
+
+Where the audit told us what the site is doing well and where the gaps are, the keyword research tells us which phrases real Indian users are typing into Google. This document brings the two together so every page is built around (a) a clearly identified head keyword, (b) a supporting cluster, and (c) the right intent stage.
+
+
+Key insights driving these recommendations
+
+
+URL strategy: Pain-led slugs win. /knee-pain captures ~165K monthly searches in India; /knee-brace captures only ~27K. The same pattern holds for back, shoulder, foot, elbow and hip. The current /solutions/{slug} structure is acceptable, but a flatter /{area}-pain pattern would convert better long-term.
+
+
+Three-tier architecture: Pain hubs (awareness + commercial) → Condition pages (high-intent informational) → Audience pages (commercial). All three should funnel transactional clicks to osteokart.com.
+
+
+The 5 single highest-volume head terms in India are: back pain (246K), knee pain (165K), lower back pain (110K), knee cap (90K) and foot pain (60.5K). Every meta title for these pages must contain the head term verbatim.
+
+
+Title and description hygiene: 5 current page titles and 4 descriptions risk being truncated by Google. All have been rewritten in this document to land inside the 50-60 char (title) and 150-160 char (description) sweet spot.
+
+
+Quick wins first: robots.txt, sitemap.xml, Open Graph tags, canonical links, and MedicalBusiness JSON-LD on the homepage are missing today. These are 30 minutes of work and unlock significant ranking + sharing value.
+
+
+How to use this document
+
+
+Section 2 — Meta titles and descriptions for every existing page, with character counts and reasoning.
+
+
+Section 3 — Keyword-to-page map (which keyword lives on which page).
+
+
+Section 4 — Page-by-page on-page SEO requirements (H1, H2s, FAQs, internal links, schema).
+
+
+Section 5 — Technical SEO fixes (robots.txt, sitemap, OG tags, schema).
+
+
+Section 6 — 90-day publishing roadmap so the team knows what to ship in what order.
+
+
+
+
+2. Meta Titles & Descriptions — Page by Page
+
+Format reminder: Google truncates titles at ~55-60 characters and descriptions at ~155-160 characters on desktop (less on mobile). Every recommendation below stays inside that window. Each entry shows the current value (where one exists), the recommended value, and the reasoning.
+
+
+2.1 Homepage
+
+URL: /  |  Primary keyword: pain relief India  |  Secondary: bracing, knee pain, back pain
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Avana Surgical - Doctor-Recommended Pain Relief & Bracing Solutions
+
+67
+
+Description
+
+Struggling with knee or back pain? Discover doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 1 lakh+ patients served across India.
+
+174
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Pain Relief & Bracing Solutions in India | Avana Surgical
+
+57
+
+Description
+
+Doctor-recommended bracing & pain relief for knee, back, shoulder, elbow, foot & hip pain. Trusted by 1 lakh+ patients across India.
+
+131
+
+
+
+
+Why this works
+
+
+Leads with &apos;Pain Relief & Bracing&apos; — the umbrella commercial intent — and ends with the brand.
+
+
+Includes &apos;India&apos; for geo-relevance (the Avana audience is 100% India).
+
+
+Description names the six pain areas Google can match against any of them; &apos;1 lakh+&apos; is a strong, India-specific trust signal.
+
+
+Removes the question opener — Google prefers declarative descriptions for medical/health categories.
+
+
+2.2 Careers
+
+URL: /careers.html  |  Primary keyword: medical device careers India  |  Secondary: orthopaedic jobs Chennai
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Careers — Avana Surgical Systems | Beyond Growth · Building Avana 2.0
+
+70
+
+Description
+
+Build the next decade of Indian medical devices with us. Avana Surgical Systems is a 35-person team in Chennai distributing Breg, Aspen Medical, and Richard Wolf Spine across India.
+
+188
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Careers at Avana Surgical | Medical Device Jobs, Chennai
+
+56
+
+Description
+
+Join Avana Surgical Systems — a 35-person Chennai team distributing Breg, Aspen Medical & Richard Wolf Spine across India. View open roles.
+
+139
+
+
+
+
+Why this works
+
+
+Adds &apos;Medical Device Jobs, Chennai&apos; — the literal search a candidate would type.
+
+
+Trims the catchy &apos;Beyond Growth · Building Avana 2.0&apos; tagline from the title; it stays on the page in the H1.
+
+
+Description ends with a call to action (&apos;View open roles&apos;).
+
+
+Pain-Area Pages (/solutions/{slug})
+
+These are the six pain-area hubs. Each must own its head term. Keyword volume below comes from the avana-keyword-analysis.xlsx workbook (India-only monthly estimates).
+
+
+2.3 Knee
+
+URL: /solutions/knee  |  Primary keyword: knee pain (165K/mo)  |  Secondary: knee pain treatment (22K), knee pain relief (12K), knee cap (90K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Knee Pain Solutions & Bracing | Avana Surgical Systems
+
+55
+
+Description
+
+Doctor-recommended support for knee osteoarthritis, ligament injuries, and post-surgical recovery. Premium bracing from Breg, Aspen, and DonJoy — fitted in India.
+
+168
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Knee Pain Relief & Bracing Solutions in India | Avana
+
+54
+
+Description
+
+Doctor-recommended knee braces & support for osteoarthritis, ACL/meniscus injuries, knee cap pain and post-surgery recovery. Fitted across India.
+
+147
+
+
+
+
+Why this works
+
+
+Title now contains &apos;knee pain&apos; (165K) AND &apos;knee pain relief&apos; (12K) AND &apos;India&apos; — three rankable phrases.
+
+
+Description name-checks &apos;knee cap&apos; (90K commercial India term) and &apos;ACL/meniscus&apos; (22K + 18K conditions). This pulls the page into multiple keyword clusters.
+
+
+Dropped &apos;Breg, Aspen, DonJoy&apos; from the description — they&apos;re brand-specific terms that belong on the page body, not in the meta where space is precious.
+
+
+2.4 Spine / Back
+
+URL: /solutions/spine  |  Primary keyword: back pain (246K/mo — highest single head term in India)  |  Secondary: lower back pain (110K), back pain relief (14K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Spine & Back Pain Support | Avana Surgical Systems
+
+51
+
+Description
+
+Doctor-recommended bracing for back pain, scoliosis, and post-surgical spine recovery. Aspen Medical and Spinamic solutions, fitted in India.
+
+143
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Back Pain Relief & Spine Bracing in India | Avana Surgical
+
+58
+
+Description
+
+Doctor-recommended lumbar belts & spine braces for back pain, slipped disc, sciatica, scoliosis & post-op recovery. Fitted across India.
+
+137
+
+
+
+
+Why this works
+
+
+Title leads with &apos;Back Pain Relief&apos; — 246K + 14K of combined intent. Crucial: &apos;back pain&apos; is the single biggest pain head term in India.
+
+
+Description names two huge condition keywords: &apos;slipped disc&apos; (49.5K) and &apos;sciatica&apos; (33K) — both highly transactional in India.
+
+
+&apos;Lumbar belt&apos; is an India-specific commercial phrasing (8.1K) — included verbatim.
+
+
+2.5 Shoulder
+
+URL: /solutions/shoulder  |  Primary keyword: shoulder pain (49.5K/mo)  |  Secondary: frozen shoulder (60.5K), rotator cuff (15K combined)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Shoulder Pain Support & Bracing | Avana Surgical Systems
+
+56
+
+Description
+
+Doctor-recommended shoulder support for rotator cuff injury, frozen shoulder, dislocation recovery, and post-surgical rehabilitation. Premium bracing fitted in India.
+
+165
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Shoulder Pain & Frozen Shoulder Support India | Avana
+
+54
+
+Description
+
+Doctor-recommended bracing & slings for shoulder pain, frozen shoulder, rotator cuff tear, dislocation & post-surgery recovery. Fitted across India.
+
+149
+
+
+
+
+Why this works
+
+
+Adds &apos;frozen shoulder&apos; — the single highest-volume shoulder term in India at 60.5K/mo (higher than shoulder pain itself).
+
+
+&apos;Slings&apos; is added because &apos;arm sling&apos; is a 9.9K commercial term that pairs perfectly with shoulder injury recovery.
+
+
+Title drops &apos;Surgical Systems&apos; to stay under 55 chars.
+
+
+2.6 Elbow
+
+URL: /solutions/elbow  |  Primary keyword: elbow pain (18K/mo)  |  Secondary: tennis elbow (33K), golfer&apos;s elbow (8.1K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Elbow Pain Support & Bracing | Avana Surgical Systems
+
+53
+
+Description
+
+Tennis elbow, golfer&apos;s elbow, and post-surgical elbow support. Premium bracing solutions fitted across India.
+
+107
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Tennis Elbow & Elbow Pain Bracing in India | Avana
+
+50
+
+Description
+
+Doctor-recommended bracing for tennis elbow, golfer&apos;s elbow, elbow pain & post-surgery recovery. Premium elbow bands & supports fitted across India.
+
+147
+
+
+
+
+Why this works
+
+
+&apos;Tennis elbow&apos; (33K) is nearly 2× the volume of &apos;elbow pain&apos; (18K) and is highly commercial — leading with it captures more search demand.
+
+
+Description expanded from 107 → 147 chars: previous version under-used the available space, wasting visibility in SERPs.
+
+
+&apos;Elbow bands & supports&apos; brings in two more commercial phrases (4.4K + 5.4K combined).
+
+
+2.7 Foot
+
+URL: /solutions/foot  |  Primary keyword: foot pain (60.5K/mo)  |  Secondary: plantar fasciitis (40.5K), heel pain (49.5K), ankle pain (33K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Foot & Ankle Pain Support | Avana Surgical Systems
+
+51
+
+Description
+
+Plantar fasciitis, ankle sprain, achilles tendonitis, and post-surgical foot support. Premium bracing fitted across India.
+
+122
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Foot, Heel & Ankle Pain Solutions in India | Avana
+
+50
+
+Description
+
+Doctor-recommended support for plantar fasciitis, heel pain, ankle sprain, flat feet & achilles tendonitis. Insoles, braces & MCR footwear in India.
+
+150
+
+
+
+
+Why this works
+
+
+Title now includes &apos;heel&apos; — &apos;heel pain&apos; is 49.5K/mo, almost equal to foot pain. Was previously absent.
+
+
+Description names 4 condition keywords and 2 product categories (insoles, MCR footwear — 9.9K India-specific term).
+
+
+Description grew from 122 → 150 chars, recovering wasted SERP space.
+
+
+2.8 Hip
+
+URL: /solutions/hip  |  Primary keyword: hip pain (18K/mo)  |  Secondary: hip arthritis (5.4K), hip replacement (18K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Hip Pain Support & Bracing | Avana Surgical Systems
+
+52
+
+Description
+
+Hip arthritis, post-surgical hip recovery, and bursitis support. Premium bracing solutions fitted across India.
+
+110
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Hip Pain & Post-Surgery Hip Bracing in India | Avana
+
+52
+
+Description
+
+Doctor-recommended support for hip pain, arthritis, bursitis, avascular necrosis (AVN) & hip replacement recovery. Fitted across India.
+
+136
+
+
+
+
+Why this works
+
+
+Adds &apos;hip replacement&apos; (18K — same volume as the head term) and &apos;AVN&apos; (4.4K + 3.6K = 8K India-popular search).
+
+
+Title positions post-surgical recovery prominently — older Indian buyers searching for hip support are usually post-op.
+
+
+Condition Pages (/conditions/{slug})
+
+These pages target very high-intent informational keywords. Each one is a single-condition deep-dive that should rank for the head condition term and its treatment variants.
+
+
+2.9 Osteoarthritis
+
+URL: /conditions/osteoarthritis  |  Primary keyword: osteoarthritis knee (14K)  |  Secondary: OA knee treatment (5.4K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Osteoarthritis Solutions | Offloader Bracing & Pain Relief | Avana Surgical
+
+76
+
+Description
+
+Doctor-recommended offloader knee bracing and OA support for osteoarthritis pain relief — clinically proven to reduce pain and improve mobility.
+
+143
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Osteoarthritis Knee Bracing & Pain Relief | Avana India
+
+55
+
+Description
+
+Doctor-recommended offloader knee braces for osteoarthritis (OA) pain relief. Clinically proven to reduce pain, improve mobility & delay surgery.
+
+148
+
+
+
+
+Why this works
+
+
+Title cut from 76 → 55 chars (was being truncated). Adds &apos;Knee&apos; to the title because &apos;osteoarthritis knee&apos; (14K) is the keyword that actually has volume — &apos;osteoarthritis&apos; alone is broader but less commercial.
+
+
+Description adds &apos;delay surgery&apos; — a powerful conversion trigger for OA patients researching alternatives.
+
+
+2.10 Post-Surgery Recovery
+
+URL: /conditions/post-surgery-recovery  |  Primary keyword: post knee surgery support (1.9K), knee replacement recovery, post-op bracing
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Post-Surgery Recovery Bracing & Cold Therapy | Avana Surgical
+
+61
+
+Description
+
+Doctor-recommended post-operative bracing, cold therapy and rehab support for knee, shoulder, hip, ankle and spine surgery patients.
+
+133
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Post-Surgery Bracing & Cold Therapy in India | Avana
+
+52
+
+Description
+
+Doctor-recommended post-op bracing & cold compression for knee, shoulder, hip, ankle & spine surgery recovery. Trusted by surgeons across India.
+
+147
+
+
+
+
+Why this works
+
+
+Title trimmed and &apos;India&apos; added for geo-relevance.
+
+
+Description swaps &apos;rehab support&apos; for the conversion phrase &apos;trusted by surgeons&apos; — much stronger for the post-op buyer who is anxious and looking for authority.
+
+
+2.11 Cold Therapy
+
+URL: /conditions/cold-therapy  |  Primary keyword: cold therapy compression, ice machine for surgery
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Cold Therapy & Compression Systems | Avana Surgical
+
+51
+
+Description
+
+Powered cold therapy with active compression for post-surgical recovery and acute injury — clinically proven to reduce pain and speed healing.
+
+141
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Cold Therapy & Active Compression Systems | Avana India
+
+55
+
+Description
+
+Powered cold therapy with active compression for post-surgery & sports injury recovery. Polar Care Kodiak & Wave systems — clinically proven, fitted in India.
+
+159
+
+
+
+
+Why this works
+
+
+Names the actual product brands (Polar Care Kodiak, Wave) — brand-aware surgeons will search for these.
+
+
+Adds &apos;sports injury&apos; to broaden capture beyond surgical.
+
+
+2.12 Spine Support
+
+URL: /conditions/spine-support  |  Primary keyword: lumbar support (12K), cervical pain (14K), scoliosis brace (1.3K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Spine Support & Bracing | Lumbar, Cervical, Scoliosis | Avana Surgical
+
+71
+
+Description
+
+Doctor-recommended lumbar, cervical, and scoliosis bracing for spine pain, post-op recovery and curvature correction — dispatched in India by Osteokart.
+
+151
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Lumbar, Cervical & Scoliosis Spine Bracing | Avana India
+
+56
+
+Description
+
+Doctor-recommended lumbar belts, cervical collars & scoliosis braces for back pain, neck pain, slipped disc & post-op spine recovery. Fitted in India.
+
+153
+
+
+
+
+Why this works
+
+
+Title cut from 71 → 56 chars. Leads with the three product categories (lumbar/cervical/scoliosis) — each a distinct keyword family.
+
+
+Description name-checks &apos;slipped disc&apos; (49.5K) and &apos;neck pain&apos; (49.5K) — two huge Indian search volumes the page should target.
+
+
+Audience Pages (/audiences/{slug})
+
+These are persona landing pages. They cross-link to multiple pain hubs and are designed for commercial intent (cross-selling to a specific buyer profile).
+
+
+2.13 Knee or Joint Pain (Seniors)
+
+URL: /audiences/knee-joint-pain  |  Primary keyword: knee pain in old age (5.4K), knee support for old age (6.6K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Living with Knee or Joint Pain? Solutions That Help | Avana Surgical
+
+69
+
+Description
+
+Doctor-recommended bracing, offloaders, and recovery support for everyday knee and joint pain — fitted in India, dispatched by Osteokart.
+
+140
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Knee & Joint Pain Solutions for Seniors | Avana India
+
+53
+
+Description
+
+Doctor-recommended knee caps, joint bracing & offloaders for senior knee pain, arthritis & old age joint pain. Fitted in India, dispatched by Osteokart.
+
+153
+
+
+
+
+Why this works
+
+
+Adds &apos;Seniors&apos; — explicit audience signal. Matches the head keyword &apos;knee support for old age&apos; (6.6K).
+
+
+Description name-checks &apos;knee cap&apos; (90K India-specific term) — must appear because it&apos;s the dominant India phrasing for knee support products.
+
+
+Drops the &apos;Living with&apos; question style — Google prefers declarative for medical.
+
+
+2.14 Back Pain
+
+URL: /audiences/back-pain  |  Primary keyword: back pain (246K), lower back pain (110K)
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Living with Back Pain? Bracing & Recovery Solutions | Avana Surgical
+
+69
+
+Description
+
+Doctor-recommended lumbar and cervical bracing for back pain, scoliosis, and spine recovery — fitted in India, dispatched by Osteokart.
+
+138
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Back Pain Solutions — Lumbar Belts & Bracing | Avana
+
+52
+
+Description
+
+Doctor-recommended lumbar belts & spine bracing for lower back pain, slipped disc, sciatica & posture correction. Fitted in India by Avana Surgical.
+
+150
+
+
+
+
+Why this works
+
+
+Note: There&apos;s currently overlap with the /solutions/spine page. Differentiate by having THIS page target &apos;lower back pain&apos; (110K) prominently and the solutions/spine page target the general &apos;back pain&apos; (246K) head.
+
+
+&apos;Lumbar belt&apos; (8.1K) is the India-specific commercial term — placed in title.
+
+
+2.15 Recovering from Surgery
+
+URL: /audiences/recovering-from-surgery  |  Primary keyword: post-surgery recovery, post-op bracing
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Recovering from Surgery? Post-Op Bracing & Cold Therapy | Avana Surgical
+
+73
+
+Description
+
+Doctor-recommended post-surgical bracing, cold therapy and recovery support for knee, shoulder, hip and spine surgery patients. Fitted in India.
+
+146
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+Post-Surgery Recovery — Bracing & Cold Therapy | Avana
+
+55
+
+Description
+
+Doctor-recommended post-op bracing & cold therapy for knee replacement, shoulder, hip & spine surgery recovery in India. Trusted by orthopaedic surgeons.
+
+156
+
+
+
+
+Why this works
+
+
+Title cut from 73 → 55. Adds &apos;knee replacement&apos; (33K) — single biggest specific surgery keyword.
+
+
+&apos;Trusted by orthopaedic surgeons&apos; is a stronger close than &apos;fitted in India&apos;.
+
+
+2.16 For Surgeons
+
+URL: /audiences/surgeon  |  Primary keyword: orthopaedic surgery products India, surgical systems India
+
+
+Current
+
+Field
+
+Value
+
+Chars
+
+Title
+
+For Orthopaedic Surgeons | Avana Surgical Systems
+
+50
+
+Description
+
+Premium bracing, cold therapy, and surgical systems for Indian orthopaedic surgeons. Trusted brands, fitting support, and patient education resources.
+
+152
+
+
+
+
+Recommended
+
+Field
+
+Value
+
+Chars
+
+Title
+
+For Orthopaedic Surgeons in India | Avana Surgical
+
+51
+
+Description
+
+Premium bracing, powered cold therapy & spine surgical systems for Indian orthopaedic surgeons. Breg, Aspen Medical, RiwoSpine — fitting & training support.
+
+159
+
+
+
+
+Why this works
+
+
+Description name-checks the actual brands (Breg, Aspen Medical, RiwoSpine) — surgeons search by brand.
+
+
+&apos;Fitting & training support&apos; is more specific than &apos;patient education resources&apos; which is a different audience.
+
+
+
+
+3. Master Keyword-to-Page Map
+
+This is the single source of truth: which keyword belongs to which page. Use this table when writing on-page copy, headings, and internal link anchors. Numbers are India-only monthly search volume estimates from the keyword analysis workbook.
+
+
+3.1 Tier 1 — Pain Hub Head Terms
+
+Each pain hub MUST rank for its head term. Include the head term in H1, the first 100 words of body copy, the meta title, and the meta description.
+
+Head Keyword
+
+Volume
+
+Intent
+
+Target Page
+
+Difficulty
+
+knee pain
+
+165,000
+
+Info + Commercial
+
+/solutions/knee
+
+High
+
+back pain
+
+246,000
+
+Info + Commercial
+
+/solutions/spine
+
+High
+
+lower back pain
+
+110,000
+
+Info + Commercial
+
+/solutions/spine (#lower-back section)
+
+High
+
+shoulder pain
+
+49,500
+
+Info + Commercial
+
+/solutions/shoulder
+
+High
+
+foot pain
+
+60,500
+
+Info + Commercial
+
+/solutions/foot
+
+High
+
+heel pain
+
+49,500
+
+Informational
+
+/solutions/foot (H2)
+
+Medium
+
+ankle pain
+
+33,000
+
+Info + Commercial
+
+/solutions/foot (H2)
+
+Medium
+
+elbow pain
+
+18,000
+
+Info + Commercial
+
+/solutions/elbow
+
+Medium
+
+hip pain
+
+18,000
+
+Info + Commercial
+
+/solutions/hip
+
+Medium
+
+neck pain
+
+49,500
+
+Info + Commercial
+
+/solutions/spine (H2)
+
+High
+
+
+
+
+3.2 Tier 2 — High-Volume Condition Keywords
+
+These get their own /conditions/{slug} page. They drive direct, high-intent traffic.
+
+Condition
+
+Volume
+
+Parent Hub
+
+Recommended URL
+
+Priority
+
+frozen shoulder
+
+60,500
+
+Shoulder
+
+/conditions/frozen-shoulder
+
+P1
+
+slipped disc
+
+49,500
+
+Spine
+
+/conditions/slipped-disc
+
+P1
+
+plantar fasciitis
+
+40,500
+
+Foot
+
+/conditions/plantar-fasciitis
+
+P1
+
+spondylitis / cervical spondylosis
+
+40,500
+
+Spine
+
+/conditions/cervical-spondylosis
+
+P1
+
+knee replacement
+
+33,000
+
+Knee
+
+/conditions/knee-replacement
+
+P1
+
+tennis elbow
+
+33,000
+
+Elbow
+
+/conditions/tennis-elbow
+
+P1
+
+sciatica
+
+33,000
+
+Spine
+
+/conditions/sciatica
+
+P1
+
+ankle sprain
+
+27,000
+
+Foot
+
+/conditions/ankle-sprain
+
+P1
+
+ACL tear
+
+22,000
+
+Knee
+
+/conditions/acl-tear
+
+P2
+
+hip replacement
+
+18,000
+
+Hip
+
+/conditions/hip-replacement
+
+P2
+
+meniscus tear
+
+18,000
+
+Knee
+
+/conditions/meniscus-tear
+
+P2
+
+osteoarthritis knee
+
+14,000
+
+Knee
+
+/conditions/osteoarthritis (rename to /osteoarthritis-knee)
+
+P2
+
+scoliosis
+
+14,000
+
+Spine
+
+/conditions/scoliosis
+
+P2
+
+flat feet
+
+14,000
+
+Foot
+
+/conditions/flat-feet
+
+P2
+
+rotator cuff tear
+
+9,900
+
+Shoulder
+
+/conditions/rotator-cuff-tear
+
+P2
+
+golfer&apos;s elbow
+
+8,100
+
+Elbow
+
+/conditions/golfers-elbow
+
+P3
+
+bunion
+
+8,100
+
+Foot
+
+/conditions/bunion
+
+P3
+
+heel spur
+
+8,100
+
+Foot
+
+/conditions/heel-spur
+
+P3
+
+
+
+
+3.3 Tier 3 — India-Specific Commercial Terms
+
+These are India-unique phrasings (knee cap, lumbar belt, MCR chappal). They have huge commercial volume but are best routed to osteokart.com category pages. Avana should mention them in product strips with internal links out.
+
+Keyword
+
+Volume
+
+Avana Page
+
+Route to (osteokart.com)
+
+Intent
+
+knee cap
+
+90,000
+
+/solutions/knee strip
+
+osteokart.com/knee-cap
+
+Commercial
+
+knee support
+
+33,000
+
+/solutions/knee strip
+
+osteokart.com/knee-support
+
+Commercial
+
+knee brace
+
+27,000
+
+/solutions/knee strip
+
+osteokart.com/knee-cap
+
+Commercial
+
+posture corrector
+
+22,000
+
+/solutions/spine + shoulder
+
+osteokart.com/posture-corrector
+
+Commercial
+
+ankle support
+
+18,000
+
+/solutions/foot strip
+
+osteokart.com/ankle-support
+
+Commercial
+
+knee cap for pain
+
+14,000
+
+/solutions/knee strip
+
+osteokart.com/knee-cap
+
+Commercial
+
+ankle brace
+
+14,000
+
+/solutions/foot strip
+
+osteokart.com/ankle-support
+
+Commercial
+
+lumbar support
+
+12,000
+
+/solutions/spine strip
+
+osteokart.com/lumbar-belt
+
+Commercial
+
+MCR chappal
+
+9,900
+
+Foot / Diabetic audience
+
+osteokart.com/mcr-footwear
+
+Commercial
+
+arm sling
+
+9,900
+
+/solutions/shoulder strip
+
+osteokart.com/arm-sling
+
+Commercial
+
+back brace
+
+9,900
+
+/solutions/spine strip
+
+osteokart.com/lumbar-belt
+
+Commercial
+
+lumbar belt
+
+8,100
+
+/solutions/spine strip
+
+osteokart.com/lumbar-belt
+
+Commercial
+
+maternity belt
+
+8,100
+
+Pregnancy audience
+
+osteokart.com/maternity-belt
+
+Commercial
+
+shoulder brace
+
+8,100
+
+/solutions/shoulder strip
+
+osteokart.com/shoulder
+
+Commercial
+
+tennis elbow brace
+
+8,100
+
+/solutions/elbow strip
+
+osteokart.com/tennis-elbow-band
+
+Commercial
+
+
+
+Implementation note: Each product card on a pain hub should use the exact keyword as the H3 / alt-text / anchor text. Example: a card on /solutions/knee should say &apos;Knee Cap for Pain&apos; (14K keyword) NOT &apos;Knee Support Product 1&apos;.
+
+
+
+
+4. On-Page SEO Requirements
+
+Each page must satisfy a minimum on-page SEO checklist. Use this section as a build spec.
+
+
+4.1 Universal page checklist
+
+Every page on the site must have:
+
+
+Exactly ONE <h1> containing the page&apos;s primary keyword.
+
+
+A logical H2/H3 hierarchy. H2s should contain secondary keywords from the cluster.
+
+
+Meta title (50-60 chars) and description (150-160 chars) per Section 2.
+
+
+<link rel=&apos;canonical&apos; href=&apos;https://avanasurgical.com/...&apos;> pointing to the live URL.
+
+
+Open Graph tags: og:title, og:description, og:image (1200×630), og:url, og:type.
+
+
+Twitter Card meta: twitter:card=&apos;summary_large_image&apos;, twitter:title, twitter:description, twitter:image.
+
+
+<html lang=&apos;en-IN&apos;> (currently &apos;en&apos; — change to &apos;en-IN&apos; to reinforce India targeting).
+
+
+Internal link to at least 2 other Avana pages and 1 osteokart.com category page.
+
+
+First 100 words of body copy must contain the primary keyword once.
+
+
+Image alt text using descriptive, keyword-aware phrasing (not just &apos;image&apos; or &apos;product&apos;).
+
+
+Structured data appropriate to the page type (see Section 5.4).
+
+
+4.2 Pain hub page template
+
+Each /solutions/{slug} page (knee, back, shoulder, elbow, foot, hip) should follow this structure:
+
+Section
+
+Content & SEO purpose
+
+H1
+
+Contains primary head term + &apos;Pain&apos; or &apos;Pain Solutions&apos;. Example: &apos;Knee Pain Solutions & Bracing in India&apos;.
+
+Intro (100-150 words)
+
+Plain-English summary. Must repeat the primary keyword in sentence 1. Mentions Avana + India + doctor-recommended. End with a CTA: &apos;Find your solution below&apos;.
+
+H2: Common causes of {area} pain
+
+Targets the &apos;{keyword} causes&apos; query (e.g. knee pain causes = 14K). Use a 5-7 bullet list of causes. Each bullet ~20-30 words.
+
+H2: {keyword} treatment options
+
+Targets the &apos;{keyword} treatment&apos; query (knee pain treatment = 22K, back pain relief = 14K). 4-6 short paragraphs.
+
+H2: Recommended {area} support
+
+Product strip. 4-6 product cards. Each card&apos;s H3 = exact India keyword (knee cap, knee brace, lumbar belt, etc.). Each links to osteokart.com with UTM.
+
+H2: Conditions we treat
+
+Lists 4-6 condition pages (slipped disc, sciatica, etc.) with anchor text matching each condition&apos;s keyword. Each is an internal link.
+
+H2: Who is this for?
+
+Lists 2-3 audience pages (Seniors, Athletes, Post-Surgery). Internal links.
+
+H2: Frequently asked questions
+
+5-7 FAQ items with FAQPage JSON-LD schema. Use long-tail questions from People-Also-Ask (e.g. &apos;What causes knee pain in old age?&apos;).
+
+H2: Why Avana
+
+Trust signals: years, patients served, brands distributed, surgeon endorsements.
+
+Footer CTA
+
+Sticky &apos;Talk to a fitter&apos; or &apos;Find a clinic&apos; CTA visible above the fold and at end.
+
+
+
+
+4.3 Condition page template
+
+Each /conditions/{slug} page should follow this structure:
+
+Section
+
+Content & SEO purpose
+
+H1
+
+Exact condition name. Example: &apos;Frozen Shoulder — Causes, Symptoms & Treatment&apos;.
+
+Intro (80-120 words)
+
+Definition of the condition. Keyword in sentence 1. Mention parent pain hub with an internal link in the first paragraph.
+
+H2: What is {condition}?
+
+Medically-reviewed definition. ~200 words. Internal link to parent hub.
+
+H2: Symptoms of {condition}
+
+Bulleted symptom list. Targets PAA queries.
+
+H2: Causes & risk factors
+
+Specific causes. Cover Indian context (e.g. cervical spondylosis from desk work).
+
+H2: {condition} treatment options
+
+Targets &apos;{condition} treatment&apos; (frozen shoulder treatment = 14K, plantar fasciitis treatment = 9.9K). Conservative → bracing → surgical hierarchy.
+
+H2: Recommended bracing & support
+
+Product strip with osteokart.com links.
+
+H2: When to see a doctor
+
+Red-flag list. Builds trust + E-E-A-T signal.
+
+H2: FAQs
+
+5-7 questions with FAQPage JSON-LD.
+
+
+
+
+4.4 H1 prescriptions for every existing page
+
+The H1 is separate from the meta title — it&apos;s what users see at the top of the page. Recommended H1s:
+
+Page
+
+Recommended H1
+
+Homepage
+
+Doctor-recommended pain relief & bracing solutions in India
+
+Careers
+
+Build the next decade of Indian medical devices with us
+
+/solutions/knee
+
+Knee Pain Solutions & Bracing
+
+/solutions/spine
+
+Back Pain & Spine Bracing Solutions
+
+/solutions/shoulder
+
+Shoulder Pain & Frozen Shoulder Support
+
+/solutions/elbow
+
+Tennis Elbow & Elbow Pain Bracing
+
+/solutions/foot
+
+Foot, Heel & Ankle Pain Solutions
+
+/solutions/hip
+
+Hip Pain & Post-Surgery Hip Bracing
+
+/conditions/osteoarthritis
+
+Osteoarthritis Knee — Bracing & Pain Relief
+
+/conditions/post-surgery-recovery
+
+Post-Surgery Bracing & Cold Therapy
+
+/conditions/cold-therapy
+
+Cold Therapy & Active Compression Systems
+
+/conditions/spine-support
+
+Lumbar, Cervical & Scoliosis Spine Bracing
+
+/audiences/knee-joint-pain
+
+Knee & Joint Pain Solutions for Seniors
+
+/audiences/back-pain
+
+Back Pain Solutions — Lumbar Belts & Bracing
+
+/audiences/recovering-from-surgery
+
+Recovering from Surgery — Bracing & Cold Therapy
+
+/audiences/surgeon
+
+For Indian Orthopaedic Surgeons
+
+
+
+
+4.5 Internal linking rules
+
+Internal linking is the single biggest SEO lever the site currently under-uses. The audit flagged that pain-area pages don&apos;t link to audience or condition pages from in-body content. Fix this:
+
+
+Every pain hub must link OUT to at least 3 condition pages (use the condition keyword as anchor text).
+
+
+Every pain hub must link OUT to at least 2 audience pages (e.g. /solutions/knee → Seniors and Athletes).
+
+
+Every condition page must link BACK to its parent pain hub in the first paragraph (anchor = pain hub keyword).
+
+
+Every audience page must link to 2-3 relevant pain hubs (e.g. Seniors → Knee, Spine, Hip).
+
+
+Every page must have one prominent CTA to an osteokart.com category page (with UTM parameters for revenue attribution).
+
+
+Footer links to all 6 pain hubs (currently removed at your request — recommend adding back, this is the only place crawlers find them apart from the mega-menu).
+
+
+Use varied anchor text, not the same phrase every time. Mix exact-match (&apos;knee pain&apos;), phrase-match (&apos;learn about knee pain&apos;), and branded (&apos;Avana knee solutions&apos;).
+
+
+
+
+5. Technical SEO — Must-Fix Items
+
+These are the gaps flagged in the audit. None are large undertakings; together they take ~3-4 hours of dev time and deliver the biggest single ranking uplift.
+
+
+5.1 Site-wide missing files
+
+File
+
+Status
+
+What to do
+
+robots.txt
+
+MISSING
+
+Create at root. Minimum: &apos;User-agent: *&apos; + &apos;Allow: /&apos; + &apos;Sitemap: https://avanasurgical.com/sitemap.xml&apos;. Block /admin, /drafts, /pain.html (redirect-only).
+
+sitemap.xml
+
+MISSING
+
+List all 16 pages with <lastmod> + <priority>. Priority 1.0 for homepage, 0.9 for pain hubs, 0.8 for conditions/audiences, 0.5 for careers. Submit to Google Search Console + Bing Webmaster Tools.
+
+Canonical tags
+
+MISSING on /, /careers.html
+
+Add <link rel=&apos;canonical&apos; href=&apos;https://avanasurgical.com/{path}&apos;> to every page. Prevents duplicate-content penalties from query strings and trailing-slash variants.
+
+Open Graph
+
+MISSING on /, /careers.html
+
+Add og:title, og:description, og:image (1200×630), og:url, og:type=&apos;website&apos; on homepage and &apos;article&apos; on content pages.
+
+Twitter Card
+
+MISSING site-wide
+
+Add <meta name=&apos;twitter:card&apos; content=&apos;summary_large_image&apos;> + twitter:title, twitter:description, twitter:image to every page.
+
+404 page
+
+Redirects to /
+
+Build a real /404.html with friendly message + search + links to top pages. Currently nginx redirects 404s to homepage, which is bad UX and bad SEO.
+
+
+
+
+5.2 Open Graph & Twitter Card — code snippets
+
+Drop this block into <head> on each page. Replace the placeholders with the page&apos;s actual title, description, URL, and hero image.
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Knee Pain Relief & Bracing Solutions in India | Avana">
+<meta property="og:description" content="Doctor-recommended knee braces & support for osteoarthritis, ACL/meniscus injuries, knee cap pain and post-surgery recovery. Fitted across India.">
+<meta property="og:url" content="https://avanasurgical.com/solutions/knee">
+<meta property="og:image" content="https://avanasurgical.com/img/og/knee.jpg">
+<meta property="og:site_name" content="Avana Surgical Systems">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Knee Pain Relief & Bracing Solutions in India | Avana">
+<meta name="twitter:description" content="Doctor-recommended knee braces & support for osteoarthritis, ACL/meniscus injuries, knee cap pain and post-surgery recovery.">
+<meta name="twitter:image" content="https://avanasurgical.com/img/og/knee.jpg">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://avanasurgical.com/solutions/knee">
+
+Each pain hub, condition page, and audience page should have its own dedicated og:image (1200×630px) sitting in /img/og/. These show as previews when links are shared on WhatsApp, LinkedIn, Twitter/X, Facebook, and inside Google&apos;s search-by-image. Without them, shared links look broken.
+
+
+5.3 Organization / MedicalBusiness JSON-LD (homepage)
+
+Add this to the <head> of index.html. This is what powers Google Knowledge Panels, business hours, address pins on Maps, and social profile links.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Avana Surgical Systems Pvt Ltd",
+  "alternateName": "Avana Surgical",
+  "url": "https://avanasurgical.com",
+  "logo": "https://avanasurgical.com/img/logo.png",
+  "telephone": "+91-44-2233-1061",
+  "email": "info@avanasurgical.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[Street Address]",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "600032",
+    "addressCountry": "IN"
+  },
+  "medicalSpecialty": ["Orthopedic", "Physiotherapy", "PainMedicine"],
+  "sameAs": [
+    "https://www.linkedin.com/company/avana-surgical-systems-pvt-ltd/",
+    "https://www.instagram.com/avana_surgical/",
+    "https://www.facebook.com/avanamedical",
+    "https://www.youtube.com/@avanamedical"
+  ],
+  "areaServed": { "@type": "Country", "name": "India" }
+}
+</script>
+
+
+5.4 Other structured data to add
+
+Schema type
+
+Where & why
+
+BreadcrumbList
+
+Add to every page below homepage. Powers the breadcrumb display in Google SERPs (Home > Solutions > Knee Pain). Boost CTR ~10-15%.
+
+FAQPage
+
+Already present on dynamic category pages — confirmed by audit. Maintain on all pain/condition/audience pages with 3+ FAQs.
+
+Product
+
+Add to every product card on pain hubs. Include name, brand (Breg/Aspen/DonJoy), image, description, and offers (with URL pointing to osteokart.com). Enables rich product snippets in SERPs.
+
+MedicalCondition
+
+Add to each /conditions/{slug} page. Schema.org supports specific subtypes (e.g. Osteoarthritis, FrozenShoulder). Helps Google understand the page is medically-reviewed content.
+
+JobPosting
+
+Add to /careers if specific roles are listed. Powers Google for Jobs integration — surfaces roles directly in search.
+
+
+
+
+5.5 robots.txt — recommended content
+
+User-agent: *
+Allow: /
+
+# Block redirect-only / utility pages
+Disallow: /pain.html
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /*?utm_*$
+Disallow: /*?fbclid=*$
+
+# Be polite with crawl rate
+Crawl-delay: 1
+
+Sitemap: https://avanasurgical.com/sitemap.xml
+
+
+5.6 sitemap.xml — structure
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://avanasurgical.com/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Pain hubs: priority 0.9 -->
+  <url><loc>https://avanasurgical.com/solutions/knee</loc><priority>0.9</priority></url>
+  <url><loc>https://avanasurgical.com/solutions/spine</loc><priority>0.9</priority></url>
+  <url><loc>https://avanasurgical.com/solutions/shoulder</loc><priority>0.9</priority></url>
+  <url><loc>https://avanasurgical.com/solutions/elbow</loc><priority>0.9</priority></url>
+  <url><loc>https://avanasurgical.com/solutions/foot</loc><priority>0.9</priority></url>
+  <url><loc>https://avanasurgical.com/solutions/hip</loc><priority>0.9</priority></url>
+
+  <!-- Condition pages: priority 0.8 -->
+  <url><loc>https://avanasurgical.com/conditions/osteoarthritis</loc><priority>0.8</priority></url>
+  <url><loc>https://avanasurgical.com/conditions/post-surgery-recovery</loc><priority>0.8</priority></url>
+  <url><loc>https://avanasurgical.com/conditions/cold-therapy</loc><priority>0.8</priority></url>
+  <url><loc>https://avanasurgical.com/conditions/spine-support</loc><priority>0.8</priority></url>
+
+  <!-- Audience pages: priority 0.7 -->
+  <url><loc>https://avanasurgical.com/audiences/knee-joint-pain</loc><priority>0.7</priority></url>
+  <url><loc>https://avanasurgical.com/audiences/back-pain</loc><priority>0.7</priority></url>
+  <url><loc>https://avanasurgical.com/audiences/recovering-from-surgery</loc><priority>0.7</priority></url>
+  <url><loc>https://avanasurgical.com/audiences/surgeon</loc><priority>0.7</priority></url>
+
+  <!-- Static pages -->
+  <url><loc>https://avanasurgical.com/careers.html</loc><priority>0.5</priority></url>
+
+</urlset>
+
+
+
+
+6. 90-Day SEO Roadmap
+
+Recommended sequence for the first 90 days post-launch. Adapted from the Priority_90day sheet in the keyword workbook. The order is designed so each new page can internally link to pages already published.
+
+
+6.1 Week 1-2 — Technical foundation + 4 pain hubs
+
+Week
+
+Task
+
+Why this week
+
+W1
+
+Implement all Section 5 technical fixes (robots, sitemap, OG, canonical, schema)
+
+Foundation. Everything else is wasted if Google can&apos;t crawl + index the site cleanly.
+
+W1
+
+Apply Section 2 meta titles & descriptions to all 16 existing pages
+
+Quick win. Implementation is HTML-only, no design work needed.
+
+W1
+
+Launch /solutions/knee with full template (Section 4.2)
+
+Highest commercial volume; flagship hub.
+
+W1
+
+Launch /solutions/spine with full template
+
+Highest absolute volume in India (back pain = 246K).
+
+W2
+
+Launch /solutions/shoulder
+
+Frozen shoulder (60.5K) is huge in India.
+
+W2
+
+Launch /solutions/foot
+
+Plantar fasciitis (40.5K) is high-converting.
+
+W2
+
+Submit sitemap to Google Search Console + Bing Webmaster Tools
+
+Tells Google about every URL immediately rather than waiting for crawl discovery.
+
+
+
+
+6.2 Week 3-4 — Remaining hubs + first conditions
+
+Week
+
+Task
+
+Why this week
+
+W3
+
+Launch /solutions/elbow + /solutions/hip
+
+Round out the 6-hub set. Lower volume but easier to rank.
+
+W4
+
+Build /conditions/frozen-shoulder (P1)
+
+Highest condition volume + clear product fit (slings, frozen-shoulder bracing).
+
+W4
+
+Build /conditions/slipped-disc (P1)
+
+49.5K volume; routes to lumbar belt conversion.
+
+
+
+
+6.3 Week 5-8 — Build out condition + audience pages
+
+Week
+
+Task
+
+Why this week
+
+W5
+
+/conditions/plantar-fasciitis + /conditions/cervical-spondylosis
+
+Both P1. Cervical spondylosis page must also rank for the colloquial &apos;spondylitis&apos; (40.5K).
+
+W6
+
+/audiences/seniors (rename from knee-joint-pain) + new /audiences/diabetic-foot-care
+
+Highest-LTV personas. Diabetic foot care unlocks MCR chappal (9.9K) monetisation.
+
+W7
+
+/conditions/tennis-elbow + /conditions/sciatica
+
+Easy rankers. 33K volume each.
+
+W8
+
+/conditions/knee-replacement + finalise /audiences/recovering-from-surgery
+
+Post-op funnel. Knee replacement = 33K commercial volume.
+
+
+
+
+6.4 Week 9-12 — First blog posts + remaining pages
+
+Week
+
+Task
+
+Why this week
+
+W9
+
+Blog: &apos;Knee pain causes&apos; (14K) + &apos;Frozen shoulder exercises&apos; (18K) + &apos;Best lumbar belt in India&apos; (8.1K)
+
+First awareness-intent content funnels visitors into hubs.
+
+W10
+
+Blog: &apos;Tennis elbow exercises&apos; + &apos;Plantar fasciitis morning pain&apos; + &apos;Cervical spondylosis self-care&apos;
+
+Strong featured-snippet candidates.
+
+W11
+
+/conditions/ankle-sprain + /conditions/hip-replacement + /audiences/athletes
+
+Sports persona launch.
+
+W12
+
+/audiences/pregnancy + /audiences/office-workers + sitewide technical SEO audit
+
+Maternity belt (8.1K) + posture corrector (22K) funnels. End-of-quarter audit to lock in gains.
+
+
+6.5 Tools to set up
+
+
+Google Search Console — verify domain ownership, submit sitemap, monitor indexing and impressions.
+
+
+Bing Webmaster Tools — same as above. Bing&apos;s share is small in India but free traffic is free traffic.
+
+
+Google Analytics 4 — the homepage loader already wires window.gtag events. Just install the gtag.js script.
+
+
+Google Tag Manager (optional) — easier to manage events, conversions, and remarketing pixels without code changes.
+
+
+Ahrefs Webmaster Tools (free) or Semrush — track rankings on the head terms in Section 3. Set up weekly rank tracking on the 30 P1+P2 keywords.
+
+
+Microsoft Clarity (free) — heatmaps + session recordings. Useful for confirming users actually click the osteokart.com CTAs.
+
+
+6.6 KPIs to monitor
+
+KPI
+
+Target by Day 90
+
+Tool
+
+Pages indexed in Google
+
+16+ (all live URLs)
+
+Search Console > Coverage
+
+Impressions/month
+
+20,000+
+
+Search Console > Performance
+
+Clicks/month
+
+1,000+
+
+Search Console > Performance
+
+Ranking for &apos;knee pain India&apos;
+
+Top 20
+
+Ahrefs / Semrush
+
+Ranking for &apos;frozen shoulder treatment&apos;
+
+Top 30
+
+Ahrefs / Semrush
+
+Click-throughs to osteokart.com
+
+Track via UTM in GA4
+
+Google Analytics 4
+
+Core Web Vitals (LCP, FID, CLS)
+
+All Green
+
+Search Console > Core Web Vitals
+
+
+
+
+7. Summary & Recommended Next Steps
+
+If only one thing gets done from this document, it should be Section 5 (technical SEO must-fix). Those changes take a couple of hours and unlock everything else.
+
+
+Priority 1 — This week (~3 hours)
+
+
+Create and deploy robots.txt and sitemap.xml.
+
+
+Add canonical, Open Graph, and Twitter Card meta tags to every page.
+
+
+Add MedicalBusiness JSON-LD to the homepage.
+
+
+Update all 16 page meta titles and descriptions per Section 2.
+
+
+Submit the sitemap to Google Search Console.
+
+
+Priority 2 — Within 30 days (~10 hours)
+
+
+Add Product JSON-LD to each product card in the loader.
+
+
+Add BreadcrumbList JSON-LD to category pages.
+
+
+Build a real /404.html page.
+
+
+Implement the internal-linking rules from Section 4.5.
+
+
+Create dedicated 1200×630 og:image files for each pain/condition/audience page.
+
+
+Set up Google Analytics 4 and Microsoft Clarity.
+
+
+Priority 3 — Across the next 90 days
+
+
+Follow the Section 6 roadmap to build out condition and audience pages.
+
+
+Launch the first 6 awareness-intent blog posts (knee-pain-causes, frozen-shoulder-exercises, best-lumbar-belt-india, tennis-elbow-exercises, plantar-fasciitis-morning-pain, cervical-spondylosis-self-care).
+
+
+Begin off-page SEO: outreach to Indian health blogs and physiotherapy associations for backlinks to the pain hubs.
+
+
+A note on the URL strategy debate
+
+The keyword research workbook makes a strong case for migrating the pain hubs from /solutions/{slug} to /{area}-pain (e.g. /knee-pain instead of /solutions/knee). The flatter URL pattern matches user search intent more directly and is easier to remember. However, this is a Phase 2 decision — the existing URL structure ranks fine if everything else in Sections 2-5 is implemented well. Migrate only if you&apos;re prepared to handle 301 redirects properly. If you do migrate, do it before the site accumulates significant backlinks; redirects bleed ~10-15% of link equity each time.
+
+Document prepared based on the Avana SEO audit and the avana-keyword-analysis.xlsx workbook (India, May 2026). All volume figures are India-only monthly estimates and should be validated in Google Keyword Planner before any paid-search budgeting.
+
+
+

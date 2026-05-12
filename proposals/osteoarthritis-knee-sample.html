@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+
+<title>Sample: Osteoarthritis Knee Page (for review) — Avana</title>
+<meta name="description" content="Stakeholder review version of the proposed /conditions/osteoarthritis-knee page. Not live.">
+<meta property="og:title" content="Sample: Osteoarthritis Knee Page (for review) — Avana">
+<meta property="og:description" content="Stakeholder review version of the proposed /conditions/osteoarthritis-knee page. Not live.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+
+<!--
+    base href resolves all relative URLs (including those inside
+    fetched partials and for fetch() itself) to the repo root so
+    this page works both locally and at the GitHub Pages subpath.
+-->
+<base href="../">
+
+<link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/pain.css">
+<link rel="stylesheet" href="assets/css/mega-menu.css">
+
+<style>
+    /* =========================================================
+       PROPOSAL-PAGE-ONLY STYLES
+       These do NOT exist anywhere else on the site. They style the
+       review banner, the new prose blocks not yet covered by pain.css,
+       and the comparison table at the bottom of the page.
+       Once the proposal is approved, the prose styles will move into
+       pain.css and the rest of this <style> block goes away.
+       ========================================================= */
+
+    /* --- Stakeholder review banner --- */
+    .review-banner {
+        background: linear-gradient(90deg, #fff8e6 0%, #fdf1c8 100%);
+        border-bottom: 2px solid #c89b2a;
+        color: #4a3a08;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .review-banner strong {
+        background: #c89b2a;
+        color: #fff;
+        padding: 3px 10px;
+        border-radius: 100px;
+        font-size: 0.72rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+    .review-banner .review-banner__msg { flex: 1; min-width: 200px; }
+    .review-banner code {
+        background: rgba(0,0,0,0.07);
+        padding: 1px 6px;
+        border-radius: 3px;
+        font-family: 'SF Mono', Consolas, monospace;
+        font-size: 0.85em;
+    }
+    .review-banner button {
+        background: transparent;
+        border: 1px solid rgba(0,0,0,0.15);
+        color: #4a3a08;
+        padding: 4px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 0.8rem;
+    }
+    .review-banner button:hover { background: rgba(0,0,0,0.05); }
+
+    /* --- Prose blocks (intro, what-is, treatment, when-to-see-doctor) --- */
+    .prose-block {
+        max-width: 780px;
+        margin: 0 auto;
+        color: var(--color-text);
+        font-size: 1.02rem;
+        line-height: 1.75;
+    }
+    .prose-block p { margin: 0 0 16px; }
+    .prose-block p:last-child { margin-bottom: 0; }
+    .prose-block strong { color: var(--color-primary); font-weight: 600; }
+    .prose-block a { color: var(--color-accent); font-weight: 600; }
+    .prose-block a:hover { text-decoration: underline; }
+    .prose-block ol, .prose-block ul {
+        margin: 0 0 18px;
+        padding-left: 22px;
+    }
+    .prose-block ol li, .prose-block ul li {
+        margin-bottom: 8px;
+    }
+    .prose-block ol li strong, .prose-block ul li strong {
+        color: var(--color-primary);
+    }
+    .prose-block .lede {
+        font-size: 1.08rem;
+        line-height: 1.7;
+        color: var(--color-text);
+    }
+    .prose-block .lede strong {
+        color: var(--color-accent);
+    }
+    .prose-block__link-out {
+        display: inline-block;
+        margin-top: 8px;
+        font-style: italic;
+        color: var(--color-muted);
+        font-size: 0.92rem;
+    }
+    .prose-block__link-out a { font-style: normal; }
+
+    /* --- Symptoms / Causes / When-to-see-doctor card lists --- */
+    .point-list {
+        max-width: 780px;
+        margin: 0 auto;
+        background: var(--color-white);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 28px 36px;
+        list-style: none;
+    }
+    .point-list li {
+        padding: 12px 0 12px 30px;
+        position: relative;
+        border-bottom: 1px solid #f1f1eb;
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+    .point-list li:last-child { border-bottom: 0; }
+    .point-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 18px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--color-accent-soft);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B18C57' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+        background-size: 11px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .point-list li strong {
+        color: var(--color-primary);
+    }
+
+    .point-list--warning li::before {
+        background: rgba(196, 69, 69, 0.12);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C44545' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E");
+        background-size: 12px;
+    }
+
+    .when-to-see-doctor-note {
+        max-width: 780px;
+        margin: 18px auto 0;
+        padding: 16px 20px;
+        background: rgba(36, 52, 71, 0.04);
+        border-left: 3px solid var(--color-primary);
+        border-radius: 0 6px 6px 0;
+        font-size: 0.94rem;
+        color: var(--color-text);
+        line-height: 1.6;
+    }
+
+    /* --- Comparison block at bottom --- */
+    .review-comparison {
+        background: #fafaf6;
+        border-top: 4px solid #c89b2a;
+        padding: 56px 0 80px;
+        margin-top: 0;
+    }
+    .review-comparison__inner {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+    .review-comparison__heading {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: var(--color-primary);
+        font-size: 1.8rem;
+        margin: 0 0 8px;
+    }
+    .review-comparison__sub {
+        color: var(--color-muted);
+        margin: 0 0 32px;
+        font-size: 1rem;
+    }
+    .review-comparison table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        margin-bottom: 28px;
+    }
+    .review-comparison th, .review-comparison td {
+        padding: 14px 18px;
+        text-align: left;
+        vertical-align: top;
+        border-bottom: 1px solid var(--color-border);
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+    .review-comparison th {
+        background: #f4f4f0;
+        font-weight: 700;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--color-muted);
+    }
+    .review-comparison tr:last-child td { border-bottom: 0; }
+    .review-comparison .old { color: var(--color-muted); }
+    .review-comparison .new { color: var(--color-text); font-weight: 500; }
+    .review-comparison .new strong { color: var(--color-accent); }
+    .review-comparison .chars { font-family: 'SF Mono', Consolas, monospace; font-size: 0.8em; color: var(--color-muted); margin-left: 6px; }
+
+    .review-comparison h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        color: var(--color-primary);
+        margin: 32px 0 12px;
+        font-size: 1.25rem;
+    }
+    .review-comparison ul {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 18px 20px 18px 38px;
+        margin: 0 0 24px;
+    }
+    .review-comparison ul li {
+        margin-bottom: 10px;
+        line-height: 1.55;
+        font-size: 0.93rem;
+    }
+    .review-comparison ul li:last-child { margin-bottom: 0; }
+    .review-comparison .pill {
+        display: inline-block;
+        background: var(--color-accent-soft);
+        color: var(--color-accent);
+        padding: 2px 8px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-right: 6px;
+    }
+    .review-comparison .pill--new { background: rgba(45, 143, 78, 0.12); color: #2d8f4e; }
+    .review-comparison .pill--edit { background: rgba(177, 140, 87, 0.15); color: var(--color-accent); }
+
+    @media (max-width: 640px) {
+        .review-banner { padding: 10px 16px; font-size: 0.82rem; }
+        .review-banner strong { font-size: 0.65rem; padding: 2px 8px; }
+        .prose-block, .point-list, .when-to-see-doctor-note { padding-left: 4vw; padding-right: 4vw; }
+        .point-list { padding: 20px 22px 20px 28px; }
+        .review-comparison { padding: 36px 0 50px; }
+        .review-comparison__heading { font-size: 1.4rem; }
+        .review-comparison th, .review-comparison td { padding: 10px 12px; font-size: 0.82rem; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ===== Stakeholder review banner ===== -->
+<div class="review-banner" role="status" aria-label="Sample page notice">
+    <strong>Sample</strong>
+    <span class="review-banner__msg">
+        For stakeholder review only. Not live. Final URL will be <code>/conditions/osteoarthritis-knee</code>. Scroll to the bottom for a side-by-side summary of what changes vs the current page.
+    </span>
+    <button type="button" onclick="this.parentElement.style.display='none'">Hide</button>
+</div>
+
+<!-- ===== Shared header (Solutions mega-menu) ===== -->
+<div data-include="partials/header.html"></div>
+
+<main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="pain-hero">
+        <div class="container">
+            <div class="pain-hero__inner">
+                <div class="pain-hero__text">
+                    <span class="pain-hero__eyebrow">Osteoarthritis Knee · Pain Relief &amp; Bracing</span>
+                    <h1 class="pain-hero__title">Osteoarthritis Knee — Bracing &amp; Pain Relief</h1>
+                    <p class="pain-hero__description">Modern offloader bracing has changed what's possible for osteoarthritis knee patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid knee replacement surgery.</p>
+                    <div class="pain-hero__ctas">
+                        <a href="#products" class="btn btn--primary">See OA Solutions</a>
+                        <a href="#cta" class="btn btn--outline">Talk to a Specialist</a>
+                    </div>
+                </div>
+                <div class="pain-hero__image">
+                    <img src="images/condition/osteoarthritis.jpg" alt="OA brace supporting an osteoarthritic knee">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 2. INTRO (NEW) ============ -->
+    <section class="pain-section pain-section--cream">
+        <div class="container">
+            <div class="prose-block">
+                <p class="lede">Osteoarthritis (OA) of the knee is the most common joint disease in Indian adults over 50 — and one of the leading reasons patients are told they need <a href="solution-template.html?type=painArea&amp;slug=knee">knee replacement surgery</a>. Most don't. With the right offloader brace, physiotherapy and activity guidance, many patients reduce daily knee pain, walk further, and meaningfully delay or avoid surgery. This page explains what OA knee is, what causes it, and how Avana's clinically-validated bracing fits into a full treatment plan. <strong>Avana has supported over 1 lakh+ patients across India</strong> — and our team helps you choose, size, and wear the right brace, with no pressure to purchase.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 3. WHAT IS OA KNEE (NEW) ============ -->
+    <section class="pain-section pain-section--white">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">About the condition</span>
+                <h2 class="pain-section__title">What is osteoarthritis knee?</h2>
+            </header>
+            <div class="prose-block">
+                <p>Osteoarthritis (OA) is a degenerative joint disease where cartilage — the smooth tissue covering the ends of bones — gradually thins and wears down. When this happens in the knee, the bones rub against each other, causing <strong>pain, stiffness, swelling, and reduced range of motion</strong>.</p>
+                <p>OA most commonly affects the <strong>medial (inner) compartment</strong> of the knee, especially in Indian adults due to higher rates of squatting, sitting cross-legged, and prolonged standing. Over time, the joint may become bow-legged (varus deformity) as the inner cartilage wears down further.</p>
+                <p>Unlike rheumatoid arthritis (an autoimmune disease), OA is a "wear-and-tear" condition — it doesn't reverse, but it can be <strong>managed and slowed</strong> with the right combination of bracing, physiotherapy, weight management, and lifestyle changes. Surgery is one option for advanced cases, but not the inevitable outcome.</p>
+                <p class="prose-block__link-out">Learn more about general <a href="solution-template.html?type=painArea&amp;slug=knee">knee pain causes and treatment →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 4. SYMPTOMS (NEW) ============ -->
+    <section class="pain-section pain-section--cream">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">What to look for</span>
+                <h2 class="pain-section__title">Symptoms of osteoarthritis knee</h2>
+                <p class="pain-section__lead">Common signs and symptoms include:</p>
+            </header>
+            <ul class="point-list">
+                <li><strong>Pain that worsens with activity</strong> — climbing stairs, walking long distances, standing up after sitting.</li>
+                <li><strong>Morning stiffness</strong> that eases within 30 minutes of moving.</li>
+                <li><strong>Swelling and warmth</strong> around the knee, especially after activity.</li>
+                <li><strong>A grating or grinding sensation</strong> (crepitus) when bending the knee.</li>
+                <li><strong>Loss of flexibility</strong> — difficulty fully straightening or bending the knee.</li>
+                <li><strong>Knee "giving way"</strong> during walking or climbing stairs.</li>
+                <li><strong>A bow-legged appearance</strong> developing over months or years.</li>
+            </ul>
+            <p style="text-align: center; color: var(--color-muted); font-size: 0.92rem; margin: 24px auto 0; max-width: 780px;">Symptoms often start mild and progress gradually. Many patients dismiss early signs as "just age" — but early intervention with bracing and physiotherapy gives the best long-term outcome.</p>
+        </div>
+    </section>
+
+    <!-- ============ 5. CAUSES & RISK FACTORS (NEW) ============ -->
+    <section class="pain-section pain-section--white">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">Why it happens</span>
+                <h2 class="pain-section__title">Causes &amp; risk factors</h2>
+                <p class="pain-section__lead">OA knee develops when cartilage in the joint wears faster than the body can repair it. The most common risk factors:</p>
+            </header>
+            <ul class="point-list">
+                <li><strong>Age</strong> — most common after 50, though 35+ is increasingly seen in India.</li>
+                <li><strong>Excess body weight</strong> — every extra kilo adds 4 kg of load through the knee while walking.</li>
+                <li><strong>Previous knee injury</strong> — ACL tear, meniscus injury, or fracture significantly raises OA risk later in life.</li>
+                <li><strong>Repeated stress on the joint</strong> — manual labour, squatting, prolonged kneeling.</li>
+                <li><strong>Genetics</strong> — family history of OA is a strong predictor.</li>
+                <li><strong>Female sex after menopause</strong> — Indian women have a higher prevalence than men.</li>
+                <li><strong>Bow legs (genu varum)</strong> — common in the Indian population, accelerates medial-compartment wear.</li>
+                <li><strong>Vitamin D deficiency</strong> — prevalent in India, weakens cartilage and bone health.</li>
+            </ul>
+            <p style="text-align: center; color: var(--color-muted); font-size: 0.92rem; margin: 24px auto 0; max-width: 780px;">Indian patients are especially prone to medial-compartment OA because of cultural habits like sitting cross-legged and squatting toilets — both load the inner knee disproportionately.</p>
+        </div>
+    </section>
+
+    <!-- ============ 6. TREATMENT OPTIONS (NEW — replaces old seoContent) ============ -->
+    <section class="pain-section pain-section--cream">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">What helps</span>
+                <h2 class="pain-section__title">Osteoarthritis knee treatment options</h2>
+                <p class="pain-section__lead">Treatment follows a <strong>conservative-first</strong> approach, escalating only if earlier options fail.</p>
+            </header>
+            <div class="prose-block">
+                <ol>
+                    <li><strong>Lifestyle changes</strong> — weight management, low-impact exercise (swimming, cycling), avoiding deep squatting, and proper Vitamin D supplementation. Often delivers the biggest pain reduction in early OA.</li>
+                    <li><strong>Physiotherapy</strong> — strengthening the quadriceps and core, gait retraining, and manual therapy. Should be paired with bracing for compound effect.</li>
+                    <li><strong>Offloader bracing</strong> — the single most evidence-supported non-surgical intervention. An offloader brace applies a corrective force across the knee, shifting load from the worn medial compartment to the healthy lateral compartment. Many patients report meaningful pain reduction and improved walking comfort within weeks of consistent wear.</li>
+                    <li><strong>Pain medication</strong> — NSAIDs, topical creams, or short courses of cortisone injections under medical supervision. Manages symptoms but does not slow disease progression.</li>
+                    <li><strong>Hyaluronic acid injections</strong> — visco-supplementation that may provide several months of relief in selected patients.</li>
+                    <li><strong>Surgery</strong> — arthroscopy, partial or total knee replacement. Reserved for advanced cases where conservative options have failed. Consistent bracing has helped many patients delay knee replacement for years.</li>
+                </ol>
+                <p class="prose-block__link-out">For post-op support, see our <a href="solution-template.html?type=condition&amp;slug=post-surgery-recovery">post-surgery recovery page →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 7. PRODUCTS (inline, 3 cards) ============ -->
+    <section class="pain-section pain-section--white" id="products">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">Recommended support</span>
+                <h2 class="pain-section__title">Recommended OA bracing</h2>
+                <p class="pain-section__lead">Offloader and knee-support products chosen by Avana for their clinical performance and Indian-patient fit.</p>
+            </header>
+            <div class="product-grid">
+
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/products/breg-freestyle-oa-knee-brace-img-1.jpg" alt="Freestyle OA Knee Brace" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__brand">Breg</div>
+                        <h3 class="product-card__title">Knee Cap for Osteoarthritis — Freestyle OA</h3>
+                        <p class="product-card__description">OA knee brace that offloads the medial or lateral compartment for mild to moderate unicompartmental osteoarthritis.</p>
+                        <div class="product-card__usage"><strong>Recommended for</strong>Mild to moderate knee OA, daily wear</div>
+                        <a href="https://osteokart.com/products/breg-freestyle-oa-knee-brace?variant=e33b782517414c951ad61f8022a0c02a&amp;utm_source=avanasurgical&amp;utm_medium=referral&amp;utm_campaign=oa_knee_condition&amp;utm_content=product_strip_card_1" class="product-card__cta" target="_blank" rel="noopener">View on Osteokart</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/products/breg-ci-knee-brace.jpg" alt="CI Knee Brace" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__brand">Breg</div>
+                        <h3 class="product-card__title">CI Knee Brace — Aluminium Support</h3>
+                        <p class="product-card__description">Low-profile aluminium knee brace designed for support and a customised fit. Useful for OA patients needing reinforced stability.</p>
+                        <div class="product-card__usage"><strong>Recommended for</strong>Knee instability, secondary OA support</div>
+                        <a href="https://osteokart.com/products/breg-z-13-std-ci-knee-brace-trusted-standard-design-with-personalized-fit?variant=4132f322696a2e49c984da4a23c72707&amp;utm_source=avanasurgical&amp;utm_medium=referral&amp;utm_campaign=oa_knee_condition&amp;utm_content=product_strip_card_2" class="product-card__cta" target="_blank" rel="noopener">View on Osteokart</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card__image">
+                        <img src="images/products/breg-t-scope-premier-post-op-knee-img-1.png" alt="T Scope Post-Op Knee Brace" loading="lazy">
+                    </div>
+                    <div class="product-card__body">
+                        <div class="product-card__brand">Breg</div>
+                        <h3 class="product-card__title">T Scope Post-Op Knee Brace</h3>
+                        <p class="product-card__description">For OA patients post-knee replacement: adjustable support with controlled motion for safer rehabilitation.</p>
+                        <div class="product-card__usage"><strong>Recommended for</strong>Post-OA-surgery recovery</div>
+                        <a href="https://osteokart.com/products/breg-t-scope-premier-post-op-knee-brace?utm_source=avanasurgical&amp;utm_medium=referral&amp;utm_campaign=oa_knee_condition&amp;utm_content=product_strip_card_3" class="product-card__cta" target="_blank" rel="noopener">View on Osteokart</a>
+                    </div>
+                </article>
+
+            </div>
+            <p class="product-disclaimer">All products are sold and fulfilled by <a href="https://osteokart.com" target="_blank" rel="noopener">Osteokart.com</a> — Avana's authorised retail partner.</p>
+        </div>
+    </section>
+
+    <!-- ============ 8. WHEN TO SEE A DOCTOR (NEW) ============ -->
+    <section class="pain-section pain-section--cream">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">Red flags</span>
+                <h2 class="pain-section__title">When to see a doctor</h2>
+                <p class="pain-section__lead">Bracing and lifestyle changes work for most OA knee patients — but some signs need a specialist immediately:</p>
+            </header>
+            <ul class="point-list point-list--warning">
+                <li><strong>Severe pain at rest</strong> (not just with activity).</li>
+                <li><strong>The knee locks or gives way</strong> repeatedly.</li>
+                <li><strong>Significant swelling</strong> that doesn't reduce with rest, ice, or elevation.</li>
+                <li><strong>Inability to fully straighten or bend</strong> the knee.</li>
+                <li><strong>Pain that wakes you up at night.</strong></li>
+                <li><strong>Visible deformity</strong> developing rapidly.</li>
+                <li><strong>Symptoms in both knees plus fingers/wrists</strong> — may suggest rheumatoid arthritis instead.</li>
+            </ul>
+            <div class="when-to-see-doctor-note">
+                Avana's clinical team can guide you to an orthopaedic specialist near you. We support — but never replace — proper medical care.
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 9. TESTIMONIALS (existing — simplified, no carousel) ============ -->
+    <section class="pain-section pain-section--white">
+        <div class="container">
+            <header class="pain-section__head">
+                <span class="pain-section__eyebrow">Real stories</span>
+                <h2 class="pain-section__title">OA patients in their own words</h2>
+            </header>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 880px; margin: 0 auto;">
+                <div class="testimonial-card" style="min-width: 0; padding: 0;">
+                    <div class="testimonial-card__inner">
+                        <div class="testimonial-card__mark">"</div>
+                        <p class="testimonial-card__quote">Now it gives me confidence while walking and good support for my knees.</p>
+                        <div class="testimonial-card__badges">
+                            <span class="testimonial-card__badge testimonial-card__badge--product">Freestyle OA</span>
+                            <span class="testimonial-card__badge testimonial-card__badge--location">Chennai</span>
+                        </div>
+                        <div class="testimonial-card__author">— Radhamani</div>
+                    </div>
+                </div>
+                <div class="testimonial-card" style="min-width: 0; padding: 0;">
+                    <div class="testimonial-card__inner">
+                        <div class="testimonial-card__mark">"</div>
+                        <p class="testimonial-card__quote">Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well.</p>
+                        <div class="testimonial-card__badges">
+                            <span class="testimonial-card__badge testimonial-card__badge--product">Freestyle OA</span>
+                            <span class="testimonial-card__badge testimonial-card__badge--location">Chennai</span>
+                        </div>
+                        <div class="testimonial-card__author">— Bhuvaneswari T</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 10. FAQ (existing 3 + 4 NEW = 7) ============ -->
+    <section class="pain-section pain-section--cream">
+        <div class="container">
+            <header class="pain-section__head pain-section__head--centered">
+                <span class="pain-section__eyebrow">Questions answered</span>
+                <h2 class="pain-section__title">Common OA questions</h2>
+            </header>
+            <div class="faq-list">
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Will a brace cure my osteoarthritis?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>No. OA is progressive and no brace reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>How long should I wear my OA brace each day?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>Offloader OA braces are typically worn during weight-bearing activities — walking, working, light exercise — and removed when resting. Your specialist will recommend a schedule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Can I exercise while wearing the brace?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>Yes. Modern OA braces are designed for activity — walking, cycling, gentle resistance training. Avoid high-impact sport unless your specialist clears it.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>How much does an OA knee brace cost in India?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>Quality offloader knee braces from international brands like Breg typically range from ₹15,000 to ₹35,000 in India, depending on customisation level. While entry-level supports cost less, evidence for clinical benefit is strongest for properly-fitted offloader braces. Avana's team can advise based on your specific condition and budget — and all products are dispatched by our authorised retail partner Osteokart.com.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Can I avoid knee replacement surgery if I have OA?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>Many patients with mild-to-moderate OA can meaningfully <strong>delay or avoid knee replacement</strong> through a combination of bracing, physiotherapy, weight management, and lifestyle changes. Severe end-stage OA, however, may still require surgical intervention — your orthopaedic specialist is the best person to assess your stage.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Is osteoarthritis knee the same as arthritis or rheumatism?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>No — these are different conditions often confused. <strong>Osteoarthritis</strong> is a mechanical "wear-and-tear" disease affecting cartilage. <strong>Rheumatoid arthritis</strong> is an autoimmune disease where the body attacks its own joints. <strong>"Rheumatism"</strong> is an older umbrella term not used in modern medicine. Bracing helps OA most directly; rheumatoid arthritis typically requires medication-based treatment from a rheumatologist.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-item__question" aria-expanded="false">
+                        <span>Are there exercises that help OA knee?</span>
+                        <span class="faq-item__icon" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-item__answer" role="region">
+                        <p>Yes. Low-impact strengthening — especially quadriceps and glute exercises — significantly reduces OA knee pain. Swimming, stationary cycling, water aerobics, and tai chi are all well-supported. <strong>Avoid</strong> deep squats, high-impact running, and prolonged kneeling. A physiotherapist can build a programme suited to your stage of OA.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 11. BRAND STRIP ============ -->
+    <section class="pain-section pain-section--white">
+        <div class="container">
+            <header class="pain-section__head pain-section__head--centered">
+                <span class="pain-section__eyebrow">Trusted partners</span>
+                <h2 class="pain-section__title">Built with the world's leading orthopaedic brands</h2>
+            </header>
+            <div class="brand-strip">
+                <div class="brand-strip__item">
+                    <img class="brand-strip__logo" src="images/brands/breg-logo.png.png" alt="Breg" loading="lazy">
+                    <span class="brand-strip__caption">USA · OA bracing leader</span>
+                </div>
+                <div class="brand-strip__item">
+                    <img class="brand-strip__logo" src="images/brands/osteokart-logo.png.png" alt="Osteokart" loading="lazy">
+                    <span class="brand-strip__caption">India · Authorised retail partner</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 12. CTA ============ -->
+    <section class="pain-cta" id="cta">
+        <div class="container">
+            <div class="pain-cta__inner">
+                <h2 class="pain-cta__title">Living with OA? Let us help you stay active.</h2>
+                <p class="pain-cta__description">Speak to our team about your symptoms and we'll guide you to the right bracing — with no pressure to purchase.</p>
+                <div class="pain-cta__buttons">
+                    <a href="mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry" class="btn btn--primary">Talk to a Specialist</a>
+                    <a href="https://osteokart.com/category/osteoarthritis?utm_source=avanasurgical&amp;utm_medium=referral&amp;utm_campaign=oa_knee_condition&amp;utm_content=footer_cta" class="btn btn--secondary" target="_blank" rel="noopener">Browse OA Products</a>
+                </div>
+                <p class="pain-cta__disclaimer">All products dispatched by Osteokart.com — Avana's authorised retail partner.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ===== SIDE-BY-SIDE COMPARISON FOR REVIEWERS ===== -->
+<section class="review-comparison">
+    <div class="review-comparison__inner">
+
+        <h2 class="review-comparison__heading">What's changing on this page</h2>
+        <p class="review-comparison__sub">Quick reference for reviewers. Compares the current live page (<code>/conditions/osteoarthritis</code>) to this proposal.</p>
+
+        <h3>Meta &amp; head tags</h3>
+        <table>
+            <thead>
+                <tr><th>Field</th><th style="width:42%;">Current</th><th style="width:42%;">Proposed</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>URL slug</strong></td>
+                    <td class="old">/conditions/osteoarthritis</td>
+                    <td class="new"><strong>/conditions/osteoarthritis-knee</strong> <span class="chars">(better keyword match — "osteoarthritis knee" = 14K/mo IN)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Meta title</strong></td>
+                    <td class="old">Osteoarthritis Solutions | Offloader Bracing &amp; Pain Relief | Avana Surgical <span class="chars">(76 chars — truncates)</span></td>
+                    <td class="new"><strong>Osteoarthritis Knee Bracing &amp; Pain Relief | Avana India</strong> <span class="chars">(55 chars ✓)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Meta description</strong></td>
+                    <td class="old">Doctor-recommended offloader knee bracing and OA support for osteoarthritis pain relief — clinically proven to reduce pain and improve mobility. <span class="chars">(143)</span></td>
+                    <td class="new"><strong>Doctor-recommended offloader knee braces for osteoarthritis (OA) pain relief. Clinically proven to reduce pain, improve mobility &amp; delay surgery.</strong> <span class="chars">(148 ✓ — ends with "delay surgery" conversion trigger)</span></td>
+                </tr>
+                <tr>
+                    <td><strong>H1</strong></td>
+                    <td class="old">Live well with osteoarthritis — without surgery, where possible.</td>
+                    <td class="new"><strong>Osteoarthritis Knee — Bracing &amp; Pain Relief</strong> <span class="chars">(includes head keyword)</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Page sections</h3>
+        <table>
+            <thead>
+                <tr><th>Section</th><th>Status</th><th>Word count</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Hero</td><td><span class="pill pill--edit">Edit</span> 2 keyword insertions ("osteoarthritis knee", "knee replacement")</td><td>~+5</td></tr>
+                <tr><td><strong>Intro paragraph</strong></td><td><span class="pill pill--new">New</span> Keyword in sentence 1, link to parent knee hub, trust signal</td><td>+110</td></tr>
+                <tr><td><strong>What is osteoarthritis knee?</strong></td><td><span class="pill pill--new">New</span> 3-paragraph definition + parent hub link</td><td>+210</td></tr>
+                <tr><td><strong>Symptoms of OA knee</strong></td><td><span class="pill pill--new">New</span> 7-point bulleted list (featured-snippet candidate)</td><td>+115</td></tr>
+                <tr><td><strong>Causes &amp; risk factors</strong></td><td><span class="pill pill--new">New</span> 8-point list with India-specific factors (squatting, vitamin D)</td><td>+165</td></tr>
+                <tr><td><strong>Treatment options</strong></td><td><span class="pill pill--edit">Replace</span> Existing 3-paragraph block → structured 6-step hierarchy (conservative → bracing → surgery)</td><td>+50 net</td></tr>
+                <tr><td>Recommended bracing</td><td><span class="pill pill--edit">Edit</span> 1 product → 3 products. H3 uses India keyword ("Knee Cap for Osteoarthritis")</td><td>0</td></tr>
+                <tr><td><strong>When to see a doctor</strong></td><td><span class="pill pill--new">New</span> 7 red-flag bullets — critical E-E-A-T signal for medical content</td><td>+120</td></tr>
+                <tr><td>FAQ</td><td><span class="pill pill--edit">Expand</span> 3 → 7 questions (added cost, delay surgery, OA vs RA, exercises)</td><td>+400</td></tr>
+                <tr><td>Testimonials</td><td>Keep as-is</td><td>0</td></tr>
+                <tr><td>Brand strip</td><td>Keep as-is</td><td>0</td></tr>
+                <tr><td>Closing CTA</td><td>Keep as-is (UTM tags added on outbound links)</td><td>0</td></tr>
+                <tr><td><strong>Total new content</strong></td><td>&nbsp;</td><td><strong>~1,175 words</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h3>SEO wins this proposal delivers</h3>
+        <ul>
+            <li><strong>Head keyword in H1, meta title, and first 80 words</strong> of body — currently "osteoarthritis knee" doesn't appear in the H1 or title at all.</li>
+            <li><strong>India-specific keywords woven in</strong>: knee replacement (33K/mo IN), knee cap (90K/mo — used as product H3), osteoarthritis knee (14K/mo).</li>
+            <li><strong>Featured-snippet candidates</strong>: the Symptoms and Causes bulleted lists are formatted exactly how Google scrapes for "People Also Ask" answers.</li>
+            <li><strong>E-E-A-T signals strengthened</strong>: "When to see a doctor" red-flag list, clinician language throughout, OA-vs-RA disambiguation. Critical for YMYL (Your-Money-Your-Life) medical content.</li>
+            <li><strong>Internal links added</strong>: 3 links to <code>/solutions/knee</code> (parent hub), 1 to <code>/conditions/post-surgery-recovery</code>. Builds topical authority.</li>
+            <li><strong>UTM-tagged outbound links</strong>: every osteokart.com click is now attributable to this specific page in analytics.</li>
+            <li><strong>Page word-count goes from ~500 → ~1,700</strong>. Lands in the "comprehensive medical content" zone Google rewards.</li>
+        </ul>
+
+        <h3>What's NOT changing</h3>
+        <ul>
+            <li>Design system: same fonts, same colours, same navbar, same footer.</li>
+            <li>The 6 condition cards in the original "How bracing helps" section can stay (this proposal replaces them with the deeper Symptoms / Causes / Treatment trio — but if reviewers prefer to keep them, they fit between Intro and What-Is).</li>
+            <li>Existing testimonials — same patient quotes, same names.</li>
+            <li>Existing brand strip and CTA.</li>
+            <li>The product images themselves (we just widen which products show up here).</li>
+        </ul>
+
+        <h3>Open questions for reviewers</h3>
+        <ul>
+            <li><strong>Medical accuracy</strong> — the "When to see a doctor" red flags and the OA causes list should be eyeballed by a clinician before publish.</li>
+            <li><strong>Tone</strong> — does the voice land for the Indian patient audience? Too clinical / too casual?</li>
+            <li><strong>URL rename</strong> — moving <code>/conditions/osteoarthritis</code> → <code>/conditions/osteoarthritis-knee</code> needs a 301 redirect on the live server. Worth doing for SEO; flag if any external links already point at the old URL.</li>
+            <li><strong>Cost figures in FAQ</strong> — "₹15,000 to ₹35,000" — is that range accurate for what you ship via Osteokart? Easy to adjust.</li>
+        </ul>
+
+        <p style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 0.85rem;">
+            Reviewing this page? Email feedback to <a href="mailto:info@avanasurgical.com?subject=OA%20knee%20sample%20page%20feedback">info@avanasurgical.com</a> or comment directly in the source document. Once approved, this content will be ported into <code>data/conditions/osteoarthritis.json</code> (or renamed to <code>osteoarthritis-knee.json</code>) and the same pattern applied to the other 15 pages on the site.
+        </p>
+
+    </div>
+</section>
+
+<!-- ===== Shared footer ===== -->
+<div data-include="partials/footer.html"></div>
+
+<button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- Partial inject + header behaviour (mega-menu, mobile nav, sticky header) -->
+<script src="assets/js/include-partials.js" defer></script>
+<script src="assets/js/header-behavior.js" defer></script>
+
+<!-- Lightweight FAQ accordion + back-to-top (no solution-loader here since this is static) -->
+<script>
+    document.querySelectorAll('.faq-item__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.faq-item');
+            const isOpen = item.classList.toggle('faq-item--open');
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    });
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+        backToTop.classList.toggle('visible', window.pageYOffset > 400);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
