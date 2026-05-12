@@ -13,3 +13,6 @@ Thumbs.db
 *.log
 .cache-catalogue.json
 .cache-catalogue.tsv
+.cache-seo.txt
+.cache-wp.txt
+.cache-docs/
