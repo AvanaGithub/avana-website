@@ -10,7 +10,7 @@
       "link": "destination URL — the osteokart.com product page",
       "ctaLabel": "button label (defaults to 'Buy Now' when omitted)",
       "relatedPainAreas": "subset of [knee, spine, shoulder, elbow, foot, hip]",
-      "relatedAudiences": "subset of [knee-joint-pain, back-pain, recovering-from-surgery, surgeon]",
+      "relatedAudiences": "subset of [seniors, back-pain, recovering-from-surgery, surgeon]",
       "relatedConditions": "subset of [osteoarthritis, post-surgery-recovery, cold-therapy, spine-support]"
     }
   },
@@ -120,7 +120,7 @@
       "link": "https://osteokart.com/products/breg-volley-tennis-strap-relief-for-tennis-elbow-forearm-pain",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["elbow"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -132,7 +132,7 @@
       "link": "https://osteokart.com/products/breg-z-13-std-ci-knee-brace-trusted-standard-design-with-personalized-fit?variant=4132f322696a2e49c984da4a23c72707",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -144,7 +144,7 @@
       "link": "https://osteokart.com/products/breg-freerunner-knee-brace-optimal-stability-for-sports-recovery?variant=eb5884bdaf739005679c61d74342c535",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -156,7 +156,7 @@
       "link": "https://osteokart.com/products/breg-pfs-plantar-fasciitis-strap-adjustable-fit-for-all-day-relief?variant=918f10f5d4bd6205bbe9fee11eaf4226",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -168,7 +168,7 @@
       "link": "https://osteokart.com/products/breg-axiom-ankle-brace-premium-support-for-injury-recovery-prevention?variant=48db4f147bdb123327ab3a6db5da51ac",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -180,7 +180,7 @@
       "link": "https://osteokart.com/products/breg-lace-up-ankle-brace-with-stays-superior-support-for-ankle-stability?variant=0f714d8384b9b7cefbc17ef09abd6104",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -192,7 +192,7 @@
       "link": "https://osteokart.com/products/breg-wraptor-speed-ankle-stabilizer-optimal-stability-for-sports-recovery?variant=9900ba0c9be252cb6f42de8f450f7da0",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -336,7 +336,7 @@
       "link": "https://osteokart.com/products/breg-dorsal-night-splint?variant=cccbf7d3a422f42e5c7cbb4957cb6231",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["post-surgery-recovery"]
     },
     {
@@ -348,7 +348,7 @@
       "link": "https://osteokart.com/products/breg-freestyle-oa-knee-brace?variant=e33b782517414c951ad61f8022a0c02a",
       "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["knee-joint-pain"],
+      "relatedAudiences": ["seniors"],
       "relatedConditions": ["osteoarthritis"]
     }
   ]

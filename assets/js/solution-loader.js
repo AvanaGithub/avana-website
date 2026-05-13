@@ -37,8 +37,12 @@
             urlPrefix: '/audiences/',
             dataFolder: 'data/audiences',
             relationKey: 'relatedAudiences',
-            validSlugs: ['knee-joint-pain', 'back-pain', 'recovering-from-surgery', 'surgeon'],
-            defaultSlug: 'knee-joint-pain'
+            validSlugs: ['seniors', 'back-pain', 'recovering-from-surgery', 'surgeon'],
+            defaultSlug: 'seniors',
+            // Legacy slugs that should silently 301-style redirect to a
+            // new canonical slug. Used by resolveRoute() to keep any
+            // existing inbound links working after a rename.
+            slugAliases: { 'knee-joint-pain': 'seniors' }
         },
         condition: {
             urlPrefix: '/conditions/',
@@ -58,16 +62,24 @@
         const pathname = window.location.pathname;
         const params = new URLSearchParams(window.location.search);
 
+        // Helper: if the slug is a legacy/aliased name, return its
+        // canonical replacement (e.g. knee-joint-pain → seniors).
+        // Otherwise return the slug unchanged.
+        function applyAlias(cfg, slug) {
+            return (cfg.slugAliases && cfg.slugAliases[slug]) || slug;
+        }
+
         // Path-based routing (production, via nginx rewrite)
         for (const [typeKey, cfg] of Object.entries(TYPES)) {
             if (pathname.startsWith(cfg.urlPrefix)) {
                 const rest = pathname.slice(cfg.urlPrefix.length).replace(/\/+$/, '');
-                const slug = rest.split('/')[0];
+                const rawSlug = rest.split('/')[0];
+                const slug = applyAlias(cfg, rawSlug);
                 if (cfg.validSlugs.includes(slug)) {
                     return { type: typeKey, slug, config: cfg };
                 }
                 // Path matched but slug unknown — still return so we can show a 404
-                return { type: typeKey, slug, config: cfg, notFound: true };
+                return { type: typeKey, slug: rawSlug, config: cfg, notFound: true };
             }
         }
 
@@ -75,7 +87,8 @@
         // Supported: ?type=painArea&slug=knee   OR   ?area=knee   OR   ?audience=back-pain   OR   ?condition=osteoarthritis
         const typeParam = params.get('type');
         if (typeParam && TYPES[typeParam]) {
-            const slug = (params.get('slug') || TYPES[typeParam].defaultSlug).toLowerCase().trim();
+            const raw = (params.get('slug') || TYPES[typeParam].defaultSlug).toLowerCase().trim();
+            const slug = applyAlias(TYPES[typeParam], raw);
             return { type: typeParam, slug, config: TYPES[typeParam] };
         }
         if (params.get('area')) {
@@ -83,7 +96,8 @@
             return { type: 'painArea', slug, config: TYPES.painArea };
         }
         if (params.get('audience')) {
-            const slug = params.get('audience').toLowerCase().trim();
+            const raw = params.get('audience').toLowerCase().trim();
+            const slug = applyAlias(TYPES.audience, raw);
             return { type: 'audience', slug, config: TYPES.audience };
         }
         if (params.get('condition')) {

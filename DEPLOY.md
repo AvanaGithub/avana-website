@@ -70,7 +70,7 @@ If you'd rather skip the editor, the same change is just a JSON edit:
      "link": "https://osteokart.com/products/my-new-brace?utm_source=avana",
      "ctaLabel": "Buy Now",
      "relatedPainAreas":  ["knee"],
-     "relatedAudiences":  ["knee-joint-pain", "recovering-from-surgery"],
+     "relatedAudiences":  ["seniors", "recovering-from-surgery"],
      "relatedConditions": ["osteoarthritis"]
    }
    ```
@@ -81,7 +81,7 @@ If you'd rather skip the editor, the same change is just a JSON edit:
 
 | relatedPainAreas | relatedAudiences | relatedConditions |
 |---|---|---|
-| `knee` | `knee-joint-pain` | `osteoarthritis` |
+| `knee` | `seniors` | `osteoarthritis` |
 | `spine` | `back-pain` | `post-surgery-recovery` |
 | `shoulder` | `recovering-from-surgery` | `cold-therapy` |
 | `elbow` | `surgeon` | `spine-support` |
@@ -172,7 +172,7 @@ A quick end-to-end smoke test:
 1. Start a local server (see §3).
 2. Hover **Solutions** in the navbar — the mega-menu should drop down with two columns. Tap a knee link → the knee page renders with knee products.
 3. Open the audience and condition pages via query string (see §3). Same template, different content.
-4. Rename a product in `data/products.json` — reload two pages where it appears (e.g. `solution-template.html?type=painArea&slug=knee` and `solution-template.html?type=audience&slug=knee-joint-pain`). The new name should appear in both. ← proves the shared catalog is working.
+4. Rename a product in `data/products.json` — reload two pages where it appears (e.g. `solution-template.html?type=painArea&slug=knee` and `solution-template.html?type=audience&slug=seniors`). The new name should appear in both. ← proves the shared catalog is working.
 5. Click any product card CTA — should open the matching `osteokart.com` URL in a new tab.
 6. Resize the browser to mobile width — hamburger menu opens; Solutions expands into an accordion.
 
