@@ -222,7 +222,7 @@
                         ${needsToggle ? `<button type="button" class="product-card__read-more" aria-expanded="false">Read more</button>` : ''}
                         ${p.usage ? `<div class="product-card__usage"><strong>Recommended for</strong>${escapeHtml(p.usage)}</div>` : ''}
                         <a href="${escapeHtml(p.link)}" class="product-card__cta" target="_blank" rel="noopener" data-product-slug="${escapeHtml(p.slug)}">
-                            ${escapeHtml(p.ctaLabel || 'View on Osteokart')}
+                            ${escapeHtml(p.ctaLabel || 'Buy Now')}
                         </a>
                     </div>
                 </article>

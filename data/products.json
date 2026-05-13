@@ -8,7 +8,7 @@
       "shortDescription": "1–2 sentence description shown on the card; longer text is truncated via line-clamp with a Read more toggle",
       "image": "relative path to the product image",
       "link": "destination URL — the osteokart.com product page",
-      "ctaLabel": "button label (defaults to 'View on Osteokart' when omitted)",
+      "ctaLabel": "button label (defaults to 'Buy Now' when omitted)",
       "relatedPainAreas": "subset of [knee, spine, shoulder, elbow, foot, hip]",
       "relatedAudiences": "subset of [knee-joint-pain, back-pain, recovering-from-surgery, surgeon]",
       "relatedConditions": "subset of [osteoarthritis, post-surgery-recovery, cold-therapy, spine-support]"
@@ -22,7 +22,7 @@
       "shortDescription": "Premium neck brace for pediatric pain relief and recovery.",
       "image": "images/products/aspen-pediatric-collar-img-3.jpg",
       "link": "https://osteokart.com/products/aspen-pediatric-collar-premium-neck-brace-for-pediatric-pain-relief-recovery?variant=de97f61c3589f4982b7a00734e2bd2cd",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -34,7 +34,7 @@
       "shortDescription": "Premium cervical collar designed for comfort and support during neck-injury recovery.",
       "image": "images/products/aspen-vista-multiPost-therapy-collar-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-multipost-therapy-collar-premium-cervical-collar-for-maximum-comfort",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -46,7 +46,7 @@
       "shortDescription": "Adjustable sacroiliac support brace for hip and pelvic support.",
       "image": "images/products/aspen-evergreen-621-si-belt-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-evergreen-621-si-belt-adjustable-sacroiliac-support-brace?variant=8f6564df7dfa888b2f45f9bb17a16a1f",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["hip", "spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -58,7 +58,7 @@
       "shortDescription": "Brace for support and pain relief in thoracolumbar injuries.",
       "image": "images/products/aspen-horizon-456-tlso-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-horizon-456-tlso-effective-pain-relief-for-thoracolumbar-injuries",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain", "surgeon"],
       "relatedConditions": ["spine-support"]
@@ -70,7 +70,7 @@
       "shortDescription": "Lightweight, adjustable spinal brace for low back support and comfort.",
       "image": "images/products/aspen-ots-lso-648-img-2.jpg",
       "link": "https://osteokart.com/products/aspen-ots-lso-648-lightweight-lumbar-brace-for-superior-comfort",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -82,7 +82,7 @@
       "shortDescription": "Low-profile lumbar brace that provides trunk stability and targeted compression for everyday low back support.",
       "image": "images/products/aspen-horizon-627-lumbar-support-img-4.jpg",
       "link": "https://osteokart.com/products/aspen-horizon-627-lumbar-brace-lightweight-design-for-comfortable-back-support",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -94,7 +94,7 @@
       "shortDescription": "Cervical thoracic brace with adjustable points for a comfortable and effective fit during recovery.",
       "image": "images/products/aspen-vista-cto-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-cto-advanced-cervical-thoracic-brace-for-injury-recovery",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain", "surgeon"],
       "relatedConditions": ["spine-support"]
@@ -106,7 +106,7 @@
       "shortDescription": "Hand and finger splint for support after fractures or injuries.",
       "image": "images/products/breg-contender-boxer-splint-img-1.png",
       "link": "https://osteokart.com/products/breg-contender-boxer-splint-superior-support-for-finger-hand-injuries?variant=013a0d591d1b8d23ef983fdaf2b823ed",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["elbow"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -118,7 +118,7 @@
       "shortDescription": "Forearm strap that provides compression for tennis elbow and forearm pain.",
       "image": "images/products/breg-volley-tennis-elbow-strap-img-1.png",
       "link": "https://osteokart.com/products/breg-volley-tennis-strap-relief-for-tennis-elbow-forearm-pain",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["elbow"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -130,7 +130,7 @@
       "shortDescription": "Low-profile aluminum knee brace designed for support and a customized fit.",
       "image": "images/products/breg-ci-knee-brace.jpg",
       "link": "https://osteokart.com/products/breg-z-13-std-ci-knee-brace-trusted-standard-design-with-personalized-fit?variant=4132f322696a2e49c984da4a23c72707",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -142,7 +142,7 @@
       "shortDescription": "Soft knee brace for patellofemoral support and stabilization.",
       "image": "images/products/breg-freerunner-img-2.png",
       "link": "https://osteokart.com/products/breg-freerunner-knee-brace-optimal-stability-for-sports-recovery?variant=eb5884bdaf739005679c61d74342c535",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -154,7 +154,7 @@
       "shortDescription": "Adjustable strap that provides elastic tension and pressure for plantar fasciitis pain.",
       "image": "images/products/breg-pfs-strap-img-1.png",
       "link": "https://osteokart.com/products/breg-pfs-plantar-fasciitis-strap-adjustable-fit-for-all-day-relief?variant=918f10f5d4bd6205bbe9fee11eaf4226",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -166,7 +166,7 @@
       "shortDescription": "Rigid ankle foot orthosis for ankle protection and support.",
       "image": "images/products/breg-axiom-ankle-img-1.jpg",
       "link": "https://osteokart.com/products/breg-axiom-ankle-brace-premium-support-for-injury-recovery-prevention?variant=48db4f147bdb123327ab3a6db5da51ac",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -178,7 +178,7 @@
       "shortDescription": "Ankle brace with semi-rigid stays for extra stability and support.",
       "image": "images/products/breg-lace-up-ankle-brace.png",
       "link": "https://osteokart.com/products/breg-lace-up-ankle-brace-with-stays-superior-support-for-ankle-stability?variant=0f714d8384b9b7cefbc17ef09abd6104",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -190,7 +190,7 @@
       "shortDescription": "Ankle stabilizer that supports the ankle during sports and recovery.",
       "image": "images/products/breg-wraptor-speed-stabilizer-img-1.png",
       "link": "https://osteokart.com/products/breg-wraptor-speed-ankle-stabilizer-optimal-stability-for-sports-recovery?variant=9900ba0c9be252cb6f42de8f450f7da0",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -202,7 +202,7 @@
       "shortDescription": "Cold therapy system for pain relief and swelling during post-surgery or injury recovery.",
       "image": "images/products/breg-polar-care-kodiak-img-1.png",
       "link": "https://osteokart.com/products/breg-polar-care-kodiak-cold-therapy-system-for-pain-relief-swelling",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee", "hip"],
       "relatedAudiences": ["recovering-from-surgery", "surgeon"],
       "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
@@ -214,7 +214,7 @@
       "shortDescription": "Cold therapy with active compression — controls pain and swelling after surgery or acute injury.",
       "image": "images/products/breg-polar-care-wave-img-1.png",
       "link": "https://osteokart.com/products/breg-polar-care-wave",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee", "shoulder", "hip"],
       "relatedAudiences": ["recovering-from-surgery", "surgeon"],
       "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
@@ -226,7 +226,7 @@
       "shortDescription": "Shoulder sling designed for comfort and support during shoulder surgery recovery.",
       "image": "images/products/breg-atlas-universal-sling-img-1.jpg",
       "link": "https://osteokart.com/products/breg-atlas-universal-shoulder-sling-adjustable-fit-for-injury-recovery",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["shoulder"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -238,7 +238,7 @@
       "shortDescription": "Post-op shoe designed to reduce heel weight-bearing and pressure after surgery or injury.",
       "image": "images/products/bregheel-offloader-post-op-shoe-img-1.png",
       "link": "https://osteokart.com/products/breg-heel-offloader-post-op-shoe-optimal-relief-for-rearfoot-trauma-wounds?variant=47a2ff92c3af076d28d7ab4ac5a86ee2",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -250,7 +250,7 @@
       "shortDescription": "Post-op knee brace with adjustable support and controlled motion for recovery.",
       "image": "images/products/breg-t-scope-premier-post-op-knee-img-1.png",
       "link": "https://osteokart.com/products/breg-t-scope-premier-post-op-knee-brace",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
       "relatedAudiences": ["recovering-from-surgery", "surgeon"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -262,7 +262,7 @@
       "shortDescription": "Lumbar brace with a tightening system for customized lower back compression and support.",
       "image": "images/products/aspen-lumbar-support-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-lumbar-support-belt-effective-back-pain-relief-support?variant=4f1bd609baee8566dc8729c846718c96",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -274,7 +274,7 @@
       "shortDescription": "Adjustable cervical collar for neck support during injury or surgery recovery.",
       "image": "images/products/aspen-vista-collar-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-collar",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["recovering-from-surgery", "back-pain"],
       "relatedConditions": ["spine-support", "post-surgery-recovery"]
@@ -286,7 +286,7 @@
       "shortDescription": "Adjustable neck brace for pain relief, support, injury recovery, and posture correction.",
       "image": "images/products/breg-cervical-collar.png",
       "link": "https://osteokart.com/products/breg-cervical-collar",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["spine"],
       "relatedAudiences": ["back-pain"],
       "relatedConditions": ["spine-support"]
@@ -298,7 +298,7 @@
       "shortDescription": "Lightweight full-shell pneumatic walker for foot and ankle recovery.",
       "image": "images/products/breg-genesis-full-shell-walker-img-1.png",
       "link": "https://osteokart.com/products/breg-genesis-full-shell-walker?variant=00315811266e8ce8546f35cfdce36a1b",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -310,7 +310,7 @@
       "shortDescription": "Mid-calf walker designed for comfortable foot and ankle fracture recovery.",
       "image": "images/products/breg-genesis-mid-calf-walker-img-2.png",
       "link": "https://osteokart.com/products/breg-genesis-mid-calf-full-shell-walker?variant=3a6658ee1981a0fea6ff91b196bd14fc",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -322,7 +322,7 @@
       "shortDescription": "Post-op shoe designed to reduce forefoot weight-bearing and pressure after surgery or injury.",
       "image": "images/products/breg-square-toe-offloading-post-op-shoes-img-1.png",
       "link": "https://osteokart.com/products/breg-square-toe-offloading-shoe?variant=dc060bbcaff23ce2b5299a7154dff838",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["recovering-from-surgery"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -334,7 +334,7 @@
       "shortDescription": "Night splint that supports the foot during plantar fasciitis, contractures, and Achilles tendonitis.",
       "image": "images/products/breg-dorsal-night-splint-img-1.png",
       "link": "https://osteokart.com/products/breg-dorsal-night-splint?variant=cccbf7d3a422f42e5c7cbb4957cb6231",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["foot"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["post-surgery-recovery"]
@@ -346,7 +346,7 @@
       "shortDescription": "OA knee brace that offloads the medial or lateral compartment for mild to moderate unicompartmental osteoarthritis.",
       "image": "images/products/breg-freestyle-oa-knee-brace-img-1.jpg",
       "link": "https://osteokart.com/products/breg-freestyle-oa-knee-brace?variant=e33b782517414c951ad61f8022a0c02a",
-      "ctaLabel": "View on Osteokart",
+      "ctaLabel": "Buy Now",
       "relatedPainAreas": ["knee"],
       "relatedAudiences": ["knee-joint-pain"],
       "relatedConditions": ["osteoarthritis"]

@@ -68,7 +68,7 @@ If you'd rather skip the editor, the same change is just a JSON edit:
      "usage": "Short 'recommended for' line (optional)",
      "image": "images/products/my-new-brace.jpg",
      "link": "https://osteokart.com/products/my-new-brace?utm_source=avana",
-     "ctaLabel": "View on Osteokart",
+     "ctaLabel": "Buy Now",
      "relatedPainAreas":  ["knee"],
      "relatedAudiences":  ["knee-joint-pain", "recovering-from-surgery"],
      "relatedConditions": ["osteoarthritis"]
