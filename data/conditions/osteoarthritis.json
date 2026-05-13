@@ -1,13 +1,13 @@
 {
   "slug": "osteoarthritis",
   "type": "condition",
-  "metaTitle": "Osteoarthritis Solutions | Offloader Bracing & Pain Relief | Avana Surgical",
-  "metaDescription": "Doctor-recommended offloader knee bracing and OA support for osteoarthritis pain relief — clinically proven to reduce pain and improve mobility.",
+  "metaTitle": "Osteoarthritis Knee Bracing & Pain Relief | Avana India",
+  "metaDescription": "Doctor-recommended offloader knee braces for osteoarthritis (OA) pain relief. Clinically proven to reduce pain, improve mobility & delay surgery.",
 
   "hero": {
-    "eyebrow": "Osteoarthritis Support",
-    "title": "Live well with osteoarthritis — without surgery, where possible.",
-    "description": "Modern offloader bracing has changed what's possible for OA patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid joint replacement surgery.",
+    "eyebrow": "Osteoarthritis Knee · Pain Relief & Bracing",
+    "title": "Osteoarthritis Knee — Bracing & Pain Relief",
+    "description": "Modern offloader bracing has changed what's possible for osteoarthritis knee patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid knee replacement surgery.",
     "image": "images/condition/osteoarthritis.jpg",
     "imageAlt": "OA brace supporting an osteoarthritic knee",
     "ctas": [
@@ -16,20 +16,83 @@
     ]
   },
 
-  "conditionsHeading": {
+  "intro": "<p class=\"lede\">Osteoarthritis (OA) of the knee is the most common joint disease in Indian adults over 50 — and one of the leading reasons patients are told they need knee replacement surgery. Most don't. With the right <strong>offloader brace</strong>, physiotherapy and activity guidance, many patients reduce daily knee pain, walk further, and meaningfully delay or avoid surgery. This page explains what OA knee is, what causes it, and how Avana's clinically-validated bracing fits into a full treatment plan. <strong>Avana has supported over 1 lakh+ patients across India</strong> — and our team helps you choose, size, and wear the right brace, with no pressure to purchase.</p>",
+
+  "whatIs": {
     "eyebrow": "About the condition",
-    "title": "What is osteoarthritis, and how does bracing help?",
-    "lead": "OA is wear-and-tear arthritis. The right brace doesn't reverse it — but it can change how you feel every day."
+    "title": "What is osteoarthritis knee?",
+    "paragraphs": [
+      "<p>Osteoarthritis (OA) is a degenerative joint disease where cartilage — the smooth tissue covering the ends of bones — gradually thins and wears down. When this happens in the knee, the bones rub against each other, causing <strong>pain, stiffness, swelling, and reduced range of motion</strong>.</p>",
+      "<p>OA most commonly affects the <strong>medial (inner) compartment</strong> of the knee, especially in Indian adults due to higher rates of squatting, sitting cross-legged, and prolonged standing. Over time, the joint may become bow-legged (varus deformity) as the inner cartilage wears down further.</p>",
+      "<p>Unlike rheumatoid arthritis (an autoimmune disease), OA is a \"wear-and-tear\" condition — it doesn't reverse, but it can be <strong>managed and slowed</strong> with the right combination of bracing, physiotherapy, weight management, and lifestyle changes. Surgery is one option for advanced cases, but not the inevitable outcome.</p>"
+    ]
   },
 
-  "conditions": [
-    { "icon": "🦴", "title": "Cartilage wear", "description": "Cartilage on the ends of bones thins over time, especially in load-bearing joints like the knee and hip." },
-    { "icon": "🎯", "title": "Offloading the painful side", "description": "Most knee OA affects one compartment. An offloader brace shifts load to the healthy side — reducing pain at the worn area." },
-    { "icon": "🚶", "title": "Restore daily activity", "description": "Reduced pain means more walking, more stairs, more life. Activity itself slows OA progression." },
-    { "icon": "🏥", "title": "Surgery as a last resort", "description": "Many patients meaningfully delay or avoid joint replacement with consistent bracing, physiotherapy, and weight management." }
-  ],
+  "symptoms": {
+    "eyebrow": "What to look for",
+    "title": "Symptoms of osteoarthritis knee",
+    "lead": "Common signs and symptoms include:",
+    "items": [
+      "<strong>Pain that worsens with activity</strong> — climbing stairs, walking long distances, standing up after sitting.",
+      "<strong>Morning stiffness</strong> that eases within 30 minutes of moving.",
+      "<strong>Swelling and warmth</strong> around the knee, especially after activity.",
+      "<strong>A grating or grinding sensation</strong> (crepitus) when bending the knee.",
+      "<strong>Loss of flexibility</strong> — difficulty fully straightening or bending the knee.",
+      "<strong>Knee \"giving way\"</strong> during walking or climbing stairs.",
+      "<strong>A bow-legged appearance</strong> developing over months or years."
+    ]
+  },
 
-  "productsHeading": { "title": "Recommended OA bracing", "lead": "These offloader and OA-specific products are chosen by Avana for their clinical performance and Indian patient fit." },
+  "causes": {
+    "eyebrow": "Why it happens",
+    "title": "Causes & risk factors",
+    "lead": "OA knee develops when cartilage in the knee joint wears faster than the body can repair it. Common risk factors:",
+    "items": [
+      "<strong>Age</strong> — most common after 50, though 35+ is increasingly seen in India.",
+      "<strong>Excess body weight</strong> — every extra kilo adds 4 kg of load through the knee while walking.",
+      "<strong>Previous knee injury</strong> — ACL tear, meniscus injury, or fracture significantly raises OA risk later in life.",
+      "<strong>Repeated stress on the joint</strong> — manual labour, squatting, prolonged kneeling.",
+      "<strong>Genetics</strong> — family history of OA is a strong predictor.",
+      "<strong>Female sex after menopause</strong> — Indian women have a higher prevalence than men.",
+      "<strong>Bow legs (genu varum)</strong> — common in the Indian population, accelerates medial compartment wear.",
+      "<strong>Vitamin D deficiency</strong> — prevalent in India, weakens cartilage and bone health."
+    ]
+  },
+
+  "treatment": {
+    "eyebrow": "What helps",
+    "title": "Osteoarthritis knee treatment options",
+    "lead": "Treatment for OA knee follows a conservative-first approach, escalating only if earlier options fail.",
+    "steps": [
+      "<strong>Lifestyle changes</strong> — weight management, low-impact exercise (swimming, cycling), avoiding deep squatting, and proper Vitamin D supplementation. Often delivers the biggest pain reduction in early OA.",
+      "<strong>Physiotherapy</strong> — strengthening the quadriceps and core, gait retraining, and manual therapy. Should be paired with bracing for compound effect.",
+      "<strong>Offloader bracing</strong> — the single most evidence-supported non-surgical intervention. An offloader brace applies a corrective force across the knee, shifting load from the worn medial compartment to the healthy lateral compartment. Many patients report meaningful pain reduction and improved walking comfort within weeks of consistent wear.",
+      "<strong>Pain medication</strong> — NSAIDs, topical creams, or short courses of cortisone injections under medical supervision. Manages symptoms but does not slow disease progression.",
+      "<strong>Hyaluronic acid injections</strong> — visco-supplementation that may provide several months of relief in selected patients.",
+      "<strong>Surgery</strong> — arthroscopy, partial or total knee replacement. Reserved for advanced cases where conservative options have failed. Consistent bracing has helped many patients delay knee replacement for years."
+    ]
+  },
+
+  "productsHeading": {
+    "title": "Recommended OA bracing",
+    "lead": "Offloader and OA-specific products chosen by Avana for their clinical performance and Indian-patient fit."
+  },
+
+  "whenToSeeDoctor": {
+    "eyebrow": "Red flags",
+    "title": "When to see a doctor",
+    "lead": "Bracing and lifestyle changes work for most OA knee patients — but some signs need a specialist immediately:",
+    "items": [
+      "<strong>Severe pain at rest</strong> (not just with activity).",
+      "<strong>The knee locks or gives way</strong> repeatedly.",
+      "<strong>Significant swelling that doesn't reduce</strong> with rest, ice, or elevation.",
+      "<strong>Inability to fully straighten or bend</strong> the knee.",
+      "<strong>Pain that wakes you up at night.</strong>",
+      "<strong>Visible deformity</strong> developing rapidly.",
+      "<strong>Symptoms in both knees, plus fingers/wrists</strong> — may suggest rheumatoid arthritis instead."
+    ],
+    "note": "Avana's clinical team can guide you to an orthopaedic specialist near you. We support — but never replace — proper medical care."
+  },
 
   "testimonialsHeading": { "title": "OA patients in their own words" },
 
@@ -48,29 +111,24 @@
     }
   ],
 
-  "seoContent": {
-    "title": "Understanding osteoarthritis — and what helps",
-    "intro": "OA is the most common joint condition in adults over 50. The good news: there is more you can do than just pain medication.",
-    "sections": [
-      { "heading": "What causes OA?", "body": "<p>Cartilage — the smooth covering on the ends of bones — thins with age, injury, or repeated stress. The exposed bone surfaces then grind, causing pain, stiffness, and reduced movement.</p>" },
-      { "heading": "How offloader braces work", "body": "<p>Most knee OA affects one compartment (usually medial). An offloader brace applies a corrective force that shifts load away from the worn compartment — reducing pressure on the painful area and easing pain during activity.</p>" },
-      { "heading": "The full OA toolkit", "body": "<p>Bracing works best as part of a plan: physiotherapy for muscle support, weight management to reduce joint load, activity modification, and pain control. Surgery is one option — not the inevitable one.</p>" }
-    ],
-    "disclaimer": "Educational content. Please consult an orthopaedic specialist for diagnosis and treatment."
-  },
-
   "faqHeading": { "title": "Common OA questions" },
 
   "faq": [
     { "question": "Will a brace cure my osteoarthritis?", "answer": "No. OA is progressive and no brace reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery." },
     { "question": "How long should I wear my OA brace each day?", "answer": "Offloader OA braces are typically worn during weight-bearing activities — walking, working, light exercise — and removed when resting. Your specialist will recommend a schedule." },
-    { "question": "Can I exercise while wearing the brace?", "answer": "Yes. Modern OA braces are designed for activity — walking, cycling, gentle resistance training. Avoid high-impact sport unless your specialist clears it." }
+    { "question": "Can I exercise while wearing the brace?", "answer": "Yes. Modern OA braces are designed for activity — walking, cycling, gentle resistance training. Avoid high-impact sport unless your specialist clears it." },
+    { "question": "How much does an OA knee brace cost in India?", "answer": "Quality offloader knee braces from international brands like Breg typically range from ₹15,000 to ₹35,000 in India, depending on customisation level. While entry-level supports cost less, evidence for clinical benefit is strongest for properly-fitted offloader braces. Avana's team can advise based on your specific condition and budget — and all products are dispatched by our authorised retail partner Osteokart.com." },
+    { "question": "Can I avoid knee replacement surgery if I have OA?", "answer": "Many patients with mild-to-moderate OA can meaningfully delay or avoid knee replacement through a combination of bracing, physiotherapy, weight management, and lifestyle changes. Multiple long-term studies show offloader bracing alone has postponed surgery by years in suitable candidates. Severe end-stage OA, however, may still require surgical intervention — your orthopaedic specialist is the best person to assess your stage." },
+    { "question": "Is osteoarthritis knee the same as arthritis or rheumatism?", "answer": "No — these are different conditions often confused. Osteoarthritis is a mechanical \"wear-and-tear\" disease affecting cartilage. Rheumatoid arthritis is an autoimmune disease where the body attacks its own joints. \"Rheumatism\" is an older umbrella term not used in modern medicine. Bracing helps OA most directly; rheumatoid arthritis typically requires medication-based treatment from a rheumatologist." },
+    { "question": "Are there exercises that help OA knee?", "answer": "Yes. Low-impact strengthening — especially quadriceps and glute exercises — significantly reduces OA knee pain. Swimming, stationary cycling, water aerobics, and tai chi are all well-supported. Avoid deep squats, high-impact running, and prolonged kneeling. A physiotherapist can build a programme suited to your stage of OA." }
   ],
 
   "blog": [],
 
   "brands": [
     { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · OA bracing leader" },
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Orthopaedic bracing" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
     { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
@@ -79,7 +137,7 @@
     "description": "Speak to our team about your symptoms and we'll guide you to the right bracing — with no pressure to purchase.",
     "buttons": [
       { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry", "style": "primary" },
-      { "label": "Browse OA Products", "href": "https://osteokart.com/category/osteoarthritis?utm_source=avana&utm_medium=condition-cta&utm_campaign=osteoarthritis", "style": "secondary", "external": true }
+      { "label": "Browse OA Products", "href": "https://osteokart.com/category/osteoarthritis?utm_source=avanasurgical&utm_medium=referral&utm_campaign=oa_knee_condition&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
