@@ -1,13 +1,13 @@
 {
   "slug": "cold-therapy",
   "type": "condition",
-  "metaTitle": "Cold Therapy & Compression Systems | Avana Surgical",
-  "metaDescription": "Powered cold therapy with active compression for post-surgical recovery and acute injury — clinically proven to reduce pain and speed healing.",
+  "metaTitle": "Cold Therapy & Active Compression Systems | Avana India",
+  "metaDescription": "Powered cold therapy with active compression for post-surgery & sports injury recovery. Polar Care Kodiak & Wave systems — clinically proven, fitted in India.",
 
   "hero": {
-    "eyebrow": "Cold Therapy & Compression",
-    "title": "Cold therapy — done right.",
-    "description": "Ice packs were yesterday. Powered cold therapy with active compression maintains consistent cooling, reduces swelling, and dramatically lowers post-op pain.",
+    "eyebrow": "Cold Therapy · Active Compression",
+    "title": "Cold Therapy & Active Compression Systems",
+    "description": "Ice packs were yesterday. Powered cold therapy with active compression — like the Polar Care Kodiak and Wave systems used in Indian operating theatres — maintains consistent therapeutic cooling, actively pumps swelling out, and dramatically lowers post-op pain.",
     "image": "images/products/breg-polar-care-wave-img-1.png",
     "imageAlt": "Breg Polar Care Wave — powered cold therapy and compression unit",
     "ctas": [
@@ -16,20 +16,81 @@
     ]
   },
 
-  "conditionsHeading": {
-    "eyebrow": "Why it works",
-    "title": "What powered cold therapy does that ice packs can't",
-    "lead": "Cold therapy is one of the most evidence-supported recovery tools in modern orthopaedics."
+  "intro": "<p class=\"lede\">Cold therapy isn't new — ice has been used for swelling and pain since ancient times. What <strong>is</strong> new is the combination of consistent temperature control and active compression. Powered units like the <strong>Polar Care Kodiak</strong> and <strong>Wave</strong> maintain therapeutic cooling for hours, while pumped cycling pressure actively moves swelling out of the surgical area — something static ice packs and elastic wraps simply cannot do. This page explains what modern cold therapy does that ice can't, when it helps most, and which Avana-distributed systems Indian orthopaedic surgeons most often prescribe.</p>",
+
+  "whatIs": {
+    "eyebrow": "About the therapy",
+    "title": "What is powered cold therapy?",
+    "paragraphs": [
+      "<p>Cold therapy (also called cryotherapy) is the application of controlled cooling to an injured or operated tissue. Modern powered systems do <strong>three things at once</strong>:</p>",
+      "<p><strong>1. Maintain consistent therapeutic temperature</strong> — typically around 3–10°C, held steady for hours through a circulating chilled-water pad. Ice packs warm up in 20 minutes; powered units don't.</p>",
+      "<p><strong>2. Add active compression</strong> — pneumatic pumps cycle pressure across the pad, mechanically squeezing swelling out of the surgical area and into the lymphatic system.</p>",
+      "<p><strong>3. Reduce three drivers of pain simultaneously</strong> — slowed nerve conduction (less pain perception), reduced local blood flow (less swelling), and reduced inflammatory chemistry. The combined effect is why clinical studies consistently show lower post-op opioid use in patients who use these systems.</p>"
+    ]
   },
 
-  "conditions": [
-    { "icon": "🌡️", "title": "Consistent temperature", "description": "A powered unit maintains the target therapeutic temperature for hours — ice packs warm up within 20 minutes." },
-    { "icon": "💨", "title": "Active compression", "description": "Cycling compression pumps swelling out of the surgical area — reducing recovery time." },
-    { "icon": "💊", "title": "Less pain medication", "description": "Clinical studies show patients using powered cold therapy need significantly less post-op opioid medication." },
-    { "icon": "⏱️", "title": "Faster return-to-function", "description": "Better pain and swelling control means earlier mobilisation, which means a quicker return to walking and life." }
-  ],
+  "symptoms": {
+    "eyebrow": "When to use it",
+    "title": "When cold therapy helps most",
+    "lead": "Cold therapy is one of the most evidence-supported recovery tools in modern orthopaedics — but it's not for every situation. Powered cold therapy is most useful for:",
+    "items": [
+      "<strong>The first 1–2 weeks after orthopaedic surgery</strong> — knee, shoulder, hip, ankle, spine. Where modern surgeons most commonly prescribe it.",
+      "<strong>Within 48 hours of an acute injury</strong> — sprain, contusion, muscle strain, ankle roll.",
+      "<strong>Acute flares of inflammatory arthritis</strong> — rheumatoid, gout, ankylosing spondylitis.",
+      "<strong>After intense rehabilitation sessions</strong> — reduces next-day soreness so you can return to physiotherapy.",
+      "<strong>Sports injuries with significant swelling</strong> — ankle sprain, hamstring tear, knee bruising.",
+      "<strong>Post-fracture in early healing</strong> — when your treating doctor advises."
+    ]
+  },
 
-  "productsHeading": { "title": "Cold therapy systems", "lead": "Powered cold and compression units used in orthopaedic and sports medicine recovery, dispatched in India by Osteokart." },
+  "causes": {
+    "eyebrow": "The science",
+    "title": "Why powered cold therapy beats ice packs",
+    "lead": "If you've used ice packs after a sports injury, you know they melt fast and the wrap loosens. The difference with powered systems:",
+    "items": [
+      "<strong>Consistent therapeutic temperature</strong> — held steady for hours. Ice warms up in roughly 20 minutes, often before the patient notices.",
+      "<strong>Active pneumatic compression</strong> — cycles pressure to physically move swelling out, vs static wraps that just hold tissue in place.",
+      "<strong>Hands-free, walk-around operation</strong> — patients can read, eat, or sleep while the unit runs.",
+      "<strong>Safer thermoregulation</strong> — built-in timers prevent over-cooling and frostbite risk.",
+      "<strong>Easier to use 3–6× daily</strong> — the protocol many surgeons prescribe for the first week. Ice gets impractical at that frequency.",
+      "<strong>Documented opioid reduction</strong> — multiple post-op studies show less pain medication needed."
+    ]
+  },
+
+  "treatment": {
+    "eyebrow": "How to use it",
+    "title": "Typical cold therapy protocol",
+    "lead": "Specific protocols vary by surgeon — but a typical post-op cold therapy plan looks like this:",
+    "steps": [
+      "<strong>Days 1–7 (acute phase)</strong> — 20–30 minute sessions, 4–6 times daily. This is when the unit earns its keep.",
+      "<strong>Days 8–14 (subacute phase)</strong> — reduce to 3 sessions daily. Most swelling should be tapering.",
+      "<strong>Weeks 3–4 (transition)</strong> — 1–2 sessions daily, mostly after physiotherapy or activity.",
+      "<strong>Weeks 4–6 (return-to-activity)</strong> — use as needed for soreness flares.",
+      "<strong>After week 6</strong> — most patients return the rented unit or store the purchased one for future use."
+    ],
+    "closing": "<p>Rental is often economical for the 2–4 weeks of intensive use, while purchase makes sense if you do contact sports, expect future surgeries, or want it on hand for family. Speak with our team for the right fit.</p>"
+  },
+
+  "productsHeading": {
+    "title": "Cold therapy systems",
+    "lead": "Powered cold and compression units used in Indian orthopaedic and sports medicine recovery, dispatched by Osteokart."
+  },
+
+  "whenToSeeDoctor": {
+    "eyebrow": "Safety",
+    "title": "When NOT to use cold therapy",
+    "lead": "Powered cold therapy is safe for most patients, but skip or pause it if any of the following apply — check with your treating doctor:",
+    "items": [
+      "<strong>Open wounds or unhealed incisions</strong> — until your surgeon clears the wound as sealed.",
+      "<strong>Raynaud's phenomenon or cold sensitivity</strong> — cold can trigger a vasospasm.",
+      "<strong>Severe peripheral vascular disease</strong> — reduced circulation makes cold injury more likely.",
+      "<strong>Areas with reduced sensation</strong> — diabetic neuropathy, nerve damage. You can't feel if it's becoming dangerous.",
+      "<strong>Suspected deep vein thrombosis (DVT)</strong> — leg swelling, redness, calf pain. Get medical assessment first.",
+      "<strong>Sickle cell disease or cryoglobulinaemia</strong> — both can be worsened by cold exposure.",
+      "<strong>Children under age 3 without supervision</strong> — temperature regulation is different."
+    ],
+    "note": "If you notice numb skin discoloration (white, blue, or grey patches), severe shivering, or pain that's worse during cold therapy — stop immediately and check with your surgeon. These reactions are uncommon but worth knowing."
+  },
 
   "testimonialsHeading": { "title": "Cold therapy users speak" },
 
@@ -42,29 +103,24 @@
     }
   ],
 
-  "seoContent": {
-    "title": "Cold therapy after surgery — what the evidence says",
-    "intro": "Cold therapy isn't new — but powered cold therapy with compression is fundamentally different from ice packs. Here's why surgeons increasingly prescribe it.",
-    "sections": [
-      { "heading": "Consistent cold vs intermittent ice", "body": "<p>Therapeutic cooling needs to stay in the right temperature range — too cold causes tissue damage, too warm does nothing. Powered units maintain the right range for hours; ice packs warm within 20 minutes, often well before the user notices.</p>" },
-      { "heading": "Compression matters", "body": "<p>Swelling is a major driver of post-op pain and slow recovery. Active compression — pumped cycling pressure — moves swelling out of the surgical area in a way that static wraps cannot.</p>" },
-      { "heading": "When to use cold therapy", "body": "<p>Most useful in the first 5–14 days after surgery, and in acute soft-tissue injury. Less helpful for chronic conditions like OA. Your surgeon will advise on timing.</p>" }
-    ],
-    "disclaimer": "Educational content. Follow your surgeon's protocol for cold therapy duration and frequency."
-  },
-
   "faqHeading": { "title": "Cold therapy FAQs" },
 
   "faq": [
-    { "question": "How long do I use cold therapy each day?", "answer": "Typically 20–30 minute sessions, 3–6 times daily in the first week post-op. Your surgeon will give specific guidance." },
-    { "question": "Can I sleep with the unit on?", "answer": "Some patients do, but most surgeons recommend timed sessions to avoid prolonged cooling. The unit has timers for safety." },
-    { "question": "How long do I need the cold therapy unit for?", "answer": "Most patients use it intensively for 1–2 weeks post-op, with reducing frequency over 4–6 weeks total. Rental can be a sensible option." }
+    { "question": "How long do I use cold therapy each day?", "answer": "Typically 20–30 minute sessions, 3–6 times daily in the first week post-op. Your surgeon will give specific guidance based on the procedure." },
+    { "question": "Can I sleep with the unit on?", "answer": "Some patients do, but most surgeons recommend timed sessions to avoid prolonged cooling. The unit has built-in timers for safety. Overnight use isn't routinely recommended without surgeon approval." },
+    { "question": "How long do I need the cold therapy unit for?", "answer": "Most patients use it intensively for 1–2 weeks post-op, with reducing frequency over 4–6 weeks total. Rental can be a sensible option for this short-term need." },
+    { "question": "Cold therapy vs ice — which is better for an acute injury?", "answer": "For the first 30 minutes, both work similarly. Beyond that, powered cold therapy holds a steadier temperature and provides active compression — both materially help reduce swelling faster. For a single ankle sprain at home, ice is fine. For surgery recovery or anything that needs repeated application over days, powered cold therapy is significantly better." },
+    { "question": "Does cold therapy slow healing?", "answer": "This is a common worry. Current orthopaedic consensus is that controlled, short-duration cold therapy (20–30 min sessions) helps recovery by reducing pain enough to allow earlier movement. Continuous, prolonged cold (multiple hours) could slow some tissue healing — which is why timed sessions are the right approach." },
+    { "question": "Can I use cold therapy for chronic pain like osteoarthritis?", "answer": "Cold therapy is less useful for chronic OA pain, where the underlying issue is wear (not acute inflammation). Most OA patients prefer heat. Cold may still help for acute OA flares with sudden swelling. For OA management, an offloader brace is the more evidence-supported tool." },
+    { "question": "How long after surgery does cold therapy stay useful?", "answer": "Maximum benefit is in the first 1–2 weeks. Useful through weeks 3–4 for post-rehab soreness. After week 6, most patients have weaned off cold therapy in favour of heat (for stiffness) and active rehabilitation." }
   ],
 
   "blog": [],
 
   "brands": [
     { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Polar Care cold therapy" },
+    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
     { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
@@ -73,7 +129,7 @@
     "description": "Talk to our team about whether cold therapy fits your recovery — we'll explain the options and the evidence honestly.",
     "buttons": [
       { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Cold%20therapy%20enquiry", "style": "primary" },
-      { "label": "View Cold Therapy", "href": "https://osteokart.com/category/cold-therapy?utm_source=avana&utm_medium=condition-cta&utm_campaign=cold-therapy", "style": "secondary", "external": true }
+      { "label": "View Cold Therapy", "href": "https://osteokart.com/category/cold-therapy?utm_source=avanasurgical&utm_medium=referral&utm_campaign=cold_therapy_condition&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
