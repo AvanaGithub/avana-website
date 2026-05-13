@@ -1,13 +1,13 @@
 {
   "slug": "recovering-from-surgery",
   "type": "audience",
-  "metaTitle": "Recovering from Surgery? Post-Op Bracing & Cold Therapy | Avana Surgical",
-  "metaDescription": "Doctor-recommended post-surgical bracing, cold therapy and recovery support for knee, shoulder, hip and spine surgery patients. Fitted in India.",
+  "metaTitle": "Post-Surgery Recovery — Bracing & Cold Therapy | Avana",
+  "metaDescription": "Doctor-recommended post-op bracing & cold therapy for knee replacement, shoulder, hip & spine surgery recovery in India. Trusted by orthopaedic surgeons.",
 
   "hero": {
-    "eyebrow": "I'm Recovering From Surgery",
-    "title": "Recover safely. Get back to life faster.",
-    "description": "The first 6–12 weeks after surgery shape your long-term recovery. The right post-op support — bracing, cold therapy, and motion control — can reduce pain, prevent setbacks, and accelerate return to normal life.",
+    "eyebrow": "For Patients Recovering from Surgery",
+    "title": "Recovering from Surgery — Bracing & Cold Therapy",
+    "description": "The first 6–12 weeks after orthopaedic surgery shape how well you'll recover long-term. The right post-op support — bracing, cold therapy, and motion control trusted by Indian orthopaedic surgeons — reduces pain, prevents setbacks, and accelerates your return to normal life.",
     "image": "images/condition/Postsurgery.jpg",
     "imageAlt": "Post-surgical recovery support",
     "ctas": [
@@ -16,20 +16,83 @@
     ]
   },
 
-  "conditionsHeading": {
-    "eyebrow": "Post-op essentials",
-    "title": "What does post-op support look like?",
-    "lead": "Different surgeries need different support — here's how we help."
+  "intro": "<p class=\"lede\">You've had surgery — or you're about to. Either way, the equipment you use in the first 6–12 weeks matters more than most patients realise. A correctly-prescribed brace prevents setbacks that can mean re-operation. <strong>Powered cold therapy</strong> controls the pain and swelling that would otherwise slow you down. <strong>Hinged bracing</strong> lets your surgeon dial in safe motion as you heal. This page explains what good post-op equipment does, what your recovery weeks will look like, and which Avana-distributed solutions Indian orthopaedic surgeons most often prescribe.</p>",
+
+  "whatIs": {
+    "eyebrow": "What to expect",
+    "title": "What does post-surgery recovery actually look like?",
+    "paragraphs": [
+      "<p>Recovery from orthopaedic surgery is a structured 6–12 week process built on <strong>three pillars</strong>:</p>",
+      "<p><strong>1. Pain &amp; swelling control</strong> — powered cold therapy and active compression in the first 1–2 weeks, supplemented by medication. Better pain control means earlier movement, which means better long-term outcomes.</p>",
+      "<p><strong>2. Structural protection</strong> — bracing keeps the surgical repair (graft, fusion, hardware, joint replacement) within safe motion limits while it heals.</p>",
+      "<p><strong>3. Gradual progression</strong> — modern hinged braces let your surgeon control exactly how much your joint moves week by week. As healing advances, the brace allows more motion until you no longer need it.</p>",
+      "<p>Recovery is not linear — there are good days and bad days, and that's normal. What matters is the overall trajectory: less pain week-on-week, more motion, more confident walking. If the trajectory reverses for more than a few days, contact your surgical team.</p>"
+    ]
   },
 
-  "conditions": [
-    { "icon": "❄️", "title": "Pain and swelling control", "description": "Cold therapy with active compression dramatically reduces post-op pain and inflammation — often cutting medication needs." },
-    { "icon": "🔒", "title": "Controlled immobilisation", "description": "Many surgeries — shoulder, hip, knee — need the joint protected from harmful motion while it heals." },
-    { "icon": "📐", "title": "Range-of-motion progression", "description": "Hinged bracing lets your surgeon precisely control how much your joint moves at each stage of recovery." },
-    { "icon": "🚶", "title": "Safe return to walking", "description": "Functional bracing and walkers help you weight-bear safely while bone, ligament, or tendon healing completes." }
-  ],
+  "symptoms": {
+    "eyebrow": "Surgeries we support",
+    "title": "Common orthopaedic surgeries that need post-op equipment",
+    "lead": "Almost every orthopaedic procedure benefits from some combination of bracing and cold therapy. The most common:",
+    "items": [
+      "<strong>Knee surgery</strong> — total knee replacement, partial knee replacement, ACL reconstruction, meniscus repair, patellofemoral procedures.",
+      "<strong>Hip surgery</strong> — total hip replacement, hip arthroscopy, labral repair.",
+      "<strong>Shoulder surgery</strong> — rotator cuff repair, shoulder replacement, dislocation stabilisation, labral repair.",
+      "<strong>Spine surgery</strong> — discectomy, fusion, endoscopic decompression, kyphoplasty.",
+      "<strong>Foot &amp; ankle surgery</strong> — Achilles repair, ankle fracture, fusion, bunion correction.",
+      "<strong>Hand &amp; wrist surgery</strong> — fracture fixation, ligament repair, carpal tunnel release.",
+      "<strong>Sports injury repairs</strong> — combining bracing with cold therapy gives the fastest return-to-activity."
+    ]
+  },
 
-  "productsHeading": { "title": "Recovery solutions trusted by surgeons", "lead": "These products are widely used in Indian operating theatres and post-op clinics — the same support your surgeon may have recommended." },
+  "causes": {
+    "eyebrow": "The recovery timeline",
+    "title": "Your recovery — week by week",
+    "lead": "Exact timelines vary by procedure, but most orthopaedic recoveries follow this rhythm:",
+    "items": [
+      "<strong>Days 1–7 (hospital + early home)</strong> — Pain and swelling are at their peak. Cold therapy 4–6 times daily. Rigid bracing or immobilisation continuous. Pain medication on a schedule.",
+      "<strong>Weeks 2–6 (protected motion)</strong> — Cold therapy weans down to 2–3× daily. Hinged bracing allows limited motion under your surgeon's protocol. Gentle physiotherapy begins. Wound healing should be steady.",
+      "<strong>Weeks 6–12 (active rehab)</strong> — Range of motion expands significantly. Functional bracing during specific activities. Strengthening intensifies. Many patients return to desk work in this window.",
+      "<strong>Months 3–6 (return to activity)</strong> — Most patients resume normal daily life. Sport-specific bracing only for athletes returning to high-impact activities."
+    ]
+  },
+
+  "treatment": {
+    "eyebrow": "The equipment you'll use",
+    "title": "Your recovery essentials",
+    "lead": "Most recoveries use some combination of these. Your surgeon will prescribe which apply to your specific procedure:",
+    "steps": [
+      "<strong>Powered cold therapy unit</strong> — for the first 1–2 weeks. The most evidence-supported tool for reducing post-op pain medication use.",
+      "<strong>Rigid post-op brace</strong> — for the structural protection phase. Knee, shoulder, hip, or spine, depending on procedure.",
+      "<strong>Hinged range-of-motion brace</strong> — for progressive motion as healing advances. Surgeon-set limits.",
+      "<strong>Sling or immobiliser</strong> — for shoulder and upper-limb surgeries. Worn 24/7 in the early phase.",
+      "<strong>Walking boot or CAM walker</strong> — for foot and ankle procedures.",
+      "<strong>Functional brace</strong> — for the return-to-activity phase. Lighter, less restrictive.",
+      "<strong>Compression garment</strong> — sometimes prescribed for ongoing oedema control."
+    ],
+    "closing": "<p>If you're not sure exactly which your surgeon has prescribed, our team can read the prescription and help you get the right product, sized correctly, in time for your surgery date.</p>"
+  },
+
+  "productsHeading": {
+    "title": "Recovery solutions trusted by surgeons",
+    "lead": "Products widely used in Indian operating theatres and post-op clinics — likely the same support your surgeon recommends."
+  },
+
+  "whenToSeeDoctor": {
+    "eyebrow": "Red flags",
+    "title": "When to call your surgeon immediately",
+    "lead": "Most post-op recoveries proceed smoothly. But these signs are not normal — contact your surgical team or A&E right away:",
+    "items": [
+      "<strong>Fever above 38°C (100.4°F)</strong> — possible post-surgical infection.",
+      "<strong>Calf pain, swelling, or redness</strong> in the operated leg — possible deep vein thrombosis (DVT). Same-day call.",
+      "<strong>Sudden shortness of breath or chest pain</strong> — possible pulmonary embolism. Medical emergency — go to A&amp;E.",
+      "<strong>Pus-like or foul-smelling wound drainage</strong> — possible deep infection.",
+      "<strong>Pain that suddenly worsens</strong> well after the early days — not normal at week 3 or 4.",
+      "<strong>Spreading numbness or tingling</strong> — possible nerve compression by the brace or by swelling. Loosen the brace immediately and call.",
+      "<strong>Inability to bear weight</strong> when you previously could — possible fracture or graft failure."
+    ],
+    "note": "Your operating surgeon is the right person for these calls — they know your exact procedure. If you can't reach them, your hospital's emergency line or A&E should be your next step. Avana's clinical team supports the equipment side; we don't replace your surgical follow-up."
+  },
 
   "testimonialsHeading": { "title": "Patients who recovered with our support" },
 
@@ -48,30 +111,24 @@
     }
   ],
 
-  "seoContent": {
-    "title": "The science of good post-op recovery",
-    "intro": "Surgery is one half of getting better. The other half is the recovery plan — and the equipment that supports it.",
-    "sections": [
-      { "heading": "Why post-op pain control matters", "body": "<p>Poorly controlled post-op pain delays mobilisation, increases medication side effects, and is one of the strongest predictors of slow recovery. Cold therapy with active compression has been shown to reduce post-operative pain medication needs and speed return-to-function.</p>" },
-      { "heading": "Bracing protects what your surgeon fixed", "body": "<p>Whether it's an ACL graft, a rotator cuff repair, or a new hip joint, the surgical fix is fragile in the early weeks. A correctly-prescribed brace keeps the joint within safe limits while it heals — avoiding setbacks that can mean re-operation.</p>" },
-      { "heading": "Follow your surgeon's protocol", "body": "<p>Brace type, wear schedule, and motion limits should be guided by your operating surgeon. Our specialists work with your surgeon's instructions, not around them.</p>" }
-    ],
-    "disclaimer": "Educational content. Always follow your surgeon's specific recovery instructions."
-  },
-
   "faqHeading": { "title": "Common recovery questions" },
 
   "faq": [
-    { "question": "How long do I need to wear a post-op brace?", "answer": "It depends entirely on the procedure and your surgeon's protocol. Most post-op braces are worn continuously for 4–6 weeks then weaned over the next 6–12 weeks. Always follow your surgeon's specific instructions." },
-    { "question": "Is cold therapy better than ice packs?", "answer": "For most post-op situations, yes. Powered cold therapy with active compression maintains a more consistent temperature, provides circulating compression that reduces swelling, and doesn't require constant refreshing like ice packs do." },
-    { "question": "Can I shower with my brace on?", "answer": "Most rigid post-op braces should be removed for showering then replaced immediately. Your surgeon will advise based on your specific situation — some early-stage protocols require continuous wear." }
+    { "question": "How long do I need to wear a post-op brace?", "answer": "It depends entirely on the procedure and your surgeon's protocol. Most post-op braces are worn continuously for 4–6 weeks then weaned over the next 6–12 weeks. Always follow your surgeon's specific instructions — early removal can lead to graft failure or hardware loosening." },
+    { "question": "Is cold therapy really better than ice packs?", "answer": "For post-op situations, yes. Powered cold therapy with active compression maintains consistent temperature for hours, provides circulating compression that reduces swelling, and doesn't require constant refreshing like ice packs do. Multiple clinical studies show patients using powered units need less opioid medication." },
+    { "question": "Can I shower with my brace on?", "answer": "Most rigid post-op braces should be removed for showering then replaced immediately. Some early-stage protocols (especially the first 2 weeks after shoulder or knee surgery) require continuous wear — your surgeon will tell you. Cold therapy units should never be submerged; wipe the pad clean instead." },
+    { "question": "When can I drive again?", "answer": "Driving timelines vary: typically 2–4 weeks for left-side knee/hip surgery (with an automatic), 4–6 weeks for right-side (where you brake), sooner for arm or shoulder surgery if your driving foot is unaffected. Critically: you must be completely off opioid medication and have enough strength for emergency braking. Confirm with your surgeon before driving." },
+    { "question": "What sleep position is safe after surgery?", "answer": "Procedure-specific. After knee surgery, sleep on your back with a pillow under the heel (NOT under the knee — that can cause knee stiffness). After hip surgery, sleep on your back with a pillow between your knees for the first 6 weeks. After shoulder surgery, often a recliner is easier than a bed. After spine surgery, lie flat or on the side with a pillow between knees. Confirm with your surgeon." },
+    { "question": "How do I know if I'm healing well?", "answer": "Good signs: pain decreasing week-on-week, swelling reducing, range of motion increasing as your protocol allows, wound healing cleanly without redness or discharge, walking distance gradually improving. Concerning signs trigger the red-flag list above. Most surgeons schedule follow-up at 2 weeks, 6 weeks, and 3 months — these are the right times to raise concerns." },
+    { "question": "What if my surgeon is in another city?", "answer": "Very common in India — many patients travel to a major-city specialist for surgery and recover back home. Avana's clinical team can coordinate equipment delivery, fitting (virtually or via local network), and basic post-op questions. For anything in the red-flag list, your operating surgeon is still the right contact — but your local family doctor or A&E should be the same-day escalation." }
   ],
 
   "blog": [],
 
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Post-op bracing and cold therapy" },
+    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Post-op bracing & cold therapy" },
     { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
+    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
     { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
@@ -80,7 +137,7 @@
     "description": "Talk to our team about what your surgeon has prescribed — we'll help you get the right product, properly fitted, in time for your recovery.",
     "buttons": [
       { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Post-op%20recovery%20enquiry", "style": "primary" },
-      { "label": "Browse Recovery Products", "href": "https://osteokart.com/category/post-surgery?utm_source=avana&utm_medium=audience-cta&utm_campaign=recovering-from-surgery", "style": "secondary", "external": true }
+      { "label": "Browse Recovery Products", "href": "https://osteokart.com/category/post-surgery?utm_source=avanasurgical&utm_medium=referral&utm_campaign=post_surgery_audience&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
