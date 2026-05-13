@@ -4,6 +4,102 @@
    Premium · Minimal · Warm · Clinically trustworthy
    ============================================================ */
 
+/* ----- Prose blocks (intro / what-is / treatment) -----
+   Used by the new condition + audience page sections that render
+   richer long-form copy. Layered on top of the existing
+   pain-section system. */
+.prose-block {
+    max-width: 780px;
+    margin: 0 auto;
+    color: var(--color-text);
+    font-size: 1.02rem;
+    line-height: 1.75;
+}
+.prose-block p { margin: 0 0 16px; }
+.prose-block p:last-child { margin-bottom: 0; }
+.prose-block strong { color: var(--color-primary); font-weight: 600; }
+.prose-block a { color: var(--color-accent); font-weight: 600; text-decoration: none; }
+.prose-block a:hover { text-decoration: underline; }
+.prose-block ol, .prose-block ul {
+    margin: 0 0 18px;
+    padding-left: 22px;
+}
+.prose-block ol li, .prose-block ul li {
+    margin-bottom: 8px;
+}
+.prose-block ol li strong, .prose-block ul li strong { color: var(--color-primary); }
+.prose-block .lede {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--color-text);
+}
+.prose-block .lede strong { color: var(--color-accent); }
+.prose-block__link-out {
+    display: inline-block;
+    margin-top: 8px;
+    font-style: italic;
+    color: var(--color-muted);
+    font-size: 0.92rem;
+}
+.prose-block__link-out a { font-style: normal; }
+
+/* ----- Bulleted point lists (symptoms / causes / when-to-see-doctor) -----
+   Card-style container with rounded checkmark bullets. One consistent
+   visual treatment whether the items are positive guidance or warnings —
+   keeps the page uniform. */
+.point-list {
+    max-width: 780px;
+    margin: 0 auto;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 28px 36px;
+    list-style: none;
+}
+.point-list li {
+    padding: 12px 0 12px 30px;
+    position: relative;
+    border-bottom: 1px solid #f1f1eb;
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+.point-list li:last-child { border-bottom: 0; }
+.point-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--color-accent-soft);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B18C57' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.point-list li strong { color: var(--color-primary); }
+
+/* Note shown below a point-list (e.g. "Bracing supports back pain management..."). */
+.when-to-see-doctor-note {
+    max-width: 780px;
+    margin: 18px auto 0;
+    padding: 16px 20px;
+    background-color: rgba(36, 52, 71, 0.04);
+    border-left: 3px solid var(--color-primary);
+    border-radius: 0 6px 6px 0;
+    font-size: 0.94rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+    .prose-block,
+    .point-list,
+    .when-to-see-doctor-note { padding-left: 4vw; padding-right: 4vw; }
+    .point-list { padding: 20px 22px 20px 28px; }
+}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {

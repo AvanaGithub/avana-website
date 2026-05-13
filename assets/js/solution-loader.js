@@ -169,6 +169,15 @@
     /* ----------------------------------------------------------
        6. RENDERERS — keyed by data-render attribute
        ---------------------------------------------------------- */
+
+    // Hide the parent <section data-section="…"> when a renderer has no
+    // data. Used by every optional section so pages that don't carry
+    // the new fields render exactly as before (no empty headers).
+    function hideParentSection(mount) {
+        const section = mount.closest('[data-section]');
+        if (section) section.style.display = 'none';
+    }
+
     const renderers = {
         'hero.ctas': (mount, data) => {
             const ctas = data.hero?.ctas || [];
@@ -183,6 +192,7 @@
 
         'conditions': (mount, data) => {
             const items = data.conditions || [];
+            if (!items.length) { hideParentSection(mount); return; }
             mount.innerHTML = items.map(c => `
                 <article class="condition-card">
                     <div class="condition-card__icon">${escapeHtml(c.icon || '+')}</div>
@@ -190,6 +200,65 @@
                     <p class="condition-card__description">${escapeHtml(c.description)}</p>
                 </article>
             `).join('');
+        },
+
+        // ---- New section renderers (intro / whatIs / symptoms / causes / treatment / whenToSeeDoctor) ----
+
+        // Single rich-HTML block (typically a <p class="lede">…</p>).
+        // Strings only — sanitised, so <strong> + <a> survive but <script> is stripped.
+        'intro': (mount, data) => {
+            const html = typeof data.intro === 'string' ? data.intro : (data.intro && data.intro.html);
+            if (!html || !String(html).trim()) { hideParentSection(mount); return; }
+            mount.innerHTML = sanitizeRichHtml(html);
+        },
+
+        // Long-form "What is X" — array of paragraph strings.
+        'whatIs': (mount, data) => {
+            const w = data.whatIs;
+            const paragraphs = (w && Array.isArray(w.paragraphs)) ? w.paragraphs : [];
+            if (!paragraphs.length) { hideParentSection(mount); return; }
+            mount.innerHTML = paragraphs.map(p => sanitizeRichHtml(p)).join('\n');
+        },
+
+        // Symptoms / Causes — both render a card-style <ul class="point-list">.
+        // Items are HTML strings (so they can include <strong>); sanitised.
+        'symptoms': (mount, data) => {
+            const items = (data.symptoms && Array.isArray(data.symptoms.items)) ? data.symptoms.items : [];
+            if (!items.length) { hideParentSection(mount); return; }
+            mount.innerHTML = items.map(item => `<li>${sanitizeRichHtml(item)}</li>`).join('');
+        },
+
+        'causes': (mount, data) => {
+            const items = (data.causes && Array.isArray(data.causes.items)) ? data.causes.items : [];
+            if (!items.length) { hideParentSection(mount); return; }
+            mount.innerHTML = items.map(item => `<li>${sanitizeRichHtml(item)}</li>`).join('');
+        },
+
+        // Treatment options — numbered ordered list, optionally followed by a closing paragraph.
+        'treatment': (mount, data) => {
+            const t = data.treatment;
+            const steps = (t && Array.isArray(t.steps)) ? t.steps : [];
+            if (!steps.length) { hideParentSection(mount); return; }
+            let html = '<ol>' + steps.map(s => `<li>${sanitizeRichHtml(s)}</li>`).join('') + '</ol>';
+            if (t.closing) html += sanitizeRichHtml(t.closing);
+            mount.innerHTML = html;
+        },
+
+        // Red-flag list — same checkmark icon as symptoms / causes for visual
+        // consistency. (We could use a warning glyph but it tested poorly.)
+        // Optional .note element below the list is bound separately via data-bind
+        // and hidden here when empty so we don't leave a styled empty block.
+        'whenToSeeDoctor': (mount, data) => {
+            const w = data.whenToSeeDoctor;
+            const items = (w && Array.isArray(w.items)) ? w.items : [];
+            if (!items.length) { hideParentSection(mount); return; }
+            mount.innerHTML = items.map(item => `<li>${sanitizeRichHtml(item)}</li>`).join('');
+            // Hide the note element if no note text on this page.
+            const section = mount.closest('[data-section]');
+            if (section) {
+                const noteEl = section.querySelector('.when-to-see-doctor-note');
+                if (noteEl && !w.note) noteEl.style.display = 'none';
+            }
         },
 
         // Products are resolved from the global catalog, not from data.products.

@@ -48,6 +48,26 @@
             </div>
         </section>
 
+        <!-- 1b. INTRO (NEW) — rendered if data.intro is present.
+             Hidden entirely when the field is missing, keeping the section
+             optional for pages that haven't migrated to the new template. -->
+        <section class="pain-section pain-section--cream" data-section="intro">
+            <div class="container">
+                <div class="prose-block" data-render="intro"></div>
+            </div>
+        </section>
+
+        <!-- 1c. WHAT IS X (NEW) — long-form definition / overview block -->
+        <section class="pain-section pain-section--white" data-section="whatIs">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="whatIs.eyebrow"></span>
+                    <h2 class="pain-section__title" data-bind="whatIs.title"></h2>
+                </header>
+                <div class="prose-block" data-render="whatIs"></div>
+            </div>
+        </section>
+
         <!-- 2. CONDITIONS / "WHAT KIND OF X" -->
         <section class="pain-section pain-section--white" data-section="conditions">
             <div class="container">
@@ -57,6 +77,42 @@
                     <p class="pain-section__lead" data-bind="conditionsHeading.lead"></p>
                 </header>
                 <div class="conditions-grid" data-render="conditions"></div>
+            </div>
+        </section>
+
+        <!-- 2b. SYMPTOMS (NEW) — bulleted point-list with checkmark icons -->
+        <section class="pain-section pain-section--cream" data-section="symptoms">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="symptoms.eyebrow"></span>
+                    <h2 class="pain-section__title" data-bind="symptoms.title"></h2>
+                    <p class="pain-section__lead" data-bind="symptoms.lead"></p>
+                </header>
+                <ul class="point-list" data-render="symptoms"></ul>
+            </div>
+        </section>
+
+        <!-- 2c. CAUSES (NEW) — same shape, India-specific risk-factor list -->
+        <section class="pain-section pain-section--white" data-section="causes">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="causes.eyebrow"></span>
+                    <h2 class="pain-section__title" data-bind="causes.title"></h2>
+                    <p class="pain-section__lead" data-bind="causes.lead"></p>
+                </header>
+                <ul class="point-list" data-render="causes"></ul>
+            </div>
+        </section>
+
+        <!-- 2d. TREATMENT OPTIONS (NEW) — numbered conservative-first ladder -->
+        <section class="pain-section pain-section--cream" data-section="treatment">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="treatment.eyebrow"></span>
+                    <h2 class="pain-section__title" data-bind="treatment.title"></h2>
+                    <p class="pain-section__lead" data-bind="treatment.lead"></p>
+                </header>
+                <div class="prose-block" data-render="treatment"></div>
             </div>
         </section>
 
@@ -70,6 +126,22 @@
                 </header>
                 <div class="product-grid" data-render="products"></div>
                 <p class="product-disclaimer">All products are sold and fulfilled by <a href="https://osteokart.com" target="_blank" rel="noopener">Osteokart.com</a> — Avana's authorised retail partner.</p>
+            </div>
+        </section>
+
+        <!-- 3b. WHEN TO SEE A DOCTOR (NEW) — red-flag list using the same
+             checkmark icon as symptoms / causes for visual consistency,
+             plus an optional reassurance note. Critical E-E-A-T signal for
+             medical content. -->
+        <section class="pain-section pain-section--cream" data-section="whenToSeeDoctor">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow" data-bind="whenToSeeDoctor.eyebrow"></span>
+                    <h2 class="pain-section__title" data-bind="whenToSeeDoctor.title"></h2>
+                    <p class="pain-section__lead" data-bind="whenToSeeDoctor.lead"></p>
+                </header>
+                <ul class="point-list" data-render="whenToSeeDoctor"></ul>
+                <div class="when-to-see-doctor-note" data-bind="whenToSeeDoctor.note"></div>
             </div>
         </section>
 
