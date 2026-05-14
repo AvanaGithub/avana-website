@@ -300,36 +300,56 @@
         `;
     }
 
-    // Wire every .training-card__photo button in `mount` so it opens
-    // the shared #lightbox starting at the clicked photo.
-    function bindLightboxTriggers(mount) {
+    // Module-level lightbox state so both training cards and the photo
+    // carousel can call openLightbox(photos, idx) with their own list.
+    let _lightboxPhotos = [];
+    let _lightboxIdx = 0;
+    let _lightboxWired = false;
+
+    function openLightbox(photos, idx) {
+        const lb = document.getElementById('lightbox');
+        if (!lb || !photos || !photos.length) return;
+        _lightboxPhotos = photos;
+        wireLightboxOnce();
+        showLightboxAt(idx || 0);
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function showLightboxAt(idx) {
         const lb = document.getElementById('lightbox');
         if (!lb) return;
-        const imgEl = lb.querySelector('#lightbox-img');
-        const counterEl = lb.querySelector('#lightbox-counter');
-        const closeBtn = lb.querySelector('#lightbox-close');
-        const prevBtn = lb.querySelector('#lightbox-prev');
-        const nextBtn = lb.querySelector('#lightbox-next');
+        _lightboxIdx = (idx + _lightboxPhotos.length) % _lightboxPhotos.length;
+        lb.querySelector('#lightbox-img').src = _lightboxPhotos[_lightboxIdx];
+        lb.querySelector('#lightbox-counter').textContent = `${_lightboxIdx + 1} / ${_lightboxPhotos.length}`;
+    }
+    function closeLightbox() {
+        const lb = document.getElementById('lightbox');
+        if (!lb) return;
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    function wireLightboxOnce() {
+        if (_lightboxWired) return;
+        const lb = document.getElementById('lightbox');
+        if (!lb) return;
+        lb.querySelector('#lightbox-close').addEventListener('click', closeLightbox);
+        lb.querySelector('#lightbox-prev').addEventListener('click', () => showLightboxAt(_lightboxIdx - 1));
+        lb.querySelector('#lightbox-next').addEventListener('click', () => showLightboxAt(_lightboxIdx + 1));
+        lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+        document.addEventListener('keydown', e => {
+            if (!lb.classList.contains('open')) return;
+            if (e.key === 'Escape') closeLightbox();
+            else if (e.key === 'ArrowLeft') showLightboxAt(_lightboxIdx - 1);
+            else if (e.key === 'ArrowRight') showLightboxAt(_lightboxIdx + 1);
+        });
+        _lightboxWired = true;
+    }
 
-        let currentPhotos = [];
-        let currentIdx = 0;
-
-        function show(idx) {
-            currentIdx = (idx + currentPhotos.length) % currentPhotos.length;
-            imgEl.src = currentPhotos[currentIdx];
-            counterEl.textContent = `${currentIdx + 1} / ${currentPhotos.length}`;
-        }
-        function open(photos, idx) {
-            currentPhotos = photos;
-            show(idx);
-            lb.classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-        function close() {
-            lb.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
+    // Each .training-card__photo thumb opens the shared module-level
+    // lightbox with that card's own photo list, starting at the clicked
+    // index. All cross-cutting wiring (close, prev/next, keyboard) is
+    // done once globally by wireLightboxOnce().
+    function bindLightboxTriggers(mount) {
         mount.querySelectorAll('.training-card').forEach(card => {
             const dataEl = card.querySelector('.training-card__photo-data');
             if (!dataEl) return;
@@ -337,25 +357,9 @@
             try { info = JSON.parse(dataEl.textContent); }
             catch { return; }
             card.querySelectorAll('.training-card__photo').forEach((btn, i) => {
-                btn.addEventListener('click', () => open(info.photos, i));
+                btn.addEventListener('click', () => openLightbox(info.photos, i));
             });
         });
-
-        // These wire once per page load — guard so we don't double-bind
-        // if the renderer runs twice for any reason.
-        if (!lb.dataset.wired) {
-            closeBtn.addEventListener('click', close);
-            prevBtn.addEventListener('click', () => show(currentIdx - 1));
-            nextBtn.addEventListener('click', () => show(currentIdx + 1));
-            lb.addEventListener('click', e => { if (e.target === lb) close(); });
-            document.addEventListener('keydown', e => {
-                if (!lb.classList.contains('open')) return;
-                if (e.key === 'Escape') close();
-                else if (e.key === 'ArrowLeft') show(currentIdx - 1);
-                else if (e.key === 'ArrowRight') show(currentIdx + 1);
-            });
-            lb.dataset.wired = '1';
-        }
     }
 
     // Tiny attr-escape — alias to escapeHtml for safety inside attribute values.
@@ -449,6 +453,10 @@
         // Long descriptions are clamped to a fixed line count for uniform card
         // heights, with a Read more toggle that expands in-place.
         'products': (mount, data, ctx) => {
+            // Page-level opt-out: pages can set "hideProducts": true in their
+            // JSON to suppress the catalogue strip entirely (currently used by
+            // the surgeon page, which is about training rather than products).
+            if (data.hideProducts) { hideParentSection(mount); return; }
             const items = ctx.products || [];
             if (!items.length) {
                 mount.innerHTML = `<p class="product-grid__empty">No matching products yet — please check back soon or <a href="mailto:info@avanasurgical.com">talk to a specialist</a>.</p>`;
@@ -508,6 +516,71 @@
                     }
                 });
             });
+        },
+
+        // ===== PHOTO CAROUSEL (Surgeon page) =====
+        // Horizontal auto-advancing strip; click any image to open the
+        // full-size shared lightbox. No captions per user direction —
+        // images speak for themselves.
+        'photoCarousel': (mount, data) => {
+            const pc = data.photoCarousel;
+            const images = pc && Array.isArray(pc.images) ? pc.images : [];
+            if (!images.length) { hideParentSection(mount); return; }
+
+            // Each slide is a clickable thumb that opens the lightbox at
+            // the matching index. onerror=hide so any missing file just
+            // vanishes (same forgiving pattern as the training-card photos).
+            const slides = images.map((src, i) =>
+                `<button type="button" class="photo-carousel__slide" data-idx="${i}" aria-label="Open photo ${i + 1}">
+                    <img src="${escapeHtml(src)}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">
+                </button>`
+            ).join('');
+
+            mount.innerHTML = `
+                <button type="button" class="photo-carousel__nav photo-carousel__nav--prev" aria-label="Previous photo">‹</button>
+                <div class="photo-carousel__track" data-carousel-track>${slides}</div>
+                <button type="button" class="photo-carousel__nav photo-carousel__nav--next" aria-label="Next photo">›</button>
+            `;
+
+            // Click any image → lightbox
+            mount.querySelectorAll('.photo-carousel__slide').forEach(btn => {
+                btn.addEventListener('click', () => openLightbox(images, parseInt(btn.dataset.idx, 10)));
+            });
+
+            // Manual prev/next scroll one card width at a time
+            const track = mount.querySelector('[data-carousel-track]');
+            const prev = mount.querySelector('.photo-carousel__nav--prev');
+            const next = mount.querySelector('.photo-carousel__nav--next');
+            function step(dir) {
+                const card = track.querySelector('.photo-carousel__slide');
+                if (!card) return;
+                const w = card.getBoundingClientRect().width + 12;
+                track.scrollBy({ left: dir * w * 2, behavior: 'smooth' });
+            }
+            prev.addEventListener('click', () => step(-1));
+            next.addEventListener('click', () => step(1));
+
+            // Auto-advance every 4s; pause on hover or when off-screen
+            let timer = null;
+            function start() {
+                stop();
+                timer = setInterval(() => {
+                    const maxScroll = track.scrollWidth - track.clientWidth;
+                    if (track.scrollLeft >= maxScroll - 4) {
+                        track.scrollTo({ left: 0, behavior: 'smooth' });
+                    } else {
+                        step(1);
+                    }
+                }, 4000);
+            }
+            function stop() { if (timer) { clearInterval(timer); timer = null; } }
+            mount.addEventListener('mouseenter', stop);
+            mount.addEventListener('mouseleave', start);
+            // Pause when the section scrolls off screen
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(en => en.isIntersecting ? start() : stop());
+            }, { threshold: 0.2 });
+            io.observe(mount);
         },
 
         // ===== TRAINING PROGRAMS =====

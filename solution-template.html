@@ -145,6 +145,15 @@
             </div>
         </section>
 
+        <!-- 3b1. PHOTO CAROUSEL (Surgeon page) — auto-hides if the page
+             JSON has no photoCarousel.images[]. No section header, the
+             carousel speaks for itself (per user direction). -->
+        <section class="pain-section pain-section--cream" data-section="photoCarousel" style="padding: 32px 0;">
+            <div class="container">
+                <div class="photo-carousel" data-render="photoCarousel"></div>
+            </div>
+        </section>
+
         <!-- 3c. UPCOMING TRAINING PROGRAMS (Surgeon page) — auto-hides if
              training-programs.json has no programs with date >= today. -->
         <section class="pain-section pain-section--white" data-section="upcomingPrograms">

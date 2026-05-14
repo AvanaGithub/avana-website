@@ -1,64 +1,82 @@
 {
   "slug": "surgeon",
   "type": "audience",
-  "metaTitle": "For Orthopaedic Surgeons | Avana Surgical Systems",
-  "metaDescription": "Premium bracing, cold therapy, and surgical systems for Indian orthopaedic surgeons. Trusted brands, fitting support, and patient education resources.",
+  "metaTitle": "Surgeon Training & Education | Avana Surgical",
+  "metaDescription": "Cadaver workshops, hands-on training and CME programs for Indian orthopaedic and spine surgeons. Avana partners with leading hospitals to advance Full Endoscopic Spine Surgery education.",
+
+  "hideProducts": true,
 
   "hero": {
-    "eyebrow": "For Orthopaedic Surgeons",
-    "title": "Equipment your patients deserve. Support you can rely on.",
-    "description": "Avana partners with Indian orthopaedic and spine surgeons to provide clinically-proven bracing, cold therapy, and surgical systems — backed by training, fitting support, and pan-India patient logistics.",
+    "eyebrow": "Surgeon Training & Education",
+    "title": "Fostering expertise and skill — Avana's pledge to medical professionals' growth.",
+    "description": "Education is a lifelong journey. Avana's medical education programmes give surgeons the latest techniques in Full Endoscopic Spine Surgery, hands-on cadaver and bone model practice, and a network of colleagues across India. Find the workshop that's right for you below.",
     "image": "images/condition/Postsurgery.jpg",
-    "imageAlt": "Surgical team using Avana systems",
+    "imageAlt": "Avana training programme — surgeon hands-on workshop",
     "ctas": [
-      { "label": "Partner With Us", "href": "#cta", "style": "primary" },
-      { "label": "View Solutions", "href": "#products", "style": "outline" }
+      { "label": "See Upcoming Programmes", "href": "#section-upcomingPrograms", "style": "primary" },
+      { "label": "Talk to Us", "href": "#cta", "style": "outline" }
+    ]
+  },
+
+  "photoCarousel": {
+    "images": [
+      "images/training/training-1.jpeg",
+      "images/training/training-2.jpeg",
+      "images/training/training-3.jpeg",
+      "images/training/training-4.jpeg",
+      "images/training/training-5.jpeg",
+      "images/training/training-6.jpeg",
+      "images/training/training-7.jpeg",
+      "images/training/training-8.jpeg",
+      "images/training/training-9.jpeg",
+      "images/training/training-10.jpeg",
+      "images/training/training-11.jpeg",
+      "images/training/training-12.jpeg",
+      "images/training/training-13.jpeg",
+      "images/training/training-14.jpeg"
     ]
   },
 
   "conditionsHeading": {
-    "eyebrow": "How we work with you",
-    "title": "What Avana offers your practice",
-    "lead": "We support Indian surgeons end-to-end — from product training to patient delivery."
+    "eyebrow": "Courses & Workshops",
+    "title": "Training designed around your practice",
+    "lead": "From hands-on surgical workshops and cadaver labs to symposia and CME lectures — we run programmes at every stage of a surgeon's career, with an emphasis on Full Endoscopic Spine Surgery and minimally invasive techniques."
   },
 
   "conditions": [
-    { "icon": "🎓", "title": "Surgeon training & CME", "description": "Workshops, cadaver labs, and continuing medical education on the latest bracing and minimally invasive systems." },
-    { "icon": "🤝", "title": "Patient fitting support", "description": "Our clinical team handles complex fittings — particularly for scoliosis, post-op rigid bracing, and spinal orthoses." },
-    { "icon": "🚚", "title": "Pan-India patient logistics", "description": "When you prescribe, your patient gets the product. Osteokart dispatches across India in 3–5 business days." },
-    { "icon": "🔬", "title": "Premium global brands", "description": "Exclusive access to Breg, Aspen Medical, RiwoSpine, and Spinamic — the same equipment leading global centres use." }
+    { "icon": "🦴", "title": "Cadaver Workshops", "description": "Multi-station cadaver labs at AIIMS, MS Ramaiah, Symbiosis and other leading centres. Practise techniques on tissue under faculty guidance." },
+    { "icon": "🧠", "title": "Bone Model Training", "description": "Hands-on bone model stations with camera systems — ideal for residents, fellows, and early-career spine surgeons building procedure confidence." },
+    { "icon": "🔬", "title": "Live Surgery Demonstrations", "description": "Observe full-endoscopic spine procedures performed live by senior faculty, with intra-operative commentary and case discussion." },
+    { "icon": "💻", "title": "Webinars & KOL Series", "description": "Online lectures from key opinion leaders — \"KOL to Young Surgeon\" series and patient-education webinars. Free to register, accessible across India." }
   ],
 
-  "productsHeading": { "title": "Featured surgical solutions", "lead": "A selection of the systems most commonly used by our surgeon partners. Full catalogue available on Osteokart." },
-
-  "testimonialsHeading": { "title": "What surgeons say" },
+  "testimonialsHeading": { "title": "What participating surgeons say" },
 
   "testimonials": [
     {
       "name": "Dr. (anonymised)",
       "location": "Chennai",
-      "product": "Spinamic",
-      "testimonial": "Spinamic has given us a meaningful non-surgical option for adolescent scoliosis patients in the Indian context — and the fitting support from the Avana team is excellent."
+      "product": "Avana Cadaver Workshop",
+      "testimonial": "The combination of hands-on cadaver time with senior-faculty mentorship is something I haven't found in many other Indian programmes. The Avana team handles logistics end-to-end so we just turn up and learn."
+    },
+    {
+      "name": "Dr. (anonymised)",
+      "location": "Bangalore",
+      "product": "Bone Model Training",
+      "testimonial": "Excellent setup — multiple stations with camera systems, structured progression through cases. My residents took away meaningful confidence after just two days."
     }
   ],
 
-  "seoContent": {
-    "title": "Why surgeons partner with Avana",
-    "intro": "We focus on three things: premium products, technical support, and reliable patient logistics — so you can focus on patient care.",
-    "sections": [
-      { "heading": "Premium global brands, India-ready", "body": "<p>We bring world-class brands to Indian operating theatres and clinics with India-appropriate pricing, sizing, and after-sales support. No more guesswork on availability or replacements.</p>" },
-      { "heading": "Training that fits your schedule", "body": "<p>From product orientation sessions at your clinic to hands-on workshops and CME events, our medical team works around your practice. Tell us what your team needs.</p>" },
-      { "heading": "Logistics that don't fall on you", "body": "<p>Once you've prescribed, the rest is on us. Osteokart dispatches across India, our specialists handle fittings, and our clinical team supports your patient through their recovery.</p>" }
-    ],
-    "disclaimer": ""
-  },
-
-  "faqHeading": { "title": "Partner FAQs" },
+  "faqHeading": { "title": "Training programme FAQs" },
 
   "faq": [
-    { "question": "How does Avana support fitting in remote cities?", "answer": "Most of our bracing is fittable by our specialists via virtual consultation combined with at-home measurement guidance. For complex cases (scoliosis, rigid post-op braces), our team travels for in-person fittings in tier-2 and tier-3 cities." },
-    { "question": "Do you offer surgeon training events?", "answer": "Yes — we run workshops, cadaver labs, and CME events across India in partnership with our brand principals. Get in touch about upcoming events in your city." },
-    { "question": "How do I refer a patient?", "answer": "Send them to Osteokart.com with your prescription, or contact our clinical team directly via info@avanasurgical.com and we will coordinate the fitting." }
+    { "question": "Who can attend Avana training programmes?", "answer": "Our programmes are designed for practising orthopaedic surgeons, spine surgeons, neurosurgeons, and senior residents/fellows. Cadaver workshops typically have a minimum experience level set by the host faculty — check the specific event listing." },
+    { "question": "Is there a fee to attend?", "answer": "Most Avana-run workshops and webinars are free for invited surgeons. Conference-hosted programmes (ASSICON, KOACON, GESS, etc.) follow the host society's registration model — contact us and we'll connect you to the right organiser." },
+    { "question": "How do I register for an upcoming programme?", "answer": "Click \"Register / Enquire\" on any upcoming programme card below, or email info@avanasurgical.com with your name, hospital, and the programme you're interested in. Our team will confirm a slot and share venue details." },
+    { "question": "Can our hospital host an Avana training session?", "answer": "Yes — we partner with medical colleges and hospitals across India to host bone-model and cadaver workshops. We bring the systems, faculty support, and equipment; you provide the venue and the resident cohort. Email us to discuss." },
+    { "question": "Do you offer Continuing Medical Education (CME) credits?", "answer": "Some Avana programmes are CME-accredited via the host institution or society. Where applicable, the specific event listing will note the credit hours. Webinars are typically informational; in-person conference sessions often carry credits." },
+    { "question": "What's the focus of your Full Endoscopic Spine Surgery training?", "answer": "Avana's flagship programmes cover the full curriculum: anatomy and approach, decompression techniques, fusion, and post-op management. We use RiwoSpine systems and follow the protocols of leading international centres, adapted for the Indian operating environment." },
+    { "question": "Can I observe a live surgery?", "answer": "Several of our programmes include live-surgery viewing days at the host hospital. These have limited slots — register early. Online streamed live surgeries are also part of the KOL-to-Young-Surgeon webinar series." }
   ],
 
   "blog": [],
@@ -71,12 +89,12 @@
   ],
 
   "cta": {
-    "title": "Partner with Avana.",
-    "description": "Tell us about your practice — we'll arrange a product walkthrough and discuss how we can support your patients.",
+    "title": "Don't wait — register for the next programme.",
+    "description": "Avana's training calendar covers cadaver labs, bone model workshops, live surgeries, conferences and online webinars across India. Whatever stage of your career, there's a course for you.",
     "buttons": [
-      { "label": "Schedule a Walkthrough", "href": "mailto:info@avanasurgical.com?subject=Surgeon%20partnership%20enquiry", "style": "primary" },
-      { "label": "View Full Catalogue", "href": "https://osteokart.com?utm_source=avana&utm_medium=audience-cta&utm_campaign=surgeon", "style": "secondary", "external": true }
+      { "label": "Register / Enquire", "href": "mailto:info@avanasurgical.com?subject=Surgeon%20training%20programme%20enquiry", "style": "primary" },
+      { "label": "Host an Avana Workshop", "href": "mailto:info@avanasurgical.com?subject=Hosting%20an%20Avana%20training%20workshop", "style": "secondary" }
     ],
-    "disclaimer": "Avana works with practising orthopaedic and spine surgeons across India."
+    "disclaimer": "Avana partners with leading hospitals and medical societies across India to deliver Full Endoscopic Spine Surgery education and orthopaedic training."
   }
 }
