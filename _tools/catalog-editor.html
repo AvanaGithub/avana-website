@@ -230,21 +230,131 @@
         background: rgba(36, 52, 71, 0.08); padding: 1px 5px; border-radius: 3px;
         font-family: 'SF Mono', Consolas, monospace; font-size: 0.85em;
     }
+
+    /* ===== Tabs ===== */
+    .tabs {
+        background: var(--primary);
+        padding: 0 24px;
+        display: flex;
+        gap: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .tab-btn {
+        background: transparent;
+        color: rgba(255, 255, 255, 0.7);
+        border: 0;
+        padding: 12px 20px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-bottom: 3px solid transparent;
+        margin-bottom: -1px;
+        transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-btn:hover { color: #fff; }
+    .tab-btn.active {
+        color: #fff;
+        border-bottom-color: var(--accent);
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ===== Training tab specific ===== */
+    .training-list { padding: 0 24px 100px; }
+    .training-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(36, 52, 71, 0.05);
+        margin-top: 14px;
+    }
+    .training-table thead th {
+        background: #fafaf8;
+        text-align: left;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 700;
+        color: var(--muted);
+        padding: 12px 14px;
+        border-bottom: 1px solid var(--border);
+    }
+    .training-table tbody td {
+        padding: 12px 14px;
+        border-bottom: 1px solid #f1f1eb;
+        font-size: 0.88rem;
+        vertical-align: top;
+    }
+    .training-table tbody tr:hover { background: #fafaf6; }
+    .training-table .col-status {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.72rem;
+        padding: 3px 10px;
+        border-radius: 100px;
+        display: inline-block;
+    }
+    .training-table .status-upcoming { background: rgba(45, 143, 78, 0.12); color: var(--ok); }
+    .training-table .status-past { background: rgba(177, 140, 87, 0.15); color: var(--accent); }
+    .training-table .training-actions button {
+        background: none; border: 0; padding: 0;
+        color: var(--accent); font: inherit; font-size: 0.78rem;
+        cursor: pointer; text-decoration: underline;
+        text-underline-offset: 2px; margin-right: 8px;
+    }
+    .training-table .training-actions button.delete { color: var(--danger); }
+    .training-activity-chip {
+        display: inline-block;
+        background: rgba(36, 52, 71, 0.08);
+        color: var(--primary);
+        padding: 2px 8px;
+        border-radius: 100px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        margin: 0 4px 4px 0;
+    }
+    .modal--training .modal { max-width: 640px; }
+    .modal--training .activity-multi {
+        display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px;
+    }
+    .modal--training .activity-multi label {
+        display: inline-flex; align-items: center; gap: 6px;
+        background: var(--bg); padding: 6px 10px; border-radius: 6px;
+        font-size: 0.78rem; font-weight: 600; cursor: pointer; margin: 0;
+    }
+    .modal--training .activity-multi label input { margin: 0; }
+    .modal--training .grid-2 {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px;
+    }
 </style>
 </head>
 <body>
 
 <header class="topbar">
-    <h1>Avana Catalogue Editor <small>local only · not on public site</small></h1>
+    <h1>Avana Admin <small>local only · not on public site</small></h1>
     <span id="dirty-badge" class="badge-unsaved">● Unsaved changes</span>
     <div class="spacer"></div>
-    <button class="btn btn--ghost" id="btn-add">+ Add product</button>
+    <button class="btn btn--ghost" id="btn-add">+ Add</button>
     <button class="btn btn--ghost" id="btn-reset">↻ Reset</button>
-    <button class="btn" id="btn-download">↓ Download products.json</button>
+    <button class="btn" id="btn-download">↓ Download</button>
 </header>
 
+<!-- Tab nav. Each tab manages its own JSON file. -->
+<nav class="tabs" role="tablist">
+    <button class="tab-btn active" data-tab="products" role="tab" aria-selected="true">Products</button>
+    <button class="tab-btn" data-tab="training" role="tab" aria-selected="false">Training Programs</button>
+</nav>
+
+<!-- ===== PRODUCTS TAB (existing tool) ===== -->
+<div class="tab-panel active" data-tab-panel="products">
+
 <div class="help-note">
-    Tick or untick a checkbox to add/remove a product from a category. Click <strong>↓ Download products.json</strong>, then drop the downloaded file into <code>C:\avana_website\data\products.json</code>, then commit &amp; push.
+    Tick or untick a checkbox to add/remove a product from a category. Click <strong>↓ Download</strong>, then drop the downloaded file into <code>C:\avana_website\data\products.json</code>, then commit &amp; push.
 </div>
 
 <section class="coverage" id="coverage">
@@ -278,28 +388,127 @@
     </table>
 </div>
 
-<!-- Add / Edit product modal -->
+</div><!-- /products tab-panel -->
+
+<!-- ===== TRAINING TAB (new) ===== -->
+<div class="tab-panel" data-tab-panel="training">
+
+<div class="help-note">
+    Manage past + upcoming surgeon training programs. Past/upcoming is decided automatically by the date you set (no manual flag). After adding photos to <code>images/training/{slug}/</code> as <code>01.jpg, 02.jpg…</code>, set <strong>Photo count</strong> below. Click <strong>↓ Download</strong>, then drop the file into <code>C:\avana_website\data\training-programs.json</code>, then commit &amp; push.
+</div>
+
+<section class="coverage" id="training-coverage">
+    <div class="coverage__group">
+        <h3>Programs</h3>
+        <div class="coverage__list" id="training-counts"></div>
+    </div>
+</section>
+
+<section class="filterbar">
+    <input type="search" id="training-search" placeholder="Search by program name, doctor, place…">
+    <select id="training-filter-status">
+        <option value="">All programs</option>
+        <option value="upcoming">Upcoming only</option>
+        <option value="past">Past only</option>
+    </select>
+    <select id="training-filter-activity">
+        <option value="">All activities</option>
+    </select>
+    <span id="training-row-count" style="color: var(--muted); font-size: 0.82rem;"></span>
+</section>
+
+<div class="training-list">
+    <div id="training-state" class="state">Loading training programs…</div>
+    <table class="training-table" id="training-table" hidden>
+        <thead><tr>
+            <th>Date</th>
+            <th>Status</th>
+            <th>Program</th>
+            <th>Doctors / Place</th>
+            <th>Activities</th>
+            <th>Photos</th>
+            <th></th>
+        </tr></thead>
+        <tbody id="training-tbody"></tbody>
+    </table>
+</div>
+
+</div><!-- /training tab-panel -->
+
+<!-- Add / Edit modal — shared across both tabs; fields are shown/hidden
+     by JS depending on which tab opened it. -->
 <div class="modal-backdrop" id="modal-backdrop">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
         <h2 id="modal-title">Add new product</h2>
-        <label>Slug (kebab-case, unique)
-            <input type="text" id="m-slug" placeholder="breg-new-product">
-        </label>
-        <label>Name
-            <input type="text" id="m-name" placeholder="Product display name">
-        </label>
-        <label>Brand
-            <input type="text" id="m-brand" placeholder="Breg / Aspen / ...">
-        </label>
-        <label>Short description
-            <textarea id="m-desc" placeholder="1–2 sentence description shown on the card."></textarea>
-        </label>
-        <label>Image path
-            <input type="text" id="m-image" placeholder="images/products/your-slug.jpg">
-        </label>
-        <label>Osteokart URL
-            <input type="text" id="m-link" placeholder="https://osteokart.com/products/...">
-        </label>
+
+        <!-- ===== Product fields ===== -->
+        <div data-modal-fields="products">
+            <label>Slug (kebab-case, unique)
+                <input type="text" id="m-slug" placeholder="breg-new-product">
+            </label>
+            <label>Name
+                <input type="text" id="m-name" placeholder="Product display name">
+            </label>
+            <label>Brand
+                <input type="text" id="m-brand" placeholder="Breg / Aspen / ...">
+            </label>
+            <label>Short description
+                <textarea id="m-desc" placeholder="1–2 sentence description shown on the card."></textarea>
+            </label>
+            <label>Image path
+                <input type="text" id="m-image" placeholder="images/products/your-slug.jpg">
+            </label>
+            <label>Osteokart URL
+                <input type="text" id="m-link" placeholder="https://osteokart.com/products/...">
+            </label>
+        </div>
+
+        <!-- ===== Training program fields ===== -->
+        <div data-modal-fields="training" hidden>
+            <label>Slug (kebab-case, also the photo-folder name)
+                <input type="text" id="tm-slug" placeholder="2026-04-knee-cadaver-chennai">
+            </label>
+            <label>Program name
+                <input type="text" id="tm-name" placeholder="Advanced Knee Reconstruction Cadaver Workshop">
+            </label>
+            <div class="grid-2">
+                <label>Date (start)
+                    <input type="date" id="tm-date">
+                </label>
+                <label>End date (optional)
+                    <input type="date" id="tm-end-date">
+                </label>
+            </div>
+            <label>Doctors (one per line)
+                <textarea id="tm-doctors" placeholder="Dr. Ramesh Iyer&#10;Dr. Priya Menon"></textarea>
+            </label>
+            <div class="grid-2">
+                <label>Place (City, State)
+                    <input type="text" id="tm-place" placeholder="Chennai, Tamil Nadu">
+                </label>
+                <label>Venue (optional)
+                    <input type="text" id="tm-venue" placeholder="MIOT Skills Centre">
+                </label>
+            </div>
+            <label>Activities
+                <div class="activity-multi" id="tm-activities"></div>
+            </label>
+            <label>Description
+                <textarea id="tm-desc" placeholder="1–2 sentences about what the program covers."></textarea>
+            </label>
+            <label>Highlights (one per line, optional — best for past programs)
+                <textarea id="tm-highlights" placeholder="Hands-on cadaver demonstrations&#10;International faculty Q&amp;A"></textarea>
+            </label>
+            <div class="grid-2">
+                <label>Photo count (in images/training/{slug}/)
+                    <input type="number" id="tm-photo-count" min="0" step="1" placeholder="0">
+                </label>
+                <label>Registration URL (optional)
+                    <input type="text" id="tm-reg-url" placeholder="https://… or leave blank for mailto fallback">
+                </label>
+            </div>
+        </div>
+
         <div class="modal__actions">
             <button class="btn btn--ghost" id="m-cancel">Cancel</button>
             <button class="btn" id="m-save">Save</button>
@@ -654,10 +863,56 @@ window.addEventListener('beforeunload', (e) => {
     }
 });
 
-document.getElementById('btn-download').addEventListener('click', downloadJson);
-document.getElementById('btn-reset').addEventListener('click', resetAll);
-document.getElementById('btn-add').addEventListener('click', () => openModal(null));
-document.getElementById('m-save').addEventListener('click', saveModal);
+// =====================================================================
+// TAB DISPATCH + TRAINING-PROGRAMS CRUD
+// The topbar's Add / Reset / Download buttons act on whichever tab is
+// active. Each tab keeps its own state and dirty flag. The same modal
+// is reused with different field-sets shown per tab.
+// =====================================================================
+
+let activeTab = 'products';
+
+// Per-tab handler registry. Products handlers point to the existing
+// product functions; Training handlers are defined further down.
+const tabHandlers = {
+    products: {
+        add: () => openModal(null),
+        reset: resetAll,
+        download: downloadJson,
+        labelAdd: '+ Add product',
+        labelDownload: '↓ Download products.json'
+    }
+    // training: filled in below once trainingAdd / trainingReset / trainingDownload exist
+};
+
+function switchTab(tab) {
+    if (!tabHandlers[tab]) return;
+    activeTab = tab;
+    document.querySelectorAll('.tab-btn').forEach(btn =>
+        btn.classList.toggle('active', btn.dataset.tab === tab));
+    document.querySelectorAll('.tab-panel').forEach(p =>
+        p.classList.toggle('active', p.dataset.tabPanel === tab));
+    // Update topbar button labels for the active context
+    document.getElementById('btn-add').textContent = tabHandlers[tab].labelAdd;
+    document.getElementById('btn-download').textContent = tabHandlers[tab].labelDownload;
+    // Show the right dirty badge state for this tab
+    updateDirty();
+}
+
+document.querySelectorAll('.tab-btn').forEach(btn =>
+    btn.addEventListener('click', () => switchTab(btn.dataset.tab))
+);
+
+// ===== Re-route the action buttons through the active tab =====
+document.getElementById('btn-add').addEventListener('click', () => tabHandlers[activeTab].add());
+document.getElementById('btn-reset').addEventListener('click', () => tabHandlers[activeTab].reset());
+document.getElementById('btn-download').addEventListener('click', () => tabHandlers[activeTab].download());
+
+// Save/Cancel in the modal also dispatch by tab
+document.getElementById('m-save').addEventListener('click', () => {
+    if (activeTab === 'training') saveTrainingModal();
+    else saveModal();
+});
 document.getElementById('m-cancel').addEventListener('click', closeModal);
 document.getElementById('modal-backdrop').addEventListener('click', (e) => {
     if (e.target === e.currentTarget) closeModal();
@@ -666,14 +921,310 @@ document.getElementById('modal-backdrop').addEventListener('click', (e) => {
     document.getElementById(id).addEventListener('input', applyFilters)
 );
 
-// Keyboard: Esc closes the modal
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && document.getElementById('modal-backdrop').classList.contains('show')) {
         closeModal();
     }
 });
 
+
+// =====================================================================
+// TRAINING-PROGRAMS — state, CRUD, render, download
+// =====================================================================
+
+let trainingOriginalJson = null;
+let trainingData = null;        // { _schema, controlledVocab, programs[] }
+let trainingDirty = false;
+let trainingEditingIdx = null;
+
+const TRAINING_FIELD_ORDER = [
+    'slug', 'name', 'date', 'endDate', 'doctors',
+    'place', 'venue', 'activities', 'description', 'highlights',
+    'photoCount', 'photoFolder', 'registrationUrl'
+];
+
+async function loadTraining() {
+    try {
+        const res = await fetch('../data/training-programs.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        trainingOriginalJson = text;
+        trainingData = JSON.parse(text);
+        if (!Array.isArray(trainingData.programs)) trainingData.programs = [];
+        renderTrainingAll();
+    } catch (err) {
+        document.getElementById('training-state').innerHTML =
+            '<p><strong>Could not load <code>../data/training-programs.json</code>.</strong></p>' +
+            '<p>' + escapeHtml(err.message) + '</p>';
+    }
+}
+
+function renderTrainingAll() {
+    document.getElementById('training-state').hidden = true;
+    document.getElementById('training-table').hidden = false;
+    populateActivityFilter();
+    renderTrainingBody();
+    renderTrainingCounts();
+    applyTrainingFilters();
+}
+
+function populateActivityFilter() {
+    const sel = document.getElementById('training-filter-activity');
+    const vocab = (trainingData.controlledVocab && trainingData.controlledVocab.activities) || [];
+    const placeholder = sel.querySelector('option').outerHTML;
+    sel.innerHTML = placeholder + vocab.map(a =>
+        `<option value="${escapeAttr(a.slug)}">${escapeHtml(a.label)}</option>`).join('');
+}
+
+function today() {
+    const d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+}
+
+function programStatus(p) { return (p.date && p.date < today()) ? 'past' : 'upcoming'; }
+
+function renderTrainingBody() {
+    const tbody = document.getElementById('training-tbody');
+    const vocab = (trainingData.controlledVocab && trainingData.controlledVocab.activities) || [];
+    const labelFor = slug => (vocab.find(v => v.slug === slug) || { label: slug }).label;
+
+    const sorted = [...trainingData.programs].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+
+    tbody.innerHTML = sorted.map(p => {
+        const realIdx = trainingData.programs.indexOf(p);
+        const status = programStatus(p);
+        const acts = (p.activities || []).map(s =>
+            `<span class="training-activity-chip">${escapeHtml(labelFor(s))}</span>`).join('');
+        const doctors = (p.doctors || []).join(', ');
+        return `<tr data-idx="${realIdx}" data-name="${escapeAttr(p.name || '')}" data-doctors="${escapeAttr(doctors)}" data-place="${escapeAttr(p.place || '')}" data-slug="${escapeAttr(p.slug || '')}" data-status="${status}" data-activities="${escapeAttr((p.activities || []).join('|'))}">
+            <td style="white-space:nowrap;font-weight:600;">${escapeHtml(p.date || '')}${p.endDate && p.endDate !== p.date ? '<br><small style="color:var(--muted);font-weight:400;">→ ' + escapeHtml(p.endDate) + '</small>' : ''}</td>
+            <td><span class="col-status status-${status}">${status}</span></td>
+            <td><strong>${escapeHtml(p.name || '(unnamed)')}</strong><br><small style="color:var(--muted);">${escapeHtml(p.slug || '')}</small></td>
+            <td>${escapeHtml(doctors)}<br><small style="color:var(--muted);">${escapeHtml(p.place || '')}${p.venue ? ' · ' + escapeHtml(p.venue) : ''}</small></td>
+            <td>${acts || '<small style="color:var(--muted);">—</small>'}</td>
+            <td style="text-align:center;">${p.photoCount || 0}</td>
+            <td class="training-actions" style="white-space:nowrap;">
+                <button data-action="edit" data-idx="${realIdx}">Edit</button>
+                <button class="delete" data-action="delete" data-idx="${realIdx}">Delete</button>
+            </td>
+        </tr>`;
+    }).join('');
+
+    tbody.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.addEventListener('click', onTrainingAction);
+    });
+}
+
+function renderTrainingCounts() {
+    const counts = trainingData.programs.reduce((acc, p) => {
+        const s = programStatus(p);
+        acc[s] = (acc[s] || 0) + 1;
+        return acc;
+    }, {});
+    const wrap = document.getElementById('training-counts');
+    wrap.innerHTML = `
+        <span class="pill"><span class="pill__count">${counts.upcoming || 0}</span> upcoming</span>
+        <span class="pill"><span class="pill__count">${counts.past || 0}</span> past</span>
+        <span class="pill"><span class="pill__count">${trainingData.programs.length}</span> total</span>
+    `;
+}
+
+function applyTrainingFilters() {
+    const q = document.getElementById('training-search').value.trim().toLowerCase();
+    const status = document.getElementById('training-filter-status').value;
+    const activity = document.getElementById('training-filter-activity').value;
+    let visible = 0;
+    document.querySelectorAll('#training-tbody tr').forEach(tr => {
+        const text = `${tr.dataset.name} ${tr.dataset.doctors} ${tr.dataset.place} ${tr.dataset.slug}`.toLowerCase();
+        const matchesSearch = !q || text.includes(q);
+        const matchesStatus = !status || tr.dataset.status === status;
+        const matchesActivity = !activity || tr.dataset.activities.split('|').includes(activity);
+        const show = matchesSearch && matchesStatus && matchesActivity;
+        tr.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('training-row-count').textContent =
+        `Showing ${visible} of ${trainingData.programs.length} programs`;
+}
+
+function onTrainingAction(e) {
+    const btn = e.currentTarget;
+    const idx = parseInt(btn.dataset.idx, 10);
+    if (btn.dataset.action === 'delete') {
+        const p = trainingData.programs[idx];
+        if (confirm(`Delete "${p.name}" from training programs?\n\nThe photo files in images/training/${p.slug}/ are not deleted.`)) {
+            trainingData.programs.splice(idx, 1);
+            markTrainingDirty();
+            renderTrainingBody();
+            renderTrainingCounts();
+            applyTrainingFilters();
+            toast('Program removed (download to save)');
+        }
+    } else if (btn.dataset.action === 'edit') {
+        openTrainingModal(idx);
+    }
+}
+
+function openTrainingModal(idx) {
+    trainingEditingIdx = idx;
+    const p = idx == null ? {} : trainingData.programs[idx];
+    document.getElementById('modal-title').textContent = idx == null ? 'Add training program' : 'Edit training program';
+
+    // Toggle which field-set is visible
+    document.querySelector('[data-modal-fields="products"]').hidden = true;
+    document.querySelector('[data-modal-fields="training"]').hidden = false;
+    document.getElementById('modal-backdrop').classList.add('modal--training');
+
+    // Populate
+    document.getElementById('tm-slug').value = p.slug || '';
+    document.getElementById('tm-name').value = p.name || '';
+    document.getElementById('tm-date').value = p.date || '';
+    document.getElementById('tm-end-date').value = p.endDate || '';
+    document.getElementById('tm-doctors').value = (p.doctors || []).join('\n');
+    document.getElementById('tm-place').value = p.place || '';
+    document.getElementById('tm-venue').value = p.venue || '';
+    document.getElementById('tm-desc').value = p.description || '';
+    document.getElementById('tm-highlights').value = (p.highlights || []).join('\n');
+    document.getElementById('tm-photo-count').value = p.photoCount != null ? p.photoCount : '';
+    document.getElementById('tm-reg-url').value = p.registrationUrl || '';
+
+    // Activity checkboxes
+    const wrap = document.getElementById('tm-activities');
+    const vocab = (trainingData.controlledVocab && trainingData.controlledVocab.activities) || [];
+    const selected = new Set(p.activities || []);
+    wrap.innerHTML = vocab.map(a =>
+        `<label><input type="checkbox" value="${escapeAttr(a.slug)}"${selected.has(a.slug) ? ' checked' : ''}> ${escapeHtml(a.label)}</label>`
+    ).join('');
+
+    document.getElementById('modal-backdrop').classList.add('show');
+    document.getElementById('tm-slug').focus();
+}
+
+function saveTrainingModal() {
+    const slug = document.getElementById('tm-slug').value.trim();
+    const name = document.getElementById('tm-name').value.trim();
+    const date = document.getElementById('tm-date').value.trim();
+    if (!slug || !name || !date) { toast('Slug, name and date are required', true); return; }
+    if (!/^[a-z0-9-]+$/.test(slug)) { toast('Slug must be lowercase kebab-case', true); return; }
+    const dupIdx = trainingData.programs.findIndex(p => p.slug === slug);
+    if (dupIdx !== -1 && dupIdx !== trainingEditingIdx) { toast('A program with this slug already exists', true); return; }
+
+    const activities = Array.from(document.querySelectorAll('#tm-activities input:checked')).map(c => c.value);
+    const doctors = document.getElementById('tm-doctors').value.split('\n').map(s => s.trim()).filter(Boolean);
+    const highlights = document.getElementById('tm-highlights').value.split('\n').map(s => s.trim()).filter(Boolean);
+    const photoCount = parseInt(document.getElementById('tm-photo-count').value, 10);
+    const regUrl = document.getElementById('tm-reg-url').value.trim();
+    const endDate = document.getElementById('tm-end-date').value.trim();
+
+    const entry = {
+        slug, name, date,
+        doctors,
+        place: document.getElementById('tm-place').value.trim(),
+        venue: document.getElementById('tm-venue').value.trim() || undefined,
+        activities,
+        description: document.getElementById('tm-desc').value.trim(),
+        photoCount: isNaN(photoCount) ? 0 : photoCount,
+        photoFolder: `images/training/${slug}/`
+    };
+    if (endDate) entry.endDate = endDate;
+    if (highlights.length) entry.highlights = highlights;
+    if (regUrl) entry.registrationUrl = regUrl;
+    // Strip undefined for clean JSON
+    Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
+
+    if (trainingEditingIdx == null) {
+        trainingData.programs.push(entry);
+    } else {
+        trainingData.programs[trainingEditingIdx] = entry;
+    }
+    markTrainingDirty();
+    closeModal();
+    renderTrainingBody();
+    renderTrainingCounts();
+    applyTrainingFilters();
+    toast(trainingEditingIdx == null ? 'Program added (download to save)' : 'Program updated');
+}
+
+function trainingAdd() { openTrainingModal(null); }
+
+function trainingReset() {
+    if (trainingDirty && !confirm('Discard unsaved training changes?')) return;
+    trainingData = JSON.parse(trainingOriginalJson);
+    trainingDirty = false;
+    renderTrainingBody();
+    renderTrainingCounts();
+    applyTrainingFilters();
+    updateDirty();
+    toast('Reset to last loaded state');
+}
+
+function trainingDownload() {
+    const out = {
+        _schema: trainingData._schema,
+        controlledVocab: trainingData.controlledVocab,
+        programs: trainingData.programs.map(p => {
+            const ordered = {};
+            TRAINING_FIELD_ORDER.forEach(field => {
+                if (p[field] !== undefined) ordered[field] = p[field];
+            });
+            Object.keys(p).forEach(k => { if (!(k in ordered)) ordered[k] = p[k]; });
+            return ordered;
+        })
+    };
+    const text = JSON.stringify(out, null, 2) + '\n';
+    const blob = new Blob([text], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = 'training-programs.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+    trainingOriginalJson = text;
+    trainingDirty = false;
+    updateDirty();
+    toast('Downloaded — replace data/training-programs.json then commit & push');
+}
+
+function markTrainingDirty() {
+    trainingDirty = true;
+    updateDirty();
+}
+
+// Extend the existing dirty-badge logic to reflect the active tab
+const originalUpdateDirty = updateDirty;
+updateDirty = function () {
+    const isDirty = activeTab === 'training' ? trainingDirty : dirty;
+    document.getElementById('dirty-badge').classList.toggle('show', isDirty);
+};
+
+// Register Training handlers in the dispatch registry
+tabHandlers.training = {
+    add: trainingAdd,
+    reset: trainingReset,
+    download: trainingDownload,
+    labelAdd: '+ Add program',
+    labelDownload: '↓ Download training-programs.json'
+};
+
+// Hook up search/filter inputs for the training tab
+['training-search', 'training-filter-status', 'training-filter-activity'].forEach(id =>
+    document.getElementById(id).addEventListener('input', applyTrainingFilters)
+);
+
+// Make sure closeModal also restores the product field-set, so the
+// next product Add doesn't accidentally show training fields.
+const originalCloseModal = closeModal;
+closeModal = function () {
+    originalCloseModal();
+    document.querySelector('[data-modal-fields="products"]').hidden = false;
+    const tf = document.querySelector('[data-modal-fields="training"]');
+    if (tf) tf.hidden = true;
+    document.getElementById('modal-backdrop').classList.remove('modal--training');
+    trainingEditingIdx = null;
+};
+
+// Kick off loads — products first, training second.
 load();
+loadTraining();
 </script>
 </body>
 </html>

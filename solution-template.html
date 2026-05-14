@@ -145,6 +145,33 @@
             </div>
         </section>
 
+        <!-- 3c. UPCOMING TRAINING PROGRAMS (Surgeon page) — auto-hides if
+             training-programs.json has no programs with date >= today. -->
+        <section class="pain-section pain-section--white" data-section="upcomingPrograms">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow">Coming up</span>
+                    <h2 class="pain-section__title">Upcoming Training Programs</h2>
+                    <p class="pain-section__lead">Cadaver labs, live surgeries, workshops and CMEs you can register for.</p>
+                </header>
+                <div class="training-grid" data-render="upcomingPrograms"></div>
+            </div>
+        </section>
+
+        <!-- 3d. PAST TRAINING PROGRAMS (Surgeon page) — auto-hides if
+             training-programs.json has no programs with date < today.
+             Each card shows a photo grid that opens the shared lightbox. -->
+        <section class="pain-section pain-section--cream" data-section="pastPrograms">
+            <div class="container">
+                <header class="pain-section__head">
+                    <span class="pain-section__eyebrow">Past programs</span>
+                    <h2 class="pain-section__title">Training Programs We've Delivered</h2>
+                    <p class="pain-section__lead">A selection of Avana training sessions held across India.</p>
+                </header>
+                <div class="training-grid" data-render="pastPrograms"></div>
+            </div>
+        </section>
+
         <!-- 4. TESTIMONIALS -->
         <section class="pain-section pain-section--white" data-section="testimonials">
             <div class="container">
@@ -227,6 +254,17 @@
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
+
+    <!-- Shared lightbox for training-program photo galleries.
+         Hidden by default; solution-loader.js opens it when a photo
+         thumbnail is clicked and wires the prev/next/close handlers. -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Close gallery">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <img class="lightbox__img" id="lightbox-img" alt="">
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox__counter" id="lightbox-counter"></div>
+    </div>
 
     <script src="assets/js/include-partials.js" defer></script>
     <script src="assets/js/header-behavior.js" defer></script>

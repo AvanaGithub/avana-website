@@ -1,0 +1,62 @@
+{
+  "_schema": {
+    "description": "All Avana training programs — past and upcoming combined. The site computes 'past' vs 'upcoming' at render time by comparing program.date to today (no status flag to flip). To add a program: append to programs[]; drop photos into images/training/{slug}/ named 01.jpg, 02.jpg, …; set photoCount; commit. The catalogue editor (_tools/catalog-editor.html → Training tab) handles all of this without hand-editing JSON.",
+    "fields": {
+      "slug": "kebab-case identifier; ALSO the photo folder name under images/training/",
+      "name": "Public-facing program title",
+      "date": "ISO date YYYY-MM-DD. If date <  today → renders as Past. If date >= today → renders as Upcoming.",
+      "endDate": "Optional ISO date for multi-day programs",
+      "doctors": "Array of strings — faculty / faculty teams",
+      "place": "City, State (e.g. 'Chennai, Tamil Nadu')",
+      "venue": "Optional — specific hospital / centre",
+      "activities": "Array of activity slugs from controlledVocab.activities below",
+      "description": "1–2 sentence summary",
+      "highlights": "Optional array of 2–4 bullet points (best for past programs)",
+      "photoCount": "Number of photos in images/training/{slug}/ named 01.jpg … NN.jpg. Page renders all with onerror=hide so any missing numbers vanish.",
+      "photoFolder": "Auto-set to images/training/{slug}/ — kept here so loader doesn't have to compose it",
+      "registrationUrl": "Optional — for upcoming programs only. If omitted, the page falls back to a mailto: link."
+    }
+  },
+  "controlledVocab": {
+    "activities": [
+      { "slug": "live-surgery",     "label": "Live Surgery" },
+      { "slug": "cadaver-lab",      "label": "Cadaver Lab" },
+      { "slug": "workshop",         "label": "Workshop" },
+      { "slug": "lecture",          "label": "Lecture" },
+      { "slug": "cme",              "label": "CME" },
+      { "slug": "product-training", "label": "Product Training" }
+    ]
+  },
+  "programs": [
+    {
+      "slug": "2026-04-knee-cadaver-chennai-sample",
+      "name": "Sample · Advanced Knee Reconstruction Cadaver Workshop",
+      "date": "2026-04-15",
+      "endDate": "2026-04-16",
+      "doctors": ["Dr. Sample One", "Dr. Sample Two"],
+      "place": "Chennai, Tamil Nadu",
+      "venue": "Skills Centre (sample)",
+      "activities": ["cadaver-lab", "workshop"],
+      "description": "This is a placeholder sample so the Surgeon page renders Past + Upcoming sections immediately. Delete this entry once real programs are added via the admin.",
+      "highlights": [
+        "Hands-on cadaver demonstrations",
+        "Faculty-led case discussions",
+        "Live brace fitting workshop"
+      ],
+      "photoCount": 0,
+      "photoFolder": "images/training/2026-04-knee-cadaver-chennai-sample/"
+    },
+    {
+      "slug": "2026-09-spine-endoscopy-bangalore-sample",
+      "name": "Sample · Endoscopic Spine Surgery Hands-On",
+      "date": "2026-09-12",
+      "doctors": ["Dr. Sample Three"],
+      "place": "Bangalore, Karnataka",
+      "activities": ["live-surgery", "workshop"],
+      "description": "Placeholder upcoming program — full-day endoscopic spine surgery workshop with RiwoSpine systems. Replace via the admin.",
+      "photoCount": 0,
+      "photoFolder": "images/training/2026-09-spine-endoscopy-bangalore-sample/",
+      "registrationUrl": "mailto:info@avanasurgical.com?subject=Sample%20program%20registration"
+    }
+  ]
+}

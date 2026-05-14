@@ -1,0 +1,13 @@
+# Training programs photo folders live here.
+#
+# Convention: each program in data/training-programs.json has a `slug`.
+# Create a folder with that exact name and drop photos as 01.jpg, 02.jpg, …
+#
+# Example for slug "2026-04-knee-cadaver-chennai":
+#   images/training/2026-04-knee-cadaver-chennai/01.jpg
+#   images/training/2026-04-knee-cadaver-chennai/02.jpg
+#   …
+#
+# Then in the admin (_tools/catalog-editor.html → Training tab → Edit),
+# set Photo count = NN. The page automatically renders 01-NN.jpg with
+# onerror=hide so any missing numbers vanish silently.

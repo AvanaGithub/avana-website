@@ -48,6 +48,21 @@ The editor lives in `_tools/` — that underscore prefix means GitHub Pages' def
 
 > **Tip — adding new images** still requires dropping the image file into `images/products/`. The editor only manages metadata. Image filename should match the slug.
 
+### Managing training programs (Training tab)
+
+The same editor now has a **Training Programs** tab for the Surgeon page. Workflow:
+
+1. Switch to the **Training Programs** tab in the editor.
+2. Click **+ Add program** — fill in slug (kebab-case, e.g. `2026-04-knee-cadaver-chennai`), name, date, faculty (one doctor per line), place, venue, activity checkboxes, description, optional highlights, optional registration URL.
+3. Save the program.
+4. **Drop your photos** into `images/training/{slug}/` and rename them `01.jpg, 02.jpg, …, NN.jpg`.
+5. Click **Edit** on the program and set **Photo count** to N.
+6. Click **↓ Download training-programs.json** — replace `data/training-programs.json` with the downloaded file. Commit & push.
+
+A program's date determines whether it appears under **Upcoming** (date ≥ today) or **Past** (date < today). When tomorrow arrives, an upcoming program automatically moves to past — no manual flag flip.
+
+> **Tip — photo numbering** is forgiving. If `photoCount = 8` but you've only uploaded `01.jpg` through `05.jpg`, the missing 3 vanish silently on the live page (no broken-image icons). Convenient when prepping a card while photos are still being processed.
+
 ---
 
 ## 3. Adding a new product by hand-editing JSON

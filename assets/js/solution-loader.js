@@ -192,6 +192,175 @@
         if (section) section.style.display = 'none';
     }
 
+    // ===== TRAINING PROGRAM HELPERS =====
+
+    // ISO date for "today" — used to split programs into past/upcoming.
+    function todayIso() {
+        const d = new Date();
+        return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    }
+
+    // "2026-04-15" → "15 Apr 2026"
+    function formatProgramDate(iso) {
+        if (!iso) return '';
+        const m = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const parts = iso.split('-');
+        if (parts.length !== 3) return iso;
+        return `${parseInt(parts[2], 10)} ${m[parseInt(parts[1], 10) - 1]} ${parts[0]}`;
+    }
+
+    // Build the date string shown on the card (handles multi-day ranges)
+    function formatProgramDateRange(p) {
+        const start = formatProgramDate(p.date);
+        if (!p.endDate || p.endDate === p.date) return start;
+        return `${start} → ${formatProgramDate(p.endDate)}`;
+    }
+
+    // Look up an activity label from its slug using the controlled vocab.
+    function activityLabel(slug, vocab) {
+        const match = (vocab || []).find(v => v.slug === slug);
+        return match ? match.label : slug;
+    }
+
+    // Build the array of photo paths for a program. Generates
+    // {folder}/01.jpg … NN.jpg based on photoCount. The live page
+    // renders each <img> with onerror=hide so any number that's
+    // missing on disk silently disappears.
+    function programPhotoPaths(p) {
+        const count = parseInt(p.photoCount, 10) || 0;
+        if (count <= 0 || !p.photoFolder) return [];
+        const folder = p.photoFolder.replace(/\/$/, '');
+        const paths = [];
+        for (let i = 1; i <= count; i++) {
+            paths.push(`${folder}/${String(i).padStart(2, '0')}.jpg`);
+        }
+        return paths;
+    }
+
+    // Render one program card as an HTML string. isPast=true shows the
+    // photo grid; isPast=false shows the registration CTA.
+    function renderProgramCard(p, vocab, isPast) {
+        const dateStr = formatProgramDateRange(p);
+        const doctors = (p.doctors || []).join(', ');
+        const acts = (p.activities || []).map(slug =>
+            `<span class="training-card__activity">${escapeHtml(activityLabel(slug, vocab))}</span>`
+        ).join('');
+        const photos = programPhotoPaths(p);
+
+        // Photo grid: show up to 3 thumbnails; if there are more, the
+        // 3rd gets a "+N" overlay. All thumbnails open the lightbox.
+        let photoGrid = '';
+        if (isPast && photos.length) {
+            const showCount = Math.min(photos.length, 3);
+            const extra = photos.length - showCount;
+            photoGrid = `<div class="training-card__photos" data-program-slug="${escapeAttr(p.slug)}">`;
+            for (let i = 0; i < showCount; i++) {
+                const isLastWithMore = (i === showCount - 1) && extra > 0;
+                photoGrid += `<button type="button" class="training-card__photo${isLastWithMore ? ' training-card__photo--more' : ''}"${isLastWithMore ? ` data-extra="${extra}"` : ''} data-photo-idx="${i}" aria-label="Open photo ${i + 1}">`;
+                photoGrid += `<img src="${escapeHtml(photos[i])}" alt="${escapeHtml(p.name)} photo ${i + 1}" loading="lazy" onerror="this.parentElement.style.display='none'">`;
+                photoGrid += `</button>`;
+            }
+            photoGrid += `</div>`;
+        }
+
+        // CTA button: past programs link to mailto for enquiries; upcoming
+        // get the registrationUrl if present, mailto fallback otherwise.
+        let cta;
+        if (isPast) {
+            cta = `<a href="mailto:info@avanasurgical.com?subject=${encodeURIComponent('Enquiry: ' + p.name)}" class="training-card__cta">Ask about this programme</a>`;
+        } else {
+            const regUrl = p.registrationUrl || `mailto:info@avanasurgical.com?subject=${encodeURIComponent('Registration: ' + p.name)}`;
+            cta = `<a href="${escapeHtml(regUrl)}" class="training-card__cta"${/^https?:/i.test(regUrl) ? ' target="_blank" rel="noopener"' : ''}>Register / Enquire</a>`;
+        }
+
+        // Hidden full-photo list embedded in the card so the lightbox
+        // can read it cleanly without re-fetching anything.
+        const photoData = photos.length
+            ? `<script type="application/json" class="training-card__photo-data">${JSON.stringify({ slug: p.slug, name: p.name, photos })}</script>`
+            : '';
+
+        return `
+            <article class="training-card" data-program-slug="${escapeAttr(p.slug)}">
+                <div class="training-card__date">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    ${escapeHtml(dateStr)}
+                </div>
+                <h3 class="training-card__title">${escapeHtml(p.name)}</h3>
+                <div class="training-card__meta">
+                    ${doctors ? `<div class="training-card__meta-row"><span class="training-card__meta-label">Faculty</span><span>${escapeHtml(doctors)}</span></div>` : ''}
+                    ${p.place ? `<div class="training-card__meta-row"><span class="training-card__meta-label">Where</span><span>${escapeHtml(p.place)}${p.venue ? ' · ' + escapeHtml(p.venue) : ''}</span></div>` : ''}
+                </div>
+                ${acts ? `<div class="training-card__activities">${acts}</div>` : ''}
+                ${p.description ? `<p class="training-card__description">${escapeHtml(p.description)}</p>` : ''}
+                ${isPast && Array.isArray(p.highlights) && p.highlights.length ? `<ul class="training-card__highlights">${p.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}</ul>` : ''}
+                ${photoGrid}
+                ${cta}
+                ${photoData}
+            </article>
+        `;
+    }
+
+    // Wire every .training-card__photo button in `mount` so it opens
+    // the shared #lightbox starting at the clicked photo.
+    function bindLightboxTriggers(mount) {
+        const lb = document.getElementById('lightbox');
+        if (!lb) return;
+        const imgEl = lb.querySelector('#lightbox-img');
+        const counterEl = lb.querySelector('#lightbox-counter');
+        const closeBtn = lb.querySelector('#lightbox-close');
+        const prevBtn = lb.querySelector('#lightbox-prev');
+        const nextBtn = lb.querySelector('#lightbox-next');
+
+        let currentPhotos = [];
+        let currentIdx = 0;
+
+        function show(idx) {
+            currentIdx = (idx + currentPhotos.length) % currentPhotos.length;
+            imgEl.src = currentPhotos[currentIdx];
+            counterEl.textContent = `${currentIdx + 1} / ${currentPhotos.length}`;
+        }
+        function open(photos, idx) {
+            currentPhotos = photos;
+            show(idx);
+            lb.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function close() {
+            lb.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        mount.querySelectorAll('.training-card').forEach(card => {
+            const dataEl = card.querySelector('.training-card__photo-data');
+            if (!dataEl) return;
+            let info;
+            try { info = JSON.parse(dataEl.textContent); }
+            catch { return; }
+            card.querySelectorAll('.training-card__photo').forEach((btn, i) => {
+                btn.addEventListener('click', () => open(info.photos, i));
+            });
+        });
+
+        // These wire once per page load — guard so we don't double-bind
+        // if the renderer runs twice for any reason.
+        if (!lb.dataset.wired) {
+            closeBtn.addEventListener('click', close);
+            prevBtn.addEventListener('click', () => show(currentIdx - 1));
+            nextBtn.addEventListener('click', () => show(currentIdx + 1));
+            lb.addEventListener('click', e => { if (e.target === lb) close(); });
+            document.addEventListener('keydown', e => {
+                if (!lb.classList.contains('open')) return;
+                if (e.key === 'Escape') close();
+                else if (e.key === 'ArrowLeft') show(currentIdx - 1);
+                else if (e.key === 'ArrowRight') show(currentIdx + 1);
+            });
+            lb.dataset.wired = '1';
+        }
+    }
+
+    // Tiny attr-escape — alias to escapeHtml for safety inside attribute values.
+    function escapeAttr(s) { return escapeHtml(s); }
+
     const renderers = {
         'hero.ctas': (mount, data) => {
             const ctas = data.hero?.ctas || [];
@@ -339,6 +508,34 @@
                     }
                 });
             });
+        },
+
+        // ===== TRAINING PROGRAMS =====
+        // Both renderers split ctx.trainingPrograms by today's date and
+        // render their respective half. If the page isn't the surgeon
+        // page, ctx.trainingPrograms is empty so both sections hide.
+        'upcomingPrograms': (mount, data, ctx) => {
+            const all = (ctx && ctx.trainingPrograms) || [];
+            const today = todayIso();
+            const upcoming = all
+                .filter(p => p.date >= today)
+                .sort((a, b) => a.date.localeCompare(b.date)); // earliest first
+            if (!upcoming.length) { hideParentSection(mount); return; }
+            const vocab = (data._activityVocab) || [];
+            mount.innerHTML = upcoming.map(p => renderProgramCard(p, vocab, /* isPast */ false)).join('');
+        },
+
+        'pastPrograms': (mount, data, ctx) => {
+            const all = (ctx && ctx.trainingPrograms) || [];
+            const today = todayIso();
+            const past = all
+                .filter(p => p.date < today)
+                .sort((a, b) => b.date.localeCompare(a.date)); // newest first
+            if (!past.length) { hideParentSection(mount); return; }
+            const vocab = (data._activityVocab) || [];
+            mount.innerHTML = past.map(p => renderProgramCard(p, vocab, /* isPast */ true)).join('');
+            // Wire photo thumbnails to the shared lightbox.
+            bindLightboxTriggers(mount);
         },
 
         'testimonials': (mount, data) => {
@@ -579,12 +776,20 @@
 
         const pageJsonUrl = `${route.config.dataFolder}/${route.slug}.json`;
         const catalogUrl = 'data/products.json';
+        // Training programs only matter on the Surgeon audience page.
+        // Anywhere else, we skip the fetch entirely to avoid an
+        // unnecessary network call.
+        const isSurgeonPage = route.type === 'audience' && route.slug === 'surgeon';
+        const programsUrl = isSurgeonPage ? 'data/training-programs.json' : null;
 
         try {
-            const [pageRes, catalogRes] = await Promise.all([
+            const fetches = [
                 fetch(pageJsonUrl, { cache: 'no-cache' }),
                 fetch(catalogUrl, { cache: 'no-cache' })
-            ]);
+            ];
+            if (programsUrl) fetches.push(fetch(programsUrl, { cache: 'no-cache' }));
+            const responses = await Promise.all(fetches);
+            const [pageRes, catalogRes, programsRes] = responses;
             if (!pageRes.ok) throw new Error(`Failed to load ${pageJsonUrl} (${pageRes.status})`);
             if (!catalogRes.ok) throw new Error(`Failed to load ${catalogUrl} (${catalogRes.status})`);
 
@@ -592,8 +797,24 @@
             const catalog = await catalogRes.json();
             data.slug = data.slug || route.slug;
 
+            // Training programs are optional — if the file is missing or
+            // unparseable we just skip the upcoming/past sections rather
+            // than failing the whole page.
+            let trainingPrograms = [];
+            if (programsRes && programsRes.ok) {
+                try {
+                    const tp = await programsRes.json();
+                    trainingPrograms = Array.isArray(tp.programs) ? tp.programs : [];
+                    if (tp.controlledVocab && tp.controlledVocab.activities) {
+                        data._activityVocab = tp.controlledVocab.activities;
+                    }
+                } catch (e) {
+                    console.warn('training-programs.json failed to parse — skipping training sections', e);
+                }
+            }
+
             const products = resolveProducts(catalog, route);
-            const ctx = { route, products, catalog };
+            const ctx = { route, products, catalog, trainingPrograms };
 
             applyBindings(data);
             renderAll(data, ctx);
