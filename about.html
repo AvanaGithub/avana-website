@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Avana Surgical Systems</title>
+    <meta name="description" content="Avana Group is a leading provider of medical devices and solutions, founded in 2009 in Chennai, India.">
+    <link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pain.css">
+    <link rel="stylesheet" href="assets/css/mega-menu.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+</head>
+<body>
+
+    <div data-include="partials/header.html"></div>
+
+    <!-- Loading state -->
+    <div id="about-loading" class="about-loading">
+        <div class="container"><p>Loading…</p></div>
+    </div>
+
+    <main id="about-main" hidden>
+
+        <!-- 1. HERO -->
+        <section class="about-hero">
+            <div class="container">
+                <span class="about-eyebrow" data-bind="hero.eyebrow"></span>
+                <h1 class="about-hero__title" data-bind="hero.title"></h1>
+                <p class="about-hero__desc" data-bind="hero.description"></p>
+            </div>
+            <div class="about-hero__bar"></div>
+        </section>
+
+        <!-- 2. INTRO — company story paragraphs -->
+        <section class="about-section about-section--white">
+            <div class="container">
+                <div class="about-intro" id="about-intro"></div>
+            </div>
+        </section>
+
+        <!-- 3. STATS STRIP -->
+        <section class="about-stats-strip">
+            <div class="container">
+                <div class="about-stats" id="about-stats"></div>
+            </div>
+        </section>
+
+        <!-- 4. PILLARS — Vision / Purpose / Mission (alternating layout) -->
+        <section class="about-section about-section--cream" id="about-pillars-section">
+            <div class="container">
+                <header class="about-section__head about-section__head--centered">
+                    <span class="about-eyebrow">Who we are</span>
+                    <h2 class="about-section__title">Our Vision, Purpose &amp; Mission</h2>
+                </header>
+                <div id="about-pillars"></div>
+            </div>
+        </section>
+
+        <!-- 5. ACHIEVEMENTS -->
+        <section class="about-section about-section--white">
+            <div class="container">
+                <header class="about-section__head about-section__head--centered">
+                    <span class="about-eyebrow">What we've built</span>
+                    <h2 class="about-section__title">Achievements</h2>
+                </header>
+                <div class="about-achievements" id="about-achievements"></div>
+            </div>
+        </section>
+
+        <!-- 6. LEADERSHIP -->
+        <section class="about-section about-section--cream">
+            <div class="container">
+                <header class="about-section__head about-section__head--centered">
+                    <span class="about-eyebrow">Our Leadership</span>
+                    <h2 class="about-section__title">The people behind Avana</h2>
+                </header>
+                <div class="about-leadership" id="about-leadership"></div>
+            </div>
+        </section>
+
+        <!-- 7. PHOTO CAROUSEL — Life at Avana -->
+        <section class="about-section about-section--white" id="about-carousel-section">
+            <div class="container">
+                <header class="about-section__head about-section__head--centered">
+                    <span class="about-eyebrow" data-bind="photoCarousel.heading"></span>
+                    <h2 class="about-section__title">Our Story in Pictures</h2>
+                </header>
+            </div>
+            <div class="about-photo-carousel" id="about-photo-carousel"></div>
+        </section>
+
+        <!-- 8. EMPLOYEE TESTIMONIALS -->
+        <section class="about-section about-section--cream">
+            <div class="container">
+                <header class="about-section__head about-section__head--centered">
+                    <span class="about-eyebrow">Life at Avana</span>
+                    <h2 class="about-section__title">What our team says</h2>
+                </header>
+                <div class="about-testimonials" id="about-testimonials"></div>
+            </div>
+        </section>
+
+        <!-- 9. CTA -->
+        <section class="about-cta">
+            <div class="container">
+                <div class="about-cta__inner">
+                    <h2 class="about-cta__title" data-bind="cta.title"></h2>
+                    <p class="about-cta__desc" data-bind="cta.description"></p>
+                    <div class="about-cta__buttons" id="about-cta-buttons"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Shared lightbox (same structure as solution-template) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Close gallery">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <img class="lightbox__img" id="lightbox-img" alt="">
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox__counter" id="lightbox-counter"></div>
+    </div>
+
+    <script src="assets/js/include-partials.js" defer></script>
+    <script src="assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/about-loader.js" defer></script>
+</body>
+</html>

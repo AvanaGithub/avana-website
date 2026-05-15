@@ -1,0 +1,125 @@
+{
+  "_schema": {
+    "description": "About Us page content. Edit any text field here and git push to update the live page. Image paths are relative to the repo root. Manage via _tools/catalog-editor.html (Careers tab) or edit this file directly."
+  },
+
+  "metaTitle": "About Us | Avana Surgical Systems",
+  "metaDescription": "Avana Group is a leading provider of medical devices and solutions, founded in 2009 in Chennai, India. Learn about our mission, vision, values and leadership.",
+
+  "hero": {
+    "eyebrow": "Founded 2009 · Chennai, India",
+    "title": "Welcome to Avana Surgical Systems!",
+    "description": "A leading provider of medical devices and solutions, driven by three founding principles: customer focus, medical education, and employee satisfaction."
+  },
+
+  "intro": {
+    "paragraphs": [
+      "Avana Group is a leading provider of medical devices and solutions, founded in 2009 in Chennai, India. From the very beginning, the company has been guided by three key principles: customer focus, medical education, and employee satisfaction. These principles have played a crucial role in the company's success and growth.",
+      "Since its inception, Avana has seen substantial growth, managing to increase its business by over 30% CAGR. Today, the company has a strong presence across South Asia and continues to expand. In 2018, Avana Group added three more product lines to its portfolio: RIWOspine, Breg Inc, and Aspen Medical Products. This expansion led to the formation of Avana Group as it is known today, with two distinct divisions: Avana Medical Devices Pvt Ltd and Avana Surgical Systems Pvt Ltd.",
+      "At Avana Group, we believe that customer focus, medical education, and employee satisfaction are the key drivers of success. We are committed to providing our customers with the highest quality products and services, and to continuously improving our offerings through ongoing research and development. Our team of dedicated professionals is committed to delivering the best possible outcomes for patients and their families.",
+      "We are proud of our achievements and look forward to continuing our success and growth in the years to come. If you have any questions or would like to learn more about Avana Group, please don't hesitate to contact us."
+    ]
+  },
+
+  "stats": [
+    { "value": "2009", "label": "Founded in Chennai" },
+    { "value": "30%+", "label": "Annual CAGR Growth" },
+    { "value": "2", "label": "Distinct Divisions" },
+    { "value": "1L+", "label": "Patients Helped" }
+  ],
+
+  "pillars": [
+    {
+      "eyebrow": "Our Vision",
+      "title": "Market Leadership in Joint Preservation",
+      "body": "Company's vision is to maintain its position as the market leader for Joint Preservation while deepening its product presence in Orthopedic specialty.",
+      "image": "images/condition/Postsurgery.jpg",
+      "imageAlt": "Avana's vision — advancing orthopaedic care",
+      "layout": "image-left"
+    },
+    {
+      "eyebrow": "Our Purpose",
+      "title": "Alleviating Pain, Improving Lives",
+      "body": "To alleviate common man's pain related to Orthopedics & Spine by way of introducing novel Therapies and Products, and to consistently improvise and Innovate new Business model to reach a greater number of Patients!",
+      "image": "images/pain-landing/knee.jpg",
+      "imageAlt": "Avana's purpose — pain relief for every patient",
+      "layout": "image-right"
+    },
+    {
+      "eyebrow": "Our Mission",
+      "title": "National Market Leader in Orthopaedic Care",
+      "body": "The mission of the Company is to be the National market leader for Joint Preservation and integration across the broad spectrum of orthopedic Specialty through best in class products and services. Our goal is to improve surgical procedures for patients and offer customers quality products and technologies that provide a safe, efficient and cost-effective surgical treatment.",
+      "image": "images/pain-landing/spine.jpg",
+      "imageAlt": "Avana's mission — best-in-class orthopaedic products",
+      "layout": "image-left"
+    }
+  ],
+
+  "achievements": [
+    { "icon": "🏆", "title": "30%+ CAGR", "body": "Consistent business growth since founding in 2009." },
+    { "icon": "🌏", "title": "Pan-India Presence", "body": "Strong distribution network across South Asia and growing." },
+    { "icon": "🤝", "title": "World-Class Partners", "body": "Exclusive partnerships with Breg Inc, Aspen Medical, and RIWOspine." },
+    { "icon": "🩺", "title": "1 Lakh+ Patients", "body": "Trusted by over a lakh patients and hundreds of Indian surgeons." }
+  ],
+
+  "leadership": [
+    {
+      "name": "P. Sundararajan",
+      "title": "Managing Director",
+      "subtitle": "Avana Group of Companies",
+      "photo": "images/about/ps.jpg",
+      "bio": ""
+    },
+    {
+      "name": "Vivekananda Mani",
+      "title": "Director",
+      "subtitle": "Avana Surgical Systems Pvt Ltd",
+      "photo": "images/about/vm.jpg",
+      "bio": ""
+    }
+  ],
+
+  "photoCarousel": {
+    "heading": "Life at Avana",
+    "images": [
+      { "src": "images/training/training-1.jpeg", "alt": "Avana training programme" },
+      { "src": "images/training/training-2.jpeg", "alt": "Avana cadaver workshop" },
+      { "src": "images/training/training-3.jpeg", "alt": "Avana live surgery demonstration" },
+      { "src": "images/training/training-4.jpeg", "alt": "Avana team at work" },
+      { "src": "images/training/training-5.jpeg", "alt": "Avana bone model training" },
+      { "src": "images/training/training-6.jpeg", "alt": "Avana faculty session" },
+      { "src": "images/training/training-7.jpeg", "alt": "Avana workshop participants" },
+      { "src": "images/training/training-8.jpeg", "alt": "Avana educational session" }
+    ]
+  },
+
+  "testimonials": [
+    {
+      "name": "Team Member",
+      "role": "Sales · Chennai",
+      "quote": "Working at Avana means working at the intersection of healthcare and business. Every day you see the direct impact your work has on patient outcomes. The culture is collaborative and the leadership genuinely invests in your growth.",
+      "avatar": ""
+    },
+    {
+      "name": "Team Member",
+      "role": "Clinical Specialist · Bangalore",
+      "quote": "The exposure I have received working across South India with leading orthopaedic surgeons is something I could not have found anywhere else. Avana treats you as a professional from day one.",
+      "avatar": ""
+    },
+    {
+      "name": "Team Member",
+      "role": "Marketing · Chennai",
+      "quote": "Avana is one of those rare companies where your ideas actually get heard and implemented. The pace is fast, the people are driven, and the mission is meaningful.",
+      "avatar": ""
+    }
+  ],
+
+  "cta": {
+    "title": "Want to be part of the Avana story?",
+    "description": "We are always looking for passionate professionals who want to make a difference in orthopaedic care across India.",
+    "buttons": [
+      { "label": "View Open Roles", "href": "careers.html", "style": "primary" },
+      { "label": "Contact Us", "href": "index.html#enquiry", "style": "outline" }
+    ]
+  }
+}
