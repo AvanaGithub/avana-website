@@ -616,6 +616,18 @@
             color: var(--color-muted);
             margin-bottom: 14px;
         }
+        .role-card__desc {
+            color: var(--color-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .role-card__deadline {
+            font-size: 0.78rem;
+            color: var(--color-accent-emphasis);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
         .role-card__link {
             color: var(--color-accent);
             font-weight: 600;
@@ -1239,31 +1251,15 @@
             <h2 class="section__title">Currently hiring.</h2>
             <p class="section__lead">Filterable listings will be maintained by HR and pulled from our ATS. Until then, write to us directly — we keep a short list of strong candidates we want to talk to first when something opens up.</p>
 
-            <div class="roles__grid">
-                <article class="role-card">
-                    <div class="role-card__division">Endospine</div>
-                    <h3 class="role-card__title">Territory Sales Manager</h3>
-                    <p class="role-card__meta">Chennai · Bangalore · Mumbai · Delhi · Field role</p>
-                    <a href="mailto:careers@avanasurgical.com?subject=Application: Territory Sales Manager — Endospine" class="role-card__link">Apply →</a>
-                </article>
-                <article class="role-card">
-                    <div class="role-card__division">Orthotics</div>
-                    <h3 class="role-card__title">Clinical Specialist — Bracing</h3>
-                    <p class="role-card__meta">Chennai HQ · Pan-India travel</p>
-                    <a href="mailto:careers@avanasurgical.com?subject=Application: Clinical Specialist — Bracing" class="role-card__link">Apply →</a>
-                </article>
-                <article class="role-card">
-                    <div class="role-card__division">Marketing</div>
-                    <h3 class="role-card__title">Brand &amp; Content Lead</h3>
-                    <p class="role-card__meta">Chennai · Hybrid</p>
-                    <a href="mailto:careers@avanasurgical.com?subject=Application: Brand and Content Lead" class="role-card__link">Apply →</a>
-                </article>
-                <article class="role-card">
-                    <div class="role-card__division">Operations</div>
-                    <h3 class="role-card__title">Service &amp; Logistics Coordinator</h3>
-                    <p class="role-card__meta">Chennai HQ · On-site</p>
-                    <a href="mailto:careers@avanasurgical.com?subject=Application: Service and Logistics Coordinator" class="role-card__link">Apply →</a>
-                </article>
+            <!-- Loading spinner — hidden once careers-loader.js finishes -->
+            <div id="roles-loading" style="color:var(--color-muted);padding:16px 0;">Loading open roles…</div>
+
+            <!-- Dynamic mount point — populated by assets/js/careers-loader.js -->
+            <div class="roles__grid" id="roles-grid" hidden></div>
+
+            <!-- No openings fallback — hidden until loader confirms 0 active roles -->
+            <div id="roles-empty" style="display:none;padding:24px 0;color:var(--color-muted);">
+                <p>There are no open positions right now. Check back soon, or write to us speculatively below — we love hearing from strong candidates early.</p>
             </div>
 
             <div class="roles__speculative">
@@ -1373,6 +1369,7 @@
     <!-- Inject shared header/footer partials and wire navbar behaviour -->
     <script src="assets/js/include-partials.js" defer></script>
     <script src="assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/careers-loader.js" defer></script>
 
     <script>
         // Sticky header + back-to-top are wired by header-behavior.js once partials load.

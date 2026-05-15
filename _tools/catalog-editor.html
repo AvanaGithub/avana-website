@@ -328,9 +328,43 @@
         font-size: 0.78rem; font-weight: 600; cursor: pointer; margin: 0;
     }
     .modal--training .activity-multi label input { margin: 0; }
-    .modal--training .grid-2 {
+    .modal--training .grid-2,
+    .modal--careers .grid-2 {
         display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px;
     }
+
+    /* ===== Careers tab specific ===== */
+    .careers-list { padding: 0 24px 100px; }
+    .careers-table {
+        width: 100%;
+        border-collapse: separate; border-spacing: 0;
+        background: #fff; border-radius: 8px; overflow: hidden;
+        box-shadow: 0 2px 8px rgba(36, 52, 71, 0.05); margin-top: 14px;
+    }
+    .careers-table thead th {
+        background: #fafaf8; text-align: left;
+        font-size: 0.72rem; text-transform: uppercase;
+        letter-spacing: 0.8px; font-weight: 700; color: var(--muted);
+        padding: 12px 14px; border-bottom: 1px solid var(--border);
+    }
+    .careers-table tbody td {
+        padding: 12px 14px; border-bottom: 1px solid #f1f1eb;
+        font-size: 0.88rem; vertical-align: top;
+    }
+    .careers-table tbody tr:hover { background: #fafaf6; }
+    .status-active   { background: rgba(45, 143, 78, 0.12); color: var(--ok); }
+    .status-inactive { background: rgba(196, 69, 69, 0.12); color: var(--danger); }
+    .careers-status {
+        font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+        font-size: 0.72rem; padding: 3px 10px; border-radius: 100px; display: inline-block;
+    }
+    .careers-actions button {
+        background: none; border: 0; padding: 0; color: var(--accent);
+        font: inherit; font-size: 0.78rem; cursor: pointer;
+        text-decoration: underline; text-underline-offset: 2px; margin-right: 8px;
+    }
+    .careers-actions button.delete { color: var(--danger); }
+    .modal--careers .modal { max-width: 600px; }
 </style>
 </head>
 <body>
@@ -348,6 +382,7 @@
 <nav class="tabs" role="tablist">
     <button class="tab-btn active" data-tab="products" role="tab" aria-selected="true">Products</button>
     <button class="tab-btn" data-tab="training" role="tab" aria-selected="false">Training Programs</button>
+    <button class="tab-btn" data-tab="careers" role="tab" aria-selected="false">Careers</button>
 </nav>
 
 <!-- ===== PRODUCTS TAB (existing tool) ===== -->
@@ -435,6 +470,50 @@
 
 </div><!-- /training tab-panel -->
 
+<!-- ===== CAREERS TAB (new) ===== -->
+<div class="tab-panel" data-tab-panel="careers">
+
+<div class="help-note">
+    Manage job openings shown on the <code>careers.html</code> page. Set <strong>Active = No</strong> to hide a role without deleting it (e.g. role filled or paused). Click <strong>↓ Download</strong>, then drop the file into <code>C:\avana_website\data\careers.json</code>, then commit &amp; push.
+</div>
+
+<section class="coverage" id="careers-coverage">
+    <div class="coverage__group">
+        <h3>Openings</h3>
+        <div class="coverage__list" id="careers-counts"></div>
+    </div>
+</section>
+
+<section class="filterbar">
+    <input type="search" id="careers-search" placeholder="Search by title, department, location…">
+    <select id="careers-filter-status">
+        <option value="">All openings</option>
+        <option value="active">Active (shown on site)</option>
+        <option value="inactive">Inactive (hidden)</option>
+    </select>
+    <select id="careers-filter-dept">
+        <option value="">All departments</option>
+    </select>
+    <span id="careers-row-count" style="color: var(--muted); font-size: 0.82rem;"></span>
+</section>
+
+<div class="careers-list">
+    <div id="careers-state" class="state">Loading careers…</div>
+    <table class="careers-table" id="careers-table" hidden>
+        <thead><tr>
+            <th>Status</th>
+            <th>Role</th>
+            <th>Department</th>
+            <th>Location · Type</th>
+            <th>Posted</th>
+            <th></th>
+        </tr></thead>
+        <tbody id="careers-tbody"></tbody>
+    </table>
+</div>
+
+</div><!-- /careers tab-panel -->
+
 <!-- Add / Edit modal — shared across both tabs; fields are shown/hidden
      by JS depending on which tab opened it. -->
 <div class="modal-backdrop" id="modal-backdrop">
@@ -461,6 +540,54 @@
             <label>Osteokart URL
                 <input type="text" id="m-link" placeholder="https://osteokart.com/products/...">
             </label>
+        </div>
+
+        <!-- ===== Careers fields ===== -->
+        <div data-modal-fields="careers" hidden>
+            <div class="grid-2">
+                <label>ID (kebab-case, unique)
+                    <input type="text" id="cm-id" placeholder="territory-sales-manager">
+                </label>
+                <label>Active (shown on site)?
+                    <select id="cm-active" style="display:block;width:100%;margin-top:4px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font:inherit;">
+                        <option value="true">Yes — show on careers page</option>
+                        <option value="false">No — hide (role paused or filled)</option>
+                    </select>
+                </label>
+            </div>
+            <label>Job title
+                <input type="text" id="cm-title" placeholder="Territory Sales Manager">
+            </label>
+            <div class="grid-2">
+                <label>Department / Division
+                    <input type="text" id="cm-dept" placeholder="Endospine / Orthotics / Marketing…">
+                </label>
+                <label>Type
+                    <select id="cm-type" style="display:block;width:100%;margin-top:4px;padding:8px 12px;border:1px solid var(--border);border-radius:6px;font:inherit;">
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Internship">Internship</option>
+                    </select>
+                </label>
+            </div>
+            <label>Location
+                <input type="text" id="cm-location" placeholder="Chennai · Bangalore · Field role">
+            </label>
+            <label>Experience (optional)
+                <input type="text" id="cm-experience" placeholder="3–6 years">
+            </label>
+            <label>Brief description (shown on the card, 1–2 sentences)
+                <textarea id="cm-description" placeholder="Drive adoption of Full Endoscopic Spine Surgery systems…"></textarea>
+            </label>
+            <div class="grid-2">
+                <label>Date posted
+                    <input type="date" id="cm-posted">
+                </label>
+                <label>Application deadline (optional)
+                    <input type="date" id="cm-deadline">
+                </label>
+            </div>
         </div>
 
         <!-- ===== Training program fields ===== -->
@@ -911,6 +1038,7 @@ document.getElementById('btn-download').addEventListener('click', () => tabHandl
 // Save/Cancel in the modal also dispatch by tab
 document.getElementById('m-save').addEventListener('click', () => {
     if (activeTab === 'training') saveTrainingModal();
+    else if (activeTab === 'careers') saveCareersModal();
     else saveModal();
 });
 document.getElementById('m-cancel').addEventListener('click', closeModal);
@@ -1210,21 +1338,263 @@ tabHandlers.training = {
     document.getElementById(id).addEventListener('input', applyTrainingFilters)
 );
 
-// Make sure closeModal also restores the product field-set, so the
-// next product Add doesn't accidentally show training fields.
+// Make sure closeModal restores the product field-set and hides all
+// other field-sets, so switching tabs never leaks the wrong fields.
 const originalCloseModal = closeModal;
 closeModal = function () {
     originalCloseModal();
     document.querySelector('[data-modal-fields="products"]').hidden = false;
     const tf = document.querySelector('[data-modal-fields="training"]');
     if (tf) tf.hidden = true;
-    document.getElementById('modal-backdrop').classList.remove('modal--training');
+    const cf = document.querySelector('[data-modal-fields="careers"]');
+    if (cf) cf.hidden = true;
+    document.getElementById('modal-backdrop').classList.remove('modal--training', 'modal--careers');
     trainingEditingIdx = null;
+    careersEditingIdx = null;
 };
 
-// Kick off loads — products first, training second.
+// =====================================================================
+// CAREERS — state, CRUD, render, download
+// =====================================================================
+
+let careersOriginalJson = null;
+let careersData = null;       // { _schema, openings[] }
+let careersDirty = false;
+let careersEditingIdx = null;
+
+const CAREERS_FIELD_ORDER = [
+    'id', 'title', 'department', 'location', 'type',
+    'experience', 'active', 'posted', 'deadline', 'description'
+];
+
+async function loadCareers() {
+    try {
+        const res = await fetch('../data/careers.json', { cache: 'no-cache' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        careersOriginalJson = text;
+        careersData = JSON.parse(text);
+        if (!Array.isArray(careersData.openings)) careersData.openings = [];
+        renderCareersAll();
+    } catch (err) {
+        document.getElementById('careers-state').innerHTML =
+            '<p><strong>Could not load <code>../data/careers.json</code>.</strong></p>' +
+            '<p>' + escapeHtml(err.message) + '</p>';
+    }
+}
+
+function renderCareersAll() {
+    document.getElementById('careers-state').hidden = true;
+    document.getElementById('careers-table').hidden = false;
+    populateDeptFilter();
+    renderCareersBody();
+    renderCareersCounts();
+    applyCareersFilters();
+}
+
+function populateDeptFilter() {
+    const depts = [...new Set(careersData.openings.map(o => o.department).filter(Boolean))].sort();
+    const sel = document.getElementById('careers-filter-dept');
+    const placeholder = sel.querySelector('option').outerHTML;
+    sel.innerHTML = placeholder + depts.map(d =>
+        `<option value="${escapeAttr(d)}">${escapeHtml(d)}</option>`).join('');
+}
+
+function renderCareersBody() {
+    const tbody = document.getElementById('careers-tbody');
+    const sorted = [...careersData.openings].sort((a, b) => (b.posted || '').localeCompare(a.posted || ''));
+
+    tbody.innerHTML = sorted.map(o => {
+        const realIdx = careersData.openings.indexOf(o);
+        const isActive = o.active !== false;
+        const statusLabel = isActive ? 'active' : 'inactive';
+        const locType = [o.location, o.type].filter(Boolean).join(' · ');
+        return `<tr data-idx="${realIdx}" data-title="${escapeAttr(o.title || '')}" data-dept="${escapeAttr(o.department || '')}" data-location="${escapeAttr(o.location || '')}" data-status="${statusLabel}">
+            <td><span class="careers-status status-${statusLabel}">${statusLabel}</span></td>
+            <td><strong>${escapeHtml(o.title || '(untitled)')}</strong><br><small style="color:var(--muted);font-family:monospace;">${escapeHtml(o.id || '')}</small></td>
+            <td>${escapeHtml(o.department || '—')}</td>
+            <td>${escapeHtml(locType || '—')}${o.experience ? '<br><small style="color:var(--muted);">' + escapeHtml(o.experience) + '</small>' : ''}</td>
+            <td style="white-space:nowrap;">${escapeHtml(o.posted || '—')}${o.deadline ? '<br><small style="color:var(--danger);">Deadline: ' + escapeHtml(o.deadline) + '</small>' : ''}</td>
+            <td class="careers-actions" style="white-space:nowrap;">
+                <button data-action="edit" data-idx="${realIdx}">Edit</button>
+                <button class="delete" data-action="delete" data-idx="${realIdx}">Delete</button>
+            </td>
+        </tr>`;
+    }).join('');
+
+    tbody.querySelectorAll('button[data-action]').forEach(btn => {
+        btn.addEventListener('click', onCareersAction);
+    });
+}
+
+function renderCareersCounts() {
+    const active = careersData.openings.filter(o => o.active !== false).length;
+    const inactive = careersData.openings.length - active;
+    document.getElementById('careers-counts').innerHTML = `
+        <span class="pill"><span class="pill__count">${active}</span> active (visible)</span>
+        ${inactive ? `<span class="pill pill--thin"><span class="pill__count">${inactive}</span> inactive</span>` : ''}
+        <span class="pill"><span class="pill__count">${careersData.openings.length}</span> total</span>
+    `;
+}
+
+function applyCareersFilters() {
+    const q      = document.getElementById('careers-search').value.trim().toLowerCase();
+    const status = document.getElementById('careers-filter-status').value;
+    const dept   = document.getElementById('careers-filter-dept').value;
+    let visible = 0;
+    document.querySelectorAll('#careers-tbody tr').forEach(tr => {
+        const text = `${tr.dataset.title} ${tr.dataset.dept} ${tr.dataset.location}`.toLowerCase();
+        const matchesSearch = !q      || text.includes(q);
+        const matchesStatus = !status || tr.dataset.status === status;
+        const matchesDept   = !dept   || tr.dataset.dept === dept;
+        const show = matchesSearch && matchesStatus && matchesDept;
+        tr.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('careers-row-count').textContent =
+        `Showing ${visible} of ${careersData.openings.length} openings`;
+}
+
+function onCareersAction(e) {
+    const btn = e.currentTarget;
+    const idx = parseInt(btn.dataset.idx, 10);
+    if (btn.dataset.action === 'delete') {
+        const o = careersData.openings[idx];
+        if (confirm(`Delete "${o.title}" from careers?\n\nTip: setting Active=No hides it without deleting it.`)) {
+            careersData.openings.splice(idx, 1);
+            markCareersDirty();
+            renderCareersBody(); renderCareersCounts(); applyCareersFilters();
+            toast('Opening removed (download to save)');
+        }
+    } else if (btn.dataset.action === 'edit') {
+        openCareersModal(idx);
+    }
+}
+
+function openCareersModal(idx) {
+    careersEditingIdx = idx;
+    const o = idx == null ? {} : careersData.openings[idx];
+    document.getElementById('modal-title').textContent = idx == null ? 'Add job opening' : 'Edit job opening';
+
+    document.querySelector('[data-modal-fields="products"]').hidden = true;
+    document.querySelector('[data-modal-fields="training"]').hidden = true;
+    document.querySelector('[data-modal-fields="careers"]').hidden = false;
+    document.getElementById('modal-backdrop').classList.add('modal--careers');
+
+    document.getElementById('cm-id').value          = o.id || '';
+    document.getElementById('cm-active').value      = (o.active === false) ? 'false' : 'true';
+    document.getElementById('cm-title').value       = o.title || '';
+    document.getElementById('cm-dept').value        = o.department || '';
+    document.getElementById('cm-type').value        = o.type || 'Full-time';
+    document.getElementById('cm-location').value    = o.location || '';
+    document.getElementById('cm-experience').value  = o.experience || '';
+    document.getElementById('cm-description').value = o.description || '';
+    document.getElementById('cm-posted').value      = o.posted || new Date().toISOString().slice(0, 10);
+    document.getElementById('cm-deadline').value    = o.deadline || '';
+
+    document.getElementById('modal-backdrop').classList.add('show');
+    document.getElementById('cm-title').focus();
+}
+
+function saveCareersModal() {
+    const id    = document.getElementById('cm-id').value.trim();
+    const title = document.getElementById('cm-title').value.trim();
+    if (!id || !title) { toast('ID and title are required', true); return; }
+    if (!/^[a-z0-9-]+$/.test(id)) { toast('ID must be lowercase kebab-case', true); return; }
+    const dupIdx = careersData.openings.findIndex(o => o.id === id);
+    if (dupIdx !== -1 && dupIdx !== careersEditingIdx) { toast('An opening with this ID already exists', true); return; }
+
+    const deadline = document.getElementById('cm-deadline').value.trim();
+    const experience = document.getElementById('cm-experience').value.trim();
+    const entry = {
+        id,
+        title,
+        department: document.getElementById('cm-dept').value.trim() || undefined,
+        location:   document.getElementById('cm-location').value.trim() || undefined,
+        type:       document.getElementById('cm-type').value,
+        experience: experience || undefined,
+        active:     document.getElementById('cm-active').value !== 'false',
+        posted:     document.getElementById('cm-posted').value.trim() || new Date().toISOString().slice(0, 10),
+        deadline:   deadline || undefined,
+        description: document.getElementById('cm-description').value.trim() || undefined
+    };
+    Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
+
+    if (careersEditingIdx == null) {
+        careersData.openings.push(entry);
+    } else {
+        careersData.openings[careersEditingIdx] = entry;
+    }
+    markCareersDirty();
+    closeModal();
+    renderCareersBody(); renderCareersCounts(); applyCareersFilters();
+    populateDeptFilter();
+    toast(careersEditingIdx == null ? 'Opening added (download to save)' : 'Opening updated');
+}
+
+function careersAdd()  { openCareersModal(null); }
+
+function careersReset() {
+    if (careersDirty && !confirm('Discard unsaved careers changes?')) return;
+    careersData = JSON.parse(careersOriginalJson);
+    careersDirty = false;
+    renderCareersBody(); renderCareersCounts(); applyCareersFilters();
+    updateDirty();
+    toast('Reset to last loaded state');
+}
+
+function careersDownload() {
+    const out = {
+        _schema: careersData._schema,
+        openings: careersData.openings.map(o => {
+            const ordered = {};
+            CAREERS_FIELD_ORDER.forEach(f => { if (o[f] !== undefined) ordered[f] = o[f]; });
+            Object.keys(o).forEach(k => { if (!(k in ordered)) ordered[k] = o[k]; });
+            return ordered;
+        })
+    };
+    const text = JSON.stringify(out, null, 2) + '\n';
+    const blob = new Blob([text], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href = url; a.download = 'careers.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+    careersOriginalJson = text;
+    careersDirty = false;
+    updateDirty();
+    toast('Downloaded — replace data/careers.json then commit & push');
+}
+
+function markCareersDirty() { careersDirty = true; updateDirty(); }
+
+// Extend the tab dirty-badge logic to include careers tab
+const prevUpdateDirtyForCareers = updateDirty;
+updateDirty = function () {
+    const isDirty = activeTab === 'training' ? trainingDirty
+                  : activeTab === 'careers'  ? careersDirty
+                  : dirty;
+    document.getElementById('dirty-badge').classList.toggle('show', isDirty);
+};
+
+// Register in dispatch
+tabHandlers.careers = {
+    add: careersAdd,
+    reset: careersReset,
+    download: careersDownload,
+    labelAdd: '+ Add opening',
+    labelDownload: '↓ Download careers.json'
+};
+
+// Hook up search/filter for careers tab
+['careers-search', 'careers-filter-status', 'careers-filter-dept'].forEach(id =>
+    document.getElementById(id).addEventListener('input', applyCareersFilters)
+);
+
+// Kick off loads — products first, training second, careers third.
 load();
 loadTraining();
+loadCareers();
 </script>
 </body>
 </html>
