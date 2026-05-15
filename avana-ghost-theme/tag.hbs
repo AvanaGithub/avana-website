@@ -1,0 +1,32 @@
+{{!< default}}
+
+{{! Tag archive page }}
+
+<section class="archive-hero">
+    <div class="container">
+        {{#tag}}
+        {{#if feature_image}}
+        <div class="archive-hero__image">
+            <img src="{{feature_image}}" alt="{{name}}">
+        </div>
+        {{/if}}
+        <span class="blog-hero__eyebrow">Topic</span>
+        <h1 class="blog-hero__title">{{name}}</h1>
+        {{#if description}}
+        <p class="archive-hero__desc">{{description}}</p>
+        {{/if}}
+        <p class="archive-hero__count">{{plural ../pagination.total empty="No posts" singular="% post" plural="% posts"}}</p>
+        {{/tag}}
+    </div>
+</section>
+
+<section class="blog-listing">
+    <div class="container">
+        <div class="post-grid">
+            {{#foreach posts}}
+            {{> post-card}}
+            {{/foreach}}
+        </div>
+        {{> pagination}}
+    </div>
+</section>

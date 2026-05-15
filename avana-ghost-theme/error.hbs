@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{! Error / 404 page }}
+
+<section class="error-page">
+    <div class="container">
+        <div class="error-page__inner">
+            <span class="error-page__code">{{statusCode}}</span>
+            <h1 class="error-page__title">
+                {{#if statusCode}}
+                    {{#is "404"}}Page not found{{else}}Something went wrong{{/is}}
+                {{else}}
+                    Something went wrong
+                {{/if}}
+            </h1>
+            <p class="error-page__message">
+                {{#is "404"}}
+                    The page you are looking for has moved or doesn't exist.
+                {{else}}
+                    {{message}}
+                {{/is}}
+            </p>
+            <a href="{{@site.url}}" class="btn btn--primary">Back to Blog</a>
+            <a href="https://avanasurgical.com" class="btn btn--outline">Main Website</a>
+        </div>
+    </div>
+</section>

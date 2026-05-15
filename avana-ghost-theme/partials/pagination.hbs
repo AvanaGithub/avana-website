@@ -1,0 +1,28 @@
+{{! Pagination — auto-hides when there is only one page }}
+{{#if pagination}}
+{{#unless pagination.pages}}{{else}}
+{{#if (gt pagination.pages 1)}}
+<nav class="pagination" aria-label="Page navigation">
+    {{#if pagination.prev}}
+    <a href="{{page_url pagination.prev}}" class="pagination__btn pagination__btn--prev" rel="prev">
+        ← Newer posts
+    </a>
+    {{else}}
+    <span class="pagination__btn pagination__btn--prev pagination__btn--disabled">← Newer posts</span>
+    {{/if}}
+
+    <span class="pagination__info">
+        Page {{pagination.page}} of {{pagination.pages}}
+    </span>
+
+    {{#if pagination.next}}
+    <a href="{{page_url pagination.next}}" class="pagination__btn pagination__btn--next" rel="next">
+        Older posts →
+    </a>
+    {{else}}
+    <span class="pagination__btn pagination__btn--next pagination__btn--disabled">Older posts →</span>
+    {{/if}}
+</nav>
+{{/if}}
+{{/unless}}
+{{/if}}

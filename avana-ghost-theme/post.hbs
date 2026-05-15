@@ -1,0 +1,92 @@
+{{!< default}}
+
+{{! Single post template }}
+
+<article class="post-full {{#unless feature_image}}post-full--no-image{{/unless}}">
+
+    {{#if feature_image}}
+    <div class="post-full__cover">
+        <img src="{{feature_image}}"
+             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+             loading="eager">
+    </div>
+    {{/if}}
+
+    <div class="container">
+        <div class="post-full__inner">
+
+            <header class="post-full__header">
+                {{#primary_tag}}
+                <a href="{{url}}" class="post-card__tag">{{name}}</a>
+                {{/primary_tag}}
+
+                <h1 class="post-full__title">{{title}}</h1>
+
+                {{#if custom_excerpt}}
+                <p class="post-full__excerpt">{{custom_excerpt}}</p>
+                {{/if}}
+
+                <div class="post-full__meta">
+                    {{#primary_author}}
+                    <a href="{{url}}" class="post-full__author-link">
+                        <img class="post-card__avatar post-card__avatar--lg"
+                             src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "images/avatar-default.png"}}{{/if}}"
+                             alt="{{name}}">
+                        <span>{{name}}</span>
+                    </a>
+                    {{/primary_author}}
+                    <span class="post-card__sep">·</span>
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+                    <span class="post-card__sep">·</span>
+                    <span>{{reading_time}}</span>
+                </div>
+            </header>
+
+            <div class="post-full__content gh-content">
+                {{content}}
+            </div>
+
+            {{#if tags}}
+            <footer class="post-full__footer">
+                <div class="post-full__tags">
+                    <span class="post-full__tags-label">Tagged in</span>
+                    {{tags separator=" · " prefix=" " suffix=""}}
+                </div>
+            </footer>
+            {{/if}}
+
+            <nav class="post-nav">
+                {{#prev_post}}
+                <a href="{{url}}" class="post-nav__link post-nav__link--prev">
+                    <span class="post-nav__dir">← Previous</span>
+                    <span class="post-nav__title">{{title}}</span>
+                </a>
+                {{/prev_post}}
+                {{#next_post}}
+                <a href="{{url}}" class="post-nav__link post-nav__link--next">
+                    <span class="post-nav__dir">Next →</span>
+                    <span class="post-nav__title">{{title}}</span>
+                </a>
+                {{/next_post}}
+            </nav>
+
+            <div class="post-full__author-bio">
+                {{#primary_author}}
+                {{#if bio}}
+                <div class="author-bio-card">
+                    <img class="author-bio-card__avatar"
+                         src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "images/avatar-default.png"}}{{/if}}"
+                         alt="{{name}}">
+                    <div class="author-bio-card__body">
+                        <h4 class="author-bio-card__name">{{name}}</h4>
+                        <p class="author-bio-card__bio">{{bio}}</p>
+                        {{#if website}}<a href="{{website}}" class="author-bio-card__link" target="_blank" rel="noopener">Visit website →</a>{{/if}}
+                    </div>
+                </div>
+                {{/if}}
+                {{/primary_author}}
+            </div>
+
+        </div>
+    </div>
+</article>

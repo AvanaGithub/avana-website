@@ -1,0 +1,62 @@
+{{!< default}}
+
+{{! Blog listing page — paginated grid of post cards }}
+
+<section class="blog-hero">
+    <div class="container">
+        <span class="blog-hero__eyebrow">Avana Surgical</span>
+        <h1 class="blog-hero__title">
+            {{#if @site.description}}{{@site.description}}{{else}}Orthopaedic health insights, surgical education &amp; patient stories{{/if}}
+        </h1>
+    </div>
+</section>
+
+{{#if @site.cover_image}}
+<div class="blog-hero-image">
+    <img src="{{@site.cover_image}}" alt="{{@site.title}}" loading="eager">
+</div>
+{{/if}}
+
+<section class="blog-listing">
+    <div class="container">
+
+        {{#if featured}}
+        <div class="featured-post">
+            {{#foreach posts limit="1" visibility="public" featured="true"}}
+            <article class="featured-card">
+                {{#if feature_image}}
+                <a href="{{url}}" class="featured-card__image">
+                    <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" loading="eager">
+                </a>
+                {{/if}}
+                <div class="featured-card__body">
+                    <span class="featured-card__label">Featured</span>
+                    {{#primary_tag}}<a href="{{url}}" class="post-card__tag">{{name}}</a>{{/primary_tag}}
+                    <h2 class="featured-card__title"><a href="{{url}}">{{title}}</a></h2>
+                    <p class="featured-card__excerpt">{{excerpt words="40"}}</p>
+                    <div class="post-card__meta">
+                        {{#primary_author}}
+                        <img class="post-card__avatar" src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "images/avatar-default.png"}}{{/if}}" alt="{{name}}">
+                        <span class="post-card__author">{{name}}</span>
+                        {{/primary_author}}
+                        <span class="post-card__sep">·</span>
+                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+                        <span class="post-card__sep">·</span>
+                        <span>{{reading_time}}</span>
+                    </div>
+                </div>
+            </article>
+            {{/foreach}}
+        </div>
+        {{/if}}
+
+        <div class="post-grid">
+            {{#foreach posts}}
+            {{> post-card}}
+            {{/foreach}}
+        </div>
+
+        {{> pagination}}
+
+    </div>
+</section>

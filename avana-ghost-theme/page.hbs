@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{! Static page — same as post but without tag/author/date chrome }}
+
+<article class="post-full post-full--page {{#unless feature_image}}post-full--no-image{{/unless}}">
+
+    {{#if feature_image}}
+    <div class="post-full__cover">
+        <img src="{{feature_image}}"
+             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+             loading="eager">
+    </div>
+    {{/if}}
+
+    <div class="container">
+        <div class="post-full__inner">
+            <header class="post-full__header">
+                <h1 class="post-full__title">{{title}}</h1>
+                {{#if custom_excerpt}}
+                <p class="post-full__excerpt">{{custom_excerpt}}</p>
+                {{/if}}
+            </header>
+            <div class="post-full__content gh-content">
+                {{content}}
+            </div>
+        </div>
+    </div>
+</article>
