@@ -1938,10 +1938,17 @@
                     <h2 class="enquiry-section__title">Have a Question? We're Here to Help.</h2>
                     <p class="enquiry-section__subtitle">Whether you're a patient looking for the right brace, or a surgeon interested in our products — reach out to us. Our team will get back to you within 24 hours.</p>
                 </div>
-                <form class="enquiry-form">
-                    <input type="text" placeholder="Your Name *" required>
-                    <input type="tel" placeholder="Phone Number *" required>
-                    <select required>
+                <form class="enquiry-form" id="enquiry-form" novalidate>
+                    <!-- Web3Forms -->
+                    <input type="hidden" name="access_key" value="16db1d2e-b7d8-4ed9-979e-c1ff200c1d61">
+                    <input type="hidden" name="subject"    value="New enquiry — Avana Surgical website">
+                    <input type="hidden" name="from_name"  value="Avana Website">
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+                    <!-- Fields -->
+                    <input type="text"  name="name"   placeholder="Your Name *"          required>
+                    <input type="email" name="email"  placeholder="Email Address *"       required>
+                    <input type="tel"   name="phone"  placeholder="Mobile Number *"       required>
+                    <select name="topic" required>
                         <option value="" disabled selected>What do you need help with? *</option>
                         <option value="oa">OA / Knee Bracing</option>
                         <option value="cold">Cold Therapy</option>
@@ -1951,7 +1958,13 @@
                         <option value="cme">CME / Training Programs</option>
                         <option value="general">General Enquiry</option>
                     </select>
-                    <button type="submit" class="btn btn--primary btn--full">Submit Enquiry</button>
+                    <button type="submit" class="btn btn--primary btn--full" id="enquiry-submit">Submit Enquiry</button>
+                    <p id="enquiry-success" style="display:none;color:#2a7a4f;font-weight:600;text-align:center;margin-top:12px;">
+                        ✓ Thank you! We'll get back to you within 24 hours.
+                    </p>
+                    <p id="enquiry-error" style="display:none;color:#c44545;font-size:0.9rem;text-align:center;margin-top:12px;">
+                        Something went wrong. Please email us at <a href="mailto:info@avanasurgical.com" style="color:inherit;">info@avanasurgical.com</a>
+                    </p>
                 </form>
             </div>
         </div>
@@ -1971,6 +1984,7 @@
     <!-- Inject shared header/footer partials and wire navbar behaviour -->
     <script src="assets/js/include-partials.js" defer></script>
     <script src="assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/enquiry-form.js" defer></script>
 
     <script>
         // Sticky header + back-to-top are now handled by header-behavior.js
