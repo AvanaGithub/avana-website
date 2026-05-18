@@ -5,7 +5,7 @@
     "hero":  {
                  "eyebrow":  "Spine \u0026 Back Pain Support",
                  "title":  "Stand taller, with less pain.",
-                 "description":  "From everyday lower back ache to scoliosis correction and post-surgical recovery â€” clinically proven bracing can help you move with confidence again.",
+                 "description":  "From everyday lower back ache to scoliosis correction and post-surgical recovery — clinically proven bracing can help you move with confidence again.",
                  "image":  "images/pain-landing/spine.jpg",
                  "imageAlt":  "Spine and back pain bracing support — landing page hero",
                  "ctas":  [
@@ -34,7 +34,7 @@
                        {
                            "icon":  "ðŸ“",
                            "title":  "Scoliosis",
-                           "description":  "Curvature of the spine â€” often diagnosed in adolescence. Spinamic bracing has helped many patients reduce curve progression and avoid surgery."
+                           "description":  "Curvature of the spine — often diagnosed in adolescence. Spinamic bracing has helped many patients reduce curve progression and avoid surgery."
                        },
                        {
                            "icon":  "ðŸ¥",
@@ -44,12 +44,12 @@
                        {
                            "icon":  "ðŸ’¢",
                            "title":  "Disc Herniation",
-                           "description":  "Pinched nerves and radiating pain from a herniated disc â€” bracing reduces movement that aggravates symptoms during conservative care."
+                           "description":  "Pinched nerves and radiating pain from a herniated disc — bracing reduces movement that aggravates symptoms during conservative care."
                        },
                        {
                            "icon":  "ðŸ§˜",
                            "title":  "Postural Issues",
-                           "description":  "Forward head posture, kyphosis, and rounded shoulders â€” postural braces serve as gentle reminders during daily activity."
+                           "description":  "Forward head posture, kyphosis, and rounded shoulders — postural braces serve as gentle reminders during daily activity."
                        },
                        {
                            "icon":  "ðŸ‘µ",
@@ -68,16 +68,16 @@
                              "name":  "Fawzul Hidhaya\u0027s Mother",
                              "location":  "Chennai",
                              "product":  "Spinamic",
-                             "testimonial":  "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32Â°. Surgery was advised â€” but with Spinamic, before the brace it was 35Â°, and with the brace it reduced to 25Â°. We are very happy to have an alternative to surgery."
+                             "testimonial":  "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32°. Surgery was advised — but with Spinamic, before the brace it was 35°, and with the brace it reduced to 25°. We are very happy to have an alternative to surgery."
                          }
                      ],
     "seoContent":  {
-                       "title":  "Understanding back pain â€” and what helps",
-                       "intro":  "Back pain affects most adults at some point. Most cases resolve with conservative care, but knowing when bracing helps â€” and when to see a specialist â€” matters.",
+                       "title":  "Understanding back pain — and what helps",
+                       "intro":  "Back pain affects most adults at some point. Most cases resolve with conservative care, but knowing when bracing helps — and when to see a specialist — matters.",
                        "sections":  [
                                         {
                                             "heading":  "Why does my back hurt?",
-                                            "body":  "\u003cp\u003eMost back pain is mechanical â€” from posture, lifting, or muscle strain. Some pain comes from disc issues, scoliosis, or age-related changes. Identifying the cause matters because treatment varies.\u003c/p\u003e"
+                                            "body":  "\u003cp\u003eMost back pain is mechanical — from posture, lifting, or muscle strain. Some pain comes from disc issues, scoliosis, or age-related changes. Identifying the cause matters because treatment varies.\u003c/p\u003e"
                                         },
                                         {
                                             "heading":  "How does spine bracing help?",
@@ -85,7 +85,7 @@
                                         },
                                         {
                                             "heading":  "When should I see a doctor?",
-                                            "body":  "\u003cp\u003eIf back pain is severe, lasts more than a few weeks, radiates into your legs, or is accompanied by numbness, weakness, or changes in bladder control â€” see a spine specialist immediately.\u003c/p\u003e"
+                                            "body":  "\u003cp\u003eIf back pain is severe, lasts more than a few weeks, radiates into your legs, or is accompanied by numbness, weakness, or changes in bladder control — see a spine specialist immediately.\u003c/p\u003e"
                                         }
                                     ],
                        "disclaimer":  "This page is educational. Spine conditions vary widely. Please consult a qualified spine specialist before starting any bracing programme."
@@ -96,11 +96,11 @@
     "faq":  [
                 {
                     "question":  "How long does scoliosis bracing take to show results?",
-                    "answer":  "Most studies on scoliosis bracing show meaningful curve stabilisation or reduction over 12â€“24 months of consistent wear during the active growth period. Results depend heavily on age, curve type, and brace-wear compliance."
+                    "answer":  "Most studies on scoliosis bracing show meaningful curve stabilisation or reduction over 12–24 months of consistent wear during the active growth period. Results depend heavily on age, curve type, and brace-wear compliance."
                 },
                 {
                     "question":  "Can I sit at work with a lumbar brace?",
-                    "answer":  "Yes â€” most lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration based on your specific condition."
+                    "answer":  "Yes — most lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration based on your specific condition."
                 },
                 {
                     "question":  "Will wearing a brace weaken my back muscles?",
@@ -114,26 +114,26 @@
                    {
                        "name":  "Aspen Medical",
                        "logo":  "images/brands/aspen-logo.png.jpg",
-                       "caption":  "USA Â· Spinal bracing leader"
+                       "caption":  "USA · Spinal bracing leader"
                    },
                    {
                        "name":  "RiwoSpine",
                        "logo":  "images/brands/riwospine-logo.png.png",
-                       "caption":  "Germany Â· Endoscopic spine"
+                       "caption":  "Germany · Endoscopic spine"
                    },
                    {
                        "name":  "Breg",
                        "logo":  "images/brands/breg-logo.png.png",
-                       "caption":  "USA Â· Sports medicine"
+                       "caption":  "USA · Sports medicine"
                    },
                    {
                        "name":  "Osteokart",
                        "logo":  "images/brands/osteokart-logo.png.png",
-                       "caption":  "India Â· Retail partner"
+                       "caption":  "India · Retail partner"
                    }
                ],
     "cta":  {
-                "title":  "Spine pain is personal â€” let us help you choose right.",
+                "title":  "Spine pain is personal — let us help you choose right.",
                 "description":  "Speak with our spine specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
                 "buttons":  [
                                 {
@@ -143,11 +143,11 @@
                                 },
                                 {
                                     "label":  "Browse Spine Products",
-                                    "href":  "https://osteokart.com/category/spine?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=spine",
+                                    "href":  "https://osteokart.com",
                                     "style":  "secondary",
                                     "external":  true
                                 }
                             ],
-                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+                "disclaimer":  "All products dispatched by Osteokart.com — Avana\u0027s authorised retail partner."
             }
 }

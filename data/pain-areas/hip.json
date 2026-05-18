@@ -28,22 +28,22 @@
                        {
                            "icon":  "ðŸ¦´",
                            "title":  "Hip Osteoarthritis",
-                           "description":  "Wear of the hip joint causing pain, stiffness, and reduced range of motion â€” most common in adults over 50."
+                           "description":  "Wear of the hip joint causing pain, stiffness, and reduced range of motion — most common in adults over 50."
                        },
                        {
                            "icon":  "ðŸ¥",
                            "title":  "Post-Hip Replacement",
-                           "description":  "Recovery after total hip arthroplasty â€” supportive bracing and motion control protect the new joint."
+                           "description":  "Recovery after total hip arthroplasty — supportive bracing and motion control protect the new joint."
                        },
                        {
                            "icon":  "ðŸ”¥",
                            "title":  "Hip Bursitis",
-                           "description":  "Inflammation of the bursa causing lateral hip pain â€” eased with offloading and rest."
+                           "description":  "Inflammation of the bursa causing lateral hip pain — eased with offloading and rest."
                        },
                        {
                            "icon":  "âš¡",
                            "title":  "Hip Labral Tear",
-                           "description":  "Cartilage tear in the hip joint â€” often supported by activity modification and bracing."
+                           "description":  "Cartilage tear in the hip joint — often supported by activity modification and bracing."
                        }
                    ],
     "productsHeading":  {
@@ -57,7 +57,7 @@
                      ],
     "seoContent":  {
                        "title":  "Understanding hip pain",
-                       "intro":  "Hip pain often shows up as groin pain, lateral pain, or stiffness â€” and it can affect everything from walking to sleeping.",
+                       "intro":  "Hip pain often shows up as groin pain, lateral pain, or stiffness — and it can affect everything from walking to sleeping.",
                        "sections":  [
                                         {
                                             "heading":  "Common causes",
@@ -65,7 +65,7 @@
                                         },
                                         {
                                             "heading":  "When is bracing helpful?",
-                                            "body":  "\u003cp\u003eHip bracing is most commonly used post-surgically â€” particularly after hip replacement â€” to protect the joint during the early recovery weeks. For arthritis, treatment is usually conservative (physiotherapy, weight management) until surgery becomes appropriate.\u003c/p\u003e"
+                                            "body":  "\u003cp\u003eHip bracing is most commonly used post-surgically — particularly after hip replacement — to protect the joint during the early recovery weeks. For arthritis, treatment is usually conservative (physiotherapy, weight management) until surgery becomes appropriate.\u003c/p\u003e"
                                         }
                                     ],
                        "disclaimer":  "This page is educational. Please consult an orthopaedic specialist for persistent hip pain."
@@ -76,11 +76,11 @@
     "faq":  [
                 {
                     "question":  "How long do I wear a hip abduction brace after hip replacement?",
-                    "answer":  "Typically 6â€“12 weeks, depending on your surgical approach and surgeon\u0027s protocol. Always follow your treating surgeon\u0027s instructions."
+                    "answer":  "Typically 6–12 weeks, depending on your surgical approach and surgeon\u0027s protocol. Always follow your treating surgeon\u0027s instructions."
                 },
                 {
                     "question":  "Can bracing help hip osteoarthritis?",
-                    "answer":  "Bracing is less commonly used for hip OA than knee OA. Conservative care usually focuses on weight management, physiotherapy, and walking aids â€” with surgery considered when conservative options are exhausted."
+                    "answer":  "Bracing is less commonly used for hip OA than knee OA. Conservative care usually focuses on weight management, physiotherapy, and walking aids — with surgery considered when conservative options are exhausted."
                 }
             ],
     "blog":  [
@@ -90,26 +90,26 @@
                    {
                        "name":  "Breg",
                        "logo":  "images/brands/breg-logo.png.png",
-                       "caption":  "USA Â· Sports medicine"
+                       "caption":  "USA · Sports medicine"
                    },
                    {
                        "name":  "Aspen Medical",
                        "logo":  "images/brands/aspen-logo.png.jpg",
-                       "caption":  "USA Â· Bracing leader"
+                       "caption":  "USA · Bracing leader"
                    },
                    {
                        "name":  "RiwoSpine",
                        "logo":  "images/brands/riwospine-logo.png.png",
-                       "caption":  "Germany Â· Spine surgery"
+                       "caption":  "Germany · Spine surgery"
                    },
                    {
                        "name":  "Osteokart",
                        "logo":  "images/brands/osteokart-logo.png.png",
-                       "caption":  "India Â· Retail partner"
+                       "caption":  "India · Retail partner"
                    }
                ],
     "cta":  {
-                "title":  "Hip pain is personal â€” let us help you choose right.",
+                "title":  "Hip pain is personal — let us help you choose right.",
                 "description":  "Our specialists can guide you on whether bracing fits your situation, particularly after hip surgery.",
                 "buttons":  [
                                 {
@@ -119,11 +119,11 @@
                                 },
                                 {
                                     "label":  "Browse Hip Products",
-                                    "href":  "https://osteokart.com/category/hip?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=hip",
+                                    "href":  "https://osteokart.com",
                                     "style":  "secondary",
                                     "external":  true
                                 }
                             ],
-                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+                "disclaimer":  "All products dispatched by Osteokart.com — Avana\u0027s authorised retail partner."
             }
 }

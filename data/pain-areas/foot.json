@@ -5,7 +5,7 @@
     "hero":  {
                  "eyebrow":  "Foot \u0026 Ankle Support",
                  "title":  "Walk further. Hurt less.",
-                 "description":  "From plantar fasciitis that aches with every step to recovery from an ankle sprain or surgery â€” clinically proven support for confident movement.",
+                 "description":  "From plantar fasciitis that aches with every step to recovery from an ankle sprain or surgery — clinically proven support for confident movement.",
                  "image":  "images/pain-landing/foot.jpg",
                  "imageAlt":  "Foot and ankle pain bracing support — landing page hero",
                  "ctas":  [
@@ -28,7 +28,7 @@
                        {
                            "icon":  "ðŸ¦¶",
                            "title":  "Plantar Fasciitis",
-                           "description":  "Sharp heel pain especially with the first steps of the day â€” supported by night splints and arch support."
+                           "description":  "Sharp heel pain especially with the first steps of the day — supported by night splints and arch support."
                        },
                        {
                            "icon":  "âš¡",
@@ -38,7 +38,7 @@
                        {
                            "icon":  "ðŸƒ",
                            "title":  "Achilles Tendonitis",
-                           "description":  "Pain along the back of the heel from overuse â€” supported by heel lifts and offloading bracing."
+                           "description":  "Pain along the back of the heel from overuse — supported by heel lifts and offloading bracing."
                        },
                        {
                            "icon":  "ðŸ¥",
@@ -57,7 +57,7 @@
                      ],
     "seoContent":  {
                        "title":  "Understanding foot \u0026 ankle pain",
-                       "intro":  "Your feet take every step you make. Pain there changes everything â€” work, exercise, even sleep.",
+                       "intro":  "Your feet take every step you make. Pain there changes everything — work, exercise, even sleep.",
                        "sections":  [
                                         {
                                             "heading":  "Why is my heel killing me in the morning?",
@@ -65,7 +65,7 @@
                                         },
                                         {
                                             "heading":  "Should I brace an ankle sprain?",
-                                            "body":  "\u003cp\u003eYes â€” the evidence is strong. Functional bracing during early recovery and return-to-sport reduces re-sprain risk significantly compared to no brace.\u003c/p\u003e"
+                                            "body":  "\u003cp\u003eYes — the evidence is strong. Functional bracing during early recovery and return-to-sport reduces re-sprain risk significantly compared to no brace.\u003c/p\u003e"
                                         }
                                     ],
                        "disclaimer":  "This page is educational. Please consult an orthopaedic specialist for persistent foot or ankle pain."
@@ -76,7 +76,7 @@
     "faq":  [
                 {
                     "question":  "How long should I wear an ankle brace after a sprain?",
-                    "answer":  "Typically 4â€“6 weeks during all weight-bearing activity, then continued use during sport for at least the first season back to reduce re-sprain risk."
+                    "answer":  "Typically 4–6 weeks during all weight-bearing activity, then continued use during sport for at least the first season back to reduce re-sprain risk."
                 },
                 {
                     "question":  "Will a night splint help my plantar fasciitis?",
@@ -90,26 +90,26 @@
                    {
                        "name":  "Breg",
                        "logo":  "images/brands/breg-logo.png.png",
-                       "caption":  "USA Â· Sports medicine"
+                       "caption":  "USA · Sports medicine"
                    },
                    {
                        "name":  "Aspen Medical",
                        "logo":  "images/brands/aspen-logo.png.jpg",
-                       "caption":  "USA Â· Bracing leader"
+                       "caption":  "USA · Bracing leader"
                    },
                    {
                        "name":  "RiwoSpine",
                        "logo":  "images/brands/riwospine-logo.png.png",
-                       "caption":  "Germany Â· Spine surgery"
+                       "caption":  "Germany · Spine surgery"
                    },
                    {
                        "name":  "Osteokart",
                        "logo":  "images/brands/osteokart-logo.png.png",
-                       "caption":  "India Â· Retail partner"
+                       "caption":  "India · Retail partner"
                    }
                ],
     "cta":  {
-                "title":  "Get back on your feet â€” comfortably.",
+                "title":  "Get back on your feet — comfortably.",
                 "description":  "Speak with our team about which foot or ankle support is right for your situation.",
                 "buttons":  [
                                 {
@@ -119,11 +119,11 @@
                                 },
                                 {
                                     "label":  "Browse Foot \u0026 Ankle Products",
-                                    "href":  "https://osteokart.com/category/foot-ankle?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=foot",
+                                    "href":  "https://osteokart.com",
                                     "style":  "secondary",
                                     "external":  true
                                 }
                             ],
-                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+                "disclaimer":  "All products dispatched by Osteokart.com — Avana\u0027s authorised retail partner."
             }
 }

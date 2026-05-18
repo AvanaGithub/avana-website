@@ -8,7 +8,7 @@
     "eyebrow": "For People with Back Pain",
     "title": "Back Pain Solutions — Lumbar Belts & Bracing",
     "description": "Up to 8 in 10 Indian adults will deal with back pain at some point — making it one of the most common and most overlooked health problems in the country. The good news: doctor-recommended lumbar belts, posture supports, and spine bracing can meaningfully change how your back feels every day.",
-    "image": "images/condition/spinesupport.jpg",
+    "image": "images/audience/backpain.jpg",
     "imageAlt": "Person with lumbar support",
     "ctas": [
       { "label": "Explore Solutions", "href": "#products", "style": "primary" },
@@ -83,6 +83,21 @@
     ]
   },
 
+  "conditionsHeading": {
+    "eyebrow": "Common conditions",
+    "title": "What's behind your back pain?",
+    "lead": "Back pain is rarely one thing. These are the conditions we most commonly help patients manage."
+  },
+
+  "conditions": [
+    { "icon": "🫀", "title": "Lower Back Pain", "description": "The most common type — mechanical pain from muscle strain, posture, or fatigue. Lumbar bracing reduces daily load and keeps you moving." },
+    { "icon": "🔄", "title": "Scoliosis", "description": "Sideways curvature of the spine, often first noticed in adolescents. Evidence-based bracing during the growth period can halt progression." },
+    { "icon": "🏥", "title": "Post-Surgical Spine Recovery", "description": "After spinal fusion, discectomy, or laminectomy, a rigid LSO or TLSO protects the operative site and supports safe early mobilisation." },
+    { "icon": "💢", "title": "Disc Herniation", "description": "A disc pressing on a nerve causes back pain that radiates down the leg. Bracing limits aggravating motion while the disc settles." },
+    { "icon": "🧍", "title": "Postural Issues", "description": "Years of desk work, smartphone use, and asymmetric loading lead to chronic postural ache. Posture-correction bracing retrains alignment." },
+    { "icon": "🦴", "title": "Osteoporotic Compression", "description": "Weakened vertebrae compress under body weight, causing sudden severe pain. Spine bracing offloads the fracture site and enables safe movement." }
+  ],
+
   "productsHeading": {
     "title": "Solutions for back & spine pain",
     "lead": "Lumbar and cervical bracing chosen for daily wear and clinical performance."
@@ -141,7 +156,7 @@
     "description": "Speak with our specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
     "buttons": [
       { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Back%20pain%20enquiry", "style": "primary" },
-      { "label": "Browse Spine Products", "href": "https://osteokart.com/category/spine?utm_source=avanasurgical&utm_medium=referral&utm_campaign=back_pain_audience&utm_content=footer_cta", "style": "secondary", "external": true }
+      { "label": "Browse Spine Products", "href": "https://osteokart.com", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }

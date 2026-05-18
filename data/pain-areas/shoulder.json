@@ -28,7 +28,7 @@
                        {
                            "icon":  "ðŸ’ª",
                            "title":  "Rotator Cuff Injury",
-                           "description":  "Tears or strain of the rotator cuff tendons â€” common in athletes and adults over 40."
+                           "description":  "Tears or strain of the rotator cuff tendons — common in athletes and adults over 40."
                        },
                        {
                            "icon":  "â„ï¸",
@@ -38,12 +38,12 @@
                        {
                            "icon":  "âš¡",
                            "title":  "Shoulder Dislocation",
-                           "description":  "Recurring instability after dislocation â€” supported by stabilising braces during rehabilitation."
+                           "description":  "Recurring instability after dislocation — supported by stabilising braces during rehabilitation."
                        },
                        {
                            "icon":  "ðŸ¥",
                            "title":  "Post-Surgical Recovery",
-                           "description":  "After rotator cuff repair, labral surgery, or joint replacement â€” controlled immobilisation aids healing."
+                           "description":  "After rotator cuff repair, labral surgery, or joint replacement — controlled immobilisation aids healing."
                        }
                    ],
     "productsHeading":  {
@@ -57,7 +57,7 @@
                      ],
     "seoContent":  {
                        "title":  "Understanding shoulder pain",
-                       "intro":  "The shoulder is the most mobile joint in the body â€” and one of the most easily injured. Here\u0027s what helps.",
+                       "intro":  "The shoulder is the most mobile joint in the body — and one of the most easily injured. Here\u0027s what helps.",
                        "sections":  [
                                         {
                                             "heading":  "Common causes",
@@ -76,7 +76,7 @@
     "faq":  [
                 {
                     "question":  "How long do I wear a sling after rotator cuff surgery?",
-                    "answer":  "Typically 4â€“6 weeks, but exact duration depends on your specific surgery and surgeon\u0027s protocol. Always follow your treating doctor\u0027s guidance."
+                    "answer":  "Typically 4–6 weeks, but exact duration depends on your specific surgery and surgeon\u0027s protocol. Always follow your treating doctor\u0027s guidance."
                 },
                 {
                     "question":  "Can I sleep with a shoulder brace?",
@@ -90,22 +90,22 @@
                    {
                        "name":  "Breg",
                        "logo":  "images/brands/breg-logo.png.png",
-                       "caption":  "USA Â· Sports medicine"
+                       "caption":  "USA · Sports medicine"
                    },
                    {
                        "name":  "Aspen Medical",
                        "logo":  "images/brands/aspen-logo.png.jpg",
-                       "caption":  "USA Â· Bracing leader"
+                       "caption":  "USA · Bracing leader"
                    },
                    {
                        "name":  "RiwoSpine",
                        "logo":  "images/brands/riwospine-logo.png.png",
-                       "caption":  "Germany Â· Spine surgery"
+                       "caption":  "Germany · Spine surgery"
                    },
                    {
                        "name":  "Osteokart",
                        "logo":  "images/brands/osteokart-logo.png.png",
-                       "caption":  "India Â· Retail partner"
+                       "caption":  "India · Retail partner"
                    }
                ],
     "cta":  {
@@ -119,11 +119,11 @@
                                 },
                                 {
                                     "label":  "Browse Shoulder Products",
-                                    "href":  "https://osteokart.com/category/shoulder?utm_source=avana\u0026utm_medium=pain-cta\u0026utm_campaign=shoulder",
+                                    "href":  "https://osteokart.com",
                                     "style":  "secondary",
                                     "external":  true
                                 }
                             ],
-                "disclaimer":  "All products dispatched by Osteokart.com â€” Avana\u0027s authorised retail partner."
+                "disclaimer":  "All products dispatched by Osteokart.com — Avana\u0027s authorised retail partner."
             }
 }

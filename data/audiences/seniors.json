@@ -143,7 +143,7 @@
     "description": "Tell us about your joint pain — our clinical team will guide you to the right knee cap or brace, with no pressure to purchase.",
     "buttons": [
       { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Joint%20pain%20enquiry", "style": "primary" },
-      { "label": "Browse on Osteokart", "href": "https://osteokart.com/category/knee?utm_source=avanasurgical&utm_medium=referral&utm_campaign=seniors_audience&utm_content=footer_cta", "style": "secondary", "external": true }
+      { "label": "Browse on Osteokart", "href": "https://osteokart.com", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
