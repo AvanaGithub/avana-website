@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8B2Z2NS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-bind="metaTitle">Training Programme | Avana Surgical</title>
+    <meta name="description" data-bind="metaDescription" content="Avana training programme details — date, faculty, venue, activities, and registration.">
+
+    <link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pain.css">
+    <link rel="stylesheet" href="assets/css/mega-menu.css">
+    <link rel="stylesheet" href="assets/css/enquiry-modal.css">
+
+    <style>
+        .training-detail {
+            padding: 56px 0 80px;
+            background: linear-gradient(180deg, #fbf8f3 0%, #ffffff 60%);
+            min-height: 60vh;
+        }
+        .training-detail__back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+        .training-detail__back:hover { color: var(--color-accent); }
+        .training-detail__back::before { content: '←'; font-size: 1rem; }
+
+        .training-detail__eyebrow {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 100px;
+            background: var(--color-accent, #B18C57);
+            color: var(--color-white);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+        .training-detail__eyebrow--past {
+            background: #d9d4cb;
+            color: var(--color-primary);
+        }
+
+        .training-detail__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.4vw, 2.5rem);
+            color: var(--color-primary);
+            margin: 0 0 16px;
+            line-height: 1.15;
+        }
+
+        .training-detail__meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            padding: 22px;
+            background: #fff;
+            border: 1px solid #ede7dc;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(36, 52, 71, 0.04);
+            margin: 28px 0;
+        }
+        .training-detail__meta-item { display: flex; flex-direction: column; gap: 4px; }
+        .training-detail__meta-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--color-muted, #6c6c6c);
+            font-weight: 600;
+        }
+        .training-detail__meta-value {
+            font-size: 0.98rem;
+            color: var(--color-text, #1a1a1a);
+            font-weight: 500;
+        }
+
+        .training-detail__activities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: 20px 0 8px;
+        }
+        .training-detail__activity {
+            padding: 5px 12px;
+            border-radius: 100px;
+            background: #f5efe4;
+            color: var(--color-primary);
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .training-detail__description {
+            font-size: 1.05rem;
+            color: var(--color-text, #1a1a1a);
+            line-height: 1.7;
+            margin: 24px 0;
+        }
+
+        .training-detail__section {
+            margin: 36px 0;
+        }
+        .training-detail__section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--color-primary);
+            margin: 0 0 14px;
+        }
+        .training-detail__list {
+            margin: 0;
+            padding-left: 22px;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+
+        .training-detail__cta-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 32px;
+            padding: 24px;
+            background: #fff;
+            border: 1px solid #ede7dc;
+            border-radius: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .training-detail__cta-text {
+            flex: 1 1 240px;
+            font-size: 0.95rem;
+            color: var(--color-text);
+        }
+        .training-detail__cta-text strong { color: var(--color-primary); font-weight: 700; }
+        .training-detail__cta-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+        .training-detail__btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s, transform 0.2s, color 0.2s, border-color 0.2s;
+            border: 1.5px solid transparent;
+        }
+        .training-detail__btn--primary {
+            background: var(--color-accent, #B18C57);
+            color: var(--color-white);
+        }
+        .training-detail__btn--primary:hover {
+            background: var(--color-primary);
+            transform: translateY(-1px);
+        }
+        .training-detail__btn--outline {
+            background: transparent;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        .training-detail__btn--outline:hover {
+            background: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .training-detail__photos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .training-detail__photos button {
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            background: #f5efe4;
+        }
+        .training-detail__photos img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+        .training-detail__photos button:hover img { transform: scale(1.05); }
+
+        .training-detail__loading,
+        .training-detail__error {
+            text-align: center;
+            padding: 80px 20px;
+            font-size: 1.05rem;
+            color: var(--color-muted, #6c6c6c);
+        }
+        .training-detail__error a {
+            color: var(--color-accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px) {
+            .training-detail__cta-bar { flex-direction: column; align-items: stretch; }
+            .training-detail__cta-buttons { width: 100%; }
+            .training-detail__btn { flex: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8B2Z2NS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Shared header injected from partials/header.html -->
+    <div data-include="partials/header.html"></div>
+
+    <main class="training-detail">
+        <div class="container">
+            <a href="solution-template.html?type=audience&amp;slug=surgeon#section-upcomingPrograms" class="training-detail__back">Back to all programmes</a>
+
+            <div id="training-detail-loading" class="training-detail__loading">Loading programme details…</div>
+            <div id="training-detail-content" hidden></div>
+            <div id="training-detail-error" class="training-detail__error" hidden>
+                Programme not found. Please <a href="solution-template.html?type=audience&amp;slug=surgeon#section-upcomingPrograms">browse all training programmes</a>.
+            </div>
+        </div>
+    </main>
+
+    <!-- Shared lightbox (same structure as solution-template) -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+        <button class="lightbox__close" id="lightbox-close" aria-label="Close gallery">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous photo">‹</button>
+        <img class="lightbox__img" id="lightbox-img" alt="">
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next photo">›</button>
+        <div class="lightbox__counter" id="lightbox-counter"></div>
+    </div>
+
+    <!-- Shared footer injected from partials/footer.html -->
+    <div data-include="partials/footer.html"></div>
+
+    <!-- "Talk to a Specialist" enquiry modal -->
+    <div data-include="partials/enquiry-modal.html"></div>
+
+    <script src="assets/js/include-partials.js" defer></script>
+    <script src="assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/training-detail.js" defer></script>
+    <script src="assets/js/enquiry-modal.js" defer></script>
+</body>
+</html>

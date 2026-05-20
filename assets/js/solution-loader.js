@@ -263,15 +263,21 @@
             photoGrid += `</div>`;
         }
 
-        // CTA button: past programs link to mailto for enquiries; upcoming
-        // get the registrationUrl if present, mailto fallback otherwise.
-        let cta;
-        if (isPast) {
-            cta = `<a href="mailto:info@avanasurgical.com?subject=${encodeURIComponent('Enquiry: ' + p.name)}" class="training-card__cta">Ask about this programme</a>`;
-        } else {
+        // CTA buttons:
+        //   - "View Programme" → always present, links to training-detail.html?slug=...
+        //   - "Register" → only for upcoming programs. Uses registrationUrl
+        //     (Razorpay Payment Link) if present, else mailto fallback.
+        const detailUrl = `training-detail.html?slug=${encodeURIComponent(p.slug)}`;
+        const viewCta = `<a href="${detailUrl}" class="training-card__cta training-card__cta--view">View Programme</a>`;
+
+        let registerCta = '';
+        if (!isPast) {
             const regUrl = p.registrationUrl || `mailto:info@avanasurgical.com?subject=${encodeURIComponent('Registration: ' + p.name)}`;
-            cta = `<a href="${escapeHtml(regUrl)}" class="training-card__cta"${/^https?:/i.test(regUrl) ? ' target="_blank" rel="noopener"' : ''}>Register / Enquire</a>`;
+            const isExternal = /^https?:/i.test(regUrl);
+            registerCta = `<a href="${escapeHtml(regUrl)}" class="training-card__cta training-card__cta--register"${isExternal ? ' target="_blank" rel="noopener"' : ''}>Register</a>`;
         }
+
+        const cta = `<div class="training-card__ctas">${viewCta}${registerCta}</div>`;
 
         // Hidden full-photo list embedded in the card so the lightbox
         // can read it cleanly without re-fetching anything.

@@ -1085,26 +1085,59 @@ a { color: inherit; }
     font-weight: 700;
 }
 
-.training-card__cta {
+/* Dual-CTA row (View Programme + Register) */
+.training-card__ctas {
     margin-top: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.training-card__cta {
+    flex: 1 1 auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 6px;
-    padding: 10px 16px;
+    padding: 10px 14px;
     border-radius: var(--radius-sm);
-    background: var(--color-primary);
-    color: var(--color-white);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    transition: background 0.2s, transform 0.2s;
+    font-size: 0.88rem;
+    transition: background 0.2s, transform 0.2s, border-color 0.2s, color 0.2s;
+    white-space: nowrap;
 }
-.training-card__cta:hover {
-    background: var(--color-accent);
+
+/* "View Programme" — secondary / outlined */
+.training-card__cta--view {
+    background: transparent;
+    color: var(--color-primary);
+    border: 1.5px solid var(--color-primary);
+}
+.training-card__cta--view:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
     transform: translateY(-1px);
 }
-.training-card__cta::after { content: '→'; font-size: 1rem; }
+
+/* "Register" — primary filled (upcoming only) */
+.training-card__cta--register {
+    background: var(--color-accent, #B18C57);
+    color: var(--color-white);
+    border: 1.5px solid var(--color-accent, #B18C57);
+}
+.training-card__cta--register:hover {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: translateY(-1px);
+}
+.training-card__cta--register::after { content: '→'; font-size: 1rem; }
+
+/* Legacy single-button fallback (still used elsewhere if any) */
+.training-card__cta:not(.training-card__cta--view):not(.training-card__cta--register) {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
 
 .training-empty {
     max-width: 600px;
