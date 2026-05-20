@@ -30,27 +30,27 @@
 
   "pillars": [
     {
-      "eyebrow": "Our Vision",
-      "title": "Market Leadership in Joint Preservation",
-      "body": "Company's vision is to maintain its position as the market leader for Joint Preservation while deepening its product presence in Orthopedic specialty.",
-      "image": "images/condition/Postsurgery.jpg",
-      "imageAlt": "Avana's vision — advancing orthopaedic care",
+      "eyebrow": "Our Purpose",
+      "title": "Innovation, Education & Service for Surgeons",
+      "body": "To bring world-class innovation, education and service closer to surgeons — and improve patients' lives.",
+      "image": "images/pain-landing/knee.jpg",
+      "imageAlt": "Avana's purpose — innovation, education and service for surgeons",
       "layout": "image-left"
     },
     {
-      "eyebrow": "Our Purpose",
-      "title": "Alleviating Pain, Improving Lives",
-      "body": "To alleviate common man's pain related to Orthopedics & Spine by way of introducing novel Therapies and Products, and to consistently improvise and Innovate new Business model to reach a greater number of Patients!",
-      "image": "images/pain-landing/knee.jpg",
-      "imageAlt": "Avana's purpose — pain relief for every patient",
+      "eyebrow": "Our Mission",
+      "title": "Partnering with Surgeons and Hospitals",
+      "body": "To partner with surgeons and hospitals through innovative technology, education, and reliable execution.",
+      "image": "images/pain-landing/spine.jpg",
+      "imageAlt": "Avana's mission — partnering with surgeons and hospitals",
       "layout": "image-right"
     },
     {
-      "eyebrow": "Our Mission",
-      "title": "National Market Leader in Orthopaedic Care",
-      "body": "The mission of the Company is to be the National market leader for Joint Preservation and integration across the broad spectrum of orthopedic Specialty through best in class products and services. Our goal is to improve surgical procedures for patients and offer customers quality products and technologies that provide a safe, efficient and cost-effective surgical treatment.",
-      "image": "images/pain-landing/spine.jpg",
-      "imageAlt": "Avana's mission — best-in-class orthopaedic products",
+      "eyebrow": "Our Vision",
+      "title": "India's Most Trusted Medical Company",
+      "body": "To build India's most trusted medical company — for clinical impact, talent, and inclusive high performance.",
+      "image": "images/about/avana-vision.png",
+      "imageAlt": "Avana's vision — India's most trusted medical company",
       "layout": "image-left"
     }
   ],
