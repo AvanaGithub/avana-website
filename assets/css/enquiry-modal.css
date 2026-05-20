@@ -1,0 +1,126 @@
+/* ============================================================
+   ENQUIRY MODAL — "Talk to a Specialist"
+   Used on every non-homepage page. Wired by enquiry-modal.js
+   ============================================================ */
+
+.enquiry-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: modalFadeIn 0.2s ease;
+}
+
+.enquiry-modal[hidden] { display: none; }
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.enquiry-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 30, 44, 0.72);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.enquiry-modal__box {
+    position: relative;
+    background: #fff;
+    border-radius: 14px;
+    padding: 36px 32px 32px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: 0 24px 60px rgba(36, 52, 71, 0.22);
+    animation: modalSlideUp 0.22s ease;
+}
+
+@keyframes modalSlideUp {
+    from { transform: translateY(16px); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.enquiry-modal__close {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #f0efec;
+    color: var(--color-primary, #243447);
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+}
+.enquiry-modal__close:hover { background: #e2ddd6; }
+
+.enquiry-modal__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.45rem;
+    color: var(--color-primary, #243447);
+    margin: 0 0 6px;
+}
+
+.enquiry-modal__sub {
+    color: var(--color-muted, #6c6c6c);
+    font-size: 0.9rem;
+    margin: 0 0 20px;
+}
+
+/* Form fields — mirror enquiry-section styles */
+.enquiry-modal__form input,
+.enquiry-modal__form select {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border: 1.5px solid #d9d4cb;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--color-text, #1a1a1a);
+    background: #faf9f7;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    box-sizing: border-box;
+}
+.enquiry-modal__form input:focus,
+.enquiry-modal__form select:focus {
+    outline: none;
+    border-color: var(--color-accent, #B18C57);
+    box-shadow: 0 0 0 3px rgba(177, 140, 87, 0.15);
+    background: #fff;
+}
+
+.enquiry-modal__form .btn--full { width: 100%; margin-top: 4px; }
+
+.enquiry-modal__success {
+    color: #2a7a4f;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
+.enquiry-modal__error {
+    color: #c44545;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 14px;
+}
+.enquiry-modal__error a { color: inherit; }
+
+@media (max-width: 480px) {
+    .enquiry-modal__box { padding: 28px 20px 24px; }
+    .enquiry-modal__title { font-size: 1.25rem; }
+}

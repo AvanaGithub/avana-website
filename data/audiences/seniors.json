@@ -1,150 +1,193 @@
 {
-  "slug": "seniors",
-  "type": "audience",
-  "metaTitle": "Knee & Joint Pain Solutions for Seniors | Avana India",
-  "metaDescription": "Doctor-recommended knee caps, joint bracing & offloaders for senior knee pain, arthritis & old age joint pain. Fitted in India, dispatched by Osteokart.",
-
-  "hero": {
-    "eyebrow": "For Seniors with Knee or Joint Pain",
-    "title": "Knee & Joint Pain Solutions for Seniors",
-    "description": "Joint pain shouldn't be the price of growing older. Doctor-recommended knee caps, offloader braces, and joint support can meaningfully reduce daily knee pain in older adults — helping you walk further, sleep better, and delay or avoid knee replacement surgery.",
-    "image": "images/condition/osteoarthritis.jpg",
-    "imageAlt": "Senior walking comfortably with knee support",
-    "ctas": [
-      { "label": "Explore Solutions", "href": "#products", "style": "primary" },
-      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
-    ]
-  },
-
-  "intro": "<p class=\"lede\">Knee pain shouldn't be the price of growing older. Yet for most Indian adults over 50, daily knee or joint pain becomes a quiet, accepted companion — making stairs harder, walks shorter, temple visits painful, and grandchildren's games something to watch instead of join. The good news: <strong>doctor-recommended bracing can change that</strong>. The right <strong>knee cap</strong> for arthritis, offloader brace for osteoarthritis, or stabiliser for instability has helped many Indian seniors walk further, sleep better, and meaningfully delay or avoid knee replacement surgery.</p>",
-
-  "whatIs": {
-    "eyebrow": "About joint pain in seniors",
-    "title": "What's going on with my knees and joints?",
-    "paragraphs": [
-      "<p>Joint pain in older adults usually comes from a combination of three things — and the right brace depends on which is dominant in your case:</p>",
-      "<p><strong>1. Osteoarthritis (OA)</strong> — wear-and-tear thinning of cartilage, mostly in the medial (inner) compartment of the knee. The most common cause in adults over 50.</p>",
-      "<p><strong>2. Muscle weakening (sarcopenia)</strong> — quadriceps and glute strength naturally decline with age, removing the muscular protection that previously kept joints stable. A stabiliser brace helps until strengthening catches up.</p>",
-      "<p><strong>3. Past injuries that healed imperfectly</strong> — old ACL tears, meniscus damage, or fracture mal-unions cause joints to wear unevenly over decades. A functional brace can offload the worn part.</p>",
-      "<p>For most Indian seniors, the answer is a mix: a properly-fitted <strong>knee cap or offloader brace</strong>, paired with simple physiotherapy and weight management.</p>"
-    ]
-  },
-
-  "symptoms": {
-    "eyebrow": "What you might be feeling",
-    "title": "Symptoms common in older adults",
-    "lead": "If any of these sound familiar, you're describing the same picture millions of Indian seniors live with daily — and there is more you can do than just rest:",
-    "items": [
-      "<strong>Stiff knees in the morning</strong> that ease after 15–30 minutes of moving around.",
-      "<strong>Pain climbing stairs</strong>, especially going down — usually a sign of patellofemoral or medial-compartment OA.",
-      "<strong>Aching after standing for long</strong> — at the kitchen, in queues, at religious gatherings.",
-      "<strong>The knee \"giving way\"</strong> on uneven ground — instability that erodes confidence.",
-      "<strong>A bow-legged appearance</strong> developing slowly over years — common in Indian seniors due to medial OA.",
-      "<strong>Clicking or grinding</strong> (crepitus) when bending the knee.",
-      "<strong>Pain that wakes you at night</strong> — less common in OA, worth a doctor visit.",
-      "<strong>Joint pain in fingers and wrists too</strong> — may suggest rheumatoid arthritis rather than OA."
-    ]
-  },
-
-  "causes": {
-    "eyebrow": "Why this happens",
-    "title": "What changes with age — and what you can do about it",
-    "lead": "Indian seniors face a particular combination of factors that drive joint pain:",
-    "items": [
-      "<strong>Osteoarthritis</strong> — the dominant cause after 50. India has unusually high rates because of cultural squatting habits.",
-      "<strong>Quadriceps and glute weakening</strong> — natural with age. The muscles that protect the knee aren't doing their job.",
-      "<strong>Weight gain over decades</strong> — every extra kilo adds 4 kg of load through the knee while walking.",
-      "<strong>Vitamin D deficiency</strong> — widespread in Indian adults. Weakens cartilage and bone density together.",
-      "<strong>Bow legs (genu varum)</strong> — increasingly common in Indian seniors, accelerates inner-knee OA.",
-      "<strong>Squatting toilets and floor-sitting</strong> — historic load on the knees that mainly comes back to bite after 50.",
-      "<strong>Past injuries</strong> — ACL tears, meniscus damage from sport or work that didn't heal fully.",
-      "<strong>Reduced activity</strong> — pain limits movement, which reduces strength, which increases pain. A vicious cycle bracing can break."
-    ]
-  },
-
-  "treatment": {
-    "eyebrow": "What helps — gently",
-    "title": "Your options, in order from gentle to medical",
-    "lead": "A senior-friendly approach to managing daily joint pain. Start at step 1; escalate only if needed:",
-    "steps": [
-      "<strong>Daily gentle walking</strong> — start with 10–15 minutes, build slowly. Activity itself slows OA progression.",
-      "<strong>A knee cap or offloader brace</strong> — for pain on stairs, instability, or daily ache. Many patients see reduced pain within days of fitting.",
-      "<strong>Physiotherapy</strong> — focused on quadriceps and glute strengthening. The single most evidence-supported non-surgical treatment.",
-      "<strong>Weight management</strong> — even 5–10 kg loss meaningfully reduces knee pain.",
-      "<strong>Vitamin D & calcium supplementation</strong> — speak with your doctor about your levels.",
-      "<strong>Hot or cold therapy</strong> — heat for stiffness, cold for acute swelling.",
-      "<strong>NSAID pain medication</strong> — short-term symptom relief, under medical guidance.",
-      "<strong>Steroid or hyaluronic injections</strong> — for moderate-to-severe OA when conservative options need a boost.",
-      "<strong>Knee replacement surgery</strong> — last resort for severe end-stage OA. Many seniors meaningfully delay it with consistent bracing + physio."
-    ]
-  },
-
-  "productsHeading": {
-    "title": "Solutions for everyday joint pain",
-    "lead": "Products chosen for people managing chronic or recurring knee and joint pain — clinically supported, fitted in India."
-  },
-
-  "whenToSeeDoctor": {
-    "eyebrow": "When to act fast",
-    "title": "When joint pain needs urgent medical attention",
-    "lead": "Most joint pain in seniors responds to gentle approaches. But these signs need same-day medical assessment:",
-    "items": [
-      "<strong>Sudden severe knee pain after a fall</strong> — possible fracture, especially with osteoporosis.",
-      "<strong>Significant knee swelling</strong> that doesn't reduce within 48 hours.",
-      "<strong>The knee won't bend or straighten</strong> — mechanical block, possible meniscus tear.",
-      "<strong>Fever or warmth in the joint</strong> — possible joint infection (rare but emergency).",
-      "<strong>Pain in many joints simultaneously</strong> (knees + hands + wrists) — may suggest rheumatoid arthritis.",
-      "<strong>Pain that wakes you at night</strong> consistently — uncommon pattern, worth investigating.",
-      "<strong>Sudden weakness in the leg</strong> — could be nerve compression in the spine, not the knee."
-    ],
-    "note": "Your family doctor or local orthopaedic specialist is the right first contact. Avana's clinical team is happy to guide you to one if you don't have a specialist already."
-  },
-
-  "testimonialsHeading": { "title": "From people just like you" },
-
-  "testimonials": [
-    {
-      "name": "Radhamani",
-      "location": "Chennai",
-      "product": "Freestyle OA",
-      "testimonial": "Initially there was discomfort due to lack of instructions, but the customer service team helped me wear it properly. Now it gives me confidence while walking and good support for my knees."
+    "slug": "seniors",
+    "type": "audience",
+    "metaTitle": "Knee & Joint Pain Solutions for Seniors | Avana India",
+    "metaDescription": "Doctor-recommended knee caps, joint bracing & offloaders for senior knee pain, arthritis & old age joint pain. Fitted in India, dispatched by Osteokart.",
+    "hero": {
+        "eyebrow": "For Seniors with Knee or Joint Pain",
+        "title": "Knee & Joint Pain Solutions for Seniors",
+        "description": "Joint pain shouldn't be the price of growing older. Doctor-recommended knee caps, offloader braces, and joint support can meaningfully reduce daily knee pain in older adults — helping you walk further, sleep better, and delay or avoid knee replacement surgery.",
+        "image": "images/condition/osteoarthritis.jpg",
+        "imageAlt": "Senior walking comfortably with knee support",
+        "ctas": [
+            {
+                "label": "Explore Solutions",
+                "href": "#products",
+                "style": "primary"
+            },
+            {
+                "label": "Talk to a Specialist",
+                "href": "#enquiry-modal",
+                "style": "outline"
+            }
+        ]
     },
-    {
-      "name": "Bhuvaneswari T",
-      "location": "Chennai",
-      "product": "Freestyle OA",
-      "testimonial": "Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well."
-    }
-  ],
-
-  "faqHeading": { "title": "Common questions from older adults" },
-
-  "faq": [
-    { "question": "Will I need knee replacement surgery eventually?", "answer": "Not necessarily. Many seniors with osteoarthritis manage their condition for 10–20 years with bracing, physiotherapy, weight management, and lifestyle changes. Surgery is one option — not the inevitable one. Severe end-stage OA may eventually require surgery, but the goal is to delay it as long as possible while preserving quality of life." },
-    { "question": "How long until I notice a difference from bracing?", "answer": "Most patients notice reduced pain within days of correct fitting, with meaningful functional improvement over 4–8 weeks of consistent use combined with gentle activity. If you're not feeling a difference by 6 weeks, the brace likely isn't the right one — speak to our team about a refit." },
-    { "question": "Can I wear a knee cap under regular clothes?", "answer": "Yes — modern braces are designed to be low-profile and worn comfortably under loose trousers, saris, or dhotis during daily activity. Our team can recommend the lowest-profile option that still gives the support you need." },
-    { "question": "Is exercise safe at my age with knee pain?", "answer": "Yes — and helpful. Low-impact exercise (walking, swimming, stationary cycling) strengthens the muscles that protect the knee, which reduces pain over time. Deep squats and high-impact running are best avoided. A physiotherapist can build a programme suited to your specific situation." },
-    { "question": "What's the difference between a \"knee cap\" and a \"knee brace\"?", "answer": "In Indian usage, \"knee cap\" usually means any wraparound knee support — from a simple elastic sleeve to a full offloader brace. \"Knee brace\" typically refers to more rigid options with hinges or panels. For osteoarthritis, you'll often want a proper offloader brace (technically a \"knee brace\") even though people commonly call it a knee cap." },
-    { "question": "Will my pain get worse if I don't treat it?", "answer": "Most likely yes, especially for osteoarthritis. Untreated OA tends to progress — cartilage continues to thin, the knee may grow more bow-legged, and the muscles around the joint weaken from disuse. Early intervention with bracing and physiotherapy gives the best long-term outcome." },
-    { "question": "Are there exercises seniors should avoid with knee pain?", "answer": "Yes — high-impact activities (jogging on hard surfaces, jumping, sport with sudden direction changes), deep squats (especially below 90°), and prolonged kneeling are best avoided. Stick to low-impact: walking, swimming, cycling, water aerobics, gentle yoga modified for knees. A physiotherapist can help tailor." }
-  ],
-
-  "blog": [],
-
-  "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Orthopaedic bracing" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
-  ],
-
-  "cta": {
-    "title": "Not sure which solution is right for your pain?",
-    "description": "Tell us about your joint pain — our clinical team will guide you to the right knee cap or brace, with no pressure to purchase.",
-    "buttons": [
-      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Joint%20pain%20enquiry", "style": "primary" },
-      { "label": "Browse on Osteokart", "href": "https://osteokart.com", "style": "secondary", "external": true }
+    "intro": "<p class=\"lede\">Knee pain shouldn't be the price of growing older. Yet for most Indian adults over 50, daily knee or joint pain becomes a quiet, accepted companion — making stairs harder, walks shorter, temple visits painful, and grandchildren's games something to watch instead of join. The good news: <strong>doctor-recommended bracing can change that</strong>. The right <strong>knee cap</strong> for arthritis, offloader brace for osteoarthritis, or stabiliser for instability has helped many Indian seniors walk further, sleep better, and meaningfully delay or avoid knee replacement surgery.</p>",
+    "whatIs": {
+        "eyebrow": "About joint pain in seniors",
+        "title": "What's going on with my knees and joints?",
+        "paragraphs": [
+            "<p>Joint pain in older adults usually comes from a combination of three things — and the right brace depends on which is dominant in your case:</p>",
+            "<p><strong>1. Osteoarthritis (OA)</strong> — wear-and-tear thinning of cartilage, mostly in the medial (inner) compartment of the knee. The most common cause in adults over 50.</p>",
+            "<p><strong>2. Muscle weakening (sarcopenia)</strong> — quadriceps and glute strength naturally decline with age, removing the muscular protection that previously kept joints stable. A stabiliser brace helps until strengthening catches up.</p>",
+            "<p><strong>3. Past injuries that healed imperfectly</strong> — old ACL tears, meniscus damage, or fracture mal-unions cause joints to wear unevenly over decades. A functional brace can offload the worn part.</p>",
+            "<p>For most Indian seniors, the answer is a mix: a properly-fitted <strong>knee cap or offloader brace</strong>, paired with simple physiotherapy and weight management.</p>"
+        ]
+    },
+    "symptoms": {
+        "eyebrow": "What you might be feeling",
+        "title": "Symptoms common in older adults",
+        "lead": "If any of these sound familiar, you're describing the same picture millions of Indian seniors live with daily — and there is more you can do than just rest:",
+        "items": [
+            "<strong>Stiff knees in the morning</strong> that ease after 15–30 minutes of moving around.",
+            "<strong>Pain climbing stairs</strong>, especially going down — usually a sign of patellofemoral or medial-compartment OA.",
+            "<strong>Aching after standing for long</strong> — at the kitchen, in queues, at religious gatherings.",
+            "<strong>The knee \"giving way\"</strong> on uneven ground — instability that erodes confidence.",
+            "<strong>A bow-legged appearance</strong> developing slowly over years — common in Indian seniors due to medial OA.",
+            "<strong>Clicking or grinding</strong> (crepitus) when bending the knee.",
+            "<strong>Pain that wakes you at night</strong> — less common in OA, worth a doctor visit.",
+            "<strong>Joint pain in fingers and wrists too</strong> — may suggest rheumatoid arthritis rather than OA."
+        ]
+    },
+    "causes": {
+        "eyebrow": "Why this happens",
+        "title": "What changes with age — and what you can do about it",
+        "lead": "Indian seniors face a particular combination of factors that drive joint pain:",
+        "items": [
+            "<strong>Osteoarthritis</strong> — the dominant cause after 50. India has unusually high rates because of cultural squatting habits.",
+            "<strong>Quadriceps and glute weakening</strong> — natural with age. The muscles that protect the knee aren't doing their job.",
+            "<strong>Weight gain over decades</strong> — every extra kilo adds 4 kg of load through the knee while walking.",
+            "<strong>Vitamin D deficiency</strong> — widespread in Indian adults. Weakens cartilage and bone density together.",
+            "<strong>Bow legs (genu varum)</strong> — increasingly common in Indian seniors, accelerates inner-knee OA.",
+            "<strong>Squatting toilets and floor-sitting</strong> — historic load on the knees that mainly comes back to bite after 50.",
+            "<strong>Past injuries</strong> — ACL tears, meniscus damage from sport or work that didn't heal fully.",
+            "<strong>Reduced activity</strong> — pain limits movement, which reduces strength, which increases pain. A vicious cycle bracing can break."
+        ]
+    },
+    "treatment": {
+        "eyebrow": "What helps — gently",
+        "title": "Your options, in order from gentle to medical",
+        "lead": "A senior-friendly approach to managing daily joint pain. Start at step 1; escalate only if needed:",
+        "steps": [
+            "<strong>Daily gentle walking</strong> — start with 10–15 minutes, build slowly. Activity itself slows OA progression.",
+            "<strong>A knee cap or offloader brace</strong> — for pain on stairs, instability, or daily ache. Many patients see reduced pain within days of fitting.",
+            "<strong>Physiotherapy</strong> — focused on quadriceps and glute strengthening. The single most evidence-supported non-surgical treatment.",
+            "<strong>Weight management</strong> — even 5–10 kg loss meaningfully reduces knee pain.",
+            "<strong>Vitamin D & calcium supplementation</strong> — speak with your doctor about your levels.",
+            "<strong>Hot or cold therapy</strong> — heat for stiffness, cold for acute swelling.",
+            "<strong>NSAID pain medication</strong> — short-term symptom relief, under medical guidance.",
+            "<strong>Steroid or hyaluronic injections</strong> — for moderate-to-severe OA when conservative options need a boost.",
+            "<strong>Knee replacement surgery</strong> — last resort for severe end-stage OA. Many seniors meaningfully delay it with consistent bracing + physio."
+        ]
+    },
+    "productsHeading": {
+        "title": "Solutions for everyday joint pain",
+        "lead": "Products chosen for people managing chronic or recurring knee and joint pain — clinically supported, fitted in India."
+    },
+    "whenToSeeDoctor": {
+        "eyebrow": "When to act fast",
+        "title": "When joint pain needs urgent medical attention",
+        "lead": "Most joint pain in seniors responds to gentle approaches. But these signs need same-day medical assessment:",
+        "items": [
+            "<strong>Sudden severe knee pain after a fall</strong> — possible fracture, especially with osteoporosis.",
+            "<strong>Significant knee swelling</strong> that doesn't reduce within 48 hours.",
+            "<strong>The knee won't bend or straighten</strong> — mechanical block, possible meniscus tear.",
+            "<strong>Fever or warmth in the joint</strong> — possible joint infection (rare but emergency).",
+            "<strong>Pain in many joints simultaneously</strong> (knees + hands + wrists) — may suggest rheumatoid arthritis.",
+            "<strong>Pain that wakes you at night</strong> consistently — uncommon pattern, worth investigating.",
+            "<strong>Sudden weakness in the leg</strong> — could be nerve compression in the spine, not the knee."
+        ],
+        "note": "Your family doctor or local orthopaedic specialist is the right first contact. Avana's clinical team is happy to guide you to one if you don't have a specialist already."
+    },
+    "testimonialsHeading": {
+        "title": "From people just like you"
+    },
+    "testimonials": [
+        {
+            "name": "Radhamani",
+            "location": "Chennai",
+            "product": "Freestyle OA",
+            "testimonial": "Initially there was discomfort due to lack of instructions, but the customer service team helped me wear it properly. Now it gives me confidence while walking and good support for my knees."
+        },
+        {
+            "name": "Bhuvaneswari T",
+            "location": "Chennai",
+            "product": "Freestyle OA",
+            "testimonial": "Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well."
+        }
     ],
-    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
-  }
+    "faqHeading": {
+        "title": "Common questions from older adults"
+    },
+    "faq": [
+        {
+            "question": "Will I need knee replacement surgery eventually?",
+            "answer": "Not necessarily. Many seniors with osteoarthritis manage their condition for 10–20 years with bracing, physiotherapy, weight management, and lifestyle changes. Surgery is one option — not the inevitable one. Severe end-stage OA may eventually require surgery, but the goal is to delay it as long as possible while preserving quality of life."
+        },
+        {
+            "question": "How long until I notice a difference from bracing?",
+            "answer": "Most patients notice reduced pain within days of correct fitting, with meaningful functional improvement over 4–8 weeks of consistent use combined with gentle activity. If you're not feeling a difference by 6 weeks, the brace likely isn't the right one — speak to our team about a refit."
+        },
+        {
+            "question": "Can I wear a knee cap under regular clothes?",
+            "answer": "Yes — modern braces are designed to be low-profile and worn comfortably under loose trousers, saris, or dhotis during daily activity. Our team can recommend the lowest-profile option that still gives the support you need."
+        },
+        {
+            "question": "Is exercise safe at my age with knee pain?",
+            "answer": "Yes — and helpful. Low-impact exercise (walking, swimming, stationary cycling) strengthens the muscles that protect the knee, which reduces pain over time. Deep squats and high-impact running are best avoided. A physiotherapist can build a programme suited to your specific situation."
+        },
+        {
+            "question": "What's the difference between a \"knee cap\" and a \"knee brace\"?",
+            "answer": "In Indian usage, \"knee cap\" usually means any wraparound knee support — from a simple elastic sleeve to a full offloader brace. \"Knee brace\" typically refers to more rigid options with hinges or panels. For osteoarthritis, you'll often want a proper offloader brace (technically a \"knee brace\") even though people commonly call it a knee cap."
+        },
+        {
+            "question": "Will my pain get worse if I don't treat it?",
+            "answer": "Most likely yes, especially for osteoarthritis. Untreated OA tends to progress — cartilage continues to thin, the knee may grow more bow-legged, and the muscles around the joint weaken from disuse. Early intervention with bracing and physiotherapy gives the best long-term outcome."
+        },
+        {
+            "question": "Are there exercises seniors should avoid with knee pain?",
+            "answer": "Yes — high-impact activities (jogging on hard surfaces, jumping, sport with sudden direction changes), deep squats (especially below 90°), and prolonged kneeling are best avoided. Stick to low-impact: walking, swimming, cycling, water aerobics, gentle yoga modified for knees. A physiotherapist can help tailor."
+        }
+    ],
+    "blog": [],
+    "brands": [
+        {
+            "name": "Breg",
+            "logo": "images/brands/breg-logo.png.png",
+            "caption": "USA · Sports medicine bracing"
+        },
+        {
+            "name": "Aspen Medical",
+            "logo": "images/brands/aspen-logo.png.jpg",
+            "caption": "USA · Orthopaedic bracing"
+        },
+        {
+            "name": "RiwoSpine",
+            "logo": "images/brands/riwospine-logo.png.png",
+            "caption": "Germany · Endoscopic spine systems"
+        },
+        {
+            "name": "Osteokart",
+            "logo": "images/brands/osteokart-logo.png.png",
+            "caption": "India · Authorised retail partner"
+        }
+    ],
+    "cta": {
+        "title": "Not sure which solution is right for your pain?",
+        "description": "Tell us about your joint pain — our clinical team will guide you to the right knee cap or brace, with no pressure to purchase.",
+        "buttons": [
+            {
+                "label": "Talk to a Specialist",
+                "href": "#enquiry-modal",
+                "style": "primary"
+            },
+            {
+                "label": "Browse on Osteokart",
+                "href": "https://osteokart.com",
+                "style": "secondary",
+                "external": true
+            }
+        ],
+        "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+    }
 }

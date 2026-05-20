@@ -1,63 +1,101 @@
 /* ============================================================
    AVANA — "Talk to a Specialist" modal
-   Handles open/close and Web3Forms AJAX submission.
-   Loaded by solution-template.html on all solution pages.
+   Routing logic:
+     - Homepage (has <section id="enquiry">) → smooth-scroll to that
+       section.
+     - Any other page that has #enquiry-modal in the DOM → open the
+       modal popup.
+     - Fallback → navigate to homepage form.
+   Submits via Web3Forms AJAX (no page redirect).
+   Loaded on every non-homepage page.
    ============================================================ */
 
 (function () {
     'use strict';
 
-    const modal   = document.getElementById('enquiry-modal');
-    const overlay = document.getElementById('enquiry-modal-overlay');
-    const closeBtn = document.getElementById('enquiry-modal-close');
-    const form    = document.getElementById('enquiry-modal-form');
-    const submit  = document.getElementById('enquiry-modal-submit');
-    const success = document.getElementById('enquiry-modal-success');
-    const error   = document.getElementById('enquiry-modal-error');
-
-    if (!modal) return; // not on this page
-
     /* ---------- open / close ---------- */
     function openModal() {
+        const modal = document.getElementById('enquiry-modal');
+        if (!modal) return;
         modal.hidden = false;
         document.body.style.overflow = 'hidden';
-        modal.querySelector('input[name="name"]').focus();
+        const firstInput = modal.querySelector('input[name="name"]');
+        if (firstInput) firstInput.focus();
     }
 
     function closeModal() {
+        const modal = document.getElementById('enquiry-modal');
+        if (!modal) return;
         modal.hidden = true;
         document.body.style.overflow = '';
     }
 
-    /* ---------- intercept "Talk to a Specialist" clicks ---------- */
+    /* ---------- global click interceptor for "Talk to a Specialist" ---------- */
     document.addEventListener('click', function (e) {
         const link = e.target.closest('a, button');
         if (!link) return;
 
-        const href = link.getAttribute('href') || '';
+        const href = (link.getAttribute('href') || '').trim();
         const text = link.textContent.trim();
 
-        if (href === '#enquiry-modal' || text === 'Talk to a Specialist') {
-            e.preventDefault();
-            openModal();
+        const isTalkToSpecialist =
+            href === '#enquiry-modal' ||
+            href === 'index.html#enquiry' ||
+            href === '#enquiry' ||
+            text === 'Talk to a Specialist';
+
+        if (!isTalkToSpecialist) return;
+        e.preventDefault();
+
+        // Priority 1 — homepage in-page form section
+        const homepageSection = document.getElementById('enquiry');
+        if (homepageSection) {
+            homepageSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            return;
         }
+
+        // Priority 2 — modal exists on this page (any non-homepage page)
+        if (document.getElementById('enquiry-modal')) {
+            openModal();
+            return;
+        }
+
+        // Priority 3 — neither: send user to homepage form
+        window.location.href = 'index.html#enquiry';
     });
 
-    /* ---------- close triggers ---------- */
-    closeBtn && closeBtn.addEventListener('click', closeModal);
-    overlay  && overlay.addEventListener('click', closeModal);
+    /* ---------- close triggers (delegated so partial injection is fine) ---------- */
+    document.addEventListener('click', function (e) {
+        if (e.target.closest('#enquiry-modal-close')) {
+            closeModal();
+            return;
+        }
+        if (e.target.id === 'enquiry-modal-overlay') {
+            closeModal();
+        }
+    });
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !modal.hidden) closeModal();
+        if (e.key !== 'Escape') return;
+        const modal = document.getElementById('enquiry-modal');
+        if (modal && !modal.hidden) closeModal();
     });
 
     /* ---------- form submission (Web3Forms AJAX) ---------- */
-    form && form.addEventListener('submit', async function (e) {
+    // Delegated submit so it works even when the modal HTML is injected
+    // later via include-partials.js.
+    document.addEventListener('submit', async function (e) {
+        const form = e.target;
+        if (!form || form.id !== 'enquiry-modal-form') return;
+
         e.preventDefault();
+
+        const submit  = document.getElementById('enquiry-modal-submit');
+        const success = document.getElementById('enquiry-modal-success');
+        const error   = document.getElementById('enquiry-modal-error');
 
         if (success) success.hidden = true;
         if (error)   error.hidden   = true;
 
-        // Basic validation
         if (!form.checkValidity()) {
             form.reportValidity();
             return;

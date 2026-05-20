@@ -16,7 +16,7 @@
             },
             {
                 "label": "Talk to a Specialist",
-                "href": "#cta",
+                "href": "#enquiry-modal",
                 "style": "outline"
             }
         ]
@@ -136,7 +136,7 @@
         "buttons": [
             {
                 "label": "Talk to a Specialist",
-                "href": "mailto:info@avanasurgical.com?subject=Spine%20pain%20support%20enquiry",
+                "href": "#enquiry-modal",
                 "style": "primary"
             },
             {
