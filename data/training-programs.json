@@ -765,7 +765,11 @@
       ],
       "description": "3 cadaveric stations.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-06-ms-ramaiah-bangalore/"
+      "photoFolder": "images/training/2026-06-ms-ramaiah-bangalore/",
+      "fee": 45000,
+      "feeCurrency": "INR",
+      "seatsTotal": 20,
+      "seatsBooked": 6
     },
     {
       "slug": "2026-07-yatharth-greater-noida",
