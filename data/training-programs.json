@@ -14,8 +14,11 @@
       "highlights": "Optional array of 2–4 bullet points",
       "photoCount": "Number of photos in images/training/{slug}/ named 01.jpg … NN.jpg. Page renders all with onerror=hide so any missing numbers vanish.",
       "photoFolder": "Auto-set to images/training/{slug}/",
-      "registrationUrl": "Optional — Razorpay Payment Link (or other) for upcoming programs. If omitted, the Register button falls back to a mailto link.",
-      "feeType": "Optional — 'free' or 'paid'. Used by the admin panel; doesn't change rendering today."
+      "registrationUrl": "Optional — Razorpay Payment Page URL (https://pages.razorpay.com/...) for upcoming programmes. If omitted, the Register button falls back to a mailto link.",
+      "fee": "Optional — integer fee in ₹ (e.g. 7500). 0 or omitted means free. Displayed as a pill on the card.",
+      "feeCurrency": "Optional — defaults to 'INR'. Set if a programme is priced in another currency.",
+      "seatsTotal": "Optional — total seats configured on the Razorpay page. When set together with seatsBooked, the card shows 'X of Y seats remaining' and switches to Sold Out when full.",
+      "seatsBooked": "Optional — current booked count, updated manually by the admin after checking the Razorpay dashboard. Defaults to 0."
     }
   },
   "controlledVocab": {

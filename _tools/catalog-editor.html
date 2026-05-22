@@ -332,6 +332,9 @@
     .modal--careers .grid-2 {
         display: grid; grid-template-columns: 1fr 1fr; gap: 0 12px;
     }
+    .modal--training .grid-3 {
+        display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0 12px;
+    }
 
     /* ===== Careers tab specific ===== */
     .careers-list { padding: 0 24px 100px; }
@@ -630,8 +633,19 @@
                 <label>Photo count (in images/training/{slug}/)
                     <input type="number" id="tm-photo-count" min="0" step="1" placeholder="0">
                 </label>
-                <label>Registration URL (optional)
-                    <input type="text" id="tm-reg-url" placeholder="https://… or leave blank for mailto fallback">
+                <label>Registration URL — Razorpay Payment Page (optional)
+                    <input type="text" id="tm-reg-url" placeholder="https://pages.razorpay.com/... or leave blank for mailto fallback">
+                </label>
+            </div>
+            <div class="grid-3">
+                <label>Fee (₹)
+                    <input type="number" id="tm-fee" min="0" step="1" placeholder="0 for free">
+                </label>
+                <label>Total seats
+                    <input type="number" id="tm-seats-total" min="0" step="1" placeholder="e.g. 20">
+                </label>
+                <label>Booked seats
+                    <input type="number" id="tm-seats-booked" min="0" step="1" placeholder="0">
                 </label>
             </div>
         </div>
@@ -1068,7 +1082,8 @@ let trainingEditingIdx = null;
 const TRAINING_FIELD_ORDER = [
     'slug', 'name', 'date', 'endDate', 'doctors',
     'place', 'venue', 'activities', 'description', 'highlights',
-    'photoCount', 'photoFolder', 'registrationUrl'
+    'photoCount', 'photoFolder', 'registrationUrl',
+    'fee', 'feeCurrency', 'seatsTotal', 'seatsBooked'
 ];
 
 async function loadTraining() {
@@ -1215,6 +1230,9 @@ function openTrainingModal(idx) {
     document.getElementById('tm-highlights').value = (p.highlights || []).join('\n');
     document.getElementById('tm-photo-count').value = p.photoCount != null ? p.photoCount : '';
     document.getElementById('tm-reg-url').value = p.registrationUrl || '';
+    document.getElementById('tm-fee').value = p.fee != null ? p.fee : '';
+    document.getElementById('tm-seats-total').value = p.seatsTotal != null ? p.seatsTotal : '';
+    document.getElementById('tm-seats-booked').value = p.seatsBooked != null ? p.seatsBooked : '';
 
     // Activity checkboxes
     const wrap = document.getElementById('tm-activities');
@@ -1243,6 +1261,9 @@ function saveTrainingModal() {
     const photoCount = parseInt(document.getElementById('tm-photo-count').value, 10);
     const regUrl = document.getElementById('tm-reg-url').value.trim();
     const endDate = document.getElementById('tm-end-date').value.trim();
+    const feeRaw         = document.getElementById('tm-fee').value.trim();
+    const seatsTotalRaw  = document.getElementById('tm-seats-total').value.trim();
+    const seatsBookedRaw = document.getElementById('tm-seats-booked').value.trim();
 
     const entry = {
         slug, name, date,
@@ -1257,6 +1278,20 @@ function saveTrainingModal() {
     if (endDate) entry.endDate = endDate;
     if (highlights.length) entry.highlights = highlights;
     if (regUrl) entry.registrationUrl = regUrl;
+
+    // Fee / seats — only emit when the admin actually entered a value.
+    // 0 is a valid fee (free programme) so we don't treat it as empty.
+    if (feeRaw !== '' && !isNaN(parseInt(feeRaw, 10))) {
+        entry.fee = parseInt(feeRaw, 10);
+        entry.feeCurrency = 'INR';
+    }
+    if (seatsTotalRaw !== '' && !isNaN(parseInt(seatsTotalRaw, 10))) {
+        entry.seatsTotal = parseInt(seatsTotalRaw, 10);
+    }
+    if (seatsBookedRaw !== '' && !isNaN(parseInt(seatsBookedRaw, 10))) {
+        entry.seatsBooked = parseInt(seatsBookedRaw, 10);
+    }
+
     // Strip undefined for clean JSON
     Object.keys(entry).forEach(k => entry[k] === undefined && delete entry[k]);
 

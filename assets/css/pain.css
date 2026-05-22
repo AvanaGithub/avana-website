@@ -1134,9 +1134,61 @@ a { color: inherit; }
 .training-card__cta--register::after { content: '→'; font-size: 1rem; }
 
 /* Legacy single-button fallback (still used elsewhere if any) */
-.training-card__cta:not(.training-card__cta--view):not(.training-card__cta--register) {
+.training-card__cta:not(.training-card__cta--view):not(.training-card__cta--register):not(.training-card__cta--soldout) {
     background: var(--color-primary);
     color: var(--color-white);
+}
+
+/* Price + seat-availability meta line (shown above CTAs for upcoming programmes) */
+.training-card__price-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin: 4px 0 12px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.training-card__fee {
+    display: inline-block;
+    background: var(--color-accent, #B18C57);
+    color: var(--color-white);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+}
+.training-card__fee--free {
+    background: #2a7a4f;
+}
+
+.training-card__seats {
+    color: var(--color-muted, #6c6c6c);
+    font-weight: 500;
+}
+.training-card__seats--low {
+    color: #c44545;
+    font-weight: 600;
+}
+.training-card__seats--soldout {
+    color: #c44545;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+}
+
+/* Sold Out pseudo-button (non-clickable replacement for Register) */
+.training-card__cta--soldout {
+    flex: 1 1 auto;
+    text-align: center;
+    background: #ebe6dd;
+    color: #6c6c6c;
+    border: 1.5px solid #ebe6dd;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 .training-empty {

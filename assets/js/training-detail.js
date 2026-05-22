@@ -119,10 +119,21 @@
             `<span class="training-detail__activity">${escapeHtml(activityLabel(slug, vocab))}</span>`
         ).join('');
 
+        // Fee + seats computed once, used by meta items AND CTA bar
+        const hasFee = typeof program.fee === 'number';
+        const hasSeats = typeof program.seatsTotal === 'number';
+        const seatsBooked = typeof program.seatsBooked === 'number' ? program.seatsBooked : 0;
+        const seatsRemaining = hasSeats ? Math.max(0, program.seatsTotal - seatsBooked) : null;
+        const isSoldOut = !past && hasSeats && seatsRemaining === 0;
+        const feeIsFree = hasFee && program.fee === 0;
+        const feeLabel = !hasFee ? null : feeIsFree ? 'Free' : '₹' + Number(program.fee).toLocaleString('en-IN');
+
         const metaItems = [
             { label: 'Date',    value: dateStr },
             doctors                ? { label: 'Faculty', value: doctors } : null,
             program.place          ? { label: 'Where',   value: program.place + (program.venue ? ` · ${program.venue}` : '') } : null,
+            !past && hasFee        ? { label: 'Fee',     value: feeLabel } : null,
+            !past && hasSeats      ? { label: 'Seats',   value: isSoldOut ? 'Sold out' : `${seatsRemaining} of ${program.seatsTotal} remaining` } : null,
         ].filter(Boolean).map(item =>
             `<div class="training-detail__meta-item">
                 <span class="training-detail__meta-label">${escapeHtml(item.label)}</span>
@@ -163,6 +174,18 @@
                     </div>
                     <div class="training-detail__cta-buttons">
                         <a href="#enquiry-modal" class="training-detail__btn training-detail__btn--outline">Talk to a Specialist</a>
+                    </div>
+                </div>`;
+        } else if (isSoldOut) {
+            ctaBar = `
+                <div class="training-detail__cta-bar">
+                    <div class="training-detail__cta-text">
+                        <strong>This programme is sold out.</strong><br>
+                        Add your name to the waitlist or ask about a future edition.
+                    </div>
+                    <div class="training-detail__cta-buttons">
+                        <a href="#enquiry-modal" class="training-detail__btn training-detail__btn--outline">Join Waitlist</a>
+                        <span class="training-detail__btn training-detail__btn--soldout" aria-disabled="true">Sold Out</span>
                     </div>
                 </div>`;
         } else {

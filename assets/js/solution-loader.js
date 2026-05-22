@@ -263,18 +263,57 @@
             photoGrid += `</div>`;
         }
 
+        // Fee + seat-availability meta line (shown above the CTAs for upcoming programmes
+        // that have fee/seats data). Razorpay's Payment Page is the source of truth for
+        // both — we just mirror them here for display. seatsBooked is updated manually by
+        // the admin from the Razorpay dashboard.
+        let priceMetaHtml = '';
+        let isSoldOut = false;
+        if (!isPast) {
+            const hasFee = typeof p.fee === 'number';
+            const hasSeats = typeof p.seatsTotal === 'number';
+            const seatsBooked = typeof p.seatsBooked === 'number' ? p.seatsBooked : 0;
+            const seatsRemaining = hasSeats ? Math.max(0, p.seatsTotal - seatsBooked) : null;
+            isSoldOut = hasSeats && seatsRemaining === 0;
+
+            const parts = [];
+            if (hasFee) {
+                const feeIsFree = p.fee === 0;
+                const feeLabel = feeIsFree
+                    ? 'Free'
+                    : '₹' + Number(p.fee).toLocaleString('en-IN');
+                parts.push(`<span class="training-card__fee${feeIsFree ? ' training-card__fee--free' : ''}">${escapeHtml(feeLabel)}</span>`);
+            }
+            if (hasSeats) {
+                const lowSeats = seatsRemaining > 0 && seatsRemaining <= Math.max(1, Math.ceil(p.seatsTotal * 0.25));
+                const seatsLabel = isSoldOut
+                    ? 'Sold out'
+                    : `${seatsRemaining} of ${p.seatsTotal} seats remaining`;
+                parts.push(`<span class="training-card__seats${lowSeats ? ' training-card__seats--low' : ''}${isSoldOut ? ' training-card__seats--soldout' : ''}">${escapeHtml(seatsLabel)}</span>`);
+            }
+            if (parts.length) {
+                priceMetaHtml = `<div class="training-card__price-meta">${parts.join('')}</div>`;
+            }
+        }
+
         // CTA buttons:
         //   - "View Programme" → always present, links to training-detail.html?slug=...
         //   - "Register" → only for upcoming programs. Uses registrationUrl
-        //     (Razorpay Payment Link) if present, else mailto fallback.
+        //     (Razorpay Payment Page) if present, else mailto fallback.
+        //   - If the programme is sold out, replace Register with a non-clickable
+        //     "Sold Out" badge.
         const detailUrl = `training-detail.html?slug=${encodeURIComponent(p.slug)}`;
         const viewCta = `<a href="${detailUrl}" class="training-card__cta training-card__cta--view">View Programme</a>`;
 
         let registerCta = '';
         if (!isPast) {
-            const regUrl = p.registrationUrl || `mailto:info@avanasurgical.com?subject=${encodeURIComponent('Registration: ' + p.name)}`;
-            const isExternal = /^https?:/i.test(regUrl);
-            registerCta = `<a href="${escapeHtml(regUrl)}" class="training-card__cta training-card__cta--register"${isExternal ? ' target="_blank" rel="noopener"' : ''}>Register</a>`;
+            if (isSoldOut) {
+                registerCta = `<span class="training-card__cta training-card__cta--soldout" aria-disabled="true">Sold Out</span>`;
+            } else {
+                const regUrl = p.registrationUrl || `mailto:info@avanasurgical.com?subject=${encodeURIComponent('Registration: ' + p.name)}`;
+                const isExternal = /^https?:/i.test(regUrl);
+                registerCta = `<a href="${escapeHtml(regUrl)}" class="training-card__cta training-card__cta--register"${isExternal ? ' target="_blank" rel="noopener"' : ''}>Register</a>`;
+            }
         }
 
         const cta = `<div class="training-card__ctas">${viewCta}${registerCta}</div>`;
@@ -300,6 +339,7 @@
                 ${p.description ? `<p class="training-card__description">${escapeHtml(p.description)}</p>` : ''}
                 ${isPast && Array.isArray(p.highlights) && p.highlights.length ? `<ul class="training-card__highlights">${p.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('')}</ul>` : ''}
                 ${photoGrid}
+                ${priceMetaHtml}
                 ${cta}
                 ${photoData}
             </article>
