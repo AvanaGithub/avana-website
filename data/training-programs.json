@@ -769,7 +769,8 @@
       "fee": 45000,
       "feeCurrency": "INR",
       "seatsTotal": 20,
-      "seatsBooked": 6
+      "seatsBooked": 20,
+      "registrationUrl": "https://rzp.io/rzp/ngqvNzA"
     },
     {
       "slug": "2026-07-yatharth-greater-noida",
