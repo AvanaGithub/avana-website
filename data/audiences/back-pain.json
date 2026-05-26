@@ -1,228 +1,221 @@
 {
-    "slug": "back-pain",
-    "type": "audience",
-    "metaTitle": "Back Pain Solutions — Lumbar Belts & Bracing | Avana",
-    "metaDescription": "Doctor-recommended lumbar belts & spine bracing for lower back pain, slipped disc, sciatica & posture correction. Fitted in India by Avana Surgical.",
-    "hero": {
-        "eyebrow": "For People with Back Pain",
-        "title": "Back Pain Solutions — Lumbar Belts & Bracing",
-        "description": "Up to 8 in 10 Indian adults will deal with back pain at some point — making it one of the most common and most overlooked health problems in the country. The good news: doctor-recommended lumbar belts, posture supports, and spine bracing can meaningfully change how your back feels every day.",
-        "image": "images/audience/backpain.jpg",
-        "imageAlt": "Person with lumbar support",
-        "ctas": [
-            {
-                "label": "Explore Solutions",
-                "href": "#products",
-                "style": "primary"
-            },
-            {
-                "label": "Talk to a Specialist",
-                "href": "#enquiry-modal",
-                "style": "outline"
-            }
-        ]
+  "slug": "back-pain",
+  "type": "audience",
+  "metaTitle": "Back Pain Solutions — Lumbar Belts & Bracing | Avana",
+  "metaDescription": "Doctor-recommended lumbar belts & spine bracing for lower back pain, slipped disc, sciatica & posture correction. Fitted in India by Avana Surgical.",
+  "hero": {
+    "eyebrow": "For People with Back Pain",
+    "title": "Back Pain Solutions — Lumbar Belts & Bracing",
+    "description": "Up to 8 in 10 Indian adults will deal with back pain at some point — making it one of the most common and most overlooked health problems in the country. The good news: doctor-recommended lumbar belts, posture supports, and spine bracing can meaningfully change how your back feels every day.",
+    "image": "images/audience/backpain.jpg",
+    "imageAlt": "Person with lumbar support",
+    "ctas": [
+      {
+        "label": "Explore Solutions",
+        "href": "#products",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to a Specialist",
+        "href": "#enquiry-modal",
+        "style": "outline"
+      }
+    ]
+  },
+  "intro": "<p class=\"lede\">Back pain affects most Indian adults at some point — whether from a desk job, lifting strain, postpartum recovery, an old slipped disc, or just years of sitting cross-legged on the floor. Most live with it because they don't know what else to do. But there <strong>is</strong> more you can do than lie flat and wait. A doctor-recommended <strong>lumbar belt</strong>, posture support, or rigid LSO — combined with the right movement plan — can meaningfully reduce daily back ache, slipped-disc pain, sciatica, and post-op recovery time.</p>",
+  "whatIs": {
+    "eyebrow": "Diagnosing the cause",
+    "title": "What's actually causing my back pain?",
+    "paragraphs": [
+      "<p>Back pain isn't one thing — it has many causes, and the right brace (and treatment plan) depends on which one is yours. The most common patterns:</p>",
+      "<p><strong>1. Mechanical low back pain</strong> — the most common type. Pain comes from muscle strain, posture, or fatigue. Responds well to lumbar bracing combined with core strengthening.</p>",
+      "<p><strong>2. Slipped disc (disc herniation)</strong> — a disc presses on a nerve, causing back pain that often radiates down a leg. Bracing limits aggravating motion while the disc settles.</p>",
+      "<p><strong>3. Sciatica</strong> — sharp pain shooting from the low back down one leg, sometimes to the foot. A specific type of nerve-compression pain.</p>",
+      "<p><strong>4. Scoliosis</strong> — sideways curvature of the spine, often first noticed in teens. Modern bracing during the growth period has strong clinical evidence.</p>",
+      "<p><strong>5. Postural ache</strong> — desk work, smartphones, \"tech neck\". The fix is partly equipment, partly habit.</p>",
+      "<p><strong>6. SI joint dysfunction</strong> — pain at the dimples above the buttocks, particularly common postpartum. Specific SI belts help.</p>",
+      "<p><strong>7. Cervical spondylosis</strong> — wear-and-tear in the neck causing pain that radiates to shoulders.</p>"
+    ]
+  },
+  "symptoms": {
+    "eyebrow": "What you might feel",
+    "title": "Symptoms of back and spine problems",
+    "lead": "If any of these match what you're feeling, you're describing problems that bracing — combined with the right movement plan — typically helps:",
+    "items": [
+      "<strong>Lower back ache</strong> that worsens through the day, especially after sitting or standing for long.",
+      "<strong>Sharp pain that radiates down one leg</strong> — sciatica, often from a slipped disc.",
+      "<strong>Stiffness in the morning</strong> that eases after moving.",
+      "<strong>Pain when bending or twisting</strong> — particularly when getting up from squatting.",
+      "<strong>Burning, tingling, or numbness in the leg or foot</strong> — nerve-related, needs medical assessment.",
+      "<strong>Posture you can't comfortably hold</strong> — slumping, leaning to one side.",
+      "<strong>Neck pain that radiates into your shoulders</strong> — common with desk work, sometimes cervical spondylosis.",
+      "<strong>Pain that started during or after pregnancy</strong> — often SI joint dysfunction."
+    ]
+  },
+  "causes": {
+    "eyebrow": "Why it happens",
+    "title": "Why so many Indians struggle with back pain",
+    "lead": "India has higher rates of back pain than global averages. The drivers are specific:",
+    "items": [
+      "<strong>Manual labour and heavy lifting</strong> — construction, farming, factory work, hand-loading without ergonomic training.",
+      "<strong>Long-duration sitting</strong> — desk jobs, drivers, long commutes. The back is not built for 8+ hours of static sitting.",
+      "<strong>Squatting toilets and floor sitting</strong> — cultural habits that load the low back and SI joints in ways chair-based cultures don't experience.",
+      "<strong>Postpartum changes</strong> — pregnancy and delivery shift the SI joint and weaken the core. Indian women receive less postpartum rehab than developed countries.",
+      "<strong>Smartphone and laptop posture</strong> — \"tech neck\" and rounded-shoulder ache, increasingly seen in 20s and 30s.",
+      "<strong>Carrying heavy bags on one shoulder</strong> — school children, working adults. Asymmetric loading over years.",
+      "<strong>Vitamin D deficiency and osteoporosis</strong> — increase fracture risk, weaken vertebral bodies, contribute to compression injuries.",
+      "<strong>Lack of core-strengthening exercise</strong> — most adults receive no formal back-care education."
+    ]
+  },
+  "treatment": {
+    "eyebrow": "What helps",
+    "title": "Your options, from gentle to medical",
+    "lead": "A conservative-first ladder. Start at step 1 and move up only if needed:",
+    "steps": [
+      "<strong>Activity modification + posture awareness</strong> — ergonomic chair, monitor at eye level, no more deep squatting if it triggers pain.",
+      "<strong>Daily walking and gentle movement</strong> — rest is not the cure for most back pain. Movement, gently, is.",
+      "<strong>A lumbar belt or LSO</strong> — for daily wear during work, lifting, or long sitting. Reduces pain enough to let you stay active.",
+      "<strong>Cervical collar</strong> — if neck pain is also part of the picture.",
+      "<strong>Postural support brace</strong> — gentle reminder to sit and stand straighter.",
+      "<strong>Physiotherapy + core strengthening</strong> — the long-term cure for most mechanical back pain.",
+      "<strong>Hot/cold therapy</strong> — heat for chronic ache and muscle spasm; cold for acute flares with swelling.",
+      "<strong>NSAID pain medication</strong> — short-term symptom relief under medical guidance.",
+      "<strong>Epidural injection</strong> — for severe radicular pain (sciatica) that doesn't respond to conservative care.",
+      "<strong>Surgery</strong> — last resort, for select cases (severe disc, instability, neurological deficit)."
+    ]
+  },
+  "conditionsHeading": {
+    "eyebrow": "Common conditions",
+    "title": "What's behind your back pain?",
+    "lead": "Back pain is rarely one thing. These are the conditions we most commonly help patients manage."
+  },
+  "conditions": [
+    {
+      "icon": "🫀",
+      "title": "Lower Back Pain",
+      "description": "The most common type — mechanical pain from muscle strain, posture, or fatigue. Lumbar bracing reduces daily load and keeps you moving."
     },
-    "intro": "<p class=\"lede\">Back pain affects most Indian adults at some point — whether from a desk job, lifting strain, postpartum recovery, an old slipped disc, or just years of sitting cross-legged on the floor. Most live with it because they don't know what else to do. But there <strong>is</strong> more you can do than lie flat and wait. A doctor-recommended <strong>lumbar belt</strong>, posture support, or rigid LSO — combined with the right movement plan — can meaningfully reduce daily back ache, slipped-disc pain, sciatica, and post-op recovery time.</p>",
-    "whatIs": {
-        "eyebrow": "Diagnosing the cause",
-        "title": "What's actually causing my back pain?",
-        "paragraphs": [
-            "<p>Back pain isn't one thing — it has many causes, and the right brace (and treatment plan) depends on which one is yours. The most common patterns:</p>",
-            "<p><strong>1. Mechanical low back pain</strong> — the most common type. Pain comes from muscle strain, posture, or fatigue. Responds well to lumbar bracing combined with core strengthening.</p>",
-            "<p><strong>2. Slipped disc (disc herniation)</strong> — a disc presses on a nerve, causing back pain that often radiates down a leg. Bracing limits aggravating motion while the disc settles.</p>",
-            "<p><strong>3. Sciatica</strong> — sharp pain shooting from the low back down one leg, sometimes to the foot. A specific type of nerve-compression pain.</p>",
-            "<p><strong>4. Scoliosis</strong> — sideways curvature of the spine, often first noticed in teens. Modern bracing during the growth period has strong clinical evidence.</p>",
-            "<p><strong>5. Postural ache</strong> — desk work, smartphones, \"tech neck\". The fix is partly equipment, partly habit.</p>",
-            "<p><strong>6. SI joint dysfunction</strong> — pain at the dimples above the buttocks, particularly common postpartum. Specific SI belts help.</p>",
-            "<p><strong>7. Cervical spondylosis</strong> — wear-and-tear in the neck causing pain that radiates to shoulders.</p>"
-        ]
+    {
+      "icon": "🔄",
+      "title": "Scoliosis",
+      "description": "Sideways curvature of the spine, often first noticed in adolescents. Evidence-based bracing during the growth period can halt progression."
     },
-    "symptoms": {
-        "eyebrow": "What you might feel",
-        "title": "Symptoms of back and spine problems",
-        "lead": "If any of these match what you're feeling, you're describing problems that bracing — combined with the right movement plan — typically helps:",
-        "items": [
-            "<strong>Lower back ache</strong> that worsens through the day, especially after sitting or standing for long.",
-            "<strong>Sharp pain that radiates down one leg</strong> — sciatica, often from a slipped disc.",
-            "<strong>Stiffness in the morning</strong> that eases after moving.",
-            "<strong>Pain when bending or twisting</strong> — particularly when getting up from squatting.",
-            "<strong>Burning, tingling, or numbness in the leg or foot</strong> — nerve-related, needs medical assessment.",
-            "<strong>Posture you can't comfortably hold</strong> — slumping, leaning to one side.",
-            "<strong>Neck pain that radiates into your shoulders</strong> — common with desk work, sometimes cervical spondylosis.",
-            "<strong>Pain that started during or after pregnancy</strong> — often SI joint dysfunction."
-        ]
+    {
+      "icon": "🏥",
+      "title": "Post-Surgical Spine Recovery",
+      "description": "After spinal fusion, discectomy, or laminectomy, a rigid LSO or TLSO protects the operative site and supports safe early mobilisation."
     },
-    "causes": {
-        "eyebrow": "Why it happens",
-        "title": "Why so many Indians struggle with back pain",
-        "lead": "India has higher rates of back pain than global averages. The drivers are specific:",
-        "items": [
-            "<strong>Manual labour and heavy lifting</strong> — construction, farming, factory work, hand-loading without ergonomic training.",
-            "<strong>Long-duration sitting</strong> — desk jobs, drivers, long commutes. The back is not built for 8+ hours of static sitting.",
-            "<strong>Squatting toilets and floor sitting</strong> — cultural habits that load the low back and SI joints in ways chair-based cultures don't experience.",
-            "<strong>Postpartum changes</strong> — pregnancy and delivery shift the SI joint and weaken the core. Indian women receive less postpartum rehab than developed countries.",
-            "<strong>Smartphone and laptop posture</strong> — \"tech neck\" and rounded-shoulder ache, increasingly seen in 20s and 30s.",
-            "<strong>Carrying heavy bags on one shoulder</strong> — school children, working adults. Asymmetric loading over years.",
-            "<strong>Vitamin D deficiency and osteoporosis</strong> — increase fracture risk, weaken vertebral bodies, contribute to compression injuries.",
-            "<strong>Lack of core-strengthening exercise</strong> — most adults receive no formal back-care education."
-        ]
+    {
+      "icon": "💢",
+      "title": "Disc Herniation",
+      "description": "A disc pressing on a nerve causes back pain that radiates down the leg. Bracing limits aggravating motion while the disc settles."
     },
-    "treatment": {
-        "eyebrow": "What helps",
-        "title": "Your options, from gentle to medical",
-        "lead": "A conservative-first ladder. Start at step 1 and move up only if needed:",
-        "steps": [
-            "<strong>Activity modification + posture awareness</strong> — ergonomic chair, monitor at eye level, no more deep squatting if it triggers pain.",
-            "<strong>Daily walking and gentle movement</strong> — rest is not the cure for most back pain. Movement, gently, is.",
-            "<strong>A lumbar belt or LSO</strong> — for daily wear during work, lifting, or long sitting. Reduces pain enough to let you stay active.",
-            "<strong>Cervical collar</strong> — if neck pain is also part of the picture.",
-            "<strong>Postural support brace</strong> — gentle reminder to sit and stand straighter.",
-            "<strong>Physiotherapy + core strengthening</strong> — the long-term cure for most mechanical back pain.",
-            "<strong>Hot/cold therapy</strong> — heat for chronic ache and muscle spasm; cold for acute flares with swelling.",
-            "<strong>NSAID pain medication</strong> — short-term symptom relief under medical guidance.",
-            "<strong>Epidural injection</strong> — for severe radicular pain (sciatica) that doesn't respond to conservative care.",
-            "<strong>Surgery</strong> — last resort, for select cases (severe disc, instability, neurological deficit)."
-        ]
+    {
+      "icon": "🧍",
+      "title": "Postural Issues",
+      "description": "Years of desk work, smartphone use, and asymmetric loading lead to chronic postural ache. Posture-correction bracing retrains alignment."
     },
-    "conditionsHeading": {
-        "eyebrow": "Common conditions",
-        "title": "What's behind your back pain?",
-        "lead": "Back pain is rarely one thing. These are the conditions we most commonly help patients manage."
-    },
-    "conditions": [
-        {
-            "icon": "🫀",
-            "title": "Lower Back Pain",
-            "description": "The most common type — mechanical pain from muscle strain, posture, or fatigue. Lumbar bracing reduces daily load and keeps you moving."
-        },
-        {
-            "icon": "🔄",
-            "title": "Scoliosis",
-            "description": "Sideways curvature of the spine, often first noticed in adolescents. Evidence-based bracing during the growth period can halt progression."
-        },
-        {
-            "icon": "🏥",
-            "title": "Post-Surgical Spine Recovery",
-            "description": "After spinal fusion, discectomy, or laminectomy, a rigid LSO or TLSO protects the operative site and supports safe early mobilisation."
-        },
-        {
-            "icon": "💢",
-            "title": "Disc Herniation",
-            "description": "A disc pressing on a nerve causes back pain that radiates down the leg. Bracing limits aggravating motion while the disc settles."
-        },
-        {
-            "icon": "🧍",
-            "title": "Postural Issues",
-            "description": "Years of desk work, smartphone use, and asymmetric loading lead to chronic postural ache. Posture-correction bracing retrains alignment."
-        },
-        {
-            "icon": "🦴",
-            "title": "Osteoporotic Compression",
-            "description": "Weakened vertebrae compress under body weight, causing sudden severe pain. Spine bracing offloads the fracture site and enables safe movement."
-        }
-    ],
-    "productsHeading": {
-        "title": "Solutions for back & spine pain",
-        "lead": "Lumbar and cervical bracing chosen for daily wear and clinical performance."
-    },
-    "whenToSeeDoctor": {
-        "eyebrow": "Red flags",
-        "title": "When back pain needs urgent medical attention",
-        "lead": "Most back pain responds to conservative care. But these signs need same-day medical assessment:",
-        "items": [
-            "<strong>Loss of bladder or bowel control</strong> — possible cauda equina syndrome. Medical emergency, go to A&amp;E.",
-            "<strong>Numbness in the groin or inner thighs</strong> (saddle anaesthesia) — same as above.",
-            "<strong>Severe progressive leg weakness</strong> — foot drop or difficulty climbing stairs.",
-            "<strong>Back pain with fever or chills</strong> — possible spinal infection (rare but serious).",
-            "<strong>Sudden severe back pain after a fall</strong> — possible vertebral fracture, especially if you have osteoporosis.",
-            "<strong>Pain that wakes you at night</strong> consistently — rare cancer red flag, worth investigating.",
-            "<strong>Back pain with unexplained weight loss</strong> — prompt evaluation needed."
-        ],
-        "note": "Bracing supports back pain management. It is never a substitute for medical diagnosis when these red flags appear. Your family doctor or local orthopaedic specialist is the right first contact."
-    },
-    "testimonialsHeading": {
-        "title": "Real recoveries from our patients"
-    },
-    "testimonials": [
-        {
-            "name": "Fawzul Hidhaya's Mother",
-            "location": "Chennai",
-            "product": "Spinamic",
-            "testimonial": "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32°. Surgery was advised — but with Spinamic, before the brace it was 35°, and with the brace it reduced to 25°."
-        }
-    ],
-    "faqHeading": {
-        "title": "Common back pain questions"
-    },
-    "faq": [
-        {
-            "question": "Will wearing a lumbar brace weaken my back muscles?",
-            "answer": "This is the most common worry, and largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehab strengthens the back. Patients using both together do better than patients using either alone. Most clinical guidelines support this combined approach."
-        },
-        {
-            "question": "Can I sit at work with a lumbar brace?",
-            "answer": "Yes — most lumbar bracing is designed for daily use including seated work. Many patients wear it through the work day and remove it for evenings. Your specialist will recommend wear duration based on your specific condition."
-        },
-        {
-            "question": "How long does scoliosis bracing take to work?",
-            "answer": "Most studies show meaningful curve stabilisation over 12–24 months of consistent wear during the growth period. Compliance is the single biggest factor — 16+ hours daily wear has strong evidence; nighttime-only does not."
-        },
-        {
-            "question": "Lumbar belt vs corset — what's the difference?",
-            "answer": "In Indian usage, \"corset\" usually means a wide elastic belt with no rigid support — fine for mild postpartum support or general back ache. A modern lumbar belt or LSO has rigid stays or panels that offer real spinal support for moderate-to-severe pain. For genuine back pain, choose a proper LSO. For mild postpartum support, an elastic corset can be adequate."
-        },
-        {
-            "question": "Will my back pain go away on its own?",
-            "answer": "Acute back pain (less than 6 weeks) often does resolve on its own — but the right combination of movement, bracing, and core work makes the recovery faster and reduces the chance of recurrence. Chronic back pain (3+ months) rarely resolves without active treatment. The earlier you intervene, the better the long-term outcome."
-        },
-        {
-            "question": "Is bed rest the best treatment for back pain?",
-            "answer": "No — this is one of the most common myths. Current clinical guidelines recommend staying active where possible, even with back pain. Prolonged bed rest weakens the very muscles that protect your spine and can lengthen recovery. Gentle movement, bracing during the day, and gradual return to activity is the better approach."
-        },
-        {
-            "question": "When does back pain mean I need surgery?",
-            "answer": "Surgery is reserved for: progressive neurological deficit (worsening weakness or numbness), cauda equina symptoms, severe sciatica unresponsive to 6+ weeks of conservative care, unstable fractures, and specific structural problems. For mechanical back pain alone, surgery rarely helps. Always get a second opinion before agreeing to elective spine surgery."
-        }
-    ],
-    "blog": [],
-    "brands": [
-        {
-            "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
-            "caption": "USA · Sports medicine bracing"
-        },
-        {
-            "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
-            "caption": "USA · Spinal bracing leader"
-        },
-        {
-            "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
-            "caption": "Germany · Endoscopic spine systems"
-        },
-        {
-            "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
-            "caption": "India · Authorised retail partner"
-        }
-    ],
-    "cta": {
-        "title": "Spine pain is personal — let us help you choose right.",
-        "description": "Speak with our specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
-        "buttons": [
-            {
-                "label": "Talk to a Specialist",
-                "href": "#enquiry-modal",
-                "style": "primary"
-            },
-            {
-                "label": "Browse Spine Products",
-                "href": "https://osteokart.com",
-                "style": "secondary",
-                "external": true
-            }
-        ],
-        "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+    {
+      "icon": "🦴",
+      "title": "Osteoporotic Compression",
+      "description": "Weakened vertebrae compress under body weight, causing sudden severe pain. Spine bracing offloads the fracture site and enables safe movement."
     }
+  ],
+  "productsHeading": {
+    "title": "Solutions for back & spine pain",
+    "lead": "Lumbar and cervical bracing chosen for daily wear and clinical performance."
+  },
+  "whenToSeeDoctor": {
+    "eyebrow": "Red flags",
+    "title": "When back pain needs urgent medical attention",
+    "lead": "Most back pain responds to conservative care. But these signs need same-day medical assessment:",
+    "items": [
+      "<strong>Loss of bladder or bowel control</strong> — possible cauda equina syndrome. Medical emergency, go to A&amp;E.",
+      "<strong>Numbness in the groin or inner thighs</strong> (saddle anaesthesia) — same as above.",
+      "<strong>Severe progressive leg weakness</strong> — foot drop or difficulty climbing stairs.",
+      "<strong>Back pain with fever or chills</strong> — possible spinal infection (rare but serious).",
+      "<strong>Sudden severe back pain after a fall</strong> — possible vertebral fracture, especially if you have osteoporosis.",
+      "<strong>Pain that wakes you at night</strong> consistently — rare cancer red flag, worth investigating.",
+      "<strong>Back pain with unexplained weight loss</strong> — prompt evaluation needed."
+    ],
+    "note": "Bracing supports back pain management. It is never a substitute for medical diagnosis when these red flags appear. Your family doctor or local orthopaedic specialist is the right first contact."
+  },
+  "testimonialsHeading": {
+    "title": "Real recoveries from our patients"
+  },
+  "testimonials": [],
+  "faqHeading": {
+    "title": "Common back pain questions"
+  },
+  "faq": [
+    {
+      "question": "Will wearing a lumbar brace weaken my back muscles?",
+      "answer": "This is the most common worry, and largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehab strengthens the back. Patients using both together do better than patients using either alone. Most clinical guidelines support this combined approach."
+    },
+    {
+      "question": "Can I sit at work with a lumbar brace?",
+      "answer": "Yes — most lumbar bracing is designed for daily use including seated work. Many patients wear it through the work day and remove it for evenings. Your specialist will recommend wear duration based on your specific condition."
+    },
+    {
+      "question": "How long does scoliosis bracing take to work?",
+      "answer": "Most studies show meaningful curve stabilisation over 12–24 months of consistent wear during the growth period. Compliance is the single biggest factor — 16+ hours daily wear has strong evidence; nighttime-only does not."
+    },
+    {
+      "question": "Lumbar belt vs corset — what's the difference?",
+      "answer": "In Indian usage, \"corset\" usually means a wide elastic belt with no rigid support — fine for mild postpartum support or general back ache. A modern lumbar belt or LSO has rigid stays or panels that offer real spinal support for moderate-to-severe pain. For genuine back pain, choose a proper LSO. For mild postpartum support, an elastic corset can be adequate."
+    },
+    {
+      "question": "Will my back pain go away on its own?",
+      "answer": "Acute back pain (less than 6 weeks) often does resolve on its own — but the right combination of movement, bracing, and core work makes the recovery faster and reduces the chance of recurrence. Chronic back pain (3+ months) rarely resolves without active treatment. The earlier you intervene, the better the long-term outcome."
+    },
+    {
+      "question": "Is bed rest the best treatment for back pain?",
+      "answer": "No — this is one of the most common myths. Current clinical guidelines recommend staying active where possible, even with back pain. Prolonged bed rest weakens the very muscles that protect your spine and can lengthen recovery. Gentle movement, bracing during the day, and gradual return to activity is the better approach."
+    },
+    {
+      "question": "When does back pain mean I need surgery?",
+      "answer": "Surgery is reserved for: progressive neurological deficit (worsening weakness or numbness), cauda equina symptoms, severe sciatica unresponsive to 6+ weeks of conservative care, unstable fractures, and specific structural problems. For mechanical back pain alone, surgery rarely helps. Always get a second opinion before agreeing to elective spine surgery."
+    }
+  ],
+  "blog": [],
+  "brands": [
+    {
+      "name": "Breg",
+      "logo": "images/brands/breg-logo.png.png",
+      "caption": "USA · Sports medicine bracing"
+    },
+    {
+      "name": "Aspen Medical",
+      "logo": "images/brands/aspen-logo.png.jpg",
+      "caption": "USA · Spinal bracing leader"
+    },
+    {
+      "name": "RiwoSpine",
+      "logo": "images/brands/riwospine-logo.png.png",
+      "caption": "Germany · Endoscopic spine systems"
+    },
+    {
+      "name": "Osteokart",
+      "logo": "images/brands/osteokart-logo.png.png",
+      "caption": "India · Authorised retail partner"
+    }
+  ],
+  "cta": {
+    "title": "Spine pain is personal — let us help you choose right.",
+    "description": "Speak with our specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
+    "buttons": [
+      {
+        "label": "Talk to a Specialist",
+        "href": "#enquiry-modal",
+        "style": "primary"
+      },
+      {
+        "label": "Browse Spine Products",
+        "href": "https://osteokart.com",
+        "style": "secondary",
+        "external": true
+      }
+    ],
+    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+  }
 }

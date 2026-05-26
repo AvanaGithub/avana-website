@@ -3,7 +3,6 @@
   "type": "condition",
   "metaTitle": "Lumbar, Cervical & Scoliosis Spine Bracing | Avana India",
   "metaDescription": "Doctor-recommended lumbar belts, cervical collars & scoliosis braces for back pain, neck pain, slipped disc & post-op spine recovery. Fitted in India.",
-
   "hero": {
     "eyebrow": "Spine Bracing · Lumbar, Cervical & Scoliosis",
     "title": "Lumbar, Cervical & Scoliosis Spine Bracing",
@@ -11,13 +10,19 @@
     "image": "images/products/aspen-lumbar-support-img-1.jpg",
     "imageAlt": "Aspen Lumbar Support — spine bracing for back pain and recovery",
     "ctas": [
-      { "label": "See Spine Support", "href": "#products", "style": "primary" },
-      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+      {
+        "label": "See Spine Support",
+        "href": "#products",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to a Specialist",
+        "href": "#cta",
+        "style": "outline"
+      }
     ]
   },
-
   "intro": "<p class=\"lede\">Spine bracing is one of the most evidence-supported non-surgical interventions in modern orthopaedics. The right brace — whether a <strong>lumbar belt</strong> for low back pain, a <strong>cervical collar</strong> for neck recovery, an <strong>LSO or TLSO</strong> for spinal fractures, or a <strong>scoliosis brace</strong> for curve correction during growth — does what medication alone cannot: it physically offloads stressed structures, limits painful motion, and creates the right healing environment. This page covers each main category of spine bracing, when it's indicated, and the Avana-distributed products Indian spine surgeons most commonly prescribe.</p>",
-
   "whatIs": {
     "eyebrow": "About spine bracing",
     "title": "What is spine bracing?",
@@ -29,7 +34,6 @@
       "<p><strong>4. Scoliosis bracing</strong> — custom-fitted braces (TLSO style) worn during the adolescent growth period to slow or halt scoliosis curve progression. Strong clinical evidence base when worn 16+ hours daily.</p>"
     ]
   },
-
   "symptoms": {
     "eyebrow": "Where it helps",
     "title": "Conditions spine bracing supports",
@@ -45,7 +49,6 @@
       "<strong>SI joint dysfunction</strong> — especially common postpartum. SI belts (e.g. Aspen Evergreen 621) help."
     ]
   },
-
   "causes": {
     "eyebrow": "Causes & risk factors",
     "title": "Why so many Indians need spine bracing",
@@ -61,7 +64,6 @@
       "<strong>Lack of core-strengthening exercise</strong> — most adults receive no formal back-care education."
     ]
   },
-
   "treatment": {
     "eyebrow": "What works",
     "title": "Spine treatment — what helps when",
@@ -76,12 +78,10 @@
     ],
     "closing": "<p>Most patients never need to escalate past steps 1–3. The role of bracing is to enable steps 1 and 2 — by reducing pain enough that you can move, exercise, and live normally.</p>"
   },
-
   "productsHeading": {
     "title": "Spine bracing solutions",
     "lead": "Lumbar, cervical, and scoliosis bracing selected for clinical performance and Indian patient fit."
   },
-
   "whenToSeeDoctor": {
     "eyebrow": "Red flags",
     "title": "When back or neck pain needs urgent medical attention",
@@ -97,45 +97,81 @@
     ],
     "note": "Bracing is for pain management and post-treatment support. It is never a substitute for diagnosis when these red flags appear."
   },
-
-  "testimonialsHeading": { "title": "Spine recoveries we're proud of" },
-
-  "testimonials": [
+  "testimonialsHeading": {
+    "title": "Spine recoveries we're proud of"
+  },
+  "testimonials": [],
+  "faqHeading": {
+    "title": "Spine bracing FAQs"
+  },
+  "faq": [
     {
-      "name": "Fawzul Hidhaya's Mother",
-      "location": "Chennai",
-      "product": "Spinamic",
-      "testimonial": "My daughter was diagnosed with scoliosis at 11. After years of exercises, the curve reached 32°. Surgery was advised — but with Spinamic, before the brace it was 35°, and with the brace it reduced to 25°."
+      "question": "How long do I wear a lumbar brace?",
+      "answer": "It depends on the indication. For acute pain, 1–4 weeks is typical. For chronic low back pain, intermittent use during high-demand activities (lifting, long drives, prolonged sitting). For post-surgery, follow your surgeon's specific protocol."
+    },
+    {
+      "question": "Will wearing a back brace weaken my muscles?",
+      "answer": "This is the most common worry, and largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehab strengthens the back. Patients who use both together do better than patients using either alone. Most clinical guidelines support this approach."
+    },
+    {
+      "question": "How long does scoliosis bracing take to work?",
+      "answer": "Meaningful curve stabilisation usually takes 12–24 months of consistent wear during the growth period. Compliance is the single biggest factor — bracing 16+ hours daily has strong evidence; bracing only at night does not."
+    },
+    {
+      "question": "Lumbar belt vs corset — what's the difference?",
+      "answer": "A \"corset\" in everyday Indian usage usually means a wide elastic belt with no rigid support — useful for mild back ache. A modern lumbar belt or LSO (Lumbar Sacral Orthosis) adds rigid stays or panels that offer real spinal support. For real back pain, choose a proper LSO. For postpartum mild support, an elastic corset can be adequate."
+    },
+    {
+      "question": "Can I sit at a desk with a lumbar brace?",
+      "answer": "Yes — most modern lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration. Many patients use it during the desk-work portion of the day and remove it for the evening."
+    },
+    {
+      "question": "Does insurance cover spine bracing in India?",
+      "answer": "Some Indian health insurance policies reimburse orthopaedic devices when prescribed as part of a covered procedure (e.g. post-surgery brace). Standalone bracing for back pain is typically not covered. Speak to your insurer for specifics; Avana can provide invoices in the required format."
+    },
+    {
+      "question": "When is spine surgery actually necessary?",
+      "answer": "Surgery is reserved for: progressive neurological deficits (worsening weakness, numbness), cauda equina symptoms, severe radicular pain unresponsive to conservative care for 6+ weeks, unstable fractures, or specific structural problems (severe scoliosis after growth, spondylolisthesis). For mechanical back pain alone, surgery rarely helps. Always get a second opinion before agreeing to elective spine surgery."
     }
   ],
-
-  "faqHeading": { "title": "Spine bracing FAQs" },
-
-  "faq": [
-    { "question": "How long do I wear a lumbar brace?", "answer": "It depends on the indication. For acute pain, 1–4 weeks is typical. For chronic low back pain, intermittent use during high-demand activities (lifting, long drives, prolonged sitting). For post-surgery, follow your surgeon's specific protocol." },
-    { "question": "Will wearing a back brace weaken my muscles?", "answer": "This is the most common worry, and largely a myth when bracing is paired with physiotherapy. Bracing supports recovery; rehab strengthens the back. Patients who use both together do better than patients using either alone. Most clinical guidelines support this approach." },
-    { "question": "How long does scoliosis bracing take to work?", "answer": "Meaningful curve stabilisation usually takes 12–24 months of consistent wear during the growth period. Compliance is the single biggest factor — bracing 16+ hours daily has strong evidence; bracing only at night does not." },
-    { "question": "Lumbar belt vs corset — what's the difference?", "answer": "A \"corset\" in everyday Indian usage usually means a wide elastic belt with no rigid support — useful for mild back ache. A modern lumbar belt or LSO (Lumbar Sacral Orthosis) adds rigid stays or panels that offer real spinal support. For real back pain, choose a proper LSO. For postpartum mild support, an elastic corset can be adequate." },
-    { "question": "Can I sit at a desk with a lumbar brace?", "answer": "Yes — most modern lumbar bracing is designed for daily use including seated work. Your specialist will recommend wear duration. Many patients use it during the desk-work portion of the day and remove it for the evening." },
-    { "question": "Does insurance cover spine bracing in India?", "answer": "Some Indian health insurance policies reimburse orthopaedic devices when prescribed as part of a covered procedure (e.g. post-surgery brace). Standalone bracing for back pain is typically not covered. Speak to your insurer for specifics; Avana can provide invoices in the required format." },
-    { "question": "When is spine surgery actually necessary?", "answer": "Surgery is reserved for: progressive neurological deficits (worsening weakness, numbness), cauda equina symptoms, severe radicular pain unresponsive to conservative care for 6+ weeks, unstable fractures, or specific structural problems (severe scoliosis after growth, spondylolisthesis). For mechanical back pain alone, surgery rarely helps. Always get a second opinion before agreeing to elective spine surgery." }
-  ],
-
   "blog": [],
-
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal bracing leader" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    {
+      "name": "Breg",
+      "logo": "images/brands/breg-logo.png.png",
+      "caption": "USA · Sports medicine bracing"
+    },
+    {
+      "name": "Aspen Medical",
+      "logo": "images/brands/aspen-logo.png.jpg",
+      "caption": "USA · Spinal bracing leader"
+    },
+    {
+      "name": "RiwoSpine",
+      "logo": "images/brands/riwospine-logo.png.png",
+      "caption": "Germany · Endoscopic spine systems"
+    },
+    {
+      "name": "Osteokart",
+      "logo": "images/brands/osteokart-logo.png.png",
+      "caption": "India · Authorised retail partner"
+    }
   ],
-
   "cta": {
     "title": "Spine pain is personal — let us help you choose right.",
     "description": "Speak with our spine specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
     "buttons": [
-      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Spine%20support%20enquiry", "style": "primary" },
-      { "label": "Browse Spine Products", "href": "https://osteokart.com/category/spine?utm_source=avanasurgical&utm_medium=referral&utm_campaign=spine_support_condition&utm_content=footer_cta", "style": "secondary", "external": true }
+      {
+        "label": "Talk to a Specialist",
+        "href": "mailto:info@avanasurgical.com?subject=Spine%20support%20enquiry",
+        "style": "primary"
+      },
+      {
+        "label": "Browse Spine Products",
+        "href": "https://osteokart.com/category/spine?utm_source=avanasurgical&utm_medium=referral&utm_campaign=spine_support_condition&utm_content=footer_cta",
+        "style": "secondary",
+        "external": true
+      }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
