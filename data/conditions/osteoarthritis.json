@@ -34,10 +34,10 @@
     "lead": "Common signs and symptoms include:",
     "items": [
       "<strong>Pain that worsens with activity</strong> — climbing stairs, walking long distances, standing up after sitting.",
-      "<strong>Morning stiffness</strong> that eases within 30 minutes of moving.",
+      "<strong>Stiffness on waking</strong> that usually loosens up after about half an hour of gentle activity.",
       "<strong>Swelling and warmth</strong> around the knee, especially after activity.",
       "<strong>A grating or grinding sensation</strong> (crepitus) when bending the knee.",
-      "<strong>Loss of flexibility</strong> — difficulty fully straightening or bending the knee.",
+      "<strong>Reduced range of motion</strong> — the knee no longer extends or flexes through its full range without effort.",
       "<strong>Knee \"giving way\"</strong> during walking or climbing stairs.",
       "<strong>A bow-legged appearance</strong> developing over months or years."
     ]
@@ -62,7 +62,7 @@
   "treatment": {
     "eyebrow": "What helps",
     "title": "Osteoarthritis knee treatment options",
-    "lead": "Treatment for OA knee follows a conservative-first approach, escalating only if earlier options fail.",
+    "lead": "OA knee care usually starts with the simplest, least invasive measures — and only moves up to injections or surgery if those don't bring enough relief.",
     "steps": [
       "<strong>Lifestyle changes</strong> — weight management, low-impact exercise (swimming, cycling), avoiding deep squatting, and proper Vitamin D supplementation. Often delivers the biggest pain reduction in early OA.",
       "<strong>Physiotherapy</strong> — strengthening the quadriceps and core, gait retraining, and manual therapy. Should be paired with bracing for compound effect.",
