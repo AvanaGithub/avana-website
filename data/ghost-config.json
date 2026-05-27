@@ -1,0 +1,17 @@
+{
+  "_schema": {
+    "description": "Configuration for the Ghost CMS integration. The static site reads this file (via assets/js/ghost-blog-loader.js) to fetch recent posts from your Ghost instance using the Content API. The Content API key is a PUBLIC, read-only key — safe to commit to the repo. See GHOST-SETUP.md for instructions on generating it.",
+    "fields": {
+      "apiUrl":         "Base URL of your Ghost site (no trailing slash). e.g. 'https://blog.avanasurgical.com'.",
+      "contentApiKey":  "26-character public Content API key. Generate via Ghost Admin → Integrations → Add custom integration. SAFE to commit; it is read-only.",
+      "postsPerPage":   "How many posts to fetch for the homepage 'Latest from Our Blog' grid (default 3).",
+      "blogUrl":        "URL the 'View All Posts' button + nav links go to. Usually same as apiUrl.",
+      "enabled":        "Set false to keep the existing static placeholder cards (useful before Ghost is live)."
+    }
+  },
+  "apiUrl":         "https://blog.avanasurgical.com",
+  "contentApiKey":  "",
+  "postsPerPage":   3,
+  "blogUrl":        "https://blog.avanasurgical.com",
+  "enabled":        false
+}
