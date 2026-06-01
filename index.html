@@ -870,9 +870,10 @@
 
         .site-footer__grid {
             display: grid;
-            grid-template-columns: 1.5fr 1fr 1fr 1fr;
-            gap: 40px;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 28px;
             margin-bottom: 40px;
+            align-items: start;
         }
 
         .site-footer__heading {
@@ -1313,12 +1314,20 @@
             .site-footer {
                 padding: 48px 0 20px;
             }
-            .site-footer__grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 32px;
-            }
+            /* footer-grid 2-column collapse moved to its own @media (max-width: 768px)
+               block below — keeps the 5-column footer up to laptop / tablet-landscape. */
             .main-nav__list { display: none; }
             .top-bar__left { display: none; }
+        }
+
+        /* Footer-only collapse breakpoint — keeps all 5 columns
+           (Brand · Pain · Audience · Conditions · Company) on the same
+           row down to ~768px (real tablet portrait). */
+        @media (max-width: 768px) {
+            .site-footer__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
         }
 
         @media (max-width: 640px) {
