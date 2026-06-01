@@ -1052,7 +1052,8 @@
                 <h1 class="careers-hero__title">Build the next decade of <span>Indian medical devices</span> with us.</h1>
                 <p class="careers-hero__subline">Avana Surgical Systems is a 35-person team in Chennai distributing Breg, Aspen Medical, and Richard Wolf Spine across India. We are the market leader in endoscopic spine surgery with 250+ installations, and we are building the orthotics category from the ground up. We are profitable, founder-led, and growing. We are hiring people who want their work to mean something and want to be paid properly for it. Both. Not one or the other.</p>
                 <div class="careers-hero__ctas">
-                    <a href="mailto:careers@avanasurgical.com" class="btn btn--primary">Talk to us →</a>
+                    <a href="#open-roles" class="btn btn--primary">See open roles →</a>
+                    <a href="mailto:careers@avanasurgical.com" class="btn btn--outline">Talk to us →</a>
                 </div>
             </div>
         </div>
@@ -1164,6 +1165,32 @@
         </div>
     </section>
 
+    <!-- OPEN ROLES -->
+    <section class="section section--white" id="open-roles">
+        <div class="container">
+            <span class="section__eyebrow">Open roles</span>
+            <h2 class="section__title">Current openings.</h2>
+            <p class="section__lead">Roles below are live. If nothing fits today, write to us anyway — we keep a short list of strong candidates we want to talk to first when something opens up.</p>
+
+            <!-- Loading state — hidden once careers-loader.js finishes -->
+            <div id="roles-loading" style="color:var(--color-muted);padding:16px 0;">Loading open roles…</div>
+
+            <!-- Dynamic mount point — populated by assets/js/careers-loader.js -->
+            <div class="roles__grid" id="roles-grid" hidden></div>
+
+            <!-- No openings fallback — shown by the loader when 0 active roles -->
+            <div id="roles-empty" style="display:none;padding:24px 0;color:var(--color-muted);">
+                <p>There are no open positions right now. Check back soon — or write to us speculatively below; we love hearing from strong candidates early.</p>
+            </div>
+
+            <div class="roles__speculative">
+                <h3>Don't see the right role?</h3>
+                <p>We keep a short list of strong candidates we want to talk to first when something opens up.</p>
+                <a href="mailto:careers@avanasurgical.com">Write to careers@avanasurgical.com →</a>
+            </div>
+        </div>
+    </section>
+
     <!-- CLOSING -->
     <section class="closing">
         <div class="container">
@@ -1264,6 +1291,7 @@
     <script src="assets/js/include-partials.js" defer></script>
     <script src="assets/js/header-behavior.js" defer></script>
     <script src="assets/js/enquiry-modal.js" defer></script>
+    <script src="assets/js/careers-loader.js" defer></script>
 
     <script>
         // Sticky header + back-to-top are wired by header-behavior.js once partials load.
