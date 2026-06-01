@@ -561,7 +561,7 @@ a { color: inherit; }
 
 /* =================== FOOTER =================== */
 .site-footer { background-color: #1a2836; color: var(--color-white); padding: 64px 0 24px; }
-.site-footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.site-footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 28px; margin-bottom: 40px; align-items: start; }
 .site-footer__heading { font-size: 0.92rem; font-weight: 600; margin-bottom: 16px; color: var(--color-white); }
 .site-footer__logo img { height: 56px; width: auto; display: block; margin-bottom: 16px; }
 .site-footer__desc { color: rgba(255,255,255,0.75); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.7; }
@@ -647,10 +647,18 @@ a { color: inherit; }
     .pain-cta__description { font-size: 1rem; }
     .pain-cta__buttons { gap: 12px; }
     .site-footer { padding: 48px 0 20px; }
-    .site-footer__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    /* NOTE: footer-grid collapse is intentionally below — kept at 768px
+       so the 5-column layout (Brand · Pain · Audience · Conditions · Company)
+       persists through laptop and tablet-landscape widths. */
     .site-footer__heading { font-size: 0.95rem; }
     .main-nav__list { display: none; }
     .top-bar__left { display: none; }
+}
+
+/* Footer collapses to 2 columns only on real tablet/mobile widths.
+   Above this, all 5 columns stay on the same row across every page. */
+@media (max-width: 768px) {
+    .site-footer__grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
 }
 
 @media (max-width: 640px) {
