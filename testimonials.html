@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8B2Z2NS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient & Surgeon Testimonials | Avana Surgical Systems</title>
+    <meta name="description" content="Real recovery stories from patients and surgeons across India. Hear how Avana's bracing, cold therapy and training programmes have made a difference.">
+    <link rel="canonical" href="https://avanasurgical.com/testimonials">
+    <meta property="og:url" content="https://avanasurgical.com/testimonials">
+    <meta property="og:title" content="Patient & Surgeon Testimonials | Avana Surgical Systems">
+    <meta property="og:description" content="Real recovery stories from patients and surgeons across India.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pain.css">
+    <link rel="stylesheet" href="assets/css/mega-menu.css">
+    <link rel="stylesheet" href="assets/css/enquiry-modal.css">
+
+    <style>
+        /* ============================================================
+           Testimonials page — simple, calm grid of cards
+           ============================================================ */
+        :root {
+            --tm-bg: #faf7f0;
+            --tm-accent: #B18C57;
+            --tm-primary: #1F1F1F;
+            --tm-muted: #6c6c6c;
+            --tm-card-border: #ede7dc;
+        }
+
+        .testimonials-hero {
+            padding: 80px 0 40px;
+            background: linear-gradient(180deg, var(--tm-bg) 0%, #fff 100%);
+            text-align: center;
+        }
+        .testimonials-hero__eyebrow {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 100px;
+            background: rgba(177, 140, 87, 0.12);
+            color: var(--tm-accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+        }
+        .testimonials-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.75rem);
+            color: var(--tm-primary);
+            margin: 0 0 18px;
+            line-height: 1.15;
+        }
+        .testimonials-hero__sub {
+            max-width: 720px;
+            margin: 0 auto;
+            color: var(--tm-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .testimonials-section {
+            padding: 56px 0 80px;
+            background: #fff;
+        }
+        .testimonials-section--alt {
+            background: var(--tm-bg);
+        }
+        .testimonials-section__head {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .testimonials-section__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            color: var(--tm-primary);
+            margin: 0 0 10px;
+        }
+        .testimonials-section__sub {
+            color: var(--tm-muted);
+            font-size: 0.98rem;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tm-card {
+            background: #fff;
+            border: 1px solid var(--tm-card-border);
+            border-radius: 14px;
+            padding: 32px 26px 26px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(36, 52, 71, 0.04);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .tm-card:hover {
+            box-shadow: 0 8px 30px rgba(36, 52, 71, 0.10);
+            transform: translateY(-2px);
+        }
+        .testimonials-section--alt .tm-card {
+            background: #fff;
+        }
+
+        .tm-card__mark {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--tm-accent);
+            line-height: 0.6;
+            margin-bottom: 8px;
+            opacity: 0.6;
+        }
+        .tm-card__quote {
+            font-size: 1rem;
+            color: var(--tm-primary);
+            line-height: 1.7;
+            margin: 0 0 22px;
+            flex: 1;
+        }
+        .tm-card__badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 14px;
+        }
+        .tm-card__badge {
+            font-size: 0.74rem;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 100px;
+            letter-spacing: 0.02em;
+        }
+        .tm-card__badge--product {
+            background: rgba(177, 140, 87, 0.12);
+            color: var(--tm-accent);
+        }
+        .tm-card__badge--location {
+            background: rgba(31, 31, 31, 0.06);
+            color: var(--tm-muted);
+        }
+        .tm-card__author {
+            font-weight: 700;
+            color: var(--tm-primary);
+            font-size: 0.95rem;
+        }
+        .tm-card__author::before {
+            content: '— ';
+            color: var(--tm-accent);
+        }
+
+        .testimonials-loading,
+        .testimonials-error {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--tm-muted);
+            font-size: 1rem;
+        }
+
+        .testimonials-cta {
+            text-align: center;
+            padding: 64px 24px 96px;
+            background: var(--tm-bg);
+        }
+        .testimonials-cta__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+            color: var(--tm-primary);
+            margin: 0 0 14px;
+        }
+        .testimonials-cta__sub {
+            max-width: 640px;
+            margin: 0 auto 28px;
+            color: var(--tm-muted);
+            line-height: 1.7;
+        }
+        .testimonials-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 24px;
+            background: var(--tm-accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s, transform 0.2s;
+        }
+        .testimonials-cta__btn:hover {
+            background: var(--tm-primary);
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            .testimonials-hero { padding: 56px 0 28px; }
+            .testimonials-section { padding: 40px 0 56px; }
+            .tm-card { padding: 26px 22px 22px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8B2Z2NS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Shared header injected from partials/header.html -->
+    <div data-include="partials/header.html"></div>
+
+    <main>
+        <!-- HERO -->
+        <section class="testimonials-hero">
+            <div class="container">
+                <span class="testimonials-hero__eyebrow">Real recoveries · Real stories</span>
+                <h1 class="testimonials-hero__title">What patients and surgeons say about us</h1>
+                <p class="testimonials-hero__sub">From knee bracing to cold therapy to cadaver workshops — these are the actual voices of the people we've worked with. No paid actors, no stock quotes.</p>
+            </div>
+        </section>
+
+        <!-- PATIENT TESTIMONIALS -->
+        <section class="testimonials-section">
+            <div class="container">
+                <header class="testimonials-section__head">
+                    <h2 class="testimonials-section__title">From our patients</h2>
+                    <p class="testimonials-section__sub">Recovery, mobility, and pain relief — in their own words.</p>
+                </header>
+                <div class="testimonials-loading" id="patients-loading">Loading patient stories…</div>
+                <div class="testimonials-grid" id="patients-grid" hidden></div>
+                <div class="testimonials-error" id="patients-empty" hidden>No patient testimonials available right now.</div>
+            </div>
+        </section>
+
+        <!-- SURGEON TESTIMONIALS -->
+        <section class="testimonials-section testimonials-section--alt">
+            <div class="container">
+                <header class="testimonials-section__head">
+                    <h2 class="testimonials-section__title">From the surgeons we partner with</h2>
+                    <p class="testimonials-section__sub">Feedback from our training programmes and cadaver workshops.</p>
+                </header>
+                <div class="testimonials-loading" id="surgeons-loading">Loading surgeon feedback…</div>
+                <div class="testimonials-grid" id="surgeons-grid" hidden></div>
+                <div class="testimonials-error" id="surgeons-empty" hidden>No surgeon testimonials available right now.</div>
+            </div>
+        </section>
+
+        <!-- CLOSING CTA -->
+        <section class="testimonials-cta">
+            <div class="container">
+                <h2 class="testimonials-cta__title">Have a recovery story to share?</h2>
+                <p class="testimonials-cta__sub">We'd love to hear from you. Drop us a line and we'll be in touch.</p>
+                <a href="mailto:info@avanasurgical.com?subject=Sharing%20my%20Avana%20story" class="testimonials-cta__btn">Email us your story →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared footer injected from partials/footer.html -->
+    <div data-include="partials/footer.html"></div>
+
+    <!-- "Talk to a Specialist" enquiry modal -->
+    <div data-include="partials/enquiry-modal.html"></div>
+
+    <script src="assets/js/include-partials.js" defer></script>
+    <script src="assets/js/header-behavior.js" defer></script>
+    <script src="assets/js/testimonials-loader.js" defer></script>
+    <script src="assets/js/enquiry-modal.js" defer></script>
+</body>
+</html>
