@@ -7,7 +7,7 @@
         "eyebrow": "For Patients Recovering from Surgery",
         "title": "Recovering from Surgery — Bracing & Cold Therapy",
         "description": "The first 6–12 weeks after orthopaedic surgery shape how well you'll recover long-term. The right post-op support — bracing, cold therapy, and motion control trusted by Indian orthopaedic surgeons — reduces pain, prevents setbacks, and accelerates your return to normal life.",
-        "image": "images/condition/Postsurgery.jpg",
+        "image": "/images/condition/Postsurgery.jpg",
         "imageAlt": "Post-surgical recovery support",
         "ctas": [
             {
@@ -147,22 +147,22 @@
     "brands": [
         {
             "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
+            "logo": "/images/brands/breg-logo.png.png",
             "caption": "USA · Post-op bracing & cold therapy"
         },
         {
             "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
+            "logo": "/images/brands/aspen-logo.png.jpg",
             "caption": "USA · Post-surgical bracing"
         },
         {
             "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
+            "logo": "/images/brands/riwospine-logo.png.png",
             "caption": "Germany · Endoscopic spine systems"
         },
         {
             "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
+            "logo": "/images/brands/osteokart-logo.png.png",
             "caption": "India · Authorised retail partner"
         }
     ],

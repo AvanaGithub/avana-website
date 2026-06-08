@@ -7,7 +7,7 @@
     "eyebrow": "Spine Bracing · Lumbar, Cervical & Scoliosis",
     "title": "Lumbar, Cervical & Scoliosis Spine Bracing",
     "description": "From a lumbar belt for low back pain to a TLSO for thoracolumbar injury and a Spinamic brace for scoliosis correction — the right spine support, properly fitted, makes a meaningful difference. Used by Indian spine specialists every day.",
-    "image": "images/products/aspen-lumbar-support-img-1.jpg",
+    "image": "/images/products/aspen-lumbar-support-img-1.jpg",
     "imageAlt": "Aspen Lumbar Support — spine bracing for back pain and recovery",
     "ctas": [
       {
@@ -138,22 +138,22 @@
   "brands": [
     {
       "name": "Breg",
-      "logo": "images/brands/breg-logo.png.png",
+      "logo": "/images/brands/breg-logo.png.png",
       "caption": "USA · Sports medicine bracing"
     },
     {
       "name": "Aspen Medical",
-      "logo": "images/brands/aspen-logo.png.jpg",
+      "logo": "/images/brands/aspen-logo.png.jpg",
       "caption": "USA · Spinal bracing leader"
     },
     {
       "name": "RiwoSpine",
-      "logo": "images/brands/riwospine-logo.png.png",
+      "logo": "/images/brands/riwospine-logo.png.png",
       "caption": "Germany · Endoscopic spine systems"
     },
     {
       "name": "Osteokart",
-      "logo": "images/brands/osteokart-logo.png.png",
+      "logo": "/images/brands/osteokart-logo.png.png",
       "caption": "India · Authorised retail partner"
     }
   ],

@@ -65,7 +65,7 @@
     }
 
     /* ---------- bootstrap ---------- */
-    fetch('data/ghost-config.json')
+    fetch('/data/ghost-config.json')
         .then(r => r.ok ? r.json() : Promise.reject('config fetch failed'))
         .then(cfg => {
             // Guard rails: only attempt the live fetch if all of these are true.

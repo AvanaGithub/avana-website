@@ -7,7 +7,7 @@
         "eyebrow": "For Seniors with Knee or Joint Pain",
         "title": "Knee & Joint Pain Solutions for Seniors",
         "description": "Joint pain shouldn't be the price of growing older. Doctor-recommended knee caps, offloader braces, and joint support can meaningfully reduce daily knee pain in older adults — helping you walk further, sleep better, and delay or avoid knee replacement surgery.",
-        "image": "images/condition/osteoarthritis.jpg",
+        "image": "/images/condition/osteoarthritis.jpg",
         "imageAlt": "Senior walking comfortably with knee support",
         "ctas": [
             {
@@ -153,22 +153,22 @@
     "brands": [
         {
             "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
+            "logo": "/images/brands/breg-logo.png.png",
             "caption": "USA · Sports medicine bracing"
         },
         {
             "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
+            "logo": "/images/brands/aspen-logo.png.jpg",
             "caption": "USA · Orthopaedic bracing"
         },
         {
             "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
+            "logo": "/images/brands/riwospine-logo.png.png",
             "caption": "Germany · Endoscopic spine systems"
         },
         {
             "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
+            "logo": "/images/brands/osteokart-logo.png.png",
             "caption": "India · Authorised retail partner"
         }
     ],

@@ -33,7 +33,7 @@
       "eyebrow": "Our Purpose",
       "title": "Innovation, Education & Service for Surgeons",
       "body": "To bring world-class innovation, education and service closer to surgeons — and improve patients' lives.",
-      "image": "images/about/avana-purpose.png",
+      "image": "/images/about/avana-purpose.png",
       "imageAlt": "Avana's purpose — innovation, education and service for surgeons",
       "layout": "image-left"
     },
@@ -41,7 +41,7 @@
       "eyebrow": "Our Mission",
       "title": "Partnering with Surgeons and Hospitals",
       "body": "To partner with surgeons and hospitals through innovative technology, education, and reliable execution.",
-      "image": "images/about/avana-mission.png",
+      "image": "/images/about/avana-mission.png",
       "imageAlt": "Avana's mission — partnering with surgeons and hospitals",
       "layout": "image-right"
     },
@@ -49,7 +49,7 @@
       "eyebrow": "Our Vision",
       "title": "India's Most Trusted Medical Company",
       "body": "To build India's most trusted medical company — for clinical impact, talent, and inclusive high performance.",
-      "image": "images/about/avana-vision.png",
+      "image": "/images/about/avana-vision.png",
       "imageAlt": "Avana's vision — India's most trusted medical company",
       "layout": "image-left"
     }
@@ -67,14 +67,14 @@
       "name": "P. Sundararajan",
       "title": "Managing Director",
       "subtitle": "Avana Group of Companies",
-      "photo": "images/about/sundar.webp",
+      "photo": "/images/about/sundar.webp",
       "bio": ""
     },
     {
       "name": "Vivekananda Mani",
       "title": "Director",
       "subtitle": "Avana Surgical Systems Pvt Ltd",
-      "photo": "images/about/Director-Avana-Vivek.webp",
+      "photo": "/images/about/Director-Avana-Vivek.webp",
       "bio": ""
     }
   ],
@@ -82,14 +82,14 @@
   "photoCarousel": {
     "heading": "Life at Avana",
     "images": [
-      { "src": "images/training/training-1.jpeg", "alt": "Avana training programme" },
-      { "src": "images/training/training-2.jpeg", "alt": "Avana cadaver workshop" },
-      { "src": "images/training/training-3.jpeg", "alt": "Avana live surgery demonstration" },
-      { "src": "images/training/training-4.jpeg", "alt": "Avana team at work" },
-      { "src": "images/training/training-5.jpeg", "alt": "Avana bone model training" },
-      { "src": "images/training/training-6.jpeg", "alt": "Avana faculty session" },
-      { "src": "images/training/training-7.jpeg", "alt": "Avana workshop participants" },
-      { "src": "images/training/training-8.jpeg", "alt": "Avana educational session" }
+      { "src": "/images/training/training-1.jpeg", "alt": "Avana training programme" },
+      { "src": "/images/training/training-2.jpeg", "alt": "Avana cadaver workshop" },
+      { "src": "/images/training/training-3.jpeg", "alt": "Avana live surgery demonstration" },
+      { "src": "/images/training/training-4.jpeg", "alt": "Avana team at work" },
+      { "src": "/images/training/training-5.jpeg", "alt": "Avana bone model training" },
+      { "src": "/images/training/training-6.jpeg", "alt": "Avana faculty session" },
+      { "src": "/images/training/training-7.jpeg", "alt": "Avana workshop participants" },
+      { "src": "/images/training/training-8.jpeg", "alt": "Avana educational session" }
     ]
   },
 

@@ -46,7 +46,7 @@
 
     function programPhotoPaths(p) {
         const n = p.photoCount || 0;
-        const folder = p.photoFolder || (`images/training/${p.slug}/`);
+        const folder = p.photoFolder || (`/images/training/${p.slug}/`);
         const paths = [];
         for (let i = 1; i <= n; i++) {
             paths.push(`${folder}${String(i).padStart(2, '0')}.jpg`);
@@ -248,7 +248,7 @@
         return;
     }
 
-    fetch('data/training-programs.json')
+    fetch('/data/training-programs.json')
         .then(r => r.json())
         .then(data => {
             const program = (data.programs || []).find(p => p.slug === slug);

@@ -6,7 +6,7 @@
         "eyebrow": "Knee Pain Support",
         "title": "Move with confidence — without the daily ache.",
         "description": "Whether it's stiffness on the stairs, swelling after activity, or recovery from a recent surgery — the right support, fitted correctly, can make a real difference. Explore clinically proven bracing solutions used by Indian orthopaedic surgeons every day.",
-        "image": "images/pain-landing/knee.jpg",
+        "image": "/images/pain-landing/knee.jpg",
         "imageAlt": "Knee pain bracing support — landing page hero",
         "ctas": [
             {
@@ -154,7 +154,7 @@
         {
             "title": "Living with knee osteoarthritis: a practical guide",
             "excerpt": "What works, what doesn't, and how to plan a long-term approach to staying active with OA.",
-            "image": "images/condition/osteoarthritis.jpg",
+            "image": "/images/condition/osteoarthritis.jpg",
             "category": "Knee Health",
             "readTime": "6 min read",
             "url": "#",
@@ -163,7 +163,7 @@
         {
             "title": "After ACL surgery: a recovery timeline that works",
             "excerpt": "Week-by-week expectations for return to walking, work, and sport — and what to do if recovery stalls.",
-            "image": "images/condition/Postsurgery.jpg",
+            "image": "/images/condition/Postsurgery.jpg",
             "category": "Recovery",
             "readTime": "8 min read",
             "url": "#",
@@ -172,7 +172,7 @@
         {
             "title": "Cold therapy after surgery: does it really make a difference?",
             "excerpt": "What the clinical evidence says about post-operative cold and compression — and when ice packs aren't enough.",
-            "image": "images/condition/coldtherapy.jpg",
+            "image": "/images/condition/coldtherapy.jpg",
             "category": "Cold Therapy",
             "readTime": "5 min read",
             "url": "#",
@@ -182,22 +182,22 @@
     "brands": [
         {
             "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
+            "logo": "/images/brands/breg-logo.png.png",
             "caption": "USA · Sports medicine bracing"
         },
         {
             "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
+            "logo": "/images/brands/aspen-logo.png.jpg",
             "caption": "USA · Spinal & orthopaedic bracing"
         },
         {
             "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
+            "logo": "/images/brands/riwospine-logo.png.png",
             "caption": "Germany · Endoscopic spine systems"
         },
         {
             "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
+            "logo": "/images/brands/osteokart-logo.png.png",
             "caption": "India · Authorised retail partner"
         }
     ],

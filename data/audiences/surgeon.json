@@ -10,7 +10,7 @@
     "eyebrow": "Surgeon Training & Education",
     "title": "Fostering expertise and skill — Avana's pledge to medical professionals' growth.",
     "description": "Education is a lifelong journey. Avana's medical education programmes give surgeons the latest techniques in Full Endoscopic Spine Surgery, hands-on cadaver and bone model practice, and a network of colleagues across India. Find the workshop that's right for you below.",
-    "image": "images/audience/surgeon.jpg",
+    "image": "/images/audience/surgeon.jpg",
     "imageAlt": "Avana training programme — surgeon hands-on workshop",
     "ctas": [
       { "label": "See Upcoming Programmes", "href": "#section-upcomingPrograms", "style": "primary" },
@@ -20,20 +20,20 @@
 
   "photoCarousel": {
     "images": [
-      "images/training/training-1.jpeg",
-      "images/training/training-2.jpeg",
-      "images/training/training-3.jpeg",
-      "images/training/training-4.jpeg",
-      "images/training/training-5.jpeg",
-      "images/training/training-6.jpeg",
-      "images/training/training-7.jpeg",
-      "images/training/training-8.jpeg",
-      "images/training/training-9.jpeg",
-      "images/training/training-10.jpeg",
-      "images/training/training-11.jpeg",
-      "images/training/training-12.jpeg",
-      "images/training/training-13.jpeg",
-      "images/training/training-14.jpeg"
+      "/images/training/training-1.jpeg",
+      "/images/training/training-2.jpeg",
+      "/images/training/training-3.jpeg",
+      "/images/training/training-4.jpeg",
+      "/images/training/training-5.jpeg",
+      "/images/training/training-6.jpeg",
+      "/images/training/training-7.jpeg",
+      "/images/training/training-8.jpeg",
+      "/images/training/training-9.jpeg",
+      "/images/training/training-10.jpeg",
+      "/images/training/training-11.jpeg",
+      "/images/training/training-12.jpeg",
+      "/images/training/training-13.jpeg",
+      "/images/training/training-14.jpeg"
     ]
   },
 
@@ -82,10 +82,10 @@
   "blog": [],
 
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal & orthopaedic bracing" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
+    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal & orthopaedic bracing" },
+    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
   "cta": {

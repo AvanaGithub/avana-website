@@ -8,7 +8,7 @@
     "eyebrow": "Cold Therapy · Active Compression",
     "title": "Cold Therapy & Active Compression Systems",
     "description": "Ice packs were yesterday. Powered cold therapy with active compression — like the Polar Care Kodiak and Wave systems used in Indian operating theatres — maintains consistent therapeutic cooling, actively pumps swelling out, and dramatically lowers post-op pain.",
-    "image": "images/products/breg-polar-care-wave-img-1.png",
+    "image": "/images/products/breg-polar-care-wave-img-1.png",
     "imageAlt": "Breg Polar Care Wave — powered cold therapy and compression unit",
     "ctas": [
       { "label": "See Cold Therapy", "href": "#products", "style": "primary" },
@@ -118,10 +118,10 @@
   "blog": [],
 
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Polar Care cold therapy" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · Polar Care cold therapy" },
+    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
+    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
   "cta": {

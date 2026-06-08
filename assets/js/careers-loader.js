@@ -15,7 +15,7 @@
     const GRID_ID    = 'roles-grid';
     const LOADING_ID = 'roles-loading';
     const EMPTY_ID   = 'roles-empty';
-    const DATA_URL   = 'data/careers.json';
+    const DATA_URL   = '/data/careers.json';
 
     function escapeHtml(s) {
         return String(s ?? '')

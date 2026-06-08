@@ -28,14 +28,14 @@
     const TYPES = {
         painArea: {
             urlPrefix: '/solutions/',
-            dataFolder: 'data/pain-areas',
+            dataFolder: '/data/pain-areas',
             relationKey: 'relatedPainAreas',
             validSlugs: ['knee', 'spine', 'shoulder', 'elbow', 'foot', 'hip'],
             defaultSlug: 'knee'
         },
         audience: {
             urlPrefix: '/audiences/',
-            dataFolder: 'data/audiences',
+            dataFolder: '/data/audiences',
             relationKey: 'relatedAudiences',
             validSlugs: ['seniors', 'back-pain', 'recovering-from-surgery', 'surgeon'],
             defaultSlug: 'seniors',
@@ -46,7 +46,7 @@
         },
         condition: {
             urlPrefix: '/conditions/',
-            dataFolder: 'data/conditions',
+            dataFolder: '/data/conditions',
             relationKey: 'relatedConditions',
             validSlugs: ['osteoarthritis', 'post-surgery-recovery', 'cold-therapy', 'spine-support'],
             defaultSlug: 'osteoarthritis'
@@ -973,12 +973,12 @@
         }
 
         const pageJsonUrl = `${route.config.dataFolder}/${route.slug}.json`;
-        const catalogUrl = 'data/products.json';
+        const catalogUrl = '/data/products.json';
         // Training programs only matter on the Surgeon audience page.
         // Anywhere else, we skip the fetch entirely to avoid an
         // unnecessary network call.
         const isSurgeonPage = route.type === 'audience' && route.slug === 'surgeon';
-        const programsUrl = isSurgeonPage ? 'data/training-programs.json' : null;
+        const programsUrl = isSurgeonPage ? '/data/training-programs.json' : null;
 
         try {
             const fetches = [

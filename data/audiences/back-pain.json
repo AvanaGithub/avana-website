@@ -7,7 +7,7 @@
     "eyebrow": "For People with Back Pain",
     "title": "Back Pain Solutions — Lumbar Belts & Bracing",
     "description": "Up to 8 in 10 Indian adults will deal with back pain at some point — making it one of the most common and most overlooked health problems in the country. The good news: doctor-recommended lumbar belts, posture supports, and spine bracing can meaningfully change how your back feels every day.",
-    "image": "images/audience/backpain.jpg",
+    "image": "/images/audience/backpain.jpg",
     "imageAlt": "Person with lumbar support",
     "ctas": [
       {
@@ -181,22 +181,22 @@
   "brands": [
     {
       "name": "Breg",
-      "logo": "images/brands/breg-logo.png.png",
+      "logo": "/images/brands/breg-logo.png.png",
       "caption": "USA · Sports medicine bracing"
     },
     {
       "name": "Aspen Medical",
-      "logo": "images/brands/aspen-logo.png.jpg",
+      "logo": "/images/brands/aspen-logo.png.jpg",
       "caption": "USA · Spinal bracing leader"
     },
     {
       "name": "RiwoSpine",
-      "logo": "images/brands/riwospine-logo.png.png",
+      "logo": "/images/brands/riwospine-logo.png.png",
       "caption": "Germany · Endoscopic spine systems"
     },
     {
       "name": "Osteokart",
-      "logo": "images/brands/osteokart-logo.png.png",
+      "logo": "/images/brands/osteokart-logo.png.png",
       "caption": "India · Authorised retail partner"
     }
   ],

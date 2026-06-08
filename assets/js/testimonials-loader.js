@@ -23,22 +23,22 @@
     // -------------------------------------------------------------
     const SOURCES = [
         // Pain areas
-        { url: 'data/pain-areas/knee.json' },
-        { url: 'data/pain-areas/spine.json' },
-        { url: 'data/pain-areas/shoulder.json' },
-        { url: 'data/pain-areas/elbow.json' },
-        { url: 'data/pain-areas/foot.json' },
-        { url: 'data/pain-areas/hip.json' },
+        { url: '/data/pain-areas/knee.json' },
+        { url: '/data/pain-areas/spine.json' },
+        { url: '/data/pain-areas/shoulder.json' },
+        { url: '/data/pain-areas/elbow.json' },
+        { url: '/data/pain-areas/foot.json' },
+        { url: '/data/pain-areas/hip.json' },
         // Audiences
-        { url: 'data/audiences/seniors.json' },
-        { url: 'data/audiences/back-pain.json' },
-        { url: 'data/audiences/recovering-from-surgery.json' },
-        { url: 'data/audiences/surgeon.json', audience: 'surgeon' },
+        { url: '/data/audiences/seniors.json' },
+        { url: '/data/audiences/back-pain.json' },
+        { url: '/data/audiences/recovering-from-surgery.json' },
+        { url: '/data/audiences/surgeon.json', audience: 'surgeon' },
         // Conditions
-        { url: 'data/conditions/osteoarthritis.json' },
-        { url: 'data/conditions/post-surgery-recovery.json' },
-        { url: 'data/conditions/cold-therapy.json' },
-        { url: 'data/conditions/spine-support.json' },
+        { url: '/data/conditions/osteoarthritis.json' },
+        { url: '/data/conditions/post-surgery-recovery.json' },
+        { url: '/data/conditions/cold-therapy.json' },
+        { url: '/data/conditions/spine-support.json' },
     ];
 
     function escapeHtml(s) {

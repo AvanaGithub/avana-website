@@ -8,7 +8,7 @@
     "eyebrow": "Osteoarthritis Knee · Pain Relief & Bracing",
     "title": "Osteoarthritis Knee — Bracing & Pain Relief",
     "description": "Modern offloader bracing has changed what's possible for osteoarthritis knee patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid knee replacement surgery.",
-    "image": "images/condition/osteoarthritis.jpg",
+    "image": "/images/condition/osteoarthritis.jpg",
     "imageAlt": "OA brace supporting an osteoarthritic knee",
     "ctas": [
       { "label": "See OA Solutions", "href": "#products", "style": "primary" },
@@ -126,10 +126,10 @@
   "blog": [],
 
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · OA bracing leader" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Orthopaedic bracing" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · OA bracing leader" },
+    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Orthopaedic bracing" },
+    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
   "cta": {

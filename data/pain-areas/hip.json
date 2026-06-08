@@ -6,7 +6,7 @@
         "eyebrow": "Hip Pain Support",
         "title": "Reclaim your stride.",
         "description": "From osteoarthritis to post-surgical recovery, the right hip support helps you move with stability and less pain.",
-        "image": "images/pain-landing/hip.jpg",
+        "image": "/images/pain-landing/hip.jpg",
         "imageAlt": "Hip pain bracing support — landing page hero",
         "ctas": [
             {
@@ -85,22 +85,22 @@
     "brands": [
         {
             "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
+            "logo": "/images/brands/breg-logo.png.png",
             "caption": "USA · Sports medicine"
         },
         {
             "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
+            "logo": "/images/brands/aspen-logo.png.jpg",
             "caption": "USA · Bracing leader"
         },
         {
             "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
+            "logo": "/images/brands/riwospine-logo.png.png",
             "caption": "Germany · Spine surgery"
         },
         {
             "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
+            "logo": "/images/brands/osteokart-logo.png.png",
             "caption": "India · Retail partner"
         }
     ],

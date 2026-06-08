@@ -8,7 +8,7 @@
     "eyebrow": "Post-Surgery Recovery · Bracing & Cold Therapy",
     "title": "Post-Surgery Bracing & Cold Therapy",
     "description": "The first 12 weeks after surgery shape your long-term recovery. The right combination of cold therapy, bracing, and surgeon-guided progression — trusted by orthopaedic surgeons across India — can reduce pain, prevent setbacks, and help you return to normal life faster.",
-    "image": "images/condition/Postsurgery.jpg",
+    "image": "/images/condition/Postsurgery.jpg",
     "imageAlt": "Post-operative recovery support",
     "ctas": [
       { "label": "See Recovery Solutions", "href": "#products", "style": "primary" },
@@ -123,10 +123,10 @@
   "blog": [],
 
   "brands": [
-    { "name": "Breg", "logo": "images/brands/breg-logo.png.png", "caption": "USA · Post-op leader" },
-    { "name": "Aspen Medical", "logo": "images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
-    { "name": "RiwoSpine", "logo": "images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · Post-op leader" },
+    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
+    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
   "cta": {

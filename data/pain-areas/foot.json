@@ -6,7 +6,7 @@
         "eyebrow": "Foot & Ankle Support",
         "title": "Walk further. Hurt less.",
         "description": "From plantar fasciitis that aches with every step to recovery from an ankle sprain or surgery — clinically proven support for confident movement.",
-        "image": "images/pain-landing/foot.jpg",
+        "image": "/images/pain-landing/foot.jpg",
         "imageAlt": "Foot and ankle pain bracing support — landing page hero",
         "ctas": [
             {
@@ -85,22 +85,22 @@
     "brands": [
         {
             "name": "Breg",
-            "logo": "images/brands/breg-logo.png.png",
+            "logo": "/images/brands/breg-logo.png.png",
             "caption": "USA · Sports medicine"
         },
         {
             "name": "Aspen Medical",
-            "logo": "images/brands/aspen-logo.png.jpg",
+            "logo": "/images/brands/aspen-logo.png.jpg",
             "caption": "USA · Bracing leader"
         },
         {
             "name": "RiwoSpine",
-            "logo": "images/brands/riwospine-logo.png.png",
+            "logo": "/images/brands/riwospine-logo.png.png",
             "caption": "Germany · Spine surgery"
         },
         {
             "name": "Osteokart",
-            "logo": "images/brands/osteokart-logo.png.png",
+            "logo": "/images/brands/osteokart-logo.png.png",
             "caption": "India · Retail partner"
         }
     ],

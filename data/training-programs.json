@@ -75,7 +75,7 @@
       ],
       "description": "24 delegates trained.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-01-cadaver-bangalore/"
+      "photoFolder": "/images/training/2025-01-cadaver-bangalore/"
     },
     {
       "slug": "2025-02-bone-model-pune",
@@ -89,7 +89,7 @@
       ],
       "description": "25 delegates — hands-on bone model.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-02-bone-model-pune/"
+      "photoFolder": "/images/training/2025-02-bone-model-pune/"
     },
     {
       "slug": "2025-04-patient-webinar-bhanot",
@@ -103,7 +103,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-04-patient-webinar-bhanot/"
+      "photoFolder": "/images/training/2025-04-patient-webinar-bhanot/"
     },
     {
       "slug": "2025-04-kol-young-surgeon-bhanot",
@@ -118,7 +118,7 @@
         "lecture"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-04-kol-young-surgeon-bhanot/"
+      "photoFolder": "/images/training/2025-04-kol-young-surgeon-bhanot/"
     },
     {
       "slug": "2025-05-patient-webinar-behra",
@@ -133,7 +133,7 @@
       ],
       "description": "64 patients joined.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-05-patient-webinar-behra/"
+      "photoFolder": "/images/training/2025-05-patient-webinar-behra/"
     },
     {
       "slug": "2025-05-bone-model-lucknow",
@@ -149,7 +149,7 @@
       ],
       "description": "2 bone models with camera system.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-05-bone-model-lucknow/"
+      "photoFolder": "/images/training/2025-05-bone-model-lucknow/"
     },
     {
       "slug": "2025-05-cadaveric-bangalore",
@@ -163,7 +163,7 @@
         "workshop"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-05-cadaveric-bangalore/"
+      "photoFolder": "/images/training/2025-05-cadaveric-bangalore/"
     },
     {
       "slug": "2025-06-apollo-guwahati",
@@ -182,7 +182,7 @@
       ],
       "description": "Live Surgery & Bone Model Workshop.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-06-apollo-guwahati/"
+      "photoFolder": "/images/training/2025-06-apollo-guwahati/"
     },
     {
       "slug": "2025-06-nimhans-bangalore",
@@ -198,7 +198,7 @@
         "lecture"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-06-nimhans-bangalore/"
+      "photoFolder": "/images/training/2025-06-nimhans-bangalore/"
     },
     {
       "slug": "2025-07-patient-webinar-karunakaran",
@@ -212,7 +212,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-07-patient-webinar-karunakaran/"
+      "photoFolder": "/images/training/2025-07-patient-webinar-karunakaran/"
     },
     {
       "slug": "2025-07-fess-webinar-young-surgeons",
@@ -227,7 +227,7 @@
         "lecture"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-07-fess-webinar-young-surgeons/"
+      "photoFolder": "/images/training/2025-07-fess-webinar-young-surgeons/"
     },
     {
       "slug": "2025-07-bone-model-chennai",
@@ -243,7 +243,7 @@
         "workshop"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-07-bone-model-chennai/"
+      "photoFolder": "/images/training/2025-07-bone-model-chennai/"
     },
     {
       "slug": "2025-08-astra-cochin",
@@ -259,7 +259,7 @@
       ],
       "description": "2 bone models with camera system.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-08-astra-cochin/"
+      "photoFolder": "/images/training/2025-08-astra-cochin/"
     },
     {
       "slug": "2025-08-patient-webinar-sharma",
@@ -274,7 +274,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-08-patient-webinar-sharma/"
+      "photoFolder": "/images/training/2025-08-patient-webinar-sharma/"
     },
     {
       "slug": "2025-08-kol-young-surgeon-bhanot",
@@ -289,7 +289,7 @@
         "lecture"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-08-kol-young-surgeon-bhanot/"
+      "photoFolder": "/images/training/2025-08-kol-young-surgeon-bhanot/"
     },
     {
       "slug": "2025-09-patient-webinar-padha-1",
@@ -303,7 +303,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-09-patient-webinar-padha-1/"
+      "photoFolder": "/images/training/2025-09-patient-webinar-padha-1/"
     },
     {
       "slug": "2025-09-bone-model-cuttack",
@@ -319,7 +319,7 @@
       ],
       "description": "3 bone models with camera system.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-09-bone-model-cuttack/"
+      "photoFolder": "/images/training/2025-09-bone-model-cuttack/"
     },
     {
       "slug": "2025-09-patient-webinar-padha-2",
@@ -333,7 +333,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2025-09-patient-webinar-padha-2/"
+      "photoFolder": "/images/training/2025-09-patient-webinar-padha-2/"
     },
     {
       "slug": "2025-09-bone-model-tvm",
@@ -350,7 +350,7 @@
       ],
       "description": "1 station.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-09-bone-model-tvm/"
+      "photoFolder": "/images/training/2025-09-bone-model-tvm/"
     },
     {
       "slug": "2025-10-avana-bangalore-office",
@@ -367,7 +367,7 @@
       ],
       "description": "2 bone model stations with camera system.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-10-avana-bangalore-office/"
+      "photoFolder": "/images/training/2025-10-avana-bangalore-office/"
     },
     {
       "slug": "2025-11-kollam-medical-college",
@@ -385,7 +385,7 @@
       ],
       "description": "1 bone model station with camera system & 1 cadaveric station.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-11-kollam-medical-college/"
+      "photoFolder": "/images/training/2025-11-kollam-medical-college/"
     },
     {
       "slug": "2025-12-fess-update-bangalore",
@@ -401,7 +401,7 @@
       ],
       "description": "2 bone model stations with camera system.",
       "photoCount": 0,
-      "photoFolder": "images/training/2025-12-fess-update-bangalore/"
+      "photoFolder": "/images/training/2025-12-fess-update-bangalore/"
     },
     {
       "slug": "2026-01-avana-kol-young-surgeon",
@@ -416,7 +416,7 @@
         "lecture"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2026-01-avana-kol-young-surgeon/"
+      "photoFolder": "/images/training/2026-01-avana-kol-young-surgeon/"
     },
     {
       "slug": "2026-01-avana-workshop-mgm-chennai",
@@ -432,7 +432,7 @@
         "workshop"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2026-01-avana-workshop-mgm-chennai/"
+      "photoFolder": "/images/training/2026-01-avana-workshop-mgm-chennai/"
     },
     {
       "slug": "2026-01-avana-bone-model-max-delhi",
@@ -448,7 +448,7 @@
         "workshop"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2026-01-avana-bone-model-max-delhi/"
+      "photoFolder": "/images/training/2026-01-avana-bone-model-max-delhi/"
     },
     {
       "slug": "2026-02-avana-regional-bone-model-delhi",
@@ -464,7 +464,7 @@
       ],
       "description": "1 bone model station.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-02-avana-regional-bone-model-delhi/"
+      "photoFolder": "/images/training/2026-02-avana-regional-bone-model-delhi/"
     },
     {
       "slug": "2026-02-avana-regional-bone-model-chennai",
@@ -480,7 +480,7 @@
       ],
       "description": "2 bone model stations with camera system.",
       "photoCount": 2,
-      "photoFolder": "images/training/2026-02-avana-regional-bone-model-chennai/"
+      "photoFolder": "/images/training/2026-02-avana-regional-bone-model-chennai/"
     },
     {
       "slug": "2026-02-avana-cadaveric-symbiosis-pune",
@@ -498,7 +498,7 @@
       ],
       "description": "2 cadaveric stations.",
       "photoCount": 4,
-      "photoFolder": "images/training/2026-02-avana-cadaveric-symbiosis-pune/"
+      "photoFolder": "/images/training/2026-02-avana-cadaveric-symbiosis-pune/"
     },
     {
       "slug": "2026-02-full-endoscopic-spine-meet-delhi",
@@ -514,7 +514,7 @@
       ],
       "description": "Live surgery & bone model.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-02-full-endoscopic-spine-meet-delhi/"
+      "photoFolder": "/images/training/2026-02-full-endoscopic-spine-meet-delhi/"
     },
     {
       "slug": "2026-03-st-johns-bangalore",
@@ -531,7 +531,7 @@
       ],
       "description": "1 bone model station.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-03-st-johns-bangalore/"
+      "photoFolder": "/images/training/2026-03-st-johns-bangalore/"
     },
     {
       "slug": "2026-03-ms-ramaiah-bangalore",
@@ -548,7 +548,7 @@
       ],
       "description": "1 cadaveric station.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-03-ms-ramaiah-bangalore/"
+      "photoFolder": "/images/training/2026-03-ms-ramaiah-bangalore/"
     },
     {
       "slug": "2026-03-neuro-bharath-varanasi",
@@ -564,7 +564,7 @@
       ],
       "description": "2 bone model stations.",
       "photoCount": 4,
-      "photoFolder": "images/training/2026-03-neuro-bharath-varanasi/"
+      "photoFolder": "/images/training/2026-03-neuro-bharath-varanasi/"
     },
     {
       "slug": "2026-04-proctorship-chintamani",
@@ -580,7 +580,7 @@
         "workshop"
       ],
       "photoCount": 2,
-      "photoFolder": "images/training/2026-04-proctorship-chintamani/"
+      "photoFolder": "/images/training/2026-04-proctorship-chintamani/"
     },
     {
       "slug": "2026-04-alchemist-chandigarh",
@@ -597,7 +597,7 @@
       ],
       "description": "1–2 bone model stations.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-04-alchemist-chandigarh/"
+      "photoFolder": "/images/training/2026-04-alchemist-chandigarh/"
     },
     {
       "slug": "2026-04-sctimst-trivandrum",
@@ -615,7 +615,7 @@
       ],
       "description": "1 bone model workshop.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-04-sctimst-trivandrum/"
+      "photoFolder": "/images/training/2026-04-sctimst-trivandrum/"
     },
     {
       "slug": "2026-04-avana-bone-model-mumbai",
@@ -632,7 +632,7 @@
       ],
       "description": "2 bone model stations.",
       "photoCount": 3,
-      "photoFolder": "images/training/2026-04-avana-bone-model-mumbai/"
+      "photoFolder": "/images/training/2026-04-avana-bone-model-mumbai/"
     },
     {
       "slug": "2026-05-kol-young-surgeon-bhanot",
@@ -647,7 +647,7 @@
         "lecture"
       ],
       "photoCount": 4,
-      "photoFolder": "images/training/2026-05-kol-young-surgeon-bhanot/"
+      "photoFolder": "/images/training/2026-05-kol-young-surgeon-bhanot/"
     },
     {
       "slug": "2026-05-patient-webinar-vishwakarma",
@@ -661,7 +661,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-patient-webinar-vishwakarma/"
+      "photoFolder": "/images/training/2026-05-patient-webinar-vishwakarma/"
     },
     {
       "slug": "2026-05-patient-webinar-chamle",
@@ -675,7 +675,7 @@
         "webinar"
       ],
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-patient-webinar-chamle/"
+      "photoFolder": "/images/training/2026-05-patient-webinar-chamle/"
     },
     {
       "slug": "2026-05-rml-hospital-lucknow",
@@ -692,7 +692,7 @@
       ],
       "description": "2 live surgeries & 1 bone model.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-rml-hospital-lucknow/"
+      "photoFolder": "/images/training/2026-05-rml-hospital-lucknow/"
     },
     {
       "slug": "2026-05-balaji-medical-chennai",
@@ -709,7 +709,7 @@
       ],
       "description": "1–2 bone model stations.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-balaji-medical-chennai/"
+      "photoFolder": "/images/training/2026-05-balaji-medical-chennai/"
     },
     {
       "slug": "2026-05-trivandrum-medical-college",
@@ -728,7 +728,7 @@
       ],
       "description": "Live surgery & bone model.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-trivandrum-medical-college/"
+      "photoFolder": "/images/training/2026-05-trivandrum-medical-college/"
     },
     {
       "slug": "2026-05-apollo-guwahati",
@@ -745,7 +745,7 @@
       ],
       "description": "Live surgery.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-05-apollo-guwahati/"
+      "photoFolder": "/images/training/2026-05-apollo-guwahati/"
     },
     {
       "slug": "2026-06-ms-ramaiah-bangalore",
@@ -765,7 +765,7 @@
       ],
       "description": "3 cadaveric stations.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-06-ms-ramaiah-bangalore/",
+      "photoFolder": "/images/training/2026-06-ms-ramaiah-bangalore/",
       "fee": 45000,
       "feeCurrency": "INR",
       "seatsTotal": 20,
@@ -789,7 +789,7 @@
       ],
       "description": "2 stations.",
       "photoCount": 0,
-      "photoFolder": "images/training/2026-07-yatharth-greater-noida/"
+      "photoFolder": "/images/training/2026-07-yatharth-greater-noida/"
     }
   ]
 }
