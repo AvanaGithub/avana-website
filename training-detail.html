@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-bind="metaTitle">Training Programme | Avana Surgical</title>
     <meta name="description" data-bind="metaDescription" content="Avana training programme details — date, faculty, venue, activities, and registration.">
+    <!-- Training programme detail pages are query-param deep links from /for-surgeons.
+         Mark them noindex so they don't compete with the canonical /for-surgeons listing. -->
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://avanasurgical.com/for-surgeons">
 
     <link rel="icon" type="image/png" href="images/avana-logo/favicon.png">
     <link rel="apple-touch-icon" href="images/avana-logo/favicon.png">

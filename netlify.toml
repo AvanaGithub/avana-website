@@ -14,6 +14,22 @@
   publish = "."
 
 # -------------------------------------------------------------
+# Security — block private admin/preview folders.
+# Netlify rule of thumb: 404 first, then 301s, then 200 rewrites.
+# -------------------------------------------------------------
+[[redirects]]
+  from = "/_tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/proposals/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# -------------------------------------------------------------
 # 301 redirects — legacy query-param URLs → clean URLs.
 # These run BEFORE the rewrites below. Put 301s first so old
 # inbound links land on the canonical URL (good for SEO).

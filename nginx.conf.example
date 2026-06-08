@@ -67,6 +67,15 @@ server {
     location /partials/  { add_header Cache-Control "no-cache"; }
 
     # =============================================================
+    # SECURITY: block private admin/preview folders from production.
+    # _tools/catalog-editor.html is for local content management only.
+    # proposals/ contains internal preview HTML.
+    # =============================================================
+    location ^~ /_tools/    { return 404; }
+    location ^~ /proposals/ { return 404; }
+    location = /robots.txt  { try_files $uri =404; }
+
+    # =============================================================
     # 301 REDIRECTS — legacy URLs → clean URLs (good for SEO).
     # These run BEFORE the rewrites below.
     # =============================================================

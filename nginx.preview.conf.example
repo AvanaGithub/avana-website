@@ -1,0 +1,97 @@
+# =============================================================
+# Avana Surgical — PREVIEW host (preview.avanasurgical.com)
+#
+# This config is ONLY for preview.avanasurgical.com. Production
+# (avanasurgical.com) uses nginx.conf.example which is identical
+# except this file injects X-Robots-Tag noindex on every response.
+#
+# Drop in /etc/nginx/sites-available/preview.avanasurgical.com,
+# symlink to /etc/nginx/sites-enabled/, then:
+#   sudo nginx -t && sudo systemctl reload nginx
+# =============================================================
+
+# Same legacy-redirect maps as production (must live in http {} block,
+# not server {}, so include them via /etc/nginx/conf.d/legacy-maps.conf
+# if you're running both prod and preview from the same nginx instance.)
+#
+# map "$arg_type:$arg_slug" $legacy_redirect { ... }
+# map "$arg_area"          $painhtml_redirect { ... }
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name preview.avanasurgical.com;
+
+    root /var/www/avanasurgical;   # SAME repo as production
+    index index.html;
+
+    # =============================================================
+    # !!! CRITICAL: prevent search engines indexing the preview host.
+    # Adds: X-Robots-Tag: noindex, nofollow on every HTTP response.
+    # This sits ABOVE every location block so it survives rewrites.
+    # =============================================================
+    add_header X-Robots-Tag "noindex, nofollow" always;
+
+    # --- gzip ---
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/javascript application/javascript application/json image/svg+xml application/xml;
+
+    # --- cache assets, NO-cache data/partials ---
+    location ~* \.(css|js|svg|jpg|jpeg|png|webp|gif|ico|woff2?)$ {
+        expires 30d;
+        access_log off;
+        add_header Cache-Control "public";
+        add_header X-Robots-Tag "noindex, nofollow" always;
+    }
+    location /data/      { add_header Cache-Control "no-cache"; add_header X-Robots-Tag "noindex, nofollow" always; }
+    location /partials/  { add_header Cache-Control "no-cache"; add_header X-Robots-Tag "noindex, nofollow" always; }
+
+    # --- block admin/preview tools on preview host too ---
+    location ^~ /_tools/    { return 404; }
+    location ^~ /proposals/ { return 404; }
+
+    # --- block robots & sitemap on the preview host so Google can't
+    #     even fetch them. Returns 404 to keep the URLs out of the index. ---
+    location = /robots.txt {
+        return 200 "User-agent: *\nDisallow: /\n";
+        add_header Content-Type text/plain;
+        add_header X-Robots-Tag "noindex, nofollow" always;
+    }
+    location = /sitemap.xml { return 404; }
+
+    # =============================================================
+    # CLEAN-URL REWRITES — identical to production
+    # =============================================================
+    location = /solution-template.html {
+        if ($legacy_redirect != "") {
+            return 301 $legacy_redirect;
+        }
+        try_files /solution-template.html =404;
+    }
+    location = /pain.html {
+        if ($painhtml_redirect != "") {
+            return 301 $painhtml_redirect;
+        }
+        return 301 /solutions/knee-pain;
+    }
+    location = /solutions/spine-pain { return 301 /solutions/back-pain; }
+    location = /for-surgeons         { try_files /solution-template.html =404; }
+    location ^~ /solutions/          { try_files $uri $uri/ /solution-template.html; }
+    location ^~ /audiences/          { try_files $uri $uri/ /solution-template.html; }
+    location ^~ /conditions/         { try_files $uri $uri/ /solution-template.html; }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+    error_page 404 /index.html;
+}
+
+# =============================================================
+# HTTPS (after running certbot --nginx -d preview.avanasurgical.com)
+# Certbot will copy this server block to listen 443 ssl with the cert.
+# Make sure the X-Robots-Tag and add_header lines survive into that
+# 443 block — they are NOT inherited automatically.
+# =============================================================
