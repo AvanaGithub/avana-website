@@ -51,19 +51,22 @@ map $uri $legacy_path_redirect {
 
     "/about.php"                                  "/about";
     "/career.php"                                 "/careers";
-    "/contact.php"                                "/#enquiry";    # Flip to "/contact" if/when that page is built
+    "/contact.php"                                "/#enquiry";        # Flip to "/contact" if/when that page is built
     "/privacy-policy.php"                         "/privacy-policy";
     "/life-at-avana.php"                          "/careers";
-    "/testimonials.php"                           "/testimonials";        # /testimonials page must exist before cutover
+    "/testimonials.php"                           "/testimonials";    # /testimonials page now exists ✓
+
     "/training_education.php"                     "/for-surgeons";
     "/endospine-services.php"                     "/for-surgeons";
     "/full-endoscopy-system.php"                  "/for-surgeons";
     "/leading-the-future-of-spine-surgery.php"    "/for-surgeons";
-    "/orthotics-products.php"                     "/solutions";           # /solutions listing page must exist before cutover
 
-    # Not redirected (review manually before cutover):
-    #   "/rental.php"   — no equivalent product line on new site
-    #   "/kodiak/"      — need product-team confirmation
+    "/kodiak/"                                    "/kodiak/";         # Preservation marker — see self-redirect guard below
+
+    # Not redirected — review manually before final cutover:
+    #   "/orthotics-products.php"  — no /solutions parent page exists yet
+    #   "/rental.php"              — no rental page exists yet
+    # Blog URLs are intentionally out of scope this phase.
 }
 
 server {
@@ -108,7 +111,14 @@ server {
 
     # Legacy WordPress/PHP URLs (about.php, career.php, etc.) — see the
     # $legacy_path_redirect map above. Empty value falls through.
-    if ($legacy_path_redirect != "") {
+    # Self-redirect guard: if target == current URI (e.g. /kodiak/ →
+    # /kodiak/, used as a "preserve this URL" marker), skip the 301
+    # to avoid an infinite loop. nginx if-blocks can't be nested, so
+    # we set/unset a sentinel variable across three lines.
+    set $do_legacy_redirect "";
+    if ($legacy_path_redirect != "")   { set $do_legacy_redirect "1"; }
+    if ($legacy_path_redirect = $uri)  { set $do_legacy_redirect ""; }
+    if ($do_legacy_redirect = "1") {
         return 301 $legacy_path_redirect;
     }
 

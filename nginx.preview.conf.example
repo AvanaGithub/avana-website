@@ -68,7 +68,13 @@ server {
     # =============================================================
 
     # Legacy WordPress/PHP URLs (about.php, career.php, etc.)
-    if ($legacy_path_redirect != "") {
+    # Self-redirect guard: if target == current URI (e.g. /kodiak/ →
+    # /kodiak/, used as a preservation marker), skip the 301 to avoid
+    # an infinite loop. Mirror of the production server block.
+    set $do_legacy_redirect "";
+    if ($legacy_path_redirect != "")   { set $do_legacy_redirect "1"; }
+    if ($legacy_path_redirect = $uri)  { set $do_legacy_redirect ""; }
+    if ($do_legacy_redirect = "1") {
         return 301 $legacy_path_redirect;
     }
 
