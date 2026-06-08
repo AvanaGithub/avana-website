@@ -13,17 +13,25 @@
         (function () {
             var params = new URLSearchParams(window.location.search);
             var area = (params.get('area') || 'knee').toLowerCase();
-            var valid = ['knee', 'spine', 'shoulder', 'elbow', 'foot', 'hip'];
-            if (valid.indexOf(area) === -1) area = 'knee';
-            window.location.replace('solution-template.html?type=painArea&slug=' + area + window.location.hash);
+            // Map legacy ?area=… slug onto the new clean URL
+            var areaToPath = {
+                knee:     '/solutions/knee-pain',
+                spine:    '/solutions/back-pain',
+                shoulder: '/solutions/shoulder-pain',
+                elbow:    '/solutions/elbow-pain',
+                foot:     '/solutions/foot-ankle-pain',
+                hip:      '/solutions/hip-pain'
+            };
+            var target = areaToPath[area] || '/solutions/knee-pain';
+            window.location.replace(target + window.location.hash);
         })();
     </script>
-    <meta http-equiv="refresh" content="0; url=solution-template.html?type=painArea&slug=knee">
+    <meta http-equiv="refresh" content="0; url=/solutions/knee-pain">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8B2Z2NS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <p>Redirecting to <a href="solution-template.html?type=painArea&amp;slug=knee">the knee solutions page</a>…</p>
+    <p>Redirecting to <a href="/solutions/knee-pain">the knee solutions page</a>…</p>
 </body>
 </html>

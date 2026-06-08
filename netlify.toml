@@ -1,7 +1,7 @@
 # =============================================================
-# Netlify config — gives you the same clean-URL rewrites that
-# nginx.conf.example does on DigitalOcean, but instantly via
-# https://app.netlify.com.
+# Netlify config — clean SEO URLs + canonical-URL 301 redirects.
+# Mirrors the redirect rules in nginx.conf.example so the site
+# behaves identically on Netlify (preview) and DigitalOcean (prod).
 #
 # To deploy:
 #   1. Sign in at https://app.netlify.com with GitHub
@@ -13,15 +13,135 @@
 [build]
   publish = "."
 
-# Clean-URL rewrites: serve solution-template.html under /solutions/, /audiences/, /conditions/
-# Status 200 = rewrite (the browser's URL stays as /solutions/knee).
+# -------------------------------------------------------------
+# 301 redirects — legacy query-param URLs → clean URLs.
+# These run BEFORE the rewrites below. Put 301s first so old
+# inbound links land on the canonical URL (good for SEO).
+# -------------------------------------------------------------
+
+# Pain Areas (painArea type)
 [[redirects]]
-  from = "/solutions/*"
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "knee" }
+  to = "/solutions/knee-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "foot" }
+  to = "/solutions/foot-ankle-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "shoulder" }
+  to = "/solutions/shoulder-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "elbow" }
+  to = "/solutions/elbow-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "spine" }
+  to = "/solutions/back-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "painArea", slug = "hip" }
+  to = "/solutions/hip-pain"
+  status = 301
+  force = true
+
+# Conditions
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "condition", slug = "osteoarthritis" }
+  to = "/conditions/osteoarthritis"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "condition", slug = "post-surgery-recovery" }
+  to = "/conditions/post-surgery-recovery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "condition", slug = "cold-therapy" }
+  to = "/solutions/cold-therapy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "condition", slug = "spine-support" }
+  to = "/solutions/spine-support"
+  status = 301
+  force = true
+
+# Audience: only "surgeon" gets the flat clean URL. The other
+# audience slugs (seniors, back-pain, recovering-from-surgery)
+# can still be reached via /audiences/* if anyone has bookmarked
+# them, but they're no longer promoted in the navbar.
+[[redirects]]
+  from = "/solution-template.html"
+  query = { type = "audience", slug = "surgeon" }
+  to = "/for-surgeons"
+  status = 301
+  force = true
+
+# /solutions/spine-pain → canonical /solutions/back-pain
+[[redirects]]
+  from = "/solutions/spine-pain"
+  to = "/solutions/back-pain"
+  status = 301
+  force = true
+
+# Legacy /pain.html?area=… patterns (in case anyone has these
+# bookmarked). pain.html itself still does a JS redirect for
+# the rare browser without an inbound rewrite.
+[[redirects]]
+  from = "/pain.html"
+  query = { area = "knee" }
+  to = "/solutions/knee-pain"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/pain.html"
+  query = { area = "spine" }
+  to = "/solutions/back-pain"
+  status = 301
+  force = true
+
+# -------------------------------------------------------------
+# Internal rewrites — clean URLs → solution-template.html.
+# These DO NOT change the browser's URL bar (status=200).
+# Order matters: more-specific rules first.
+# -------------------------------------------------------------
+
+[[redirects]]
+  from = "/for-surgeons"
   to = "/solution-template.html"
   status = 200
 
+# Catch-all rewrites for /solutions/* and /conditions/*. The JS
+# loader inspects window.location.pathname and looks up the right
+# type+slug in its EXPLICIT_ROUTES map.
 [[redirects]]
-  from = "/audiences/*"
+  from = "/solutions/*"
   to = "/solution-template.html"
   status = 200
 
@@ -30,7 +150,18 @@
   to = "/solution-template.html"
   status = 200
 
-# Cache static assets aggressively; data/partials short-cache so edits show up fast.
+# Legacy audience prefix (kept for any old inbound links — the JS
+# loader handles seniors / back-pain / recovering-from-surgery the
+# same way it did before).
+[[redirects]]
+  from = "/audiences/*"
+  to = "/solution-template.html"
+  status = 200
+
+# -------------------------------------------------------------
+# Cache headers — static assets aggressive, data/partials short
+# so admin-panel edits show up fast after a push.
+# -------------------------------------------------------------
 [[headers]]
   for = "/assets/*"
   [headers.values]

@@ -2,11 +2,43 @@
 # Avana Surgical — nginx site config for DigitalOcean
 #
 # Drop this in /etc/nginx/sites-available/avanasurgical.com,
-# symlink to /etc/nginx/sites-enabled/, then `sudo nginx -t && sudo systemctl reload nginx`.
+# symlink to /etc/nginx/sites-enabled/, then:
+#   sudo nginx -t && sudo systemctl reload nginx
 #
 # Assumes the site is served from /var/www/avanasurgical.
 # Adjust paths and server_name to match your droplet.
 # =============================================================
+
+# -------------------------------------------------------------
+# 301 redirect map for legacy ?type=…&slug=… query URLs.
+# nginx evaluates this once per request and the result is in
+# $legacy_redirect. Empty value = no redirect.
+# -------------------------------------------------------------
+map "$arg_type:$arg_slug" $legacy_redirect {
+    default                            "";
+    "painArea:knee"                    "/solutions/knee-pain";
+    "painArea:foot"                    "/solutions/foot-ankle-pain";
+    "painArea:shoulder"                "/solutions/shoulder-pain";
+    "painArea:elbow"                   "/solutions/elbow-pain";
+    "painArea:spine"                   "/solutions/back-pain";
+    "painArea:hip"                     "/solutions/hip-pain";
+    "condition:osteoarthritis"         "/conditions/osteoarthritis";
+    "condition:post-surgery-recovery"  "/conditions/post-surgery-recovery";
+    "condition:cold-therapy"           "/solutions/cold-therapy";
+    "condition:spine-support"          "/solutions/spine-support";
+    "audience:surgeon"                 "/for-surgeons";
+}
+
+# Legacy /pain.html?area=… → clean URL
+map "$arg_area" $painhtml_redirect {
+    default     "";
+    "knee"      "/solutions/knee-pain";
+    "spine"     "/solutions/back-pain";
+    "shoulder"  "/solutions/shoulder-pain";
+    "elbow"     "/solutions/elbow-pain";
+    "foot"      "/solutions/foot-ankle-pain";
+    "hip"       "/solutions/hip-pain";
+}
 
 server {
     listen 80;
@@ -21,7 +53,7 @@ server {
     gzip_vary on;
     gzip_min_length 1024;
     gzip_proxied any;
-    gzip_types text/plain text/css text/javascript application/javascript application/json image/svg+xml;
+    gzip_types text/plain text/css text/javascript application/javascript application/json image/svg+xml application/xml;
 
     # --- cache static assets aggressively ---
     location ~* \.(css|js|svg|jpg|jpeg|png|webp|gif|ico|woff2?)$ {
@@ -35,31 +67,54 @@ server {
     location /partials/  { add_header Cache-Control "no-cache"; }
 
     # =============================================================
-    # CLEAN-URL REWRITES — Solutions, Audiences, Conditions
-    # All three families serve the same template: /solution-template.html
-    # solution-loader.js reads window.location.pathname to figure out
-    # which type+slug to render.
+    # 301 REDIRECTS — legacy URLs → clean URLs (good for SEO).
+    # These run BEFORE the rewrites below.
     # =============================================================
+
+    # /solution-template.html?type=…&slug=… → clean URL
+    location = /solution-template.html {
+        if ($legacy_redirect != "") {
+            return 301 $legacy_redirect;
+        }
+        # No matching query → fall through and serve the template
+        # (lets internal "view-source" / dev fetches still work).
+        try_files /solution-template.html =404;
+    }
+
+    # /pain.html?area=… → clean URL (handled by JS today, kept here
+    # for crawlers that don't run JS)
+    location = /pain.html {
+        if ($painhtml_redirect != "") {
+            return 301 $painhtml_redirect;
+        }
+        return 301 /solutions/knee-pain;
+    }
+
+    # /solutions/spine-pain → canonical /solutions/back-pain
+    location = /solutions/spine-pain {
+        return 301 /solutions/back-pain;
+    }
+
+    # =============================================================
+    # CLEAN-URL REWRITES — internal, do NOT change the URL bar.
+    # All three families serve the same template; solution-loader.js
+    # inspects window.location.pathname to pick the right JSON.
+    # =============================================================
+    location = /for-surgeons {
+        try_files /solution-template.html =404;
+    }
+
     location ^~ /solutions/   { try_files $uri $uri/ /solution-template.html; }
     location ^~ /audiences/   { try_files $uri $uri/ /solution-template.html; }
     location ^~ /conditions/  { try_files $uri $uri/ /solution-template.html; }
 
     # =============================================================
-    # WordPress blog (sub-path) — see avana-blog-theme/
-    # If you host the blog under /blog/ instead of a subdomain,
-    # uncomment and set $document_root_blog correctly.
+    # Ghost blog (subdomain) — handled by separate server { } block
+    # in /etc/nginx/sites-available/blog.avanasurgical.com.
+    # Nothing to wire up here.
     # =============================================================
-    # location /blog/ {
-    #     alias /var/www/avana-blog/;
-    #     index index.php;
-    #     try_files $uri $uri/ /blog/index.php?$args;
-    #     location ~ \.php$ {
-    #         include snippets/fastcgi-php.conf;
-    #         fastcgi_pass unix:/run/php/php8.2-fpm.sock;
-    #     }
-    # }
 
-    # --- default: serve static files, then fall back to 404 ---
+    # --- default: serve static files, then fall back to index ---
     location / {
         try_files $uri $uri/ /index.html;
     }
@@ -70,5 +125,7 @@ server {
 
 # =============================================================
 # HTTPS (after running certbot --nginx -d avanasurgical.com -d www.avanasurgical.com)
-# Certbot will append a second server { listen 443 ssl; ... } block automatically.
+# Certbot will append a second server { listen 443 ssl; ... } block
+# automatically and copy the location/redirect rules into it. Verify
+# the 301 map directives also live in the 443 block.
 # =============================================================

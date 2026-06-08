@@ -1,0 +1,14 @@
+# Avana Surgical — crawler directives
+User-agent: *
+Allow: /
+
+# Don't index local-admin or legacy template URLs
+Disallow: /_tools/
+Disallow: /proposals/
+Disallow: /solution-template.html
+Disallow: /pain.html
+Disallow: /*?type=
+Disallow: /*?slug=
+Disallow: /*?area=
+
+Sitemap: https://avanasurgical.com/sitemap.xml

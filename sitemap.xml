@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Avana Surgical — sitemap for Google Search Console.
+  Only canonical clean URLs on https://avanasurgical.com.
+  No query-param URLs, no GitHub Pages URLs, no /audiences/* aliases.
+  Update <lastmod> dates when content changes meaningfully.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-0.9">
+
+  <!-- ===== Top-level static pages ===== -->
+  <url>
+    <loc>https://avanasurgical.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/careers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ===== Pain Area pages (under /solutions/) ===== -->
+  <url>
+    <loc>https://avanasurgical.com/solutions/knee-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/back-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/shoulder-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/elbow-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/foot-ankle-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/hip-pain</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== Condition pages ===== -->
+  <url>
+    <loc>https://avanasurgical.com/conditions/osteoarthritis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/conditions/post-surgery-recovery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/cold-therapy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://avanasurgical.com/solutions/spine-support</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ===== Surgeon / training audience ===== -->
+  <url>
+    <loc>https://avanasurgical.com/for-surgeons</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+</urlset>

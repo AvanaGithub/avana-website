@@ -54,12 +54,62 @@
     };
 
     /* ----------------------------------------------------------
+       1b. CLEAN-URL ROUTE MAP
+       Public SEO-friendly URLs → {type, slug}. These are the URLs
+       indexed by Google. They take precedence over the generic
+       /solutions/{slug} prefix matching above.
+
+       Note: /solutions/cold-therapy and /solutions/spine-support live
+       under /solutions/ for marketing reasons, but resolve to the
+       'condition' type internally — they're SEO aliases that point
+       at condition JSON files.
+
+       /solutions/back-pain and /solutions/spine-pain are both aliases
+       for the painArea 'spine' content. Canonical of both is
+       /solutions/back-pain (higher search volume than "spine pain").
+       This explicitly prevents the audience back-pain JSON from
+       being served — a clean URL under /solutions/ always means
+       painArea content (or condition, for the two condition aliases).
+       ---------------------------------------------------------- */
+    const EXPLICIT_ROUTES = {
+        '/solutions/knee-pain':              { type: 'painArea',  slug: 'knee' },
+        '/solutions/foot-ankle-pain':        { type: 'painArea',  slug: 'foot' },
+        '/solutions/shoulder-pain':          { type: 'painArea',  slug: 'shoulder' },
+        '/solutions/elbow-pain':             { type: 'painArea',  slug: 'elbow' },
+        '/solutions/back-pain':              { type: 'painArea',  slug: 'spine' },  // CANONICAL (higher search volume)
+        '/solutions/spine-pain':             { type: 'painArea',  slug: 'spine' },  // alias → canonicalises to /solutions/back-pain
+        '/solutions/hip-pain':               { type: 'painArea',  slug: 'hip' },
+        '/conditions/osteoarthritis':        { type: 'condition', slug: 'osteoarthritis' },
+        '/conditions/post-surgery-recovery': { type: 'condition', slug: 'post-surgery-recovery' },
+        '/solutions/cold-therapy':           { type: 'condition', slug: 'cold-therapy' },
+        '/solutions/spine-support':          { type: 'condition', slug: 'spine-support' },
+        '/for-surgeons':                     { type: 'audience',  slug: 'surgeon' }
+    };
+
+    /* Reverse map: {type, slug} → canonical clean URL.
+       Walks EXPLICIT_ROUTES; first match wins (so /solutions/back-pain
+       is the canonical for painArea/spine, not /solutions/spine-pain). */
+    const CANONICAL_PATHS = (() => {
+        const m = {};
+        for (const [path, route] of Object.entries(EXPLICIT_ROUTES)) {
+            const key = route.type + '|' + route.slug;
+            if (!(key in m)) m[key] = path;
+        }
+        return m;
+    })();
+
+    function canonicalPathFor(type, slug) {
+        const key = type + '|' + slug;
+        return CANONICAL_PATHS[key] || null;
+    }
+
+    /* ----------------------------------------------------------
        2. ROUTE RESOLUTION
        Inspect the URL — pathname first, then query string fallback.
        Returns { type, slug, config } or null if unresolvable.
        ---------------------------------------------------------- */
     function resolveRoute() {
-        const pathname = window.location.pathname;
+        const pathname = window.location.pathname.replace(/\/+$/, ''); // strip trailing slash
         const params = new URLSearchParams(window.location.search);
 
         // Helper: if the slug is a legacy/aliased name, return its
@@ -69,9 +119,19 @@
             return (cfg.slugAliases && cfg.slugAliases[slug]) || slug;
         }
 
-        // Path-based routing (production, via nginx rewrite)
+        // (1) Highest priority: explicit clean-URL map. These are the
+        // public, SEO-indexed URLs (e.g. /solutions/knee-pain →
+        // painArea/knee, /for-surgeons → audience/surgeon).
+        if (EXPLICIT_ROUTES[pathname]) {
+            const { type, slug } = EXPLICIT_ROUTES[pathname];
+            return { type, slug, config: TYPES[type] };
+        }
+
+        // (2) Generic prefix-based routing (legacy / internal — kept for
+        // backwards compatibility with /audiences/{slug} and any
+        // /solutions/{painSlug} URL not yet listed in EXPLICIT_ROUTES).
         for (const [typeKey, cfg] of Object.entries(TYPES)) {
-            if (pathname.startsWith(cfg.urlPrefix)) {
+            if (pathname.startsWith(cfg.urlPrefix.replace(/\/+$/, ''))) {
                 const rest = pathname.slice(cfg.urlPrefix.length).replace(/\/+$/, '');
                 const rawSlug = rest.split('/')[0];
                 const slug = applyAlias(cfg, rawSlug);
@@ -176,8 +236,26 @@
             });
         });
 
+        // Canonical URL — points at the clean URL on the live origin,
+        // not whatever the visitor typed (which might be a query-param
+        // legacy URL or an alias like /solutions/spine-pain).
         const canonical = document.querySelector('link[data-bind="canonical"]');
-        if (canonical) canonical.setAttribute('href', window.location.href);
+        if (canonical && data.__route) {
+            const cleanPath = canonicalPathFor(data.__route.type, data.__route.slug);
+            if (cleanPath) {
+                canonical.setAttribute('href', 'https://avanasurgical.com' + cleanPath);
+                // Also keep og:url in sync so social previews use the clean URL.
+                let ogUrl = document.querySelector('meta[property="og:url"]');
+                if (!ogUrl) {
+                    ogUrl = document.createElement('meta');
+                    ogUrl.setAttribute('property', 'og:url');
+                    document.head.appendChild(ogUrl);
+                }
+                ogUrl.setAttribute('content', 'https://avanasurgical.com' + cleanPath);
+            } else {
+                canonical.setAttribute('href', window.location.origin + window.location.pathname);
+            }
+        }
     }
 
     /* ----------------------------------------------------------
@@ -864,7 +942,8 @@
                 <p style="margin: 0 0 10px; color: #1F1F1F; font-size: 0.95rem; line-height: 1.7;">Browsers block <code>fetch()</code> on <code>file://</code> URLs. To preview locally:</p>
                 <ol style="margin: 0 0 0 20px; color: #1F1F1F; font-size: 0.95rem; line-height: 1.8;">
                     <li>Double-click <strong>start-server.bat</strong> in the project folder, or run <code>python -m http.server 8000</code></li>
-                    <li>Open <a href="http://localhost:8000/solution-template.html?type=painArea&slug=knee" style="color: #B18C57; font-weight: 600;">http://localhost:8000/solution-template.html?type=painArea&amp;slug=knee</a></li>
+                    <li>Open <a href="http://localhost:8000/solution-template.html?type=painArea&slug=knee" style="color: #B18C57; font-weight: 600;">http://localhost:8000/solution-template.html?type=painArea&amp;slug=knee</a> (legacy query URL — works on plain http.server)</li>
+                    <li>Or run <code>netlify dev</code> instead, then open <code>http://localhost:8888/solutions/knee-pain</code> for clean-URL preview</li>
                 </ol>
                 <p style="margin: 12px 0 0; color: #6C6C6C; font-size: 0.85rem;">In production, the clean URL <code>/solutions/knee</code> is rewritten by nginx to this template.</p>
             </div>` : (hint ? `<p style="color: var(--color-muted); margin-bottom: 24px; font-size: 0.92rem;">${escapeHtml(hint)}</p>` : '');
@@ -915,6 +994,9 @@
             const data = await pageRes.json();
             const catalog = await catalogRes.json();
             data.slug = data.slug || route.slug;
+            // Stash the resolved route on the data object so the meta-tag
+            // binder (bindMetaTags) can look up the canonical clean URL.
+            data.__route = { type: route.type, slug: route.slug };
 
             // Training programs are optional — if the file is missing or
             // unparseable we just skip the upcoming/past sections rather
