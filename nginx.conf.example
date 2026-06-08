@@ -40,6 +40,32 @@ map "$arg_area" $painhtml_redirect {
     "hip"       "/solutions/hip-pain";
 }
 
+# -------------------------------------------------------------
+# Legacy avanasurgical.com (old WordPress / PHP site) → new site.
+# Uses $uri (path only) so URLs with query strings like
+# /about.php?utm_source=google still redirect cleanly.
+# Empty value = no match, request falls through.
+# -------------------------------------------------------------
+map $uri $legacy_path_redirect {
+    default                                       "";
+
+    "/about.php"                                  "/about";
+    "/career.php"                                 "/careers";
+    "/contact.php"                                "/#enquiry";    # Flip to "/contact" if/when that page is built
+    "/privacy-policy.php"                         "/privacy-policy";
+    "/life-at-avana.php"                          "/careers";
+    "/testimonials.php"                           "/testimonials";        # /testimonials page must exist before cutover
+    "/training_education.php"                     "/for-surgeons";
+    "/endospine-services.php"                     "/for-surgeons";
+    "/full-endoscopy-system.php"                  "/for-surgeons";
+    "/leading-the-future-of-spine-surgery.php"    "/for-surgeons";
+    "/orthotics-products.php"                     "/solutions";           # /solutions listing page must exist before cutover
+
+    # Not redirected (review manually before cutover):
+    #   "/rental.php"   — no equivalent product line on new site
+    #   "/kodiak/"      — need product-team confirmation
+}
+
 server {
     listen 80;
     listen [::]:80;
@@ -80,6 +106,12 @@ server {
     # These run BEFORE the rewrites below.
     # =============================================================
 
+    # Legacy WordPress/PHP URLs (about.php, career.php, etc.) — see the
+    # $legacy_path_redirect map above. Empty value falls through.
+    if ($legacy_path_redirect != "") {
+        return 301 $legacy_path_redirect;
+    }
+
     # /solution-template.html?type=…&slug=… → clean URL
     location = /solution-template.html {
         if ($legacy_redirect != "") {
@@ -118,10 +150,17 @@ server {
     location ^~ /conditions/  { try_files $uri $uri/ /solution-template.html; }
 
     # =============================================================
-    # Ghost blog (subdomain) — handled by separate server { } block
-    # in /etc/nginx/sites-available/blog.avanasurgical.com.
-    # Nothing to wire up here.
+    # Future blog (Ghost) — will be served from /blog as a sub-path
+    # of this same server. Wire up here when Ghost is installed;
+    # leave commented out until then.
     # =============================================================
+    # location /blog/ {
+    #     proxy_pass http://127.0.0.1:2368/;
+    #     proxy_set_header Host $host;
+    #     proxy_set_header X-Real-IP $remote_addr;
+    #     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    #     proxy_set_header X-Forwarded-Proto $scheme;
+    # }
 
     # --- default: serve static files, then fall back to index ---
     location / {

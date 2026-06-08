@@ -1,5 +1,7 @@
 # Ghost CMS — Setup Guide for Avana
 
+> ⚠️ **Deprecation note (kept for historical reference):** This guide was written for an earlier plan where Ghost would live on the subdomain `blog.avanasurgical.com`. The current plan is to host the blog at the sub-path **`/blog`** on the main domain (proxied through nginx on the same droplet). The Ghost server-side install steps (Node.js, MySQL, Ghost-CLI, themes) are still accurate — but the URL, DNS, and SSL sections below need to be re-done for the `/blog` sub-path before this doc is used for a real install.
+
 This guide installs Ghost as the blog at **`blog.avanasurgical.com`**, on your existing DigitalOcean droplet, alongside the main static site. Total time: ~45 minutes once the droplet is reachable.
 
 ---

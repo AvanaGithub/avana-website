@@ -10,12 +10,13 @@
 #   sudo nginx -t && sudo systemctl reload nginx
 # =============================================================
 
-# Same legacy-redirect maps as production (must live in http {} block,
-# not server {}, so include them via /etc/nginx/conf.d/legacy-maps.conf
-# if you're running both prod and preview from the same nginx instance.)
+# Same three maps as production. Must live in http {} block, not
+# server {}, so include them via /etc/nginx/conf.d/avana-maps.conf
+# if you're running prod + preview from the same nginx instance.
 #
-# map "$arg_type:$arg_slug" $legacy_redirect { ... }
-# map "$arg_area"          $painhtml_redirect { ... }
+# map "$arg_type:$arg_slug"  $legacy_redirect      { ... }
+# map "$arg_area"            $painhtml_redirect    { ... }
+# map $uri                   $legacy_path_redirect { ... }   # WordPress/PHP legacy paths
 
 server {
     listen 80;
@@ -61,6 +62,15 @@ server {
         add_header X-Robots-Tag "noindex, nofollow" always;
     }
     location = /sitemap.xml { return 404; }
+
+    # =============================================================
+    # 301 REDIRECTS — legacy paths → clean URLs. Same as production.
+    # =============================================================
+
+    # Legacy WordPress/PHP URLs (about.php, career.php, etc.)
+    if ($legacy_path_redirect != "") {
+        return 301 $legacy_path_redirect;
+    }
 
     # =============================================================
     # CLEAN-URL REWRITES — identical to production
