@@ -136,33 +136,81 @@ Locally the clean URLs (`/solutions/knee`) do NOT work — nginx rewrites only k
 ```bash
 # 1. Create an Ubuntu droplet (1 GB / $6 plan is fine)
 # 2. SSH in and install nginx + (optionally) certbot
-sudo apt update && sudo apt install -y nginx certbot python3-certbot-nginx
+sudo apt update && sudo apt install -y nginx certbot python3-certbot-nginx git
 
-# 3. Place the site root
+# 3. Clone the repo to the site root
 sudo mkdir -p /var/www/avanasurgical
 sudo chown -R $USER:$USER /var/www/avanasurgical
+cd /var/www/avanasurgical
+git clone https://github.com/AvanaGithub/avana-website.git .
 
-# 4. Configure nginx
-sudo cp nginx.conf.example /etc/nginx/sites-available/avanasurgical.com
-sudo ln -s /etc/nginx/sites-available/avanasurgical.com /etc/nginx/sites-enabled/
+# 4. Configure nginx (preview first, then production after DNS cutover)
+sudo cp nginx.preview.conf.example /etc/nginx/sites-available/preview.avanasurgical.com
+sudo ln -s /etc/nginx/sites-available/preview.avanasurgical.com /etc/nginx/sites-enabled/
 sudo nginx -t && sudo systemctl reload nginx
 
-# 5. Point your DNS A record to the droplet IP, then enable HTTPS
-sudo certbot --nginx -d avanasurgical.com -d www.avanasurgical.com
+# 5. Point DNS A record (preview.avanasurgical.com → droplet IP), enable HTTPS
+sudo certbot --nginx -d preview.avanasurgical.com
+
+# 6. Production goes through the same flow when ready:
+#    sudo cp nginx.conf.example /etc/nginx/sites-available/avanasurgical.com
+#    sudo ln -s ../sites-available/avanasurgical.com /etc/nginx/sites-enabled/
+#    sudo certbot --nginx -d avanasurgical.com -d www.avanasurgical.com
 ```
 
-### Each subsequent deploy
+### Each subsequent deploy (run on the droplet)
 
 ```bash
-# from your local machine, sync everything except large/local-only stuff
-rsync -avz --delete \
-  --exclude='.git' --exclude='avana-blog-theme*' --exclude='start-server.bat' \
-  ./ root@YOUR_DROPLET_IP:/var/www/avanasurgical/
+cd /var/www/avanasurgical
+git pull
+rm -rf _tools proposals
+npm install
+npm run build
+nginx -t
+systemctl reload nginx
 ```
 
-(Or use `scp -r`, or set up a tiny GitHub Action — anything that uploads the static files.)
+**About `rm -rf _tools proposals`:** the catalogue editor (`_tools/catalog-editor.html`) and any HTML in `proposals/` are **for local content management only** and must never reach the live droplet filesystem. They stay in the git repo for everyone to clone locally; this `rm` line strips them from the working tree after every pull. Nginx also returns 404 for `/_tools/` and `/proposals/` as a defense-in-depth layer (see `nginx.conf.example` and `nginx.preview.conf.example`).
 
-The WordPress blog (`avana-blog-theme/`) deploys separately — it goes into your WordPress install, not this static droplet root.
+**About `npm install` / `npm run build`:** this site is currently **vanilla static HTML/CSS/JS — there is no `package.json` and no build step**. Those two commands are no-ops today and can be omitted. They're listed in the canonical deploy block so the script keeps working unchanged if a build step is added later (e.g. asset bundling, image optimisation).
+
+The Ghost blog (planned at `/blog` as a sub-path) deploys separately — see `GHOST-SETUP.md`.
+
+### Post-deploy verification (admin lockdown)
+
+After each deploy, run these from your laptop to confirm the admin/preview folders are sealed off:
+
+```bash
+# 1. HTTP-level check — every URL should return 404
+curl -I https://preview.avanasurgical.com/_tools/catalog-editor.html
+curl -I https://preview.avanasurgical.com/_tools/
+curl -I https://preview.avanasurgical.com/proposals/
+# Expected on each: HTTP/2 404
+```
+
+And on the droplet itself, confirm the files don't exist on disk:
+
+```bash
+# 2. Filesystem check — should print nothing if the rm step ran
+find /var/www/avanasurgical -path '*_tools*'
+find /var/www/avanasurgical -path '*proposals*'
+# Expected: no output (no deployed admin/proposal folders)
+```
+
+If either filesystem check returns paths, the `rm -rf` step in the deploy block was skipped — re-run it and reload nginx.
+
+### Defense-in-depth — what's already in the repo
+
+| Layer | Where | What it does |
+|---|---|---|
+| Filesystem removal | `rm -rf _tools proposals` in deploy block | Files never reach the droplet |
+| Nginx 404 | `location ^~ /_tools/ { return 404; }` in both `nginx.conf.example` and `nginx.preview.conf.example` | Even if files leak onto disk, HTTP can't reach them |
+| Crawler block | `robots.txt` — `Disallow: /_tools/` + `Disallow: /proposals/` | Search engines never index |
+| Sitemap | `sitemap.xml` contains zero `/_tools/`, `/proposals/`, or `catalog-editor` URLs | No admin URLs surfaced |
+| Internal links | No `<a href>` from any rendered page (navbar, footer, sitemap, content) points at `/_tools/*` | Verified by repo-wide grep |
+| Underscore prefix | `_tools/` filename | Some static hosts auto-exclude underscore-prefixed paths (e.g. GitHub Pages with default Jekyll) |
+
+The site is protected even if one layer fails. The real protection is the filesystem `rm` + nginx 404 on the droplet — Netlify config is optional and not the production target.
 
 ---
 
@@ -193,10 +241,17 @@ A quick end-to-end smoke test:
 
 ---
 
-## 8. Files NOT to commit / deploy
+## 8. Files NOT to deploy to the droplet
 
-- `avana-blog-theme/` — WordPress theme, separate deploy
+Stripped at deploy time by `rm -rf _tools proposals` (see §5):
+
+- `_tools/` — admin / catalogue editor (local only — accessing it on the droplet is blocked by nginx 404 anyway, but it should never be on disk in the first place)
+- `proposals/` — internal preview HTML
+
+Stripped by `.gitignore` or never committed in the first place:
+
+- `avana-blog-theme/` — historical WordPress theme, separate deploy lane
 - `avana-blog-theme.zip` — build artifact
 - `start-server.bat` — local-dev helper
 
-Add these to a `.gitignore` (or a deploy excludes list) so they don't end up on the droplet.
+> ⚠ If you ever change the deploy method (e.g. swap `git pull` for `rsync`), make sure the new method **still excludes `_tools/` and `proposals/`**. Nginx 404 + robots.txt are belt-and-suspenders, but the primary protection is "the files don't exist on the droplet."
