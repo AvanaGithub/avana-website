@@ -1905,47 +1905,22 @@
         </div>
     </section>
 
-    <!-- BLOG SECTION -->
-    <section class="blog-section">
+    <!-- BLOG SECTION (dynamic mount point — hidden until Ghost is live)
+         Wire-up steps when Ghost goes live at /blog:
+           1. Create data/ghost-config.json with the Content API URL + key
+           2. Add <script src="/assets/js/ghost-blog-loader.js" defer> below
+           3. The loader fetches the 3 most recent posts, renders cards
+              into #blog-grid, and reveals #blog-section.
+         CSS classes (.blog-section / .blog-grid / .blog-card / etc.) are
+         defined in index.html's <style> block (lines ~727+) and will be
+         reused as-is. No HTML change needed at activation time. -->
+    <section class="blog-section" id="blog-section" style="display:none;">
         <div class="container">
             <h2 class="section__title">Latest from Our Blog</h2>
             <p class="section__subtitle">Expert insights on pain relief, recovery, and orthopaedic care</p>
-            <div class="blog-grid">
-                <a href="#" class="blog-card">
-                    <!-- TODO: Add featured image at images/blogs/oa-knee-brace.jpg -->
-                    <div class="blog-card__image" role="img" aria-label="Article: Understanding Osteoarthritis">Osteoarthritis Guide</div>
-                    <div class="blog-card__content">
-                        <span class="blog-card__date">Coming soon</span>
-                        <h3 class="blog-card__title">Understanding Osteoarthritis: When to Consider a Knee Brace</h3>
-                        <p class="blog-card__excerpt">Learn how offloader braces can help manage OA symptoms and delay the need for surgery...</p>
-                        <span class="blog-card__link">Read more →</span>
-                    </div>
-                </a>
-
-                <a href="#" class="blog-card">
-                    <!-- TODO: Add featured image at images/blogs/cold-therapy.jpg -->
-                    <div class="blog-card__image" role="img" aria-label="Article: Cold Therapy After Surgery">Cold Therapy Evidence</div>
-                    <div class="blog-card__content">
-                        <span class="blog-card__date">Coming soon</span>
-                        <h3 class="blog-card__title">Cold Therapy After Surgery: What the Evidence Says</h3>
-                        <p class="blog-card__excerpt">Clinical-grade cold therapy can significantly reduce swelling and pain in the critical first days after surgery...</p>
-                        <span class="blog-card__link">Read more →</span>
-                    </div>
-                </a>
-
-                <a href="#" class="blog-card">
-                    <!-- TODO: Add featured image at images/blogs/endoscopic-spine.jpg -->
-                    <div class="blog-card__image" role="img" aria-label="Article: Full Endoscopic Spine Surgery in India">Endoscopic Spine Surgery</div>
-                    <div class="blog-card__content">
-                        <span class="blog-card__date">Coming soon</span>
-                        <h3 class="blog-card__title">Full Endoscopic Spine Surgery: A New Era in India</h3>
-                        <p class="blog-card__excerpt">How RiwoSpine VERTEBRIS systems are enabling minimally invasive spine procedures across Indian hospitals...</p>
-                        <span class="blog-card__link">Read more →</span>
-                    </div>
-                </a>
-            </div>
+            <div class="blog-grid" id="blog-grid"></div>
             <div class="blog-section__cta">
-                <a href="#" class="btn btn--secondary">View All Posts →</a>
+                <a href="/blog" class="btn btn--secondary">View All Posts →</a>
             </div>
         </div>
     </section>
