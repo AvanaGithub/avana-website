@@ -340,20 +340,50 @@
 }
 
 /* =================== TESTIMONIALS =================== */
+/* Single-column stack — testimonials are long-form employee stories,
+   so each card gets full width for readability. */
 .about-testimonials {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 .about-testimonial-card {
     background: var(--color-white);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md, 14px);
-    padding: 32px 28px;
+    padding: 32px 32px 28px;
     position: relative;
     transition: transform 0.25s, box-shadow 0.25s;
 }
 .about-testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+/* Read-more toggle: by default the card shows the truncated preview
+   (~50 words) and the toggle text says "Read more". When .is-expanded
+   is set on the card, the truncated preview hides and the full quote
+   reveals; the toggle flips to "Read less". */
+.about-testimonial-card__quote--full     { display: none; }
+.about-testimonial-card.is-expanded
+    .about-testimonial-card__quote--preview { display: none; }
+.about-testimonial-card.is-expanded
+    .about-testimonial-card__quote--full    { display: block; }
+
+.about-testimonial-card__toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 4px 0 22px;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s;
+}
+.about-testimonial-card__toggle:hover { color: var(--color-primary); }
 .about-testimonial-card__mark {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 4rem;
@@ -487,7 +517,7 @@
     .about-pillar--image-right .about-pillar__content { order: unset; }
 
     .about-achievements { grid-template-columns: repeat(2, 1fr); }
-    .about-testimonials { grid-template-columns: 1fr; }
+    /* .about-testimonials is now flex-column at all widths; no responsive override needed */
     .about-section { padding: 64px 0; }
 }
 

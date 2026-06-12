@@ -219,25 +219,53 @@
         const items = data.testimonials || [];
         if (!items.length) { el.closest('.about-section').style.display = 'none'; return; }
 
+        // Preview length for the collapsed view. Long employee stories
+        // are clipped to the first PREVIEW_WORD_COUNT words plus an
+        // ellipsis; the full text reveals on Read more.
+        const PREVIEW_WORD_COUNT = 50;
+
+        function buildQuoteBlocks(quote) {
+            const fullText = String(quote || '').trim();
+            const paragraphs = fullText
+                .split(/\n\s*\n+/)
+                .map(p => p.trim())
+                .filter(Boolean);
+            const words = fullText.split(/\s+/).filter(Boolean);
+            const needsToggle = words.length > PREVIEW_WORD_COUNT;
+
+            // Full quote: every paragraph as its own <p>
+            const fullHtml = paragraphs
+                .map(p => `<p class="about-testimonial-card__quote">${escapeHtml(p)}</p>`)
+                .join('');
+
+            if (!needsToggle) {
+                return { fullHtml, previewHtml: '', needsToggle: false };
+            }
+
+            // Preview: first PREVIEW_WORD_COUNT words + ellipsis
+            const previewText = words.slice(0, PREVIEW_WORD_COUNT).join(' ') + '…';
+            const previewHtml = `<p class="about-testimonial-card__quote">${escapeHtml(previewText)}</p>`;
+            return { fullHtml, previewHtml, needsToggle: true };
+        }
+
         el.innerHTML = items.map(t => {
             const avatarContent = t.avatar
                 ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy">`
                 : `<span>💬</span>`;
-            // Split the quote on blank lines (\n\n) into individual <p>
-            // paragraphs so long employee stories stay readable instead of
-            // rendering as one wall of text. escapeHtml is applied per
-            // paragraph BEFORE wrapping in <p>, so user content can't inject
-            // markup.
-            const quoteHtml = String(t.quote || '')
-                .split(/\n\s*\n+/)
-                .map(p => p.trim())
-                .filter(Boolean)
-                .map(p => `<p class="about-testimonial-card__quote">${escapeHtml(p)}</p>`)
-                .join('');
+
+            const { fullHtml, previewHtml, needsToggle } = buildQuoteBlocks(t.quote);
+
+            const quoteSection = needsToggle
+                ? `
+                    <div class="about-testimonial-card__quote--preview">${previewHtml}</div>
+                    <div class="about-testimonial-card__quote--full">${fullHtml}</div>
+                    <button type="button" class="about-testimonial-card__toggle" data-toggle-quote>Read more →</button>`
+                : fullHtml;
+
             return `
             <div class="about-testimonial-card">
                 <span class="about-testimonial-card__mark">"</span>
-                ${quoteHtml}
+                ${quoteSection}
                 <div class="about-testimonial-card__author">
                     <div class="about-testimonial-card__avatar">${avatarContent}</div>
                     <div>
@@ -247,6 +275,17 @@
                 </div>
             </div>`;
         }).join('');
+
+        // Wire up the Read more / Read less toggles. Delegated to keep it
+        // resilient if the card list re-renders later.
+        el.addEventListener('click', e => {
+            const btn = e.target.closest('[data-toggle-quote]');
+            if (!btn) return;
+            const card = btn.closest('.about-testimonial-card');
+            if (!card) return;
+            const expanded = card.classList.toggle('is-expanded');
+            btn.textContent = expanded ? 'Read less ↑' : 'Read more →';
+        });
     }
 
     function renderCta(data) {
