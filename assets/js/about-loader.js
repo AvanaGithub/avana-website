@@ -223,10 +223,21 @@
             const avatarContent = t.avatar
                 ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy">`
                 : `<span>💬</span>`;
+            // Split the quote on blank lines (\n\n) into individual <p>
+            // paragraphs so long employee stories stay readable instead of
+            // rendering as one wall of text. escapeHtml is applied per
+            // paragraph BEFORE wrapping in <p>, so user content can't inject
+            // markup.
+            const quoteHtml = String(t.quote || '')
+                .split(/\n\s*\n+/)
+                .map(p => p.trim())
+                .filter(Boolean)
+                .map(p => `<p class="about-testimonial-card__quote">${escapeHtml(p)}</p>`)
+                .join('');
             return `
             <div class="about-testimonial-card">
                 <span class="about-testimonial-card__mark">"</span>
-                <p class="about-testimonial-card__quote">${escapeHtml(t.quote)}</p>
+                ${quoteHtml}
                 <div class="about-testimonial-card__author">
                     <div class="about-testimonial-card__avatar">${avatarContent}</div>
                     <div>
