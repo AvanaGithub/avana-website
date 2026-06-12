@@ -75,7 +75,7 @@
     { "question": "How do I register for an upcoming programme?", "answer": "Click \"Register / Enquire\" on any upcoming programme card below, or email info@avanasurgical.com with your name, hospital, and the programme you're interested in. Our team will confirm a slot and share venue details." },
     { "question": "Can our hospital host an Avana training session?", "answer": "Yes — we partner with medical colleges and hospitals across India to host bone-model and cadaver workshops. We bring the systems, faculty support, and equipment; you provide the venue and the resident cohort. Email us to discuss." },
     { "question": "Do you offer Continuing Medical Education (CME) credits?", "answer": "Some Avana programmes are CME-accredited via the host institution or society. Where applicable, the specific event listing will note the credit hours. Webinars are typically informational; in-person conference sessions often carry credits." },
-    { "question": "What's the focus of your Full Endoscopic Spine Surgery training?", "answer": "Avana's flagship programmes cover the full curriculum: anatomy and approach, decompression techniques, fusion, and post-op management. We use RiwoSpine systems and follow the protocols of leading international centres, adapted for the Indian operating environment." },
+    { "question": "What's the focus of your Full Endoscopic Spine Surgery training?", "answer": "Avana's flagship programmes cover the full curriculum: anatomy and approach, decompression techniques, fusion, and post-op management. We use RIWO Spine systems and follow the protocols of leading international centres, adapted for the Indian operating environment." },
     { "question": "Can I observe a live surgery?", "answer": "Several of our programmes include live-surgery viewing days at the host hospital. These have limited slots — register early. Online streamed live surgeries are also part of the KOL-to-Young-Surgeon webinar series." }
   ],
 
@@ -84,7 +84,7 @@
   "brands": [
     { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · Sports medicine bracing" },
     { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Spinal & orthopaedic bracing" },
-    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "RIWO Spine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
     { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 

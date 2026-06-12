@@ -120,7 +120,7 @@
   "brands": [
     { "name": "Breg", "logo": "/images/brands/breg-logo.png.png", "caption": "USA · Polar Care cold therapy" },
     { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
-    { "name": "RiwoSpine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
+    { "name": "RIWO Spine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
     { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
   ],
 
