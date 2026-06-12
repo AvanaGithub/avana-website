@@ -102,7 +102,12 @@
             </ul>
         </nav>
 
-        <a href="#enquiry-modal" class="header-cta">Enquire Now</a>
+        <!-- href="#enquiry" lets the browser scroll natively on the homepage
+             (where <section id="enquiry"> exists) even before JS finishes
+             loading. On other pages there's no #enquiry target, so the
+             interceptor in enquiry-modal.js catches the click (matches by
+             link text "Enquire Now") and opens the modal instead. -->
+        <a href="#enquiry" class="header-cta">Enquire Now</a>
 
         <!-- Mobile menu toggle -->
         <button class="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -148,7 +153,7 @@
                 <!-- Blog link hidden until /blog goes live with Ghost. Un-comment when reachable. -->
                 <!-- <li><a href="/blog">Blog</a></li> -->
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="#enquiry-modal" class="mobile-nav__cta">Enquire Now</a></li>
+                <li><a href="#enquiry" class="mobile-nav__cta">Enquire Now</a></li>
             </ul>
         </div>
     </nav>
