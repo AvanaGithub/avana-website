@@ -82,14 +82,25 @@
   "photoCarousel": {
     "heading": "Life at Avana",
     "images": [
-      { "src": "/images/training/training-1.jpeg", "alt": "Avana training programme" },
-      { "src": "/images/training/training-2.jpeg", "alt": "Avana cadaver workshop" },
-      { "src": "/images/training/training-3.jpeg", "alt": "Avana live surgery demonstration" },
-      { "src": "/images/training/training-4.jpeg", "alt": "Avana team at work" },
-      { "src": "/images/training/training-5.jpeg", "alt": "Avana bone model training" },
-      { "src": "/images/training/training-6.jpeg", "alt": "Avana faculty session" },
-      { "src": "/images/training/training-7.jpeg", "alt": "Avana workshop participants" },
-      { "src": "/images/training/training-8.jpeg", "alt": "Avana educational session" }
+      { "src": "/images/life-at-avana/aam-2026.jpg",                          "alt": "Annual Avana meet 2026" },
+      { "src": "/images/life-at-avana/aam-2026-1.jpg",                        "alt": "Annual Avana meet 2026 — team photo" },
+      { "src": "/images/life-at-avana/aam-2026-3.jpg",                        "alt": "Annual Avana meet 2026 — group" },
+      { "src": "/images/life-at-avana/award-night.jpg",                       "alt": "Avana team awards night" },
+      { "src": "/images/life-at-avana/conference.png",                        "alt": "Avana annual conference" },
+      { "src": "/images/life-at-avana/conference-1.png",                      "alt": "Avana conference session" },
+      { "src": "/images/life-at-avana/conference-2.png",                      "alt": "Avana conference — speakers" },
+      { "src": "/images/life-at-avana/conference-3.png",                      "alt": "Avana conference — delegates" },
+      { "src": "/images/life-at-avana/conference-4.jpg",                      "alt": "Avana conference — group photo" },
+      { "src": "/images/life-at-avana/conference-5.png",                      "alt": "Avana conference — main hall" },
+      { "src": "/images/life-at-avana/conference-6.jpg",                      "alt": "Avana conference — discussion" },
+      { "src": "/images/life-at-avana/conference-7.jpg",                      "alt": "Avana conference — networking" },
+      { "src": "/images/life-at-avana/great-place-to-work-cake.jpeg",         "alt": "Avana — Great Place to Work celebration" },
+      { "src": "/images/life-at-avana/greate-place-to-work-certificate.png",  "alt": "Avana — Great Place to Work certified" },
+      { "src": "/images/life-at-avana/kerala-hospital.png",                   "alt": "Avana team at a Kerala hospital partner" },
+      { "src": "/images/life-at-avana/cake-cutting.jpeg",                     "alt": "Avana office cake cutting" },
+      { "src": "/images/life-at-avana/office-celebration.jpg",                "alt": "Avana office celebration" },
+      { "src": "/images/life-at-avana/office-celebration.png",                "alt": "Avana office celebration — team" },
+      { "src": "/images/life-at-avana/sports.jpg",                            "alt": "Avana sports day" }
     ]
   },
 
@@ -98,7 +109,7 @@
       "name": "Aaqib Perwez",
       "role": "Sales Manager · West India",
       "quote": "My journey with Avana Surgical Systems has been truly transformational, both professionally and personally. Being associated with an organization that is committed to improving patients' quality of life through innovative orthopaedic and rehabilitation solutions gives me immense pride every single day.\n\nWhat makes Avana Surgical Systems different is its strong focus on patient recovery, medical education, and customer-centric service. The company's partnership with globally recognized brands like Breg and Aspen has helped us deliver premium post-operative and rehabilitation solutions to patients and healthcare professionals across India.\n\nAs a Sales Manager (West India), I have witnessed how the right bracing and rehabilitation support can genuinely change patient outcomes after surgery. Surgery is only the beginning — the real recovery journey starts afterward, and Avana's products play a crucial role in helping patients regain confidence, mobility, and comfort during rehabilitation.\n\nThe organization has also given me an excellent platform to grow professionally by encouraging ownership, learning, relationship-building, and market development. The support from leadership, the collaborative work culture, and the shared vision of transforming lives through innovative medical solutions continue to inspire me every day.\n\nI am proud to be part of a company that is not only growing rapidly in the orthopedic industry but is also making a meaningful impact on patients, surgeons, and healthcare systems across the country.",
-      "avatar": ""
+      "avatar": "/images/employee-testimonials/aaqib.jpg"
     }
   ],
 

@@ -274,29 +274,49 @@
     margin-top: 10px;
 }
 
-/* =================== PHOTO CAROUSEL =================== */
+/* =================== PHOTO CAROUSEL ===================
+   Advanced infinite-marquee scroll. Slides drift left continuously at
+   a constant speed; the renderer duplicates the image set so the loop
+   is visually seamless. Hover pauses, click opens lightbox.
+
+   No arrows in the default state — the constant motion IS the discovery
+   mechanism. Arrows can still be added back for accessibility/mobile via
+   .about-photo-carousel__arrows but they're hidden when the marquee is
+   active (default). */
 .about-photo-carousel {
     position: relative;
-    overflow: hidden;
     padding: 8px 0 24px;
+    /* Fade the left/right edges so slides emerge/dissolve smoothly. */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 80px, #000 calc(100% - 80px), transparent 100%);
+    overflow: hidden;
 }
 .about-photo-carousel__track {
     display: flex;
     gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    padding: 8px 24px 16px;
+    width: max-content;
+    padding: 8px 0 16px;
+    animation: about-carousel-marquee 60s linear infinite;
+    will-change: transform;
+}
+.about-photo-carousel:hover .about-photo-carousel__track {
+    animation-play-state: paused;
 }
 .about-photo-carousel__track::-webkit-scrollbar { display: none; }
+
+@keyframes about-carousel-marquee {
+    from { transform: translate3d(0, 0, 0); }
+    /* -50% because the JS duplicates the slide list, so one full loop
+       moves through exactly the first copy of the list. */
+    to   { transform: translate3d(-50%, 0, 0); }
+}
+
 .about-photo-carousel__slide {
     flex-shrink: 0;
     width: clamp(240px, 32vw, 400px);
     aspect-ratio: 4 / 3;
     border-radius: var(--radius-md, 14px);
     overflow: hidden;
-    scroll-snap-align: start;
     background: var(--color-primary);
     cursor: pointer;
     border: 0;
@@ -305,8 +325,9 @@
     transition: transform 0.25s, box-shadow 0.25s;
 }
 .about-photo-carousel__slide:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02);
     box-shadow: var(--shadow-md);
+    z-index: 2;
 }
 .about-photo-carousel__slide img {
     width: 100%; height: 100%;
@@ -314,29 +335,19 @@
     display: block;
     transition: transform 0.4s;
 }
-.about-photo-carousel__slide:hover img { transform: scale(1.04); }
+.about-photo-carousel__slide:hover img { transform: scale(1.06); }
 
-.about-photo-carousel__arrows {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 12px;
-}
-.about-photo-carousel__arrow {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    background: var(--color-white);
-    border: 2px solid var(--color-border);
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.3rem;
-    color: var(--color-primary);
-    transition: all 0.2s;
-}
-.about-photo-carousel__arrow:hover {
-    background: var(--color-accent);
-    border-color: var(--color-accent);
-    color: var(--color-white);
+/* Arrows hidden by default (marquee + hover-pause is the main control). */
+.about-photo-carousel__arrows { display: none; }
+
+/* Reduced-motion users: stop the marquee, fall back to a static grid. */
+@media (prefers-reduced-motion: reduce) {
+    .about-photo-carousel__track {
+        animation: none;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* =================== TESTIMONIALS =================== */

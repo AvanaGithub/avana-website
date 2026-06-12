@@ -166,47 +166,45 @@
             ? { src: img, alt: '' }
             : img);
 
-        const slides = photos.map((img, i) =>
-            `<button type="button" class="about-photo-carousel__slide" data-idx="${i}" aria-label="Open photo ${i + 1}">
+        // Slide HTML. data-idx points back into the ORIGINAL photos[] array
+        // so the lightbox click handler works on both the original copy and
+        // the duplicated copy below.
+        const slideHtml = (img, i) =>
+            `<button type="button" class="about-photo-carousel__slide" data-idx="${i}" aria-label="Open photo ${i + 1} of ${photos.length}">
                 <img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.alt)}" loading="lazy"
                      onerror="this.parentElement.style.display='none'">
-            </button>`
-        ).join('');
+            </button>`;
 
+        // Render the slide list TWICE for the CSS marquee. The keyframe
+        // animation translates -50% of the track width per cycle, which
+        // is the width of exactly one copy of the list — so when the loop
+        // jumps back to 0, the user sees the same image position and
+        // there's no visible "snap".
+        const oneCopy = photos.map(slideHtml).join('');
         el.innerHTML = `
-            <div class="about-photo-carousel__track" id="about-carousel-track">${slides}</div>
-            <div class="about-photo-carousel__arrows">
-                <button class="about-photo-carousel__arrow" id="about-carousel-prev" aria-label="Previous">‹</button>
-                <button class="about-photo-carousel__arrow" id="about-carousel-next" aria-label="Next">›</button>
+            <div class="about-photo-carousel__track" id="about-carousel-track" aria-hidden="false">
+                ${oneCopy}${oneCopy}
             </div>`;
 
-        el.querySelectorAll('.about-photo-carousel__slide').forEach(btn => {
-            btn.addEventListener('click', () => openLightbox(photos, parseInt(btn.dataset.idx, 10)));
+        // Lightbox handler — reads data-idx mod photos.length so clicks on
+        // either copy of the list open the correct image.
+        el.addEventListener('click', e => {
+            const btn = e.target.closest('.about-photo-carousel__slide');
+            if (!btn) return;
+            const idx = parseInt(btn.dataset.idx, 10);
+            if (Number.isFinite(idx)) openLightbox(photos, idx % photos.length);
         });
 
+        // Tune the marquee speed to the content width: roughly 60 pixels
+        // per second feels calm and readable. Without this, very long lists
+        // race past while short lists drag.
         const track = document.getElementById('about-carousel-track');
-        function step(dir) {
-            const slide = track.querySelector('.about-photo-carousel__slide');
-            if (!slide) return;
-            const w = slide.getBoundingClientRect().width + 16;
-            track.scrollBy({ left: dir * w * 2, behavior: 'smooth' });
-        }
-        document.getElementById('about-carousel-prev').addEventListener('click', () => step(-1));
-        document.getElementById('about-carousel-next').addEventListener('click', () => step(1));
-
-        // Auto-advance every 4s; pause on hover
-        let timer = null;
-        function startAuto() {
-            stopAuto();
-            timer = setInterval(() => {
-                const maxScroll = track.scrollWidth - track.clientWidth;
-                if (track.scrollLeft >= maxScroll - 4) track.scrollTo({ left: 0, behavior: 'smooth' });
-                else step(1);
-            }, 4000);
-        }
-        function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
-        el.addEventListener('mouseenter', stopAuto);
-        el.addEventListener('mouseleave', startAuto);
+        requestAnimationFrame(() => {
+            const halfWidth = track.scrollWidth / 2; // one full copy
+            const pxPerSecond = 60;
+            const seconds = Math.max(30, Math.round(halfWidth / pxPerSecond));
+            track.style.animationDuration = seconds + 's';
+        });
         const io = new IntersectionObserver(entries => {
             entries.forEach(e => e.isIntersecting ? startAuto() : stopAuto());
         }, { threshold: 0.2 });
