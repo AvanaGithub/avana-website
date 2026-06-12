@@ -1980,6 +1980,12 @@
     <script src="/assets/js/include-partials.js" defer></script>
     <script src="/assets/js/header-behavior.js" defer></script>
     <script src="/assets/js/enquiry-form.js" defer></script>
+    <!-- enquiry-modal.js is the click-interceptor that handles the navbar
+         "Enquire Now" CTA. On non-homepage pages it opens the modal; here
+         on the homepage there's no modal, so it smooth-scrolls to the
+         <section id="enquiry"> form instead. Needed on every page that
+         includes the shared header partial. -->
+    <script src="/assets/js/enquiry-modal.js" defer></script>
     <script src="/assets/js/ghost-blog-loader.js" defer></script>
 
     <script>

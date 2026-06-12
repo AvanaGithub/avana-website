@@ -173,7 +173,7 @@
                         Interested in a future edition or a similar workshop? Talk to our team.
                     </div>
                     <div class="training-detail__cta-buttons">
-                        <a href="#enquiry-modal" class="training-detail__btn training-detail__btn--outline">Talk to a Specialist</a>
+                        <a href="#enquiry-modal" class="training-detail__btn training-detail__btn--outline">Enquire Now</a>
                     </div>
                 </div>`;
         } else if (isSoldOut) {

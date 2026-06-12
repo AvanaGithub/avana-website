@@ -12,7 +12,7 @@
     "imageAlt": "OA brace supporting an osteoarthritic knee",
     "ctas": [
       { "label": "See OA Solutions", "href": "#products", "style": "primary" },
-      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+      { "label": "Enquire Now", "href": "#cta", "style": "outline" }
     ]
   },
 
@@ -136,7 +136,7 @@
     "title": "Living with OA? Let us help you stay active.",
     "description": "Speak to our team about your symptoms and we'll guide you to the right bracing — with no pressure to purchase.",
     "buttons": [
-      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry", "style": "primary" },
+      { "label": "Enquire Now", "href": "mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry", "style": "primary" },
       { "label": "Browse OA Products", "href": "https://osteokart.com/category/osteoarthritis?utm_source=avanasurgical&utm_medium=referral&utm_campaign=oa_knee_condition&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."

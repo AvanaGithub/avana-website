@@ -12,7 +12,7 @@
     "imageAlt": "Post-operative recovery support",
     "ctas": [
       { "label": "See Recovery Solutions", "href": "#products", "style": "primary" },
-      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+      { "label": "Enquire Now", "href": "#cta", "style": "outline" }
     ]
   },
 
@@ -133,7 +133,7 @@
     "title": "Make your recovery smooth from day one.",
     "description": "Talk to our team about what your surgeon has prescribed — we'll help you get the right product, properly fitted, in time for your recovery.",
     "buttons": [
-      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Post-op%20recovery%20enquiry", "style": "primary" },
+      { "label": "Enquire Now", "href": "mailto:info@avanasurgical.com?subject=Post-op%20recovery%20enquiry", "style": "primary" },
       { "label": "Browse Recovery Products", "href": "https://osteokart.com/category/post-surgery?utm_source=avanasurgical&utm_medium=referral&utm_campaign=post_surgery_condition&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."

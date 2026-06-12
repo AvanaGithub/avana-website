@@ -16,7 +16,7 @@
                 "style": "primary"
             },
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "outline"
             }
@@ -177,7 +177,7 @@
         "description": "Tell us about your joint pain — our clinical team will guide you to the right knee cap or brace, with no pressure to purchase.",
         "buttons": [
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "primary"
             },

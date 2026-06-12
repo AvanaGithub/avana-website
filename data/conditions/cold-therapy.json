@@ -12,7 +12,7 @@
     "imageAlt": "Breg Polar Care Wave — powered cold therapy and compression unit",
     "ctas": [
       { "label": "See Cold Therapy", "href": "#products", "style": "primary" },
-      { "label": "Talk to a Specialist", "href": "#cta", "style": "outline" }
+      { "label": "Enquire Now", "href": "#cta", "style": "outline" }
     ]
   },
 
@@ -128,7 +128,7 @@
     "title": "Make recovery cooler — literally.",
     "description": "Talk to our team about whether cold therapy fits your recovery — we'll explain the options and the evidence honestly.",
     "buttons": [
-      { "label": "Talk to a Specialist", "href": "mailto:info@avanasurgical.com?subject=Cold%20therapy%20enquiry", "style": "primary" },
+      { "label": "Enquire Now", "href": "mailto:info@avanasurgical.com?subject=Cold%20therapy%20enquiry", "style": "primary" },
       { "label": "View Cold Therapy", "href": "https://osteokart.com/category/cold-therapy?utm_source=avanasurgical&utm_medium=referral&utm_campaign=cold_therapy_condition&utm_content=footer_cta", "style": "secondary", "external": true }
     ],
     "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."

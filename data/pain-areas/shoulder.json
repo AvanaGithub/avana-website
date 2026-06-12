@@ -15,7 +15,7 @@
                 "style": "primary"
             },
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "outline"
             }
@@ -109,7 +109,7 @@
         "description": "Our specialists can help you select, size, and fit the right brace for your specific condition.",
         "buttons": [
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "primary"
             },

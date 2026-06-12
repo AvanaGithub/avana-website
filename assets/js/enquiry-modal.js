@@ -1,5 +1,5 @@
 /* ============================================================
-   AVANA — "Talk to a Specialist" modal
+   AVANA — "Enquire Now" modal
    Routing logic:
      - Homepage (has <section id="enquiry">) → smooth-scroll to that
        section.
@@ -30,7 +30,7 @@
         document.body.style.overflow = '';
     }
 
-    /* ---------- global click interceptor for "Talk to a Specialist" ---------- */
+    /* ---------- global click interceptor for "Enquire Now" ---------- */
     document.addEventListener('click', function (e) {
         const link = e.target.closest('a, button');
         if (!link) return;
@@ -38,13 +38,16 @@
         const href = (link.getAttribute('href') || '').trim();
         const text = link.textContent.trim();
 
-        const isTalkToSpecialist =
+        // Match either the new CTA label or the old one (defensive — in
+        // case any external link or stale cache still uses the legacy text).
+        const isEnquireCta =
             href === '#enquiry-modal' ||
             href === 'index.html#enquiry' ||
             href === '#enquiry' ||
+            text === 'Enquire Now' ||
             text === 'Talk to a Specialist';
 
-        if (!isTalkToSpecialist) return;
+        if (!isEnquireCta) return;
         e.preventDefault();
 
         // Priority 1 — homepage in-page form section

@@ -15,7 +15,7 @@
                 "style": "primary"
             },
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "outline"
             }
@@ -109,7 +109,7 @@
         "description": "Speak with our team about which foot or ankle support is right for your situation.",
         "buttons": [
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "primary"
             },

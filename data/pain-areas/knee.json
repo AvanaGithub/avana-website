@@ -15,7 +15,7 @@
                 "style": "primary"
             },
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "outline"
             }
@@ -206,7 +206,7 @@
         "description": "Our clinical team helps patients across India choose, size, and fit the right support for their specific condition. No pressure, no upsell — just honest guidance.",
         "buttons": [
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "primary"
             },

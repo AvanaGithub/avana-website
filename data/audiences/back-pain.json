@@ -16,7 +16,7 @@
         "style": "primary"
       },
       {
-        "label": "Talk to a Specialist",
+        "label": "Enquire Now",
         "href": "#enquiry-modal",
         "style": "outline"
       }
@@ -205,7 +205,7 @@
     "description": "Speak with our specialists for honest guidance on which brace, if any, fits your situation. No pressure to purchase.",
     "buttons": [
       {
-        "label": "Talk to a Specialist",
+        "label": "Enquire Now",
         "href": "#enquiry-modal",
         "style": "primary"
       },

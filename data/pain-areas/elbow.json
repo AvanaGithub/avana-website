@@ -15,7 +15,7 @@
                 "style": "primary"
             },
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "outline"
             }
@@ -109,7 +109,7 @@
         "description": "Speak with our team for an honest recommendation on whether bracing fits your situation.",
         "buttons": [
             {
-                "label": "Talk to a Specialist",
+                "label": "Enquire Now",
                 "href": "#enquiry-modal",
                 "style": "primary"
             },
