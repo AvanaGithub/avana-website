@@ -170,29 +170,35 @@
         // so the lightbox click handler works on both the original copy and
         // the duplicated copy below.
         //
-        // Performance attributes on each <img>:
-        //   width + height        — reserve box before fetch (no CLS as
-        //                           each carousel image lands)
-        //   loading="lazy"        — first 4 visible-at-load slides
-        //                           use loading="eager" so they paint
-        //                           with the page; rest defer
-        //   decoding="async"      — never block the main thread on
-        //                           image decode (smoother marquee)
-        //   fetchpriority="low"   — tell the browser carousel slides
-        //                           are lower priority than the LCP
-        //                           pillar images above them
-        const slideHtml = (img, i) => {
-            const isEager = i < 4;  // first 4 = above-the-fold of the marquee strip
-            return `<button type="button" class="about-photo-carousel__slide" data-idx="${i}" aria-label="Open photo ${i + 1} of ${photos.length}">
+        // Why loading="eager" on every slide (NOT lazy):
+        //   The browser's loading="lazy" observer watches LAYOUT position,
+        //   not the CSS transform that drives the marquee. Slides past the
+        //   initial viewport are positioned off-screen to the right in the
+        //   DOM — the browser never sees them "scroll into view" because
+        //   their layout position never changes; only the marquee track's
+        //   transform changes. Result: images past ~slide 10 are never
+        //   fetched until the user hovers (forcing a repaint).
+        //
+        //   Fix is to eagerly load all 18 carousel slides at page-load.
+        //   Total weight is ~2.6 MB across all of them — small enough to
+        //   load upfront without blocking the pillars above them, which
+        //   take priority via fetchpriority="low" below.
+        //
+        // Other performance attributes:
+        //   width + height       — reserve box before fetch (no CLS)
+        //   decoding="async"     — image decode never blocks main thread
+        //   fetchpriority="low"  — pillar images above the marquee still
+        //                          load first (they're the actual LCP)
+        const slideHtml = (img, i) =>
+            `<button type="button" class="about-photo-carousel__slide" data-idx="${i}" aria-label="Open photo ${i + 1} of ${photos.length}">
                 <img src="${escapeHtml(img.src)}"
                      alt="${escapeHtml(img.alt)}"
                      width="1000" height="750"
-                     loading="${isEager ? 'eager' : 'lazy'}"
+                     loading="eager"
                      decoding="async"
                      fetchpriority="low"
                      onerror="this.parentElement.style.display='none'">
             </button>`;
-        };
 
         // Render the slide list TWICE for the CSS marquee. The keyframe
         // animation translates -50% of the track width per cycle, which
