@@ -1,0 +1,2515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N8B2Z2NS');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[TESTING] Avana Surgical - Landing Page Preview</title>
+    <meta name="description" content="Internal landing-page preview for management review. Not for public indexing.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://preview.avanasurgical.com/testing-landing-page">
+    <meta property="og:url" content="https://preview.avanasurgical.com/testing-landing-page">
+    <meta property="og:title" content="[TESTING] Avana Surgical - Landing Page Preview">
+    <meta property="og:description" content="Doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 1 lakh+ patients served across India.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="/images/avana-logo/favicon.png">
+    <link rel="apple-touch-icon" href="/images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/mega-menu.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            /* Avana Color Palette */
+            --color-primary: #243447;         /* Dark blue-gray - nav, dark sections, headings */
+            --color-bg: #F4F4F2;              /* Cream background - main brochure pages */
+            --color-accent: #B18C57;          /* Mustard gold - primary accent for headers, dividers, callouts */
+            --color-accent-hover: #9d7a47;    /* Darker mustard on hover */
+            --color-text: #1F1F1F;            /* Dark charcoal - body text and titles */
+            --color-muted: #6C6C6C;           /* Medium gray - secondary text, captions, footers */
+            --color-white: #ffffff;
+            --color-accent-emphasis: #C0392B; /* Deep red - only for emphasis, alerts (use sparingly) */
+            --color-border: #D9D9D9;
+            --color-light-bg: #EDEDED;
+            --color-soft-cream: #FAFAF8;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1.25;
+        }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 12px 0;
+            font-size: 14px;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar__left { display: flex; gap: 24px; }
+        .top-bar__item {
+            color: var(--color-white);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: opacity 0.3s;
+        }
+        .top-bar__item:hover { opacity: 0.8; }
+        .top-bar__right { display: flex; gap: 10px; align-items: center; }
+        .top-bar__social {
+            color: var(--color-white);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            transition: all 0.3s;
+        }
+        .top-bar__social:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            transform: translateY(-2px);
+        }
+        .top-bar__social svg { width: 14px; height: 14px; fill: currentColor; }
+
+        /* ===== HEADER ===== */
+        .site-header {
+            background-color: var(--color-white);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: box-shadow 0.3s;
+        }
+        .site-header.scrolled { box-shadow: 0 4px 12px rgba(36, 52, 71, 0.1); }
+        .site-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-logo {
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 24px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+        .site-logo img {
+            height: 48px;
+            width: auto;
+            display: block;
+        }
+        .main-nav__list {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+        }
+        .main-nav__link {
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .main-nav__link:hover { color: var(--color-accent); }
+
+        .header-cta {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            padding: 10px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        .header-cta:hover { background-color: var(--color-accent-hover); }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: linear-gradient(135deg, #F4F4F2 0%, #EDEDED 100%);
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(177, 140, 87, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(36, 52, 71, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero__inner {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(177, 140, 87, 0.1);
+            color: var(--color-accent);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero__title {
+            font-size: 3.5rem;
+            margin-bottom: 24px;
+            line-height: 1.15;
+        }
+
+        .hero__title span {
+            color: var(--color-accent);
+            font-style: italic;
+        }
+
+        .hero__byline {
+            font-size: 1.25rem;
+            color: var(--color-muted);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+
+        .hero__ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            line-height: 1.5;
+            min-height: 44px;
+            justify-content: center;
+        }
+
+        @media (max-width: 640px) {
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+                min-height: 48px;
+            }
+        }
+
+        .btn--primary {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        .btn--primary:hover {
+            background-color: var(--color-accent-hover);
+            border-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(177, 140, 87, 0.25);
+        }
+
+        .btn--secondary {
+            background-color: transparent;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+        .btn--secondary:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .hero__image {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            background: linear-gradient(135deg, #243447 0%, #2d3f52 100%);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            box-shadow: 0 20px 60px rgba(36, 52, 71, 0.2);
+            overflow: hidden;
+        }
+
+        .hero__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 24px;
+        }
+
+        .hero__trust {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: var(--color-muted);
+            font-size: 0.95rem;
+        }
+
+        .hero__trust-icon {
+            color: #10b981;
+            font-size: 1.5rem;
+        }
+
+        /* ===== BROWSE BY PAIN ===== */
+        .browse-pain {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .browse-pain__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .browse-pain__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+
+        .browse-pain__grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+        }
+
+        .pain-card {
+            background-color: var(--color-soft-cream);
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 32px 16px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .pain-card:hover {
+            border-color: var(--color-accent);
+            background-color: var(--color-white);
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .pain-card__icon {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 16px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            transition: all 0.3s;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .pain-card__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+        }
+
+        .pain-card:hover .pain-card__icon {
+            transform: scale(1.08);
+            box-shadow: 0 6px 16px rgba(177, 140, 87, 0.25);
+        }
+
+        .pain-card__name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        /* ===== WHY AVANA (Stats) ===== */
+        .why-avana {
+            padding: 80px 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-avana::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='1' fill='%23ffffff' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        .why-avana__title {
+            text-align: center;
+            color: var(--color-white);
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .why-avana__subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+            position: relative;
+        }
+
+        .why-avana__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+            position: relative;
+        }
+
+        .why-avana__stat {
+            padding: 24px;
+        }
+
+        .why-avana__number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 12px;
+            color: var(--color-accent);
+        }
+
+        .why-avana__label {
+            font-size: 1.0625rem;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        /* ===== AUDIENCE SELECTOR ===== */
+        .audience-selector {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+        }
+
+        .audience-selector__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .audience-selector__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+
+        .audience-selector__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .audience-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 16px;
+            padding: 48px 32px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .audience-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background-color: var(--color-accent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+
+        .audience-card:hover {
+            box-shadow: 0 12px 40px rgba(36, 52, 71, 0.12);
+            transform: translateY(-6px);
+        }
+
+        .audience-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .audience-card__icon {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 24px;
+            background-color: var(--color-light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            overflow: hidden;
+            border: 3px solid var(--color-white);
+            box-shadow: 0 4px 16px rgba(36, 52, 71, 0.08);
+        }
+
+        .audience-card__icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .audience-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--color-primary);
+        }
+
+        .audience-card__desc {
+            color: var(--color-muted);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        .audience-card__arrow {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 1.25rem;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .audience-card:hover .audience-card__arrow {
+            transform: translateX(8px);
+        }
+
+        /* ===== HOW CAN WE HELP ===== */
+        .help-section {
+            padding: 80px 0;
+            background-color: var(--color-white);
+        }
+
+        .section__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 2.25rem;
+            color: var(--color-primary);
+        }
+
+        .section__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            max-width: 640px;
+            margin: 0 auto 56px;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .help-card {
+            background-color: var(--color-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+        }
+
+        .help-card:hover {
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .help-card__image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #EDEDED 0%, #E0DFDC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-size: 14px;
+            overflow: hidden;
+            font-style: italic;
+        }
+
+        .help-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .help-card__content {
+            padding: 24px;
+        }
+
+        .help-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--color-primary);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .help-card__desc {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .help-card__link {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ===== OUR BRANDS ===== */
+        .our-brands {
+            padding: 80px 0;
+            background-color: var(--color-light-bg);
+            text-align: center;
+        }
+
+        .our-brands__title {
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+        }
+
+        .our-brands__subtitle {
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 48px;
+        }
+
+        .our-brands__logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .brand-logo {
+            width: 180px;
+            height: 90px;
+            background-color: var(--color-white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            font-size: 13px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+            font-weight: 600;
+            padding: 16px 20px;
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand-logo:hover {
+            box-shadow: 0 8px 20px rgba(36, 52, 71, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .our-brands__tagline {
+            color: var(--color-text);
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
+
+        /* ===== BLOG SECTION ===== */
+        .blog-section {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background-color: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(36, 52, 71, 0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            box-shadow: 0 12px 30px rgba(36, 52, 71, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .blog-card__image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #EDEDED 0%, #E0DFDC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-muted);
+            overflow: hidden;
+            font-style: italic;
+        }
+
+        .blog-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .blog-card__content { padding: 28px; }
+
+        .blog-card__date {
+            color: var(--color-accent);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .blog-card__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.25rem;
+            margin: 12px 0;
+            color: var(--color-primary);
+            line-height: 1.4;
+        }
+
+        .blog-card__excerpt {
+            color: var(--color-muted);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .blog-card__link {
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .blog-section__cta { text-align: center; }
+
+        /* ===== ENQUIRY SECTION ===== */
+        .enquiry-section {
+            padding: 80px 0;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .enquiry-section__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .enquiry-section__title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.25rem;
+            color: var(--color-white);
+            margin-bottom: 16px;
+        }
+
+        .enquiry-section__subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.125rem;
+        }
+
+        .enquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .enquiry-form input,
+        .enquiry-form select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .enquiry-form input:focus,
+        .enquiry-form select:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .enquiry-form input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+        .enquiry-form select option {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+
+        .btn--full { width: 100%; justify-content: center; }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            background-color: #1a2836;
+            color: var(--color-white);
+            padding: 64px 0 24px;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+            gap: 28px;
+            margin-bottom: 40px;
+            align-items: start;
+        }
+
+        .site-footer__heading {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--color-white);
+            letter-spacing: 0.5px;
+        }
+
+        .site-footer__logo {
+            margin-bottom: 16px;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--color-white);
+        }
+        .site-footer__logo img {
+            height: 56px;
+            width: auto;
+            display: block;
+        }
+        .site-footer__socials {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+        .site-footer__socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--color-white);
+            transition: all 0.3s;
+        }
+        .site-footer__socials a:hover {
+            background-color: var(--color-accent);
+            transform: translateY(-2px);
+        }
+        .site-footer__socials svg { width: 16px; height: 16px; fill: currentColor; }
+
+        /* ===== TESTIMONIALS CAROUSEL ===== */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--color-bg);
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonials__title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 12px;
+            color: var(--color-primary);
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+        .testimonials__subtitle {
+            text-align: center;
+            color: var(--color-muted);
+            font-size: 1.125rem;
+            margin-bottom: 56px;
+        }
+        .testimonials__viewport {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .testimonials__track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .testimonial-card {
+            min-width: 100%;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+        .testimonial-card__inner {
+            background-color: var(--color-white);
+            border-radius: 16px;
+            padding: 28px 32px;
+            box-shadow: 0 8px 30px rgba(36, 52, 71, 0.08);
+            border: 1px solid var(--color-border);
+            text-align: center;
+            position: relative;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .testimonial-card__quote-mark {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3rem;
+            line-height: 0.6;
+            color: var(--color-accent);
+            opacity: 0.3;
+            margin-bottom: 4px;
+        }
+        .testimonial-card__quote {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            font-style: italic;
+            /* Reserve 3 lines so short and long quotes produce equally
+               tall cards without leaving a giant empty block underneath. */
+            min-height: calc(1rem * 1.6 * 3);
+        }
+        /* Clamp long quotes to 3 lines; the JS-added modifier toggles off
+           when the user taps Read more. */
+        .testimonial-card__quote--clamped {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .testimonial-card__read-more {
+            background: none;
+            border: 0;
+            padding: 0 0 12px;
+            margin-top: -2px;
+            color: var(--color-accent);
+            font: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .testimonial-card__read-more:hover { color: var(--color-primary); }
+        .testimonial-card__read-more:focus-visible {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+            border-radius: 3px;
+        }
+        .testimonial-card__badges {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .testimonial-card__badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 100px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .testimonial-card__badge--category {
+            background-color: rgba(177, 140, 87, 0.12);
+            color: var(--color-accent);
+        }
+        .testimonial-card__badge--product {
+            background-color: rgba(36, 52, 71, 0.08);
+            color: var(--color-primary);
+        }
+        .testimonial-card__author {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 2px;
+        }
+        .testimonial-card__role {
+            color: var(--color-muted);
+            font-size: 0.85rem;
+        }
+        .testimonial-card__badges {
+            margin-bottom: 14px;
+        }
+        .testimonials__arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            color: var(--color-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 5;
+            box-shadow: 0 4px 12px rgba(36, 52, 71, 0.08);
+        }
+        .testimonials__arrow:hover {
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border-color: var(--color-accent);
+        }
+        .testimonials__arrow--prev { left: -24px; }
+        .testimonials__arrow--next { right: -24px; }
+        .testimonials__dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+        .testimonials__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--color-border);
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 0;
+        }
+        .testimonials__dot--active {
+            background-color: var(--color-accent);
+            width: 28px;
+            border-radius: 5px;
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(177, 140, 87, 0.35);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(12px);
+            transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background-color 0.2s;
+            z-index: 90;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+        }
+        .back-to-top svg { width: 20px; height: 20px; }
+
+        .site-footer__desc {
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .site-footer__address {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            font-style: normal;
+        }
+
+        .site-footer__address p { margin: 0; }
+
+        .site-footer__contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .site-footer__contact-info a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .site-footer__contact-info a:hover { color: var(--color-accent); }
+
+        .site-footer__links {
+            list-style: none;
+            padding: 0;
+        }
+        .site-footer__links li { margin-bottom: 12px; }
+        .site-footer__links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        .site-footer__links a:hover { color: var(--color-accent); }
+
+        .site-footer__bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.875rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 968px) {
+            body { font-size: 15px; }
+            .hero { padding: 60px 0 80px; }
+            .hero__title { font-size: 2.5rem; }
+            .hero__byline { font-size: 1.15rem; }
+            .hero__inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero__image { height: 350px; }
+            .hero__ctas {
+                gap: 12px;
+            }
+            .browse-pain {
+                padding: 60px 0;
+            }
+            .browse-pain__title { margin-bottom: 16px; }
+            .browse-pain__grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 16px;
+            }
+            .pain-card {
+                padding: 24px 12px;
+            }
+            .pain-card__icon {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 12px;
+            }
+            .pain-card__name {
+                font-size: 1rem;
+            }
+            .why-avana {
+                padding: 60px 0;
+            }
+            .why-avana__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .why-avana__number {
+                font-size: 2.5rem;
+            }
+            .why-avana__label {
+                font-size: 0.95rem;
+            }
+            .audience-selector {
+                padding: 60px 0;
+            }
+            .audience-selector__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .audience-card {
+                padding: 32px 24px;
+            }
+            .audience-card__icon {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 16px;
+            }
+            .audience-card__title {
+                font-size: 1.2rem;
+            }
+            .testimonials {
+                padding: 60px 0;
+            }
+            .testimonials__title {
+                font-size: 1.75rem;
+            }
+            .testimonials__arrow--prev { left: 0px; }
+            .testimonials__arrow--next { right: 0px; }
+            .testimonial-card__inner { padding: 32px 20px; }
+            .testimonial-card__quote { font-size: 0.95rem; }
+            .testimonial-card__quote-mark {
+                font-size: 3.5rem;
+            }
+            .help-section {
+                padding: 60px 0;
+            }
+            .help-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .blog-section {
+                padding: 60px 0;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .blog-card__image {
+                height: 180px;
+            }
+            .enquiry-section {
+                padding: 60px 0;
+            }
+            .enquiry-section__inner {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .enquiry-section__title {
+                font-size: 1.75rem;
+            }
+            .enquiry-form {
+                padding: 24px;
+            }
+            .enquiry-form input,
+            .enquiry-form select {
+                padding: 12px 14px;
+                min-height: 44px;
+                font-size: 16px;
+            }
+            .our-brands {
+                padding: 60px 0;
+            }
+            .our-brands__logos {
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+            .brand-logo {
+                width: 140px;
+                height: 70px;
+            }
+            .site-footer {
+                padding: 48px 0 20px;
+            }
+            /* footer-grid 2-column collapse moved to its own @media (max-width: 768px)
+               block below — keeps the 5-column footer up to laptop / tablet-landscape. */
+            .main-nav__list { display: none; }
+            .top-bar__left { display: none; }
+        }
+
+        /* Footer-only collapse breakpoint — keeps all 5 columns
+           (Brand · Pain · Audience · Conditions · Company) on the same
+           row down to ~768px (real tablet portrait). */
+        @media (max-width: 768px) {
+            .site-footer__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body { font-size: 14px; }
+            .container {
+                padding: 0 16px;
+            }
+            .hero { padding: 40px 0 50px; }
+            .hero::before,
+            .hero::after {
+                display: none;
+            }
+            .hero__badge {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+                margin-bottom: 16px;
+            }
+            .hero__title { font-size: 1.75rem; line-height: 1.2; margin-bottom: 16px; }
+            .hero__byline { font-size: 0.95rem; margin-bottom: 24px; }
+            .hero__ctas {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero__ctas .btn {
+                width: 100%;
+            }
+            .hero__image { height: 280px; }
+            .hero__trust {
+                margin-top: 24px;
+                font-size: 0.85rem;
+                gap: 12px;
+            }
+            .browse-pain {
+                padding: 48px 0;
+            }
+            .browse-pain__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .browse-pain__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
+            .browse-pain__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+            .pain-card {
+                padding: 20px 12px;
+                border-radius: 12px;
+            }
+            .pain-card__icon {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 10px;
+            }
+            .pain-card__name {
+                font-size: 0.9rem;
+            }
+            .why-avana {
+                padding: 48px 0;
+            }
+            .why-avana::before {
+                display: none;
+            }
+            .why-avana__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .why-avana__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
+            .why-avana__grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .why-avana__number {
+                font-size: 2rem;
+                margin-bottom: 8px;
+            }
+            .why-avana__label {
+                font-size: 0.9rem;
+            }
+            .audience-selector {
+                padding: 48px 0;
+            }
+            .audience-selector__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .audience-selector__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
+            .audience-selector__grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .audience-card {
+                padding: 24px 16px;
+                min-height: 280px;
+                display: flex;
+                flex-direction: column;
+            }
+            .audience-card__icon {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 16px;
+            }
+            .audience-card__title {
+                font-size: 1rem;
+                margin-bottom: 12px;
+            }
+            .audience-card__desc {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .testimonials {
+                padding: 48px 0;
+            }
+            .testimonials__title {
+                font-size: 1.4rem;
+                margin-bottom: 8px;
+            }
+            .testimonials__subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 32px;
+            }
+            .testimonials__viewport {
+                position: relative;
+                overflow: hidden;
+            }
+            .testimonials__arrow {
+                width: 40px;
+                height: 40px;
+            }
+            .testimonials__arrow--prev { left: -8px; }
+            .testimonials__arrow--next { right: -8px; }
+            .testimonial-card__inner {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+            .testimonial-card__quote-mark {
+                font-size: 2.5rem;
+                margin-bottom: 4px;
+            }
+            .testimonial-card__quote {
+                font-size: 0.9rem;
+                line-height: 1.6;
+                margin-bottom: 16px;
+                font-style: italic;
+            }
+            .testimonial-card__author {
+                font-size: 0.95rem;
+            }
+            .testimonial-card__role {
+                font-size: 0.85rem;
+            }
+            .help-section {
+                padding: 48px 0;
+            }
+            .section__title {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+            .section__subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 32px;
+            }
+            .help-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .help-card__image {
+                height: 180px;
+            }
+            .help-card__content {
+                padding: 16px;
+            }
+            .help-card__title {
+                font-size: 1.05rem;
+                margin-bottom: 8px;
+            }
+            .help-card__desc {
+                font-size: 0.85rem;
+                margin-bottom: 12px;
+            }
+            .our-brands {
+                padding: 48px 0;
+            }
+            .our-brands__title {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+            .our-brands__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 32px;
+            }
+            .our-brands__logos {
+                gap: 12px;
+                margin-bottom: 16px;
+            }
+            .brand-logo {
+                width: 100px;
+                height: 60px;
+                padding: 12px 16px;
+            }
+            .our-brands__tagline {
+                font-size: 0.95rem;
+            }
+            .blog-section {
+                padding: 48px 0;
+            }
+            .blog-grid {
+                gap: 16px;
+            }
+            .blog-card {
+                border-radius: 12px;
+            }
+            .blog-card__image {
+                height: 160px;
+            }
+            .blog-card__content {
+                padding: 16px;
+            }
+            .blog-card__date {
+                font-size: 0.75rem;
+            }
+            .blog-card__title {
+                font-size: 1rem;
+                margin: 8px 0;
+            }
+            .blog-card__excerpt {
+                font-size: 0.85rem;
+            }
+            .enquiry-section {
+                padding: 40px 0;
+            }
+            .enquiry-section__title {
+                font-size: 1.5rem;
+                margin-bottom: 12px;
+            }
+            .enquiry-section__subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 24px;
+            }
+            .enquiry-form {
+                padding: 16px;
+                gap: 12px;
+            }
+            .enquiry-form input,
+            .enquiry-form select {
+                padding: 10px 12px;
+                min-height: 44px;
+                font-size: 16px;
+            }
+            .btn--full {
+                width: 100%;
+            }
+            .site-footer {
+                padding: 40px 0 16px;
+            }
+            .site-footer__grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                margin-bottom: 24px;
+            }
+            .site-footer__heading {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__logo img {
+                height: 40px;
+            }
+            .site-footer__desc {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__address {
+                font-size: 0.85rem;
+                margin-bottom: 16px;
+            }
+            .site-footer__contact-info a {
+                font-size: 0.85rem;
+            }
+            .site-footer__links a {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+            .site-footer__socials {
+                gap: 10px;
+                margin-top: 16px;
+            }
+            .site-footer__socials a {
+                width: 32px;
+                height: 32px;
+            }
+            .site-footer__bottom {
+                font-size: 0.75rem;
+                padding-top: 16px;
+            }
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 16px;
+                right: 16px;
+            }
+            .back-to-top svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero__title { font-size: 1.5rem; }
+            .hero__image { height: 240px; }
+            .browse-pain__grid {
+                grid-template-columns: 1fr;
+            }
+            .audience-selector__grid {
+                gap: 12px;
+            }
+            .help-grid {
+                gap: 12px;
+            }
+        }
+
+        /* ===== TESTING LANDING PAGE — BACKGROUND-IMAGE HERO ===== */
+        .hero--bg {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 96px 0;
+            background: #1a2433;
+            isolation: isolate;
+        }
+        /* The .container is a flex item — without width:100% it shrinks to content
+           (collapsed to ~768px), making the hero text NOT align with the navbar.
+           This forces it to take the full available width so its 1200px max-width applies. */
+        .hero--bg > .container {
+            width: 100%;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        .hero--bg::before,
+        .hero--bg::after { display: none; }
+        .hero--bg .hero__bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .hero--bg .hero__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: translateZ(0) scale(1.04);
+            will-change: transform;
+            animation: heroBgDrift 24s ease-in-out infinite alternate;
+            backface-visibility: hidden;
+        }
+        @keyframes heroBgDrift {
+            from { transform: translateZ(0) scale(1.04); }
+            to   { transform: translateZ(0) scale(1.1) translateX(-1%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero--bg .hero__bg img { animation: none; }
+        }
+        .hero--bg .hero__overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(115deg, rgba(20,30,45,0.82) 0%, rgba(20,30,45,0.55) 55%, rgba(20,30,45,0.30) 100%),
+                linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.35) 100%);
+        }
+        .hero--bg .hero__inner {
+            position: relative;
+            z-index: 2;
+            display: block !important;
+            grid-template-columns: none !important;
+            max-width: none;
+            width: 100%;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+        .hero--bg .hero__badge,
+        .hero--bg .hero__title,
+        .hero--bg .hero__byline,
+        .hero--bg .hero__ctas,
+        .hero--bg .hero__trust {
+            text-align: left !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .hero--bg .hero__title  { max-width: 720px; }
+        .hero--bg .hero__byline { max-width: 620px; }
+        .hero--bg .hero__ctas {
+            display: flex;
+            justify-content: flex-start !important;
+        }
+        .hero--bg .hero__ctas .btn {
+            width: auto !important;
+            justify-content: center;
+        }
+        .hero--bg .hero__trust {
+            display: flex;
+            justify-content: flex-start !important;
+        }
+        .hero--bg .hero__badge {
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.22);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero--bg .hero__title { color: #fff; }
+        .hero--bg .hero__title span { color: #f4b740; }
+        .hero--bg .hero__byline { color: rgba(255,255,255,0.92); }
+        .hero--bg .hero__trust { color: rgba(255,255,255,0.85); }
+        .hero--bg .hero__trust-icon {
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+        }
+        .hero--bg .btn--secondary {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-color: rgba(255,255,255,0.45);
+            backdrop-filter: blur(4px);
+        }
+        .hero--bg .btn--secondary:hover {
+            background: rgba(255,255,255,0.18);
+            border-color: #fff;
+        }
+        @media (max-width: 768px) {
+            .hero--bg {
+                min-height: 70vh;
+                padding: 72px 0;
+            }
+        }
+
+        /* ===== HERO TEXT — staggered fade-up on load ===== */
+        .hero--bg .hero__badge,
+        .hero--bg .hero__title,
+        .hero--bg .hero__byline,
+        .hero--bg .hero__ctas,
+        .hero--bg .hero__trust {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .hero--bg .hero__badge  { animation-delay: 0.10s; }
+        .hero--bg .hero__title  { animation-delay: 0.25s; }
+        .hero--bg .hero__byline { animation-delay: 0.45s; }
+        .hero--bg .hero__ctas   { animation-delay: 0.65s; }
+        .hero--bg .hero__trust  { animation-delay: 0.85s; }
+        @keyframes heroFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero--bg .hero__badge,
+            .hero--bg .hero__title,
+            .hero--bg .hero__byline,
+            .hero--bg .hero__ctas,
+            .hero--bg .hero__trust {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ===== PAIN CARDS — scroll reveal + animated hover glow ===== */
+        .pain-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .pain-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* staggered reveal */
+        .pain-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .pain-card:nth-child(2).is-visible { transition-delay: 0.08s; }
+        .pain-card:nth-child(3).is-visible { transition-delay: 0.16s; }
+        .pain-card:nth-child(4).is-visible { transition-delay: 0.24s; }
+        .pain-card:nth-child(5).is-visible { transition-delay: 0.32s; }
+        .pain-card:nth-child(6).is-visible { transition-delay: 0.40s; }
+        /* sweeping shine on hover */
+        .pain-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(244, 183, 64, 0.18) 50%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.7s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .pain-card:hover::after { transform: translateX(100%); }
+        .pain-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .pain-card .pain-card__icon,
+        .pain-card .pain-card__name { position: relative; z-index: 2; }
+        .pain-card .pain-card__icon {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .pain-card:hover .pain-card__icon {
+            transform: scale(1.08) translateY(-4px);
+        }
+
+        /* ===== AUDIENCE CARDS — same effect as pain cards (scroll reveal + gold shine sweep) ===== */
+        .audience-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .audience-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .audience-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .audience-card:nth-child(2).is-visible { transition-delay: 0.10s; }
+        .audience-card:nth-child(3).is-visible { transition-delay: 0.20s; }
+        .audience-card:nth-child(4).is-visible { transition-delay: 0.30s; }
+        .audience-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.55) 45%,
+                rgba(220, 225, 232, 0.35) 55%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.85s ease;
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: overlay;
+        }
+        .audience-card:hover::after { transform: translateX(100%); }
+        .audience-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .audience-card > * { position: relative; z-index: 2; }
+        .audience-card .audience-card__icon {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .audience-card:hover .audience-card__icon {
+            transform: scale(1.08) translateY(-4px);
+        }
+        .audience-card .audience-card__arrow {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .audience-card:hover .audience-card__arrow {
+            transform: translateX(10px);
+        }
+
+        /* ===== HELP CARDS — same effect as pain cards (scroll reveal + gold shine sweep) ===== */
+        .help-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .help-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .help-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .help-card:nth-child(2).is-visible { transition-delay: 0.10s; }
+        .help-card:nth-child(3).is-visible { transition-delay: 0.20s; }
+        .help-card:nth-child(4).is-visible { transition-delay: 0.30s; }
+        .help-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.55) 45%,
+                rgba(220, 225, 232, 0.35) 55%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.85s ease;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .help-card:hover::after { transform: translateX(100%); }
+        .help-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .help-card > * { position: relative; z-index: 1; }
+        .help-card .help-card__image { overflow: hidden; }
+        .help-card .help-card__image img {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .help-card:hover .help-card__image img {
+            transform: scale(1.05);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pain-card,
+            .audience-card,
+            .help-card {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .pain-card::after,
+            .audience-card::after,
+            .help-card::after { display: none; }
+            .help-card .help-card__image img { transition: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N8B2Z2NS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Shared header (top-bar + nav + Solutions mega-menu + mobile nav)
+         is injected from /partials/header.html by include-partials.js -->
+    <div data-include="/partials/header.html"></div>
+
+    <!-- HERO SECTION (TESTING — background-image variant) -->
+    <section class="hero hero--bg">
+        <div class="hero__bg" aria-hidden="true">
+            <img src="/images/testing/homepage-image.jpg"
+                 alt=""
+                 width="1920" height="1080"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero__inner">
+                <span class="hero__badge">✨ Trusted by 1 Lakh+ Patients Across India</span>
+                <h1 class="hero__title">Struggling with <span>Knee or Back Pain</span> Every Day?</h1>
+                <p class="hero__byline">Simple activities like walking, sitting, or climbing stairs shouldn't be painful. Discover doctor-recommended support solutions that can help you move better and live comfortably.</p>
+                <div class="hero__ctas">
+                    <a href="#browse-pain" class="btn btn--primary">Find My Solution →</a>
+                    <a href="#enquiry" class="btn btn--secondary">Talk to an Expert</a>
+                </div>
+                <div class="hero__trust">
+                    <span>Doctor-recommended • International brands • Pan-India delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BROWSE BY PAIN -->
+    <section class="browse-pain" id="browse-pain">
+        <div class="container">
+            <h2 class="browse-pain__title">Browse by Pain Area</h2>
+            <p class="browse-pain__subtitle">Where does it hurt? Click your pain point to find the right solution.</p>
+            <div class="browse-pain__grid">
+                <a href="/solutions/knee-pain" class="pain-card" aria-label="Browse knee pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/Knee.svg" alt="Knee pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Knee</span>
+                </a>
+                <a href="/solutions/foot-ankle-pain" class="pain-card" aria-label="Browse foot and ankle pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/ankle.svg" alt="Foot and ankle pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Foot</span>
+                </a>
+                <a href="/solutions/shoulder-pain" class="pain-card" aria-label="Browse shoulder pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/shoulder.svg" alt="Shoulder pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Shoulder</span>
+                </a>
+                <a href="/solutions/elbow-pain" class="pain-card" aria-label="Browse elbow pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/elbow.svg" alt="Elbow pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Elbow</span>
+                </a>
+                <a href="/solutions/back-pain" class="pain-card" aria-label="Browse spine and back pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/spine.svg" alt="Spine and back pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Spine</span>
+                </a>
+                <a href="/solutions/hip-pain" class="pain-card" aria-label="Browse hip pain solutions">
+                    <div class="pain-card__icon">
+                        <img src="/images/pain/hip.svg" alt="Hip pain icon" loading="lazy" width="96" height="96">
+                    </div>
+                    <span class="pain-card__name">Hip</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY AVANA -->
+    <section class="why-avana">
+        <div class="container">
+            <h2 class="why-avana__title">Why Avana?</h2>
+            <p class="why-avana__subtitle">Trusted by patients, surgeons, and hospitals across India</p>
+            <div class="why-avana__grid">
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">1 Lakh+</span>
+                    <span class="why-avana__label">Patients Served Across India</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">1000+</span>
+                    <span class="why-avana__label">Surgeons</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">250+</span>
+                    <span class="why-avana__label">Hospital Installations</span>
+                </div>
+                <div class="why-avana__stat">
+                    <span class="why-avana__number">20+</span>
+                    <span class="why-avana__label">Years of Clinical Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUDIENCE SELECTOR -->
+    <section class="audience-selector">
+        <div class="container">
+            <h2 class="audience-selector__title">Choose your path and we'll guide you to the right solutions</h2>
+            <div class="audience-selector__grid">
+                <a href="/solutions/knee-pain" class="audience-card">
+                    <div class="audience-card__icon">
+                        <img src="/images/audience/knee-joint-pain.jpg" alt="Patient experiencing knee and joint pain seeking non-surgical relief" loading="lazy" width="140" height="140">
+                    </div>
+                    <h3 class="audience-card__title">I have knee/joint pain</h3>
+                    <p class="audience-card__desc">Explore bracing solutions that reduce pain and restore mobility — without surgery.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="/solutions/back-pain" class="audience-card">
+                    <div class="audience-card__icon">
+                        <img src="/images/audience/backpain.jpg" alt="Patient managing chronic back pain with spine bracing support" loading="lazy" width="140" height="140">
+                    </div>
+                    <h3 class="audience-card__title">I have back pain</h3>
+                    <p class="audience-card__desc">Discover spine braces and posture support to relieve chronic back pain and restore comfort.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="/conditions/post-surgery-recovery" class="audience-card">
+                    <div class="audience-card__icon">
+                        <img src="/images/audience/post-operation.jpg" alt="Patient recovering after surgery with post-operative bracing support" loading="lazy" width="140" height="140">
+                    </div>
+                    <h3 class="audience-card__title">I'm recovering from surgery</h3>
+                    <p class="audience-card__desc">Find the right post-operative braces and cold therapy for faster, safer recovery.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+
+                <a href="/for-surgeons" class="audience-card">
+                    <div class="audience-card__icon">
+                        <img src="/images/audience/surgeon.jpg" alt="Orthopaedic surgeon attending advanced endoscopic spine surgery training" loading="lazy" width="140" height="140">
+                    </div>
+                    <h3 class="audience-card__title">I'm a surgeon</h3>
+                    <p class="audience-card__desc">Explore RIWO Spine endoscopic systems, training programs, and partnership opportunities.</p>
+                    <span class="audience-card__arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS CAROUSEL -->
+    <section class="testimonials" id="testimonials" aria-label="Patient and surgeon testimonials">
+        <div class="container">
+            <h2 class="testimonials__title">What Our Patients & Surgeons Say</h2>
+            <p class="testimonials__subtitle">Real stories of relief, recovery, and renewed confidence</p>
+            <div class="testimonials__viewport">
+                <button class="testimonials__arrow testimonials__arrow--prev" id="testimonial-prev" aria-label="Previous testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="testimonials__track" id="testimonials-track" aria-live="polite">
+                    <!-- Cards inserted by JS from data/testimonials.json -->
+                </div>
+                <button class="testimonials__arrow testimonials__arrow--next" id="testimonial-next" aria-label="Next testimonial">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+                </button>
+            </div>
+            <div class="testimonials__dots" id="testimonials-dots" role="tablist"></div>
+        </div>
+    </section>
+
+    <!-- EXPLORE SOLUTIONS -->
+    <section class="help-section">
+        <div class="container">
+            <h2 class="section__title">Explore solutions tailored to your condition</h2>
+            <div class="help-grid">
+                <a href="/conditions/osteoarthritis" class="help-card">
+                    <div class="help-card__image">
+                        <img src="/images/condition/osteoarthritis.jpg" alt="Knee brace solution for osteoarthritis pain relief" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Osteoarthritis</h3>
+                        <p class="help-card__desc">Offloader braces that reduce knee pain and delay surgery.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="/conditions/post-surgery-recovery" class="help-card">
+                    <div class="help-card__image">
+                        <img src="/images/condition/Postsurgery.jpg" alt="Post-surgery recovery brace and rehabilitation support" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Post-Surgery Recovery</h3>
+                        <p class="help-card__desc">Braces and support for faster healing after knee, shoulder, or spine surgery.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="/solutions/cold-therapy" class="help-card">
+                    <div class="help-card__image">
+                        <img src="/images/products/breg-polar-care-wave-img-1.png" alt="Breg Polar Care Wave — clinical cold therapy device for swelling and pain relief" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Cold Therapy</h3>
+                        <p class="help-card__desc">Clinical-grade cold and compression therapy for pain relief and reduced swelling.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+
+                <a href="/solutions/spine-support" class="help-card">
+                    <div class="help-card__image">
+                        <img src="/images/products/aspen-lumbar-support-img-1.jpg" alt="Aspen Lumbar Support — spine bracing for back pain and recovery" loading="lazy" width="600" height="400">
+                    </div>
+                    <div class="help-card__content">
+                        <h3 class="help-card__title">Spine Support</h3>
+                        <p class="help-card__desc">LSO, TLSO, and cervical braces from Aspen Medical Products.</p>
+                        <span class="help-card__link">Learn more →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR BRANDS -->
+    <section class="our-brands">
+        <div class="container">
+            <h2 class="our-brands__title">Our Brands</h2>
+            <p class="our-brands__subtitle">World-class brands trusted by leading hospitals</p>
+            <div class="our-brands__logos">
+                <a href="https://www.breg.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Breg website">
+                    <img src="/images/brands/breg-logo.png.png" alt="Breg — orthopaedic bracing brand from USA" loading="lazy">
+                </a>
+                <a href="https://www.aspenmedical.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Aspen Medical Products website">
+                    <img src="/images/brands/aspen-logo.png.jpg" alt="Aspen Medical Products — spine bracing solutions" loading="lazy">
+                </a>
+                <a href="https://www.riwospine.com/en/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit RIWO Spine website">
+                    <img src="/images/brands/riwospine-logo.png.png" alt="RIWO Spine — endoscopic spine surgery systems" loading="lazy">
+                </a>
+                <a href="https://osteokart.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit OsteoKart store">
+                    <img src="/images/brands/osteokart-logo.png.png" alt="OsteoKart — India's orthopaedic bracing online store" loading="lazy">
+                </a>
+            </div>
+            <p class="our-brands__tagline">International brands. Indian expertise. Delivered across India.</p>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION (dynamic mount point — hidden until Ghost is live)
+         Wire-up steps when Ghost goes live at /blog:
+           1. Create data/ghost-config.json with the Content API URL + key
+           2. Add <script src="/assets/js/ghost-blog-loader.js" defer> below
+           3. The loader fetches the 3 most recent posts, renders cards
+              into #blog-grid, and reveals #blog-section.
+         CSS classes (.blog-section / .blog-grid / .blog-card / etc.) are
+         defined in index.html's <style> block (lines ~727+) and will be
+         reused as-is. No HTML change needed at activation time. -->
+    <section class="blog-section" id="blog-section" style="display:none;">
+        <div class="container">
+            <h2 class="section__title">Latest from Our Blog</h2>
+            <p class="section__subtitle">Expert insights on pain relief, recovery, and orthopaedic care</p>
+            <div class="blog-grid" id="blog-grid"></div>
+            <div class="blog-section__cta">
+                <a href="/blog" class="btn btn--secondary">View All Posts →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENQUIRY SECTION -->
+    <section class="enquiry-section" id="enquiry">
+        <div class="container">
+            <div class="enquiry-section__inner">
+                <div class="enquiry-section__text">
+                    <h2 class="enquiry-section__title">Have a Question? We're Here to Help.</h2>
+                    <p class="enquiry-section__subtitle">Whether you're a patient looking for the right brace, or a surgeon interested in our products — reach out to us. Our team will get back to you within 24 hours.</p>
+                </div>
+                <form class="enquiry-form" id="enquiry-form" novalidate>
+                    <!-- Web3Forms -->
+                    <input type="hidden" name="access_key" value="16db1d2e-b7d8-4ed9-979e-c1ff200c1d61">
+                    <input type="hidden" name="subject"    value="New enquiry — Avana Surgical website">
+                    <input type="hidden" name="from_name"  value="Avana Website">
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1">
+                    <!-- Fields -->
+                    <input type="text"  name="name"   placeholder="Your Name *"          required>
+                    <input type="email" name="email"  placeholder="Email Address *"       required>
+                    <input type="tel"   name="phone"  placeholder="Mobile Number *"       required>
+                    <select name="topic" required>
+                        <option value="" disabled selected>What do you need help with? *</option>
+                        <option value="oa">OA / Knee Bracing</option>
+                        <option value="cold">Cold Therapy</option>
+                        <option value="post-op">Post-Op Recovery</option>
+                        <option value="spine">Spine Bracing</option>
+                        <option value="riwo">RIWO Spine / Endoscopic Spine</option>
+                        <option value="cme">CME / Training Programs</option>
+                        <option value="general">General Enquiry</option>
+                    </select>
+                    <button type="submit" class="btn btn--primary btn--full" id="enquiry-submit">Submit Enquiry</button>
+                    <p id="enquiry-success" style="display:none;color:#2a7a4f;font-weight:600;text-align:center;margin-top:12px;">
+                        ✓ Thank you! We'll get back to you within 24 hours.
+                    </p>
+                    <p id="enquiry-error" style="display:none;color:#c44545;font-size:0.9rem;text-align:center;margin-top:12px;">
+                        Something went wrong. Please email us at <a href="mailto:info@avanasurgical.com" style="color:inherit;">info@avanasurgical.com</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shared footer is injected from /partials/footer.html -->
+    <div data-include="/partials/footer.html"></div>
+
+    <!-- Inline footer removed — content lives in /partials/footer.html now.
+         To edit footer links/contact info, update that file once and every page picks it up. -->
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top of page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Inject shared header/footer partials and wire navbar behaviour -->
+    <script src="/assets/js/include-partials.js" defer></script>
+    <script src="/assets/js/header-behavior.js" defer></script>
+    <script src="/assets/js/enquiry-form.js" defer></script>
+    <!-- enquiry-modal.js is the click-interceptor that handles the navbar
+         "Enquire Now" CTA. On non-homepage pages it opens the modal; here
+         on the homepage there's no modal, so it smooth-scrolls to the
+         <section id="enquiry"> form instead. Needed on every page that
+         includes the shared header partial. -->
+    <script src="/assets/js/enquiry-modal.js" defer></script>
+    <script src="/assets/js/ghost-blog-loader.js" defer></script>
+
+    <script>
+        // Sticky header + back-to-top are now handled by header-behavior.js
+        // (it waits for partials:loaded since the header is injected at runtime).
+        // The block below is kept only for non-header interactions that depend
+        // on elements present at initial parse time.
+        const header = document.getElementById('site-header'); // may be null until partials load
+        const backToTop = document.getElementById('back-to-top');
+
+        // Fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // ===== TESTIMONIALS CAROUSEL =====
+        (function initTestimonials() {
+            const track = document.getElementById('testimonials-track');
+            const dotsContainer = document.getElementById('testimonials-dots');
+            const prevBtn = document.getElementById('testimonial-prev');
+            const nextBtn = document.getElementById('testimonial-next');
+            if (!track) return;
+
+            let currentIndex = 0;
+            let testimonials = [];
+            let autoplayTimer = null;
+
+            function escapeHtml(s) {
+                if (s == null) return '';
+                return String(s)
+                    .replace(/&/g, '&amp;')
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/"/g, '&quot;')
+                    .replace(/'/g, '&#39;');
+            }
+
+            // Threshold (chars) above which the quote gets a Read more toggle.
+            // Quotes below this fit cleanly into the default 4-line clamp.
+            const QUOTE_READ_MORE_THRESHOLD = 180;
+
+            function buildCard(t) {
+                const quote = t.testimonial || t.quote || '';
+                const needsToggle = quote.length > QUOTE_READ_MORE_THRESHOLD;
+                const badges = [
+                    t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
+                    t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''
+                ].filter(Boolean).join('');
+                return `
+                    <article class="testimonial-card" role="group" aria-roledescription="testimonial">
+                        <div class="testimonial-card__inner">
+                            <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
+                            <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                            ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
+                            ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                            <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
+                            <div class="testimonial-card__role">${escapeHtml(t.location || '')}</div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            // Wire up Read more / Read less toggles after every render.
+            function bindReadMore() {
+                track.querySelectorAll('.testimonial-card__read-more').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        const quote = btn.parentElement.querySelector('.testimonial-card__quote');
+                        const stillClamped = quote.classList.toggle('testimonial-card__quote--clamped');
+                        const isExpanded = !stillClamped;
+                        btn.textContent = isExpanded ? 'Read less' : 'Read more';
+                        btn.setAttribute('aria-expanded', String(isExpanded));
+                    });
+                });
+            }
+
+            function render() {
+                track.innerHTML = testimonials.map(buildCard).join('');
+                dotsContainer.innerHTML = testimonials.map((_, i) =>
+                    `<button class="testimonials__dot${i === 0 ? ' testimonials__dot--active' : ''}" data-index="${i}" role="tab" aria-label="Show testimonial ${i + 1}"></button>`
+                ).join('');
+                dotsContainer.querySelectorAll('.testimonials__dot').forEach(dot => {
+                    dot.addEventListener('click', () => goTo(parseInt(dot.dataset.index, 10)));
+                });
+                bindReadMore();
+            }
+
+            function update() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dotsContainer.querySelectorAll('.testimonials__dot').forEach((d, i) => {
+                    d.classList.toggle('testimonials__dot--active', i === currentIndex);
+                });
+            }
+
+            function goTo(i) {
+                if (!testimonials.length) return;
+                currentIndex = (i + testimonials.length) % testimonials.length;
+                update();
+                resetAutoplay();
+            }
+
+            function next() { goTo(currentIndex + 1); }
+            function prev() { goTo(currentIndex - 1); }
+
+            function startAutoplay() {
+                stopAutoplay();
+                autoplayTimer = setInterval(next, 6000);
+            }
+            function stopAutoplay() {
+                if (autoplayTimer) clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+            function resetAutoplay() {
+                if (autoplayTimer) startAutoplay();
+            }
+
+            // Pause on hover
+            const viewport = track.parentElement;
+            viewport.addEventListener('mouseenter', stopAutoplay);
+            viewport.addEventListener('mouseleave', startAutoplay);
+
+            // Touch swipe
+            let touchStartX = 0, touchEndX = 0;
+            track.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+                stopAutoplay();
+            }, { passive: true });
+            track.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > 50) (diff > 0 ? next : prev)();
+                startAutoplay();
+            }, { passive: true });
+
+            // Keyboard arrows
+            viewport.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
+                if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+            });
+            viewport.setAttribute('tabindex', '0');
+
+            prevBtn.addEventListener('click', prev);
+            nextBtn.addEventListener('click', next);
+
+            // Fallback testimonials in case fetch fails (e.g. file:// in some browsers)
+            const fallback = [
+                {
+                    name: "Walid Abedin",
+                    location: "Dhaka",
+                    product: "Polar Care Wave",
+                    category: "Post Operative Recovery",
+                    testimonial: "I had ACL reconstruction operation, and the pain was unimaginable. The combination of cold therapy and compression at the same time is game changing. The pain literally reduced after 2 uses of the product."
+                },
+                {
+                    name: "Radhamani",
+                    location: "Chennai",
+                    product: "Freestyle OA",
+                    category: "Knee Pain",
+                    testimonial: "It gave me confidence while walking and good support for my knees. The customer service was very helpful in showing me how to wear the brace properly."
+                }
+            ];
+
+            fetch('testimonials.json', { cache: 'no-store' })
+                .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+                .then(data => {
+                    testimonials = (Array.isArray(data) && data.length) ? data : fallback;
+                })
+                .catch(() => {
+                    testimonials = fallback;
+                })
+                .finally(() => {
+                    render();
+                    update();
+                    startAutoplay();
+                });
+        })();
+    </script>
+
+    <!-- Card scroll-reveal (testing landing page) -->
+    <script>
+        (function () {
+            const targets = document.querySelectorAll('.pain-card, .audience-card, .help-card');
+            if (!targets.length) return;
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+            targets.forEach(el => io.observe(el));
+        })();
+    </script>
+</body>
+</html>

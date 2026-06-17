@@ -173,8 +173,9 @@ server {
     # }
 
     # --- default: serve static files, then fall back to index ---
+    # $uri.html allows /testing-landing-page → testing-landing-page.html cleanly.
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri.html $uri/ /index.html;
     }
 
     # --- friendly 404 page ---

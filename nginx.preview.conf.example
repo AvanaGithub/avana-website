@@ -100,7 +100,7 @@ server {
     location ^~ /conditions/         { try_files $uri $uri/ /solution-template.html; }
 
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri.html $uri/ /index.html;
     }
     error_page 404 /index.html;
 }

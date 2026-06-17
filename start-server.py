@@ -37,6 +37,7 @@ PRETTY_PAGES = {
     '/careers':          '/careers.html',
     '/testimonials':     '/testimonials.html',
     '/privacy-policy':   '/privacy-policy.html',
+    '/testing-landing-page': '/testing-landing-page.html',
 }
 
 
