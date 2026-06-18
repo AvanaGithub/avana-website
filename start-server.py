@@ -38,6 +38,7 @@ PRETTY_PAGES = {
     '/testimonials':     '/testimonials.html',
     '/privacy-policy':   '/privacy-policy.html',
     '/testing-landing-page': '/testing-landing-page.html',
+    '/kodiak-landing':       '/kodiak-landing.html',
 }
 
 
