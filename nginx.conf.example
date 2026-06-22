@@ -107,6 +107,7 @@ server {
     # block and resolve to clean URLs without ever exposing /proposals/.
     location = /testing-landing-page { try_files /testing-landing-page.html =404; }
     location = /kodiak-landing       { try_files /kodiak-landing.html       =404; }
+    location = /recovery-blueprint   { try_files /recovery-blueprint.html   =404; }
     location = /robots.txt  { try_files $uri =404; }
 
     # =============================================================

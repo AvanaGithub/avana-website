@@ -39,6 +39,7 @@ PRETTY_PAGES = {
     '/privacy-policy':   '/privacy-policy.html',
     '/testing-landing-page': '/testing-landing-page.html',
     '/kodiak-landing':       '/kodiak-landing.html',
+    '/recovery-blueprint':   '/recovery-blueprint.html',
 }
 
 
