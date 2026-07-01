@@ -108,6 +108,7 @@ server {
     location = /testing-landing-page { try_files /testing-landing-page.html =404; }
     location = /kodiak-landing       { try_files /kodiak-landing.html       =404; }
     location = /recovery-blueprint   { try_files /recovery-blueprint.html   =404; }
+    location = /contact              { try_files /contact.html              =404; }
     location = /robots.txt  { try_files $uri =404; }
 
     # =============================================================
@@ -158,7 +159,8 @@ server {
     # inspects window.location.pathname to pick the right JSON.
     # =============================================================
     location = /for-surgeons {
-        try_files /solution-template.html =404;
+        # Try pre-rendered (from _imgtools/prerender.cjs) first, fall back to JS template.
+        try_files /for-surgeons/index.html /solution-template.html =404;
     }
 
     location ^~ /solutions/   { try_files $uri $uri/ /solution-template.html; }

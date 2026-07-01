@@ -59,6 +59,7 @@ server {
     location = /testing-landing-page { try_files /testing-landing-page.html =404; }
     location = /kodiak-landing       { try_files /kodiak-landing.html       =404; }
     location = /recovery-blueprint   { try_files /recovery-blueprint.html   =404; }
+    location = /contact              { try_files /contact.html              =404; }
 
     # --- block robots & sitemap on the preview host so Google can't
     #     even fetch them. Returns 404 to keep the URLs out of the index. ---
@@ -100,7 +101,8 @@ server {
         return 301 /solutions/knee-pain;
     }
     location = /solutions/spine-pain { return 301 /solutions/back-pain; }
-    location = /for-surgeons         { try_files /solution-template.html =404; }
+    # Try pre-rendered (from _imgtools/prerender.cjs) first, fall back to JS template.
+    location = /for-surgeons         { try_files /for-surgeons/index.html /solution-template.html =404; }
     location ^~ /solutions/          { try_files $uri $uri/ /solution-template.html; }
     location ^~ /audiences/          { try_files $uri $uri/ /solution-template.html; }
     location ^~ /conditions/         { try_files $uri $uri/ /solution-template.html; }

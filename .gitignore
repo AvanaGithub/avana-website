@@ -17,4 +17,11 @@ Thumbs.db
 .cache-wp.txt
 .cache-docs/
 .cache-training.xlsx
-_imgtools/
+
+# Image-tools + prerender: commit the source + manifests, ignore installed deps.
+# node_modules holds sharp + puppeteer's ~170 MB Chromium download.
+_imgtools/node_modules/
+_imgtools/.cache/
+
+# Puppeteer's global Chromium cache (paths vary by OS)
+.cache/puppeteer/
