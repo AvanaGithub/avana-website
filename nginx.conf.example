@@ -49,24 +49,48 @@ map "$arg_area" $painhtml_redirect {
 map $uri $legacy_path_redirect {
     default                                       "";
 
+    # === Core static pages ===
+    "/index.php"                                  "/";
     "/about.php"                                  "/about";
     "/career.php"                                 "/careers";
-    "/contact.php"                                "/#enquiry";        # Flip to "/contact" if/when that page is built
+    "/contact.php"                                "/contact";         # /contact page exists ✓ (was /#enquiry)
     "/privacy-policy.php"                         "/privacy-policy";
     "/life-at-avana.php"                          "/careers";
-    "/testimonials.php"                           "/testimonials";    # /testimonials page now exists ✓
+    "/testimonials.php"                           "/testimonials";
 
+    # === Surgeon-facing pages → /for-surgeons ===
+    # Every RIWO/Vertebris/endoscopy product + surgeon education page from the
+    # old site maps to /for-surgeons on the new site (which covers the same
+    # audience). Confirmed 2026-07-02 from Screaming Frog inventory of live
+    # avanasurgical.com (110 URLs, 24 static .php pages).
     "/training_education.php"                     "/for-surgeons";
+    "/training-register.php"                      "/for-surgeons";
     "/endospine-services.php"                     "/for-surgeons";
+    "/endoscopic-spine-surgery.php"               "/for-surgeons";
+    "/endoscopic-imaging.php"                     "/for-surgeons";
     "/full-endoscopy-system.php"                  "/for-surgeons";
     "/leading-the-future-of-spine-surgery.php"    "/for-surgeons";
+    "/burrs-and-shaver-system.php"                "/for-surgeons";
+    "/fluid-management.php"                       "/for-surgeons";
+    "/radiofrequency-surgical-system.php"         "/for-surgeons";
+    "/riwotrack.php"                              "/for-surgeons";
+    "/vertebris-cervical.php"                     "/for-surgeons";
+    "/vertebris-foraminotomy.php"                 "/for-surgeons";
+    "/vertebris-lumbar.php"                       "/for-surgeons";
+    "/vertebris-stenosis.php"                     "/for-surgeons";
 
-    "/kodiak/"                                    "/kodiak/";         # Preservation marker — see self-redirect guard below
+    # === Product/category pages → best-fit new destination ===
+    "/rental.php"                                 "/solutions/cold-therapy";  # was cold-therapy machine rental
+    "/orthotics-products.php"                     "/solutions/knee-pain";     # best-fit default; adjust if /orthotics category page ships
 
-    # Not redirected — review manually before final cutover:
-    #   "/orthotics-products.php"  — no /solutions parent page exists yet
-    #   "/rental.php"              — no rental page exists yet
-    # Blog URLs are intentionally out of scope this phase.
+    # === Preservation marker ===
+    "/kodiak/"                                    "/kodiak/";         # See self-redirect guard below — value equals key = no 301
+
+    # === Not handled here ===
+    # Blog URLs (/blog/*, 85 URLs) preserved 1:1 via Ghost + WordPress
+    # importer — see glimmering-zooming-lagoon.md for the install plan.
+    # No redirect map entries needed once Ghost serves the /blog subtree
+    # at matching slugs.
 }
 
 server {
