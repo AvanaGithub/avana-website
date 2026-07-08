@@ -129,7 +129,6 @@ server {
 
     # Public landing pages — exact-match rules so they survive the /proposals/
     # block and resolve to clean URLs without ever exposing /proposals/.
-    location = /testing-landing-page { try_files /testing-landing-page.html =404; }
     location = /kodiak-landing       { try_files /kodiak-landing.html       =404; }
     location = /recovery-blueprint   { try_files /recovery-blueprint.html   =404; }
     location = /contact              { try_files /contact.html              =404; }
@@ -205,7 +204,7 @@ server {
     # }
 
     # --- default: serve static files, then fall back to index ---
-    # $uri.html allows /testing-landing-page → testing-landing-page.html cleanly.
+    # $uri.html allows clean /page URLs → page.html to resolve automatically.
     location / {
         try_files $uri $uri.html $uri/ /index.html;
     }

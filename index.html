@@ -6,11 +6,11 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avana Surgical - Doctor-Recommended Pain Relief & Bracing Solutions</title>
+    <title>Avana Surgical - Doctor-Recommended Pain Relief &amp; Bracing Solutions</title>
     <meta name="description" content="Struggling with knee or back pain? Discover doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 1 lakh+ patients served across India.">
     <link rel="canonical" href="https://avanasurgical.com/">
     <meta property="og:url" content="https://avanasurgical.com/">
-    <meta property="og:title" content="Avana Surgical - Doctor-Recommended Pain Relief & Bracing Solutions">
+    <meta property="og:title" content="Avana Surgical - Doctor-Recommended Pain Relief &amp; Bracing Solutions">
     <meta property="og:description" content="Doctor-recommended support solutions for knee, foot, shoulder, elbow, spine, and hip pain. 1 lakh+ patients served across India.">
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="/images/avana-logo/favicon.png">
@@ -1660,8 +1660,321 @@
                 gap: 12px;
             }
         }
-    </style>
 
+        /* ===== TESTING LANDING PAGE — BACKGROUND-IMAGE HERO ===== */
+        .hero--bg {
+            position: relative;
+            min-height: 78vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 96px 0;
+            background: #1a2433;
+            isolation: isolate;
+        }
+        /* The .container is a flex item — without width:100% it shrinks to content
+           (collapsed to ~768px), making the hero text NOT align with the navbar.
+           This forces it to take the full available width so its 1200px max-width applies. */
+        .hero--bg > .container {
+            width: 100%;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        .hero--bg::before,
+        .hero--bg::after { display: none; }
+        .hero--bg .hero__bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .hero--bg .hero__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transform: translateZ(0) scale(1.04);
+            will-change: transform;
+            animation: heroBgDrift 24s ease-in-out infinite alternate;
+            backface-visibility: hidden;
+        }
+        @keyframes heroBgDrift {
+            from { transform: translateZ(0) scale(1.04); }
+            to   { transform: translateZ(0) scale(1.1) translateX(-1%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero--bg .hero__bg img { animation: none; }
+        }
+        .hero--bg .hero__overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(115deg, rgba(20,30,45,0.82) 0%, rgba(20,30,45,0.55) 55%, rgba(20,30,45,0.30) 100%),
+                linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.35) 100%);
+        }
+        .hero--bg .hero__inner {
+            position: relative;
+            z-index: 2;
+            display: block !important;
+            grid-template-columns: none !important;
+            max-width: none;
+            width: 100%;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+        .hero--bg .hero__badge,
+        .hero--bg .hero__title,
+        .hero--bg .hero__byline,
+        .hero--bg .hero__ctas,
+        .hero--bg .hero__trust {
+            text-align: left !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+        .hero--bg .hero__title  { max-width: 720px; }
+        .hero--bg .hero__byline { max-width: 620px; }
+        .hero--bg .hero__ctas {
+            display: flex;
+            justify-content: flex-start !important;
+        }
+        .hero--bg .hero__ctas .btn {
+            width: auto !important;
+            justify-content: center;
+        }
+        .hero--bg .hero__trust {
+            display: flex;
+            justify-content: flex-start !important;
+        }
+        .hero--bg .hero__badge {
+            background: rgba(255,255,255,0.14);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.22);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero--bg .hero__title { color: #fff; }
+        .hero--bg .hero__title span { color: #f4b740; }
+        .hero--bg .hero__byline { color: rgba(255,255,255,0.92); }
+        .hero--bg .hero__trust { color: rgba(255,255,255,0.85); }
+        .hero--bg .hero__trust-icon {
+            background: rgba(255,255,255,0.18);
+            color: #fff;
+        }
+        .hero--bg .btn--secondary {
+            background: rgba(255,255,255,0.08);
+            color: #fff;
+            border-color: rgba(255,255,255,0.45);
+            backdrop-filter: blur(4px);
+        }
+        .hero--bg .btn--secondary:hover {
+            background: rgba(255,255,255,0.18);
+            border-color: #fff;
+        }
+        @media (max-width: 768px) {
+            .hero--bg {
+                min-height: 70vh;
+                padding: 72px 0;
+            }
+        }
+
+        /* ===== HERO TEXT — staggered fade-up on load ===== */
+        .hero--bg .hero__badge,
+        .hero--bg .hero__title,
+        .hero--bg .hero__byline,
+        .hero--bg .hero__ctas,
+        .hero--bg .hero__trust {
+            opacity: 0;
+            transform: translateY(18px);
+            animation: heroFadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .hero--bg .hero__badge  { animation-delay: 0.10s; }
+        .hero--bg .hero__title  { animation-delay: 0.25s; }
+        .hero--bg .hero__byline { animation-delay: 0.45s; }
+        .hero--bg .hero__ctas   { animation-delay: 0.65s; }
+        .hero--bg .hero__trust  { animation-delay: 0.85s; }
+        @keyframes heroFadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .hero--bg .hero__badge,
+            .hero--bg .hero__title,
+            .hero--bg .hero__byline,
+            .hero--bg .hero__ctas,
+            .hero--bg .hero__trust {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* ===== PAIN CARDS — scroll reveal + animated hover glow ===== */
+        .pain-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(24px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .pain-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* staggered reveal */
+        .pain-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .pain-card:nth-child(2).is-visible { transition-delay: 0.08s; }
+        .pain-card:nth-child(3).is-visible { transition-delay: 0.16s; }
+        .pain-card:nth-child(4).is-visible { transition-delay: 0.24s; }
+        .pain-card:nth-child(5).is-visible { transition-delay: 0.32s; }
+        .pain-card:nth-child(6).is-visible { transition-delay: 0.40s; }
+        /* sweeping shine on hover */
+        .pain-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(244, 183, 64, 0.18) 50%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.7s ease;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .pain-card:hover::after { transform: translateX(100%); }
+        .pain-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .pain-card .pain-card__icon,
+        .pain-card .pain-card__name { position: relative; z-index: 2; }
+        .pain-card .pain-card__icon {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .pain-card:hover .pain-card__icon {
+            transform: scale(1.08) translateY(-4px);
+        }
+
+        /* ===== AUDIENCE CARDS — same effect as pain cards (scroll reveal + gold shine sweep) ===== */
+        .audience-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.35s ease,
+                background 0.35s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .audience-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .audience-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .audience-card:nth-child(2).is-visible { transition-delay: 0.10s; }
+        .audience-card:nth-child(3).is-visible { transition-delay: 0.20s; }
+        .audience-card:nth-child(4).is-visible { transition-delay: 0.30s; }
+        .audience-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.55) 45%,
+                rgba(220, 225, 232, 0.35) 55%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.85s ease;
+            pointer-events: none;
+            z-index: 1;
+            mix-blend-mode: overlay;
+        }
+        .audience-card:hover::after { transform: translateX(100%); }
+        .audience-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .audience-card > * { position: relative; z-index: 2; }
+        .audience-card .audience-card__icon {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .audience-card:hover .audience-card__icon {
+            transform: scale(1.08) translateY(-4px);
+        }
+        .audience-card .audience-card__arrow {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .audience-card:hover .audience-card__arrow {
+            transform: translateX(10px);
+        }
+
+        /* ===== HELP CARDS — same effect as pain cards (scroll reveal + gold shine sweep) ===== */
+        .help-card {
+            position: relative;
+            opacity: 0;
+            transform: translateY(28px);
+            transition:
+                opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.4s ease;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        .help-card.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .help-card:nth-child(1).is-visible { transition-delay: 0.00s; }
+        .help-card:nth-child(2).is-visible { transition-delay: 0.10s; }
+        .help-card:nth-child(3).is-visible { transition-delay: 0.20s; }
+        .help-card:nth-child(4).is-visible { transition-delay: 0.30s; }
+        .help-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.55) 45%,
+                rgba(220, 225, 232, 0.35) 55%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.85s ease;
+            pointer-events: none;
+            z-index: 2;
+            mix-blend-mode: overlay;
+        }
+        .help-card:hover::after { transform: translateX(100%); }
+        .help-card:hover {
+            box-shadow: 0 14px 40px rgba(20, 30, 45, 0.18);
+        }
+        .help-card > * { position: relative; z-index: 1; }
+        .help-card .help-card__image { overflow: hidden; }
+        .help-card .help-card__image img {
+            transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .help-card:hover .help-card__image img {
+            transform: scale(1.05);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pain-card,
+            .audience-card,
+            .help-card {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+            .pain-card::after,
+            .audience-card::after,
+            .help-card::after { display: none; }
+            .help-card .help-card__image img { transition: none; }
+        }
+    </style>
     <!-- ============================================================
          STRUCTURED DATA — Organization + LocalBusiness (Chennai HQ).
          Migration-critical: gives Google rich-result eligibility for
@@ -1731,25 +2044,28 @@
          is injected from /partials/header.html by include-partials.js -->
     <div data-include="/partials/header.html"></div>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- HERO SECTION (TESTING — background-image variant) -->
+    <section class="hero hero--bg">
+        <div class="hero__bg" aria-hidden="true">
+            <img src="/images/testing/homepage-image.jpg"
+                 alt=""
+                 width="1920" height="1080"
+                 loading="eager"
+                 fetchpriority="high"
+                 decoding="async">
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
         <div class="container">
             <div class="hero__inner">
-                <div class="hero__text">
-                    <span class="hero__badge">✨ Trusted by 1 Lakh+ Patients Across India</span>
-                    <h1 class="hero__title">Struggling with <span>Knee or Back Pain</span> Every Day?</h1>
-                    <p class="hero__byline">Simple activities like walking, sitting, or climbing stairs shouldn't be painful. Discover doctor-recommended support solutions that can help you move better and live comfortably.</p>
-                    <div class="hero__ctas">
-                        <a href="#browse-pain" class="btn btn--primary">Find My Solution →</a>
-                        <a href="#enquiry" class="btn btn--secondary">Talk to an Expert</a>
-                    </div>
-                    <div class="hero__trust">
-                        <span class="hero__trust-icon">✓</span>
-                        <span>Doctor-recommended • International brands • Pan-India delivery</span>
-                    </div>
+                <span class="hero__badge">✨ Trusted by 1 Lakh+ Patients Across India</span>
+                <h1 class="hero__title">India's Orthopaedic Recovery, Backed by the <span>World's Best.</span></h1>
+                <p class="hero__byline">Avana Surgical Systems brings Breg, Aspen, and RIWOspine — global leaders in bracing, cold therapy, and spine — to surgeons and patients across India. Since 2009, we've helped over 1 lakh patients recover with confidence, in partnership with 500+ orthopaedic specialists. Clinically proven. Doctor-recommended. Built for the way India heals.</p>
+                <div class="hero__ctas">
+                    <a href="#browse-pain" class="btn btn--primary">Find My Solution →</a>
+                    <a href="#enquiry" class="btn btn--secondary">Talk to an Expert</a>
                 </div>
-                <div class="hero__image">
-                    <img src="/images/hero/Hero-kneepain.jpg" alt="Person experiencing knee pain seeking doctor-recommended relief" loading="eager" width="600" height="480">
+                <div class="hero__trust">
+                    <span>Doctor-recommended • International brands • Pan-India delivery</span>
                 </div>
             </div>
         </div>
@@ -2231,6 +2547,27 @@
                     update();
                     startAutoplay();
                 });
+        })();
+    </script>
+
+    <!-- Card scroll-reveal (testing landing page) -->
+    <script>
+        (function () {
+            const targets = document.querySelectorAll('.pain-card, .audience-card, .help-card');
+            if (!targets.length) return;
+            if (!('IntersectionObserver' in window)) {
+                targets.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+            targets.forEach(el => io.observe(el));
         })();
     </script>
 </body>
