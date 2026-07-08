@@ -9,10 +9,10 @@
 
 :root {
     --color-navy:        #243447;
-    --color-gold:        #B18C57;
-    --color-gold-hover:  #9d7a47;
-    --color-gold-soft:   rgba(177, 140, 87, 0.10);
-    --color-cream:       #F4F4F2;
+    --color-gold:        #b27f0d;
+    --color-gold-hover:  #8a6300;
+    --color-gold-soft:   rgba(178, 127, 13, 0.10);
+    --color-cream:       #e0d8cd;
     --color-soft-cream:  #FAFAF8;
     --color-white:       #FFFFFF;
     --color-text:        #1F1F1F;
@@ -83,7 +83,7 @@ img { max-width: 100%; display: block; }
     background-color: var(--color-gold-hover);
     border-color: var(--color-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(177, 140, 87, 0.25);
+    box-shadow: 0 8px 20px rgba(178, 127, 13, 0.25);
 }
 .btn--outline {
     background-color: transparent;
@@ -272,7 +272,7 @@ img { max-width: 100%; display: block; }
     content: '';
     position: absolute; top: -100px; right: -100px;
     width: 360px; height: 360px;
-    background: radial-gradient(circle, rgba(177, 140, 87, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(178, 127, 13, 0.12) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }

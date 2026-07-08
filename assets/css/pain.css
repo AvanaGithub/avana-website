@@ -104,10 +104,10 @@
 
 :root {
     --color-primary: #243447;
-    --color-bg: #F4F4F2;
-    --color-accent: #B18C57;
-    --color-accent-hover: #9d7a47;
-    --color-accent-soft: rgba(177, 140, 87, 0.10);
+    --color-bg: #e0d8cd;
+    --color-accent: #b27f0d;
+    --color-accent-hover: #8a6300;
+    --color-accent-soft: rgba(178, 127, 13, 0.10);
     --color-text: #1F1F1F;
     --color-muted: #6C6C6C;
     --color-white: #ffffff;
@@ -179,7 +179,7 @@ a { color: inherit; }
     transition: all 0.3s; line-height: 1.4;
 }
 .btn--primary { background-color: var(--color-accent); color: var(--color-white); border-color: var(--color-accent); }
-.btn--primary:hover { background-color: var(--color-accent-hover); border-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(177, 140, 87, 0.25); }
+.btn--primary:hover { background-color: var(--color-accent-hover); border-color: var(--color-accent-hover); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(178, 127, 13, 0.25); }
 .btn--outline { background-color: transparent; color: var(--color-accent); border-color: var(--color-accent); }
 .btn--outline:hover { background-color: var(--color-accent); color: var(--color-white); transform: translateY(-2px); }
 .btn--secondary { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
@@ -188,7 +188,7 @@ a { color: inherit; }
 
 /* =================== HERO =================== */
 .pain-hero {
-    background: linear-gradient(135deg, #F4F4F2 0%, #EDEDED 100%);
+    background: linear-gradient(135deg, #e0d8cd 0%, #EDEDED 100%);
     padding: 80px 0 96px;
     position: relative;
     overflow: hidden;
@@ -196,7 +196,7 @@ a { color: inherit; }
 .pain-hero::before {
     content: ''; position: absolute; top: -120px; right: -120px;
     width: 420px; height: 420px;
-    background: radial-gradient(circle, rgba(177, 140, 87, 0.12) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(178, 127, 13, 0.12) 0%, transparent 70%);
     border-radius: 50%;
 }
 .pain-hero__inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; position: relative; z-index: 2; }
@@ -548,7 +548,7 @@ a { color: inherit; }
 .pain-cta::before {
     content: ''; position: absolute; top: -100px; right: -100px;
     width: 360px; height: 360px;
-    background: radial-gradient(circle, rgba(177, 140, 87, 0.18) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(178, 127, 13, 0.18) 0%, transparent 70%);
     border-radius: 50%;
 }
 .pain-cta__inner { max-width: 720px; margin: 0 auto; text-align: center; position: relative; z-index: 2; }
@@ -582,7 +582,7 @@ a { color: inherit; }
     background-color: var(--color-accent); color: var(--color-white);
     border: none; cursor: pointer;
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 6px 20px rgba(177, 140, 87, 0.35);
+    box-shadow: 0 6px 20px rgba(178, 127, 13, 0.35);
     opacity: 0; visibility: hidden; transform: translateY(12px);
     transition: opacity 0.3s, transform 0.3s, visibility 0.3s, background-color 0.2s;
     z-index: 90;
@@ -683,7 +683,7 @@ a { color: inherit; }
         height: 40px;
     }
     .pain-hero {
-        background: linear-gradient(135deg, #F4F4F2 0%, #EDEDED 100%);
+        background: linear-gradient(135deg, #e0d8cd 0%, #EDEDED 100%);
         padding: 36px 0 44px;
         position: relative;
     }
@@ -1130,9 +1130,9 @@ a { color: inherit; }
 
 /* "Register" — primary filled (upcoming only) */
 .training-card__cta--register {
-    background: var(--color-accent, #B18C57);
+    background: var(--color-accent, #b27f0d);
     color: var(--color-white);
-    border: 1.5px solid var(--color-accent, #B18C57);
+    border: 1.5px solid var(--color-accent, #b27f0d);
 }
 .training-card__cta--register:hover {
     background: var(--color-primary);
@@ -1160,7 +1160,7 @@ a { color: inherit; }
 
 .training-card__fee {
     display: inline-block;
-    background: var(--color-accent, #B18C57);
+    background: var(--color-accent, #b27f0d);
     color: var(--color-white);
     padding: 3px 10px;
     border-radius: 100px;

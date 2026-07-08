@@ -97,8 +97,8 @@
 .enquiry-modal__form input:focus,
 .enquiry-modal__form select:focus {
     outline: none;
-    border-color: var(--color-accent, #B18C57);
-    box-shadow: 0 0 0 3px rgba(177, 140, 87, 0.15);
+    border-color: var(--color-accent, #b27f0d);
+    box-shadow: 0 0 0 3px rgba(178, 127, 13, 0.15);
     background: #fff;
 }
 
