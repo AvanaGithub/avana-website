@@ -12,8 +12,8 @@
     --surface: #ffffff;
     --ink: #10303e;
     --ink-soft: #57707c;
-    --petrol: #a58a3a;
-    --petrol-dark: #7d6a25;
+    --petrol: #b27f0d;
+    --petrol-dark: #8a6300;
     --petrol-deep: #093749;
     --teal: #d4a54c;
     --sky: #f5eddb;
@@ -41,7 +41,7 @@
   }
   .btn { display:inline-flex; align-items:center; gap:9px; font-weight:700; font-size:16px;
     padding:15px 30px; border-radius:999px; cursor:pointer; border:none; transition:.2s; }
-  .btn-primary { background:var(--petrol); color:#fff; box-shadow:0 10px 26px rgba(165, 138, 58,.35); }
+  .btn-primary { background:var(--petrol); color:#fff; box-shadow:0 10px 26px rgba(178, 127, 13,.35); }
   .btn-primary:hover { background:var(--petrol-dark); transform:translateY(-2px); }
   .btn-ghost { background:transparent; color:#fff; border:1.6px solid rgba(255,255,255,.5); }
   .btn-ghost:hover { background:rgba(255,255,255,.15); }
@@ -61,7 +61,7 @@
   .vs-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px; }
   .vs-card { border-radius:18px; padding:30px; border:1.5px solid var(--line); background:var(--surface); box-shadow:var(--shadow); transition:.25s; }
   .vs-card.bad:hover { border-color:#d98576; transform:translateY(-4px); }
-  .vs-card.good { border-color:rgba(165, 138, 58,.4); background:linear-gradient(160deg,#ffffff,#faf3e4); }
+  .vs-card.good { border-color:rgba(178, 127, 13,.4); background:linear-gradient(160deg,#ffffff,#faf3e4); }
   .vs-card.good:hover { border-color:var(--petrol); transform:translateY(-4px); }
   .vs-card h3 { font-size:20px; margin-bottom:4px; }
   .vs-card .subt { font-size:13.5px; color:var(--ink-soft); margin-bottom:20px; }
@@ -99,7 +99,7 @@
   /* HERO */
   .hero { background:
       radial-gradient(900px 500px at 85% 0%, rgba(212,165,76,.28), transparent 60%),
-      linear-gradient(160deg, #7d6a25 0%, #093749 100%);
+      linear-gradient(160deg, #8a6300 0%, #093749 100%);
     color:#fff; padding:92px 0 100px; position:relative; overflow:hidden; }
   .hero-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:52px; align-items:center; }
   .hero h1 { font-size:clamp(36px,5.2vw,60px); font-weight:800; letter-spacing:-.02em; }
@@ -152,9 +152,9 @@
   .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   .grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
   .card { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; transition:.25s; box-shadow:0 6px 22px rgba(9,55,73,.05); }
-  .card:hover { transform:translateY(-5px); border-color:rgba(165, 138, 58,.35); box-shadow:var(--shadow); }
+  .card:hover { transform:translateY(-5px); border-color:rgba(178, 127, 13,.35); box-shadow:var(--shadow); }
   .card .ico { width:52px; height:52px; border-radius:13px; display:grid; place-items:center;
-    background:linear-gradient(135deg, rgba(165, 138, 58,.12), rgba(212,165,76,.16)); font-size:25px; margin-bottom:18px; }
+    background:linear-gradient(135deg, rgba(178, 127, 13,.12), rgba(212,165,76,.16)); font-size:25px; margin-bottom:18px; }
   .card h3 { font-size:19px; margin-bottom:9px; }
   .card p { color:var(--ink-soft); font-size:15px; }
 
@@ -168,9 +168,9 @@
   /* DISEASE PATTERNS */
   .dp-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   .dp { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px; box-shadow:0 6px 22px rgba(9,55,73,.05); transition:.25s; display:flex; flex-direction:column; }
-  .dp:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:rgba(165, 138, 58,.35); }
+  .dp:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:rgba(178, 127, 13,.35); }
   .dp .top { display:flex; align-items:center; gap:14px; margin-bottom:14px; }
-  .dp .dot { width:46px; height:46px; border-radius:12px; background:linear-gradient(135deg, rgba(165, 138, 58,.12), rgba(212,165,76,.18)); display:grid; place-items:center; font-size:23px; flex-shrink:0; }
+  .dp .dot { width:46px; height:46px; border-radius:12px; background:linear-gradient(135deg, rgba(178, 127, 13,.12), rgba(212,165,76,.18)); display:grid; place-items:center; font-size:23px; flex-shrink:0; }
   .dp h3 { font-size:18.5px; color:var(--petrol-dark); }
   .dp .what { color:var(--ink-soft); font-size:14.8px; margin-bottom:12px; flex-grow:1; }
   .dp .sym { background:var(--sky); border-radius:10px; padding:12px 14px; font-size:13.5px; color:var(--ink); }
@@ -203,7 +203,7 @@
   .cmp-table thead th.feat { background:var(--surface); }
   .cmp-table thead th.fess { background:var(--petrol); color:#fff; font-size:14px; }
   .cmp-table td.rowh { font-weight:700; color:var(--ink); }
-  .cmp-table td.fcol { background:rgba(165, 138, 58,.05); font-weight:600; color:var(--petrol-dark); }
+  .cmp-table td.fcol { background:rgba(178, 127, 13,.05); font-weight:600; color:var(--petrol-dark); }
   .cmp-table tr:last-child td { border-bottom:none; }
   .tag { display:inline-block; font-size:12.5px; font-weight:700; padding:3px 10px; border-radius:999px; }
   .t-bad { background:#fce4e0; color:#b53a2a; }
@@ -211,7 +211,7 @@
   .t-good { background:#e2f3dd; color:#3d8a38; }
 
   /* BENEFITS band */
-  .benefits { background:linear-gradient(160deg,#7d6a25,#093749); color:#fff; }
+  .benefits { background:linear-gradient(160deg,#8a6300,#093749); color:#fff; }
   .benefits .sec-head h2 { color:#fff; }
   .benefits .sec-head p { color:#e8dab6; }
   .ben-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
