@@ -209,22 +209,30 @@
   .t-good { background:#f5eddb; color:#8a6300; }
 
   /* BENEFITS band */
-  .benefits { background:linear-gradient(160deg,#8a6300,#243447); color:#fff; }
+  .benefits { background:linear-gradient(160deg,#8a6300,#243447); color:#fff; padding:96px 0; }
+  .benefits .sec-head { text-align:center; max-width:640px; margin:0 auto 48px; }
   .benefits .sec-head h2 { color:#fff; }
   .benefits .sec-head p { color:#e8dab6; }
-  .benefits-layout { display:grid; grid-template-columns:1.4fr 1fr; gap:44px; align-items:center; }
-  .benefits-figure { margin:0; }
-  .benefits-figure img { width:100%; height:auto; border-radius:16px; box-shadow:0 18px 46px rgba(0,0,0,.32); display:block; }
-  .benefits-figure figcaption { margin-top:12px; font-size:13px; color:#e8dab6; text-align:center; font-style:italic; }
-  @media (max-width:960px) {
-    .benefits-layout { grid-template-columns:1fr; gap:32px; }
-    .benefits-figure { max-width:520px; margin:0 auto; }
+  .ben-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .ben {
+    background:#ffffff; color:var(--ink);
+    border-radius:16px; padding:28px 22px 26px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.18);
+    transition:transform .28s cubic-bezier(.22,1,.36,1), box-shadow .28s ease;
   }
-  .ben-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
-  .ben { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:24px; }
-  .ben .ck { width:38px; height:38px; border-radius:10px; background:var(--green); color:#fff; display:grid; place-items:center; font-size:19px; margin-bottom:14px; }
-  .ben h3 { font-size:16.5px; margin-bottom:6px; }
-  .ben p { font-size:13.5px; color:#e8dab6; }
+  .ben:hover { transform:translateY(-6px); box-shadow:0 18px 44px rgba(0,0,0,.30); }
+  .ben .ck {
+    width:56px; height:56px;
+    margin:0 auto 18px;
+    border-radius:14px;
+    background:rgba(178,127,13,.12);
+    display:grid; place-items:center;
+    color:var(--petrol);
+  }
+  .ben .ck svg { width:28px; height:28px; stroke-width:2; }
+  .ben h3 { font-size:16.5px; margin-bottom:8px; color:var(--ink); font-weight:700; }
+  .ben p { font-size:13.5px; color:var(--ink-soft); line-height:1.5; }
 
   /* FEAR / reassurance */
   .fear-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
@@ -638,30 +646,70 @@
 
 <!-- BENEFITS -->
 <section id="benefits" class="benefits">
-  <div class="wrap benefits-layout">
-    <div class="benefits-content">
-      <div class="sec-head">
-        <span class="eyebrow" style="color:#e3b45c">Key Benefits</span>
-        <h2>Why Choose Endoscopic Surgery</h2>
-        <p>The advantages that make full endoscopic spine surgery a true day-care procedure for carefully selected patients.</p>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:#e3b45c">Key Benefits</span>
+      <h2>Why Choose Endoscopic Surgery</h2>
+      <p>The advantages that make full endoscopic spine surgery a true day-care procedure for carefully selected patients.</p>
+    </div>
+    <div class="ben-grid">
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+        </div>
+        <h3>Day-Care Procedure</h3>
+        <p>Walk the same day, discharged within 24 hours.</p>
       </div>
-      <div class="ben-grid">
-        <div class="ben"><div class="ck">✓</div><h3>Day-Care Procedure</h3><p>Walk the same day, discharged within 24 hours.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Least Invasive</h3><p>Keyhole access of less than 8&nbsp;mm.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Immediate Pain Relief</h3><p>Nerve pressure is relieved directly at the source.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>No Muscle Damage</h3><p>Muscles are kept open, not cut — less soft tissue damage.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Minimal / No Scar</h3><p>A tiny incision heals to a near-invisible mark.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Minimum Blood Loss</h3><p>Negligible bleeding during the procedure.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Preserves Stability</h3><p>Maximum preservation of ligaments, muscles &amp; bones.</p></div>
-        <div class="ben"><div class="ck">✓</div><h3>Faster Recovery</h3><p>Shorter hospital stay, quick return to active life.</p></div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Least Invasive</h3>
+        <p>Keyhole access of less than 8&nbsp;mm.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" stroke="none"/></svg>
+        </div>
+        <h3>Immediate Pain Relief</h3>
+        <p>Nerve pressure is relieved directly at the source.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>No Muscle Damage</h3>
+        <p>Muscles are kept open, not cut — less soft tissue damage.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 14 9 22 12 14 15 12 22 10 15 2 12 10 9 12 2"/></svg>
+        </div>
+        <h3>Minimal / No Scar</h3>
+        <p>A tiny incision heals to a near-invisible mark.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s7 6 7 12a7 7 0 11-14 0c0-6 7-12 7-12z"/><line x1="5" y1="19" x2="19" y2="5"/></svg>
+        </div>
+        <h3>Minimum Blood Loss</h3>
+        <p>Negligible bleeding during the procedure.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="5" width="3" height="14" rx="0.5"/><rect x="10.5" y="5" width="3" height="14" rx="0.5"/><rect x="15" y="5" width="3" height="14" rx="0.5"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
+        </div>
+        <h3>Preserves Stability</h3>
+        <p>Maximum preservation of ligaments, muscles &amp; bones.</p>
+      </div>
+      <div class="ben">
+        <div class="ck" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
+        </div>
+        <h3>Faster Recovery</h3>
+        <p>Shorter hospital stay, quick return to active life.</p>
       </div>
     </div>
-    <figure class="benefits-figure">
-      <img src="/images/endoscopy/Endoscopic-Anatomy.jpg"
-           alt="Full endoscopic spine surgery — anatomical view of the keyhole access approach"
-           loading="lazy" decoding="async" />
-      <figcaption>The endoscopic approach — anatomical view of the keyhole access path.</figcaption>
-    </figure>
   </div>
 </section>
 
