@@ -14,10 +14,10 @@
     --ink-soft: #57707c;
     --petrol: #b27f0d;
     --petrol-dark: #8a6300;
-    --petrol-deep: #093749;
+    --petrol-deep: #243447;
     --teal: #d4a54c;
     --sky: #f5eddb;
-    --green: #4da548;
+    --green: #b27f0d;
     --line: #d7ccbb;
     --shadow: 0 14px 44px rgba(9, 55, 73, 0.10);
     --radius: 16px;
@@ -60,7 +60,7 @@
   /* interactive open vs endoscopic comparison */
   .vs-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px; }
   .vs-card { border-radius:18px; padding:30px; border:1.5px solid var(--line); background:var(--surface); box-shadow:var(--shadow); transition:.25s; }
-  .vs-card.bad:hover { border-color:#d98576; transform:translateY(-4px); }
+  .vs-card.bad:hover { border-color:#b27f0d; transform:translateY(-4px); }
   .vs-card.good { border-color:rgba(178, 127, 13,.4); background:linear-gradient(160deg,#ffffff,#faf3e4); }
   .vs-card.good:hover { border-color:var(--petrol); transform:translateY(-4px); }
   .vs-card h3 { font-size:20px; margin-bottom:4px; }
@@ -71,11 +71,11 @@
   .bar-lbl .mm { font-size:16px; }
   .bar-track { height:16px; background:var(--sky); border-radius:999px; overflow:hidden; }
   .bar-fill { height:100%; border-radius:999px; width:0; transition:width 1.4s cubic-bezier(.2,.8,.2,1); }
-  .bar-fill.red { background:linear-gradient(90deg,#e0705c,#b53a2a); }
-  .bar-fill.green { background:linear-gradient(90deg,#6fbf68,#3d8a38); }
+  .bar-fill.red { background:linear-gradient(90deg,#b27f0d,#8a6300); }
+  .bar-fill.green { background:linear-gradient(90deg,#d4a54c,#8a6300); }
   .vs-li { display:flex; gap:10px; align-items:flex-start; padding:9px 0; font-size:14.5px; color:var(--ink-soft); border-bottom:1px dashed var(--line); }
   .vs-li:last-child { border:none; }
-  .vs-li .x { color:#b53a2a; font-weight:800; flex-shrink:0; }
+  .vs-li .x { color:#8a6300; font-weight:800; flex-shrink:0; }
   .vs-li .c { color:var(--green); font-weight:800; flex-shrink:0; }
   .vs-li b { color:var(--ink); }
 
@@ -86,11 +86,9 @@
   header { position:sticky; top:0; z-index:60; background:rgba(255,255,255,.92);
     backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
   .nav { display:flex; align-items:center; justify-content:space-between; height:74px; }
-  .logo { display:flex; align-items:center; gap:11px; font-weight:800; font-size:19px; color:var(--petrol-dark); letter-spacing:-.01em; }
-  .logo-mark { width:38px; height:38px; border-radius:10px; background:linear-gradient(135deg,var(--petrol),var(--teal));
-    display:grid; place-items:center; color:#fff; font-size:20px; }
-  .logo .avana { color:var(--petrol); }
-  .logo small { display:block; font-size:10.5px; font-weight:600; color:var(--ink-soft); letter-spacing:.1em; text-transform:uppercase; }
+  .logo { display:flex; align-items:center; gap:14px; text-decoration:none; }
+  .logo-mark { height:38px; width:auto; display:block; }
+  .logo small { display:block; font-size:10.5px; font-weight:600; color:var(--ink-soft); letter-spacing:.1em; text-transform:uppercase; padding-left:14px; border-left:1px solid var(--line); }
   .nav-links { display:flex; gap:22px; font-size:15px; font-weight:600; color:var(--ink-soft); }
   .nav-links a:hover { color:var(--petrol); }
   .nav .btn { padding:11px 22px; font-size:14.5px; }
@@ -99,7 +97,7 @@
   /* HERO */
   .hero { background:
       radial-gradient(900px 500px at 85% 0%, rgba(212,165,76,.28), transparent 60%),
-      linear-gradient(160deg, #8a6300 0%, #093749 100%);
+      linear-gradient(160deg, #8a6300 0%, #243447 100%);
     color:#fff; padding:92px 0 100px; position:relative; overflow:hidden; }
   .hero-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:52px; align-items:center; }
   .hero h1 { font-size:clamp(36px,5.2vw,60px); font-weight:800; letter-spacing:-.02em; }
@@ -117,7 +115,7 @@
   .hero-card h4 { font-size:14px; color:#e3b45c; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
   .brow { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.13); font-size:15px; color:#f5eddb; }
   .brow:last-child { border:none; }
-  .brow .ck { color:#8fe08a; font-weight:800; font-size:18px; }
+  .brow .ck { color:#d4a54c; font-weight:800; font-size:18px; }
   .incision-badge { margin-top:16px; background:rgba(212,165,76,.16); border:1px solid rgba(127,224,233,.5);
     border-radius:12px; padding:14px 16px; display:flex; align-items:center; gap:14px; }
   .incision-badge .big { font-size:30px; font-weight:800; color:#e3b45c; white-space:nowrap; }
@@ -206,19 +204,27 @@
   .cmp-table td.fcol { background:rgba(178, 127, 13,.05); font-weight:600; color:var(--petrol-dark); }
   .cmp-table tr:last-child td { border-bottom:none; }
   .tag { display:inline-block; font-size:12.5px; font-weight:700; padding:3px 10px; border-radius:999px; }
-  .t-bad { background:#fce4e0; color:#b53a2a; }
-  .t-mid { background:#fcf2dc; color:#a3771f; }
-  .t-good { background:#e2f3dd; color:#3d8a38; }
+  .t-bad { background:#e0d8cd; color:#8a6300; }
+  .t-mid { background:#fcf2dc; color:#b27f0d; }
+  .t-good { background:#f5eddb; color:#8a6300; }
 
   /* BENEFITS band */
-  .benefits { background:linear-gradient(160deg,#8a6300,#093749); color:#fff; }
+  .benefits { background:linear-gradient(160deg,#8a6300,#243447); color:#fff; }
   .benefits .sec-head h2 { color:#fff; }
   .benefits .sec-head p { color:#e8dab6; }
-  .ben-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+  .benefits-layout { display:grid; grid-template-columns:1.4fr 1fr; gap:44px; align-items:center; }
+  .benefits-figure { margin:0; }
+  .benefits-figure img { width:100%; height:auto; border-radius:16px; box-shadow:0 18px 46px rgba(0,0,0,.32); display:block; }
+  .benefits-figure figcaption { margin-top:12px; font-size:13px; color:#e8dab6; text-align:center; font-style:italic; }
+  @media (max-width:960px) {
+    .benefits-layout { grid-template-columns:1fr; gap:32px; }
+    .benefits-figure { max-width:520px; margin:0 auto; }
+  }
+  .ben-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
   .ben { background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.16); border-radius:14px; padding:24px; }
   .ben .ck { width:38px; height:38px; border-radius:10px; background:var(--green); color:#fff; display:grid; place-items:center; font-size:19px; margin-bottom:14px; }
   .ben h3 { font-size:16.5px; margin-bottom:6px; }
-  .ben p { font-size:13.5px; color:#b7d8e2; }
+  .ben p { font-size:13.5px; color:#e8dab6; }
 
   /* FEAR / reassurance */
   .fear-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; }
@@ -248,7 +254,7 @@
   .cta-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
 
   /* FOOTER */
-  footer { background:#082b39; color:#9fc2d0; padding:56px 0 28px; }
+  footer { background:#243447; color:#c4b394; padding:56px 0 28px; }
   .foot-grid { display:grid; grid-template-columns:1.7fr 1fr 1fr 1.1fr; gap:38px; margin-bottom:40px; }
   footer .logo { color:#fff; margin-bottom:14px; }
   footer .logo small { color:#a89a82; }
@@ -258,7 +264,7 @@
   footer li { margin-bottom:9px; font-size:14.5px; }
   footer a:hover { color:#e3b45c; }
   .foot-bottom { border-top:1px solid rgba(255,255,255,.12); padding-top:22px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:13.5px; }
-  .disclaimer p { font-size:12.5px; color:#6c93a5; margin-top:16px; line-height:1.55; }
+  .disclaimer p { font-size:12.5px; color:#a89a82; margin-top:16px; line-height:1.55; }
 
   @media (max-width:920px) {
     .hero-grid, .bp-grid, .fess-grid, .fear-grid, .gallery-2, .vs-grid { grid-template-columns:1fr; }
@@ -278,7 +284,10 @@
 <!-- NAV -->
 <header>
   <div class="wrap nav">
-    <a href="#" class="logo"><span class="logo-mark">✚</span><span><span class="avana">AVANA</span> Surgical<small>Spine Health · Patient Guide</small></span></a>
+    <a href="https://avanasurgical.com/" class="logo" aria-label="Avana Surgical — home">
+      <img src="/images/avana-logo/Avana-header-logo.svg" alt="Avana Surgical" class="logo-mark" />
+      <small>Spine Health · Patient Guide</small>
+    </a>
     <nav class="nav-links">
       <a href="#backpain">Back Pain</a>
       <a href="#prevent">Prevention</a>
@@ -526,7 +535,7 @@
         <h3>Open / Microscopic Surgery</h3>
         <div class="subt">The traditional way</div>
         <div class="bar-wrap">
-          <div class="bar-lbl"><span>Skin incision</span><span class="mm" style="color:#b53a2a;">~70 mm</span></div>
+          <div class="bar-lbl"><span>Skin incision</span><span class="mm" style="color:#8a6300;">~70 mm</span></div>
           <div class="bar-track"><div class="bar-fill red" data-w="100%"></div></div>
         </div>
         <div class="vs-li"><span class="x">✕</span><span>Muscles are <b>cut and stripped</b> from the bone</span></div>
@@ -538,7 +547,7 @@
         <h3>Full Endoscopic Spine Surgery</h3>
         <div class="subt">The keyhole way</div>
         <div class="bar-wrap">
-          <div class="bar-lbl"><span>Skin incision</span><span class="mm" style="color:#3d8a38;">~8 mm</span></div>
+          <div class="bar-lbl"><span>Skin incision</span><span class="mm" style="color:#8a6300;">~8 mm</span></div>
           <div class="bar-track"><div class="bar-fill green" data-w="11.4%"></div></div>
         </div>
         <div class="vs-li"><span class="c">✓</span><span><b>Muscle preservation</b> — fibres are spread, not cut</span></div>
@@ -626,22 +635,30 @@
 
 <!-- BENEFITS -->
 <section id="benefits" class="benefits">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow" style="color:#e3b45c">Key Benefits</span>
-      <h2>Why Choose Endoscopic Surgery</h2>
-      <p>The advantages that make full endoscopic spine surgery a true day-care procedure for carefully selected patients.</p>
+  <div class="wrap benefits-layout">
+    <div class="benefits-content">
+      <div class="sec-head">
+        <span class="eyebrow" style="color:#e3b45c">Key Benefits</span>
+        <h2>Why Choose Endoscopic Surgery</h2>
+        <p>The advantages that make full endoscopic spine surgery a true day-care procedure for carefully selected patients.</p>
+      </div>
+      <div class="ben-grid">
+        <div class="ben"><div class="ck">✓</div><h3>Day-Care Procedure</h3><p>Walk the same day, discharged within 24 hours.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Least Invasive</h3><p>Keyhole access of less than 8&nbsp;mm.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Immediate Pain Relief</h3><p>Nerve pressure is relieved directly at the source.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>No Muscle Damage</h3><p>Muscles are kept open, not cut — less soft tissue damage.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Minimal / No Scar</h3><p>A tiny incision heals to a near-invisible mark.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Minimum Blood Loss</h3><p>Negligible bleeding during the procedure.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Preserves Stability</h3><p>Maximum preservation of ligaments, muscles &amp; bones.</p></div>
+        <div class="ben"><div class="ck">✓</div><h3>Faster Recovery</h3><p>Shorter hospital stay, quick return to active life.</p></div>
+      </div>
     </div>
-    <div class="ben-grid">
-      <div class="ben"><div class="ck">✓</div><h3>Day-Care Procedure</h3><p>Walk the same day, discharged within 24 hours.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Least Invasive</h3><p>Keyhole access of less than 8&nbsp;mm.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Immediate Pain Relief</h3><p>Nerve pressure is relieved directly at the source.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>No Muscle Damage</h3><p>Muscles are kept open, not cut — less soft tissue damage.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Minimal / No Scar</h3><p>A tiny incision heals to a near-invisible mark.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Minimum Blood Loss</h3><p>Negligible bleeding during the procedure.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Preserves Stability</h3><p>Maximum preservation of ligaments, muscles &amp; bones.</p></div>
-      <div class="ben"><div class="ck">✓</div><h3>Faster Recovery</h3><p>Shorter hospital stay, quick return to active life.</p></div>
-    </div>
+    <figure class="benefits-figure">
+      <img src="/images/endoscopy/Endoscopic-Anatomy.jpg"
+           alt="Full endoscopic spine surgery — anatomical view of the keyhole access approach"
+           loading="lazy" decoding="async" />
+      <figcaption>The endoscopic approach — anatomical view of the keyhole access path.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -737,7 +754,10 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="logo"><span class="logo-mark">✚</span><span>AVANA Surgical<small>Spine Health · Patient Guide</small></span></div>
+        <div class="logo">
+          <img src="/images/avana-logo/Avana-header-logo.svg" alt="Avana Surgical" class="logo-mark" />
+          <small>Spine Health · Patient Guide</small>
+        </div>
         <p>Avana Surgical is dedicated to patient education on back pain, spine health, and modern minimally invasive treatment — helping people make informed, fear-free decisions about their spine care. The patient is always in focus.</p>
       </div>
       <div><h4>Learn</h4><ul>
