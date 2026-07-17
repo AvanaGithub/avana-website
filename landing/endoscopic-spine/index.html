@@ -117,32 +117,45 @@
   .nav .btn { padding:12px 22px; font-size:14.5px; }
   .menu-toggle { display:none; background:none; border:none; font-size:27px; cursor:pointer; color:var(--petrol); }
 
-  /* HERO */
-  .hero { background:
-      radial-gradient(900px 500px at 85% 0%, rgba(212,165,76,.28), transparent 60%),
-      linear-gradient(160deg, #8a6300 0%, #1f1712 100%);
-    color:#fff; padding:92px 0 100px; position:relative; overflow:hidden; }
+  /* HERO — white background, dark text (per brand — no more dark gradient) */
+  .hero {
+    background:#ffffff;
+    color:var(--ink);
+    padding:92px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
   .hero-grid { display:grid; grid-template-columns:1.08fr .92fr; gap:52px; align-items:center; }
-  .hero h1 { font-size:clamp(36px,5.2vw,60px); font-weight:800; letter-spacing:-.02em; }
-  .hero h1 .say { display:block; font-weight:600; font-size:.55em; opacity:.9; letter-spacing:.02em; }
-  .hero h1 .hl { color:#e3b45c; }
-  .hero .sub { font-size:19px; color:#e8dab6; margin:20px 0 30px; max-width:540px; }
+  .hero h1 { font-size:clamp(36px,5.2vw,60px); font-weight:800; letter-spacing:-.02em; color:var(--ink); }
+  .hero h1 .say { display:block; font-weight:600; font-size:.55em; opacity:.85; letter-spacing:.02em; color:var(--ink-soft); }
+  .hero h1 .hl { color:var(--petrol); }
+  .hero .sub { font-size:19px; color:var(--ink-soft); margin:20px 0 30px; max-width:540px; }
   .hero-cta { display:flex; gap:14px; flex-wrap:wrap; }
-  .hero-note { margin-top:26px; font-size:14.5px; color:#c4b394; display:flex; align-items:center; gap:10px; }
+  .hero-note { margin-top:26px; font-size:14.5px; color:var(--ink-soft); display:flex; align-items:center; gap:10px; }
   .hero-stats { display:flex; gap:30px; margin-top:40px; flex-wrap:wrap; }
-  .hero-stats .num { font-size:30px; font-weight:800; color:#e3b45c; }
-  .hero-stats .lbl { font-size:13px; color:#c4b394; }
-  .hero-card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.2);
-    border-radius:22px; padding:22px; backdrop-filter:blur(6px); }
+  .hero-stats .num { font-size:30px; font-weight:800; color:var(--petrol); }
+  .hero-stats .lbl { font-size:13px; color:var(--ink-soft); }
+  .hero-card {
+    background:#f5eddb;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:22px;
+    box-shadow:0 12px 40px rgba(0,0,0,.06);
+  }
   .hero-card > img { border-radius:14px; margin-bottom:18px; width:100%; }
-  .hero-card h4 { font-size:14px; color:#e3b45c; letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
-  .brow { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.13); font-size:15px; color:#f5eddb; }
+  .hero-card h4 { font-size:14px; color:var(--petrol); letter-spacing:.08em; text-transform:uppercase; margin-bottom:12px; }
+  .brow { display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--line); font-size:15px; color:var(--ink); }
   .brow:last-child { border:none; }
-  .brow .ck { color:#d4a54c; font-weight:800; font-size:18px; }
-  .incision-badge { margin-top:16px; background:rgba(212,165,76,.16); border:1px solid rgba(212,165,76,.5);
-    border-radius:12px; padding:14px 16px; display:flex; align-items:center; gap:14px; }
-  .incision-badge .big { font-size:30px; font-weight:800; color:#e3b45c; white-space:nowrap; }
-  .incision-badge .txt { font-size:13.5px; color:#e8dab6; }
+  .brow .ck { color:var(--petrol); font-weight:800; font-size:18px; }
+  .incision-badge {
+    margin-top:16px;
+    background:rgba(178,127,13,.10);
+    border:1px solid rgba(178,127,13,.30);
+    border-radius:12px; padding:14px 16px;
+    display:flex; align-items:center; gap:14px;
+  }
+  .incision-badge .big { font-size:30px; font-weight:800; color:var(--petrol); white-space:nowrap; }
+  .incision-badge .txt { font-size:13.5px; color:var(--ink-soft); }
 
   /* TRUST BAR — light cream background so it breaks up the dark hero above/below */
   .trust {
@@ -348,7 +361,6 @@
   <div class="wrap nav">
     <a href="https://avanasurgical.com/" class="logo" aria-label="Avana Surgical — home">
       <img src="/images/avana-logo/Avana-header-logo.svg" alt="Avana Surgical" class="logo-mark" />
-      <small>Spine Health · Patient Guide</small>
     </a>
     <nav class="nav-links">
       <a href="#backpain">Back Pain</a>
@@ -858,7 +870,6 @@
       <div>
         <div class="logo">
           <img src="/images/avana-logo/Avana-header-logo.svg" alt="Avana Surgical" class="logo-mark" />
-          <small>Spine Health · Patient Guide</small>
         </div>
         <p>Avana Surgical is dedicated to patient education on back pain, spine health, and modern minimally invasive treatment — helping people make informed, fear-free decisions about their spine care. The patient is always in focus.</p>
       </div>
