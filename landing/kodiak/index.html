@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polar Care® Kodiak® — Advanced Cold Therapy System</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky: #7DD3FC;
+    --sky-light: #BAE6FD;
+    --sky-pale: #E0F2FE;
+    --sky-mid: #38BDF8;
+    --navy: #0C1B33;
+    --navy-mid: #1E3A5F;
+    --navy-soft: #2563A8;
+    --ice: #F0F9FF;
+    --white: #FFFFFF;
+    --text-body: #1E2A3A;
+    --accent: #0EA5E9;
+    --accent-glow: rgba(14, 165, 233, 0.3);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── TYPOGRAPHY ── */
+  .display {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    line-height: 1.0;
+  }
+  .heading {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .subheading {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+  }
+  .label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 24px 60px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(12, 27, 51, 0.92);
+    backdrop-filter: blur(16px);
+    padding: 16px 60px;
+    border-bottom: 1px solid rgba(125, 211, 252, 0.15);
+  }
+  .nav-logo {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: var(--white);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span { color: var(--sky-mid); }
+  .nav-links { display: flex; gap: 36px; list-style: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--sky); }
+  .nav-cta {
+    background: var(--accent);
+    color: white;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .nav-cta:hover { background: var(--sky-mid); transform: translateY(-1px); }
+
+  /* ── HERO ── */
+  #hero {
+    position: relative;
+    height: 100vh; min-height: 700px;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    /* ─────────────────────────────────────────────────────────────
+       BANNER IMAGE — swap the URL below with your own image.
+       Recommended: 1920×1080px, cold therapy / clinical lifestyle.
+       Free options: unsplash.com · pexels.com
+       Search terms: "cold therapy recovery" / "sports medicine"
+    ───────────────────────────────────────────────────────────── */
+    background-image:
+      url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&q=80&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+  }
+  /* Dark gradient overlay so text stays perfectly readable */
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      105deg,
+      rgba(7, 18, 36, 0.92) 0%,
+      rgba(10, 30, 60, 0.80) 45%,
+      rgba(10, 50, 100, 0.55) 75%,
+      rgba(10, 60, 120, 0.35) 100%
+    );
+  }
+  /* Animated ice crystal SVG background */
+  .hero-crystals {
+    position: absolute; inset: 0;
+    opacity: 0.07;
+    background-image:
+      radial-gradient(circle at 20% 50%, var(--sky) 1px, transparent 1px),
+      radial-gradient(circle at 80% 20%, var(--sky-light) 1px, transparent 1px),
+      radial-gradient(circle at 60% 80%, var(--sky) 1px, transparent 1px);
+    background-size: 80px 80px, 120px 120px, 60px 60px;
+  }
+  .hero-glow {
+    position: absolute;
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(56,189,248,0.18) 0%, transparent 70%);
+    right: -100px; top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  .hero-glow-2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+    left: 10%; top: 20%;
+    border-radius: 50%;
+  }
+  /* Parallax layers */
+  .parallax-layer {
+    will-change: transform;
+  }
+  .hero-rings {
+    position: absolute;
+    right: 8%; top: 50%;
+    transform: translateY(-50%);
+    width: 520px; height: 520px;
+  }
+  .ring {
+    position: absolute; border-radius: 50%;
+    border: 1px solid rgba(125,211,252,0.15);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ringPulse 4s ease-in-out infinite;
+  }
+  .ring:nth-child(1) { width: 180px; height: 180px; border-color: rgba(125,211,252,0.35); animation-delay: 0s; }
+  .ring:nth-child(2) { width: 280px; height: 280px; animation-delay: 0.5s; }
+  .ring:nth-child(3) { width: 380px; height: 380px; animation-delay: 1s; }
+  .ring:nth-child(4) { width: 490px; height: 490px; animation-delay: 1.5s; }
+  @keyframes ringPulse {
+    0%, 100% { opacity: 0.15; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.35; transform: translate(-50%, -50%) scale(1.02); }
+  }
+
+
+
+  .hero-content {
+    position: relative; z-index: 2;
+    max-width: 580px;
+    padding: 0 60px;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(125,211,252,0.12);
+    border: 1px solid rgba(125,211,252,0.3);
+    border-radius: 50px;
+    padding: 6px 16px;
+    margin-bottom: 28px;
+  }
+  .hero-badge .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--sky-mid);
+    animation: dotPulse 2s ease-in-out infinite;
+  }
+  @keyframes dotPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+  .hero-badge span { color: var(--sky); font-size: 0.78rem; letter-spacing: 0.08em; font-weight: 600; font-family: 'Nunito Sans', sans-serif; }
+  .hero-title {
+    font-size: clamp(3rem, 5.5vw, 5.2rem);
+    line-height: 1.0;
+    margin-bottom: 10px;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-title .ice-word { color: var(--sky-mid); }
+  .hero-subtitle-line {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: var(--sky-light);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 44px;
+    font-weight: 300;
+    animation: fadeUp 0.8s 0.2s ease both;
+    max-width: 440px;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; align-items: center;
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--accent), #0284C7);
+    color: white;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    box-shadow: 0 8px 32px rgba(14,165,233,0.4);
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(14,165,233,0.55);
+  }
+  .btn-ghost {
+    color: var(--sky);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 6px;
+    border-bottom: 1px solid rgba(125,211,252,0.4);
+    padding-bottom: 2px;
+    transition: all 0.2s;
+  }
+  .btn-ghost:hover { color: var(--white); border-color: white; }
+
+  /* scroll indicator */
+  .scroll-hint {
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0.4;
+  }
+  .scroll-hint span { font-size: 0.7rem; letter-spacing: 0.15em; color: var(--sky-light); font-family: 'Nunito Sans', sans-serif; font-weight: 600; }
+  .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--sky-light), transparent); animation: scrollDrop 1.8s ease-in-out infinite; }
+  @keyframes scrollDrop { 0%, 100% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── STATS STRIP ── */
+  .stats-strip {
+    background: rgba(56,189,248,0.07);
+    border-top: 1px solid rgba(125,211,252,0.1);
+    border-bottom: 1px solid rgba(125,211,252,0.1);
+    padding: 48px 60px;
+    display: flex; justify-content: space-around; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .stats-strip::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,0.04), transparent);
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    color: var(--sky-mid);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .stat-sup { font-size: 1.5rem; vertical-align: super; }
+  .stat-label { color: rgba(255,255,255,0.5); font-size: 0.8rem; letter-spacing: 0.1em; margin-top: 6px; font-family: 'Nunito Sans', sans-serif; font-weight: 600; text-transform: uppercase; }
+  .stat-div { width: 1px; height: 60px; background: rgba(125,211,252,0.2); }
+
+  /* ── SECTIONS ── */
+  section { padding: 120px 60px; }
+
+  .section-label {
+    color: var(--sky-mid);
+    display: block;
+    margin-bottom: 16px;
+  }
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .section-desc {
+    color: rgba(255,255,255,0.55);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    max-width: 520px;
+    font-weight: 300;
+  }
+
+  /* ── FEATURES SECTION ── */
+  #features {
+    background: linear-gradient(180deg, var(--navy) 0%, #0A2240 100%);
+    position: relative; overflow: hidden;
+  }
+  #features::before {
+    content: '';
+    position: absolute;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 70%);
+    right: -200px; top: 0;
+    border-radius: 50%;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .features-list { display: flex; flex-direction: column; gap: 32px; }
+  .feature-card {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 28px 28px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(125,211,252,0.1);
+    border-radius: 16px;
+    transition: all 0.3s;
+    cursor: default;
+  }
+  .feature-card:hover {
+    background: rgba(56,189,248,0.07);
+    border-color: rgba(125,211,252,0.25);
+    transform: translateX(6px);
+  }
+  .feature-icon {
+    width: 48px; height: 48px; min-width: 48px;
+    background: linear-gradient(135deg, rgba(14,165,233,0.2), rgba(56,189,248,0.1));
+    border: 1px solid rgba(125,211,252,0.2);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+  }
+  .feature-text h3 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: var(--sky-light);
+  }
+  .feature-text p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  .features-visual {
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 500px;
+  }
+  .product-showcase {
+    width: 340px; height: 340px;
+    background: radial-gradient(150deg at 30% 25%,
+      rgba(186,230,253,0.95) 0%,
+      rgba(56,189,248,0.7) 35%,
+      rgba(14,100,200,0.5) 65%,
+      rgba(12,27,51,0.3) 100%);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow:
+      0 0 80px rgba(56,189,248,0.25),
+      0 0 160px rgba(14,165,233,0.1),
+      inset 0 0 60px rgba(186,230,253,0.15);
+    animation: orbFloat 7s ease-in-out infinite;
+  }
+  .showcase-icon { font-size: 7rem; filter: drop-shadow(0 0 25px rgba(186,230,253,0.8)); }
+  .floating-tag {
+    position: absolute;
+    background: rgba(12,27,51,0.85);
+    border: 1px solid rgba(125,211,252,0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 12px 18px;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .tag-1 { top: 30px; left: -10px; }
+  .tag-2 { bottom: 60px; right: -20px; }
+  .tag-3 { top: 50%; left: -40px; transform: translateY(-50%); }
+  .floating-tag .tag-val { font-size: 1.2rem; font-weight: 800; color: var(--sky-mid); }
+  .floating-tag .tag-lab { font-size: 0.7rem; color: rgba(255,255,255,0.5); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── DUAL AUDIENCE ── */
+  #audience {
+    background: #071422;
+    padding-top: 0;
+    position: relative;
+  }
+  .audience-split {
+    display: grid; grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+  .audience-pane {
+    padding: 80px 60px;
+    position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .pane-doctors {
+    background: linear-gradient(135deg, #071a30 0%, #0b2a4d 100%);
+    border-right: 1px solid rgba(125,211,252,0.1);
+  }
+  .pane-patients {
+    background: linear-gradient(135deg, #0a2040 0%, #0f3560 100%);
+  }
+  .pane-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-bottom: 28px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .badge-doc { background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.3); color: var(--sky-mid); }
+  .badge-pat { background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); color: var(--sky-light); }
+  .pane-icon { font-size: 3rem; margin-bottom: 20px; }
+  .pane-title { font-size: 1.8rem; margin-bottom: 16px; color: var(--white); }
+  .pane-desc { color: rgba(255,255,255,0.55); line-height: 1.75; font-weight: 300; font-size: 0.95rem; margin-bottom: 32px; }
+  .pane-points { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+  .pane-points li {
+    display: flex; gap: 12px; align-items: flex-start;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem; line-height: 1.5;
+  }
+  .point-bullet {
+    width: 20px; height: 20px; min-width: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--sky));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.6rem;
+    color: white;
+    font-weight: 900;
+    margin-top: 1px;
+  }
+
+  /* ── CLINICAL QUOTE ── */
+  #clinical {
+    background: linear-gradient(135deg, #071422, #0A2240);
+    text-align: center;
+    padding: 100px 60px;
+    position: relative; overflow: hidden;
+  }
+  #clinical::before {
+    content: '"';
+    position: absolute;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 30rem;
+    font-weight: 900;
+    color: rgba(125,211,252,0.04);
+    top: -60px; left: 50%;
+    transform: translateX(-50%);
+    line-height: 1;
+    user-select: none;
+  }
+  .quote-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    max-width: 820px;
+    margin: 0 auto 36px;
+    font-style: italic;
+    position: relative; z-index: 1;
+  }
+  .quote-text em { color: var(--sky-mid); font-style: normal; font-weight: 600; }
+  .quote-attr {
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+  }
+  .attr-name { font-family: 'Nunito Sans', sans-serif; font-weight: 700; color: var(--sky-light); font-size: 0.95rem; }
+  .attr-title { color: rgba(255,255,255,0.4); font-size: 0.8rem; letter-spacing: 0.06em; }
+  .attr-line { width: 40px; height: 2px; background: var(--accent); margin: 12px auto; border-radius: 2px; }
+
+  /* ── APPLICATIONS ── */
+  #applications {
+    background: var(--navy);
+    padding: 100px 60px;
+  }
+  .applications-header { text-align: center; margin-bottom: 64px; }
+  .applications-header .section-desc { margin: 0 auto; text-align: center; }
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .app-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(125,211,252,0.1);
+    border-radius: 20px;
+    padding: 36px 28px;
+    transition: all 0.35s;
+    position: relative; overflow: hidden;
+  }
+  .app-card::before {
+    content: '';
+    position: absolute;
+    width: 120px; height: 120px;
+    background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%);
+    top: -40px; right: -40px;
+    border-radius: 50%;
+    transition: all 0.35s;
+  }
+  .app-card:hover {
+    background: rgba(56,189,248,0.06);
+    border-color: rgba(125,211,252,0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 60px rgba(14,165,233,0.12);
+  }
+  .app-card:hover::before {
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, transparent 70%);
+  }
+  .app-emoji { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+  .app-name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--sky-light);
+    margin-bottom: 8px;
+  }
+  .app-desc {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ── CLINICAL EVIDENCE ── */
+  #evidence {
+    background: linear-gradient(180deg, #071422 0%, var(--navy) 100%);
+    padding: 100px 60px;
+  }
+  .evidence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin-top: 60px;
+  }
+  .evidence-card {
+    background: rgba(14,165,233,0.06);
+    border: 1px solid rgba(125,211,252,0.15);
+    border-radius: 20px;
+    padding: 40px 32px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  .evidence-card:hover {
+    background: rgba(14,165,233,0.1);
+    border-color: rgba(125,211,252,0.35);
+    transform: translateY(-4px);
+  }
+  .ev-num {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: var(--sky-mid);
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .ev-label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--sky-light);
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .ev-desc { color: rgba(255,255,255,0.45); font-size: 0.85rem; line-height: 1.65; font-weight: 300; }
+
+  /* ── HOW IT WORKS ── */
+  #howitworks {
+    background: #050f1f;
+    padding: 100px 60px;
+    position: relative; overflow: hidden;
+  }
+  .hw-bg-glow {
+    position: absolute;
+    width: 800px; height: 800px;
+    background: radial-gradient(circle, rgba(14,165,233,0.05) 0%, transparent 70%);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  .hw-header { text-align: center; margin-bottom: 80px; position: relative; z-index: 1; }
+  .steps-row {
+    display: flex; gap: 0;
+    align-items: flex-start;
+    position: relative; z-index: 1;
+    max-width: 1000px; margin: 0 auto;
+  }
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+  }
+  .step::after {
+    content: '→';
+    position: absolute;
+    right: -10px; top: 36px;
+    font-size: 1.2rem;
+    color: rgba(125,211,252,0.3);
+  }
+  .step:last-child::after { display: none; }
+  .step-num {
+    width: 72px; height: 72px;
+    border: 2px solid rgba(125,211,252,0.3);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--sky-mid);
+    background: rgba(14,165,233,0.08);
+    position: relative;
+  }
+  .step-num::before {
+    content: '';
+    position: absolute; inset: -6px;
+    border-radius: 50%;
+    border: 1px solid rgba(125,211,252,0.1);
+  }
+  .step-title { font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--sky-light); margin-bottom: 10px; }
+  .step-desc { font-size: 0.83rem; color: rgba(255,255,255,0.42); line-height: 1.65; font-weight: 300; }
+
+  /* ── CTA SECTION ── */
+  #cta {
+    background: linear-gradient(135deg, #062240 0%, #0a3560 50%, #083050 100%);
+    padding: 120px 60px;
+    text-align: center;
+    position: relative; overflow: hidden;
+  }
+  #cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(56,189,248,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(14,165,233,0.08) 0%, transparent 50%);
+  }
+  .cta-inner { position: relative; z-index: 1; }
+  .cta-title { font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 20px; }
+  .cta-desc { color: rgba(255,255,255,0.55); font-size: 1.05rem; line-height: 1.7; max-width: 560px; margin: 0 auto 48px; font-weight: 300; }
+  .cta-actions { display: flex; gap: 20px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .btn-secondary {
+    background: rgba(125,211,252,0.1);
+    border: 1.5px solid rgba(125,211,252,0.35);
+    color: var(--sky-light);
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover { background: rgba(125,211,252,0.18); transform: translateY(-2px); }
+  .cta-trust {
+    margin-top: 48px;
+    display: flex; gap: 40px; justify-content: center; align-items: center;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 10px;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.82rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .trust-icon { font-size: 1.1rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #030b16;
+    padding: 60px;
+    border-top: 1px solid rgba(125,211,252,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .footer-brand .brand-name {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .footer-brand .brand-name span { color: var(--sky-mid); }
+  .footer-brand p { color: rgba(255,255,255,0.35); font-size: 0.85rem; line-height: 1.65; max-width: 300px; font-weight: 300; }
+  .footer-col h4 { font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col a { color: rgba(255,255,255,0.5); font-size: 0.88rem; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--sky); }
+  .footer-bottom {
+    background: #030b16;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 24px 60px;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom p { color: rgba(255,255,255,0.25); font-size: 0.78rem; }
+
+  /* ── PARALLAX ENGINE ── */
+  [data-parallax] { will-change: transform; }
+
+  /* ── INTERSECTION OBSERVER ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-left {
+    opacity: 0; transform: translateX(-40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-left.visible { opacity: 1; transform: none; }
+  .reveal-right {
+    opacity: 0; transform: translateX(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-right.visible { opacity: 1; transform: none; }
+  .reveal-scale {
+    opacity: 0; transform: scale(0.9);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+  /* stagger delays */
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
+  .delay-5 { transition-delay: 0.5s; }
+  .delay-6 { transition-delay: 0.6s; }
+
+  /* ice particle canvas */
+  #particles { position: absolute; inset: 0; pointer-events: none; }
+
+  /* ── VIDEO SECTION ── */
+  #video-section {
+    background: linear-gradient(180deg, #050f1f 0%, #071a30 60%, #050f1f 100%);
+    padding: 120px 60px;
+    position: relative; overflow: hidden;
+  }
+  #video-section::before {
+    content: '';
+    position: absolute;
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(14,165,233,0.06) 0%, transparent 65%);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .video-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative; z-index: 1;
+  }
+  .video-header .section-desc { margin: 0 auto; text-align: center; }
+  .video-frame-wrap {
+    position: relative; z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(125,211,252,0.15),
+      0 40px 100px rgba(0,0,0,0.6),
+      0 0 80px rgba(14,165,233,0.12);
+  }
+  .video-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background:
+      linear-gradient(135deg, rgba(7,18,36,0.7) 0%, rgba(10,50,100,0.5) 100%),
+      url('https://images.unsplash.com/photo-1559757175-5700dde675bc?w=1200&q=80&auto=format&fit=crop')
+      center/cover no-repeat;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+  }
+  .video-thumbnail:hover { filter: brightness(1.08); }
+  .play-btn {
+    width: 88px; height: 88px;
+    background: rgba(14,165,233,0.18);
+    border: 2px solid rgba(125,211,252,0.5);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s ease;
+    position: relative; z-index: 2;
+    backdrop-filter: blur(8px);
+  }
+  .play-btn::before {
+    content: '';
+    position: absolute; inset: -14px;
+    border-radius: 50%;
+    border: 1px solid rgba(125,211,252,0.18);
+    animation: playRing 2.5s ease-in-out infinite;
+  }
+  .play-btn::after {
+    content: '';
+    position: absolute; inset: -28px;
+    border-radius: 50%;
+    border: 1px solid rgba(125,211,252,0.08);
+    animation: playRing 2.5s ease-in-out infinite 0.4s;
+  }
+  @keyframes playRing {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 0.2; }
+  }
+  .play-btn svg { margin-left: 5px; }
+  .video-thumbnail:hover .play-btn {
+    background: rgba(14,165,233,0.55);
+    border-color: rgba(125,211,252,0.9);
+    transform: scale(1.1);
+    box-shadow: 0 0 40px rgba(14,165,233,0.5);
+  }
+  .video-caption {
+    background: rgba(7,18,36,0.95);
+    border-top: 1px solid rgba(125,211,252,0.12);
+    padding: 20px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .video-caption-text { font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+  .video-caption-sub { font-size: 0.78rem; color: rgba(255,255,255,0.35); margin-top: 2px; font-weight: 300; }
+  .video-tag {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(14,165,233,0.1);
+    border: 1px solid rgba(125,211,252,0.2);
+    border-radius: 50px;
+    padding: 6px 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.72rem;
+    color: var(--sky);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .video-tag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--sky-mid); }
+  /* ── LIGHTBOX MODAL ── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(5, 12, 25, 0.95);
+    backdrop-filter: blur(12px);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal-inner {
+    width: 90vw; max-width: 1100px;
+    position: relative;
+    transform: scale(0.92);
+    transition: transform 0.35s ease;
+  }
+  .modal-overlay.open .modal-inner { transform: scale(1); }
+  .modal-iframe-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(125,211,252,0.2), 0 40px 100px rgba(0,0,0,0.8);
+  }
+  .modal-iframe-wrap iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .modal-close {
+    position: absolute;
+    top: -48px; right: 0;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    font-family: sans-serif;
+  }
+  .modal-close:hover { background: rgba(14,165,233,0.3); border-color: var(--sky); }
+  @media (max-width: 900px) {
+    #video-section { padding: 80px 24px; }
+    .video-caption { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* responsive basics */
+  @media (max-width: 900px) {
+    nav { padding: 20px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links { display: none; }
+    section { padding: 80px 24px; }
+    .stats-strip { padding: 40px 24px; flex-wrap: wrap; gap: 32px; }
+    .stat-div { display: none; }
+    .features-grid, .audience-split, .apps-grid { grid-template-columns: 1fr; }
+    .evidence-grid { grid-template-columns: 1fr 1fr; }
+    .steps-row { flex-direction: column; gap: 40px; }
+    .step::after { display: none; }
+    footer { grid-template-columns: 1fr; padding: 40px 24px; }
+    .footer-bottom { padding: 20px 24px; }
+    .hero-product { display: none; }
+    .hero-rings { display: none; }
+    .hero-content { padding: 0 24px; }
+    .pane-doctors, .pane-patients { padding: 60px 24px; }
+    #applications { padding: 80px 24px; }
+    #evidence { padding: 80px 24px; }
+    #howitworks { padding: 80px 24px; }
+    #cta { padding: 80px 24px; }
+    #clinical { padding: 80px 24px; }
+  }
+  /* ── PREMIUM VIDEO SECTION ── */
+.video-frame-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0a1f33, #0f2e4d);
+  border: 1px solid rgba(125, 211, 252, 0.15);
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    inset 0 0 40px rgba(56, 189, 248, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle glow behind video */
+.video-frame-wrap::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  border-radius: 50%;
+}
+
+/* VIDEO */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.video-embed iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* CAPTION */
+.video-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* TEXT */
+.video-caption-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sky-light);
+  margin-bottom: 6px;
+}
+
+.video-caption-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
+/* TAG */
+.video-tag {
+  padding: 10px 18px;
+  border-radius: 40px;
+  background: rgba(14,165,233,0.12);
+  border: 1px solid rgba(14,165,233,0.4);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.video-tag .dot {
+  width: 8px;
+  height: 8px;
+  background: #38BDF8;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #38BDF8;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Polar Care <span>Kodiak®</span></a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#audience">For You</a></li>
+    <li><a href="#applications">Applications</a></li>
+    <li><a href="#evidence">Clinical Evidence</a></li>
+    <li><a href="#video-section">Watch</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Request Info</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-crystals" data-parallax="0.3"></div>
+  <div class="hero-glow" data-parallax="0.2"></div>
+  <div class="hero-glow-2" data-parallax="0.15"></div>
+  <canvas id="particles"></canvas>
+
+  <div class="hero-rings parallax-layer" data-parallax="0.1">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+
+  <div class="hero-product parallax-layer" data-parallax="0.05">
+    <div class="product-orb">
+      <div class="product-icon">🧊</div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="dot"></div>
+      <span class="label">Advanced Cold Therapy System</span>
+    </div>
+    <h1 class="display hero-title">
+      Polar Care<br><span class="ice-word">Kodiak®</span>
+    </h1>
+    <div class="hero-subtitle-line subheading">Precision. Comfort. Recovery.</div>
+    <p class="hero-desc">
+      The most versatile motorized cold therapy system in its class. Clinically proven to reduce post-operative pain, swelling, and opioid dependency — delivering up to 6–8 hours of continuous therapeutic cold.
+    </p>
+    <div class="hero-actions">
+      <a href="#features" class="btn-primary">Explore the System</a>
+      <a href="#evidence" class="btn-ghost">Clinical Evidence →</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span class="label">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip reveal">
+  <div class="stat-item">
+    <div class="stat-num">6–8<span class="stat-sup">hr</span></div>
+    <div class="stat-label">Continuous Cold Therapy</div>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <div class="stat-num">10–14<span class="stat-sup">hr</span></div>
+    <div class="stat-label">Battery Pack Runtime</div>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <div class="stat-num">25+</div>
+    <div class="stat-label">Years Clinical Experience</div>
+  </div>
+  <div class="stat-div"></div>
+  <div class="stat-item">
+    <div class="stat-num">1<span class="stat-sup">st</span></div>
+    <div class="stat-label">Battery-Powered Option on Market</div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="features-grid">
+    <div class="reveal-left">
+      <span class="label section-label">Product Features</span>
+      <h2 class="heading section-title">Engineered for<br>Excellence in Recovery</h2>
+      <p class="section-desc" style="margin-bottom: 48px;">Every component of the Polar Care Kodiak is purpose-built for superior therapeutic outcomes across clinic, hospital, and home environments.</p>
+
+      <div class="features-list">
+        <div class="feature-card reveal delay-1">
+          <div class="feature-icon">🔇</div>
+          <div class="feature-text">
+            <h3>Whisper-Quiet Pump Technology</h3>
+            <p>Ultra-silent motorized delivery allows patients to rest and recover in undisturbed comfort — day or night.</p>
+          </div>
+        </div>
+        <div class="feature-card reveal delay-2">
+          <div class="feature-icon">❄️</div>
+           <div class="feature-text">
+         <h3>Controlled Cold Therapy Delivery</h3>
+        <p>Engineered for stable and consistent cold application — supporting effective recovery across post-operative and rehabilitation settings.</p>
+</div>
+        </div>
+        <div class="feature-card reveal delay-3">
+          <div class="feature-icon">🧬</div>
+          <div class="feature-text">
+            <h3>Intelli-Flo® Pad Technology</h3>
+            <p>Anatomically shaped pads designed for knee, shoulder, ankle, hip, back, and more — delivering precise, uniform cold to every treatment area.</p>
+          </div>
+        </div>
+        <div class="feature-card reveal delay-4">
+          <div class="feature-icon">🏗️</div>
+          <div class="feature-text">
+            <h3>Durable, Compact Construction</h3>
+            <p>Robust design engineered for repeated use across clinic and home environments, providing lasting peace of mind for providers and patients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-visual reveal-right">
+      <div class="product-showcase">
+<img src="kodiak.png" style="width:300px">
+</div>
+      <div class="floating-tag tag-1 reveal delay-2">
+        <div class="tag-val">Silent</div>
+        <div class="tag-lab">Whisper-Quiet Pump</div>
+      </div>
+      <div class="floating-tag tag-2 reveal delay-3">
+        <div class="tag-val">−40%</div>
+        <div class="tag-lab">Opioid Use Reduction</div>
+      </div>
+      <div class="floating-tag tag-3 reveal delay-4">
+        <div class="tag-val">IP Rated</div>
+        <div class="tag-lab">Portable & Sealed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL AUDIENCE -->
+<section id="audience" style="padding: 0;">
+  <div class="audience-split">
+    <div class="audience-pane pane-doctors reveal-left">
+      <div class="pane-badge badge-doc">For Healthcare Providers</div>
+      <div class="pane-icon">🏥</div>
+      <h2 class="heading pane-title">Elevate Clinical Outcomes</h2>
+      <p class="pane-desc">Integrate the Polar Care Kodiak into your post-operative protocols and witness measurably lower pain scores, reduced opioid prescriptions, and higher patient satisfaction ratings — with direct impact on reimbursement performance.</p>
+      <ul class="pane-points">
+        <li><div class="point-bullet">✓</div>Significantly lower patient pain scale scores vs. non-cold therapy users</li>
+        <li><div class="point-bullet">✓</div>Supports CMS value-based care and opioid reduction compliance</li>
+        <li><div class="point-bullet">✓</div>Standardizable across ACL, arthroscopic, shoulder, and general surgeries</li>
+        <li><div class="point-bullet">✓</div>Sterile, anatomically matched pads for each treatment area</li>
+        <li><div class="point-bullet">✓</div>Proven across thousands of procedures by leading sports medicine specialists</li>
+      </ul>
+    </div>
+    <div class="audience-pane pane-patients reveal-right">
+      <div class="pane-badge badge-pat">For Patients</div>
+      <div class="pane-icon">🌿</div>
+      <h2 class="heading pane-title">Take Control of Your Recovery</h2>
+      <p class="pane-desc">Recovery after surgery doesn't have to mean relying on painkillers alone. The Polar Care Kodiak puts the power of professional-grade cold therapy in your hands — quietly, conveniently, and continuously for up to 8 hours.</p>
+      <ul class="pane-points">
+        <li><div class="point-bullet">✓</div>Dramatically reduces swelling and post-op discomfort</li>
+        <li><div class="point-bullet">✓</div>Silent enough to use while resting or sleeping</li>
+        <li><div class="point-bullet">✓</div>Battery pack option for use anywhere — no power outlet needed</li>
+        <li><div class="point-bullet">✓</div>Simple to fill and operate from day one</li>
+        <li><div class="point-bullet">✓</div>Gives you an active role in your own healing journey</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CLINICAL QUOTE -->
+<section id="clinical">
+  <blockquote class="quote-text reveal">
+    "In my experience over 25 years performing thousands of ACL surgeries — <em>people who have cold therapy just do better</em>, and they take less opioids. Every one of my patients gets Polar Care cold therapy."
+  </blockquote>
+  <div class="quote-attr reveal delay-2">
+    <div class="attr-line"></div>
+    <div class="attr-name">Dr. Bradley Reeves</div>
+    <div class="attr-title">Director of Sports Medicine · Sanford Health Systems</div>
+  </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section id="video-section">
+  <div class="video-header">
+    <span class="label section-label reveal">See It In Action</span>
+    <h2 class="heading section-title reveal delay-1">Watch How Kodiak<br>Transforms Recovery</h2>
+    <p class="section-desc reveal delay-2">
+      From surgical suite to home couch — see how the Polar Care Kodiak delivers effortless, continuous cold therapy that patients and providers trust.
+    </p>
+  </div>
+
+  <div class="video-frame-wrap reveal delay-2">
+  <div class="video-embed">
+    <iframe 
+      src="https://www.youtube.com/embed/9fJUknMmDIs?autoplay=1&mute=1&loop=1&playlist=9fJUknMmDIs"
+      title="Polar Care Kodiak Product Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="video-caption">
+    <div>
+      <div class="video-caption-text">Polar Care® Kodiak® — Product Overview</div>
+      <div class="video-caption-sub">Motorized Cold Therapy System · Breg, Inc.</div>
+    </div>
+    <div class="video-tag">
+      <div class="dot"></div>
+      Official Product Video
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- APPLICATIONS -->
+<section id="applications">
+  <div class="applications-header">
+    <span class="label section-label">Common Applications</span>
+    <h2 class="heading section-title reveal">Versatile Across Every Procedure</h2>
+    <p class="section-desc reveal delay-1">From the operating room to home recovery, the Polar Care Kodiak supports a broad spectrum of orthopedic and surgical applications.</p>
+  </div>
+  <div class="apps-grid">
+    <div class="app-card reveal delay-1">
+      <span class="app-emoji">🦵</span>
+      <div class="app-name">Post-Operative Recovery</div>
+      <div class="app-desc">Immediate post-surgical cold therapy to reduce swelling and manage perioperative pain effectively.</div>
+    </div>
+    <div class="app-card reveal delay-2">
+      <span class="app-emoji">🔬</span>
+      <div class="app-name">Arthroscopic Procedures</div>
+      <div class="app-desc">Targeted cold delivery following minimally invasive joint procedures with anatomic pad fitting.</div>
+    </div>
+    <div class="app-card reveal delay-3">
+      <span class="app-emoji">🏗️</span>
+      <div class="app-name">Reconstructive Surgery</div>
+      <div class="app-desc">Essential cold therapy support for ligament repair, ACL, rotator cuff, and other reconstructive procedures.</div>
+    </div>
+    <div class="app-card reveal delay-4">
+      <span class="app-emoji">⚡</span>
+      <div class="app-name">Post-Trauma</div>
+      <div class="app-desc">Rapid cooling for acute injuries and trauma sites to minimize swelling from the earliest stage.</div>
+    </div>
+    <div class="app-card reveal delay-2">
+      <span class="app-emoji">🔄</span>
+      <div class="app-name">Chronic Pain Management</div>
+      <div class="app-desc">Ongoing cold therapy support for chronic joint pain conditions as part of a comprehensive pain plan.</div>
+    </div>
+    <div class="app-card reveal delay-3">
+      <span class="app-emoji">🏃</span>
+      <div class="app-name">Physical Therapy</div>
+      <div class="app-desc">Pre and post-session cold application for enhanced therapy outcomes and accelerated recovery timelines.</div>
+    </div>
+    <div class="app-card reveal delay-4">
+      <span class="app-emoji">🫀</span>
+      <div class="app-name">General Surgery</div>
+      <div class="app-desc">Versatile application across general surgical procedures requiring post-operative inflammation control.</div>
+    </div>
+    <div class="app-card reveal delay-5">
+      <span class="app-emoji">🏠</span>
+      <div class="app-name">Home Recovery</div>
+      <div class="app-desc">Designed for easy self-administration at home — bridging the gap between hospital care and full recovery.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINICAL EVIDENCE -->
+<section id="evidence">
+  <span class="label section-label reveal">Backed by Evidence</span>
+  <h2 class="heading section-title reveal delay-1">Clinical Outcomes That Speak</h2>
+  <p class="section-desc reveal delay-2">Supported by decades of clinical data and the expertise of orthopedic specialists. Cold therapy is not optional — it's the standard of care.</p>
+  <div class="evidence-grid">
+    <div class="evidence-card reveal delay-1">
+      <div class="ev-num">↓42%</div>
+      <div class="ev-label">Opioid Prescriptions</div>
+      <div class="ev-desc">Patients receiving continuous cold therapy show significantly reduced reliance on narcotic pain medications post-surgery.</div>
+    </div>
+    <div class="evidence-card reveal delay-2">
+      <div class="ev-num">1 SD</div>
+      <div class="ev-label">Below Global Pain Scale</div>
+      <div class="ev-desc">Polar Care cold therapy patients consistently score more than one standard deviation lower on standardized pain assessments.</div>
+    </div>
+    <div class="evidence-card reveal delay-3">
+      <div class="ev-num">↑ CMS</div>
+      <div class="ev-label">Reimbursement Alignment</div>
+      <div class="ev-desc">Integrating cold therapy into your post-op protocol supports opioid reduction mandates — directly impacting reimbursement performance.</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="howitworks">
+  <div class="hw-bg-glow"></div>
+  <div class="hw-header">
+    <span class="label section-label reveal">Simple by Design</span>
+    <h2 class="heading section-title reveal delay-1">How the Kodiak Works</h2>
+    <p class="section-desc reveal delay-2" style="margin: 0 auto;">Set up in minutes. Operate with confidence. Recover with purpose.</p>
+  </div>
+  <div class="steps-row">
+    <div class="step reveal delay-1">
+      <div class="step-num">01</div>
+      <div class="step-title">Fill with Ice & Water</div>
+      <div class="step-desc">Add ice and water to the reservoir. A small amount provides hours of consistent cold therapy delivery.</div>
+    </div>
+    <div class="step reveal delay-2">
+      <div class="step-num">02</div>
+      <div class="step-title">Attach Intelli-Flo® Pad</div>
+      <div class="step-desc">Connect the anatomically designed pad for your specific treatment area — knee, shoulder, ankle, hip, or back.</div>
+    </div>
+    <div class="step reveal delay-3">
+      <div class="step-num">03</div>
+      <div class="step-title">Apply with Barrier</div>
+      <div class="step-desc">Place an insulation barrier between the pad and skin per instructions. Sterile dressings are available for each pad type.</div>
+    </div>
+    <div class="step reveal delay-4">
+      <div class="step-num">04</div>
+      <div class="step-title">Power On & Recover</div>
+      <div class="step-desc">Simply plug in and begin therapy. Whisper-quiet motorized cold therapy runs continuously for 6–8 hours per fill.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-inner">
+    <span class="label section-label reveal" style="display: block; margin-bottom: 16px;">Order Online Today</span>
+    
+    <h2 class="display cta-title reveal delay-1">
+      Recover Faster.<br>Get Back to Life Sooner.
+    </h2>
+    
+    <p class="cta-desc reveal delay-2">
+      Struggling with pain, swelling, or post-surgery recovery? The Polar Care Kodiak delivers consistent cold therapy at home — helping you recover more comfortably and confidently.
+    </p>
+    
+    <div class="cta-actions reveal delay-3">
+      <a href="https://www.osteokart.com/products/breg-polar-care-kodiak-cold-therapy-system-for-pain-relief-swelling" class="btn-primary" target="_blank">
+        Buy Now
+      </a>
+      <a href="https://wa.me/919150064620" class="btn-secondary" target="_blank">
+        Enquire on WhatsApp
+      </a>
+    </div>
+    
+    <div class="cta-trust reveal delay-4">
+      <div class="trust-item"><span class="trust-icon">❄️</span> Consistent Cold Therapy</div>
+      <div class="trust-item"><span class="trust-icon">🏠</span> Convenient Home Use</div>
+      <div class="trust-item"><span class="trust-icon">👨‍⚕️</span> Trusted Recovery Support</div>
+      <div class="trust-item"><span class="trust-icon">🚚</span> Direct Online Ordering</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="brand-name">Polar Care <span>Kodiak®</span></div>
+    <p>The most convenient and versatile motorized cold therapy system — engineered for clinical excellence and patient empowerment.</p>
+    <br>
+    <p style="color: rgba(255,255,255,0.2); font-size: 0.75rem;">A product of Breg, Inc. · 2382 Faraday Avenue, Ste 300 · Carlsbad, CA</p>
+  </div>
+  <div class="footer-col">
+    <h4>Product</h4>
+    <ul>
+      <li><a href="#features">Features & Technology</a></li>
+      <li><a href="#applications">Clinical Applications</a></li>
+      <li><a href="#howitworks">How It Works</a></li>
+      <li><a href="#evidence">Clinical Evidence</a></li>
+    <li><a href="#video-section">Watch</a></li>
+      <li><a href="#">Part Numbers & Pads</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Resources</h4>
+    <ul>
+      <li><a href="#">Instructions for Use (IFU)</a></li>
+      <li><a href="#">Clinical Article — Dr. Reeves</a></li>
+      <li><a href="#">Become a Provider</a></li>
+      <li><a href="#">Patient Support</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>© 2025 Breg, Inc. All rights reserved. Polar Care® and Kodiak® are registered trademarks of Breg, Inc.</p>
+  <p style="color: rgba(255,255,255,0.18); font-size: 0.72rem;">For professional use. Federal law restricts this device to sale by or on the order of a licensed health care practitioner.</p>
+</div>
+
+<script>
+// ── NAV SCROLL ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// ── PARALLAX ──
+const parallaxEls = document.querySelectorAll('[data-parallax]');
+window.addEventListener('scroll', () => {
+  const sy = window.scrollY;
+  parallaxEls.forEach(el => {
+    const speed = parseFloat(el.dataset.parallax);
+    el.style.transform = `translateY(${sy * speed}px)`;
+  });
+});
+
+// ── INTERSECTION OBSERVER ──
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+  observer.observe(el);
+});
+
+// ── ICE PARTICLE CANVAS ──
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let particles = [];
+let W, H;
+
+function resize() {
+  W = canvas.width = canvas.offsetWidth;
+  H = canvas.height = canvas.offsetHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+
+class Particle {
+  constructor() { this.reset(); }
+  reset() {
+    this.x = Math.random() * W;
+    this.y = Math.random() * H;
+    this.size = Math.random() * 2.5 + 0.5;
+    this.speed = Math.random() * 0.4 + 0.1;
+    this.opacity = Math.random() * 0.4 + 0.05;
+    this.drift = (Math.random() - 0.5) * 0.3;
+  }
+  update() {
+    this.y -= this.speed;
+    this.x += this.drift;
+    if (this.y < -10 || this.x < -10 || this.x > W + 10) this.reset(), this.y = H + 10;
+  }
+  draw() {
+    ctx.save();
+    ctx.globalAlpha = this.opacity;
+    ctx.fillStyle = '#BAE6FD';
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+  }
+}
+
+for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+function animate() {
+  ctx.clearRect(0, 0, W, H);
+  particles.forEach(p => { p.update(); p.draw(); });
+  requestAnimationFrame(animate);
+}
+animate();
+
+// ── COUNTER ANIMATION ──
+function animateCounters() {
+  document.querySelectorAll('.stat-num, .ev-num').forEach(el => {
+    // already animated
+  });
+}
+
+// ── YOUTUBE LIGHTBOX ──
+const videoThumb = document.getElementById('videoThumb');
+const videoModal = document.getElementById('videoModal');
+const modalClose = document.getElementById('modalClose');
+const ytFrame    = document.getElementById('ytFrame');
+
+function openModal() {
+  // Only load iframe src when user clicks (lazy load)
+  if (!ytFrame.src || ytFrame.src === window.location.href) {
+    ytFrame.src = ytFrame.dataset.src;
+  }
+  videoModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  videoModal.classList.remove('open');
+  document.body.style.overflow = '';
+  // Stop the video by clearing src, restore data-src
+  ytFrame.src = '';
+}
+
+videoThumb.addEventListener('click', openModal);
+modalClose.addEventListener('click', closeModal);
+
+// Close on backdrop click
+videoModal.addEventListener('click', (e) => {
+  if (e.target === videoModal) closeModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && videoModal.classList.contains('open')) closeModal();
+});
+</script>
+</body>
+</html>
