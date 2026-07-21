@@ -436,6 +436,25 @@
     font-weight: 600;
     font-size: 0.95rem;
     color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.about-testimonial-card__linkedin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 4px;
+    color: #0A66C2;
+    background: rgba(10, 102, 194, 0.08);
+    transition: background 0.15s ease, color 0.15s ease;
+    text-decoration: none;
+}
+.about-testimonial-card__linkedin:hover {
+    background: #0A66C2;
+    color: #fff;
 }
 .about-testimonial-card__role {
     font-size: 0.82rem;
