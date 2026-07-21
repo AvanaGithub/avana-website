@@ -66,7 +66,7 @@
 .enquiry-modal__close:hover { background: #e2ddd6; }
 
 .enquiry-modal__title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Fira Sans', serif;
     font-size: 1.45rem;
     color: var(--color-primary, #243447);
     margin: 0 0 6px;

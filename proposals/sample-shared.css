@@ -154,7 +154,7 @@
     padding: 0 24px;
 }
 .review-comparison__heading {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     color: var(--color-primary);
     font-size: 1.8rem;
     margin: 0 0 8px;
@@ -195,7 +195,7 @@
 .review-comparison .new strong { color: var(--color-accent); }
 .review-comparison .chars { font-family: 'SF Mono', Consolas, monospace; font-size: 0.8em; color: var(--color-muted); margin-left: 6px; }
 .review-comparison h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     color: var(--color-primary);
     margin: 32px 0 12px;
     font-size: 1.25rem;
@@ -232,7 +232,7 @@
 .proposals-index { padding: 80px 0 100px; min-height: 70vh; background: var(--color-bg); }
 .proposals-index__inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 .proposals-index h1 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     color: var(--color-primary);
     font-size: 2.4rem;
     margin: 0 0 12px;
@@ -269,7 +269,7 @@
     color: var(--color-accent);
 }
 .proposal-card__title {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     color: var(--color-primary);
     font-size: 1.15rem;
     line-height: 1.35;

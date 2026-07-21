@@ -1,7 +1,7 @@
 /* ============================================================
    AVANA SURGICAL — GHOST BLOG THEME
    screen.css — all brand styles for the Ghost blog
-   Matches avanasurgical.com brand: navy + gold + cream + DM Sans
+   Matches avanasurgical.com brand: navy + gold + cream + Arimo
    ============================================================ */
 
 /* =================== RESET + VARIABLES =================== */
@@ -19,8 +19,8 @@
     --color-muted:       #6C6C6C;
     --color-border:      #D9D9D9;
 
-    --font-body:    'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body:    'Arimo', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Fira Sans', Georgia, serif;
 
     --radius-sm: 8px;
     --radius-md: 14px;
@@ -926,4 +926,293 @@ img { max-width: 100%; display: block; }
     .top-bar { display: none; }
     .post-full__inner { padding: 28px 0 48px; }
     .gh-content h2 { font-size: 1.35rem; }
+}
+
+/* =========================================================
+   KOENIG EDITOR IMAGE CARDS (required by Ghost's validator)
+   Applied when authors insert an image card with "Wide" or
+   "Full" width from the Ghost editor.
+========================================================= */
+.gh-content .kg-width-wide,
+.gh-content .kg-width-wide img,
+.gh-content .kg-width-wide figure {
+    max-width: 85vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+@media (min-width: 1200px) {
+    .gh-content .kg-width-wide,
+    .gh-content .kg-width-wide img,
+    .gh-content .kg-width-wide figure {
+        max-width: 1080px;
+    }
+}
+.gh-content .kg-width-full,
+.gh-content .kg-width-full img,
+.gh-content .kg-width-full figure {
+    max-width: 100vw;
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+}
+.gh-content figure { margin: 32px 0; }
+.gh-content figure figcaption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-muted, #6b5a45);
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* ===== MAIN SITE HEADER + FOOTER (ported v1.0.8) =====
+   Verbatim styles extracted from avanasurgical.com (index.html + mega-menu.css)
+   so the Ghost blog visually matches the main site. These rules appear AFTER
+   the theme's earlier header/footer styles so the main-site look wins for
+   the site-nav / site-footer partials. Mega-menu-specific rules and
+   .mobile-nav / .mobile-menu-toggle styles are loaded via
+   /assets/css/mega-menu.css (referenced from default.hbs).
+   ====================================================== */
+
+:root {
+    /* Main-site color tokens (aliased to the theme's existing palette so
+       both naming schemes resolve to the same brand colors). */
+    --color-primary:         #243447;
+    --color-bg:              #e0d8cd;
+    --color-accent:          #b27f0d;
+    --color-accent-hover:    #8a6300;
+    --color-accent-emphasis: #C0392B;
+    --color-light-bg:        #EDEDED;
+}
+
+/* ===== TOP BAR ===== */
+.top-bar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 12px 0;
+    font-size: 14px;
+}
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bar__left { display: flex; gap: 24px; }
+.top-bar__item {
+    color: var(--color-white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s;
+}
+.top-bar__item:hover { opacity: 0.8; }
+.top-bar__right { display: flex; gap: 10px; align-items: center; }
+.top-bar__social {
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    transition: all 0.3s;
+}
+.top-bar__social:hover {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+.top-bar__social svg { width: 14px; height: 14px; fill: currentColor; }
+
+/* ===== HEADER ===== */
+.site-header {
+    background-color: var(--color-white);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s;
+}
+.site-header.scrolled { box-shadow: 0 4px 12px rgba(36, 52, 71, 0.1); }
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.site-logo {
+    font-weight: 700;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+.site-logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+.main-nav__list {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+}
+.main-nav__link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.main-nav__link:hover { color: var(--color-accent); }
+.main-nav__link--active,
+.main-nav__link.is-active { color: var(--color-accent); }
+
+.header-cta {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+.header-cta:hover { background-color: var(--color-accent-hover); }
+
+/* ===== FOOTER ===== */
+.site-footer {
+    background-color: #1a2836;
+    color: var(--color-white);
+    padding: 64px 0 24px;
+}
+.site-footer__grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+.site-footer__heading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--color-white);
+    letter-spacing: 0.5px;
+}
+.site-footer__logo {
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-white);
+}
+.site-footer__logo img {
+    height: 56px;
+    width: auto;
+    display: block;
+}
+.site-footer__socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+.site-footer__socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--color-white);
+    transition: all 0.3s;
+}
+.site-footer__socials a:hover {
+    background-color: var(--color-accent);
+    transform: translateY(-2px);
+}
+.site-footer__socials svg { width: 16px; height: 16px; fill: currentColor; }
+
+.site-footer__desc {
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+.site-footer__address {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    font-style: normal;
+}
+.site-footer__address p { margin: 0; }
+.site-footer__contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.site-footer__contact-info a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.site-footer__contact-info a:hover { color: var(--color-accent); }
+.site-footer__links {
+    list-style: none;
+    padding: 0;
+}
+.site-footer__links li { margin-bottom: 12px; }
+.site-footer__links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+.site-footer__links a:hover { color: var(--color-accent); }
+.site-footer__bottom {
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+}
+.site-footer__bottom a { color: var(--color-accent); text-decoration: none; }
+.site-footer__bottom a:hover { text-decoration: underline; }
+
+/* ===== MOBILE RESPONSIVE — hide desktop nav, show hamburger =====
+   The .mobile-menu-toggle / .mobile-nav visual rules live in
+   /assets/css/mega-menu.css; this block just triggers the swap and
+   collapses the footer grid. */
+@media (max-width: 968px) {
+    .main-nav__list { display: none; }
+    .top-bar__left { display: none; }
+    .site-footer { padding: 48px 0 20px; }
+}
+@media (max-width: 768px) {
+    .site-footer__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+    }
+}
+@media (max-width: 640px) {
+    .site-footer { padding: 40px 0 16px; }
+    .site-footer__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+    .site-footer__heading { font-size: 0.9rem; margin-bottom: 16px; }
+    .site-footer__logo img { height: 40px; }
+    .site-footer__desc { font-size: 0.85rem; margin-bottom: 16px; }
+    .site-footer__address { font-size: 0.85rem; margin-bottom: 16px; }
+    .site-footer__contact-info a { font-size: 0.85rem; }
+    .site-footer__links a { font-size: 0.85rem; margin-bottom: 8px; }
+    .site-footer__socials { gap: 10px; margin-top: 16px; }
+    .site-footer__socials a { width: 32px; height: 32px; }
+    .site-footer__bottom { font-size: 0.75rem; padding-top: 16px; }
 }

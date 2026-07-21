@@ -1,7 +1,8 @@
 {{!< default}}
 
-{{! Single post template }}
+{{!-- Single post template — must be wrapped in {{#post}} block. --}}
 
+{{#post}}
 <article class="post-full {{#unless feature_image}}post-full--no-image{{/unless}}">
 
     {{#if feature_image}}
@@ -28,14 +29,16 @@
 
                 <div class="post-full__meta">
                     {{#primary_author}}
+                    {{#if profile_image}}
                     <a href="{{url}}" class="post-full__author-link">
                         <img class="post-card__avatar post-card__avatar--lg"
-                             src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "images/avatar-default.png"}}{{/if}}"
+                             src="{{profile_image}}"
                              alt="{{name}}">
                         <span>{{name}}</span>
                     </a>
-                    {{/primary_author}}
                     <span class="post-card__sep">·</span>
+                    {{/if}}
+                    {{/primary_author}}
                     <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
                     <span class="post-card__sep">·</span>
                     <span>{{reading_time}}</span>
@@ -90,3 +93,4 @@
         </div>
     </div>
 </article>
+{{/post}}

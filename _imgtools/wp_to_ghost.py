@@ -90,14 +90,42 @@ def convert(xml_path, out_path):
         this_post_id = post_id_counter
         post_uuid = str(uuid.uuid4())
 
+        # Ghost 5.130 uses Lexical as its primary editor format. Mobiledoc
+        # is legacy — Ghost stores it but {{content}} in themes reads
+        # lexical first and returns "undefined" if lexical is empty.
+        # We output BOTH — lexical for the renderer + mobiledoc as
+        # fallback + html for direct DB access. Belt-and-suspenders-and-belt.
+        lexical = json.dumps({
+            "root": {
+                "children": [
+                    {
+                        "type": "html",
+                        "version": 1,
+                        "html": html_content
+                    }
+                ],
+                "direction": None,
+                "format": "",
+                "indent": 0,
+                "type": "root",
+                "version": 1
+            }
+        })
+        mobiledoc = json.dumps({
+            "version": "0.3.1",
+            "atoms": [],
+            "cards": [["html", {"html": html_content}]],
+            "markups": [],
+            "sections": [[10, 0]]
+        })
         posts.append({
             "id": this_post_id,
             "uuid": post_uuid,
             "title": html.unescape(title),
             "slug": slug or slugify(title),
+            "lexical": lexical,
+            "mobiledoc": mobiledoc,
             "html": html_content,
-            "mobiledoc": None,
-            "lexical": None,
             "feature_image": None,
             "featured": False,
             "type": "post",

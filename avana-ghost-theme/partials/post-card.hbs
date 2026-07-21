@@ -1,4 +1,4 @@
-{{! Reusable post card — used on index, tag, and author pages }}
+{{!-- Reusable post card — used on index, tag, and author pages  --}}
 <article class="post-card {{#unless feature_image}}post-card--no-image{{/unless}}">
     {{#if feature_image}}
     <a href="{{url}}" class="post-card__image" tabindex="-1" aria-hidden="true">
@@ -17,13 +17,15 @@
         <p class="post-card__excerpt">{{excerpt words="25"}}</p>
         <div class="post-card__meta">
             {{#primary_author}}
+            {{#if profile_image}}
             <img class="post-card__avatar"
-                 src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar-default.png"}}{{/if}}"
+                 src="{{img_url profile_image size="xs"}}"
                  alt="{{name}}"
                  loading="lazy">
             <span class="post-card__author">{{name}}</span>
-            {{/primary_author}}
             <span class="post-card__sep">·</span>
+            {{/if}}
+            {{/primary_author}}
             <time class="post-card__date" datetime="{{date format="YYYY-MM-DD"}}">
                 {{date format="DD MMM YYYY"}}
             </time>

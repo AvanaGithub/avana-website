@@ -1,7 +1,7 @@
-{{! Pagination — auto-hides when there is only one page }}
-{{#if pagination}}
-{{#unless pagination.pages}}{{else}}
-{{#if (gt pagination.pages 1)}}
+{{!-- Pagination — auto-hides when there is only one page.
+    Uses match helper (Ghost built-in) instead of the non-existent gt.  --}}
+{{#if pagination.pages}}
+{{#match pagination.pages ">" 1}}
 <nav class="pagination" aria-label="Page navigation">
     {{#if pagination.prev}}
     <a href="{{page_url pagination.prev}}" class="pagination__btn pagination__btn--prev" rel="prev">
@@ -23,6 +23,5 @@
     <span class="pagination__btn pagination__btn--next pagination__btn--disabled">Older posts →</span>
     {{/if}}
 </nav>
-{{/if}}
-{{/unless}}
+{{/match}}
 {{/if}}

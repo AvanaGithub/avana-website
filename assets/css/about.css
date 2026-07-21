@@ -107,7 +107,7 @@
 }
 .about-stat:last-child { border-right: 0; }
 .about-stat__value {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     font-size: 2.6rem;
     font-weight: 700;
     color: var(--color-accent);
@@ -202,7 +202,7 @@
 }
 .about-achievement-card__title {
     font-size: 1.15rem;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     color: var(--color-primary);
     margin-bottom: 8px;
 }
@@ -396,7 +396,7 @@
 }
 .about-testimonial-card__toggle:hover { color: var(--color-primary); }
 .about-testimonial-card__mark {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Fira Sans', Georgia, serif;
     font-size: 4rem;
     line-height: 1;
     color: var(--color-accent);
