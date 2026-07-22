@@ -45,7 +45,10 @@
             href === 'index.html#enquiry' ||
             href === '#enquiry' ||
             text === 'Enquire Now' ||
-            text === 'Talk to a Specialist';
+            text === 'Talk to a Specialist' ||
+            text === 'Find the Right Solution' ||
+            text === 'Find the Right Solution →' ||
+            text === 'Speak to a Product Specialist';
 
         if (!isEnquireCta) return;
         e.preventDefault();
