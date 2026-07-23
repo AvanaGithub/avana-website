@@ -458,6 +458,11 @@
             display: block;
             margin-bottom: 12px;
             color: var(--color-accent);
+            line-height: 1;
+        }
+        .why-avana__number--sm {
+            font-size: 2.25rem;
+            line-height: 1.05;
         }
 
         .why-avana__label {
@@ -691,10 +696,11 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 32px;
+            padding: 0 0 28px;
             background: #fff;
             border: 1px solid var(--color-border, #EDEDED);
             border-radius: 12px;
+            overflow: hidden;
             text-decoration: none;
             color: inherit;
             transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
@@ -704,14 +710,22 @@
             border-color: #b27f0d;
             box-shadow: 0 12px 28px rgba(36, 52, 71, 0.08);
         }
-        .audience-picker__icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            color: #b27f0d;
+        .audience-picker__card:hover .audience-picker__image {
+            transform: scale(1.04);
+        }
+        .audience-picker__image {
+            display: block;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
             margin-bottom: 20px;
+            transition: transform 0.35s ease;
+        }
+        .audience-picker__title,
+        .audience-picker__desc,
+        .audience-picker__cta {
+            padding-left: 24px;
+            padding-right: 24px;
         }
         .audience-picker__title {
             font-family: 'Fira Sans', sans-serif;
@@ -1188,7 +1202,7 @@
         .back-to-top {
             position: fixed;
             bottom: 96px;
-            right: 24px;
+            right: 12px;
             z-index: 999999;
             width: 48px;
             height: 48px;
@@ -2178,25 +2192,19 @@
             </div>
             <div class="audience-picker__grid">
                 <a class="audience-picker__card" href="#browse-pain" aria-label="Explore patient and caregiver solutions">
-                    <span class="audience-picker__icon" aria-hidden="true">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
-                    </span>
+                    <img class="audience-picker__image" src="/images/navigate/patient-and-caregiver.jpg" alt="Patient with caregiver at home" loading="lazy">
                     <h3 class="audience-picker__title">Patient or Caregiver</h3>
                     <p class="audience-picker__desc">Find support for pain, mobility or post-surgical recovery.</p>
                     <span class="audience-picker__cta">Explore Patient Solutions →</span>
                 </a>
                 <a class="audience-picker__card" href="/for-surgeons" aria-label="Explore surgeon and clinician resources">
-                    <span class="audience-picker__icon" aria-hidden="true">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3"/><path d="M6 3h2"/><path d="M12 3h2"/><path d="M10 13v3a5 5 0 0 0 10 0v-1"/><circle cx="20" cy="14" r="2"/></svg>
-                    </span>
+                    <img class="audience-picker__image" src="/images/navigate/surgeons-and-clinicians.jpg" alt="Surgeon reviewing clinical information" loading="lazy">
                     <h3 class="audience-picker__title">Surgeon or Clinician</h3>
                     <p class="audience-picker__desc">Access product information, clinical support and training resources.</p>
                     <span class="audience-picker__cta">Explore Clinical Solutions →</span>
                 </a>
                 <a class="audience-picker__card" href="#enquiry" data-audience="hospital" aria-label="Contact our hospital and procurement team">
-                    <span class="audience-picker__icon" aria-hidden="true">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="1"/><path d="M12 11v6"/><path d="M9 14h6"/><path d="M8 7V4h8v3"/></svg>
-                    </span>
+                    <img class="audience-picker__image" src="/images/navigate/hospital-and-procurement.jpg" alt="Hospital procurement team meeting" loading="lazy">
                     <h3 class="audience-picker__title">Hospital or Procurement Team</h3>
                     <p class="audience-picker__desc">Discuss product availability, installations and institutional partnerships.</p>
                     <span class="audience-picker__cta">Contact Our Hospital Team →</span>
@@ -2293,7 +2301,7 @@
                     <span class="why-avana__label">Hospital Installations</span>
                 </div>
                 <div class="why-avana__stat">
-                    <span class="why-avana__number">Since 2009</span>
+                    <span class="why-avana__number why-avana__number--sm">Since<br>2009</span>
                     <span class="why-avana__label">Serving Patients and Professionals Across India</span>
                 </div>
             </div>
@@ -2332,14 +2340,6 @@
                     <span class="audience-card__arrow">→</span>
                 </a>
 
-                <a href="/for-surgeons" class="audience-card">
-                    <div class="audience-card__icon">
-                        <img src="/images/audience/surgeon.jpg" alt="Orthopaedic surgeon attending advanced endoscopic spine surgery training" loading="lazy" width="140" height="140">
-                    </div>
-                    <h3 class="audience-card__title">I'm a surgeon</h3>
-                    <p class="audience-card__desc">Explore RIWO Spine endoscopic systems, training programs, and partnership opportunities.</p>
-                    <span class="audience-card__arrow">→</span>
-                </a>
             </div>
         </div>
     </section>
