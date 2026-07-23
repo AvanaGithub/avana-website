@@ -4,48 +4,62 @@
     "location": "Dhaka",
     "product": "Polar Care Wave",
     "category": "Post Operative Recovery",
-    "testimonial": "I had ACL reconstruction operation, and the pain was unimaginable. If I had to rate the pain out of 10, I would definitely give it a hard 9. The product actually helped me like magic. The combination of cold therapy and compression at the same time is game changing. The pain literally reduced after 2 uses of the product. It's really user friendly and even my mother could operate it with ease."
+    "testimonial": "I had ACL reconstruction operation, and the pain was unimaginable. If I had to rate the pain out of 10, I would definitely give it a hard 9. The product actually helped me like magic. The combination of cold therapy and compression at the same time is game changing. The pain literally reduced after 2 uses of the product. It's really user friendly and even my mother could operate it with ease.",
+    "avatar": "/images/testimonial-patient/testimonial-Walid-Abedin.png",
+    "productImage": "/images/testimonial-products/polar care wave.png"
   },
   {
     "name": "Uma Thyagaraj",
     "location": "Chennai",
     "product": "Polar Care Wave",
     "category": "Cold Therapy",
-    "testimonial": "Managing to make ice is hectic sometimes, and the cooling may not always feel sufficient."
+    "testimonial": "Managing to make ice is hectic sometimes, and the cooling may not always feel sufficient.",
+    "avatar": "/images/testimonial-patient/testimonial-Uma-Thyagaraj.png",
+    "productImage": "/images/testimonial-products/polar care wave.png"
   },
   {
     "name": "Karthick",
     "location": "Chennai",
     "product": "Polar Care Wave",
     "category": "Recovery Support",
-    "testimonial": "The brace helped me improve."
+    "testimonial": "The brace helped me improve.",
+    "avatar": "/images/testimonial-patient/testimonial-patient-2.png",
+    "productImage": "/images/testimonial-products/polar care wave.png"
   },
   {
     "name": "Radhamani",
     "location": "Chennai",
     "product": "Freestyle OA",
     "category": "Knee Pain",
-    "testimonial": "Initially there was discomfort in wearing the product due to lack of instructions. The customer service person Mr. Prabhakaran helped me understand how to wear the knee brace properly. It gave me confidence while walking and good support for my knees."
+    "testimonial": "Initially there was discomfort in wearing the product due to lack of instructions. The customer service person Mr. Prabhakaran helped me understand how to wear the knee brace properly. It gave me confidence while walking and good support for my knees.",
+    "avatar": "/images/testimonial-patient/testimonial-Radhamani.png",
+    "productImage": "/images/testimonial-products/Freestyle.jpg"
   },
   {
     "name": "N. Sundar",
     "location": "Chennai",
     "product": "Polar Care Wave",
     "category": "Cold Therapy",
-    "testimonial": "I had severe muscular pain from below my left thigh joint up to the toes, along with swelling around the thigh region. On my neurologist's advice I started using this equipment. After the second day itself I started feeling relief. After using the product for 4 days, the results were very encouraging."
+    "testimonial": "I had severe muscular pain from below my left thigh joint up to the toes, along with swelling around the thigh region. On my neurologist's advice I started using this equipment. After the second day itself I started feeling relief. After using the product for 4 days, the results were very encouraging.",
+    "avatar": "/images/testimonial-patient/testimonial-Sundar.png",
+    "productImage": "/images/testimonial-products/polar care wave.png"
   },
   {
     "name": "Bhuvaneswari T",
     "location": "Chennai",
     "product": "Freestyle OA",
     "category": "Knee Pain",
-    "testimonial": "Very supportive, now feeling better. Hence we purchased for another knee."
+    "testimonial": "Very supportive, now feeling better. Hence we purchased for another knee.",
+    "avatar": "/images/testimonial-patient/testimonial-patient-2.png",
+    "productImage": "/images/testimonial-products/Freestyle.jpg"
   },
   {
     "name": "Senthil",
     "location": "Chennai",
     "product": "Polar Care Wave",
     "category": "Post Surgery Recovery",
-    "testimonial": "Reduced my pain and inflammation and helped with quicker recovery after surgery."
+    "testimonial": "Reduced my pain and inflammation and helped with quicker recovery after surgery.",
+    "avatar": "/images/testimonial-patient/testimonial-patient-2.png",
+    "productImage": "/images/testimonial-products/polar care wave.png"
   }
 ]

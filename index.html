@@ -461,8 +461,9 @@
             line-height: 1;
         }
         .why-avana__number--sm {
-            font-size: 2.25rem;
+            font-size: 2rem;
             line-height: 1.05;
+            white-space: nowrap;
         }
 
         .why-avana__label {
@@ -492,7 +493,7 @@
 
         .audience-selector__grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
@@ -1060,32 +1061,87 @@
         }
         .testimonial-card__inner {
             background-color: var(--color-white);
-            border-radius: 16px;
-            padding: 28px 32px;
-            box-shadow: 0 8px 30px rgba(36, 52, 71, 0.08);
+            border-radius: 20px;
+            padding: 40px 44px;
+            box-shadow: 0 12px 40px rgba(36, 52, 71, 0.08);
             border: 1px solid var(--color-border);
-            text-align: center;
             position: relative;
-            max-width: 720px;
+            max-width: 1040px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 40px;
+            align-items: center;
+            overflow: hidden;
+            text-align: left;
+        }
+        .testimonial-card__body {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
         }
         .testimonial-card__quote-mark {
+            position: absolute;
+            top: 24px;
+            right: 32px;
             font-family: 'Fira Sans', Georgia, serif;
-            font-size: 3rem;
+            font-size: 5.5rem;
             line-height: 0.6;
             color: var(--color-accent);
-            opacity: 0.3;
-            margin-bottom: 4px;
+            opacity: 0.14;
+            letter-spacing: -0.05em;
+            pointer-events: none;
         }
         .testimonial-card__quote {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.15rem;
+            line-height: 1.55;
             color: var(--color-text);
-            margin-bottom: 12px;
+            margin-bottom: 28px;
             font-style: italic;
-            /* Reserve 3 lines so short and long quotes produce equally
-               tall cards without leaving a giant empty block underneath. */
-            min-height: calc(1rem * 1.6 * 3);
+            min-height: calc(1.15rem * 1.55 * 3);
+        }
+        .testimonial-card__product {
+            background: #f5eddb;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 240px;
+            box-shadow: inset 0 0 0 1px rgba(178, 127, 13, 0.08);
+        }
+        .testimonial-card__product img {
+            max-width: 100%;
+            max-height: 220px;
+            object-fit: contain;
+        }
+        .testimonial-card__person {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: auto;
+        }
+        .testimonial-card__avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid #fff;
+            box-shadow: 0 4px 10px rgba(36, 52, 71, 0.12);
+        }
+        .testimonial-card__avatar--fallback {
+            background: var(--color-accent);
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fira Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.35rem;
+        }
+        .testimonial-card__person-text {
+            min-width: 0;
         }
         /* Clamp long quotes to 3 lines; the JS-added modifier toggles off
            when the user taps Read more. */
@@ -1117,9 +1173,20 @@
         .testimonial-card__badges {
             display: flex;
             gap: 8px;
-            justify-content: center;
+            justify-content: flex-start;
             flex-wrap: wrap;
             margin-bottom: 20px;
+        }
+        @media (max-width: 768px) {
+            .testimonial-card__inner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 28px 24px;
+            }
+            .testimonial-card__product { order: -1; min-height: 180px; }
+            .testimonial-card__product img { max-height: 160px; }
+            .testimonial-card__quote { font-size: 1rem; }
+            .testimonial-card__quote-mark { font-size: 3.5rem; top: 12px; right: 20px; }
         }
         .testimonial-card__badge {
             display: inline-block;
@@ -2207,7 +2274,7 @@
                     <img class="audience-picker__image" src="/images/navigate/hospital-and-procurement.jpg" alt="Hospital procurement team meeting" loading="lazy">
                     <h3 class="audience-picker__title">Hospital or Procurement Team</h3>
                     <p class="audience-picker__desc">Discuss product availability, installations and institutional partnerships.</p>
-                    <span class="audience-picker__cta">Contact Our Hospital Team →</span>
+                    <span class="audience-picker__cta">Contact Us →</span>
                 </a>
             </div>
         </div>
@@ -2301,7 +2368,7 @@
                     <span class="why-avana__label">Hospital Installations</span>
                 </div>
                 <div class="why-avana__stat">
-                    <span class="why-avana__number why-avana__number--sm">Since<br>2009</span>
+                    <span class="why-avana__number why-avana__number--sm">Since 2009</span>
                     <span class="why-avana__label">Serving Patients and Professionals Across India</span>
                 </div>
             </div>
@@ -2554,15 +2621,31 @@
                     t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
                     t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''
                 ].filter(Boolean).join('');
+                const initial = (t.name || '?').trim().charAt(0).toUpperCase();
+                const avatarHtml = t.avatar
+                    ? `<img class="testimonial-card__avatar" src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+                    : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
+                const productHtml = t.productImage
+                    ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+                    : '';
+                const metaLine = [t.location, t.product ? `${escapeHtml(t.product)} User` : ''].filter(Boolean).map(escapeHtml).join(' · ');
                 return `
                     <article class="testimonial-card" role="group" aria-roledescription="testimonial">
                         <div class="testimonial-card__inner">
-                            <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
-                            <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
-                            ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
-                            ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
-                            <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
-                            <div class="testimonial-card__role">${escapeHtml(t.location || '')}</div>
+                            <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;&ldquo;</div>
+                            <div class="testimonial-card__body">
+                                ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                                <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                                ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
+                                <div class="testimonial-card__person">
+                                    ${avatarHtml}
+                                    <div class="testimonial-card__person-text">
+                                        <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
+                                        ${metaLine ? `<div class="testimonial-card__role">${metaLine}</div>` : ''}
+                                    </div>
+                                </div>
+                            </div>
+                            ${productHtml}
                         </div>
                     </article>
                 `;
