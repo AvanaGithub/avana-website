@@ -5,6 +5,37 @@
    .site-header styles defined in index.html / pain.css.
    ============================================================ */
 
+/* --- Announcement bar (rendered above the top-bar in header.html) --- */
+.announce-bar {
+    background: linear-gradient(90deg, #8a6300 0%, #b27f0d 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 8px 0;
+}
+.announce-bar .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.announce-bar__icon { font-size: 1rem; line-height: 1; }
+.announce-bar__text { font-weight: 500; }
+.announce-bar__cta {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-bottom: 1px;
+    transition: border-color 0.2s;
+}
+.announce-bar__cta:hover { border-bottom-color: #fff; }
+@media (max-width: 640px) {
+    .announce-bar { font-size: 0.78rem; padding: 6px 0; }
+    .announce-bar .container { gap: 8px; }
+}
+
 /* --- Nav item containers --- */
 .main-nav__list {
     list-style: none;
