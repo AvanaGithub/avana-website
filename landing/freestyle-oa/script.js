@@ -131,11 +131,28 @@
         }
     }
 
+    /* ---------- Hero slider: crossfade every 2 seconds, no controls ---------- */
+    function initHeroSlider() {
+        const container = document.getElementById('hero-slider');
+        if (!container) return;
+        const slides = container.querySelectorAll('.hero-slide');
+        if (slides.length < 2) return;
+        // Respect reduced motion — hold on first slide, no rotation.
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        let i = 0;
+        setInterval(() => {
+            slides[i].classList.remove('is-active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('is-active');
+        }, 2000);
+    }
+
     function init() {
         initFaq();
         initWhatsApp();
         initSmoothScroll();
         initTestimonials();
+        initHeroSlider();
     }
 
     if (document.readyState === 'loading') {
