@@ -1,235 +1,141 @@
 /* ============================================================
-   Avana Freestyle OA — landing page script
-   Form validation, lead submission, tracking events.
+   Freestyle OA landing — script
+   FAQ accordion (single-open behavior), WhatsApp bubble events.
    Minimal vanilla JS, no dependencies.
    ============================================================ */
 
 (function () {
     'use strict';
 
-    /* =============================================================
-       CONFIG — replace before going live (see README.md)
-       ============================================================= */
-    const CONFIG = {
-        // Where the lead is POSTed. Leave empty string to test the page
-        // without a backend — submissions log to console + show success.
-        // Examples:
-        //   "https://script.google.com/macros/s/AKfycb…/exec"     (Google Sheets web app)
-        //   "https://hooks.zapier.com/hooks/catch/…"               (Zapier)
-        //   "https://yourapi.avanasurgical.com/api/leads"          (your own backend)
-        LEAD_ENDPOINT: "",
-
-        // PDF the user receives. Drop the real file in this folder with this name.
-        GUIDE_PDF_URL: "knee-care-guide.pdf",
-
-        // Form source tag — useful when multiple ads point at this page.
-        // Leave as-is unless you start splitting traffic by creative.
-        FORM_SOURCE: "freestyle-oa-landing"
-    };
-
-    /* =============================================================
-       Helpers
-       ============================================================= */
-    const $  = (sel, root = document) => root.querySelector(sel);
-    const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
-
-    function setError(fieldName, message) {
-        const errEl = $(`[data-error-for="${fieldName}"]`);
-        const input = $(`[name="${fieldName}"]`);
-        if (errEl) errEl.textContent = message || "";
-        if (input) {
-            input.closest('.field')?.classList.toggle('field--error', !!message);
-            input.setAttribute('aria-invalid', message ? 'true' : 'false');
-        }
-    }
-
-    function clearAllErrors() {
-        $$('.field').forEach(f => f.classList.remove('field--error'));
-        $$('.field__error').forEach(e => { e.textContent = ''; });
-    }
-
-    /* =============================================================
-       Validation rules
-       ============================================================= */
-    function validate(values) {
-        const errors = {};
-
-        if (!values.name || values.name.trim().length < 2) {
-            errors.name = "Please enter your name.";
-        }
-
-        // Indian 10-digit mobile, starts with 6-9
-        const cleanMobile = (values.mobile || '').replace(/\s|-/g, '');
-        if (!/^[6-9]\d{9}$/.test(cleanMobile)) {
-            errors.mobile = "Please enter a valid 10-digit Indian mobile number.";
-        } else {
-            values.mobile = cleanMobile;
-        }
-
-        if (!values.city || values.city.trim().length < 2) {
-            errors.city = "Please enter your city.";
-        }
-
-        if (!values.who_for) {
-            errors.who_for = "Please select an option.";
-        }
-
-        return errors;
-    }
-
-    /* =============================================================
-       Tracking — fires after a confirmed successful submission
-       ============================================================= */
-    function trackLead(values) {
-        // Meta Pixel — standard Lead event
-        try {
-            if (typeof window.fbq === 'function') {
-                window.fbq('track', 'Lead', {
-                    content_name: 'Freestyle OA Guide',
-                    content_category: values.who_for
-                });
-            }
-        } catch (e) { /* silent */ }
-
-        // GTM dataLayer push for any downstream tags
-        try {
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                event: 'lead_submit',
-                lead_form_source: CONFIG.FORM_SOURCE,
-                lead_who_for: values.who_for,
-                lead_callback_requested: values.callback_requested === 'yes'
+    /* ---------- FAQ: only one open at a time ---------- */
+    function initFaq() {
+        const items = document.querySelectorAll('.faq__item');
+        items.forEach(item => {
+            item.addEventListener('toggle', () => {
+                if (item.open) {
+                    items.forEach(other => {
+                        if (other !== item) other.open = false;
+                    });
+                }
             });
-        } catch (e) { /* silent */ }
+        });
     }
 
-    /* =============================================================
-       Trigger the guide download. Programmatic click on a hidden
-       anchor — avoids leaving the success page.
-       ============================================================= */
-    function downloadGuide() {
+    /* ---------- WhatsApp bubble: click event + subtle ripple boost on hover ---------- */
+    function initWhatsApp() {
+        const bubble = document.querySelector('.wa-bubble');
+        if (!bubble) return;
+
+        bubble.addEventListener('click', () => {
+            try {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    event: 'whatsapp_click',
+                    source: 'freestyle-oa-landing',
+                    location: 'floating-bubble'
+                });
+                if (typeof window.fbq === 'function') {
+                    window.fbq('track', 'Contact', { method: 'whatsapp' });
+                }
+            } catch (e) { /* silent */ }
+        });
+    }
+
+    /* ---------- Smooth-scroll fallback for anchor links (browsers with scroll-behavior support already handle it) ---------- */
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                const targetId = anchor.getAttribute('href');
+                if (targetId.length <= 1) return;
+                const target = document.querySelector(targetId);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    }
+
+    /* ---------- Testimonials (doctors + patients) loaded from data.json ---------- */
+    function esc(s) {
+        return String(s == null ? '' : s)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    function initials(name) {
+        // "Dr. Vikram A Mhaskar" -> "VM" ; "Naga Mani" -> "NM"
+        const parts = String(name || '').replace(/^Dr\.?\s+/i, '').trim().split(/\s+/);
+        const first = (parts[0] || '?').charAt(0);
+        const last = parts.length > 1 ? parts[parts.length - 1].charAt(0) : '';
+        return (first + last).toUpperCase();
+    }
+    function avatarHtml(person, sizeClass) {
+        if (person.photo) {
+            return `<img src="${esc(person.photo)}" alt="${esc(person.name)}" loading="lazy" class="${sizeClass}">`;
+        }
+        return `<span class="${sizeClass} ${sizeClass}--initials" aria-hidden="true">${esc(initials(person.name))}</span>`;
+    }
+    function renderDoctorCard(d) {
+        const location = [d.hospital, d.city].filter(Boolean).map(esc).join(' · ');
+        return `
+            <article class="doctor-card">
+                ${avatarHtml(d, 'doctor-card__photo')}
+                <h3 class="doctor-card__name">${esc(d.name)}</h3>
+                ${d.credentials ? `<p class="doctor-card__creds">${esc(d.credentials)}</p>` : ''}
+                ${location ? `<p class="doctor-card__hospital">${location}</p>` : ''}
+                <p class="doctor-card__quote">&ldquo;${esc(d.quote)}&rdquo;</p>
+            </article>`;
+    }
+    function renderPatientCard(p) {
+        const stars = '★'.repeat(Math.max(0, Math.min(5, Number(p.stars) || 5)));
+        return `
+            <figure class="testimonial-card">
+                ${avatarHtml(p, 'testimonial-card__photo')}
+                <div class="testimonial-card__stars" aria-label="${stars.length} out of 5 stars">${stars}</div>
+                <blockquote class="testimonial-card__quote">&ldquo;${esc(p.quote)}&rdquo;</blockquote>
+                <figcaption class="testimonial-card__author">
+                    ${esc(p.name)}${p.role ? ` <span class="testimonial-card__role">&mdash; ${esc(p.role)}</span>` : ''}
+                </figcaption>
+            </figure>`;
+    }
+    async function initTestimonials() {
+        const docEl = document.getElementById('doctor-grid');
+        const patEl = document.getElementById('patient-row');
+        const nav = document.getElementById('doctor-grid-nav');
+        const moreBtn = document.getElementById('doctor-grid-more');
+        if (!docEl && !patEl) return;
+
+        let data = null;
         try {
-            const a = document.createElement('a');
-            a.href = CONFIG.GUIDE_PDF_URL;
-            a.download = CONFIG.GUIDE_PDF_URL.split('/').pop();
-            a.style.display = 'none';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            const res = await fetch('data.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            data = await res.json();
         } catch (e) {
-            // Fallback link in the success message still works.
-            console.warn('[lead] auto-download failed; user can click the manual link.', e);
-        }
-    }
-
-    /* =============================================================
-       Show success / reset state
-       ============================================================= */
-    function showSuccessState() {
-        const form    = $('#lead-form-el');
-        const thanks  = $('#thanks-state');
-        if (form)   form.hidden   = true;
-        if (thanks) {
-            thanks.hidden = false;
-            thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-
-    /* =============================================================
-       Submit
-       ============================================================= */
-    async function handleSubmit(e) {
-        e.preventDefault();
-        clearAllErrors();
-
-        const form = e.currentTarget;
-        const data = Object.fromEntries(new FormData(form));
-        data.callback_requested = data.callback_requested ? 'yes' : 'no';
-
-        const errors = validate(data);
-        if (Object.keys(errors).length) {
-            Object.entries(errors).forEach(([k, v]) => setError(k, v));
-            const firstBadField = $(`[name="${Object.keys(errors)[0]}"]`);
-            if (firstBadField) firstBadField.focus();
+            if (docEl) docEl.innerHTML = '<p class="section__body">Testimonials will appear here shortly.</p>';
             return;
         }
 
-        const submitBtn = $('#submit-btn');
-        const originalText = submitBtn ? submitBtn.textContent : '';
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending…';
-        }
-
-        // Add metadata the CRM might want
-        const payload = {
-            ...data,
-            source: CONFIG.FORM_SOURCE,
-            submitted_at: new Date().toISOString(),
-            page_url: window.location.href,
-            referrer: document.referrer || ''
-        };
-
-        try {
-            if (CONFIG.LEAD_ENDPOINT) {
-                // Real submission
-                const res = await fetch(CONFIG.LEAD_ENDPOINT, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
+        const INITIAL_DOCTORS = 6;
+        if (docEl && data.doctors && data.doctors.length) {
+            const first = data.doctors.slice(0, INITIAL_DOCTORS);
+            docEl.innerHTML = first.map(renderDoctorCard).join('');
+            if (data.doctors.length > INITIAL_DOCTORS && nav && moreBtn) {
+                nav.hidden = false;
+                moreBtn.addEventListener('click', () => {
+                    docEl.innerHTML = data.doctors.map(renderDoctorCard).join('');
+                    nav.hidden = true;
                 });
-                // Many simple endpoints (Google Apps Script, Zapier) respond opaque/CORS-lite.
-                // We treat ANY 2xx as success; opaque/0 responses also count as fired-and-forgot.
-                if (res.type !== 'opaque' && !res.ok) {
-                    throw new Error('HTTP ' + res.status);
-                }
-            } else {
-                // Test mode — no endpoint set. Log payload and continue.
-                console.log('[lead] LEAD_ENDPOINT not configured. Test payload:', payload);
             }
-
-            trackLead(data);
-            downloadGuide();
-            showSuccessState();
-        } catch (err) {
-            console.error('[lead] submission failed', err);
-            // Inline error at the bottom of the form so user can retry.
-            setError('mobile', '');
-            const failureNote = document.createElement('p');
-            failureNote.className = 'field__error';
-            failureNote.style.textAlign = 'center';
-            failureNote.style.marginTop = '12px';
-            failureNote.textContent = "Something went wrong. Please try again or call us directly.";
-            form.appendChild(failureNote);
-        } finally {
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            }
+        }
+        if (patEl && data.patients && data.patients.length) {
+            patEl.innerHTML = data.patients.map(renderPatientCard).join('');
         }
     }
 
-    /* =============================================================
-       Init
-       ============================================================= */
     function init() {
-        const form = $('#lead-form-el');
-        if (!form) return;
-        form.addEventListener('submit', handleSubmit);
-
-        // Live error-clearing as user types — keeps things friendly.
-        $$('input, select', form).forEach(input => {
-            input.addEventListener('input', () => setError(input.name, ''));
-        });
-
-        // Mobile field: strip non-digits as user types, cap at 10.
-        const mobile = $('#mobile');
-        if (mobile) {
-            mobile.addEventListener('input', () => {
-                const cleaned = mobile.value.replace(/\D/g, '').slice(0, 10);
-                if (cleaned !== mobile.value) mobile.value = cleaned;
-            });
-        }
+        initFaq();
+        initWhatsApp();
+        initSmoothScroll();
+        initTestimonials();
     }
 
     if (document.readyState === 'loading') {

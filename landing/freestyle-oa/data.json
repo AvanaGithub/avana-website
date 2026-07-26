@@ -1,0 +1,119 @@
+{
+  "_schema": {
+    "description": "Freestyle OA landing page — doctor and patient testimonials. Add or edit here; the page re-renders on next load. Photo paths are optional — leave photo blank and the card shows an initial-letter circle in mustard.",
+    "photoBasePath": "/images/testimonial-doctors/  and  /images/testimonial-patient/"
+  },
+  "doctors": [
+    {
+      "name": "Dr. Pradeep Kumar",
+      "credentials": "Clinical Prosthetist & Orthotist",
+      "hospital": "Forefront Healthcare",
+      "city": "Kushambi, Ghaziabad",
+      "quote": "In the fight against osteoarthritis, the Breg Freestyle OA knee brace has emerged as a lifeline for many. It's a catalyst for decreased pain, heightened independence, and a more dynamic and joyful lifestyle.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Arshad Hussain",
+      "credentials": "BPTh & MPTh · 15 years experience",
+      "hospital": "Medicheck Group of Hospitals",
+      "city": "Faridabad",
+      "quote": "Countless individuals have experienced a remarkable transformation in their lives thanks to the Breg Freestyle OA knee brace. It's a bridge to a world with less pain, increased confidence, and limitless possibilities.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Abhishek Haldar",
+      "credentials": "MBBS, MS (Ortho), FCVR (USA) · Trauma, Joint Replacement & Arthroscopic Surgeon · 19 years experience",
+      "hospital": "Ortho Vision Clinic",
+      "city": "Noida",
+      "quote": "I have received great feedback from my patients using the Freestyle OA knee brace. They have reported significant improvements in their ability to move, reduced pain, and an overall better sense of well-being. This reinforces my recommendation for the Freestyle OA knee brace as an effective solution for knee osteoarthritis.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. (Lt Col) P. Prabhakar",
+      "credentials": "MBBS, DNB (Ortho), MNAMS, FIMSA · Fellow in Complex Primary & Revision Total Knee Arthroplasty (Switzerland) · 20 years experience",
+      "hospital": "CARE Hospitals · Head, Dept of Orthopaedics & Joint Replacement",
+      "city": "Nampally, Hyderabad",
+      "quote": "I have consistently received positive feedback from patients with early osteoarthritis. After advising them on lifestyle modifications and providing them with the Freestyle OA Brace, they reported significant pain relief, allowing them to resume their daily activities without discomfort.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. S. Ilavarasan",
+      "credentials": "MBBS, D.Ortho, Dip. NB (Ortho), MABMS · Fellow in Trauma & Joint Replacement (Germany), Arthroplasty (Japan), Arthroscopy (Korea)",
+      "hospital": "Consultant Orthopaedic & Joint Replacement Surgeon",
+      "city": "",
+      "quote": "I have received consistent positive feedback from my patients using the Freestyle OA knee brace. The brace has made such a difference in their daily activities, allowing them to move freely without constant pain.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Om Parshuram Patil",
+      "credentials": "MBBS, MS Ortho, FEPS Ortho LUSS · 13 years experience",
+      "hospital": "Apollo Spectra Hospitals · Consultant Orthopaedic & Spine Surgeon",
+      "city": "Mumbai",
+      "quote": "Based on the feedback I've received from my patients, the Freestyle OA brace has been a game-changer. They have experienced remarkable improvements in their mobility, with reduced discomfort and an overall enhancement in their well-being.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Anil Lokhande",
+      "credentials": "MS Orth, MCh Orth (Liverpool), FRCS Orth (Edinburgh) · Fellow in Arthroplasty & Arthroscopy (UK, Australia) · 34 years experience",
+      "hospital": "Batra Hospital & Medical Research Centre · Consultant Orthopaedic Surgeon",
+      "city": "",
+      "quote": "The journey of countless individuals fighting against osteoarthritis has been transformed with the Breg Freestyle OA knee brace. It has led to reduced medication reliance, improved joint stability, and empowered them to embrace a more active and fulfilling lifestyle.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Vikram A Mhaskar",
+      "credentials": "MBBS, MS (Ortho) · MCh (Ortho), University of Dundee · AOA & ISAKOS Fellowship in Knee Surgery (Australia, France)",
+      "hospital": "Sitaram Bhartia Institute of Science & Research · JMVM Sports Injury Center",
+      "city": "New Delhi",
+      "quote": "The feedback from my patients using the Freestyle OA knee brace has been positive. They've described significant improvements in their mobility, reduced discomfort, and an overall improvement in their well-being.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Rufus Vasanth Raj",
+      "credentials": "MBBS, DNB Ortho · FIJR (Ganga), FASM (ISAKOS), FHAA (Spain), FSS (Australia)",
+      "hospital": "Senior Consultant Orthopaedic Surgeon",
+      "city": "",
+      "quote": "Based on the feedback I've received from my patients, the Freestyle OA brace has been a game-changer. They have experienced remarkable improvements in their mobility, with reduced discomfort and an overall enhancement in their well-being.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Sumeet Badhwar",
+      "credentials": "MBBS, D-Ortho, MCh Ortho · 20 years experience",
+      "hospital": "Bone & Joint Clinic · Consultant Orthopaedics",
+      "city": "Noida, Uttar Pradesh",
+      "quote": "As a doctor, it's rewarding to witness my patients' success stories with the Freestyle OA knee brace. From improved mobility to decreased discomfort, this product brings positive change, enabling them to embrace life more fully and comfortably.",
+      "photo": ""
+    },
+    {
+      "name": "Dr. Clement Joseph",
+      "credentials": "MBBS, MS Orthopaedics · 26 years experience",
+      "hospital": "SIMS Hospital · Specialist Orthopaedic Surgeon",
+      "city": "Chennai",
+      "quote": "I have received consistent positive feedback from my patients using the Freestyle OA knee brace. The brace has made such a difference in their daily activities, allowing them to move freely without constant pain.",
+      "photo": ""
+    }
+  ],
+  "patients": [
+    {
+      "name": "Pramesh Modi",
+      "role": "Tennis coach for over 30 years",
+      "stars": 5,
+      "quote": "The Freestyle OA Knee Brace was recommended to me and within a week of wearing it, I experienced significant relief from pain and improved mobility.",
+      "photo": ""
+    },
+    {
+      "name": "Rajeshwari",
+      "role": "Freestyle OA user · 2 years",
+      "stars": 5,
+      "quote": "I appreciate your excellent service for the past two years. Whenever I encounter any problem with the brace, you always extend a helping hand to solve the issue. I will recommend it to my friends who are facing knee pain.",
+      "photo": ""
+    },
+    {
+      "name": "Naga Mani",
+      "role": "Freestyle OA user · 1 year",
+      "stars": 5,
+      "quote": "I was suffering from knee pain. I consulted many doctors and took medicines, but there was no pain relief. After wearing this brace, there is significant pain relief and I can do my work. I have been using this brace for the past year, and I am not taking any medicines for knee pain relief and can walk comfortably.",
+      "photo": ""
+    }
+  ]
+}

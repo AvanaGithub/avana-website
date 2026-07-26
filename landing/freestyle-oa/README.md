@@ -1,6 +1,22 @@
 # Avana Freestyle OA — Landing Page
 
-Single-page lead capture for paid Meta ads. Goal: qualified form submissions at the lowest cost per lead. No checkout, no payment — the ₹25,000 sale happens later via call + WhatsApp nurture.
+Single-page conversion-focused landing page for Freestyle OA knee brace. Primary CTAs route to WhatsApp / order.
+
+## Assets still needed (all rendered as dashed placeholders in the page)
+
+Every placeholder in the HTML has a `data-needs="…"` attribute describing what's expected. Full list:
+
+- **Hero** — Photo of an active person WITH the Freestyle OA brace on (currently using product-only shot as fallback).
+- **Anatomy diagrams** — Two side-by-side cross-sections: normal knee vs. OA knee.
+- **Offloading principle photo** — Active person (tennis / running) wearing the brace.
+- **Doctor photos (x5)** — Circular headshots for the 5 doctor cards. Real names, hospitals, cities and quotes also needed — search for `COPY-CHECK: Real doctor` in `index.html`.
+- **Feature illustrations (x4)** — Offloading diagram, adjustable-straps close-up, rigid frame close-up, person walking freely.
+- **Patient photos** — Naga Mani, Bhuvaneswari T (Radhamani photo already wired in).
+- **YouTube video IDs (x3)** — "Real Patient — 3 Months Later", "How to Wear It Correctly", "What Doctors Say".
+
+## Copy items to review
+
+Search `index.html` for `COPY-CHECK:` to find all items needing real content: announcement bar offer text, 5 doctor names + hospitals + quotes, address / email / phone in footer, FAQ answer accuracy check, YouTube video IDs.
 
 This folder is a **standalone static site**. No build step, no dependencies.
 

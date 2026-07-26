@@ -271,7 +271,15 @@
             return { fullHtml, previewHtml, needsToggle: true };
         }
 
-        el.innerHTML = items.map(t => {
+        // Build track (one card at a time) with prev/next controls + dots.
+        // The parent .about-section wraps everything; we replace the
+        // container's contents with a viewport → track → cards structure
+        // and append arrows + dots after it.
+        const parent = el.parentNode;
+        // Ensure controls exist only once even if the loader re-runs
+        parent.querySelectorAll('.about-testimonials-nav, .about-testimonials-dots').forEach(n => n.remove());
+
+        const cardsHtml = items.map(t => {
             const avatarContent = t.avatar
                 ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy">`
                 : `<span>💬</span>`;
@@ -301,6 +309,39 @@
                 </div>
             </div>`;
         }).join('');
+
+        el.innerHTML = `<div class="about-testimonials__track">${cardsHtml}</div>`;
+
+        // Nav controls appear below the viewport only when there are 2+ cards.
+        if (items.length > 1) {
+            const nav = document.createElement('div');
+            nav.className = 'about-testimonials-nav';
+            nav.innerHTML = `
+                <button type="button" class="about-testimonials-nav__btn" data-dir="prev" aria-label="Previous testimonial">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <div class="about-testimonials-dots" role="tablist">
+                    ${items.map((_, i) => `<button type="button" class="about-testimonials-dot${i === 0 ? ' is-active' : ''}" data-index="${i}" role="tab" aria-label="Show testimonial ${i + 1}"></button>`).join('')}
+                </div>
+                <button type="button" class="about-testimonials-nav__btn" data-dir="next" aria-label="Next testimonial">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+                </button>
+            `;
+            el.parentNode.insertBefore(nav, el.nextSibling);
+
+            let currentIndex = 0;
+            const track = el.querySelector('.about-testimonials__track');
+            const dots = nav.querySelectorAll('.about-testimonials-dot');
+            function goTo(i) {
+                currentIndex = (i + items.length) % items.length;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                dots.forEach((d, di) => d.classList.toggle('is-active', di === currentIndex));
+            }
+            nav.querySelectorAll('.about-testimonials-nav__btn').forEach(btn =>
+                btn.addEventListener('click', () => goTo(currentIndex + (btn.dataset.dir === 'next' ? 1 : -1)))
+            );
+            dots.forEach(d => d.addEventListener('click', () => goTo(parseInt(d.dataset.index, 10))));
+        }
 
         // Wire up the Read more / Read less toggles. Delegated to keep it
         // resilient if the card list re-renders later.
