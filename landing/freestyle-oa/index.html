@@ -111,7 +111,7 @@
                 </div>
                 <div class="two-col__visual anatomy anatomy--single">
                     <figure class="anatomy__fig anatomy__fig--wide">
-                        <img class="anatomy__img" src="/images/landing-fsoa/anatomy-normal-vs-oa.jpg" alt="Side-by-side comparison — normal knee cartilage vs osteoarthritic knee with worn cartilage" loading="lazy">
+                        <img class="anatomy__img" src="/images/landing-fsoa/what-is-oa.jpg" alt="What is osteoarthritis — cartilage wear in the knee joint" loading="lazy">
                         <figcaption>Normal knee vs osteoarthritic knee — worn cartilage causes uneven loading</figcaption>
                     </figure>
                 </div>
@@ -141,9 +141,16 @@
             <div class="container">
                 <h2 class="section__title">Doctors Trust on Freestyle OA</h2>
                 <p class="section__subtitle">Recommended by leading orthopedic surgeons across India.</p>
-                <div class="doctor-grid" id="doctor-grid" aria-live="polite"></div>
-                <div class="doctor-grid__nav" id="doctor-grid-nav" hidden>
-                    <button type="button" class="doctor-grid__more" id="doctor-grid-more">Show all doctor recommendations</button>
+                <div class="doctor-carousel" id="doctor-carousel">
+                    <button type="button" class="doctor-carousel__arrow doctor-carousel__arrow--prev" id="doctor-prev" aria-label="Previous doctor">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    </button>
+                    <div class="doctor-carousel__viewport">
+                        <div class="doctor-carousel__track" id="doctor-grid" aria-live="polite"></div>
+                    </div>
+                    <button type="button" class="doctor-carousel__arrow doctor-carousel__arrow--next" id="doctor-next" aria-label="Next doctor">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+                    </button>
                 </div>
             </div>
         </section>

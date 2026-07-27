@@ -97,6 +97,39 @@
                 </figcaption>
             </figure>`;
     }
+    function initDoctorCarousel(track, totalCards) {
+        const prev = document.getElementById('doctor-prev');
+        const next = document.getElementById('doctor-next');
+        if (!prev || !next || totalCards === 0) return;
+        let index = 0;
+
+        function visibleCount() {
+            const w = window.innerWidth;
+            if (w <= 600) return 1;
+            if (w <= 900) return 2;
+            return 3;
+        }
+        function maxIndex() {
+            return Math.max(0, totalCards - visibleCount());
+        }
+        function update() {
+            if (index > maxIndex()) index = maxIndex();
+            const first = track.querySelector('.doctor-card');
+            if (!first) return;
+            const cardWidth = first.getBoundingClientRect().width;
+            const gap = parseFloat(getComputedStyle(track).gap) || 20;
+            const offset = index * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+            prev.disabled = index === 0;
+            next.disabled = index >= maxIndex();
+        }
+        prev.addEventListener('click', () => { index = Math.max(0, index - 1); update(); });
+        next.addEventListener('click', () => { index = Math.min(maxIndex(), index + 1); update(); });
+        window.addEventListener('resize', update);
+        // initial measurement after images size themselves
+        setTimeout(update, 100);
+    }
+
     async function initTestimonials() {
         const docEl = document.getElementById('doctor-grid');
         const patEl = document.getElementById('patient-row');
@@ -114,17 +147,9 @@
             return;
         }
 
-        const INITIAL_DOCTORS = 6;
         if (docEl && data.doctors && data.doctors.length) {
-            const first = data.doctors.slice(0, INITIAL_DOCTORS);
-            docEl.innerHTML = first.map(renderDoctorCard).join('');
-            if (data.doctors.length > INITIAL_DOCTORS && nav && moreBtn) {
-                nav.hidden = false;
-                moreBtn.addEventListener('click', () => {
-                    docEl.innerHTML = data.doctors.map(renderDoctorCard).join('');
-                    nav.hidden = true;
-                });
-            }
+            docEl.innerHTML = data.doctors.map(renderDoctorCard).join('');
+            initDoctorCarousel(docEl, data.doctors.length);
         }
         if (patEl && data.patients && data.patients.length) {
             patEl.innerHTML = data.patients.map(renderPatientCard).join('');
