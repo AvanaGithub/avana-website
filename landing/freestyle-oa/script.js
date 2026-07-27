@@ -172,12 +172,31 @@
         }, 2000);
     }
 
+    /* ---------- Mobile menu toggle for header nav ---------- */
+    function initMenuToggle() {
+        const btn = document.getElementById('menu-toggle');
+        const nav = document.getElementById('site-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', () => {
+            const open = nav.classList.toggle('is-open');
+            btn.classList.toggle('is-open', open);
+            btn.setAttribute('aria-expanded', String(open));
+        });
+        // close on link click (mobile UX)
+        nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            nav.classList.remove('is-open');
+            btn.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+        }));
+    }
+
     function init() {
         initFaq();
         initWhatsApp();
         initSmoothScroll();
         initTestimonials();
         initHeroSlider();
+        initMenuToggle();
     }
 
     if (document.readyState === 'loading') {
