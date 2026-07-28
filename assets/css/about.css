@@ -57,15 +57,16 @@
 }
 .about-hero__desc {
     font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: #e0d8cd;
     max-width: 620px;
     line-height: 1.7;
+    opacity: 0.92;
 }
 .about-hero__bar {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     height: 6px;
-    background: linear-gradient(90deg, var(--color-accent) 0%, #d4a96a 50%, var(--color-accent) 100%);
+    background: linear-gradient(90deg, var(--color-accent) 0%, #e0d8cd 50%, var(--color-accent) 100%);
 }
 
 /* =================== INTRO =================== */
@@ -504,13 +505,13 @@
     width: 22px;
     height: 22px;
     border-radius: 4px;
-    color: #0A66C2;
-    background: rgba(10, 102, 194, 0.08);
+    color: var(--color-accent);
+    background: rgba(178, 127, 13, 0.10);
     transition: background 0.15s ease, color 0.15s ease;
     text-decoration: none;
 }
 .about-testimonial-card__linkedin:hover {
-    background: #0A66C2;
+    background: var(--color-accent);
     color: #fff;
 }
 .about-testimonial-card__role {
