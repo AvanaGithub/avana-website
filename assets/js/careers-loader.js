@@ -32,7 +32,7 @@
         const meta     = [role.location, role.type, role.experience].filter(Boolean).join(' · ');
         const desc     = role.description ? `<p class="role-card__desc">${escapeHtml(role.description)}</p>` : '';
         const deadline = role.deadline ? `<p class="role-card__deadline">Apply by ${escapeHtml(role.deadline)}</p>` : '';
-        const href     = `mailto:careers@avanasurgical.com?subject=${emailSubject(role)}`;
+        const href     = `mailto:info@avanasurgical.com?subject=${emailSubject(role)}`;
         return `
             <article class="role-card" data-role-id="${escapeHtml(role.id || '')}">
                 ${dept}
