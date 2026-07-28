@@ -245,33 +245,78 @@
         }
 
         /* ===== LIFE AT AVANA ===== */
-        .life__gallery {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-auto-rows: 180px;
-            gap: 14px;
-            margin-top: 32px;
+        /* ===== LIFE AT AVANA — grouped galleries ===== */
+        .life-groups { display: flex; flex-direction: column; gap: 56px; margin-top: 40px; }
+        .life-group__head {
+            display: flex; align-items: baseline; gap: 14px;
+            margin-bottom: 18px; padding-bottom: 12px;
+            border-bottom: 2px solid rgba(178, 127, 13, 0.15);
         }
-        .life__gallery figure {
-            position: relative; overflow: hidden; border-radius: 12px;
-            margin: 0;
+        .life-group__title {
+            font-size: 1.4rem; font-weight: 700; color: var(--color-primary);
+            font-family: 'Fira Sans', Georgia, serif; margin: 0;
         }
-        .life__gallery figure:nth-child(1) { grid-column: span 3; grid-row: span 2; }
-        .life__gallery figure:nth-child(2) { grid-column: span 3; grid-row: span 1; }
-        .life__gallery figure:nth-child(3) { grid-column: span 2; grid-row: span 1; }
-        .life__gallery figure:nth-child(4) { grid-column: span 1; grid-row: span 1; }
-        .life__gallery figure:nth-child(5) { grid-column: span 3; grid-row: span 1; }
-        .life__gallery figure:nth-child(6) { grid-column: span 3; grid-row: span 1; }
-        .life__gallery img {
+        .life-group__count {
+            font-size: 0.78rem; font-weight: 700; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--color-accent);
+            padding: 3px 10px; background: rgba(178, 127, 13, 0.10);
+            border-radius: 999px;
+        }
+        .life-group__gallery { display: grid; gap: 14px; }
+        .life-group--3 .life-group__gallery { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 240px; }
+        .life-group--4 .life-group__gallery { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 220px; }
+        .life-group--5 .life-group__gallery { grid-template-columns: repeat(5, 1fr); grid-auto-rows: 200px; }
+        .life-group__gallery figure {
+            position: relative; overflow: hidden;
+            border-radius: 12px; margin: 0;
+            box-shadow: 0 6px 18px rgba(36, 52, 71, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .life-group__gallery figure:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 32px rgba(36, 52, 71, 0.14);
+        }
+        .life-group__gallery img {
             width: 100%; height: 100%; object-fit: cover; display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
         }
-        .life__gallery figure:hover img { transform: scale(1.05); }
-        .life__gallery figcaption {
+        .life-group__gallery figure:hover img { transform: scale(1.06); }
+        .life-group__gallery figcaption {
             position: absolute; left: 0; right: 0; bottom: 0;
-            padding: 14px 16px 12px;
-            font-size: 0.85rem; color: var(--color-white); font-weight: 500;
-            background: linear-gradient(180deg, transparent 0%, rgba(36,52,71,0.75) 100%);
+            padding: 22px 16px 14px;
+            font-size: 0.82rem; color: var(--color-white); font-weight: 500;
+            background: linear-gradient(180deg, transparent 0%, rgba(36, 52, 71, 0.85) 100%);
+            transform: translateY(6px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .life-group__gallery figure:hover figcaption {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        /* First tile in each group can take a subtle mustard accent border */
+        .life-group__gallery figure::after {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            border: 2px solid transparent; border-radius: 12px;
+            transition: border-color 0.3s ease;
+        }
+        .life-group__gallery figure:hover::after { border-color: rgba(178, 127, 13, 0.45); }
+        @media (max-width: 900px) {
+            .life-group--3 .life-group__gallery,
+            .life-group--4 .life-group__gallery,
+            .life-group--5 .life-group__gallery {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 180px;
+            }
+        }
+        @media (max-width: 520px) {
+            .life-group--3 .life-group__gallery,
+            .life-group--4 .life-group__gallery,
+            .life-group--5 .life-group__gallery {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 220px;
+            }
+            .life-group__gallery figcaption { opacity: 1; transform: none; }
         }
 
         /* ===== OPEN ROLES ===== */
@@ -571,55 +616,104 @@
             <h2 class="section__title">Life at Avana.</h2>
             <p class="section__lead">Our culture is built through the moments we share &mdash; industry conferences, annual awards, team celebrations and sports days, alongside the everyday collaboration that defines how we work. Here is a look at life inside Avana.</p>
 
-            <div class="life__gallery">
-                <figure>
-                    <img src="/images/life-at-avana/award-night.jpg" alt="Avana team annual awards night" loading="lazy">
-                    <figcaption>Annual awards night</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/great-place-to-work-cake.jpeg" alt="Great Place to Work certification celebration" loading="lazy">
-                    <figcaption>Great Place to Work celebration</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/aam-2026.jpg" alt="Avana annual meet 2026 group photo" loading="lazy">
-                    <figcaption>Annual meet 2026</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/aam-2026-1.jpg" alt="Avana team at the annual meet" loading="lazy">
-                    <figcaption>Annual meet — team moments</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/conference-3.jpg" alt="Avana at a surgical conference" loading="lazy">
-                    <figcaption>Industry conference</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/conference-2.jpg" alt="Avana team representing at a national conference" loading="lazy">
-                    <figcaption>Conference presence</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/conference-6.jpg" alt="Avana team engaging with surgeons at a conference" loading="lazy">
-                    <figcaption>Meeting surgeons on the floor</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/sports.jpg" alt="Avana team sports day" loading="lazy">
-                    <figcaption>Sports day</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/office-celebration.jpg" alt="Avana office celebration" loading="lazy">
-                    <figcaption>Office celebrations</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/cake-cutting.jpeg" alt="Avana team cake-cutting celebration" loading="lazy">
-                    <figcaption>Milestones &amp; birthdays</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/kerala-hospital.jpg" alt="Avana team at a hospital in Kerala" loading="lazy">
-                    <figcaption>Hospital &amp; field visits</figcaption>
-                </figure>
-                <figure>
-                    <img src="/images/life-at-avana/aam-2026-3.jpg" alt="Avana annual meet celebration moment" loading="lazy">
-                    <figcaption>Celebrating together</figcaption>
-                </figure>
+            <div class="life-groups">
+
+                <!-- Group 1: Annual Meet -->
+                <div class="life-group life-group--3">
+                    <div class="life-group__head">
+                        <h3 class="life-group__title">Annual Meet</h3>
+                        <span class="life-group__count">3 moments</span>
+                    </div>
+                    <div class="life-group__gallery">
+                        <figure>
+                            <img src="/images/life-at-avana/aam-2026.jpg" alt="Avana annual meet 2026 group photo" loading="lazy">
+                            <figcaption>Annual meet 2026 — the whole team</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/aam-2026-1.jpg" alt="Avana team moments at annual meet" loading="lazy">
+                            <figcaption>Team moments off-stage</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/aam-2026-3.jpg" alt="Avana annual meet celebration moment" loading="lazy">
+                            <figcaption>Celebrating another year together</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Group 2: At Industry Conferences -->
+                <div class="life-group life-group--5">
+                    <div class="life-group__head">
+                        <h3 class="life-group__title">At Industry Conferences</h3>
+                        <span class="life-group__count">5 events</span>
+                    </div>
+                    <div class="life-group__gallery">
+                        <figure>
+                            <img src="/images/life-at-avana/conference-2.jpg" alt="Avana team representing at a national conference" loading="lazy">
+                            <figcaption>National orthopaedic conference</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/conference-3.jpg" alt="Avana at a surgical conference" loading="lazy">
+                            <figcaption>Surgical conference booth</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/conference-4.jpg" alt="Avana team engaging with delegates" loading="lazy">
+                            <figcaption>Meeting delegates</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/conference-6.jpg" alt="Avana team engaging with surgeons at a conference" loading="lazy">
+                            <figcaption>Talking with surgeons on the floor</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/conference-7.jpg" alt="Avana team at industry event" loading="lazy">
+                            <figcaption>Industry event coverage</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Group 3: Awards & Culture -->
+                <div class="life-group life-group--3">
+                    <div class="life-group__head">
+                        <h3 class="life-group__title">Awards &amp; Culture</h3>
+                        <span class="life-group__count">2 milestones</span>
+                    </div>
+                    <div class="life-group__gallery">
+                        <figure>
+                            <img src="/images/life-at-avana/award-night.jpg" alt="Avana team annual awards night" loading="lazy">
+                            <figcaption>Annual awards night</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/great-place-to-work-cake.jpeg" alt="Great Place to Work certification celebration cake" loading="lazy">
+                            <figcaption>Great Place to Work celebration</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <!-- Group 4: Celebrations & Team Life -->
+                <div class="life-group life-group--4">
+                    <div class="life-group__head">
+                        <h3 class="life-group__title">Celebrations &amp; Team Life</h3>
+                        <span class="life-group__count">4 moments</span>
+                    </div>
+                    <div class="life-group__gallery">
+                        <figure>
+                            <img src="/images/life-at-avana/office-celebration.jpg" alt="Avana office celebration" loading="lazy">
+                            <figcaption>Office celebrations</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/cake-cutting.jpeg" alt="Avana team cake-cutting celebration" loading="lazy">
+                            <figcaption>Milestones &amp; birthdays</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/sports.jpg" alt="Avana team sports day" loading="lazy">
+                            <figcaption>Sports day</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="/images/life-at-avana/kerala-hospital.jpg" alt="Avana team at a hospital in Kerala" loading="lazy">
+                            <figcaption>Hospital &amp; field visits</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
