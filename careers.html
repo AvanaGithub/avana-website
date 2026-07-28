@@ -174,6 +174,18 @@
             color: var(--color-accent);
         }
         .award-card__icon svg { width: 30px; height: 30px; }
+        .award-card__badge {
+            flex-shrink: 0;
+            width: 96px; height: 96px;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--color-white);
+            border-radius: 10px;
+            padding: 6px;
+        }
+        .award-card__badge img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain; display: block;
+        }
         .award-card__label {
             font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
             text-transform: uppercase; color: var(--color-accent);
@@ -469,10 +481,11 @@
             <div class="careers-hero__inner">
                 <div>
                     <span class="careers-hero__eyebrow">Careers at Avana</span>
-                    <h1 class="careers-hero__title">Build the next decade of <span>Indian medical devices</span> with us.</h1>
-                    <p class="careers-hero__subline">Avana Surgical Systems is a Chennai-based specialist team distributing Breg, Aspen Medical, and RIWO Spine across India. We are the market leader in endoscopic spine surgery with 250+ installations, and we are building the orthotics category from the ground up. We are profitable, founder-led, and growing. We are hiring people who want their work to mean something and want to be paid properly for it. Both. Not one or the other.</p>
+                    <h1 class="careers-hero__title">Build your career in <span>Indian medical devices</span>.</h1>
+                    <p class="careers-hero__subline">Avana Surgical Systems is a Chennai-based specialist distributor of orthopaedic and spine solutions. Since 2009, we have partnered with over 500 surgeons and supported more than one lakh patients across India.</p>
+                    <p class="careers-hero__subline">We are the market leader in endoscopic spine surgery with 250+ installations nationwide, and we continue to grow the orthotic bracing category in India. We are looking for professionals who want to build long-term careers with a specialist organisation.</p>
                     <div class="careers-hero__ctas">
-                        <a href="#open-roles" class="btn btn--primary">Explore open roles &rarr;</a>
+                        <a href="#open-roles" class="btn btn--primary">View open roles &rarr;</a>
                         <a href="mailto:info@avanasurgical.com" class="btn btn--outline">Talk to us</a>
                     </div>
                 </div>
@@ -488,30 +501,18 @@
         <div class="container">
             <div class="awards__grid">
                 <div class="award-card">
-                    <div class="award-card__icon" aria-hidden="true">
-                        <!-- trophy svg -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Great Place to Work trophy">
-                            <path d="M7 4h10v4a5 5 0 0 1-10 0V4z"/>
-                            <path d="M17 5h3v2a3 3 0 0 1-3 3"/>
-                            <path d="M7 5H4v2a3 3 0 0 0 3 3"/>
-                            <path d="M10 14h4v3h-4z"/>
-                            <path d="M8 21h8"/>
-                            <path d="M12 17v4"/>
-                        </svg>
+                    <div class="award-card__badge">
+                        <img src="/images/careers/greate-place-to-work-certificate.jpg" alt="Great Place to Work — Certified · Jan 2026 – Jan 2027 · India" loading="lazy">
                     </div>
                     <div>
                         <div class="award-card__label">Recognition</div>
                         <div class="award-card__title">Great Place to Work &mdash; Certified</div>
-                        <div class="award-card__note">Certified 2026 &middot; Independently assessed workplace culture</div>
+                        <div class="award-card__note">Jan 2026 &ndash; Jan 2027 &middot; Independently assessed workplace culture</div>
                     </div>
                 </div>
                 <div class="award-card">
-                    <div class="award-card__icon" aria-hidden="true">
-                        <!-- badge/shield svg -->
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="ISO 13485 quality certification badge">
-                            <path d="M12 2l8 3v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V5l8-3z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
+                    <div class="award-card__badge">
+                        <img src="/images/careers/ISO-image.png" alt="ISO 13485:2016 certified — medical device quality management standard" loading="lazy">
                     </div>
                     <div>
                         <div class="award-card__label">Quality</div>
@@ -567,33 +568,57 @@
     <section class="section section--white">
         <div class="container">
             <span class="section__eyebrow">Life at Avana</span>
-            <h2 class="section__title">A team, a school, and a family.</h2>
-            <p class="section__lead">Conferences, celebrations, milestones, and the everyday moments in between &mdash; here&rsquo;s a snapshot of what working here actually looks like.</p>
+            <h2 class="section__title">Life at Avana.</h2>
+            <p class="section__lead">Our culture is built through the moments we share &mdash; industry conferences, annual awards, team celebrations and sports days, alongside the everyday collaboration that defines how we work. Here is a look at life inside Avana.</p>
 
             <div class="life__gallery">
                 <figure>
-                    <img src="/images/life-at-avana/award-night.jpg" alt="Avana team award night">
+                    <img src="/images/life-at-avana/award-night.jpg" alt="Avana team annual awards night" loading="lazy">
                     <figcaption>Annual awards night</figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/life-at-avana/great-place-to-work-cake.jpeg" alt="Great Place to Work certification celebration">
+                    <img src="/images/life-at-avana/great-place-to-work-cake.jpeg" alt="Great Place to Work certification celebration" loading="lazy">
                     <figcaption>Great Place to Work celebration</figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/life-at-avana/conference-3.jpg" alt="Avana at a surgical conference">
+                    <img src="/images/life-at-avana/aam-2026.jpg" alt="Avana annual meet 2026 group photo" loading="lazy">
+                    <figcaption>Annual meet 2026</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/aam-2026-1.jpg" alt="Avana team at the annual meet" loading="lazy">
+                    <figcaption>Annual meet — team moments</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/conference-3.jpg" alt="Avana at a surgical conference" loading="lazy">
                     <figcaption>Industry conference</figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/life-at-avana/sports.jpg" alt="Avana team sports day">
+                    <img src="/images/life-at-avana/conference-2.jpg" alt="Avana team representing at a national conference" loading="lazy">
+                    <figcaption>Conference presence</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/conference-6.jpg" alt="Avana team engaging with surgeons at a conference" loading="lazy">
+                    <figcaption>Meeting surgeons on the floor</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/sports.jpg" alt="Avana team sports day" loading="lazy">
                     <figcaption>Sports day</figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/life-at-avana/office-celebration.jpg" alt="Avana office celebration">
-                    <figcaption>Office celebration</figcaption>
+                    <img src="/images/life-at-avana/office-celebration.jpg" alt="Avana office celebration" loading="lazy">
+                    <figcaption>Office celebrations</figcaption>
                 </figure>
                 <figure>
-                    <img src="/images/life-at-avana/aam-2026.jpg" alt="Avana annual meet 2026">
-                    <figcaption>Annual meet 2026</figcaption>
+                    <img src="/images/life-at-avana/cake-cutting.jpeg" alt="Avana team cake-cutting celebration" loading="lazy">
+                    <figcaption>Milestones &amp; birthdays</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/kerala-hospital.jpg" alt="Avana team at a hospital in Kerala" loading="lazy">
+                    <figcaption>Hospital &amp; field visits</figcaption>
+                </figure>
+                <figure>
+                    <img src="/images/life-at-avana/aam-2026-3.jpg" alt="Avana annual meet celebration moment" loading="lazy">
+                    <figcaption>Celebrating together</figcaption>
                 </figure>
             </div>
         </div>
