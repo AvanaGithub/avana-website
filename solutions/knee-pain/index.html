@@ -30,6 +30,214 @@
         --zsiqf-custom-bg:       #b27f0d !important;
         --zsiqf-cw-bg-color:     #b27f0d !important;
       }
+
+      /* ============================================================
+         KNEE CONDITIONS SECTION — detailed 2-column condition cards
+         Namespaced under .knee-conditions to avoid clashing with
+         the existing .condition-card grid further down the page.
+         ============================================================ */
+      .knee-conditions {
+        padding: 80px 0;
+        background: #ffffff;
+      }
+      .knee-conditions__head {
+        max-width: 780px;
+        margin: 0 auto 56px;
+        text-align: center;
+      }
+      .knee-conditions__title {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 3.2vw, 2.6rem);
+        line-height: 1.15;
+        color: #243447;
+        margin: 0 0 16px;
+      }
+      .knee-conditions__lead {
+        font-family: 'Arimo', sans-serif;
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #6C6C6C;
+        margin: 0;
+      }
+      .knee-conditions__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
+
+      /* Card shell */
+      .knee-condition-card {
+        display: grid;
+        grid-template-columns: 55% 45%;
+        gap: 48px;
+        align-items: center;
+        padding: 48px;
+        border: 1px solid rgba(36, 52, 71, 0.08);
+        border-radius: 18px;
+        background: #ffffff;
+        box-shadow: 0 1px 2px rgba(36, 52, 71, 0.03);
+      }
+      .knee-condition-card--alt {
+        background: #f5eddb;
+      }
+      .knee-condition-card--flip .knee-condition-card__content { order: 2; }
+      .knee-condition-card--flip .knee-condition-card__media   { order: 1; }
+
+      /* Text column */
+      .knee-condition-card__content { min-width: 0; }
+      .knee-condition-card__badge {
+        display: inline-block;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 600;
+        font-size: 0.72rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #b27f0d;
+        background: rgba(178, 127, 13, 0.12);
+        padding: 6px 14px;
+        border-radius: 999px;
+        margin-bottom: 18px;
+      }
+      .knee-condition-card__title {
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 700;
+        font-size: clamp(1.5rem, 2.4vw, 1.85rem);
+        line-height: 1.2;
+        color: #243447;
+        margin: 0 0 16px;
+      }
+      .knee-condition-card__desc {
+        font-family: 'Arimo', sans-serif;
+        font-size: 1rem;
+        line-height: 1.65;
+        color: #1F1F1F;
+        margin: 0 0 12px;
+      }
+      .knee-condition-card__benefits {
+        list-style: none;
+        padding: 0;
+        margin: 22px 0 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .knee-condition-card__benefit {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+      .knee-condition-card__benefit-icon {
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+        color: #b27f0d;
+      }
+      .knee-condition-card__benefit-body {
+        font-family: 'Arimo', sans-serif;
+        font-size: 0.98rem;
+        line-height: 1.5;
+        color: #1F1F1F;
+      }
+      .knee-condition-card__benefit-body strong {
+        display: block;
+        font-weight: 700;
+        color: #243447;
+        margin-bottom: 2px;
+      }
+      .knee-condition-card__benefit-body span {
+        display: block;
+        color: #6C6C6C;
+      }
+      .knee-condition-card__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 600;
+        font-size: 0.98rem;
+        color: #b27f0d;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+        transition: border-color 0.2s ease;
+      }
+      .knee-condition-card__cta:hover {
+        border-bottom-color: #b27f0d;
+      }
+
+      /* Media column */
+      .knee-condition-card__media {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .knee-condition-card__image {
+        aspect-ratio: 4 / 3;
+        border: 2px dashed rgba(178, 127, 13, 0.35);
+        background: rgba(178, 127, 13, 0.05);
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 24px;
+        text-align: center;
+      }
+      .knee-condition-card__image-icon {
+        width: 42px;
+        height: 42px;
+        color: rgba(178, 127, 13, 0.5);
+      }
+      .knee-condition-card__image-caption {
+        font-family: 'Arimo', sans-serif;
+        font-size: 0.82rem;
+        color: rgba(178, 127, 13, 0.75);
+        line-height: 1.4;
+      }
+      .knee-condition-card__labels {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .knee-condition-card__label {
+        font-family: 'Arimo', sans-serif;
+        font-size: 0.88rem;
+        line-height: 1.45;
+        color: #6C6C6C;
+        padding-left: 12px;
+        border-left: 2px solid rgba(178, 127, 13, 0.4);
+      }
+      .knee-condition-card__label strong {
+        display: block;
+        font-weight: 700;
+        color: #243447;
+        margin-bottom: 2px;
+      }
+
+      /* Responsive */
+      @media (max-width: 900px) {
+        .knee-condition-card {
+          grid-template-columns: 1fr;
+          gap: 28px;
+          padding: 32px;
+        }
+        .knee-condition-card--flip .knee-condition-card__content { order: 1; }
+        .knee-condition-card--flip .knee-condition-card__media   { order: 2; }
+      }
+      @media (max-width: 600px) {
+        .knee-conditions { padding: 56px 0; }
+        .knee-condition-card { padding: 24px; }
+        .knee-condition-card__image { aspect-ratio: 16 / 9; padding: 16px; }
+        .knee-condition-card__benefits { gap: 10px; }
+        .knee-condition-card__benefit { gap: 10px; }
+      }
     </style>
 
 </head>
@@ -238,6 +446,265 @@
                     <h2 class="pain-section__title" data-bind="whatIs.title"></h2>
                 </header>
                 <div class="prose-block" data-render="whatIs"></div>
+            </div>
+        </section>
+
+        <!-- 1d. KNEE CONDITIONS — detailed 6-card deep-dive section -->
+        <section class="knee-conditions" id="knee-conditions">
+            <div class="container">
+                <header class="knee-conditions__head">
+                    <h2 class="knee-conditions__title">Common Knee Injuries &amp; Conditions</h2>
+                    <p class="knee-conditions__lead">Understanding what's causing your knee pain is the first step to finding the right support.</p>
+                </header>
+
+                <div class="knee-conditions__list">
+
+                    <!-- Card 1 — ACL / Ligament Injury (image right) -->
+                    <article class="knee-condition-card" data-condition="acl-ligament">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Sports Injury</span>
+                            <h3 class="knee-condition-card__title">ACL / Ligament Injury</h3>
+                            <p class="knee-condition-card__desc">The Anterior Cruciate Ligament (ACL) helps stabilize your knee during activities that involve sudden stops, jumps, or changes in direction.</p>
+                            <p class="knee-condition-card__desc">Tears or sprains can cause instability, swelling, and difficulty with movement.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Stabilizes the knee</strong><span>Prevents excessive forward movement of the tibia.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Supports an active lifestyle</strong><span>Essential for sports and daily performance.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Aids in recovery &amp; return to activity</strong><span>Proper support helps regain confidence and strength.</span></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/acl-ligament.png — Anatomical illustration of ACL / Ligament Injury with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="acl-ligament">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — ACL / Ligament Injury</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Torn ACL</strong><span>Loss of stability and support.</span></li>
+                                <li class="knee-condition-card__label"><strong>Meniscus</strong><span>Cartilage that cushions and stabilizes the knee.</span></li>
+                                <li class="knee-condition-card__label"><strong>Tibia (Shin Bone)</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 — General Instability (image left) -->
+                    <article class="knee-condition-card knee-condition-card--alt knee-condition-card--flip" data-condition="general-instability">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Stability &amp; Support</span>
+                            <h3 class="knee-condition-card__title">General Instability</h3>
+                            <p class="knee-condition-card__desc">If your knee 'gives way' or feels unstable during daily activities — even on flat ground — you may have ligament laxity or weakness.</p>
+                            <p class="knee-condition-card__desc">Stability braces help support the knee, improve confidence in movement, and prevent further strain or injury.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Improves Knee Stability</strong><span>Supports weak or stretched ligaments for better control.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Enhances Confidence</strong><span>Helps you move, walk, and climb with confidence.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Prevents Further Injury</strong><span>Reduces the risk of falls and ligament damage.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Supports Active Lifestyle</strong><span>Enables you to stay active and do what you love.</span></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/general-instability.png — Anatomical illustration of General Instability with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="general-instability">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — General Instability</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Lateral Collateral Ligament (LCL)</strong><span>Helps stabilize the outer side of the knee.</span></li>
+                                <li class="knee-condition-card__label"><strong>Medial Collateral Ligament (MCL)</strong><span>Helps stabilize the inner side of the knee.</span></li>
+                                <li class="knee-condition-card__label"><strong>Cruciate Ligaments (ACL &amp; PCL)</strong><span>Help control forward movement and stability.</span></li>
+                                <li class="knee-condition-card__label"><strong>Tibia (Shin Bone)</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 — Meniscus Injury (image right) -->
+                    <article class="knee-condition-card" data-condition="meniscus-injury">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Cartilage Injury</span>
+                            <h3 class="knee-condition-card__title">Meniscus Injury</h3>
+                            <p class="knee-condition-card__desc">The menisci act as shock absorbers between your thigh bone and shin bone. Tears or damage can cause pain, swelling, locking, or difficulty in bending or twisting the knee.</p>
+                            <p class="knee-condition-card__desc">Functional bracing supports the knee, reduces stress on the meniscus, and promotes healing while you stay active.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Protects the Meniscus</strong><span>Limits harmful motion and reduces further damage.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Reduces Pain &amp; Swelling</strong><span>Helps relieve discomfort and inflammation.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Supports Healing</strong><span>Encourages natural recovery and tissue repair.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Restores Function</strong><span>Helps you return to daily activities with confidence.</span></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/meniscus-injury.png — Anatomical illustration of Meniscus Injury with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="meniscus-injury">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — Meniscus Injury</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Torn Meniscus</strong><span>Damaged cartilage causing pain and instability.</span></li>
+                                <li class="knee-condition-card__label"><strong>Meniscus</strong><span>Cartilage that acts as a cushion and stabilizer.</span></li>
+                                <li class="knee-condition-card__label"><strong>Tibia (Shin Bone)</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 4 — Knee Osteoarthritis (image left) -->
+                    <article class="knee-condition-card knee-condition-card--alt knee-condition-card--flip" data-condition="knee-osteoarthritis">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Osteoarthritis (OA)</span>
+                            <h3 class="knee-condition-card__title">Knee Osteoarthritis</h3>
+                            <p class="knee-condition-card__desc">Wear and tear of the knee cartilage can cause pain, stiffness, and reduced mobility — especially after age 50.</p>
+                            <p class="knee-condition-card__desc">Offloader bracing helps reduce joint load and relieve pain.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Reduces pain</strong></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Improves mobility</strong></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Protects the joint</strong></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/knee-osteoarthritis.png — Anatomical illustration of Knee Osteoarthritis with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="knee-osteoarthritis">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — Knee Osteoarthritis</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Worn Cartilage</strong></li>
+                                <li class="knee-condition-card__label"><strong>Meniscus</strong></li>
+                                <li class="knee-condition-card__label"><strong>Tibia (Shin Bone)</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 5 — Patellofemoral Pain (image right) -->
+                    <article class="knee-condition-card" data-condition="patellofemoral-pain">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Kneecap Pain</span>
+                            <h3 class="knee-condition-card__title">Patellofemoral Pain</h3>
+                            <p class="knee-condition-card__desc">Pain around or behind the kneecap, often during activities like running, climbing stairs, or sitting for long periods.</p>
+                            <p class="knee-condition-card__desc">Patellar tracking braces help improve alignment, reduce pressure, and relieve pain during movement.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Improves Patellar Tracking</strong><span>Helps the kneecap move in proper alignment.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Reduces Pain &amp; Pressure</strong><span>Relieves stress on the kneecap and surrounding tissues.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Enhances Function</strong><span>Supports smoother movement during daily activities.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Prevents Further Irritation</strong><span>Helps reduce the risk of recurring pain.</span></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/patellofemoral-pain.png — Anatomical illustration of Patellofemoral Pain with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="patellofemoral-pain">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — Patellofemoral Pain</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Patella (Kneecap)</strong></li>
+                                <li class="knee-condition-card__label"><strong>Patellofemoral Joint</strong><span>Where the kneecap glides over the femur.</span></li>
+                                <li class="knee-condition-card__label"><strong>Tibia (Shin Bone)</strong></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Card 6 — Post-Surgical Recovery (image left) -->
+                    <article class="knee-condition-card knee-condition-card--alt knee-condition-card--flip" data-condition="post-surgical-recovery">
+                        <div class="knee-condition-card__content">
+                            <span class="knee-condition-card__badge">Post-Surgical Recovery</span>
+                            <h3 class="knee-condition-card__title">Post-Surgical Recovery</h3>
+                            <p class="knee-condition-card__desc">After knee replacement, ACL reconstruction, or arthroscopy, your knee needs the right support to heal safely and effectively.</p>
+                            <p class="knee-condition-card__desc">Controlled motion, cold therapy, and stability support accelerate recovery and help you return to daily life with confidence.</p>
+                            <ul class="knee-condition-card__benefits">
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Promotes healing</strong><span>Supports tissues and reduces strain on the knee.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Reduces swelling &amp; pain</strong><span>Cold therapy helps manage inflammation effectively.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Ensures stability</strong><span>Protects the knee and prevents setbacks.</span></div>
+                                </li>
+                                <li class="knee-condition-card__benefit">
+                                    <svg class="knee-condition-card__benefit-icon" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10.5l3.5 3.5L16 5.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                    <div class="knee-condition-card__benefit-body"><strong>Helps you return to activity</strong><span>Guided support for a safe and steady recovery.</span></div>
+                                </li>
+                            </ul>
+                            <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
+                        </div>
+                        <div class="knee-condition-card__media">
+                            <!-- IMAGE-SLOT: /images/condition/knee/post-surgical-recovery.png — Anatomical illustration of Post-Surgical Recovery with labeled callouts -->
+                            <div class="knee-condition-card__image" data-image-slot="post-surgical-recovery">
+                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                <span class="knee-condition-card__image-caption">Anatomy illustration — Post-Surgical Recovery</span>
+                            </div>
+                            <ul class="knee-condition-card__labels">
+                                <li class="knee-condition-card__label"><strong>Controlled Compression</strong><span>Reduces swelling and inflammation.</span></li>
+                                <li class="knee-condition-card__label"><strong>Cold Therapy</strong><span>Soothes pain and speeds up recovery.</span></li>
+                                <li class="knee-condition-card__label"><strong>Hinged Support</strong><span>Protects the knee and allows safe, controlled movement.</span></li>
+                                <li class="knee-condition-card__label"><strong>Stability Straps</strong><span>Provides secure support for confident movement.</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </div>
             </div>
         </section>
 
