@@ -277,6 +277,18 @@
         color: rgba(178, 127, 13, 0.75);
         line-height: 1.4;
       }
+      /* Real image variant — resets the placeholder styling */
+      img.knee-condition-card__image--real {
+        aspect-ratio: 16 / 10;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        padding: 0;
+        border: 1px solid rgba(36, 52, 71, 0.08);
+        background: #ffffff;
+        border-radius: 12px;
+      }
       .knee-condition-card__labels {
         list-style: none;
         padding: 0;
@@ -564,11 +576,8 @@
                             <a href="#products" class="knee-condition-card__cta">Explore Bracing Solutions &rarr;</a>
                         </div>
                         <div class="knee-condition-card__media">
-                            <!-- IMAGE-SLOT: /images/condition/knee/acl-ligament.png — Anatomical illustration of ACL / Ligament Injury with labeled callouts -->
-                            <div class="knee-condition-card__image" data-image-slot="acl-ligament">
-                                <svg class="knee-condition-card__image-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.6"/><circle cx="8.5" cy="9.5" r="1.5" fill="currentColor"/><path d="M21 16l-5-5-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                                <span class="knee-condition-card__image-caption">Anatomy illustration — ACL / Ligament Injury</span>
-                            </div>
+                            <img class="knee-condition-card__image knee-condition-card__image--real" src="/images/condition/knee/acl-ligament.jpg" alt="Anatomical illustration of an ACL / ligament injury — showing femur, torn ACL, meniscus and tibia" loading="lazy">
+
                             <ul class="knee-condition-card__labels">
                                 <li class="knee-condition-card__label"><strong>Femur (Thigh Bone)</strong></li>
                                 <li class="knee-condition-card__label"><strong>Torn ACL</strong><span>Loss of stability and support.</span></li>
