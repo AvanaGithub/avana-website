@@ -513,7 +513,6 @@
                 <article class="condition-card condition-card--enhanced">
                     <a href="${escapeHtml(c.link)}" class="condition-card__media">
                         <img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" loading="lazy">
-                        <span class="condition-card__icon condition-card__icon--overlay">${escapeHtml(c.icon || '+')}</span>
                     </a>
                     <div class="condition-card__body">
                         <h3 class="condition-card__title">${escapeHtml(c.title)}</h3>
