@@ -491,8 +491,14 @@ body.mobile-nav-open { overflow: hidden; }
 .site-header .container {
     display: flex !important;
     justify-content: space-between !important;
-    align-items: flex-end !important;   /* baseline-align nav + CTA with the 'avana' wordmark */
+    align-items: flex-end !important;
     padding-bottom: 6px !important;
+}
+/* Sit nav + CTA slightly ABOVE the logo baseline so they align
+   with the "avana" wordmark rather than the S-loop bottom */
+.site-header .container .main-nav,
+.site-header .container .header-cta {
+    margin-bottom: 13px !important;
 }
 .site-logo {
     font-weight: 700;
