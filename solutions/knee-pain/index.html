@@ -289,6 +289,92 @@
         background: #ffffff;
         border-radius: 12px;
       }
+
+      /* ============================================================
+         Enhanced "Common conditions" cards — prominent image + CTA
+         Overrides the shared .condition-card layout from pain.css
+         only when the card also has .condition-card--enhanced.
+         ============================================================ */
+      .conditions-grid--enhanced {
+        gap: 28px;
+      }
+      .condition-card--enhanced {
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        border: 1px solid rgba(178, 127, 13, 0.35);
+        border-radius: 14px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .condition-card--enhanced:hover {
+        transform: translateY(-6px);
+        border-color: #b27f0d;
+        box-shadow: 0 16px 36px rgba(36, 52, 71, 0.12);
+      }
+      .condition-card__media {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        aspect-ratio: 16 / 10;
+        background: #f5eddb;
+        text-decoration: none;
+      }
+      .condition-card__media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .condition-card--enhanced:hover .condition-card__media img {
+        transform: scale(1.05);
+      }
+      .condition-card__icon--overlay {
+        position: absolute;
+        top: 14px; left: 14px;
+        width: 44px; height: 44px;
+        margin: 0;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.25rem;
+        box-shadow: 0 4px 12px rgba(36, 52, 71, 0.14);
+      }
+      .condition-card__body {
+        padding: 22px 22px 24px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+      .condition-card--enhanced .condition-card__title {
+        margin-bottom: 10px;
+      }
+      .condition-card--enhanced .condition-card__description {
+        margin-bottom: 18px;
+        flex-grow: 1;
+      }
+      .condition-card__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        align-self: flex-start;
+        font-family: 'Fira Sans', sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #b27f0d;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 2px;
+        transition: border-color 0.2s ease, gap 0.2s ease;
+      }
+      .condition-card__cta:hover {
+        border-bottom-color: #b27f0d;
+        gap: 10px;
+      }
       .knee-condition-card__labels {
         list-style: none;
         padding: 0;
@@ -836,41 +922,77 @@
                     <h2 class="pain-section__title" data-bind="conditionsHeading.title">What's behind your knee pain?</h2>
                     <p class="pain-section__lead" data-bind="conditionsHeading.lead">Knee pain rarely has one cause. These are the conditions we most commonly help patients manage with the right support.</p>
                 </header>
-                <div class="conditions-grid" data-render="conditions">
-                <article class="condition-card">
-                    <div class="condition-card__icon">🦴</div>
-                    <h3 class="condition-card__title">Osteoarthritis (OA)</h3>
-                    <p class="condition-card__description">Cartilage wear that causes pain, stiffness, and reduced mobility — especially common after age 50. Offloader bracing can shift load away from the affected compartment.</p>
+                <div class="conditions-grid conditions-grid--enhanced" data-render="conditions">
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/knee-osteoarthritis.jpg" alt="Anatomy illustration of knee osteoarthritis showing cartilage wear" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">🦴</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">Osteoarthritis (OA)</h3>
+                        <p class="condition-card__description">Cartilage wear that causes pain, stiffness, and reduced mobility — especially common after age 50. Offloader bracing can shift load away from the affected compartment.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
-            
-                <article class="condition-card">
-                    <div class="condition-card__icon">⚡</div>
-                    <h3 class="condition-card__title">ACL / Ligament Injury</h3>
-                    <p class="condition-card__description">Sports and accident-related ligament tears that need stability and protection during rehabilitation and return-to-activity.</p>
+
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/acl-ligament.jpg" alt="Anatomy illustration of an ACL / ligament injury in the knee" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">⚡</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">ACL / Ligament Injury</h3>
+                        <p class="condition-card__description">Sports and accident-related ligament tears that need stability and protection during rehabilitation and return-to-activity.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
-            
-                <article class="condition-card">
-                    <div class="condition-card__icon">🏥</div>
-                    <h3 class="condition-card__title">Post-Surgical Recovery</h3>
-                    <p class="condition-card__description">After total knee replacement, ACL reconstruction, or arthroscopy — controlled motion and cold therapy speed safe recovery.</p>
+
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/post-surgical-recovery.jpg" alt="Anatomy illustration of post-surgical knee recovery" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">🏥</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">Post-Surgical Recovery</h3>
+                        <p class="condition-card__description">After total knee replacement, ACL reconstruction, or arthroscopy — controlled motion and cold therapy speed safe recovery.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
-            
-                <article class="condition-card">
-                    <div class="condition-card__icon">🎯</div>
-                    <h3 class="condition-card__title">Patellofemoral Pain</h3>
-                    <p class="condition-card__description">Pain around or behind the kneecap, often during activity. Patellar tracking braces can help relieve pressure.</p>
+
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/patellofemoral-pain.jpg" alt="Anatomy illustration of patellofemoral pain in the kneecap" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">🎯</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">Patellofemoral Pain</h3>
+                        <p class="condition-card__description">Pain around or behind the kneecap, often during activity. Patellar tracking braces can help relieve pressure.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
-            
-                <article class="condition-card">
-                    <div class="condition-card__icon">🩹</div>
-                    <h3 class="condition-card__title">Meniscus Injury</h3>
-                    <p class="condition-card__description">Cartilage tears causing swelling, locking, or pain. Functional bracing supports the knee while it heals.</p>
+
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/meniscus-injury.jpg" alt="Anatomy illustration of a torn meniscus in the knee" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">🩹</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">Meniscus Injury</h3>
+                        <p class="condition-card__description">Cartilage tears causing swelling, locking, or pain. Functional bracing supports the knee while it heals.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
-            
-                <article class="condition-card">
-                    <div class="condition-card__icon">💪</div>
-                    <h3 class="condition-card__title">General Instability</h3>
-                    <p class="condition-card__description">If your knee 'gives way,' even on flat ground, you may benefit from a stability brace tailored to your activity level.</p>
+
+                <article class="condition-card condition-card--enhanced">
+                    <a href="/solutions/knee-pain/acl-injury/" class="condition-card__media">
+                        <img src="/images/condition/knee/general-instability.jpg" alt="Anatomy illustration of general knee instability" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">💪</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">General Instability</h3>
+                        <p class="condition-card__description">If your knee 'gives way,' even on flat ground, you may benefit from a stability brace tailored to your activity level.</p>
+                        <a href="/solutions/knee-pain/acl-injury/" class="condition-card__cta">Learn more →</a>
+                    </div>
                 </article>
             </div>
             </div>
