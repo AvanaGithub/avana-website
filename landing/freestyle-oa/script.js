@@ -85,17 +85,36 @@
                 <p class="doctor-card__quote">&ldquo;${esc(d.quote)}&rdquo;</p>
             </article>`;
     }
+    /* Canonical testimonial card (matches homepage carousel).
+       Freestyle patients have no product image, so the inner
+       collapses to a single content column via the --single-col
+       modifier. Stars row is preserved (they're a signature of this
+       landing page's patient testimonial format). */
     function renderPatientCard(p) {
-        const stars = '★'.repeat(Math.max(0, Math.min(5, Number(p.stars) || 5)));
+        const rawStars = Number(p.stars);
+        const starCount = Number.isFinite(rawStars) ? Math.max(0, Math.min(5, rawStars)) : 5;
+        const starsHtml = `<div class="testimonial-card__stars" aria-label="${starCount} out of 5 stars">${'★'.repeat(starCount)}</div>`;
+        const initial = (p.name || '?').trim().charAt(0).toUpperCase();
+        const avatarNode = p.photo
+            ? `<img class="testimonial-card__avatar" src="${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy">`
+            : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${esc(initial)}</span>`;
         return `
-            <figure class="testimonial-card">
-                ${avatarHtml(p, 'testimonial-card__photo')}
-                <div class="testimonial-card__stars" aria-label="${stars.length} out of 5 stars">${stars}</div>
-                <blockquote class="testimonial-card__quote">&ldquo;${esc(p.quote)}&rdquo;</blockquote>
-                <figcaption class="testimonial-card__author">
-                    ${esc(p.name)}${p.role ? ` <span class="testimonial-card__role">&mdash; ${esc(p.role)}</span>` : ''}
-                </figcaption>
-            </figure>`;
+            <article class="testimonial-card" role="group" aria-roledescription="testimonial">
+                <div class="testimonial-card__inner testimonial-card__inner--single-col">
+                    <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;&ldquo;</div>
+                    <div class="testimonial-card__body">
+                        ${starsHtml}
+                        <p class="testimonial-card__quote">&ldquo;${esc(p.quote)}&rdquo;</p>
+                        <div class="testimonial-card__person">
+                            ${avatarNode}
+                            <div class="testimonial-card__person-text">
+                                <div class="testimonial-card__author">${esc(p.name)}</div>
+                                ${p.role ? `<div class="testimonial-card__role">${esc(p.role)}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>`;
     }
     function initDoctorCarousel(track, totalCards) {
         const prev = document.getElementById('doctor-prev');

@@ -1,0 +1,295 @@
+/* ============================================================
+   AVANA — Canonical Testimonial Card
+   Extracted from index.html's homepage carousel. Loaded by every
+   page that renders patient/product testimonials so a single look
+   applies everywhere. Only the CARD is standardised here — each
+   page keeps its own wrapper (carousel or grid).
+
+   Falls back gracefully when the data is missing fields:
+     - no productImage  -> right column omitted, inner is 1-col
+     - no avatar/photo  -> initial-letter fallback circle
+     - no stars         -> stars row simply not rendered
+     - `testimonial` OR `quote`  both are supported by renderers
+   ============================================================ */
+
+/* Card + inner (2-column: text left, product image right) */
+.testimonial-card {
+    min-width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+.testimonial-card__inner {
+    background-color: var(--color-white, #fff);
+    border-radius: 20px;
+    padding: 40px 44px;
+    box-shadow: 0 12px 40px rgba(36, 52, 71, 0.08);
+    border: 1px solid var(--color-border, #d9d9d9);
+    position: relative;
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 40px;
+    align-items: center;
+    overflow: hidden;
+    text-align: left;
+}
+/* Applied by JS when the testimonial has no product image — the
+   card then collapses to a single content column (still canonical
+   look; just no right-hand product tile). */
+.testimonial-card__inner--single-col {
+    grid-template-columns: 1fr;
+}
+
+.testimonial-card__body {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* Decorative ghost quote-mark, top-right */
+.testimonial-card__quote-mark {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-family: 'Fira Sans', Georgia, serif;
+    font-size: 5.5rem;
+    line-height: 0.6;
+    color: var(--color-accent, #b27f0d);
+    opacity: 0.14;
+    letter-spacing: -0.05em;
+    pointer-events: none;
+}
+
+/* Badges row (category + product pills) */
+.testimonial-card__badges {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+.testimonial-card__badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+.testimonial-card__badge--category {
+    background-color: rgba(178, 127, 13, 0.12);
+    color: var(--color-accent, #b27f0d);
+}
+.testimonial-card__badge--product {
+    background-color: rgba(36, 52, 71, 0.08);
+    color: var(--color-primary, #243447);
+}
+/* Legacy "location" badge kept for backward-compat with pain-loader
+   data that had no category — same treatment as the product badge. */
+.testimonial-card__badge--location {
+    background-color: rgba(36, 52, 71, 0.08);
+    color: var(--color-primary, #243447);
+}
+
+/* Quote text (italic) */
+.testimonial-card__quote {
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--color-text, #1F1F1F);
+    margin: 0 0 28px;
+    font-style: italic;
+    min-height: calc(1.15rem * 1.55 * 3);
+}
+.testimonial-card__quote--clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.testimonial-card__read-more {
+    background: none;
+    border: 0;
+    padding: 0 0 12px;
+    margin-top: -2px;
+    color: var(--color-accent, #b27f0d);
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+.testimonial-card__read-more:hover { color: var(--color-primary, #243447); }
+.testimonial-card__read-more:focus-visible {
+    outline: 2px solid var(--color-accent, #b27f0d);
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+/* Optional stars row (freestyle-oa patients supply this) */
+.testimonial-card__stars {
+    color: var(--color-accent, #b27f0d);
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Person block (avatar + name + role) — bottom of left column */
+.testimonial-card__person {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: auto;
+    text-align: left;
+}
+.testimonial-card__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(36, 52, 71, 0.12);
+    padding: 0;
+    background: var(--color-accent, #b27f0d);
+}
+.testimonial-card__avatar--fallback {
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+}
+.testimonial-card__person-text { min-width: 0; }
+.testimonial-card__author {
+    font-family: 'Fira Sans', Georgia, serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary, #243447);
+    margin-bottom: 2px;
+}
+.testimonial-card__role {
+    color: var(--color-muted, #6c6c6c);
+    font-size: 0.85rem;
+    display: block;
+    font-weight: 400;
+}
+
+/* Product-image tile (right column of the 2-col card) */
+.testimonial-card__product {
+    background: #f5eddb;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 240px;
+    box-shadow: inset 0 0 0 1px rgba(178, 127, 13, 0.08);
+}
+.testimonial-card__product img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+}
+
+/* Kill legacy pain.css visual details that the canonical card
+   doesn't use (an old "text-align:center", the little bold quote
+   mark, etc.). Wrapping in a scope keeps the rules from touching
+   about-testimonial-card employee cards on about.html. */
+.testimonial-card__inner { text-align: left !important; }
+.testimonial-card__mark { display: none; }  /* replaced by __quote-mark */
+
+/* Homepage carousel controls (adopted by every carousel wrapper) */
+.testimonials__arrow,
+.testimonial-carousel__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-white, #fff);
+    border: 1px solid var(--color-border, #d9d9d9);
+    color: var(--color-primary, #243447);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    z-index: 5;
+    box-shadow: 0 4px 12px rgba(36, 52, 71, 0.08);
+}
+.testimonials__arrow:hover,
+.testimonial-carousel__arrow:hover {
+    background-color: var(--color-accent, #b27f0d);
+    color: var(--color-white, #fff);
+    border-color: var(--color-accent, #b27f0d);
+}
+.testimonials__arrow--prev,
+.testimonial-carousel__arrow--prev { left: -24px; }
+.testimonials__arrow--next,
+.testimonial-carousel__arrow--next { right: -24px; }
+
+.testimonials__dots,
+.testimonial-carousel__dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+.testimonials__dot,
+.testimonial-carousel__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-border, #d9d9d9);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 0;
+}
+.testimonials__dot--active,
+.testimonial-carousel__dot--active {
+    background-color: var(--color-accent, #b27f0d);
+    width: 28px;
+    border-radius: 5px;
+}
+
+/* Mobile: collapse card to single column, shrink the ghost mark */
+@media (max-width: 768px) {
+    .testimonial-card__inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px 24px;
+    }
+    .testimonial-card__product { order: -1; min-height: 180px; }
+    .testimonial-card__product img { max-height: 160px; }
+    .testimonial-card__quote { font-size: 1rem; }
+    .testimonial-card__quote-mark { font-size: 3.5rem; top: 12px; right: 20px; }
+}
+
+@media (max-width: 640px) {
+    .testimonials__arrow,
+    .testimonial-carousel__arrow { width: 40px; height: 40px; }
+    .testimonials__arrow--prev,
+    .testimonial-carousel__arrow--prev { left: -8px; }
+    .testimonials__arrow--next,
+    .testimonial-carousel__arrow--next { right: -8px; }
+    .testimonial-card__inner {
+        padding: 24px 16px;
+        border-radius: 16px;
+    }
+    .testimonial-card__quote-mark {
+        font-size: 2.5rem;
+    }
+    .testimonial-card__quote {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+    .testimonial-card__author { font-size: 0.95rem; }
+    .testimonial-card__role  { font-size: 0.85rem; }
+}

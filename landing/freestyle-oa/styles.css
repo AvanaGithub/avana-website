@@ -584,59 +584,27 @@ img.doctor-card__photo { padding: 0; border: 3px solid var(--color-accent-soft);
     color: var(--color-primary);
 }
 
-/* ===== Testimonial row ===== */
+/* ===== Testimonial row =====
+   Cards themselves are now the canonical 2-column design defined in
+   /assets/css/testimonial-card.css (loaded from index.html). Because
+   they're much wider than the old text-only pucks, we stack them in
+   a single-column vertical list here instead of a 3-across row. */
 .testimonial-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 24px;
     margin-top: 40px;
-    overflow-x: auto;
-    padding-bottom: 8px;
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
 }
-@media (max-width: 900px) {
-    .testimonial-row {
-        grid-auto-flow: column;
-        grid-auto-columns: 85%;
-        grid-template-columns: unset;
-        scroll-snap-type: x mandatory;
-    }
-    .testimonial-card { scroll-snap-align: start; }
-}
-.testimonial-card {
-    background: var(--color-white);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.testimonial-card__photo {
-    width: 96px;
-    height: 96px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 12px;
-    min-height: 96px;
-    padding: 6px;
-}
-img.testimonial-card__photo { padding: 0; border: 3px solid var(--color-accent-soft); }
-.testimonial-card__stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: 12px; font-size: 18px; }
-.testimonial-card__quote {
-    font-size: 15.5px;
-    line-height: 1.6;
-    color: var(--color-text);
-    font-style: italic;
-    margin-bottom: 14px;
-    flex-grow: 1;
-}
-.testimonial-card__author {
-    font-family: 'Fira Sans', sans-serif;
-    font-weight: 600;
-    color: var(--color-primary);
-    font-size: 15px;
-}
+/* Legacy .testimonial-card* rules removed — see testimonial-card.css.
+   Legacy classes still referenced in old markup:
+     .testimonial-card__photo -> superseded by .testimonial-card__avatar
+     .testimonial-card__stars -> unchanged (still emitted by renderer)
+   The initial-letter fallback used by the doctors carousel keeps its
+   own class name (.testimonial-card__photo--initials) — that rule
+   lives above this block and is unaffected. */
 
 /* ===== Videos ===== */
 .video-row {

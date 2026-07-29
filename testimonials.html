@@ -89,13 +89,22 @@
             font-size: 0.98rem;
         }
 
+        /* Grid sized for the canonical 2-column card. Each tile is
+           wide enough to keep the internal text/product columns
+           readable; the card itself collapses to a single column
+           under 768px via its shared responsive rules. */
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
-            max-width: 1100px;
+            grid-template-columns: repeat(auto-fill, minmax(520px, 1fr));
+            gap: 28px;
+            max-width: 1180px;
             margin: 0 auto;
         }
+        @media (max-width: 640px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+        /* Cards inside a grid don't need horizontal card padding */
+        .testimonials-grid .testimonial-card { padding: 0; }
 
         .tm-card {
             background: #fff;

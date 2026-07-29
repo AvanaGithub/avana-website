@@ -57,16 +57,47 @@
         return name + '|' + product;
     }
 
+    /* Canonical testimonial card (matches homepage carousel).
+       Kept in sync with pain-loader.js / solution-loader.js.
+       Grid on this page → cards render as tiles; when a tile has no
+       productImage the inner collapses to a single content column. */
     function renderCard(t) {
-        const badges = [];
-        if (t.product)  badges.push(`<span class="tm-card__badge tm-card__badge--product">${escapeHtml(t.product)}</span>`);
-        if (t.location) badges.push(`<span class="tm-card__badge tm-card__badge--location">${escapeHtml(t.location)}</span>`);
+        const quote = t.testimonial || t.quote || '';
+        const badges = [
+            t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
+            t.product  ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>`   : '',
+            (!t.category && t.location) ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''
+        ].filter(Boolean).join('');
+        const initial = (t.name || '?').trim().charAt(0).toUpperCase();
+        const avatarSrc = t.avatar || t.photo;
+        const avatarHtml = avatarSrc
+            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+            : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
+        const productHtml = t.productImage
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+            : '';
+        const innerClass = productHtml
+            ? 'testimonial-card__inner'
+            : 'testimonial-card__inner testimonial-card__inner--single-col';
+        const meta = [t.location, t.product ? `${escapeHtml(t.product)} User` : '']
+            .filter(Boolean).map(escapeHtml).join(' · ');
         return `
-            <article class="tm-card">
-                <div class="tm-card__mark">"</div>
-                <p class="tm-card__quote">${escapeHtml(t.testimonial || '')}</p>
-                ${badges.length ? `<div class="tm-card__badges">${badges.join('')}</div>` : ''}
-                <div class="tm-card__author">${escapeHtml(t.name || 'Anonymous')}</div>
+            <article class="testimonial-card" role="group" aria-roledescription="testimonial">
+                <div class="${innerClass}">
+                    <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;&ldquo;</div>
+                    <div class="testimonial-card__body">
+                        ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                        <p class="testimonial-card__quote">${escapeHtml(quote)}</p>
+                        <div class="testimonial-card__person">
+                            ${avatarHtml}
+                            <div class="testimonial-card__person-text">
+                                <div class="testimonial-card__author">${escapeHtml(t.name || 'Anonymous')}</div>
+                                ${meta ? `<div class="testimonial-card__role">${meta}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                    ${productHtml}
+                </div>
             </article>`;
     }
 

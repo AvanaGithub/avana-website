@@ -182,6 +182,63 @@
             .replace(/'/g, '&#39;');
     }
 
+    /* ----------------------------------------------------------
+       Canonical testimonial card (mirrors the homepage carousel).
+       Handles data-schema variance across pages: `testimonial` or
+       `quote`, `avatar` or `photo`, and gracefully omits the right-
+       hand product image (single-column) when `productImage` is
+       absent. Also emits an optional stars row + role sub-line for
+       the freestyle-oa patient schema.
+       ---------------------------------------------------------- */
+    function renderCanonicalTestimonial(t, i, threshold) {
+        const isFirst = i === 0;
+        const quote = t.testimonial || t.quote || '';
+        const needsToggle = threshold && quote.length > threshold;
+        const badges = [
+            t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
+            t.product  ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>`   : '',
+            (!t.category && t.location) ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''
+        ].filter(Boolean).join('');
+        const initial = (t.name || '?').trim().charAt(0).toUpperCase();
+        const avatarSrc = t.avatar || t.photo;
+        const avatarHtml = avatarSrc
+            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+            : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
+        const productHtml = t.productImage
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+            : '';
+        const innerClass = productHtml
+            ? 'testimonial-card__inner'
+            : 'testimonial-card__inner testimonial-card__inner--single-col';
+        const starsHtml = (typeof t.stars === 'number' && t.stars > 0)
+            ? `<div class="testimonial-card__stars" aria-label="${t.stars} out of 5 stars">${'★'.repeat(Math.max(0, Math.min(5, t.stars)))}</div>`
+            : '';
+        const roleOrMeta = t.role
+            ? escapeHtml(t.role)
+            : [t.location, t.product ? `${escapeHtml(t.product)} User` : '']
+                .filter(Boolean).map(escapeHtml).join(' · ');
+        return `
+            <article class="testimonial-card" role="${isFirst === undefined ? 'group' : 'tabpanel'}" aria-roledescription="testimonial"${i !== undefined ? ` aria-hidden="${isFirst ? 'false' : 'true'}"` : ''}>
+                <div class="${innerClass}">
+                    <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;&ldquo;</div>
+                    <div class="testimonial-card__body">
+                        ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                        ${starsHtml}
+                        <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                        ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
+                        <div class="testimonial-card__person">
+                            ${avatarHtml}
+                            <div class="testimonial-card__person-text">
+                                <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
+                                ${roleOrMeta ? `<div class="testimonial-card__role">${roleOrMeta}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                    ${productHtml}
+                </div>
+            </article>`;
+    }
+
     // Allow LIMITED markup in long-form SEO content (paragraphs, headings, lists).
     // Strips <script>, on* attributes, javascript: URLs.
     function sanitizeRichHtml(html) {
@@ -765,24 +822,7 @@
             // fit cleanly within the default clamp + reserved min-height.
             const QUOTE_READ_MORE_THRESHOLD = 180;
 
-            track.innerHTML = items.map((t, i) => {
-                const quote = t.testimonial || '';
-                const needsToggle = quote.length > QUOTE_READ_MORE_THRESHOLD;
-                return `
-                <div class="testimonial-card" role="tabpanel" aria-hidden="${i === 0 ? 'false' : 'true'}">
-                    <div class="testimonial-card__inner">
-                        <div class="testimonial-card__mark">"</div>
-                        <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
-                        ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
-                        <div class="testimonial-card__badges">
-                            ${t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''}
-                            ${t.location ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''}
-                        </div>
-                        <div class="testimonial-card__author">— ${escapeHtml(t.name)}</div>
-                    </div>
-                </div>
-            `;
-            }).join('');
+            track.innerHTML = items.map((t, i) => renderCanonicalTestimonial(t, i, QUOTE_READ_MORE_THRESHOLD)).join('');
 
             // Wire Read more / Read less. Stop propagation so the click
             // doesn't interfere with carousel touch/swipe handlers.

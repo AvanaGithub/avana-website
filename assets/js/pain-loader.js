@@ -28,6 +28,59 @@
             .replace(/'/g, '&#39;');
     }
 
+    /* ---- CANONICAL TESTIMONIAL CARD (mirrors homepage carousel).
+       Same helper shipped in solution-loader.js — kept in sync so both
+       loaders render the identical 2-column card. See CSS in
+       /assets/css/testimonial-card.css. --- */
+    function renderCanonicalTestimonial(t, i, threshold) {
+        const isFirst = i === 0;
+        const quote = t.testimonial || t.quote || '';
+        const needsToggle = threshold && quote.length > threshold;
+        const badges = [
+            t.category ? `<span class="testimonial-card__badge testimonial-card__badge--category">${escapeHtml(t.category)}</span>` : '',
+            t.product  ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>`   : '',
+            (!t.category && t.location) ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''
+        ].filter(Boolean).join('');
+        const initial = (t.name || '?').trim().charAt(0).toUpperCase();
+        const avatarSrc = t.avatar || t.photo;
+        const avatarHtml = avatarSrc
+            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+            : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
+        const productHtml = t.productImage
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+            : '';
+        const innerClass = productHtml
+            ? 'testimonial-card__inner'
+            : 'testimonial-card__inner testimonial-card__inner--single-col';
+        const starsHtml = (typeof t.stars === 'number' && t.stars > 0)
+            ? `<div class="testimonial-card__stars" aria-label="${t.stars} out of 5 stars">${'★'.repeat(Math.max(0, Math.min(5, t.stars)))}</div>`
+            : '';
+        const roleOrMeta = t.role
+            ? escapeHtml(t.role)
+            : [t.location, t.product ? `${escapeHtml(t.product)} User` : '']
+                .filter(Boolean).map(escapeHtml).join(' · ');
+        return `
+            <article class="testimonial-card" role="tabpanel" aria-hidden="${isFirst ? 'false' : 'true'}" aria-roledescription="testimonial">
+                <div class="${innerClass}">
+                    <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;&ldquo;</div>
+                    <div class="testimonial-card__body">
+                        ${badges ? `<div class="testimonial-card__badges">${badges}</div>` : ''}
+                        ${starsHtml}
+                        <p class="testimonial-card__quote${needsToggle ? ' testimonial-card__quote--clamped' : ''}">${escapeHtml(quote)}</p>
+                        ${needsToggle ? `<button type="button" class="testimonial-card__read-more" aria-expanded="false">Read more</button>` : ''}
+                        <div class="testimonial-card__person">
+                            ${avatarHtml}
+                            <div class="testimonial-card__person-text">
+                                <div class="testimonial-card__author">${escapeHtml(t.name || '')}</div>
+                                ${roleOrMeta ? `<div class="testimonial-card__role">${roleOrMeta}</div>` : ''}
+                            </div>
+                        </div>
+                    </div>
+                    ${productHtml}
+                </div>
+            </article>`;
+    }
+
     // Allow LIMITED markup in long-form SEO content (paragraphs, headings, lists)
     // Strips <script>, on* attributes, javascript: URLs.
     function sanitizeRichHtml(html) {
@@ -143,19 +196,17 @@
                 return;
             }
 
-            track.innerHTML = items.map((t, i) => `
-                <div class="testimonial-card" role="tabpanel" aria-hidden="${i === 0 ? 'false' : 'true'}">
-                    <div class="testimonial-card__inner">
-                        <div class="testimonial-card__mark">"</div>
-                        <p class="testimonial-card__quote">${escapeHtml(t.testimonial)}</p>
-                        <div class="testimonial-card__badges">
-                            ${t.product ? `<span class="testimonial-card__badge testimonial-card__badge--product">${escapeHtml(t.product)}</span>` : ''}
-                            ${t.location ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''}
-                        </div>
-                        <div class="testimonial-card__author">— ${escapeHtml(t.name)}</div>
-                    </div>
-                </div>
-            `).join('');
+            track.innerHTML = items.map((t, i) => renderCanonicalTestimonial(t, i, 180)).join('');
+            // Wire Read more toggles (matches solution-loader behaviour)
+            track.querySelectorAll('.testimonial-card__read-more').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const q = btn.parentElement.querySelector('.testimonial-card__quote');
+                    const stillClamped = q.classList.toggle('testimonial-card__quote--clamped');
+                    btn.textContent = stillClamped ? 'Read more' : 'Read less';
+                    btn.setAttribute('aria-expanded', String(!stillClamped));
+                });
+            });
 
             dotsWrap.innerHTML = items.map((_, i) => `
                 <button class="testimonial-carousel__dot${i === 0 ? ' testimonial-carousel__dot--active' : ''}" data-idx="${i}" role="tab" aria-label="Go to testimonial ${i + 1}"></button>
