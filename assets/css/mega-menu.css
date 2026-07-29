@@ -494,10 +494,9 @@ body.mobile-nav-open { overflow: hidden; }
     align-items: flex-end !important;
     padding-bottom: 6px !important;
 }
-/* Sit nav + CTA slightly ABOVE the logo baseline so they align
-   with the "avana" wordmark rather than the S-loop bottom */
-.site-header .container .main-nav,
-.site-header .container .header-cta {
+/* Sit nav + CTA slightly BELOW the logo baseline
+   so they line up with where the eye rests below the wordmark */
+.site-header .container .site-logo {
     margin-bottom: 13px !important;
 }
 .site-logo {
