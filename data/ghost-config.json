@@ -9,9 +9,9 @@
       "enabled":        "Set false to keep the existing static placeholder cards (useful before Ghost is live)."
     }
   },
-  "apiUrl":         "https://blog.avanasurgical.com",
-  "contentApiKey":  "",
+  "apiUrl":         "https://preview.avanasurgical.com/blog",
+  "contentApiKey":  "a93fbd4058b280a1d21eebc34c",
   "postsPerPage":   3,
-  "blogUrl":        "https://blog.avanasurgical.com",
-  "enabled":        false
+  "blogUrl":        "https://preview.avanasurgical.com/blog",
+  "enabled":        true
 }
