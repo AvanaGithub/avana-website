@@ -190,6 +190,23 @@
        absent. Also emits an optional stars row + role sub-line for
        the freestyle-oa patient schema.
        ---------------------------------------------------------- */
+    // Auto-map real patient photos + product photos when JSON doesn't
+    // set them explicitly. Add new entries here as photos are added.
+    const NAME_AVATARS = {
+        'walid abedin':    '/images/testimonial-patient/testimonial-Walid-Abedin.png',
+        'uma thyagaraj':   '/images/testimonial-patient/testimonial-Uma-Thyagaraj.png',
+        'radhamani':       '/images/testimonial-patient/testimonial-Radhamani.png',
+        'n. sundar':       '/images/testimonial-patient/testimonial-Sundar.png',
+        'sundar':          '/images/testimonial-patient/testimonial-Sundar.png',
+        'karthick':        '/images/testimonial-patient/testimonial-patient-2.png',
+        'bhuvaneswari t':  '/images/testimonial-patient/testimonial-patient-2.png',
+        'bhuvaneswari':    '/images/testimonial-patient/testimonial-patient-2.png',
+        'senthil':         '/images/testimonial-patient/patient-senthil.png'
+    };
+    const PRODUCT_IMAGES = {
+        'polar care wave': '/images/testimonial-products/polar care wave.png',
+        'freestyle oa':    '/images/testimonial-products/Freestyle.jpg'
+    };
     function renderCanonicalTestimonial(t, i, threshold) {
         const isFirst = i === 0;
         const quote = t.testimonial || t.quote || '';
@@ -200,12 +217,13 @@
             (!t.category && t.location) ? `<span class="testimonial-card__badge testimonial-card__badge--location">${escapeHtml(t.location)}</span>` : ''
         ].filter(Boolean).join('');
         const initial = (t.name || '?').trim().charAt(0).toUpperCase();
-        const avatarSrc = t.avatar || t.photo;
+        const avatarSrc = t.avatar || t.photo || NAME_AVATARS[(t.name || '').toLowerCase().trim()];
         const avatarHtml = avatarSrc
             ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
             : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
-        const productHtml = t.productImage
-            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+        const productImgSrc = t.productImage || PRODUCT_IMAGES[(t.product || '').toLowerCase().trim()];
+        const productHtml = productImgSrc
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(productImgSrc)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
             : '';
         const innerClass = productHtml
             ? 'testimonial-card__inner'
