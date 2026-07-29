@@ -504,13 +504,31 @@
         'conditions': (mount, data) => {
             const items = data.conditions || [];
             if (!items.length) { hideParentSection(mount); return; }
-            mount.innerHTML = items.map(c => `
+            // If ANY condition has image + link, render the enhanced layout for the whole grid.
+            const enhanced = items.some(c => c.image && c.link);
+            if (enhanced) mount.classList.add('conditions-grid--enhanced');
+            mount.innerHTML = items.map(c => {
+                if (c.image && c.link) {
+                    return `
+                <article class="condition-card condition-card--enhanced">
+                    <a href="${escapeHtml(c.link)}" class="condition-card__media">
+                        <img src="${escapeHtml(c.image)}" alt="${escapeHtml(c.title)}" loading="lazy">
+                        <span class="condition-card__icon condition-card__icon--overlay">${escapeHtml(c.icon || '+')}</span>
+                    </a>
+                    <div class="condition-card__body">
+                        <h3 class="condition-card__title">${escapeHtml(c.title)}</h3>
+                        <p class="condition-card__description">${escapeHtml(c.description)}</p>
+                        <a href="${escapeHtml(c.link)}" class="condition-card__cta">Learn more &rarr;</a>
+                    </div>
+                </article>`;
+                }
+                return `
                 <article class="condition-card">
                     <div class="condition-card__icon">${escapeHtml(c.icon || '+')}</div>
                     <h3 class="condition-card__title">${escapeHtml(c.title)}</h3>
                     <p class="condition-card__description">${escapeHtml(c.description)}</p>
-                </article>
-            `).join('');
+                </article>`;
+            }).join('');
         },
 
         // ---- New section renderers (intro / whatIs / symptoms / causes / treatment / whenToSeeDoctor) ----
