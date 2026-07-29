@@ -489,9 +489,10 @@ body.mobile-nav-open { overflow: hidden; }
 }
 .site-header.scrolled { box-shadow: 0 4px 12px rgba(36, 52, 71, 0.1); }
 .site-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;   /* baseline-align nav + CTA with the 'avana' wordmark */
+    padding-bottom: 6px !important;
 }
 .site-logo {
     font-weight: 700;
