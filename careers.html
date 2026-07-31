@@ -438,9 +438,44 @@
         }
         .testimonials .section__eyebrow { color: #e6c66a; }
         .testimonials .section__title { color: var(--color-white); }
+        /* Horizontal-scrolling strip with prev/next arrows.
+           Two cards visible on desktop, one on mobile; snap-scroll
+           feels native. Scrollbar hidden — arrows drive nav. */
+        .testimonials__scroller { position: relative; margin-top: 44px; padding: 0 8px; }
         .testimonials__grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 28px; margin-top: 44px;
+            display: flex;
+            gap: 28px;
+            overflow-x: auto;
+            scroll-snap-type: x proximity;
+            scroll-behavior: smooth;
+            padding: 4px 4px 12px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .testimonials__grid::-webkit-scrollbar { display: none; }
+        .testimonials .quote-card {
+            flex: 0 0 calc(50% - 14px);
+            scroll-snap-align: start;
+        }
+        .testimonials__nav {
+            position: absolute;
+            top: 50%; transform: translateY(-50%);
+            width: 44px; height: 44px;
+            border-radius: 50%; border: 0; cursor: pointer;
+            background: var(--color-accent); color: #fff;
+            font-size: 1.4rem; font-weight: 700; line-height: 1;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+            z-index: 2; transition: background 0.15s, transform 0.15s, opacity 0.2s;
+        }
+        .testimonials__nav:hover { background: #8f6608; transform: translateY(-50%) scale(1.05); }
+        .testimonials__nav[disabled] { opacity: 0.35; cursor: default; }
+        .testimonials__nav--prev { left: -18px; }
+        .testimonials__nav--next { right: -18px; }
+        @media (max-width: 768px) {
+            .testimonials .quote-card { flex: 0 0 88%; }
+            .testimonials__nav--prev { left: 4px; }
+            .testimonials__nav--next { right: 4px; }
         }
         .quote-card {
             background: rgba(255,255,255,0.05);
@@ -474,8 +509,16 @@
             background: var(--color-accent, #b27f0d);
             color: #fff; font-weight: 700; font-size: 1.15rem;
         }
-        .quote-card__name { font-weight: 700; color: var(--color-white); font-size: 0.98rem; }
+        .quote-card__name { font-weight: 700; color: var(--color-white); font-size: 0.98rem; display: inline-flex; align-items: center; gap: 8px; }
         .quote-card__role { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+        .quote-card__linkedin {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 20px; height: 20px; border-radius: 4px;
+            background: #0A66C2; color: #fff; text-decoration: none;
+            font-size: 11px; font-weight: 700; line-height: 1;
+            transition: transform 0.15s;
+        }
+        .quote-card__linkedin:hover { transform: scale(1.1); }
 
         /* ===== FINAL CTA ===== */
         .final-cta { background: var(--color-bg); padding: 80px 0; }
@@ -852,7 +895,7 @@
             <div id="roles-loading" style="color:var(--color-muted);padding:16px 0;">Loading open roles&hellip;</div>
             <div class="roles__grid" id="roles-grid" hidden></div>
             <div id="roles-empty" style="display:none;">
-                <p><strong>No open positions right now.</strong> Check back soon &mdash; or write to <a href="mailto:info@avanasurgical.com" style="color:var(--color-accent);font-weight:600;">info@avanasurgical.com</a> and tell us what you do well.</p>
+                <p><strong>We are not hiring at the moment.</strong> However, feel free to send your resume to <a href="mailto:info@avanasurgical.com" style="color:var(--color-accent);font-weight:600;">info@avanasurgical.com</a>. We will keep it in our database and contact you if a relevant position becomes available in the future.</p>
             </div>
         </div>
     </section>
@@ -894,7 +937,9 @@
             <span class="section__eyebrow">In their words</span>
             <h2 class="section__title">What our team says.</h2>
 
-            <div class="testimonials__grid">
+            <div class="testimonials__scroller">
+              <button type="button" class="testimonials__nav testimonials__nav--prev" id="testimonials-prev" aria-label="Previous testimonial">&lsaquo;</button>
+              <div class="testimonials__grid" id="testimonials-track">
                 <div class="quote-card">
                     <div class="quote-card__mark" aria-hidden="true">&ldquo;</div>
                     <p class="quote-card__body">What makes Avana different is its strong focus on patient recovery, medical education, and customer-centric service. The organization has given me an excellent platform to grow professionally &mdash; and I&rsquo;m proud to be part of a company making a meaningful impact on patients and surgeons across the country.</p>
@@ -923,7 +968,7 @@
                     <div class="quote-card__author">
                         <span class="quote-card__avatar quote-card__avatar--fallback" aria-hidden="true">K</span>
                         <div>
-                            <div class="quote-card__name">Kishore Kumar</div>
+                            <div class="quote-card__name">Kishore Kumar <a class="quote-card__linkedin" href="https://www.linkedin.com/in/kishore-kumar-7892b8190/" target="_blank" rel="noopener" aria-label="Kishore Kumar on LinkedIn">in</a></div>
                             <div class="quote-card__role">Executive &middot; E-commerce</div>
                         </div>
                     </div>
@@ -932,13 +977,15 @@
                     <div class="quote-card__mark" aria-hidden="true">&ldquo;</div>
                     <p class="quote-card__body">At Avana, every employee is empowered to become a future leader. The organization&rsquo;s commitment to continuous learning, transparent leadership, and an open-door culture creates an environment where people are inspired to grow, innovate, and make a meaningful impact.</p>
                     <div class="quote-card__author">
-                        <span class="quote-card__avatar quote-card__avatar--fallback" aria-hidden="true">A</span>
+                        <span class="quote-card__avatar quote-card__avatar--fallback" aria-hidden="true">L</span>
                         <div>
-                            <div class="quote-card__name">Anonymous</div>
+                            <div class="quote-card__name">Lokshni <a class="quote-card__linkedin" href="https://www.linkedin.com/in/lokshni-d-81b386182/" target="_blank" rel="noopener" aria-label="Lokshni on LinkedIn">in</a></div>
                             <div class="quote-card__role">Assistant Manager HR (L&amp;D)</div>
                         </div>
                     </div>
                 </div>
+              </div>
+              <button type="button" class="testimonials__nav testimonials__nav--next" id="testimonials-next" aria-label="Next testimonial">&rsaquo;</button>
             </div>
         </div>
     </section>
@@ -967,5 +1014,36 @@
     <script src="/assets/js/header-behavior.js" defer></script>
     <script src="/assets/js/enquiry-modal.js" defer></script>
     <script src="/assets/js/careers-loader.js" defer></script>
+
+    <!-- Testimonials horizontal scroller: prev/next scroll by one card. -->
+    <script>
+    (function () {
+      function init() {
+        const track = document.getElementById('testimonials-track');
+        const prev  = document.getElementById('testimonials-prev');
+        const next  = document.getElementById('testimonials-next');
+        if (!track || !prev || !next) return;
+        function step() {
+          const card = track.querySelector('.quote-card');
+          if (!card) return 300;
+          const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 28);
+          return card.getBoundingClientRect().width + gap;
+        }
+        function updateDisabled() {
+          const max = track.scrollWidth - track.clientWidth - 2;
+          prev.disabled = track.scrollLeft <= 2;
+          next.disabled = track.scrollLeft >= max;
+        }
+        prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+        next.addEventListener('click', () => track.scrollBy({ left:  step(), behavior: 'smooth' }));
+        track.addEventListener('scroll', updateDisabled, { passive: true });
+        window.addEventListener('resize', updateDisabled);
+        updateDisabled();
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else { init(); }
+    })();
+    </script>
 </body>
 </html>
