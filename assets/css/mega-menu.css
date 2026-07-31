@@ -125,12 +125,32 @@
     height: 12px;
 }
 
-.mega-menu__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.mega-menu__inner,
+.site-header .mega-menu__inner {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
     gap: 36px;
     max-width: none;
     padding: 0;
+    align-items: start !important;
+    justify-content: normal !important;
+}
+
+/* ============================================================
+   Back-to-top button — canonical position across all pages.
+   Sits above the Zoho chat widget (bottom-right) so users see it.
+   Overrides any page-local inline .back-to-top rules.
+   ============================================================ */
+.back-to-top {
+    bottom: 96px !important;
+    right: 12px !important;
+    z-index: 999999 !important;
+}
+@media (max-width: 640px) {
+    .back-to-top {
+        bottom: 88px !important;
+        right: 12px !important;
+    }
 }
 
 .mega-menu__col {
@@ -488,7 +508,7 @@ body.mobile-nav-open { overflow: hidden; }
     transition: box-shadow 0.3s;
 }
 .site-header.scrolled { box-shadow: 0 4px 12px rgba(36, 52, 71, 0.1); }
-.site-header .container {
+.site-header > .container {
     display: flex !important;
     justify-content: space-between !important;
     align-items: flex-end !important;
@@ -496,7 +516,7 @@ body.mobile-nav-open { overflow: hidden; }
 }
 /* Sit nav + CTA slightly BELOW the logo baseline
    so they line up with where the eye rests below the wordmark */
-.site-header .container .site-logo {
+.site-header > .container > .site-logo {
     margin-bottom: 13px !important;
 }
 .site-logo {
