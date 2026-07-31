@@ -1865,6 +1865,16 @@
             animation: heroBgDrift 24s ease-in-out infinite alternate;
             backface-visibility: hidden;
         }
+        /* On narrow viewports the wide desktop hero crops the people
+           (right ~30% of the image) out of view. Shift focal point
+           right + disable the drift animation so subjects stay visible. */
+        @media (max-width: 768px) {
+            .hero--bg .hero__bg img {
+                object-position: 78% center;
+                animation: none;
+                transform: translateZ(0) scale(1);
+            }
+        }
         @keyframes heroBgDrift {
             from { transform: translateZ(0) scale(1.04); }
             to   { transform: translateZ(0) scale(1.1) translateX(-1%); }
