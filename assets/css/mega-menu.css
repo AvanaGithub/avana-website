@@ -436,7 +436,10 @@
     .main-nav,
     .header-cta { display: none; }
     .mobile-menu-toggle { display: flex; }
-    .top-bar__left { display: none; }
+    /* !important needed because the base .top-bar__left rule below in this
+       file overrides the media-query rule due to same specificity + later
+       source order. Hides email/phone from the top-bar on mobile. */
+    .top-bar__left { display: none !important; }
     .top-bar .container { justify-content: center; }
 }
 
