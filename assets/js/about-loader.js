@@ -285,9 +285,10 @@
         parent.querySelectorAll('.about-testimonials-nav, .about-testimonials-dots').forEach(n => n.remove());
 
         const cardsHtml = items.map(t => {
+            const initial = (t.name || '?').trim().charAt(0).toUpperCase();
             const avatarContent = t.avatar
                 ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy">`
-                : `<span>💬</span>`;
+                : `<span class="about-testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
 
             const { fullHtml, previewHtml, needsToggle } = buildQuoteBlocks(t.quote);
 
