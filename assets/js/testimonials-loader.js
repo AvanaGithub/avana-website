@@ -17,28 +17,15 @@
     'use strict';
 
     // -------------------------------------------------------------
-    // Source list. Every entry maps to data/{path}.json.
-    // The "audience": "surgeon" marker tells us to file the
-    // testimonial under the Surgeon grid instead of Patient.
+    // Source list.
+    // Patients: the same curated /testimonials.json the homepage
+    // uses, so cards match the homepage design exactly (avatar +
+    // productImage → 2-col layout with product tile).
+    // Surgeons: audience-page JSON, filed under the Surgeon grid.
     // -------------------------------------------------------------
     const SOURCES = [
-        // Pain areas
-        { url: '/data/pain-areas/knee.json' },
-        { url: '/data/pain-areas/spine.json' },
-        { url: '/data/pain-areas/shoulder.json' },
-        { url: '/data/pain-areas/elbow.json' },
-        { url: '/data/pain-areas/foot.json' },
-        { url: '/data/pain-areas/hip.json' },
-        // Audiences
-        { url: '/data/audiences/seniors.json' },
-        { url: '/data/audiences/back-pain.json' },
-        { url: '/data/audiences/recovering-from-surgery.json' },
+        { url: '/testimonials.json', root: 'array' },
         { url: '/data/audiences/surgeon.json', audience: 'surgeon' },
-        // Conditions
-        { url: '/data/conditions/osteoarthritis.json' },
-        { url: '/data/conditions/post-surgery-recovery.json' },
-        { url: '/data/conditions/cold-therapy.json' },
-        { url: '/data/conditions/spine-support.json' },
     ];
 
     function escapeHtml(s) {
@@ -136,7 +123,9 @@
                 const res = await fetch(src.url, { cache: 'no-cache' });
                 if (!res.ok) return;
                 const data = await res.json();
-                const list = Array.isArray(data.testimonials) ? data.testimonials : [];
+                const list = (src.root === 'array' && Array.isArray(data))
+                    ? data
+                    : (Array.isArray(data.testimonials) ? data.testimonials : []);
                 const bucket = (src.audience === 'surgeon') ? surgeonMap : patientMap;
                 list.forEach(t => {
                     if (!t || !t.testimonial) return;
