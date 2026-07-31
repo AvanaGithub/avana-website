@@ -67,14 +67,14 @@
       "name": "P. Sundararajan",
       "title": "Managing Director",
       "subtitle": "Avana Group of Companies",
-      "photo": "/images/about/sundar.webp",
+      "photo": "/images/about/sundar-director.png",
       "bio": ""
     },
     {
       "name": "Vivekananda Mani",
       "title": "Director",
       "subtitle": "Avana Surgical Systems Pvt Ltd",
-      "photo": "/images/about/vivek.jpeg",
+      "photo": "/images/about/vivek-director.png",
       "bio": ""
     }
   ],
@@ -121,13 +121,15 @@
       "name": "Kishore Kumar",
       "role": "Executive · E-commerce",
       "quote": "Working with Avana Group for the past three years has been a wonderful experience. The supportive management, friendly work culture, and strong teamwork make it a great place to grow and contribute.",
-      "avatar": ""
+      "avatar": "/images/employee-testimonials/kishore.jpg",
+      "linkedin": "https://www.linkedin.com/in/kishore-kumar-7892b8190/"
     },
     {
-      "name": "Anonymous",
+      "name": "Lokshni",
       "role": "Assistant Manager HR (L&D)",
       "quote": "At Avana, every employee is empowered to become a future leader. The organization's commitment to continuous learning, transparent leadership, and an open-door culture creates an environment where people are inspired to grow, innovate, and make a meaningful impact.",
-      "avatar": ""
+      "avatar": "/images/employee-testimonials/Lokshni.png",
+      "linkedin": "https://www.linkedin.com/in/lokshni-d-81b386182/"
     }
   ],
 
