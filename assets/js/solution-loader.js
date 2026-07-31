@@ -198,7 +198,7 @@
         'radhamani':       '/images/testimonial-patient/testimonial-Radhamani.png',
         'n. sundar':       '/images/testimonial-patient/testimonial-Sundar.png',
         'sundar':          '/images/testimonial-patient/testimonial-Sundar.png',
-        // 'karthick': male — no photo yet, falls back to initial-letter circle
+        'karthick':        '/images/testimonial-patient/karthick.png',
         'bhuvaneswari t':  '/images/testimonial-patient/testimonial-patient-2.png',
         'bhuvaneswari':    '/images/testimonial-patient/testimonial-patient-2.png',
         'senthil':         '/images/testimonial-patient/patient-senthil.png'
