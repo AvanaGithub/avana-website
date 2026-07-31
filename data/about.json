@@ -14,10 +14,9 @@
 
   "intro": {
     "paragraphs": [
-      "Avana Group is a leading provider of medical devices and solutions, founded in 2009 in Chennai, India. From the very beginning, the company has been guided by three key principles: customer focus, medical education, and employee satisfaction. These principles have played a crucial role in the company's success and growth.",
-      "Since its inception, Avana has seen substantial growth, managing to increase its business by over 30% CAGR. Today, the company has a strong presence across South Asia and continues to expand. In 2018, Avana Group added three more product lines to its portfolio: RIWOspine, Breg Inc, and Aspen Medical Products. This expansion led to the formation of Avana Group as it is known today, with two distinct divisions: Avana Medical Devices Pvt Ltd and Avana Surgical Systems Pvt Ltd.",
-      "At Avana Group, we believe that customer focus, medical education, and employee satisfaction are the key drivers of success. We are committed to providing our customers with the highest quality products and services, and to continuously improving our offerings through ongoing research and development. Our team of dedicated professionals is committed to delivering the best possible outcomes for patients and their families.",
-      "We are proud of our achievements and look forward to continuing our success and growth in the years to come. If you have any questions or would like to learn more about Avana Group, please don't hesitate to contact us."
+      "Avana Group has been building better recovery outcomes for Indian patients since 2009. Founded in Chennai on three principles — customer focus, medical education, and employee satisfaction — we've grown at 30%+ CAGR and now serve over a million patients across South Asia.",
+      "In 2018 Avana Surgical Systems Pvt Ltd joined the group, giving us two operating companies (Avana Medical Devices Pvt Ltd and Avana Surgical Systems Pvt Ltd) across three specialised divisions.",
+      "Today we partner with 500+ Indian surgeons, run cadaver workshops and CME programmes, and are India's market leader in Full Endoscopic Spine Surgery. What hasn't changed since day one: we win when the patient walks out better than they came in."
     ]
   },
 
@@ -25,7 +24,7 @@
     { "value": "2009", "label": "Founded in Chennai" },
     { "value": "30%+", "label": "Annual CAGR Growth" },
     { "value": "2", "label": "Distinct Divisions" },
-    { "value": "1L+", "label": "Patients Helped" }
+    { "value": "1M+", "label": "Patients Helped" }
   ],
 
   "pillars": [
@@ -59,7 +58,7 @@
     { "icon": "🏆", "image": "/images/about/achievements/cagr.png",                "title": "30%+ CAGR", "body": "Consistent business growth since founding in 2009." },
     { "icon": "🌏", "image": "/images/about/achievements/pan-india.png",           "title": "Pan-India Presence", "body": "Strong distribution network across South Asia and growing." },
     { "icon": "🤝", "image": "/images/about/achievements/world-class-partners.png","title": "World-Class Partners", "body": "Exclusive partnerships with Breg Inc, Aspen Medical, and RIWOspine." },
-    { "icon": "🩺", "image": "/images/about/achievements/health.png",              "title": "1 Lakh+ Patients", "body": "Trusted by over a lakh patients and hundreds of Indian surgeons." }
+    { "icon": "🩺", "image": "/images/about/achievements/health.png",              "title": "1 Million+ Patients", "body": "Trusted by over a million patients and hundreds of Indian surgeons." }
   ],
 
   "leadership": [
