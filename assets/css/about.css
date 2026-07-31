@@ -646,3 +646,58 @@
     .about-stat { border-right: 0; }
     .about-stat:nth-child(odd) { border-right: 0; }
 }
+
+/* ===================================================================
+   Awards & recognition strip (mirrors the careers page pattern).
+   Two side-by-side cards showing GPTW + ISO certifications.
+   =================================================================== */
+.about-awards {
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 44px 0;
+}
+.about-awards__grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px; align-items: stretch;
+    max-width: 1080px; margin: 0 auto;
+}
+.about-award-card {
+    display: flex; align-items: center; gap: 20px;
+    padding: 22px 26px;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 10px;
+}
+.about-award-card__badge {
+    flex-shrink: 0;
+    width: 140px; height: 140px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--color-white);
+    border-radius: 10px;
+    padding: 4px;
+}
+.about-award-card__badge img {
+    width: 100%; height: 100%;
+    object-fit: contain; display: block;
+}
+.about-award-card__label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--color-accent);
+    margin-bottom: 4px;
+}
+.about-award-card__title {
+    font-size: 1.05rem; color: var(--color-primary);
+    font-weight: 700; line-height: 1.35;
+}
+.about-award-card__note {
+    font-size: 0.85rem; color: var(--color-muted); margin-top: 2px;
+}
+@media (max-width: 800px) {
+    .about-awards__grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+    .about-award-card__badge { width: 110px; height: 110px; }
+    .about-award-card { padding: 18px 20px; gap: 16px; }
+}
