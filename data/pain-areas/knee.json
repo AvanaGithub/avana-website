@@ -135,10 +135,6 @@
     },
     "faq": [
         {
-            "question": "Will a knee brace cure my osteoarthritis?",
-            "answer": "No. Osteoarthritis is a progressive condition and there is no brace, supplement, or device that reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery. Used together with physiotherapy, weight management, and your doctor's guidance, bracing is one of the most evidence-supported non-surgical options available."
-        },
-        {
             "question": "How long should I wear my knee brace each day?",
             "answer": "It depends on the brace type and your condition. Offloader OA braces are typically worn during weight-bearing activities — walking, working, light exercise — and removed when you rest. Post-surgical braces follow your surgeon's protocol and may be worn most of the day in early recovery. Always follow the wearing schedule your treating doctor recommends."
         },
@@ -157,6 +153,10 @@
         {
             "question": "What if the brace doesn't fit or doesn't help?",
             "answer": "Speak to our specialist team. Sizing issues are usually resolved with a refit. If a brace genuinely isn't right for your condition, we will help you find one that is — or refer you back to your treating physician for a different approach."
+        },
+        {
+            "question": "Will a knee brace cure my osteoarthritis?",
+            "answer": "No. Osteoarthritis is a progressive condition and there is no brace, supplement, or device that reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery. Used together with physiotherapy, weight management, and your doctor's guidance, bracing is one of the most evidence-supported non-surgical options available."
         }
     ],
     "blogHeading": {
