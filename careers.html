@@ -176,15 +176,18 @@
         .award-card__icon svg { width: 30px; height: 30px; }
         .award-card__badge {
             flex-shrink: 0;
-            width: 96px; height: 96px;
+            width: 140px; height: 140px;
             display: flex; align-items: center; justify-content: center;
             background: var(--color-white);
             border-radius: 10px;
-            padding: 6px;
+            padding: 4px;
         }
         .award-card__badge img {
-            max-width: 100%; max-height: 100%;
+            width: 100%; height: 100%;
             object-fit: contain; display: block;
+        }
+        @media (max-width: 640px) {
+            .award-card__badge { width: 110px; height: 110px; }
         }
         .award-card__label {
             font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px;
@@ -581,7 +584,7 @@
                     </div>
                 </div>
                 <div class="careers-hero__image">
-                    <img src="/images/life-at-avana/conference-1.jpg" alt="Avana Surgical team at an industry conference">
+                    <img src="/images/life-at-avana/conference/conference-1.jpg" alt="Avana Surgical team at an industry conference">
                 </div>
             </div>
         </div>
