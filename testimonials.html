@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/pain.css">
     <link rel="stylesheet" href="/assets/css/mega-menu.css">
+    <link rel="stylesheet" href="/assets/css/testimonial-card.css">
     <link rel="stylesheet" href="/assets/css/enquiry-modal.css">
 
     <style>
@@ -106,71 +107,6 @@
         /* Cards inside a grid don't need horizontal card padding */
         .testimonials-grid .testimonial-card { padding: 0; }
 
-        .tm-card {
-            background: #fff;
-            border: 1px solid var(--tm-card-border);
-            border-radius: 14px;
-            padding: 32px 26px 26px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            box-shadow: 0 4px 16px rgba(36, 52, 71, 0.04);
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-        .tm-card:hover {
-            box-shadow: 0 8px 30px rgba(36, 52, 71, 0.10);
-            transform: translateY(-2px);
-        }
-        .testimonials-section--alt .tm-card {
-            background: #fff;
-        }
-
-        .tm-card__mark {
-            font-family: 'Fira Sans', serif;
-            font-size: 4rem;
-            color: var(--tm-accent);
-            line-height: 0.6;
-            margin-bottom: 8px;
-            opacity: 0.6;
-        }
-        .tm-card__quote {
-            font-size: 1rem;
-            color: var(--tm-primary);
-            line-height: 1.7;
-            margin: 0 0 22px;
-            flex: 1;
-        }
-        .tm-card__badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 14px;
-        }
-        .tm-card__badge {
-            font-size: 0.74rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 100px;
-            letter-spacing: 0.02em;
-        }
-        .tm-card__badge--product {
-            background: rgba(178, 127, 13, 0.12);
-            color: var(--tm-accent);
-        }
-        .tm-card__badge--location {
-            background: rgba(31, 31, 31, 0.06);
-            color: var(--tm-muted);
-        }
-        .tm-card__author {
-            font-weight: 700;
-            color: var(--tm-primary);
-            font-size: 0.95rem;
-        }
-        .tm-card__author::before {
-            content: '— ';
-            color: var(--tm-accent);
-        }
-
         .testimonials-loading,
         .testimonials-error {
             text-align: center;
@@ -216,7 +152,6 @@
         @media (max-width: 640px) {
             .testimonials-hero { padding: 56px 0 28px; }
             .testimonials-section { padding: 40px 0 56px; }
-            .tm-card { padding: 26px 22px 22px; }
         }
     </style>
     <!-- Zoho SalesIQ chat widget -->
