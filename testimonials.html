@@ -107,6 +107,37 @@
         /* Cards inside a grid don't need horizontal card padding */
         .testimonials-grid .testimonial-card { padding: 0; }
 
+        /* Uniform card size across the grid: every tile stretches to
+           the tallest row, and the inner fills its tile so backgrounds
+           and shadows are equal even when quote length varies. */
+        .testimonials-grid { grid-auto-rows: 1fr; }
+        .testimonials-grid .testimonial-card,
+        .testimonials-grid .testimonial-card__inner { height: 100%; }
+        .testimonials-grid .testimonial-card__body { display: flex; flex-direction: column; }
+
+        /* Quote clamp — collapsed to 5 lines; JS injects a Read more
+           button per card if the text actually overflows. */
+        .testimonials-grid .testimonial-card__quote.is-clamped {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .tm-read-more {
+            appearance: none;
+            background: none;
+            border: 0;
+            padding: 0;
+            margin: 6px 0 14px;
+            font: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--tm-accent);
+            cursor: pointer;
+            text-align: left;
+        }
+        .tm-read-more:hover { text-decoration: underline; }
+
         .testimonials-loading,
         .testimonials-error {
             text-align: center;
@@ -231,5 +262,41 @@
     <script src="/assets/js/header-behavior.js" defer></script>
     <script src="/assets/js/testimonials-loader.js?v=20260731" defer></script>
     <script src="/assets/js/enquiry-modal.js" defer></script>
+
+    <!-- Read more / less toggle for lengthy testimonials on this page.
+         Clamps every quote to 5 lines; injects a button only when the
+         text actually overflows. Runs after loader renders cards. -->
+    <script>
+    (function () {
+      function attachReadMore() {
+        const quotes = document.querySelectorAll('.testimonials-grid .testimonial-card__quote');
+        if (!quotes.length) return false;
+        quotes.forEach(q => {
+          if (q.dataset.rmProcessed) return;
+          q.dataset.rmProcessed = '1';
+          q.classList.add('is-clamped');
+          // Measure after clamp is applied
+          if (q.scrollHeight - q.clientHeight <= 2) return; // no overflow
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'tm-read-more';
+          btn.textContent = 'Read more';
+          btn.setAttribute('aria-expanded', 'false');
+          q.insertAdjacentElement('afterend', btn);
+          btn.addEventListener('click', () => {
+            const expanded = q.classList.toggle('is-clamped') === false;
+            btn.textContent = expanded ? 'Show less' : 'Read more';
+            btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+          });
+        });
+        return true;
+      }
+      // Cards render async; poll briefly until they appear, then attach.
+      let tries = 0;
+      const iv = setInterval(() => {
+        if (attachReadMore() || ++tries > 40) clearInterval(iv);
+      }, 150);
+    })();
+    </script>
 </body>
 </html>
