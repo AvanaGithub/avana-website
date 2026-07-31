@@ -27,7 +27,7 @@ $avana_main_site = 'https://www.avanasurgical.com';
                         <span class="footer-logo-text">Orthotics Blog</span>
                     </div>
                     <p class="site-footer__desc">
-                        <?php esc_html_e( 'Doctor-recommended orthotics, bracing and pain relief insights from Avana Surgical Systems — trusted by 1 lakh+ patients across India.', 'avana-blog-theme' ); ?>
+                        <?php esc_html_e( 'Doctor-recommended orthotics, bracing and pain relief insights from Avana Surgical Systems — trusted by 1 million+ patients across India.', 'avana-blog-theme' ); ?>
                     </p>
                     <div class="site-footer__contact-info">
                         <a href="mailto:info@avanasurgical.com">📧 info@avanasurgical.com</a>
@@ -104,7 +104,7 @@ $avana_main_site = 'https://www.avanasurgical.com';
                 </div>
                 <div class="trust-item">
                     <span class="trust-item__icon">💬</span>
-                    <span><?php esc_html_e( '1 Lakh+ Patients Trust Us', 'avana-blog-theme' ); ?></span>
+                    <span><?php esc_html_e( '1 Million+ Patients Trust Us', 'avana-blog-theme' ); ?></span>
                 </div>
             </div>
 
