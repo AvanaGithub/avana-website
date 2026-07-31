@@ -56,10 +56,10 @@
   ],
 
   "achievements": [
-    { "icon": "🏆", "title": "30%+ CAGR", "body": "Consistent business growth since founding in 2009." },
-    { "icon": "🌏", "title": "Pan-India Presence", "body": "Strong distribution network across South Asia and growing." },
-    { "icon": "🤝", "title": "World-Class Partners", "body": "Exclusive partnerships with Breg Inc, Aspen Medical, and RIWOspine." },
-    { "icon": "🩺", "title": "1 Lakh+ Patients", "body": "Trusted by over a lakh patients and hundreds of Indian surgeons." }
+    { "icon": "🏆", "image": "/images/about/achievements/world-class.png",         "title": "30%+ CAGR", "body": "Consistent business growth since founding in 2009." },
+    { "icon": "🌏", "image": "/images/about/achievements/pan-india.png",           "title": "Pan-India Presence", "body": "Strong distribution network across South Asia and growing." },
+    { "icon": "🤝", "image": "/images/about/achievements/world-class-partners.png","title": "World-Class Partners", "body": "Exclusive partnerships with Breg Inc, Aspen Medical, and RIWOspine." },
+    { "icon": "🩺", "image": "/images/about/achievements/lakh.png",                "title": "1 Lakh+ Patients", "body": "Trusted by over a lakh patients and hundreds of Indian surgeons." }
   ],
 
   "leadership": [

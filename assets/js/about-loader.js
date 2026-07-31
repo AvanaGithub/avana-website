@@ -84,12 +84,17 @@
         if (!el) return;
         const items = data.achievements || [];
         if (!items.length) { el.closest('.about-section').style.display = 'none'; return; }
-        el.innerHTML = items.map(a => `
+        el.innerHTML = items.map(a => {
+            const media = a.image
+                ? `<img class="about-achievement-card__image" src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)}" loading="lazy" onerror="this.style.display='none'">`
+                : `<span class="about-achievement-card__icon">${escapeHtml(a.icon || '🏆')}</span>`;
+            return `
             <div class="about-achievement-card">
-                <span class="about-achievement-card__icon">${escapeHtml(a.icon || '🏆')}</span>
+                ${media}
                 <h4 class="about-achievement-card__title">${escapeHtml(a.title)}</h4>
                 <p class="about-achievement-card__body">${escapeHtml(a.body)}</p>
-            </div>`).join('');
+            </div>`;
+        }).join('');
     }
 
     function renderLeadership(data) {
