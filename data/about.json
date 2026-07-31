@@ -24,8 +24,8 @@
   "stats": [
     { "value": "2009", "label": "Founded in Chennai" },
     { "value": "30%+", "label": "Annual CAGR Growth" },
-    { "value": "2", "label": "Distinct Divisions" },
-    { "value": "1M+", "label": "Patients Helped" }
+    { "value": "3", "label": "Distinct Divisions" },
+    { "value": "1 Million+", "label": "Patients Helped" }
   ],
 
   "pillars": [
