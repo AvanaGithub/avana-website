@@ -33,8 +33,8 @@ $avana_main_site = 'https://www.avanasurgical.com';
                 <a href="mailto:info@avanasurgical.com" class="top-bar__item">
                     📧 info@avanasurgical.com
                 </a>
-                <a href="tel:04422331061" class="top-bar__item">
-                    📞 044-2233 1061
+                <a href="tel:+919150064620" class="top-bar__item">
+                    📞 +91 91500 64620
                 </a>
             </div>
             <div class="top-bar__right">

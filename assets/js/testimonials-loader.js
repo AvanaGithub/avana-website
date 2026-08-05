@@ -58,10 +58,10 @@
         const initial = (t.name || '?').trim().charAt(0).toUpperCase();
         const avatarSrc = t.avatar || t.photo;
         const avatarHtml = avatarSrc
-            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy" width="60" height="60">`
             : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
         const productHtml = t.productImage
-            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy" width="300" height="300"></div>`
             : '';
         const innerClass = productHtml
             ? 'testimonial-card__inner'

@@ -2270,19 +2270,19 @@
             </div>
             <div class="audience-picker__grid">
                 <a class="audience-picker__card" href="#browse-pain" aria-label="Explore patient and caregiver solutions">
-                    <img class="audience-picker__image" src="/images/navigate/patient-and-caregiver.jpg" alt="Patient with caregiver at home" loading="lazy">
+                    <img width="1024" class="audience-picker__image" src="/images/navigate/patient-and-caregiver.jpg" alt="Patient with caregiver at home" loading="lazy" height="576">
                     <h3 class="audience-picker__title">Patient or Caregiver</h3>
                     <p class="audience-picker__desc">Find support for pain, mobility or post-surgical recovery.</p>
                     <span class="audience-picker__cta">Explore Patient Solutions →</span>
                 </a>
                 <a class="audience-picker__card" href="/for-surgeons" aria-label="Explore surgeon and clinician resources">
-                    <img class="audience-picker__image" src="/images/navigate/surgeons-and-clinicians.jpg" alt="Surgeon reviewing clinical information" loading="lazy">
+                    <img width="1024" class="audience-picker__image" src="/images/navigate/surgeons-and-clinicians.jpg" alt="Surgeon reviewing clinical information" loading="lazy" height="576">
                     <h3 class="audience-picker__title">Surgeon or Clinician</h3>
                     <p class="audience-picker__desc">Access product information, clinical support and training resources.</p>
                     <span class="audience-picker__cta">Explore Clinical Solutions →</span>
                 </a>
                 <a class="audience-picker__card" href="#enquiry" data-audience="hospital" aria-label="Contact our hospital and procurement team">
-                    <img class="audience-picker__image" src="/images/navigate/hospital-and-procurement.jpg" alt="Hospital procurement team meeting" loading="lazy">
+                    <img width="1024" class="audience-picker__image" src="/images/navigate/hospital-and-procurement.jpg" alt="Hospital procurement team meeting" loading="lazy" height="683">
                     <h3 class="audience-picker__title">Hospital or Procurement Team</h3>
                     <p class="audience-picker__desc">Discuss product availability, installations and institutional partnerships.</p>
                     <span class="audience-picker__cta">Contact Us →</span>
@@ -2298,16 +2298,16 @@
             <p class="our-brands__subtitle">Access internationally recognized recovery products with local guidance, fitting support and Pan-India delivery.</p>
             <div class="our-brands__logos">
                 <a href="https://www.breg.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Breg website">
-                    <img src="/images/brands/breg-logo.png.png" alt="Breg — orthopaedic bracing brand from USA" loading="lazy">
+                    <img width="310" src="/images/brands/breg-logo.png.png" alt="Breg — orthopaedic bracing brand from USA" loading="lazy" height="162">
                 </a>
                 <a href="https://www.aspenmedical.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit Aspen Medical Products website">
-                    <img src="/images/brands/aspen-logo.png.jpg" alt="Aspen Medical Products — spine bracing solutions" loading="lazy">
+                    <img width="310" src="/images/brands/aspen-logo.png.jpg" alt="Aspen Medical Products — spine bracing solutions" loading="lazy" height="163">
                 </a>
                 <a href="https://www.riwospine.com/en/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit RIWO Spine website">
-                    <img src="/images/brands/riwospine-logo.png.png" alt="RIWO Spine — endoscopic spine surgery systems" loading="lazy">
+                    <img width="225" src="/images/brands/riwospine-logo.png.png" alt="RIWO Spine — endoscopic spine surgery systems" loading="lazy" height="225">
                 </a>
                 <a href="https://osteokart.com/" class="brand-logo" target="_blank" rel="noopener noreferrer" aria-label="Visit OsteoKart store">
-                    <img src="/images/brands/osteokart-logo.png.png" alt="OsteoKart — India's orthopaedic bracing online store" loading="lazy">
+                    <img width="339" src="/images/brands/osteokart-logo.png.png" alt="OsteoKart — India's orthopaedic bracing online store" loading="lazy" height="80">
                 </a>
             </div>
             <p class="our-brands__tagline">International brands. Indian expertise. Delivered across India.</p>
@@ -2513,7 +2513,6 @@
             </div>
         </div>
     </section>
-    <script src="/assets/js/ghost-blog-loader.js" defer></script>
 
     <!-- ENQUIRY SECTION -->
     <section class="enquiry-section" id="enquiry">
@@ -2635,10 +2634,10 @@
                 ].filter(Boolean).join('');
                 const initial = (t.name || '?').trim().charAt(0).toUpperCase();
                 const avatarHtml = t.avatar
-                    ? `<img class="testimonial-card__avatar" src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+                    ? `<img class="testimonial-card__avatar" src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name || '')}" loading="lazy" width="60" height="60">`
                     : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
                 const productHtml = t.productImage
-                    ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+                    ? `<div class="testimonial-card__product"><img src="${escapeHtml(t.productImage)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy" width="300" height="300"></div>`
                     : '';
                 const metaLine = [t.location, t.product ? `${escapeHtml(t.product)} User` : ''].filter(Boolean).map(escapeHtml).join(' · ');
                 return `

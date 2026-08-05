@@ -41,7 +41,7 @@
         grid.innerHTML = posts.map(p => {
             const url = p.url || `${blogUrl.replace(/\/$/, '')}/${encodeURIComponent(p.slug)}/`;
             const img = p.feature_image
-                ? `<img src="${escapeHtml(p.feature_image)}" alt="${escapeHtml(p.title)}" loading="lazy" onerror="this.style.display='none'">`
+                ? `<img src="${escapeHtml(p.feature_image)}" alt="${escapeHtml(p.title)}" loading="lazy" width="800" height="450" onerror="this.style.display='none'">`
                 : `<div class="blog-card__image-placeholder" aria-hidden="true">${escapeHtml(p.title || '').slice(0, 30)}</div>`;
             const excerpt = trimExcerpt(p.custom_excerpt || p.excerpt, 140);
             return `

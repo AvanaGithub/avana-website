@@ -655,3 +655,48 @@ body.mobile-nav-open { overflow: hidden; }
     .site-footer__links a { font-size: 0.85rem; margin-bottom: 8px; }
     .site-footer__bottom { font-size: 0.75rem; padding-top: 16px; }
 }
+
+/* ============================================================
+   CLS FIX — reserve space for JS-populated containers so
+   content doesn't shift when data loads (fixes Lighthouse CLS)
+   ============================================================ */
+/* Homepage blog widget: 3 cards ~380px tall */
+.blog-section .blog-grid { min-height: 400px; }
+/* Homepage + shared testimonial carousels */
+.testimonials-carousel { min-height: 420px; }
+.testimonials-carousel__track { min-height: 380px; }
+/* About page dynamic sections */
+#about-intro { min-height: 200px; }
+#about-stats { min-height: 100px; }
+#about-pillars { min-height: 400px; }
+#about-achievements { min-height: 200px; }
+#about-leadership { min-height: 450px; }
+#about-testimonials { min-height: 300px; }
+#about-photo-carousel { min-height: 300px; }
+/* Solution / condition / pain page dynamic sections */
+[data-render="conditions"] { min-height: 400px; }
+[data-render="products"] { min-height: 400px; }
+[data-render="testimonials"] { min-height: 380px; }
+[data-render="blog"] { min-height: 400px; }
+[data-render="brands"] { min-height: 100px; }
+/* Testimonials page grids */
+.testimonials-grid { min-height: 380px; }
+/* On mobile, reduce reservations so above-fold isn't just empty space */
+@media (max-width: 768px) {
+    .blog-section .blog-grid,
+    .testimonials-carousel,
+    .testimonials-carousel__track,
+    #about-pillars,
+    #about-leadership,
+    [data-render="conditions"],
+    [data-render="products"],
+    [data-render="testimonials"],
+    [data-render="blog"],
+    .testimonials-grid { min-height: 300px; }
+    #about-intro,
+    #about-stats,
+    #about-achievements,
+    #about-testimonials,
+    #about-photo-carousel,
+    [data-render="brands"] { min-height: 150px; }
+}

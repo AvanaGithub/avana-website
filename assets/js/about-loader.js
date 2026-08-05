@@ -65,7 +65,7 @@
         el.innerHTML = pillars.map(p => {
             const isRight = p.layout === 'image-right';
             const imgEl = p.image
-                ? `<img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt || p.title)}" loading="lazy">`
+                ? `<img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.imageAlt || p.title)}" loading="lazy" width="800" height="500">`
                 : '';
             return `
             <div class="about-pillar ${isRight ? 'about-pillar--image-right' : 'about-pillar--image-left'}">
@@ -86,7 +86,7 @@
         if (!items.length) { el.closest('.about-section').style.display = 'none'; return; }
         el.innerHTML = items.map(a => {
             const media = a.image
-                ? `<img class="about-achievement-card__image" src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)}" loading="lazy" onerror="this.style.display='none'">`
+                ? `<img class="about-achievement-card__image" src="${escapeHtml(a.image)}" alt="${escapeHtml(a.title)}" loading="lazy" width="200" height="200" onerror="this.style.display='none'">`
                 : `<span class="about-achievement-card__icon">${escapeHtml(a.icon || '🏆')}</span>`;
             return `
             <div class="about-achievement-card">
@@ -104,7 +104,7 @@
         if (!leaders.length) { el.closest('.about-section').style.display = 'none'; return; }
         el.innerHTML = leaders.map(l => {
             const photoContent = l.photo
-                ? `<img src="${escapeHtml(l.photo)}" alt="${escapeHtml(l.name)}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+                ? `<img src="${escapeHtml(l.photo)}" alt="${escapeHtml(l.name)}" loading="lazy" width="600" height="700" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
                 : '';
             return `
             <div class="about-leader-card">
@@ -287,7 +287,7 @@
         const cardsHtml = items.map(t => {
             const initial = (t.name || '?').trim().charAt(0).toUpperCase();
             const avatarContent = t.avatar
-                ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy">`
+                ? `<img src="${escapeHtml(t.avatar)}" alt="${escapeHtml(t.name)}" loading="lazy" width="60" height="60">`
                 : `<span class="about-testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
 
             const { fullHtml, previewHtml, needsToggle } = buildQuoteBlocks(t.quote);

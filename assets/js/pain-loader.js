@@ -59,11 +59,11 @@
         const initial = (t.name || '?').trim().charAt(0).toUpperCase();
         const avatarSrc = t.avatar || t.photo || NAME_AVATARS[(t.name || '').toLowerCase().trim()];
         const avatarHtml = avatarSrc
-            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy">`
+            ? `<img class="testimonial-card__avatar" src="${escapeHtml(avatarSrc)}" alt="${escapeHtml(t.name || '')}" loading="lazy" width="60" height="60">`
             : `<span class="testimonial-card__avatar testimonial-card__avatar--fallback" aria-hidden="true">${escapeHtml(initial)}</span>`;
         const productImgSrc = t.productImage || PRODUCT_IMAGES[(t.product || '').toLowerCase().trim()];
         const productHtml = productImgSrc
-            ? `<div class="testimonial-card__product"><img src="${escapeHtml(productImgSrc)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy"></div>`
+            ? `<div class="testimonial-card__product"><img src="${escapeHtml(productImgSrc)}" alt="${escapeHtml(t.product || 'Product')}" loading="lazy" width="300" height="300"></div>`
             : '';
         const innerClass = productHtml
             ? 'testimonial-card__inner'
@@ -175,7 +175,7 @@
             mount.innerHTML = items.map(p => `
                 <article class="product-card">
                     <div class="product-card__image">
-                        <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}" loading="lazy">
+                        <img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}" loading="lazy" width="800" height="600">
                     </div>
                     <div class="product-card__body">
                         ${p.brand ? `<div class="product-card__brand">${escapeHtml(p.brand)}</div>` : ''}
@@ -292,7 +292,7 @@
             mount.innerHTML = items.map(b => `
                 <a href="${escapeHtml(b.url)}" class="blog-card" target="${b.external ? '_blank' : '_self'}" ${b.external ? 'rel="noopener"' : ''}>
                     <div class="blog-card__image">
-                        <img src="${escapeHtml(b.image)}" alt="${escapeHtml(b.title)}" loading="lazy">
+                        <img src="${escapeHtml(b.image)}" alt="${escapeHtml(b.title)}" loading="lazy" width="800" height="450">
                     </div>
                     <div class="blog-card__body">
                         <div class="blog-card__meta">${escapeHtml(b.category || 'Article')} · ${escapeHtml(b.readTime || '4 min read')}</div>
@@ -307,7 +307,7 @@
             const items = data.brands || [];
             mount.innerHTML = items.map(b => `
                 <div class="brand-strip__item">
-                    <img class="brand-strip__logo" src="${escapeHtml(b.logo)}" alt="${escapeHtml(b.name)}" loading="lazy">
+                    <img class="brand-strip__logo" src="${escapeHtml(b.logo)}" alt="${escapeHtml(b.name)}" loading="lazy" width="200" height="100">
                     ${b.caption ? `<span class="brand-strip__caption">${escapeHtml(b.caption)}</span>` : ''}
                 </div>
             `).join('');

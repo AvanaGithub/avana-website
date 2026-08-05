@@ -31,7 +31,7 @@ $avana_main_site = 'https://www.avanasurgical.com';
                     </p>
                     <div class="site-footer__contact-info">
                         <a href="mailto:info@avanasurgical.com">📧 info@avanasurgical.com</a>
-                        <a href="tel:04422331061">📞 044-2233 1061</a>
+                        <a href="tel:+919150064620">📞 +91 91500 64620</a>
                         <span class="site-footer__address">📍 Chennai, Tamil Nadu, India</span>
                     </div>
                     <div class="site-footer__socials">
