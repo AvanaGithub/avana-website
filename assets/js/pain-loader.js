@@ -33,18 +33,18 @@
        loaders render the identical 2-column card. See CSS in
        /assets/css/testimonial-card.css. --- */
     const NAME_AVATARS = {
-        'walid abedin':    '/images/testimonial-patient/testimonial-Walid-Abedin.png',
-        'uma thyagaraj':   '/images/testimonial-patient/testimonial-Uma-Thyagaraj.png',
-        'radhamani':       '/images/testimonial-patient/testimonial-Radhamani.png',
-        'n. sundar':       '/images/testimonial-patient/testimonial-Sundar.png',
-        'sundar':          '/images/testimonial-patient/testimonial-Sundar.png',
+        'walid abedin':    '/images/testimonial-patient/testimonial-Walid-Abedin.jpg',
+        'uma thyagaraj':   '/images/testimonial-patient/testimonial-Uma-Thyagaraj.jpg',
+        'radhamani':       '/images/testimonial-patient/testimonial-Radhamani.jpg',
+        'n. sundar':       '/images/testimonial-patient/testimonial-Sundar.jpg',
+        'sundar':          '/images/testimonial-patient/testimonial-Sundar.jpg',
         'karthick':        '/images/testimonial-patient/karthick.jpg',
-        'bhuvaneswari t':  '/images/testimonial-patient/testimonial-patient-2.png',
-        'bhuvaneswari':    '/images/testimonial-patient/testimonial-patient-2.png',
-        'senthil':         '/images/testimonial-patient/patient-senthil.png'
+        'bhuvaneswari t':  '/images/testimonial-patient/testimonial-patient-2.jpg',
+        'bhuvaneswari':    '/images/testimonial-patient/testimonial-patient-2.jpg',
+        'senthil':         '/images/testimonial-patient/patient-senthil.jpg'
     };
     const PRODUCT_IMAGES = {
-        'polar care wave': '/images/testimonial-products/polar care wave.png',
+        'polar care wave': '/images/testimonial-products/polar care wave.jpg',
         'freestyle oa':    '/images/testimonial-products/Freestyle.jpg'
     };
     function renderCanonicalTestimonial(t, i, threshold) {

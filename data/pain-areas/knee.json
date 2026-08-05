@@ -32,42 +32,42 @@
             "title": "Osteoarthritis (OA)",
             "description": "Cartilage wear that causes pain, stiffness, and reduced mobility — especially common after age 50. Offloader bracing can shift load away from the affected compartment.",
             "image": "/images/condition/knee/knee-osteoarthritis.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         },
         {
             "icon": "⚡",
             "title": "ACL / Ligament Injury",
             "description": "Sports and accident-related ligament tears that need stability and protection during rehabilitation and return-to-activity.",
             "image": "/images/condition/knee/acl-ligament.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         },
         {
             "icon": "🏥",
             "title": "Post-Surgical Recovery",
             "description": "After total knee replacement, ACL reconstruction, or arthroscopy — controlled motion and cold therapy speed safe recovery.",
             "image": "/images/condition/knee/post-surgical-recovery.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         },
         {
             "icon": "🎯",
             "title": "Patellofemoral Pain",
             "description": "Pain around or behind the kneecap, often during activity. Patellar tracking braces can help relieve pressure.",
             "image": "/images/condition/knee/patellofemoral-pain.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         },
         {
             "icon": "🩹",
             "title": "Meniscus Injury",
             "description": "Cartilage tears causing swelling, locking, or pain. Functional bracing supports the knee while it heals.",
             "image": "/images/condition/knee/meniscus-injury.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         },
         {
             "icon": "💪",
             "title": "General Instability",
             "description": "If your knee 'gives way,' even on flat ground, you may benefit from a stability brace tailored to your activity level.",
             "image": "/images/condition/knee/general-instability.jpg",
-            "link": "/solutions/knee-pain/acl-injury/"
+            "link": "/solutions/knee-pain/"
         }
     ],
     "productsHeading": {
