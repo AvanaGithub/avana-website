@@ -3,8 +3,29 @@
      Used by: index.html, careers.html, solution-template.html, pain.html
      ============================================================ -->
 
-<!-- Announcement bar — removed 2026-08-11 (webinar date passed).
-     Re-enable by restoring the .announce-bar div here with new copy. -->
+<!-- Announcement bar — Marathi back-pain webinar 27 Aug 2026 -->
+<div class="announce-bar" role="region" aria-label="Site announcement" id="announce-bar">
+    <div class="container">
+        <span class="announce-bar__icon announce-bar__blink" aria-hidden="true">📣</span>
+        <span class="announce-bar__text"><strong>Back Pain Webinar</strong> · 27 August · 6:30 PM (Marathi)</span>
+        <a href="https://forms.zohopublic.in/avanasurgicalsystemspvtltd/form/WebinarRegistrationForm/formperma/qCUbJF9kyxiIIOSNKYecvUu2To-tZkscnbiublqlmbs" target="_blank" rel="noopener" class="announce-bar__cta announce-bar__blink">Register Now →</a>
+        <button type="button" class="announce-bar__close" id="announce-bar-close" aria-label="Dismiss announcement">×</button>
+    </div>
+</div>
+<script>
+(function(){
+    var bar = document.getElementById('announce-bar');
+    if (!bar) return;
+    // Remember dismissal per-webinar (change the key when you post a new one)
+    var KEY = 'announce-dismissed:backpain-27aug2026';
+    try { if (localStorage.getItem(KEY) === '1') { bar.style.display = 'none'; return; } } catch(e){}
+    var btn = document.getElementById('announce-bar-close');
+    if (btn) btn.addEventListener('click', function(){
+        bar.style.display = 'none';
+        try { localStorage.setItem(KEY, '1'); } catch(e){}
+    });
+})();
+</script>
 
 <!-- Top bar -->
 <div class="top-bar">

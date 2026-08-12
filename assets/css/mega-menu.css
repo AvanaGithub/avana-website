@@ -35,9 +35,46 @@
     transition: border-color 0.2s;
 }
 .announce-bar__cta:hover { border-bottom-color: #fff; }
+
+/* Blink effect on icon + CTA to draw attention to time-sensitive webinar */
+.announce-bar__blink {
+    animation: announceBlink 1.4s ease-in-out infinite;
+    will-change: opacity;
+}
+@keyframes announceBlink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.55; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .announce-bar__blink { animation: none; }
+}
+
+/* Dismiss (×) button */
+.announce-bar__close {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 1.35rem;
+    line-height: 1;
+    padding: 2px 8px;
+    margin-left: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.75;
+    transition: opacity 0.15s, background-color 0.15s;
+}
+.announce-bar__close:hover,
+.announce-bar__close:focus-visible {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.15);
+    outline: none;
+}
+
 @media (max-width: 640px) {
     .announce-bar { font-size: 0.78rem; padding: 6px 0; }
     .announce-bar .container { gap: 8px; }
+    .announce-bar__close { font-size: 1.2rem; padding: 2px 6px; }
 }
 
 /* --- Nav item containers --- */
