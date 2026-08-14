@@ -36,6 +36,37 @@
 }
 .announce-bar__cta:hover { border-bottom-color: #fff; }
 
+/* Sticky at top of viewport — survives scroll, sits above the site header */
+.announce-bar { position: sticky; top: 0; z-index: 2000; }
+
+/* Rotating slides — stacked, fade between */
+.announce-bar__slides {
+    position: relative;
+    flex: 1;
+    min-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.announce-bar__slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    opacity: 0;
+    transform: translateY(-4px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.announce-bar__slide.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
 /* Blink effect on icon + CTA to draw attention to time-sensitive webinar */
 .announce-bar__blink {
     animation: announceBlink 1.4s ease-in-out infinite;

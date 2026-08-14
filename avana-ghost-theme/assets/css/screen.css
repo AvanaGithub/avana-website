@@ -96,6 +96,23 @@ img { max-width: 100%; display: block; }
     transform: translateY(-2px);
 }
 
+/* =================== OSTEOKART LAUNCH BANNER (full-width 1920x280) =================== */
+.osteokart-banner {
+    display: block;
+    width: 100%;
+    line-height: 0;
+    transition: filter 0.2s ease;
+}
+.osteokart-banner:hover { filter: brightness(1.04); }
+.osteokart-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
 /* =================== ANNOUNCE BAR (sitewide highlight strip) =================== */
 .announce-bar {
     background: linear-gradient(90deg, #8a6300 0%, #b27f0d 100%);
@@ -123,6 +140,19 @@ img { max-width: 100%; display: block; }
     transition: border-bottom-color 0.2s;
 }
 .announce-bar__cta:hover { border-bottom-color: #fff; }
+.announce-bar { position: sticky; top: 0; z-index: 2000; }
+.announce-bar__slides {
+    position: relative; flex: 1; min-height: 22px;
+    display: flex; align-items: center; justify-content: center;
+}
+.announce-bar__slide {
+    position: absolute; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; flex-wrap: wrap;
+    opacity: 0; transform: translateY(-4px); pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.announce-bar__slide.is-active { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .announce-bar__blink {
     animation: announceBlink 1.4s ease-in-out infinite;
     will-change: opacity;

@@ -669,6 +669,29 @@
             font-size: 0.95rem;
         }
 
+        /* ===== OSTEOKART LAUNCH BANNER (full-width 1920x280 image link) ===== */
+        .osteokart-banner {
+            display: block;
+            width: 100%;
+            margin-top: 32px;      /* breathing space below hero */
+            line-height: 0;         /* removes stray whitespace under inline-block img */
+            transition: filter 0.2s ease;
+        }
+        @media (max-width: 640px) {
+            .osteokart-banner { margin-top: 20px; }
+        }
+        .osteokart-banner:hover { filter: brightness(1.04); }
+        .osteokart-banner img {
+            display: block;
+            width: 100%;
+            height: auto;
+            /* Keeps aspect ratio; caps height so it doesn't get absurdly tall
+               on ultra-wide screens (>1920px) */
+            max-height: 280px;
+            object-fit: cover;
+            object-position: center;
+        }
+
         /* ===== AUDIENCE PICKER (who are you?) ===== */
         .audience-picker {
             padding: 80px 0;
@@ -2260,6 +2283,14 @@
             </div>
         </div>
     </section>
+
+    <!-- OSTEOKART LAUNCH BANNER — full-width image link after hero.
+         Remove after Aug 20, 2026 (launch cooldown). -->
+    <a href="https://osteokart.com" target="_blank" rel="noopener"
+       class="osteokart-banner" aria-label="Osteokart launches 15 August 2026 — visit osteokart.com">
+        <img src="/images/banner/Banner.jpg" alt="Launching Osteokart on August 15, 2026 — featuring Breg Polar Care Wave, Breg Freestyle OA, Aspen Lumbar Support Belt, Breg Polar Care Kodiak"
+             width="1920" height="280" fetchpriority="high">
+    </a>
 
     <!-- AUDIENCE PICKER — who are you? -->
     <section class="audience-picker" id="audience-picker">

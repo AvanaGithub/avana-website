@@ -4,12 +4,21 @@
     All links resolve to main-site pages (same origin in prod).
     ============================================================  --}}
 
-<!-- Announcement bar — Marathi back-pain webinar 27 Aug 2026 -->
+<!-- Announcement bar — rotating: Marathi back-pain webinar + Osteokart launch. Sticky. -->
 <div class="announce-bar" role="region" aria-label="Site announcement" id="announce-bar">
     <div class="container">
-        <span class="announce-bar__icon announce-bar__blink" aria-hidden="true">📣</span>
-        <span class="announce-bar__text"><strong>Back Pain Webinar</strong> · 27 August · 6:30 PM (Marathi)</span>
-        <a href="https://forms.zohopublic.in/avanasurgicalsystemspvtltd/form/WebinarRegistrationForm/formperma/qCUbJF9kyxiIIOSNKYecvUu2To-tZkscnbiublqlmbs" target="_blank" rel="noopener" class="announce-bar__cta announce-bar__blink">Register Now →</a>
+        <div class="announce-bar__slides" aria-live="polite">
+            <div class="announce-bar__slide is-active">
+                <span class="announce-bar__icon announce-bar__blink" aria-hidden="true">📣</span>
+                <span class="announce-bar__text"><strong>Back Pain Webinar</strong> · 27 August · 6:30 PM (Marathi)</span>
+                <a href="https://forms.zohopublic.in/avanasurgicalsystemspvtltd/form/WebinarRegistrationForm/formperma/qCUbJF9kyxiIIOSNKYecvUu2To-tZkscnbiublqlmbs" target="_blank" rel="noopener" class="announce-bar__cta announce-bar__blink">Register Now →</a>
+            </div>
+            <div class="announce-bar__slide">
+                <span class="announce-bar__icon announce-bar__blink" aria-hidden="true">🚀</span>
+                <span class="announce-bar__text"><strong>Osteokart</strong> launches 15 August 2026</span>
+                <a href="https://osteokart.com" target="_blank" rel="noopener" class="announce-bar__cta announce-bar__blink">Check Now →</a>
+            </div>
+        </div>
         <button type="button" class="announce-bar__close" id="announce-bar-close" aria-label="Dismiss announcement">×</button>
     </div>
 </div>
@@ -17,8 +26,17 @@
 (function(){
     var bar = document.getElementById('announce-bar');
     if (!bar) return;
-    var KEY = 'announce-dismissed:backpain-27aug2026';
+    var KEY = 'announce-dismissed:backpain+osteokart-2026';
     try { if (localStorage.getItem(KEY) === '1') { bar.style.display = 'none'; return; } } catch(e){}
+    var slides = bar.querySelectorAll('.announce-bar__slide');
+    if (slides.length > 1) {
+        var i = 0;
+        setInterval(function(){
+            slides[i].classList.remove('is-active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('is-active');
+        }, 3000);
+    }
     var btn = document.getElementById('announce-bar-close');
     if (btn) btn.addEventListener('click', function(){
         bar.style.display = 'none';
