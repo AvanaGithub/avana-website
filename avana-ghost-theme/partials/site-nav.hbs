@@ -4,28 +4,13 @@
     All links resolve to main-site pages (same origin in prod).
     ============================================================  --}}
 
-<!-- Announcement bar — Osteokart live launch. Sticky, dismissible. -->
-<div class="announce-bar" role="region" aria-label="Site announcement" id="announce-bar">
+<!-- Announcement bar — Osteokart live launch. Sticky, persistent. -->
+<div class="announce-bar" role="region" aria-label="Site announcement">
     <div class="container">
-        <span class="announce-bar__icon announce-bar__blink" aria-hidden="true">🚀</span>
         <span class="announce-bar__text"><strong>Osteokart</strong> &mdash; an e-commerce for premium bracing and cold-therapy is <strong>live now</strong>.</span>
         <a href="https://osteokart.com" target="_blank" rel="noopener" class="announce-bar__cta announce-bar__blink">Explore our products &rarr;</a>
-        <button type="button" class="announce-bar__close" id="announce-bar-close" aria-label="Dismiss announcement">&times;</button>
     </div>
 </div>
-<script>
-(function(){
-    var bar = document.getElementById('announce-bar');
-    if (!bar) return;
-    var KEY = 'announce-dismissed:osteokart-live-2026';
-    try { if (localStorage.getItem(KEY) === '1') { bar.style.display = 'none'; return; } } catch(e){}
-    var btn = document.getElementById('announce-bar-close');
-    if (btn) btn.addEventListener('click', function(){
-        bar.style.display = 'none';
-        try { localStorage.setItem(KEY, '1'); } catch(e){}
-    });
-})();
-</script>
 
 <!-- Top bar -->
 <div class="top-bar">
