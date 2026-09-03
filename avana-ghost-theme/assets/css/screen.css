@@ -96,23 +96,6 @@ img { max-width: 100%; display: block; }
     transform: translateY(-2px);
 }
 
-/* =================== OSTEOKART LAUNCH BANNER (full-width 1920x280) =================== */
-.osteokart-banner {
-    display: block;
-    width: 100%;
-    line-height: 0;
-    transition: filter 0.2s ease;
-}
-.osteokart-banner:hover { filter: brightness(1.04); }
-.osteokart-banner img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 280px;
-    object-fit: cover;
-    object-position: center;
-}
-
 /* =================== ANNOUNCE BAR (sitewide highlight strip) =================== */
 .announce-bar {
     background: linear-gradient(90deg, #8a6300 0%, #b27f0d 100%);
