@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Endoscopic Spine Surgery Fellowship — Dr. Sukumar Sura | Hyderabad, India</title>
-    <meta name="description" content="A selective 6-week clinical fellowship in Full Endoscopic Spine Surgery under Dr. Sukumar Sura at India's first Centre of Excellence for FESS, Hyderabad. Apply now — four fellows per batch.">
+    <title>6-Week Full Endoscopic Spine Surgery Fellowship — Dr. Sukumar Sura | Hyderabad</title>
+    <meta name="description" content="Beyond the workshop, into the operating theatre. A selective 6-week clinical fellowship in Full Endoscopic Spine Surgery with Dr. Sukumar Sura at Asian Spine Hospital, Hyderabad. Curriculum, participation format, fees (₹75,000 + GST / US$2,000 + GST) and the application form.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://avanasurgical.com/fellowship/apply/">
     <meta property="og:url" content="https://avanasurgical.com/fellowship/apply/">
-    <meta property="og:title" content="Full Endoscopic Spine Surgery Fellowship — Dr. Sukumar Sura">
-    <meta property="og:description" content="6-week clinical fellowship under Dr. Sukumar Sura. For orthopaedic, spine &amp; neurosurgeons who want to understand the surgery — not just the technique.">
+    <meta property="og:title" content="Beyond the Workshop. Into the Operating Theatre. — 6-Week FESS Fellowship, Hyderabad">
+    <meta property="og:description" content="Six weeks of structured clinical learning alongside Dr. Sukumar Sura at Asian Spine Hospital, Hyderabad. Four fellows per batch. Fees and curriculum published upfront.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://avanasurgical.com/images/fellowship/dr-sukumar-sura.jpg">
 
@@ -451,6 +451,105 @@
         .page-foot a:hover { color: var(--ink-white); text-decoration: none; }
         .page-foot__name { font-family: var(--font-serif); font-weight: 600; }
 
+
+        /* ============ v2 ADDITIONS (audit restructure, Oct 2026) ============ */
+        /* header nav */
+        .page-nav { display: flex; gap: 22px; align-items: center; }
+        .page-nav a { font-size: 0.86rem; font-weight: 500; color: var(--ink-muted); }
+        .page-nav a:hover { color: var(--ink-primary); text-decoration: none; }
+        @media (max-width: 880px) { .page-nav { display: none; } }
+
+        /* hero stats */
+        .hero__stats { display: flex; gap: 36px; flex-wrap: wrap; margin-top: 34px; padding-top: 26px; border-top: 1px solid rgba(255,255,255,0.22); }
+        .hero__stat-big { font-family: var(--font-serif); font-size: 1.7rem; font-weight: 700; line-height: 1; color: var(--ink-white); }
+        .hero__stat-small { font-size: 0.78rem; color: rgba(255,255,255,0.7); margin-top: 6px; letter-spacing: 0.03em; }
+        .hero__sub { font-size: 1.08rem; line-height: 1.7; color: rgba(255,255,255,0.9); max-width: 600px; margin-bottom: 14px; }
+        .hero__sub--muted { color: rgba(255,255,255,0.72); font-size: 0.98rem; margin-bottom: 30px; }
+        .hero__kicker { font-size: 0.78rem; letter-spacing: 0.22em; text-transform: uppercase; color: #F2B8AC; font-weight: 700; margin-bottom: 10px; display: block; }
+
+        /* participation formats */
+        .formats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 28px; }
+        .format { background: var(--ink-white); border: 1px solid var(--ink-faint); border-radius: var(--radius); padding: 22px 20px; border-top: 4px solid var(--ink-primary); }
+        .format--accent { border-top-color: var(--ink-accent); }
+        .format__tag { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--ink-accent); margin-bottom: 8px; display: block; }
+        .format h3 { font-size: 1.05rem; margin-bottom: 8px; }
+        .format p { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; }
+        @media (max-width: 980px) { .formats { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 540px) { .formats { grid-template-columns: 1fr; } }
+        .conditions { background: var(--ink-white); border: 1px solid var(--ink-faint); border-left: 4px solid var(--ink-primary); border-radius: var(--radius); padding: 18px 22px; font-size: 0.9rem; line-height: 1.65; color: var(--ink-text); }
+        .conditions strong { color: var(--ink-primary); }
+
+        /* week timeline */
+        .timeline { display: grid; gap: 0; margin-top: 44px; border-left: 2px solid var(--ink-faint); }
+        .week { display: grid; grid-template-columns: 130px 1fr; gap: 22px; padding: 22px 0 22px 28px; position: relative; border-bottom: 1px solid var(--ink-faint); }
+        .week:last-child { border-bottom: 0; }
+        .week::before { content: ''; position: absolute; left: -7px; top: 30px; width: 12px; height: 12px; border-radius: 50%; background: var(--ink-accent); border: 2px solid var(--ink-cream); }
+        .week__label { font-family: var(--font-serif); font-weight: 700; color: var(--ink-primary); font-size: 1.05rem; line-height: 1.3; }
+        .week__label small { display: block; font-family: var(--font-sans); font-weight: 600; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-muted); margin-top: 4px; }
+        .week h3 { font-size: 1.05rem; margin-bottom: 6px; }
+        .week p { font-size: 0.92rem; color: var(--ink-muted); line-height: 1.65; }
+        .week ul { margin: 8px 0 0 18px; font-size: 0.88rem; color: var(--ink-text); line-height: 1.6; }
+        @media (max-width: 640px) { .week { grid-template-columns: 1fr; gap: 6px; padding-left: 20px; } }
+        .timeline__note { font-size: 0.84rem; color: var(--ink-muted); font-style: italic; margin-top: 18px; }
+
+        /* practical details grid */
+        .practical { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: start; margin-top: 8px; }
+        .practical__card { background: var(--ink-white); border: 1px solid var(--ink-faint); border-radius: 14px; padding: 30px 32px; }
+        .practical__card h3 { font-size: 1.15rem; margin-bottom: 14px; }
+        .practical__card ul { list-style: none; display: grid; gap: 9px; }
+        .practical__card li { font-size: 0.92rem; color: var(--ink-text); padding-left: 22px; position: relative; line-height: 1.55; }
+        .practical__card li::before { content: '✓'; position: absolute; left: 0; color: var(--ink-primary); font-weight: 700; }
+        .practical__card li.x::before { content: '–'; color: var(--ink-accent); }
+        .practical__card + .practical__card { margin-top: 20px; }
+        .kv { display: grid; gap: 0; }
+        .kv div { display: grid; grid-template-columns: 150px 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--ink-faint); font-size: 0.92rem; }
+        .kv div:last-child { border-bottom: 0; }
+        .kv dt { color: var(--ink-muted); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; padding-top: 2px; }
+        .kv dd { color: var(--ink-text); line-height: 1.55; }
+        @media (max-width: 820px) { .practical { grid-template-columns: 1fr; } }
+        @media (max-width: 480px) { .kv div { grid-template-columns: 1fr; gap: 2px; } .practical__card { padding: 24px 20px; } }
+
+        /* 3-stage process */
+        .stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 40px; }
+        .stage { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: var(--radius); padding: 22px 22px; }
+        .stage__num { display: inline-flex; width: 32px; height: 32px; border-radius: 50%; background: var(--ink-accent); color: var(--ink-white); align-items: center; justify-content: center; font-family: var(--font-serif); font-weight: 700; margin-bottom: 12px; }
+        .stage h4 { font-size: 1.02rem; color: var(--ink-white); margin-bottom: 6px; }
+        .stage p { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.6; }
+        .stage__time { display: block; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; color: #F2B8AC; font-weight: 600; margin-top: 10px; }
+        @media (max-width: 720px) { .stages { grid-template-columns: 1fr; } }
+
+        /* eligibility (step 1) card on dark bg */
+        .elig { background: var(--ink-white); color: var(--ink-text); border-radius: 14px; padding: 36px 40px; max-width: 860px; margin: 0 auto; box-shadow: 0 16px 48px rgba(0,0,0,0.25); }
+        .elig h3 { font-size: 1.3rem; margin-bottom: 6px; color: var(--ink-primary); }
+        .elig > p { color: var(--ink-muted); font-size: 0.94rem; margin-bottom: 22px; }
+        .elig__meta { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.8rem; color: var(--ink-muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 22px; }
+        .elig__meta span::before { content: '•'; color: var(--ink-accent); margin-right: 8px; }
+        .elig .f-field label { color: var(--ink-text); }
+        .elig .preview__fine { margin-top: 14px; }
+        .elig__skip { text-align: center; font-size: 0.86rem; margin-top: 14px; color: var(--ink-muted); }
+        @media (max-width: 640px) { .elig { padding: 26px 20px; } }
+
+        /* step-2 banner */
+        .form-wrap__step { display: inline-block; font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; color: var(--ink-accent); margin-bottom: 8px; }
+        .form-wrap__prefilled { background: #E8F5E9; border: 1px solid #A5D6A7; color: #1F4620; border-radius: 8px; padding: 12px 16px; font-size: 0.9rem; margin-bottom: 22px; display: none; }
+
+        /* apply toggle + collapse */
+        .apply-toggle { text-align: center; }
+        .apply-toggle .btn { padding: 18px 44px; font-size: 1.02rem; }
+        .apply-toggle__fine { font-size: 0.84rem; color: rgba(255,255,255,0.7); margin-top: 14px; }
+        .form-wrap__intro--row { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+        .form-collapse { flex-shrink: 0; background: transparent; border: 1px solid var(--ink-faint); color: var(--ink-muted); border-radius: 7px; padding: 8px 14px; font-family: var(--font-sans); font-size: 0.82rem; font-weight: 600; cursor: pointer; }
+        .form-collapse:hover { border-color: var(--ink-primary); color: var(--ink-primary); }
+        @media (max-width: 540px) { .form-wrap__intro--row { flex-direction: column; } }
+        /* FAQ */
+        .faq { max-width: 820px; margin: 0 auto; display: grid; gap: 10px; }
+        .faq details { background: var(--ink-white); border: 1px solid var(--ink-faint); border-radius: var(--radius); padding: 0 22px; }
+        .faq summary { cursor: pointer; list-style: none; padding: 18px 0; font-weight: 600; color: var(--ink-primary); font-size: 1rem; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+        .faq summary::-webkit-details-marker { display: none; }
+        .faq summary::after { content: '+'; font-family: var(--font-serif); font-size: 1.4rem; color: var(--ink-accent); flex-shrink: 0; line-height: 1; }
+        .faq details[open] summary::after { content: '–'; }
+        .faq details p { padding: 0 0 18px; font-size: 0.93rem; color: var(--ink-text); line-height: 1.7; }
+        .faq details p + p { margin-top: -8px; }
     </style>
 </head>
 <body>
@@ -463,24 +562,34 @@
             <span class="wordmark__name">Dr. Sukumar Sura</span>
             <span class="wordmark__sub">· Full Endoscopic Spine Surgery Fellowship</span>
         </div>
+        <nav class="page-nav" aria-label="Page sections">
+            <a href="#curriculum">Curriculum</a>
+            <a href="#faculty">Mentor</a>
+            <a href="#centre">Centre</a>
+            <a href="#fees">Fees &amp; details</a>
+            <a href="#faq">FAQ</a>
+        </nav>
         <a href="#apply" class="btn btn--accent page-head__cta">Apply for Fellowship</a>
     </div>
 </header>
 
-<!-- =========== HERO =========== -->
+<!-- =========== 1. HERO — what makes this fellowship different =========== -->
 <section class="hero">
     <div class="wrap hero__inner">
         <div>
-            <span class="hero__eyebrow">Selective 6-Week Clinical Fellowship · Hyderabad</span>
-            <h1 class="hero__title">Learn Full Endoscopic Spine Surgery from a surgeon who has done <em>2,500+ procedures</em>.</h1>
-            <p class="hero__quote">
-                "A workshop teaches you the technique. Six weeks helps you understand the surgery."
-            </p>
+            <span class="hero__kicker">Full Endoscopic Spine Surgery</span>
+            <span class="hero__eyebrow">6-Week Clinical Fellowship · Hyderabad</span>
+            <h1 class="hero__title">Beyond the Workshop. <em>Into the Operating Theatre.</em></h1>
+            <p class="hero__sub">Spend six weeks learning the clinical decision-making behind full endoscopic spine surgery alongside Dr. Sukumar Sura and the team at Asian Spine Hospital, Hyderabad.</p>
+            <p class="hero__sub hero__sub--muted">From patient selection and approach planning to operative observation, scrubbed assisting, simulation and postoperative care.</p>
             <div class="hero__ctas">
-                <a href="#apply" class="btn btn--accent">Apply for the Fellowship →</a>
-                <a href="#selection" class="btn btn--ghost">How selection works</a>
+                <a href="#curriculum" class="btn btn--accent">View Curriculum &amp; Fees →</a>
             </div>
-            <div class="hero__micro">4 fellows per batch · Interview-based selection · Indian &amp; international surgeons</div>
+            <div class="hero__stats">
+                <div><div class="hero__stat-big">2,500+</div><div class="hero__stat-small">Endoscopic procedures</div></div>
+                <div><div class="hero__stat-big">4</div><div class="hero__stat-small">Fellows per batch</div></div>
+                <div><div class="hero__stat-big">6 weeks</div><div class="hero__stat-small">Clinical fellowship</div></div>
+            </div>
         </div>
     </div>
     <span class="hero__credit">Full endoscopic spine theatre · Asian Spine Hospital, Hyderabad</span>
@@ -491,10 +600,6 @@
     <div class="wrap">
         <div class="creds__row">
             <div class="creds__item">
-                <div class="creds__big">2,500+</div>
-                <div class="creds__small">Full Endoscopic Spine Procedures</div>
-            </div>
-            <div class="creds__item">
                 <div class="creds__big">4,000+</div>
                 <div class="creds__small">Brain &amp; Spine Surgeries</div>
             </div>
@@ -503,78 +608,130 @@
                 <div class="creds__small">Full Endoscopic Fusion (EndoFusion)</div>
             </div>
             <div class="creds__item">
+                <div class="creds__big">1st</div>
+                <div class="creds__small">Dedicated FESS Centre in India</div>
+            </div>
+            <div class="creds__item">
                 <div class="creds__big">USA · Germany · Korea</div>
-                <div class="creds__small">International Training Experience</div>
+                <div class="creds__small">Mentor's International Training</div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- =========== WHY 6 WEEKS =========== -->
+<!-- =========== 2. WHY SIX WEEKS =========== -->
 <section class="section section--white">
     <div class="wrap">
         <header class="section__head">
-            <span class="eyebrow">Why 6 weeks</span>
-            <h2 class="section-title">A workshop ends on the third day. Understanding takes longer.</h2>
-            <p class="section-lead">Most endoscopic spine training in India is a 1 to 3-day workshop. You see the instruments. You practise on a model. You go home. This fellowship is built differently.</p>
+            <span class="eyebrow">Why six weeks instead of a short workshop</span>
+            <h2 class="section-title">A workshop shows you the technique. Six weeks shows you the decisions around it.</h2>
+            <p class="section-lead">A 1 to 3-day workshop is a valuable introduction: you handle the instruments and practise on a model. What it cannot give you is the daily rhythm of a dedicated endoscopic spine centre — the patient who is not a candidate, the approach that changes after the MRI review, the postoperative call on day three. This fellowship is built around that rhythm.</p>
         </header>
         <div class="why">
             <div class="why__col">
-                <h3>What you'll build</h3>
-                <p>Patient-selection judgement. Imaging-based decision making. Approach planning. Intraoperative problem-solving. Complication avoidance. Postoperative management. The clinical reasoning that separates a technician from a surgeon.</p>
+                <h3>What six weeks adds</h3>
+                <p>Patient-selection judgement. Imaging-based decision making. Approach planning. Intraoperative problem-solving. Complication avoidance. Postoperative management. Followed from the outpatient clinic through theatre to discharge, on real cases, with the same team every day.</p>
             </div>
             <div class="why__col why__col--highlight">
                 <h3>Who it's for</h3>
-                <p>Orthopaedic surgeons, neurosurgeons and spine surgeons who have completed their postgraduate training and want to do endoscopic spine surgery seriously — not just know what it is.</p>
+                <p>Orthopaedic surgeons, neurosurgeons and spine surgeons who have completed their postgraduate training and want to introduce or deepen full endoscopic spine surgery in their own practice. Four fellows per batch, selected by interview.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- =========== WHERE YOU'LL TRAIN =========== -->
-<section class="section section--cream" id="centre">
+<!-- =========== 3. YOUR SIX-WEEK LEARNING JOURNEY =========== -->
+<section class="section section--cream" id="curriculum">
     <div class="wrap">
         <header class="section__head">
-            <span class="eyebrow">Where you'll train</span>
-            <h2 class="section-title">Asian Spine Hospital, Hyderabad — India's first dedicated Full Endoscopic Spine Centre.</h2>
+            <span class="eyebrow">Your six-week learning journey</span>
+            <h2 class="section-title">How you participate — and how the six weeks progress.</h2>
+            <p class="section-lead">The fellowship is a clinical learning programme, not an operating licence. Here is exactly what each learning format involves, so you can judge whether it suits where you are today.</p>
         </header>
-        <div class="centre__gallery">
-            <figure>
-                <img src="../../images/fellowship/centre-hospital-building.jpg" alt="Asian Spine Hospital building, Hyderabad" width="1200" height="800" loading="lazy">
-                <figcaption>Asian Spine Hospital — a 25-bed super-speciality spine centre, Hyderabad.</figcaption>
-            </figure>
-            <figure>
-                <img src="../../images/fellowship/centre-coe-inauguration.jpg" alt="Inauguration of India's first Centre of Excellence for Full Endoscopic Spine Surgery" width="1200" height="787" loading="lazy">
-                <figcaption>Inauguration of India's first Centre of Excellence for Full Endoscopic Spine Surgery.</figcaption>
-            </figure>
-            <figure>
-                <img src="../../images/fellowship/centre-or-team.jpg" alt="Asian Spine Hospital operating theatre team" width="1200" height="800" loading="lazy">
-                <figcaption>The theatre team you will scrub in alongside during the fellowship.</figcaption>
-            </figure>
+
+        <div class="formats">
+            <article class="format">
+                <span class="format__tag">Format 1</span>
+                <h3>Clinical rounds &amp; case discussion</h3>
+                <p>Outpatient clinic, imaging review and pre-operative planning with Dr. Sura and the spine team. You present cases, argue indications and learn why a patient is or is not an endoscopic candidate.</p>
+            </article>
+            <article class="format">
+                <span class="format__tag">Format 2</span>
+                <h3>Theatre observation</h3>
+                <p>Daily presence in the full endoscopic theatre, following the live endoscopic view, approach set-up, instrument sequence and intraoperative decisions across the theatre list.</p>
+            </article>
+            <article class="format format--accent">
+                <span class="format__tag">Format 3</span>
+                <h3>Scrubbed, supervised assisting</h3>
+                <p>Fellows scrub in and assist under the direct supervision of the operating surgeon. The extent of assisting is decided case by case by Dr. Sura, based on the procedure, your demonstrated competence and the conditions below.</p>
+            </article>
+            <article class="format">
+                <span class="format__tag">Format 4</span>
+                <h3>RealSpine simulation</h3>
+                <p>Hands-on practice on RealSpine simulation systems for lumbar, thoracic and cervical full endoscopic techniques — where you build instrument handling and the endoscopic orientation yourself.</p>
+            </article>
         </div>
-        <div class="centre">
-            <div class="centre__text">
-                <p>The fellowship is delivered at Asian Spine Hospital, a 25-bed super-speciality spine centre built around full endoscopic surgery — not a general hospital with an endoscopy list.</p>
-                <p>The hospital is home to the <strong>International Spine Surgery Training &amp; Education Centre (ISSTEC)</strong>, established by the Spine Endoscopy Research Foundation (SERF) in partnership with Realists Training Technologies (RealSpine), Germany. Fellows train alongside the clinical team and on RealSpine simulation systems for lumbar, thoracic and cervical full endoscopic techniques.</p>
-                <p>The centre's team has performed over 2,500 full endoscopic spine procedures and more than 5,000 pain procedures, and hosted the 1st World Congress of Spine Endoscopy in Hyderabad in 2019.</p>
+
+        <div class="conditions">
+            <strong>Conditions on clinical participation.</strong> Any involvement in patient care is subject to the patient's consent, Asian Spine Hospital's institutional permissions and the fellow's medical registration status. Fellows do not operate independently on patients during the fellowship. International fellows without Indian medical registration participate in observation, simulation and case discussion; scrubbed assisting is subject to institutional approval. We confirm what applies to you at the interview stage, before any fee is paid.
+        </div>
+
+        <div class="timeline">
+            <div class="week">
+                <div class="week__label">Week 1<small>Orientation</small></div>
+                <div>
+                    <h3>Foundations, anatomy and patient selection</h3>
+                    <p>Theatre and department orientation. Endoscopic anatomy and the transforaminal and interlaminar corridors. Reading MRI and CT for endoscopic candidacy. First days in theatre as observer.</p>
+                    <ul><li>Clinic rounds and case presentations begin</li><li>First RealSpine simulation sessions: orientation, docking, working-channel discipline</li></ul>
+                </div>
             </div>
-            <div class="centre__facts">
-                <div class="centre__fact"><span class="centre__fact-mark">1st</span><div><strong>First dedicated FESS centre in India</strong><span>Standalone centre for endoscopic spine surgery and pain therapy.</span></div></div>
-                <div class="centre__fact"><span class="centre__fact-mark">DE</span><div><strong>ISSTEC — SERF × RealSpine, Germany</strong><span>Described as the world's first state-of-the-art international spine surgery training centre, on site.</span></div></div>
-                <div class="centre__fact"><span class="centre__fact-mark">2.5k</span><div><strong>2,500+ full endoscopic procedures</strong><span>Plus 5,000+ pain procedures across the spine team.</span></div></div>
-                <div class="centre__fact"><span class="centre__fact-mark">'19</span><div><strong>Hosted the 1st World Congress of Spine Endoscopy</strong><span>Hyderabad, 2019 — the team regularly trains international fellows.</span></div></div>
+            <div class="week">
+                <div class="week__label">Week 2<small>Transforaminal</small></div>
+                <div>
+                    <h3>Transforaminal lumbar discectomy and foraminoplasty</h3>
+                    <p>Approach planning on imaging, needle trajectory, foraminoplasty for lateral recess stenosis, and the trans-iliac route to L5–S1. Theatre observation moves to scrubbed assisting as cases and competence allow.</p>
+                </div>
+            </div>
+            <div class="week">
+                <div class="week__label">Week 3<small>Interlaminar</small></div>
+                <div>
+                    <h3>Interlaminar discectomy and decompression</h3>
+                    <p>Interlaminar window technique, nerve-root handling, and lamino-foraminoplasty with 360° decompression for canal stenosis. Complication-avoidance review on live cases.</p>
+                </div>
+            </div>
+            <div class="week">
+                <div class="week__label">Week 4<small>Beyond the lumbar spine</small></div>
+                <div>
+                    <h3>Thoracic and cervical full endoscopic techniques</h3>
+                    <p>Indications, positioning and approach differences for thoracic and cervical discectomy. Simulation on the cervical and thoracic RealSpine modules; theatre exposure as the list allows.</p>
+                </div>
+            </div>
+            <div class="week">
+                <div class="week__label">Week 5<small>Advanced</small></div>
+                <div>
+                    <h3>Full endoscopic-assisted fusion and difficult cases</h3>
+                    <p>EndoFusion workflow, revision and recurrent cases, managing the difficult disc and dural tears. Postoperative management protocols from day 0 to follow-up.</p>
+                </div>
+            </div>
+            <div class="week">
+                <div class="week__label">Week 6<small>Consolidation</small></div>
+                <div>
+                    <h3>Integration into your own practice</h3>
+                    <p>Case-planning exercises on your own typical patients, set-up and instrument requirements for your centre, and a closing review with Dr. Sura. Fellowship certificate issued on completion.</p>
+                </div>
             </div>
         </div>
+        <p class="timeline__note">Indicative curriculum. The sequence follows the hospital's live theatre list and patient mix, so week-to-week emphasis may shift; the content covered across the six weeks does not.</p>
     </div>
 </section>
 
-<!-- =========== FACULTY =========== -->
+<!-- =========== 4. YOUR MENTOR =========== -->
 <section class="section section--white" id="faculty">
     <div class="wrap">
         <header class="section__head">
-            <span class="eyebrow">Your mentor</span>
+            <span class="eyebrow">Learn alongside</span>
             <h2 class="section-title">Dr. Sukumar Sura</h2>
-            <p class="section-lead">Senior Neurosurgeon and Director, Centre for Full Endoscopic Spine Surgery, Asian Spine Hospital. Over 4,000 brain and spine surgeries, including more than 2,500 full endoscopic spine procedures, and eight years focused on lumbar, thoracic and cervical endoscopic techniques.</p>
+            <p class="section-lead">Senior Neurosurgeon and Director, Centre for Full Endoscopic Spine Surgery, Asian Spine Hospital. Over 4,000 brain and spine surgeries, including more than 2,500 full endoscopic spine procedures and 200+ full endoscopic fusions, with eight years focused on lumbar, thoracic and cervical endoscopic techniques.</p>
         </header>
         <div class="faculty">
             <div>
@@ -606,82 +763,162 @@
     </div>
 </section>
 
-<!-- =========== SELECTION PROCESS =========== -->
-<section class="section section--dark" id="selection">
+<!-- =========== 5. WHERE YOU WILL TRAIN =========== -->
+<section class="section section--cream" id="centre">
     <div class="wrap">
         <header class="section__head">
-            <span class="eyebrow">How selection works</span>
-            <h2 class="section-title">Fellowship registration &amp; selection process</h2>
-            <p class="section-lead">The fellowship is selective. We want to be sure every fellow has the qualifications, clinical background and commitment to benefit from the program.</p>
+            <span class="eyebrow">Where you will train</span>
+            <h2 class="section-title">Asian Spine Hospital, Hyderabad — India's first dedicated Full Endoscopic Spine Centre.</h2>
         </header>
-        <div class="steps">
-            <article class="step">
-                <h4>Submit Registration</h4>
-                <p>Complete the fellowship registration form with your professional and contact details.</p>
-            </article>
-            <article class="step">
-                <h4>Join the Waiting List</h4>
-                <p>Your application is added to the Fellowship Waiting List once registration is received.</p>
-            </article>
-            <article class="step">
-                <h4>Application Review</h4>
-                <p>The fellowship team reviews your qualifications, clinical experience and interest in FESS.</p>
-            </article>
-            <article class="step">
-                <h4>Interview</h4>
-                <p>Shortlisted applicants are invited for an interview to discuss clinical background and learning objectives.</p>
-            </article>
-            <article class="step">
-                <h4>Selection &amp; Confirmation</h4>
-                <p>Selected candidates receive formal confirmation of dates, fees, joining instructions and documentation requirements.</p>
-            </article>
+        <div class="centre__gallery">
+            <figure>
+                <img src="../../images/fellowship/centre-arete-hospital.jpg" alt="Arete Hospitals, Gachibowli, Hyderabad" width="500" height="320" loading="lazy">
+                <figcaption>Arete Hospitals, Gachibowli, Hyderabad — where the fellowship is delivered.</figcaption>
+            </figure>
+            <figure>
+                <img src="../../images/fellowship/centre-coe-inauguration.jpg" alt="Inauguration of India's first Centre of Excellence for Full Endoscopic Spine Surgery" width="1200" height="787" loading="lazy">
+                <figcaption>Inauguration of India's first Centre of Excellence for Full Endoscopic Spine Surgery.</figcaption>
+            </figure>
+            <figure>
+                <img src="../../images/fellowship/centre-or-team.jpg" alt="Asian Spine Hospital operating theatre team" width="1200" height="800" loading="lazy">
+                <figcaption>The theatre team you will scrub in alongside during the fellowship.</figcaption>
+            </figure>
         </div>
-        <p style="margin-top: 28px; font-size: 0.9rem; color: rgba(255,255,255,0.65); font-style: italic;">
-            Registration does not guarantee admission. Final admission is subject to application review, interview, availability of fellowship positions and approval by the fellowship team.
-        </p>
+        <div class="centre">
+            <div class="centre__text">
+                <p>The fellowship is delivered at Asian Spine Hospital, a 25-bed super-speciality spine centre built around full endoscopic surgery — not a general hospital with an endoscopy list.</p>
+                <p>Fellows train alongside the clinical team and on RealSpine (Realists Training Technologies, Germany) simulation systems for lumbar, thoracic and cervical full endoscopic techniques.</p>
+                <p>The centre's team has performed over 2,500 full endoscopic spine procedures and more than 5,000 pain procedures, and hosted the 1st World Congress of Spine Endoscopy in Hyderabad in 2019.</p>
+            </div>
+            <div class="centre__facts">
+                <div class="centre__fact"><span class="centre__fact-mark">1st</span><div><strong>First dedicated FESS centre in India</strong><span>Standalone centre for endoscopic spine surgery and pain therapy.</span></div></div>
+                <div class="centre__fact"><span class="centre__fact-mark">DE</span><div><strong>RealSpine simulation, Germany</strong><span>Lumbar, thoracic and cervical full endoscopic simulation modules on site.</span></div></div>
+                <div class="centre__fact"><span class="centre__fact-mark">2.5k</span><div><strong>2,500+ full endoscopic procedures</strong><span>Plus 5,000+ pain procedures across the spine team.</span></div></div>
+                <div class="centre__fact"><span class="centre__fact-mark">'19</span><div><strong>Hosted the 1st World Congress of Spine Endoscopy</strong><span>Hyderabad, 2019 — the team regularly trains international fellows.</span></div></div>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- =========== REGISTRATION FORM =========== -->
-<section class="section section--cream" id="apply">
+<!-- =========== 6. ELIGIBILITY, FEES & PRACTICAL DETAILS =========== -->
+<section class="section section--white" id="fees">
     <div class="wrap">
-        <header class="section__head section__head--centered">
-            <span class="eyebrow">Apply</span>
-            <h2 class="section-title">Apply for the 6-Week Fellowship</h2>
-            <p class="section-lead" style="margin-left:auto; margin-right:auto;">Submitting this form places you on the Fellowship Waiting List. Here is what to expect before you begin.</p>
+        <header class="section__head">
+            <span class="eyebrow">Eligibility, fees &amp; practical details</span>
+            <h2 class="section-title">Everything you need to know before you apply.</h2>
+            <p class="section-lead">No surprises after the form. The fee, what it covers, who is eligible and how intakes work — all here, before you start.</p>
         </header>
 
-        <!-- Preview card: shown first; form is revealed on click -->
-        <div class="preview" id="apply-preview">
-            <div class="preview__stats">
-                <div class="preview__stat"><div class="preview__stat-big">12–15 min</div><div class="preview__stat-small">to complete</div></div>
-                <div class="preview__stat"><div class="preview__stat-big">7 sections</div><div class="preview__stat-small">about 35 questions</div></div>
-                <div class="preview__stat"><div class="preview__stat-big">3 documents</div><div class="preview__stat-small">emailed after you submit</div></div>
+        <div class="fee" style="margin-bottom: 28px;">
+            <div class="fee__col">
+                <h3>Fellowship fee</h3>
+                <p>Payable only after you are selected and your dates are confirmed — never at application. The fee covers the full six-week clinical programme, simulation access, faculty-led case discussions, learning materials and the fellowship certificate.</p>
+                <p class="fee__note">Travel, accommodation, visa and personal expenses are not included. We can suggest nearby accommodation options on request.</p>
             </div>
-
-            <h3>What you'll be asked</h3>
-            <ul class="preview__sections">
-                <li><span class="n">1</span><div><strong>Personal details</strong><span>Name, email, WhatsApp number, city, state, country and postal address.</span></div></li>
-                <li><span class="n">2</span><div><strong>Medical qualification</strong><span>UG and PG degrees with institution and year; medical council registration number, authority and country.</span></div></li>
-                <li><span class="n">3</span><div><strong>Current practice</strong><span>Designation, hospital, department, total clinical experience and years in spine surgery.</span></div></li>
-                <li><span class="n">4</span><div><strong>Your endoscopic spine experience</strong><span>Where you are today — from no exposure to regularly operating — and approximate monthly case numbers.</span></div></li>
-                <li><span class="n">5</span><div><strong>Fellowship objective</strong><span>Three short written answers: why this fellowship, what you want to learn, and how you'll use it afterward.</span></div></li>
-                <li><span class="n">6</span><div><strong>Preferred dates</strong><span>Your preferred and alternative month or period.</span></div></li>
-                <li><span class="n">7</span><div><strong>Declarations</strong><span>Six confirmations covering accuracy, waiting list, interview, selection, expenses and consent to contact.</span></div></li>
-            </ul>
-
-            <div class="preview__docs">
-                <strong>Keep these ready to email after submitting:</strong> your CV, medical registration certificate, and PG qualification certificate (PDF). You will not upload them in the form.
+            <div class="fee__col">
+                <div class="fee__tiers">
+                    <div class="fee__tier">
+                        <div>
+                            <div class="fee__tier-label">Surgeons from India</div>
+                            <div class="fee__tier-amount">₹75,000</div>
+                        </div>
+                        <div style="font-size:0.86rem; color: var(--ink-muted);">+ GST</div>
+                    </div>
+                    <div class="fee__tier">
+                        <div>
+                            <div class="fee__tier-label">International Surgeons</div>
+                            <div class="fee__tier-amount">US$ 2,000</div>
+                        </div>
+                        <div style="font-size:0.86rem; color: var(--ink-muted);">+ GST</div>
+                    </div>
+                </div>
             </div>
-
-            <button type="button" class="btn btn--accent btn--block" id="start-application">Start Application →</button>
-            <p class="preview__fine">Registration does not guarantee admission. Fee is payable only after selection.</p>
         </div>
 
+        <div class="practical">
+            <div>
+                <div class="practical__card">
+                    <h3>Who is eligible</h3>
+                    <ul>
+                        <li>Orthopaedic surgeons, neurosurgeons or spine surgeons with a completed postgraduate qualification (MS / DNB Orthopaedics, M.Ch / DNB Neurosurgery or equivalent)</li>
+                        <li>Valid medical council registration in your country of practice</li>
+                        <li>Active spine surgical practice, or a defined plan to start endoscopic spine surgery at your centre</li>
+                        <li>Prior endoscopic exposure is <strong>not</strong> required — the curriculum starts from foundations</li>
+                        <li>Indian and international surgeons are welcome; see participation conditions above for international fellows</li>
+                    </ul>
+                </div>
+                <div class="practical__card">
+                    <h3>What is included</h3>
+                    <ul>
+                        <li>Six weeks of daily clinical rounds, theatre access and case discussions with Dr. Sura</li>
+                        <li>RealSpine simulation sessions — lumbar, thoracic and cervical modules</li>
+                        <li>Learning materials and case-planning templates</li>
+                        <li>Fellowship completion certificate from the Centre for Full Endoscopic Spine Surgery, Asian Spine Hospital</li>
+                        <li class="x">Not included: travel, accommodation, visa, meals and personal expenses</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="practical__card">
+                <h3>Intake &amp; timeline</h3>
+                <dl class="kv">
+                    <div><dt>Batch size</dt><dd>4 fellows per batch, to keep theatre access meaningful</dd></div>
+                    <div><dt>Intakes</dt><dd>Batches run through the year. You state a preferred and an alternative period in your application; your confirmed dates are agreed at interview.</dd></div>
+                    <div><dt>Duration</dt><dd>6 consecutive weeks, full-time, Monday to Saturday following the hospital's theatre schedule</dd></div>
+                    <div><dt>Acknowledgement</dt><dd>Within 2 working days of applying</dd></div>
+                    <div><dt>Review &amp; interview</dt><dd>Profile review followed by a video interview with Dr. Sura or the fellowship team for shortlisted applicants</dd></div>
+                    <div><dt>Decision</dt><dd>Communicated after interview, with dates, fee invoice and joining instructions</dd></div>
+                    <div><dt>Location</dt><dd>Asian Spine Hospital, Hyderabad, Telangana, India</dd></div>
+                    <div><dt>Certificate</dt><dd>Issued on completion of the six weeks</dd></div>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =========== 7. APPLY — eligibility check, then detailed application =========== -->
+<section class="section section--dark" id="apply">
+    <div class="wrap">
+        <header class="section__head section__head--centered">
+            <span class="eyebrow">Apply for the next intake</span>
+            <h2 class="section-title">Three stages. It starts with the application below.</h2>
+            <p class="section-lead" style="margin-left:auto; margin-right:auto;">Complete the application once. The fellowship team reviews every submission and invites suitable applicants to interview.</p>
+        </header>
+
+        <div class="stages">
+            <article class="stage">
+                <span class="stage__num">1</span>
+                <h4>Apply</h4>
+                <p>Complete the application below with your credentials, endoscopic experience, objectives and preferred dates, then email three documents.</p>
+                <span class="stage__time">Acknowledged within 2 working days</span>
+            </article>
+            <article class="stage">
+                <span class="stage__num">2</span>
+                <h4>Profile review &amp; interview</h4>
+                <p>The fellowship team reviews your qualifications and endoscopic exposure, then invites shortlisted applicants to a video interview to discuss objectives and agree dates.</p>
+                <span class="stage__time">Video interview · 20–30 minutes</span>
+            </article>
+            <article class="stage">
+                <span class="stage__num">3</span>
+                <h4>Selection confirmation</h4>
+                <p>Selected fellows receive confirmed dates, the fee invoice and joining instructions. Fee is payable only at this stage. Please book travel only after this confirmation.</p>
+                <span class="stage__time">Fee due on confirmation</span>
+            </article>
+        </div>
+
+        <!-- OPEN / COLLAPSE THE APPLICATION FORM -->
+        <div class="apply-toggle" id="apply-toggle">
+            <button type="button" class="btn btn--accent" id="open-form" aria-controls="form-wrap" aria-expanded="false">Start Application →</button>
+            <p class="apply-toggle__fine">About 10–12 minutes · 7 sections · 3 documents emailed afterwards · Nothing payable now</p>
+        </div>
+
+        <!-- DETAILED APPLICATION (collapsed until opened) -->
         <div class="form-wrap" id="form-wrap" hidden>
-            <div class="form-wrap__intro">
+            <div class="form-wrap__intro form-wrap__intro--row">
+                <div>
                 <h3>Six-Week Clinical Fellowship Application</h3>
-                <p>Please complete this form carefully. The information you provide will be used by the fellowship team to review your application.</p>
+                <p>About 10–12 minutes. Your qualifications, current practice, endoscopic experience, learning objectives and preferred dates. Three documents are emailed afterwards — you will not upload anything here.</p>
+                </div>
+                <button type="button" class="form-collapse" id="collapse-form" aria-controls="form-wrap">Collapse ▲</button>
             </div>
 
             <form id="fellowship-form" action="https://api.web3forms.com/submit" method="POST">
@@ -694,17 +931,16 @@
                 <fieldset class="fieldset">
                     <legend class="fieldset__legend">Personal Details</legend>
                     <div class="f-row">
-                        <div class="f-field"><label>First Name<span class="req">*</span></label><input type="text" name="first_name" required></div>
-                        <div class="f-field"><label>Last Name<span class="req">*</span></label><input type="text" name="last_name" required></div>
+                        <div class="f-field"><label>Full Name<span class="req">*</span></label><input type="text" name="name" required></div>
+                        <div class="f-field"><label>Email ID<span class="req">*</span></label><input type="email" name="email" required></div>
                     </div>
                     <div class="f-row">
-                        <div class="f-field"><label>Email ID<span class="req">*</span></label><input type="email" name="email" required></div>
                         <div class="f-field"><label>Mobile / WhatsApp Number (with country code)<span class="req">*</span></label><input type="tel" name="phone" placeholder="e.g. +91 98xxx xxxxx" required></div>
+                        <div class="f-field"><label>Country<span class="req">*</span></label><input type="text" name="country" required></div>
                     </div>
-                    <div class="f-row f-row--3">
+                    <div class="f-row">
                         <div class="f-field"><label>City<span class="req">*</span></label><input type="text" name="city" required></div>
                         <div class="f-field"><label>State / Province<span class="req">*</span></label><input type="text" name="state" required></div>
-                        <div class="f-field"><label>Country<span class="req">*</span></label><input type="text" name="country" required></div>
                     </div>
                     <div class="f-row f-row--single">
                         <div class="f-field"><label>Address for Communication<span class="req">*</span></label><textarea name="address" rows="3" required placeholder="Street / building, city, state/province, postal code, country"></textarea></div>
@@ -802,25 +1038,21 @@
                     </div>
                     <div class="f-check">
                         <input type="checkbox" name="docs_will_email" value="yes" required id="docs_will_email">
-                        <label for="docs_will_email">I understand I need to email my CV, medical registration certificate and PG qualification separately to <strong>info@avanasurgical.com</strong>.</label>
+                        <label for="docs_will_email">I will email my CV, medical registration certificate and PG qualification to <strong>info@avanasurgical.com</strong>.</label>
                     </div>
                 </fieldset>
 
-                <!-- Declarations -->
+                <!-- Declarations (consolidated) -->
                 <fieldset class="fieldset">
                     <legend class="fieldset__legend">Declarations</legend>
-                    <div class="f-check"><input type="checkbox" name="decl_accurate" value="yes" required id="d1"><label for="d1">I confirm that the information provided in this application is accurate and complete.</label></div>
-                    <div class="f-check"><input type="checkbox" name="decl_waiting_list" value="yes" required id="d2"><label for="d2">I understand that submitting this registration places my application on the Fellowship Waiting List and does not guarantee admission.</label></div>
-                    <div class="f-check"><input type="checkbox" name="decl_interview" value="yes" required id="d3"><label for="d3">I understand that shortlisted candidates will be required to attend an interview before final selection.</label></div>
-                    <div class="f-check"><input type="checkbox" name="decl_final_selection" value="yes" required id="d4"><label for="d4">I understand that final admission is subject to selection by the fellowship team and availability of fellowship positions.</label></div>
-                    <div class="f-check"><input type="checkbox" name="decl_expenses" value="yes" required id="d5"><label for="d5">I understand that travel, accommodation and other personal expenses during the fellowship are my responsibility.</label></div>
-                    <div class="f-check"><input type="checkbox" name="decl_contact" value="yes" required id="d6"><label for="d6">I consent to being contacted by the fellowship team regarding my application.</label></div>
+                    <div class="f-check"><input type="checkbox" name="decl_accurate_consent" value="yes" required id="d1"><label for="d1">The information in this application is accurate and complete, and I consent to the fellowship team contacting me about it.</label></div>
+                    <div class="f-check"><input type="checkbox" name="decl_selection_terms" value="yes" required id="d2"><label for="d2">I understand that the fellowship is selective: admission follows profile review and interview and depends on available places; the fee is payable only on confirmation; and travel, accommodation and personal expenses are my own responsibility.</label></div>
                 </fieldset>
 
-                <button type="submit" class="btn btn--accent btn--block" id="submit-btn">Submit Fellowship Registration →</button>
+                <button type="submit" class="btn btn--accent btn--block" id="submit-btn">Submit Application →</button>
 
                 <div class="form-feedback form-feedback--success" id="feedback-success">
-                    ✓ Thank you — your registration is received and added to the Fellowship Waiting List. We will acknowledge by email within 2 working days. <strong>Next step:</strong> email your CV + certificates to <a href="mailto:info@avanasurgical.com">info@avanasurgical.com</a>.
+                    ✓ Thank you — your application is received. We will acknowledge by email within 2 working days and contact shortlisted applicants for a video interview. <strong>Next step:</strong> email your CV + certificates to <a href="mailto:info@avanasurgical.com">info@avanasurgical.com</a>.
                 </div>
                 <div class="form-feedback form-feedback--error" id="feedback-error">
                     Something went wrong. Please email your application directly to <a href="mailto:info@avanasurgical.com">info@avanasurgical.com</a>.
@@ -830,66 +1062,46 @@
     </div>
 </section>
 
-<!-- =========== FEE =========== -->
-<section class="section section--white">
-    <div class="wrap">
-        <header class="section__head">
-            <span class="eyebrow">Fellowship fee</span>
-            <h2 class="section-title">A six-week investment in your surgical craft.</h2>
-            <p class="section-lead">Fee is payable only on selection — not at the time of registration. Travel, accommodation and personal expenses are not included in the fellowship fee.</p>
-        </header>
-        <div class="fee">
-            <div class="fee__col">
-                <h3>Program Investment</h3>
-                <p>Fee is charged once admission is confirmed. Fee includes the full six-week clinical program, faculty-led case discussions and learning materials.</p>
-                <p class="fee__note">Travel, accommodation and personal expenses are to be borne by the fellow.</p>
-            </div>
-            <div class="fee__col">
-                <div class="fee__tiers">
-                    <div class="fee__tier">
-                        <div>
-                            <div class="fee__tier-label">Surgeons from India</div>
-                            <div class="fee__tier-amount">₹75,000</div>
-                        </div>
-                        <div style="font-size:0.86rem; color: var(--ink-muted);">+ GST</div>
-                    </div>
-                    <div class="fee__tier">
-                        <div>
-                            <div class="fee__tier-label">International Surgeons</div>
-                            <div class="fee__tier-amount">US$ 2,000</div>
-                        </div>
-                        <div style="font-size:0.86rem; color: var(--ink-muted);">+ GST</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =========== AFTER YOU APPLY =========== -->
-<section class="section section--cream">
+<!-- =========== 8. FAQ =========== -->
+<section class="section section--cream" id="faq">
     <div class="wrap">
         <header class="section__head section__head--centered">
-            <span class="eyebrow">After you apply</span>
-            <h2 class="section-title">What happens next</h2>
-            <p class="section-lead" style="margin-left:auto; margin-right:auto;">Once you submit your registration, you will receive an acknowledgement that your application has been received. Please do not make travel or accommodation arrangements until you receive formal confirmation of your fellowship dates.</p>
+            <span class="eyebrow">Frequently asked questions</span>
+            <h2 class="section-title">Straight answers before you apply.</h2>
         </header>
-        <div class="after">
-            <div class="after__card">
-                <div class="after__num">1</div>
-                <h4>Acknowledgement</h4>
-                <p>You receive an email confirming your application is on the waiting list.</p>
-            </div>
-            <div class="after__card">
-                <div class="after__num">2</div>
-                <h4>Review &amp; Interview</h4>
-                <p>Our team reviews your profile and invites shortlisted applicants to interview.</p>
-            </div>
-            <div class="after__card">
-                <div class="after__num">3</div>
-                <h4>Formal Confirmation</h4>
-                <p>Selected candidates receive dates, joining instructions and payment details.</p>
-            </div>
+        <div class="faq">
+            <details>
+                <summary>Is this observation only, or hands-on?</summary>
+                <p>Both, in defined ways. You observe daily in theatre, you scrub in and assist under direct supervision as Dr. Sura judges appropriate for each case, and you get genuine hands-on practice on RealSpine simulators. You do not operate independently on patients during the fellowship.</p>
+            </details>
+            <details>
+                <summary>How many cases will I see in six weeks?</summary>
+                <p>The centre's team has performed more than 2,500 full endoscopic procedures, and theatre runs most working days. Case numbers vary with the hospital's list and patient mix, so we do not promise a figure. The batch is capped at four fellows so that theatre access stays meaningful for each person.</p>
+            </details>
+            <details>
+                <summary>Will I be able to perform endoscopic spine surgery independently afterwards?</summary>
+                <p>Six weeks builds the clinical reasoning, approach planning and supervised operative experience to start endoscopic spine surgery at your centre with a clear plan. Independent practice depends on your prior spine experience, your institution's credentialing and continued case volume. We do not claim that any course makes a surgeon independent on its own.</p>
+            </details>
+            <details>
+                <summary>Can international surgeons apply? What can they do in theatre?</summary>
+                <p>Yes. International fellows take part fully in clinical rounds, case discussion, theatre observation and simulation. Scrubbed assisting on patients depends on your medical registration status and the hospital's institutional permissions, which we confirm at interview, before any fee is paid.</p>
+            </details>
+            <details>
+                <summary>When are the intakes, and when will I hear back?</summary>
+                <p>Batches run through the year with four fellows each. You indicate a preferred and an alternative period in your application. We acknowledge every application within 2 working days, invite shortlisted applicants to a video interview, and confirm dates with the selection decision.</p>
+            </details>
+            <details>
+                <summary>What does the fee include, and when is it due?</summary>
+                <p>₹75,000 + GST for surgeons from India, US$ 2,000 + GST for international surgeons. It covers the six-week programme, simulation access, case discussions, materials and the certificate. It is invoiced only after selection and date confirmation. Travel, accommodation, visa and personal costs are separate.</p>
+            </details>
+            <details>
+                <summary>What if I need to withdraw after confirming?</summary>
+                <p>Tell the fellowship coordinator as early as possible. A confirmed place can usually be moved to a later batch once; refund terms for a paid fee are set out in your confirmation letter. Please do not book travel until your dates are confirmed in writing.</p>
+            </details>
+            <details>
+                <summary>Do I get a certificate?</summary>
+                <p>Yes. A fellowship completion certificate from the Centre for Full Endoscopic Spine Surgery, Asian Spine Hospital, is issued on completion of the six weeks.</p>
+            </details>
         </div>
     </div>
 </section>
@@ -898,7 +1110,7 @@
 <section class="contact">
     <div class="wrap">
         <h2 class="section-title" style="color:var(--ink-white);">Questions About the Fellowship?</h2>
-        <p>For eligibility, application or fellowship-date questions, write to our fellowship coordination team.</p>
+        <p>For eligibility, participation or intake-date questions, write to the fellowship coordination team.</p>
         <a href="mailto:info@avanasurgical.com?subject=Fellowship%20Enquiry%20%E2%80%94%20FESS%206-Week%20Program" class="btn btn--accent">Contact Fellowship Coordinator</a>
     </div>
 </section>
@@ -916,23 +1128,32 @@
     </div>
 </footer>
 
-<!-- =========== REVEAL FORM ON "START APPLICATION" =========== -->
+<!-- =========== OPEN / COLLAPSE APPLICATION FORM =========== -->
 <script>
 (function(){
-    var preview = document.getElementById('apply-preview');
+    var toggle = document.getElementById('apply-toggle');
+    var openBtn = document.getElementById('open-form');
+    var closeBtn = document.getElementById('collapse-form');
     var wrap = document.getElementById('form-wrap');
-    var start = document.getElementById('start-application');
-    if (!preview || !wrap || !start) return;
-    function reveal(){
-        preview.hidden = true;
-        wrap.hidden = false;
-        wrap.scrollIntoView({behavior: 'smooth', block: 'start'});
-        var first = wrap.querySelector('input[name="first_name"]');
+    if (!toggle || !wrap) return;
+    function open(){
+        toggle.hidden = true; wrap.hidden = false;
+        openBtn.setAttribute('aria-expanded','true');
+        wrap.scrollIntoView({behavior:'smooth', block:'start'});
+        var first = wrap.querySelector('input[name="name"]');
         if (first) setTimeout(function(){ first.focus(); }, 500);
     }
-    start.addEventListener('click', reveal);
-    // Deep link: /fellowship/apply/#form opens the form directly
-    if (location.hash === '#form') reveal();
+    function close(){
+        wrap.hidden = true; toggle.hidden = false;
+        openBtn.setAttribute('aria-expanded','false');
+        toggle.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    // Deep link: /fellowship/apply/#form opens the form directly (also used by "Apply" buttons)
+    function checkHash(){ if (location.hash === '#form') open(); }
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
 })();
 </script>
 
