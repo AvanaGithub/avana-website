@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avana — Landing Page Directory</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/png" href="/images/avana-logo/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'Arimo',Arial,sans-serif;background:#F6F2EA;color:#1F1F1F;line-height:1.55}
+        .wrap{max-width:960px;margin:0 auto;padding:40px 20px 80px}
+        header{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+        header img{height:34px}
+        h1{font-size:1.6rem;color:#1F3A4D}
+        .sub{color:#6B6B6B;font-size:.92rem;margin-bottom:28px}
+        .sub code{background:#fff;border:1px solid #E3DED2;border-radius:4px;padding:1px 6px;font-size:.85rem}
+        h2{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#B27F0D;margin:30px 0 10px}
+        .card{background:#fff;border:1px solid #E3DED2;border-radius:10px;overflow:hidden}
+        .row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;padding:13px 16px;border-top:1px solid #EFEAE0}
+        .row:first-child{border-top:0}
+        .row strong{display:block;font-size:.95rem;color:#1F3A4D}
+        .row a{color:#8A6710;font-size:.84rem;word-break:break-all;text-decoration:none}
+        .row a:hover{text-decoration:underline}
+        .row .note{font-size:.8rem;color:#8A8A8A;margin-top:2px}
+        .actions{display:flex;gap:6px;flex-shrink:0}
+        .btn{border:1px solid #D9D2C3;background:#FAF8F3;color:#1F3A4D;border-radius:6px;padding:7px 11px;font-size:.78rem;font-weight:600;cursor:pointer;text-decoration:none;white-space:nowrap}
+        .btn:hover{background:#B27F0D;color:#fff;border-color:#B27F0D}
+        .tag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:4px;margin-left:8px;vertical-align:middle}
+        .tag--brand{background:#EAF2F7;color:#1F3A4D}
+        .tag--standalone{background:#FBEFE8;color:#A33E2E}
+        .tag--pdf{background:#EEF6EE;color:#2E6B3A}
+        .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#1F3A4D;color:#fff;padding:10px 18px;border-radius:8px;font-size:.85rem;opacity:0;transition:opacity .2s;pointer-events:none}
+        .toast.show{opacity:1}
+        @media(max-width:600px){.row{grid-template-columns:1fr}.actions{justify-content:flex-start}}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <header>
+        <img src="/images/avana-logo/Avana-header-logo.svg" alt="Avana">
+        <h1>Landing page directory</h1>
+    </header>
+    <p class="sub">Every campaign, fellowship and guide page that is <strong>not linked from the site menu</strong>, with its live URL. Bookmark this page: <code>avanasurgical.com/landing/</code>. It is hidden from search engines.</p>
+
+    <h2>Product landing pages</h2>
+    <div class="card" id="landing-list">
+        <div class="row" data-url="https://avanasurgical.com/landing/freestyle-oa/"><div><strong>Freestyle OA Knee Brace <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/landing/freestyle-oa/">avanasurgical.com/landing/freestyle-oa/</a><div class="note">Breg Freestyle OA · knee osteoarthritis · Meta campaign page</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/landing/kodiak/"><div><strong>Polar Care Kodiak <span class="tag tag--standalone">Standalone</span></strong><a href="https://avanasurgical.com/landing/kodiak/">avanasurgical.com/landing/kodiak/</a><div class="note">Breg Polar Care Kodiak · cold therapy · surgeon + patient panes</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/landing/popple-lso-maternity-back-brace/"><div><strong>Popple 631 LSO Maternity Back Brace <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/landing/popple-lso-maternity-back-brace/">avanasurgical.com/landing/popple-lso-maternity-back-brace/</a><div class="note">Aspen Popple · pregnancy back pain · mirrors the Osteokart page</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/landing/endoscopic-spine/"><div><strong>Back Pain &amp; Full Endoscopic Spine Surgery — Patient Guide <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/landing/endoscopic-spine/">avanasurgical.com/landing/endoscopic-spine/</a><div class="note">RIWO Spine · patient education for endoscopic spine surgery</div></div></div>
+    </div>
+
+    <h2>Fellowship (Dr. Sukumar Sura)</h2>
+    <div class="card">
+        <div class="row" data-url="https://avanasurgical.com/fellowship/apply/"><div><strong>6-Week Full Endoscopic Spine Surgery Fellowship — Apply <span class="tag tag--standalone">Standalone</span></strong><a href="https://avanasurgical.com/fellowship/apply/">avanasurgical.com/fellowship/apply/</a><div class="note">Dr. Sukumar Sura-branded page with curriculum, fees and the collapsible application form. Add <code>#form</code> to open the form directly.</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/fellowship/full-endoscopic-spine/"><div><strong>Full-Endoscopic Spine Surgery Fellowship — Overview <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/fellowship/full-endoscopic-spine/">avanasurgical.com/fellowship/full-endoscopic-spine/</a><div class="note">Avana-branded overview page</div></div></div>
+    </div>
+
+    <h2>Patient guides &amp; downloads</h2>
+    <div class="card">
+        <div class="row" data-url="https://avanasurgical.com/recovery-blueprint"><div><strong>Recovery Blueprint <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/recovery-blueprint">avanasurgical.com/recovery-blueprint</a><div class="note">Post-surgery recovery guide page</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/knee-guide/Avana-Knee-Care-Guide.pdf"><div><strong>Avana Knee Care Guide <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/knee-guide/Avana-Knee-Care-Guide.pdf">avanasurgical.com/knee-guide/Avana-Knee-Care-Guide.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/knee-guide/Your-Guide-to-a-Smoother-Knee-Recovery.pdf"><div><strong>Your Guide to a Smoother Knee Recovery <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/knee-guide/Your-Guide-to-a-Smoother-Knee-Recovery.pdf">avanasurgical.com/knee-guide/Your-Guide-to-a-Smoother-Knee-Recovery.pdf</a></div></div>
+    </div>
+
+    <h2>Solution pages not in the menu</h2>
+    <div class="card">
+        <div class="row" data-url="https://avanasurgical.com/solutions/spine-pain/"><div><strong>Spine Pain <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/solutions/spine-pain/">avanasurgical.com/solutions/spine-pain/</a><div class="note">Live but not in the Solutions menu (menu uses Spine Support)</div></div></div>
+        <div class="row" data-url="https://avanasurgical.com/solutions/knee-pain/acl-injury/"><div><strong>ACL Injury <span class="tag tag--brand">Avana shell</span></strong><a href="https://avanasurgical.com/solutions/knee-pain/acl-injury/">avanasurgical.com/solutions/knee-pain/acl-injury/</a><div class="note">Live, not in the menu, not in the sitemap (on hold)</div></div></div>
+    </div>
+
+    <h2>Popple clinical documents</h2>
+    <div class="card">
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-clinical-brochure.pdf"><div><strong>Clinical Brochure <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-clinical-brochure.pdf">avanasurgical.com/docs/popple/popple-clinical-brochure.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-doctor-discussion-guide.pdf"><div><strong>Doctor Discussion Guide <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-doctor-discussion-guide.pdf">avanasurgical.com/docs/popple/popple-doctor-discussion-guide.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-sell-sheet.pdf"><div><strong>Sell Sheet <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-sell-sheet.pdf">avanasurgical.com/docs/popple/popple-sell-sheet.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-instructions-for-use.pdf"><div><strong>Instructions for Use <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-instructions-for-use.pdf">avanasurgical.com/docs/popple/popple-instructions-for-use.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-documentation-worksheet.pdf"><div><strong>Documentation Worksheet <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-documentation-worksheet.pdf">avanasurgical.com/docs/popple/popple-documentation-worksheet.pdf</a></div></div>
+        <div class="row" data-url="https://avanasurgical.com/docs/popple/popple-pdac-approval.pdf"><div><strong>PDAC Approval <span class="tag tag--pdf">PDF</span></strong><a href="https://avanasurgical.com/docs/popple/popple-pdac-approval.pdf">avanasurgical.com/docs/popple/popple-pdac-approval.pdf</a></div></div>
+    </div>
+
+    <p class="sub" style="margin-top:28px">To add a page here, edit <code>landing/index.html</code> and copy one of the rows.</p>
+</div>
+<div class="toast" id="toast">Link copied</div>
+<script>
+(function(){
+    var toast=document.getElementById('toast');
+    document.querySelectorAll('.row[data-url]').forEach(function(row){
+        var url=row.getAttribute('data-url');
+        var act=document.createElement('div'); act.className='actions';
+        var open=document.createElement('a'); open.className='btn'; open.href=url; open.target='_blank'; open.rel='noopener'; open.textContent='Open';
+        var copy=document.createElement('button'); copy.className='btn'; copy.type='button'; copy.textContent='Copy link';
+        copy.addEventListener('click',function(){
+            (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(function(){
+                toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show');},1400);
+            }).catch(function(){ window.prompt('Copy this link:',url); });
+        });
+        act.appendChild(open); act.appendChild(copy); row.appendChild(act);
+    });
+})();
+</script>
+</body>
+</html>
