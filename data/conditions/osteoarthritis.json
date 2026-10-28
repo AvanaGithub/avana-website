@@ -1,101 +1,99 @@
 {
   "slug": "osteoarthritis",
   "type": "condition",
-  "metaTitle": "Osteoarthritis Knee Bracing & Pain Relief | Avana India",
-  "metaDescription": "Doctor-recommended offloader knee braces for osteoarthritis (OA) pain relief. Clinically proven to reduce pain, improve mobility & delay surgery.",
-
+  "metaTitle": "Knee Osteoarthritis Brace | Load-Shift Bracing for OA Knee Pain | Avana India",
+  "metaDescription": "Most knee OA pain starts on the inner side of the knee. Load-Shift Bracing moves weight off it with every step. Breg Freestyle OA, fitted by Avana across India.",
   "hero": {
-    "eyebrow": "Osteoarthritis Knee · Pain Relief & Bracing",
-    "title": "Osteoarthritis Knee — Bracing & Pain Relief",
-    "description": "Modern offloader bracing has changed what's possible for osteoarthritis knee patients in India. Many people meaningfully reduce pain, stay active longer, and delay or avoid knee replacement surgery.",
+    "eyebrow": "Knee Osteoarthritis · Non-surgical relief",
+    "title": "Load-Shift Bracing for knee osteoarthritis",
+    "description": "It moves your weight off the worn side of your knee with every step — so walking, stairs and standing hurt less.",
     "image": "/images/condition/osteoarthritis.jpg",
     "imageAlt": "OA brace supporting an osteoarthritic knee",
     "ctas": [
-      { "label": "See OA Solutions", "href": "#products", "style": "primary" },
-      { "label": "Enquire Now", "href": "#cta", "style": "outline" }
+      {
+        "label": "Check if Load-Shift Bracing suits my knee",
+        "href": "#who-suits",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to our team",
+        "href": "https://wa.me/919150064620?text=Hi%20Avana%2C%20I%20have%20knee%20osteoarthritis.%20Can%20you%20tell%20me%20whether%20Load-Shift%20Bracing%20suits%20my%20knee%3F",
+        "style": "outline",
+        "external": true
+      }
     ]
   },
-
-  "intro": "<p class=\"lede\">Osteoarthritis (OA) of the knee is the most common joint disease in Indian adults over 50 — and one of the leading reasons patients are told they need knee replacement surgery. Most don't. With the right <strong>offloader brace</strong>, physiotherapy and activity guidance, many patients reduce daily knee pain, walk further, and meaningfully delay or avoid surgery. This page explains what OA knee is, what causes it, and how Avana's clinically-validated bracing fits into a full treatment plan. <strong>Avana has supported over 1 million+ patients across India</strong> — and our team helps you choose, size, and wear the right brace, with no pressure to purchase.</p>",
-
+  "intro": "<p class=\"lede\">In most Indian knees with OA, the damage is on the inner side. Every step presses bone onto that worn spot, and that pressure is where much of the pain comes from. A knee cap only wraps the joint. A <strong>Load-Shift brace</strong> pushes gently on the knee to shift that weight to the healthier outer side. Less load on the worn side means less pain where it hurts most. Your doctor decides if it's right for you; our team fits it and checks it works.</p>",
   "whatIs": {
-    "eyebrow": "About the condition",
-    "title": "What is osteoarthritis knee?",
+    "eyebrow": "What is knee OA",
+    "title": "What's happening inside an OA knee",
     "paragraphs": [
-      "<p>Osteoarthritis (OA) is a degenerative joint disease where cartilage — the smooth tissue covering the ends of bones — gradually thins and wears down. When this happens in the knee, the bones rub against each other, causing <strong>pain, stiffness, swelling, and reduced range of motion</strong>.</p>",
-      "<p>OA most commonly affects the <strong>medial (inner) compartment</strong> of the knee, especially in Indian adults due to higher rates of squatting, sitting cross-legged, and prolonged standing. Over time, the joint may become bow-legged (varus deformity) as the inner cartilage wears down further.</p>",
-      "<p>Unlike rheumatoid arthritis (an autoimmune disease), OA is a \"wear-and-tear\" condition — it doesn't reverse, but it can be <strong>managed and slowed</strong> with the right combination of bracing, physiotherapy, weight management, and lifestyle changes. Surgery is one option for advanced cases, but not the inevitable outcome.</p>"
+      "<p>Osteoarthritis slowly thins the smooth cartilage that cushions the ends of your bones. As it wears, the knee becomes painful, stiff and sometimes swollen.</p>",
+      "<p>In most people it starts on the inner (medial) side of the knee. Years of squatting, sitting cross-legged and standing put extra load there. Over time, the leg can start to bow outward, which pushes even more weight onto that same worn side.</p>",
+      "<p>OA doesn't reverse. But the load on the worn side can be changed — and that is what <strong>Load-Shift Bracing</strong> does.</p>"
     ]
   },
-
   "symptoms": {
-    "eyebrow": "What to look for",
-    "title": "Symptoms of osteoarthritis knee",
-    "lead": "Common signs and symptoms include:",
+    "eyebrow": "Symptoms",
+    "title": "Signs your knee may have OA",
+    "lead": "",
     "items": [
-      "<strong>Pain that worsens with activity</strong> — climbing stairs, walking long distances, standing up after sitting.",
-      "<strong>Stiffness on waking</strong> that usually loosens up after about half an hour of gentle activity.",
-      "<strong>Swelling and warmth</strong> around the knee, especially after activity.",
-      "<strong>A grating or grinding sensation</strong> (crepitus) when bending the knee.",
-      "<strong>Reduced range of motion</strong> — the knee no longer extends or flexes through its full range without effort.",
-      "<strong>Knee \"giving way\"</strong> during walking or climbing stairs.",
-      "<strong>A bow-legged appearance</strong> developing over months or years."
+      "Pain that gets worse with walking, stairs or getting up from a chair",
+      "Stiffness in the morning that eases within about 30 minutes",
+      "Swelling or warmth after activity",
+      "A grinding or crackling feeling when you bend the knee",
+      "The knee won't fully straighten or bend",
+      "The knee feels like it may give way",
+      "Legs slowly becoming bow-shaped"
     ]
   },
-
   "causes": {
-    "eyebrow": "Why it happens",
-    "title": "Causes & risk factors",
-    "lead": "OA knee develops when cartilage in the knee joint wears faster than the body can repair it. Common risk factors:",
+    "eyebrow": "Causes",
+    "title": "Why it happens",
+    "lead": "",
     "items": [
-      "<strong>Age</strong> — most common after 50, though 35+ is increasingly seen in India.",
-      "<strong>Excess body weight</strong> — every extra kilo adds 4 kg of load through the knee while walking.",
-      "<strong>Previous knee injury</strong> — ACL tear, meniscus injury, or fracture significantly raises OA risk later in life.",
-      "<strong>Repeated stress on the joint</strong> — manual labour, squatting, prolonged kneeling.",
-      "<strong>Genetics</strong> — family history of OA is a strong predictor.",
-      "<strong>Female sex after menopause</strong> — Indian women have a higher prevalence than men.",
-      "<strong>Bow legs (genu varum)</strong> — common in the Indian population, accelerates medial compartment wear.",
-      "<strong>Vitamin D deficiency</strong> — prevalent in India, weakens cartilage and bone health."
+      "<strong>Age</strong> — most common after 50, though more people in their late 30s and 40s are seeing it.",
+      "<strong>Body weight</strong> — every extra kilo adds several kilos of load on the knee with each step.",
+      "<strong>Old knee injuries</strong> — ACL, meniscus or fracture.",
+      "<strong>Daily posture</strong> — squatting, kneeling, long hours standing.",
+      "<strong>Family history.</strong>",
+      "<strong>Women after menopause.</strong>",
+      "<strong>Bow legs</strong> — they load the inner side even more."
     ]
   },
-
   "treatment": {
-    "eyebrow": "What helps",
-    "title": "Osteoarthritis knee treatment options",
-    "lead": "OA knee care usually starts with the simplest, least invasive measures — and only moves up to injections or surgery if those don't bring enough relief.",
+    "eyebrow": "The method",
+    "title": "How the brace moves the load",
+    "lead": "",
     "steps": [
-      "<strong>Lifestyle changes</strong> — weight management, low-impact exercise (swimming, cycling), avoiding deep squatting, and proper Vitamin D supplementation. Often delivers the biggest pain reduction in early OA.",
-      "<strong>Physiotherapy</strong> — strengthening the quadriceps and core, gait retraining, and manual therapy. Should be paired with bracing for compound effect.",
-      "<strong>Offloader bracing</strong> — the single most evidence-supported non-surgical intervention. An offloader brace applies a corrective force across the knee, shifting load from the worn medial compartment to the healthy lateral compartment. Many patients report meaningful pain reduction and improved walking comfort within weeks of consistent wear.",
-      "<strong>Pain medication</strong> — NSAIDs, topical creams, or short courses of cortisone injections under medical supervision. Manages symptoms but does not slow disease progression.",
-      "<strong>Hyaluronic acid injections</strong> — visco-supplementation that may provide several months of relief in selected patients.",
-      "<strong>Surgery</strong> — arthroscopy, partial or total knee replacement. Reserved for advanced cases where conservative options have failed. Consistent bracing has helped many patients delay knee replacement for years."
-    ]
+      "<strong>A firm push on the knee.</strong> A rigid hinge on one side and the straps press gently on the knee, nudging it into slightly better alignment as you walk.",
+      "<strong>Weight moves to the healthier side.</strong> That nudge shifts load away from the worn inner side, where most of the pain starts.",
+      "<strong>You set the amount.</strong> A thumbwheel dial on the hinge adjusts how much load is shifted — no tools. Our team sets it at fitting; you fine-tune as you get used to it.",
+      "<strong>Warm, slim and wearable.</strong> The single hinge sits on one side only, so the brace fits under trousers. The wrap adds warmth and helps with swelling."
+    ],
+    "closing": "<p><strong>Proof:</strong> braces that shift load in the main knee joint are strongly recommended in the 2019 American College of Rheumatology osteoarthritis guideline.</p><h3 style=\"margin-top:36px;\">Where Load-Shift Bracing fits in your treatment</h3><p>The best results come from combining steps, not choosing one. Your doctor will build the plan.</p><ol><li><strong>Exercise and physiotherapy</strong> — strengthening the thigh and hip muscles. A brace makes it easier to keep walking and exercising.</li><li><strong>Weight management</strong> — even a few kilos less reduces load on the knee.</li><li><strong>Load-Shift Bracing</strong> — for daily walking, work and activity.</li><li><strong>Pain medicines and creams</strong> — help with symptoms, under your doctor's guidance.</li><li><strong>Injections</strong> — steroid or hyaluronic acid, in selected patients.</li><li><strong>Surgery</strong> — for advanced OA, when other steps aren't enough. For many patients, bracing helps them stay comfortable for longer before they need to decide.</li></ol><h3 id=\"who-suits\" style=\"margin-top:36px;\">Who Load-Shift Bracing suits</h3><p><strong>Good fit:</strong></p><ul><li>OA mainly on one side of the knee (usually the inner side)</li><li>Mild to moderate OA — often described as grade 2 or 3 on X-ray</li><li>You want to keep walking, working and doing daily tasks</li></ul><p><strong>Talk to your doctor first if:</strong></p><ul><li>OA affects the whole knee badly (end-stage)</li><li>Your pain is mainly at the front of the knee, around the kneecap</li><li>You have poor circulation or skin problems around the knee</li></ul>"
   },
-
   "productsHeading": {
-    "title": "Recommended OA bracing",
-    "lead": "Offloader and OA-specific products chosen by Avana for their clinical performance and Indian-patient fit."
+    "title": "The brace we fit",
+    "lead": "Breg Freestyle OA Knee Brace — a Load-Shift brace for mild to moderate OA on the inner or outer side of the knee. Wraps on easily, adjusts by dial, slim enough for daily wear. ₹24,900 on Osteokart, fitted by Avana's team."
   },
-
   "whenToSeeDoctor": {
     "eyebrow": "Red flags",
-    "title": "When to see a doctor",
-    "lead": "Bracing and lifestyle changes work for most OA knee patients — but some signs need a specialist immediately:",
+    "title": "See a doctor straight away if",
+    "lead": "",
     "items": [
-      "<strong>Severe pain at rest</strong> (not just with activity).",
-      "<strong>The knee locks or gives way</strong> repeatedly.",
-      "<strong>Significant swelling that doesn't reduce</strong> with rest, ice, or elevation.",
-      "<strong>Inability to fully straighten or bend</strong> the knee.",
-      "<strong>Pain that wakes you up at night.</strong>",
-      "<strong>Visible deformity</strong> developing rapidly.",
-      "<strong>Symptoms in both knees, plus fingers/wrists</strong> — may suggest rheumatoid arthritis instead."
+      "Severe pain even at rest, or pain that wakes you at night",
+      "The knee locks or keeps giving way",
+      "Swelling that won't go down with rest, ice and raising the leg",
+      "You can't straighten or bend the knee",
+      "The knee's shape is changing quickly",
+      "Pain in both knees plus fingers or wrists — this may be rheumatoid arthritis instead"
     ],
-    "note": "Avana's clinical team can guide you to an orthopaedic specialist near you. We support — but never replace — proper medical care."
+    "note": "Our team can help you find an orthopaedic specialist near you. We support your doctor's care — never replace it."
   },
-
-  "testimonialsHeading": { "title": "OA patients in their own words" },
-
+  "testimonialsHeading": {
+    "title": "In their own words"
+  },
   "testimonials": [
     {
       "name": "Radhamani",
@@ -110,35 +108,87 @@
       "testimonial": "Very supportive, now feeling much better. We were so satisfied that we purchased one for the other knee as well."
     }
   ],
-
-  "faqHeading": { "title": "Common OA questions" },
-
+  "faqHeading": {
+    "title": "Questions people ask us"
+  },
   "faq": [
-    { "question": "How long should I wear my OA brace each day?", "answer": "Offloader OA braces are typically worn during weight-bearing activities — walking, working, light exercise — and removed when resting. Your specialist will recommend a schedule." },
-    { "question": "Can I exercise while wearing the brace?", "answer": "Yes. Modern OA braces are designed for activity — walking, cycling, gentle resistance training. Avoid high-impact sport unless your specialist clears it." },
-    { "question": "How much does an OA knee brace cost in India?", "answer": "Quality offloader knee braces from international brands like Breg typically range from ₹15,000 to ₹35,000 in India, depending on customisation level. While entry-level supports cost less, evidence for clinical benefit is strongest for properly-fitted offloader braces. Avana's team can advise based on your specific condition and budget — and all products are dispatched by our authorised retail partner Osteokart.com." },
-    { "question": "Can I avoid knee replacement surgery if I have OA?", "answer": "Many patients with mild-to-moderate OA can meaningfully delay or avoid knee replacement through a combination of bracing, physiotherapy, weight management, and lifestyle changes. Multiple long-term studies show offloader bracing alone has postponed surgery by years in suitable candidates. Severe end-stage OA, however, may still require surgical intervention — your orthopaedic specialist is the best person to assess your stage." },
-    { "question": "Is osteoarthritis knee the same as arthritis or rheumatism?", "answer": "No — these are different conditions often confused. Osteoarthritis is a mechanical \"wear-and-tear\" disease affecting cartilage. Rheumatoid arthritis is an autoimmune disease where the body attacks its own joints. \"Rheumatism\" is an older umbrella term not used in modern medicine. Bracing helps OA most directly; rheumatoid arthritis typically requires medication-based treatment from a rheumatologist." },
-    { "question": "Are there exercises that help OA knee?", "answer": "Yes. Low-impact strengthening — especially quadriceps and glute exercises — significantly reduces OA knee pain. Swimming, stationary cycling, water aerobics, and tai chi are all well-supported. Avoid deep squats, high-impact running, and prolonged kneeling. A physiotherapist can build a programme suited to your stage of OA." },
-    { "question": "Will a brace cure my osteoarthritis?", "answer": "No. OA is progressive and no brace reverses cartilage loss. What a well-fitted offloader brace can do is meaningfully reduce pain, improve walking comfort, and help many patients delay or avoid surgery." }
+    {
+      "question": "How is this different from a knee cap?",
+      "answer": "A knee cap (sleeve) gives warmth and a feeling of support. It doesn't change where the weight goes. A Load-Shift brace has a rigid hinge that moves load off the worn side. Different job, different result."
+    },
+    {
+      "question": "Will it cure my OA?",
+      "answer": "No. Nothing reverses cartilage loss. A Load-Shift brace aims to reduce pain and make walking easier while you follow your doctor's plan."
+    },
+    {
+      "question": "Can it help me avoid knee replacement?",
+      "answer": "Some patients with mild to moderate OA stay comfortable for years with bracing, exercise and weight management. Advanced OA may still need surgery. Your orthopaedic surgeon is the right person to judge your stage."
+    },
+    {
+      "question": "When do I wear it?",
+      "answer": "When you're on your feet — walking, working, light exercise. Take it off when sitting or lying down."
+    },
+    {
+      "question": "Can I exercise in it?",
+      "answer": "Yes — walking, cycling and gentle strength work. Ask your doctor before any high-impact sport."
+    },
+    {
+      "question": "Will it show under clothes?",
+      "answer": "The hinge sits on one side and is slim, so it usually fits under trousers."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "The Breg Freestyle OA is ₹24,900 on Osteokart, our authorised retail partner. Prices are set by Osteokart and the product page always shows the current price. Our team will tell you honestly if a brace is worth it for your knee."
+    },
+    {
+      "question": "Is OA the same as rheumatoid arthritis?",
+      "answer": "No. OA is wear of the cartilage. Rheumatoid arthritis is the immune system attacking the joints and needs treatment from a rheumatologist."
+    },
+    {
+      "question": "What exercises help?",
+      "answer": "Thigh and hip strengthening, swimming, stationary cycling and tai chi. Avoid deep squats and long kneeling. A physiotherapist can plan this for your stage."
+    }
   ],
-
   "blog": [],
-
   "brands": [
-    { "name": "Breg", "logo": "/images/brands/breg-logo.jpeg", "caption": "USA · OA bracing leader" },
-    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Orthopaedic bracing" },
-    { "name": "RIWO Spine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    {
+      "name": "Breg",
+      "logo": "/images/brands/breg-logo.jpeg",
+      "caption": "USA · OA bracing leader"
+    },
+    {
+      "name": "Aspen Medical",
+      "logo": "/images/brands/aspen-logo.png.jpg",
+      "caption": "USA · Orthopaedic bracing"
+    },
+    {
+      "name": "RIWO Spine",
+      "logo": "/images/brands/riwospine-logo.png.png",
+      "caption": "Germany · Endoscopic spine systems"
+    },
+    {
+      "name": "Osteokart",
+      "logo": "/images/brands/osteokart-logo.png.png",
+      "caption": "India · Authorised retail partner"
+    }
   ],
-
   "cta": {
-    "title": "Living with OA? Let us help you stay active.",
-    "description": "Speak to our team about your symptoms and we'll guide you to the right bracing — with no pressure to purchase.",
+    "title": "Take the load off. Keep walking.",
+    "description": "Tell us about your knee. We'll tell you honestly whether Load-Shift Bracing can help — no pressure to buy.",
     "buttons": [
-      { "label": "Enquire Now", "href": "mailto:info@avanasurgical.com?subject=Osteoarthritis%20support%20enquiry", "style": "primary" },
-      { "label": "Browse OA Products", "href": "https://osteokart.com/category/osteoarthritis?utm_source=avanasurgical&utm_medium=referral&utm_campaign=oa_knee_condition&utm_content=footer_cta", "style": "secondary", "external": true }
+      {
+        "label": "Talk to our team",
+        "href": "https://wa.me/919150064620?text=Hi%20Avana%2C%20I%20have%20knee%20osteoarthritis.%20Can%20you%20tell%20me%20whether%20Load-Shift%20Bracing%20suits%20my%20knee%3F",
+        "style": "primary",
+        "external": true
+      },
+      {
+        "label": "Browse OA products on Osteokart",
+        "href": "https://osteokart.com/categories/knee/products?utm_source=avanasurgical&utm_medium=referral&utm_campaign=oa_knee_condition&utm_content=footer_cta",
+        "style": "secondary",
+        "external": true
+      }
     ],
-    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+    "disclaimer": "Helping India walk with a smile. Say yes to your life again. All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
 }
