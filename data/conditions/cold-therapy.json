@@ -1,99 +1,99 @@
 {
   "slug": "cold-therapy",
   "type": "condition",
-  "metaTitle": "Cold Therapy & Active Compression Systems | Avana India",
-  "metaDescription": "Powered cold therapy with active compression for post-surgery & sports injury recovery. Polar Care Kodiak & Wave systems — clinically proven, fitted in India.",
-
+  "metaTitle": "Steady-Cold Recovery | Polar Care Cold Therapy After Surgery | Avana India",
+  "metaDescription": "Cold held steady for hours, not 20 minutes. Polar Care Kodiak and Wave by Breg (USA) for knee, shoulder and ankle surgery recovery. Delivered across India.",
   "hero": {
-    "eyebrow": "Cold Therapy · Active Compression",
-    "title": "Cold Therapy & Active Compression Systems",
-    "description": "Ice packs were yesterday. Powered cold therapy with active compression — like the Polar Care Kodiak and Wave systems used in Indian operating theatres — maintains consistent therapeutic cooling, actively pumps swelling out, and dramatically lowers post-op pain.",
-    "image": "/images/products/breg-polar-care-wave-img-1.png",
-    "imageAlt": "Breg Polar Care Wave — powered cold therapy and compression unit",
+    "eyebrow": "Cold Therapy · Post-surgery & injury recovery",
+    "title": "Steady-Cold Recovery",
+    "description": "Cold that holds for hours, not 20 minutes — so swelling and pain come down while you rest. By Breg Polar Care, USA.",
+    "image": "/images/products/breg-polar-care-kodiak-img-1.png",
+    "imageAlt": "Breg Polar Care Kodiak — Steady-Cold Recovery unit",
     "ctas": [
-      { "label": "See Cold Therapy", "href": "#products", "style": "primary" },
-      { "label": "Enquire Now", "href": "#cta", "style": "outline" }
+      {
+        "label": "Find the right unit for my surgery",
+        "href": "#products",
+        "style": "primary"
+      },
+      {
+        "label": "Talk to our team",
+        "href": "https://wa.me/919150064620?text=Hi%20Avana%2C%20I%20have%20surgery%20coming%20up.%20Please%20tell%20me%20whether%20Polar%20Care%20Kodiak%20or%20Wave%20fits%20my%20recovery.",
+        "style": "outline",
+        "external": true
+      }
     ]
   },
-
-  "intro": "<p class=\"lede\">Cold therapy isn't new — ice has been used for swelling and pain since ancient times. What <strong>is</strong> new is the combination of consistent temperature control and active compression. Powered units like the <strong>Polar Care Kodiak</strong> and <strong>Wave</strong> maintain therapeutic cooling for hours, while pumped cycling pressure actively moves swelling out of the surgical area — something static ice packs and elastic wraps simply cannot do. This page explains what modern cold therapy does that ice can't, when it helps most, and which Avana-distributed systems Indian orthopaedic surgeons most often prescribe.</p>",
-
+  "intro": "<p class=\"lede\">Ice works for about 20 minutes. Then it melts, the wrap slips, and someone refills it — 4 to 6 times a day in the first week after surgery. <strong>Steady-Cold Recovery</strong> ends that cycle. A quiet motorised unit circulates chilled water through a pad shaped to your joint, holding the cold steady for hours on one fill. On Polar Care Wave, a pump adds measured, cycling compression to move swelling out. You follow your surgeon's sessions; the machine keeps the cold.</p>",
   "whatIs": {
-    "eyebrow": "About the therapy",
-    "title": "What is powered cold therapy?",
+    "eyebrow": "The method",
+    "title": "Three things ice can't do",
     "paragraphs": [
-      "<p>Cold therapy (also called cryotherapy) is the application of controlled cooling to an injured or operated tissue. Modern powered systems do <strong>three things at once</strong>:</p>",
-      "<p><strong>1. Maintain consistent therapeutic temperature</strong> — typically around 3–10°C, held steady for hours through a circulating chilled-water pad. Ice packs warm up in 20 minutes; powered units don't.</p>",
-      "<p><strong>2. Add active compression</strong> — pneumatic pumps cycle pressure across the pad, mechanically squeezing swelling out of the surgical area and into the lymphatic system.</p>",
-      "<p><strong>3. Reduce three drivers of pain simultaneously</strong> — slowed nerve conduction (less pain perception), reduced local blood flow (less swelling), and reduced inflammatory chemistry. The combined effect is why clinical studies consistently show lower post-op opioid use in patients who use these systems.</p>"
+      "<p><strong>1. Held cold.</strong> Chilled water keeps circulating, so the pad stays at a set temperature. Wave has two settings (about 7°C and 10°C). Kodiak runs 6–8 hours on one fill of ice and water.</p>",
+      "<p><strong>2. Shaped pads.</strong> Knee, shoulder, ankle, hip and back pads wrap the whole joint, so the cold reaches every side — not one spot under a towel.</p>",
+      "<p><strong>3. Measured compression (Wave).</strong> A quiet pump cycles pressure at one of two set levels, then releases, gently pushing swelling away from the surgical site.</p>",
+      "<p>All three run on your surgeon's session plan — typically 20–30 minutes, several times a day.</p>"
     ]
   },
-
   "symptoms": {
-    "eyebrow": "When to use it",
-    "title": "When cold therapy helps most",
-    "lead": "Cold therapy is one of the most evidence-supported recovery tools in modern orthopaedics — but it's not for every situation. Powered cold therapy is most useful for:",
+    "eyebrow": "When it helps most",
+    "title": "When Steady-Cold earns its place",
+    "lead": "",
     "items": [
-      "<strong>The first 1–2 weeks after orthopaedic surgery</strong> — knee, shoulder, hip, ankle, spine. Where modern surgeons most commonly prescribe it.",
-      "<strong>Within 48 hours of an acute injury</strong> — sprain, contusion, muscle strain, ankle roll.",
-      "<strong>Acute flares of inflammatory arthritis</strong> — rheumatoid, gout, ankylosing spondylitis.",
-      "<strong>After intense rehabilitation sessions</strong> — reduces next-day soreness so you can return to physiotherapy.",
-      "<strong>Sports injuries with significant swelling</strong> — ankle sprain, hamstring tear, knee bruising.",
-      "<strong>Post-fracture in early healing</strong> — when your treating doctor advises."
+      "<strong>The first 2 weeks after orthopaedic surgery</strong> — knee, shoulder, hip, ankle, spine.",
+      "<strong>The first 48 hours after an acute injury</strong> — sprain, muscle strain, a rolled ankle.",
+      "<strong>After physiotherapy sessions</strong> — less next-day soreness, so you keep going to rehab.",
+      "<strong>Sports injuries with heavy swelling</strong> — ankle sprain, hamstring tear, knee bruising.",
+      "<strong>Flares of inflammatory arthritis</strong> — when your doctor advises it."
     ]
   },
-
   "causes": {
-    "eyebrow": "The science",
-    "title": "Why powered cold therapy beats ice packs",
-    "lead": "If you've used ice packs after a sports injury, you know they melt fast and the wrap loosens. The difference with powered systems:",
+    "eyebrow": "Steady-Cold vs ice packs",
+    "title": "Same idea as ice. Different result.",
+    "lead": "",
     "items": [
-      "<strong>Consistent therapeutic temperature</strong> — held steady for hours. Ice warms up in roughly 20 minutes, often before the patient notices.",
-      "<strong>Active pneumatic compression</strong> — cycles pressure to physically move swelling out, vs static wraps that just hold tissue in place.",
-      "<strong>Hands-free, walk-around operation</strong> — patients can read, eat, or sleep while the unit runs.",
-      "<strong>Safer thermoregulation</strong> — built-in timers prevent over-cooling and frostbite risk.",
-      "<strong>Easier to use 3–6× daily</strong> — the protocol many surgeons prescribe for the first week. Ice gets impractical at that frequency.",
-      "<strong>Documented opioid reduction</strong> — multiple post-op studies show less pain medication needed."
+      "<strong>How long it stays cold.</strong> Ice pack: about 20 minutes. Steady-Cold: hours, at a set temperature.",
+      "<strong>Coverage.</strong> Ice pack: one spot. Steady-Cold: pad shaped to the whole joint.",
+      "<strong>Compression.</strong> Ice pack: static wrap, often slips. Steady-Cold: measured and cycling (Wave).",
+      "<strong>4–6 sessions a day.</strong> Ice pack: needs someone to refill and re-wrap. Steady-Cold: one fill, press start.",
+      "<strong>While it runs.</strong> Ice pack: hold it in place. Steady-Cold: read, eat or rest.",
+      "<strong>Proof.</strong> Studies on motorised cold-and-compression units show patients use less pain medication after surgery."
     ]
   },
-
   "treatment": {
-    "eyebrow": "How to use it",
-    "title": "Typical cold therapy protocol",
-    "lead": "Specific protocols vary by surgeon — but a typical post-op cold therapy plan looks like this:",
+    "eyebrow": "Your first 6 weeks",
+    "title": "A typical Steady-Cold plan",
+    "lead": "Your surgeon sets the exact plan. Most look like this:",
     "steps": [
-      "<strong>Days 1–7 (acute phase)</strong> — 20–30 minute sessions, 4–6 times daily. This is when the unit earns its keep.",
-      "<strong>Days 8–14 (subacute phase)</strong> — reduce to 3 sessions daily. Most swelling should be tapering.",
-      "<strong>Weeks 3–4 (transition)</strong> — 1–2 sessions daily, mostly after physiotherapy or activity.",
-      "<strong>Weeks 4–6 (return-to-activity)</strong> — use as needed for soreness flares.",
-      "<strong>After week 6</strong> — most patients return the rented unit or store the purchased one for future use."
+      "<strong>Days 1–7</strong> — 20–30 minute sessions, 4–6 times a day. This is when it matters most.",
+      "<strong>Days 8–14</strong> — About 3 sessions a day as swelling settles.",
+      "<strong>Weeks 3–4</strong> — 1–2 sessions a day, mostly after physio.",
+      "<strong>Weeks 4–6</strong> — As needed for soreness.",
+      "<strong>After week 6</strong> — Store the unit for future injuries or family use."
     ],
-    "closing": "<p>Rental is often economical for the 2–4 weeks of intensive use, while purchase makes sense if you do contact sports, expect future surgeries, or want it on hand for family. Speak with our team for the right fit.</p>"
+    "closing": ""
   },
-
   "productsHeading": {
-    "title": "Cold therapy systems",
-    "lead": "Powered cold and compression units used in Indian orthopaedic and sports medicine recovery, dispatched by Osteokart."
+    "title": "Kodiak or Wave?",
+    "lead": "Steady-Cold = Polar Care Kodiak (cold only). Steady-Cold + Active Compression = Polar Care Wave. Not sure? Tell us your surgery and date — we'll tell you which fits, or whether ice is enough for you."
   },
-
   "whenToSeeDoctor": {
     "eyebrow": "Safety",
-    "title": "When NOT to use cold therapy",
-    "lead": "Powered cold therapy is safe for most patients, but skip or pause it if any of the following apply — check with your treating doctor:",
+    "title": "When not to use cold therapy",
+    "lead": "Check with your doctor first, and skip or pause it if you have:",
     "items": [
-      "<strong>Open wounds or unhealed incisions</strong> — until your surgeon clears the wound as sealed.",
-      "<strong>Raynaud's phenomenon or cold sensitivity</strong> — cold can trigger a vasospasm.",
-      "<strong>Severe peripheral vascular disease</strong> — reduced circulation makes cold injury more likely.",
-      "<strong>Areas with reduced sensation</strong> — diabetic neuropathy, nerve damage. You can't feel if it's becoming dangerous.",
-      "<strong>Suspected deep vein thrombosis (DVT)</strong> — leg swelling, redness, calf pain. Get medical assessment first.",
-      "<strong>Sickle cell disease or cryoglobulinaemia</strong> — both can be worsened by cold exposure.",
-      "<strong>Children under age 3 without supervision</strong> — temperature regulation is different."
+      "<strong>Open wounds or unhealed incisions</strong> — until your surgeon says the wound is sealed.",
+      "<strong>Raynaud's or strong cold sensitivity</strong> — cold can trigger spasms in blood vessels.",
+      "<strong>Poor circulation</strong> — severe peripheral vascular disease.",
+      "<strong>Reduced feeling in the area</strong> — diabetic neuropathy or nerve damage; you may not feel it getting too cold.",
+      "<strong>Suspected DVT</strong> — leg swelling, redness or calf pain. Get checked first.",
+      "<strong>Sickle cell disease or cryoglobulinaemia.</strong>",
+      "<strong>Young children</strong> — only under close supervision."
     ],
-    "note": "If you notice numb skin discoloration (white, blue, or grey patches), severe shivering, or pain that's worse during cold therapy — stop immediately and check with your surgeon. These reactions are uncommon but worth knowing."
+    "note": "Always keep a thin barrier (dressing, towel or sleeve) between the pad and your skin. The pad should never touch bare skin. Stop at once if the skin turns white, blue or grey, you start shivering hard, or the pain gets worse during a session — and call your surgeon."
   },
-
-  "testimonialsHeading": { "title": "Cold therapy users speak" },
-
+  "testimonialsHeading": {
+    "title": "From people who've used it"
+  },
   "testimonials": [
     {
       "name": "Walid Abedin",
@@ -102,35 +102,79 @@
       "testimonial": "Pain was easily 9 out of 10. The combination of cold and compression in this product is game changing. Pain reduced after just two uses. Even my mother could operate it with ease."
     }
   ],
-
-  "faqHeading": { "title": "Cold therapy FAQs" },
-
+  "faqHeading": {
+    "title": "Questions people ask us"
+  },
   "faq": [
-    { "question": "How long do I use cold therapy each day?", "answer": "Typically 20–30 minute sessions, 3–6 times daily in the first week post-op. Your surgeon will give specific guidance based on the procedure." },
-    { "question": "Can I sleep with the unit on?", "answer": "Some patients do, but most surgeons recommend timed sessions to avoid prolonged cooling. The unit has built-in timers for safety. Overnight use isn't routinely recommended without surgeon approval." },
-    { "question": "How long do I need the cold therapy unit for?", "answer": "Most patients use it intensively for 1–2 weeks post-op, with reducing frequency over 4–6 weeks total. Rental can be a sensible option for this short-term need." },
-    { "question": "Cold therapy vs ice — which is better for an acute injury?", "answer": "For the first 30 minutes, both work similarly. Beyond that, powered cold therapy holds a steadier temperature and provides active compression — both materially help reduce swelling faster. For a single ankle sprain at home, ice is fine. For surgery recovery or anything that needs repeated application over days, powered cold therapy is significantly better." },
-    { "question": "Does cold therapy slow healing?", "answer": "This is a common worry. Current orthopaedic consensus is that controlled, short-duration cold therapy (20–30 min sessions) helps recovery by reducing pain enough to allow earlier movement. Continuous, prolonged cold (multiple hours) could slow some tissue healing — which is why timed sessions are the right approach." },
-    { "question": "Can I use cold therapy for chronic pain like osteoarthritis?", "answer": "Cold therapy is less useful for chronic OA pain, where the underlying issue is wear (not acute inflammation). Most OA patients prefer heat. Cold may still help for acute OA flares with sudden swelling. For OA management, an offloader brace is the more evidence-supported tool." },
-    { "question": "How long after surgery does cold therapy stay useful?", "answer": "Maximum benefit is in the first 1–2 weeks. Useful through weeks 3–4 for post-rehab soreness. After week 6, most patients have weaned off cold therapy in favour of heat (for stiffness) and active rehabilitation." }
+    {
+      "question": "How is Steady-Cold different from a cheaper cold compression machine?",
+      "answer": "Ask three questions of any unit: what temperature does the pad hold, how long does one fill last, and what pressure does it apply? Breg publishes all three for Polar Care. Compare on those, not on the photo."
+    },
+    {
+      "question": "How long is each session?",
+      "answer": "Usually 20–30 minutes, 3–6 times a day in the first week. Your surgeon will set the exact plan."
+    },
+    {
+      "question": "Can I sleep with it on?",
+      "answer": "Not routinely. Long, unbroken cold can harm skin. Use timed sessions unless your surgeon says otherwise."
+    },
+    {
+      "question": "Is ice good enough?",
+      "answer": "For a single sprain at home, often yes. For surgery recovery, where you need cold several times a day for two weeks, Steady-Cold holds the temperature and coverage that ice can't."
+    },
+    {
+      "question": "Does cold therapy slow healing?",
+      "answer": "Short, timed sessions help recovery by easing pain enough for earlier movement. Hours of non-stop cold may not — which is why sessions are timed."
+    },
+    {
+      "question": "Does it help knee osteoarthritis?",
+      "answer": "Less so. OA pain is mostly from wear, not fresh swelling, and many patients prefer heat. Cold can help during a sudden swollen flare. For daily OA pain, an offloader brace has stronger evidence."
+    },
+    {
+      "question": "How long will I need it?",
+      "answer": "Most patients use it heavily for 1–2 weeks, then less often up to week 6."
+    }
   ],
-
   "blog": [],
-
   "brands": [
-    { "name": "Breg", "logo": "/images/brands/breg-logo.jpeg", "caption": "USA · Polar Care cold therapy" },
-    { "name": "Aspen Medical", "logo": "/images/brands/aspen-logo.png.jpg", "caption": "USA · Post-surgical bracing" },
-    { "name": "RIWO Spine", "logo": "/images/brands/riwospine-logo.png.png", "caption": "Germany · Endoscopic spine systems" },
-    { "name": "Osteokart", "logo": "/images/brands/osteokart-logo.png.png", "caption": "India · Authorised retail partner" }
+    {
+      "name": "Breg",
+      "logo": "/images/brands/breg-logo.jpeg",
+      "caption": "USA · Polar Care cold therapy"
+    },
+    {
+      "name": "Aspen Medical",
+      "logo": "/images/brands/aspen-logo.png.jpg",
+      "caption": "USA · Post-surgical bracing"
+    },
+    {
+      "name": "RIWO Spine",
+      "logo": "/images/brands/riwospine-logo.png.png",
+      "caption": "Germany · Endoscopic spine systems"
+    },
+    {
+      "name": "Osteokart",
+      "logo": "/images/brands/osteokart-logo.png.png",
+      "caption": "India · Authorised retail partner"
+    }
   ],
-
   "cta": {
-    "title": "Make recovery cooler — literally.",
-    "description": "Talk to our team about whether cold therapy fits your recovery — we'll explain the options and the evidence honestly.",
+    "title": "Recover on Steady-Cold.",
+    "description": "Tell us your surgery and date. We'll explain Kodiak and Wave honestly — and tell you if you don't need either.",
     "buttons": [
-      { "label": "Enquire Now", "href": "mailto:info@avanasurgical.com?subject=Cold%20therapy%20enquiry", "style": "primary" },
-      { "label": "View Cold Therapy", "href": "https://osteokart.com/category/cold-therapy?utm_source=avanasurgical&utm_medium=referral&utm_campaign=cold_therapy_condition&utm_content=footer_cta", "style": "secondary", "external": true }
+      {
+        "label": "Talk to our team",
+        "href": "https://wa.me/919150064620?text=Hi%20Avana%2C%20I%20have%20surgery%20coming%20up.%20Please%20tell%20me%20whether%20Polar%20Care%20Kodiak%20or%20Wave%20fits%20my%20recovery.",
+        "style": "primary",
+        "external": true
+      },
+      {
+        "label": "View cold therapy on Osteokart",
+        "href": "https://osteokart.com/categories/breg/products?utm_source=avanasurgical&utm_medium=referral&utm_campaign=cold_therapy_condition&utm_content=footer_cta",
+        "style": "secondary",
+        "external": true
+      }
     ],
-    "disclaimer": "All products dispatched by Osteokart.com — Avana's authorised retail partner."
+    "disclaimer": "Helping India walk with a smile. All products dispatched by Osteokart.com — Avana's authorised retail partner."
   }
 }

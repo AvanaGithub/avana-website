@@ -23,9 +23,15 @@
       "image": "/images/products/aspen-pediatric-collar-img-3.jpg",
       "link": "https://osteokart.com/products/aspen-pediatric-collar-premium-neck-brace-for-pediatric-pain-relief-recovery?variant=de97f61c3589f4982b7a00734e2bd2cd",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-vista-multipost-therapy-collar",
@@ -35,9 +41,15 @@
       "image": "/images/products/aspen-vista-multiPost-therapy-collar-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-multipost-therapy-collar-premium-cervical-collar-for-maximum-comfort",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-evergreen-621-si-belt",
@@ -47,9 +59,16 @@
       "image": "/images/products/aspen-evergreen-621-si-belt-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-evergreen-621-si-belt-adjustable-sacroiliac-support-brace?variant=8f6564df7dfa888b2f45f9bb17a16a1f",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["hip", "spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "hip",
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-horizon-456-tlso",
@@ -59,9 +78,16 @@
       "image": "/images/products/aspen-horizon-456-tlso-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-horizon-456-tlso-effective-pain-relief-for-thoracolumbar-injuries",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain", "surgeon"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain",
+        "surgeon"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-ots-lso-648",
@@ -71,9 +97,15 @@
       "image": "/images/products/aspen-ots-lso-648-img-2.jpg",
       "link": "https://osteokart.com/products/aspen-ots-lso-648-lightweight-lumbar-brace-for-superior-comfort",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-horizon-627-lumbar",
@@ -83,9 +115,15 @@
       "image": "/images/products/aspen-horizon-627-lumbar-support-img-4.jpg",
       "link": "https://osteokart.com/products/aspen-horizon-627-lumbar-brace-lightweight-design-for-comfortable-back-support",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-vista-cto",
@@ -95,9 +133,16 @@
       "image": "/images/products/aspen-vista-cto-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-cto-advanced-cervical-thoracic-brace-for-injury-recovery",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain", "surgeon"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain",
+        "surgeon"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "breg-contender-boxer-splint",
@@ -107,9 +152,15 @@
       "image": "/images/products/breg-contender-boxer-splint-img-1.png",
       "link": "https://osteokart.com/products/breg-contender-boxer-splint-superior-support-for-finger-hand-injuries?variant=013a0d591d1b8d23ef983fdaf2b823ed",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["elbow"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "elbow"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-volley-tennis-strap",
@@ -119,9 +170,15 @@
       "image": "/images/products/breg-volley-tennis-elbow-strap-img-1.png",
       "link": "https://osteokart.com/products/breg-volley-tennis-strap-relief-for-tennis-elbow-forearm-pain",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["elbow"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "elbow"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-ci-knee-brace",
@@ -131,9 +188,15 @@
       "image": "/images/products/breg-ci-knee-brace.jpg",
       "link": "https://osteokart.com/products/breg-z-13-std-ci-knee-brace-trusted-standard-design-with-personalized-fit?variant=4132f322696a2e49c984da4a23c72707",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "knee"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-freerunner-knee-brace",
@@ -143,9 +206,15 @@
       "image": "/images/products/breg-freerunner-img-2.png",
       "link": "https://osteokart.com/products/breg-freerunner-knee-brace-optimal-stability-for-sports-recovery?variant=eb5884bdaf739005679c61d74342c535",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "knee"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-fs-plantar-fasciitis-strap",
@@ -155,9 +224,15 @@
       "image": "/images/products/breg-pfs-strap-img-1.png",
       "link": "https://osteokart.com/products/breg-pfs-plantar-fasciitis-strap-adjustable-fit-for-all-day-relief?variant=918f10f5d4bd6205bbe9fee11eaf4226",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-axiom-ankle-brace",
@@ -167,9 +242,15 @@
       "image": "/images/products/breg-axiom-ankle-img-1.jpg",
       "link": "https://osteokart.com/products/breg-axiom-ankle-brace-premium-support-for-injury-recovery-prevention?variant=48db4f147bdb123327ab3a6db5da51ac",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-lace-up-ankle-brace",
@@ -179,9 +260,15 @@
       "image": "/images/products/breg-lace-up-ankle-brace.png",
       "link": "https://osteokart.com/products/breg-lace-up-ankle-brace-with-stays-superior-support-for-ankle-stability?variant=0f714d8384b9b7cefbc17ef09abd6104",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-wraptor-speed-ankle-stabilizer",
@@ -191,33 +278,58 @@
       "image": "/images/products/breg-wraptor-speed-stabilizer-img-1.jpg",
       "link": "https://osteokart.com/products/breg-wraptor-speed-ankle-stabilizer-optimal-stability-for-sports-recovery?variant=9900ba0c9be252cb6f42de8f450f7da0",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-polar-care-kodiak",
       "name": "Polar Care Kodiak Cold Therapy System",
       "brand": "Breg",
-      "shortDescription": "Cold therapy system for pain relief and swelling during post-surgery or injury recovery.",
+      "shortDescription": "Steady-Cold. 6–8 hours of held cold per fill; battery pack option for use away from a socket. Best when your surgeon wants cold after ACL, meniscus, arthroscopy or knee replacement.",
       "image": "/images/products/breg-polar-care-kodiak-img-1.png",
       "link": "https://osteokart.com/products/breg-polar-care-kodiak-cold-therapy-system-for-pain-relief-swelling",
-      "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee", "hip"],
-      "relatedAudiences": ["recovering-from-surgery", "surgeon"],
-      "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
+      "ctaLabel": "View on Osteokart",
+      "relatedPainAreas": [
+        "knee",
+        "hip"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery",
+        "surgeon"
+      ],
+      "relatedConditions": [
+        "cold-therapy",
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-polar-care-wave",
       "name": "Polar Care Wave",
       "brand": "Breg",
-      "shortDescription": "Cold therapy with active compression — controls pain and swelling after surgery or acute injury.",
+      "shortDescription": "Steady-Cold + Active Compression. Two temperature settings, two cycling pressure levels, Y-adapter runs two pads at once. Best when swelling is the main worry — knee replacement, shoulder or major ankle surgery.",
       "image": "/images/products/breg-polar-care-wave-img-1.png",
-      "link": "https://osteokart.com/products/breg-polar-care-wave",
-      "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee", "shoulder", "hip"],
-      "relatedAudiences": ["recovering-from-surgery", "surgeon"],
-      "relatedConditions": ["cold-therapy", "post-surgery-recovery"]
+      "link": "https://wa.me/919150064620?text=Hi%20Avana%2C%20I%27m%20interested%20in%20the%20Breg%20Polar%20Care%20Wave%20(Steady-Cold%20%2B%20Active%20Compression).%20Please%20share%20availability%20and%20price.",
+      "ctaLabel": "Enquire on WhatsApp",
+      "relatedPainAreas": [
+        "knee",
+        "shoulder",
+        "hip"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery",
+        "surgeon"
+      ],
+      "relatedConditions": [
+        "cold-therapy",
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-atlas-universal-shoulder-sling",
@@ -227,9 +339,15 @@
       "image": "/images/products/breg-atlas-universal-sling-img-1.jpg",
       "link": "https://osteokart.com/products/breg-atlas-universal-shoulder-sling-adjustable-fit-for-injury-recovery",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["shoulder"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "shoulder"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-heel-offloader-post-op-shoe",
@@ -239,9 +357,15 @@
       "image": "/images/products/bregheel-offloader-post-op-shoe-img-1.png",
       "link": "https://osteokart.com/products/breg-heel-offloader-post-op-shoe-optimal-relief-for-rearfoot-trauma-wounds?variant=47a2ff92c3af076d28d7ab4ac5a86ee2",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-t-scope-post-op-knee-brace",
@@ -251,9 +375,16 @@
       "image": "/images/products/breg-t-scope-premier-post-op-knee-img-1.png",
       "link": "https://osteokart.com/products/breg-t-scope-premier-post-op-knee-brace",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["recovering-from-surgery", "surgeon"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "knee"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery",
+        "surgeon"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "aspen-lumbar-support",
@@ -263,9 +394,15 @@
       "image": "/images/products/aspen-lumbar-support-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-lumbar-support-belt-effective-back-pain-relief-support?variant=4f1bd609baee8566dc8729c846718c96",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "aspen-vista-cervical-collar",
@@ -275,9 +412,17 @@
       "image": "/images/products/aspen-vista-collar-img-1.jpg",
       "link": "https://osteokart.com/products/aspen-vista-collar",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["recovering-from-surgery", "back-pain"],
-      "relatedConditions": ["spine-support", "post-surgery-recovery"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery",
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support",
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-cervical-collar",
@@ -287,9 +432,15 @@
       "image": "/images/products/breg-cervical-collar.png",
       "link": "https://osteokart.com/products/breg-cervical-collar",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["spine"],
-      "relatedAudiences": ["back-pain"],
-      "relatedConditions": ["spine-support"]
+      "relatedPainAreas": [
+        "spine"
+      ],
+      "relatedAudiences": [
+        "back-pain"
+      ],
+      "relatedConditions": [
+        "spine-support"
+      ]
     },
     {
       "slug": "breg-genesis-full-shell-walker",
@@ -299,9 +450,15 @@
       "image": "/images/products/breg-genesis-full-shell-walker-img-1.png",
       "link": "https://osteokart.com/products/breg-genesis-full-shell-walker?variant=00315811266e8ce8546f35cfdce36a1b",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-genesis-mid-calf-walker",
@@ -311,9 +468,15 @@
       "image": "/images/products/breg-genesis-mid-calf-walker-img-2.jpg",
       "link": "https://osteokart.com/products/breg-genesis-mid-calf-full-shell-walker?variant=3a6658ee1981a0fea6ff91b196bd14fc",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-square-toe-post-op-shoe",
@@ -323,9 +486,15 @@
       "image": "/images/products/breg-square-toe-offloading-post-op-shoes-img-1.png",
       "link": "https://osteokart.com/products/breg-square-toe-offloading-shoe?variant=dc060bbcaff23ce2b5299a7154dff838",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["recovering-from-surgery"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "recovering-from-surgery"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-dorsal-night-splint",
@@ -335,9 +504,15 @@
       "image": "/images/products/breg-dorsal-night-splint-img-1.png",
       "link": "https://osteokart.com/products/breg-dorsal-night-splint?variant=cccbf7d3a422f42e5c7cbb4957cb6231",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["foot"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["post-surgery-recovery"]
+      "relatedPainAreas": [
+        "foot"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "post-surgery-recovery"
+      ]
     },
     {
       "slug": "breg-freestyle-oa-knee-brace",
@@ -347,9 +522,15 @@
       "image": "/images/products/breg-freestyle-oa-knee-brace-img-1.jpg",
       "link": "https://osteokart.com/products/breg-freestyle-oa-knee-brace?variant=e33b782517414c951ad61f8022a0c02a",
       "ctaLabel": "Buy Now",
-      "relatedPainAreas": ["knee"],
-      "relatedAudiences": ["seniors"],
-      "relatedConditions": ["osteoarthritis"]
+      "relatedPainAreas": [
+        "knee"
+      ],
+      "relatedAudiences": [
+        "seniors"
+      ],
+      "relatedConditions": [
+        "osteoarthritis"
+      ]
     }
   ]
 }
