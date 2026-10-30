@@ -273,6 +273,40 @@
         .ct-bar .btn{flex:1;justify-content:center;padding:13px 12px;font-size:15px;width:auto}
         @media (max-width:640px){.ct-bar{display:flex}.ct-disc{padding-bottom:110px}}
         @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}.ct-unit__img img{animation:none}.ct-hero__photo img{transform:none}}
+
+        /* ===== bold layout upgrade (words unchanged) ===== */
+        .ct .ct-hero--dark{background:#182431;color:#fff;padding:0;min-height:0;overflow:hidden;position:relative;display:block}
+        .ct-hero--dark .ct-hero__bg{position:absolute;inset:0}
+        .ct-hero--dark .ct-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:68% 45%;display:block;opacity:.62;transform:none;transition:none}
+        .ct-hero--dark .ct-hero__bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(24,36,49,.96) 0%,rgba(24,36,49,.84) 38%,rgba(24,36,49,.3) 72%,rgba(24,36,49,.1) 100%)}
+        .ct-hero--dark::before{display:none}
+        .ct-hero--dark > .wrap{margin:0;max-width:none;padding-left:clamp(24px,6vw,96px);position:relative;z-index:1}
+        .ct-hero__in{padding:84px 0 92px;max-width:640px;display:flex;flex-direction:column;gap:18px}
+        .ct-hero--dark .kicker{color:#E8C77A}
+        .ct-hero--dark h1{color:#fff;font-size:clamp(34px,4.6vw,54px);line-height:1.05;letter-spacing:-.015em;text-shadow:0 2px 18px rgba(0,0,0,.35)}
+        .ct-hero--dark .lead{color:#DCE3EA;font-size:19px;max-width:560px}
+        .ct-hero--dark .ctas{margin-top:6px}
+        .ct-hero--dark .ct-hero__link{color:#E8C77A;text-decoration:underline;text-underline-offset:4px}
+        .ct-hero--dark .trust{border-top:1px solid rgba(255,255,255,.22);color:#C7D0DA}
+        .ct-hero--dark .trust strong{color:#fff}
+        .ct-hero__cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:1;display:flex;flex-direction:column;align-items:center;gap:6px;color:#C7D0DA;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
+        .ct-hero__cue i{width:1px;height:36px;background:linear-gradient(180deg,#E8C77A,transparent);display:block;animation:ctcue 1.8s ease-in-out infinite}
+        @keyframes ctcue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+        .ct-problem--big{text-align:center;align-items:center;max-width:900px}
+        .ct-problem--big .h2{font-size:clamp(30px,3.6vw,44px);line-height:1.15}
+        .ct-problem--big p{font-size:19px;color:#3B4756;max-width:760px}
+        .ct-problem__ice{display:inline-flex;width:76px;height:76px;border-radius:50%;background:#EAF2F6;color:#2C5A73;align-items:center;justify-content:center;margin-bottom:4px;box-shadow:0 10px 30px rgba(44,90,115,.15)}
+        .ct-how--stage .grid--3 .card{position:relative;padding:30px 26px 26px;border-top:4px solid #2C5A73;counter-increment:ct-card}
+        .ct-how--stage .grid--3{counter-reset:ct-card}
+        .ct-how--stage .grid--3 .card::before{content:counter(ct-card,decimal-leading-zero);position:absolute;right:20px;top:14px;font-family:'Fira Sans',Georgia,serif;font-size:44px;font-weight:700;color:rgba(44,90,115,.1);line-height:1}
+        .ct-how--stage .grid--3 .card svg{width:48px;height:48px;padding:10px;border-radius:14px;background:#EAF2F6;box-sizing:content-box}
+        .ct-plan--timeline{position:relative;padding-top:26px}
+        .ct-plan--timeline::before{content:'';position:absolute;left:4%;right:4%;top:0;height:2px;background:linear-gradient(90deg,#243447 0%,#E8C77A 100%);border-radius:2px}
+        .ct-plan--timeline > div{position:relative}
+        .ct-plan--timeline > div::before{content:'';position:absolute;left:22px;top:-33px;width:14px;height:14px;border-radius:50%;background:#fff;border:3px solid #9A6B08;box-shadow:0 0 0 4px #F4EFE8}
+        .ct-plan--timeline > div.first::before{background:#243447;border-color:#243447}
+        @media (max-width:880px){.ct-hero__in{padding:64px 0 76px}.ct-plan--timeline::before,.ct-plan--timeline > div::before{display:none}.ct-plan--timeline{padding-top:0}}
+        @media (max-width:640px){.ct-hero--dark .ct-hero__bg img{object-position:72% 50%}.ct-hero--dark .ctas .btn{width:100%}}
     </style>
 </head>
 <body>
@@ -286,33 +320,33 @@
 <main class="ct" id="top">
 
     <!-- ========== HERO ========== -->
-    <section class="ct-hero">
-        <div class="wrap split">
-            <div class="stack">
+    <section class="ct-hero ct-hero--dark">
+        <div class="ct-hero__bg" id="ct-hero-photo" aria-hidden="true">
+            <img src="/images/condition/cold-therapy.png" alt="" width="900" height="507" fetchpriority="high">
+        </div>
+        <div class="wrap">
+            <div class="ct-hero__in">
                 <div class="rv kicker">Walk With Smile · Recovery after surgery</div>
                 <h1 class="rv">The first two weeks after surgery, without the ice bucket.</h1>
                 <p class="rv lead">Steady-Cold holds the cold for hours on one fill, so swelling and pain come down while you rest. Breg Polar Care, USA.</p>
                 <div class="rv ctas">
                     <a href="#units" class="btn btn--gold">Find the right unit for my surgery</a>
-                    <a href="#surgeon-referred" class="btn btn--outline">My surgeon recommended cold therapy</a>
+                    <a href="#surgeon-referred" class="btn btn--ghost-white">My surgeon recommended cold therapy</a>
                 </div>
-                <a href="#units" class="textlink">See Kodiak and Wave with prices →</a>
+                <a href="#units" class="rv textlink ct-hero__link">See Kodiak and Wave with prices →</a>
                 <div class="rv trust">
                     <strong>Recommended by orthopaedic surgeons</strong>
                 </div>
             </div>
-            <div>
-                <div class="rv ct-hero__photo" id="ct-hero-photo">
-                    <img src="/images/condition/cold-therapy.png" alt="Woman resting in bed reading, with a Polar Care Wave cold therapy pad on her knee and the unit beside her" width="900" height="507" fetchpriority="high">
-                </div>
-            </div>
         </div>
+        <div class="ct-hero__cue" aria-hidden="true"><i></i>Scroll</div>
     </section>
 
     <!-- ========== PROBLEM ========== -->
     <section class="sec--white">
         <div class="wrap">
-            <div class="rv ct-problem stack">
+            <div class="rv ct-problem stack ct-problem--big">
+                <span class="ct-problem__ice" aria-hidden="true"><svg viewBox="0 0 24 24" width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 5.9l14.2 12.2M19.1 5.9 4.9 18.1M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M4.9 5.9 4 9.3M4.9 5.9l3.4-.9M19.1 18.1l.9-3.4M19.1 18.1l-3.4.9M19.1 5.9 20 9.3M19.1 5.9l-3.4-.9M4.9 18.1 4 14.7M4.9 18.1l3.4.9"/></svg></span>
                 <h2 class="h2">Ice works for 20 minutes. Then someone has to start again.</h2>
                 <p>After knee, shoulder or ankle surgery, your surgeon wants cold on the joint 4 to 6 times a day for the first week. With ice, that means melting packs, a wrap that slips, wet sheets — and a family member refilling it day and night.</p>
                 <p style="font-weight:600;color:#243447">By day three, most families are exhausted, and sessions get skipped just when they matter most.</p>
@@ -321,7 +355,7 @@
     </section>
 
     <!-- ========== HOW IT WORKS ========== -->
-    <section id="how" class="sec--ice ct-how">
+    <section id="how" class="sec--ice ct-how ct-how--stage">
         <div class="wrap stack" style="gap:32px">
             <div class="stack" style="gap:10px;max-width:720px">
                 <div class="kicker kicker--ice">How Steady-Cold works</div>
@@ -388,7 +422,7 @@
                 <h2 class="rv h2" style="font-size:34px">Your first six weeks on Steady-Cold</h2>
                 <p class="muted" style="font-size:17px">Your surgeon sets the exact plan. Most look like this:</p>
             </div>
-            <div class="ct-plan">
+            <div class="ct-plan ct-plan--timeline">
                 <div class="first rv"><span class="k">Days 1–7</span><strong>4–6 sessions a day</strong><span>20–30 minutes each. This is when it matters most.</span></div>
                 <div class="rv"><span class="k">Days 8–14</span><strong>About 3 a day</strong><span>As swelling settles.</span></div>
                 <div class="rv"><span class="k">Weeks 3–4</span><strong>1–2 a day</strong><span>Mostly after physio.</span></div>
@@ -554,6 +588,8 @@
     <script>
     (function(){
         document.documentElement.classList.add('js');
+        /* reveal-fallback: never leave content hidden if the observer is slow */
+        setTimeout(function(){ document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('is-in'); }); }, 3500);
         var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         var bar = document.getElementById('ct-progress');
         function prog(){ var h = document.documentElement; bar.style.width = ((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100).toFixed(2) + '%'; }
@@ -566,7 +602,7 @@
         window.addEventListener('load', function(){
             if (reduce || !window.gsap || !window.ScrollTrigger) return;
             gsap.registerPlugin(ScrollTrigger);
-            gsap.to('#ct-hero-photo', { y: -40, ease: 'none', scrollTrigger: { trigger: '.ct-hero', start: 'top top', end: 'bottom top', scrub: true } });
+            gsap.to('#ct-hero-photo img', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '.ct-hero', start: 'top top', end: 'bottom top', scrub: true } });
             gsap.from('.ct-safe__photo img', { scale: 1.12, ease: 'none', scrollTrigger: { trigger: '.ct-safe', start: 'top bottom', end: 'bottom top', scrub: true } });
         });
     })();

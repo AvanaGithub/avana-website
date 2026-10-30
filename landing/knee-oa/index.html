@@ -665,6 +665,8 @@
     <script>
     (function(){
         document.documentElement.classList.add('js');
+        /* reveal-fallback: never leave content hidden if the observer is slow */
+        setTimeout(function(){ document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('is-in'); }); }, 3500);
         var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
         /* ---- doctor marquee (built from data so it is easy to edit) ---- */
